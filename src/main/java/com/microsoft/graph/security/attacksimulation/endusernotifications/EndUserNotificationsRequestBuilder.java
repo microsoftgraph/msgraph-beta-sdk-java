@@ -60,7 +60,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get endUserNotifications from security
-     * @return a CompletableFuture of endUserNotificationCollectionResponse
+     * @return a CompletableFuture of EndUserNotificationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotificationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get endUserNotifications from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endUserNotificationCollectionResponse
+     * @return a CompletableFuture of EndUserNotificationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotificationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to endUserNotifications for security
      * @param body The request body
-     * @return a CompletableFuture of endUserNotification
+     * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotification> post(@jakarta.annotation.Nonnull final EndUserNotification body) {
@@ -92,7 +92,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to endUserNotifications for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endUserNotification
+     * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotification> post(@jakarta.annotation.Nonnull final EndUserNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EndUserNotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a endUserNotificationsRequestBuilder
+     * @return a EndUserNotificationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EndUserNotificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

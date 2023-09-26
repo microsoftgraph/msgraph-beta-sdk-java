@@ -37,7 +37,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
     /**
      * Invoke action tenantSearch
      * @param body The request body
-     * @return a CompletableFuture of tenantSearchResponse
+     * @return a CompletableFuture of TenantSearchResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantSearchResponse> post(@jakarta.annotation.Nonnull final TenantSearchPostRequestBody body) {
@@ -47,7 +47,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
      * Invoke action tenantSearch
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantSearchResponse
+     * @return a CompletableFuture of TenantSearchResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantSearchResponse> post(@jakarta.annotation.Nonnull final TenantSearchPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class MicrosoftGraphManagedTenantsTenantSearchRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsTenantSearchRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsTenantSearchRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsTenantSearchRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

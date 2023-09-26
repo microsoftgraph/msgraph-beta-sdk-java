@@ -57,7 +57,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get gradingCategories from education
-     * @return a CompletableFuture of educationGradingCategory
+     * @return a CompletableFuture of EducationGradingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationGradingCategory> get() {
@@ -66,7 +66,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
     /**
      * Get gradingCategories from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationGradingCategory
+     * @return a CompletableFuture of EducationGradingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationGradingCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property gradingCategories in education
      * @param body The request body
-     * @return a CompletableFuture of educationGradingCategory
+     * @return a CompletableFuture of EducationGradingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationGradingCategory> patch(@jakarta.annotation.Nonnull final EducationGradingCategory body) {
@@ -89,7 +89,7 @@ public class EducationGradingCategoryItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property gradingCategories in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationGradingCategory
+     * @return a CompletableFuture of EducationGradingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationGradingCategory> patch(@jakarta.annotation.Nonnull final EducationGradingCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

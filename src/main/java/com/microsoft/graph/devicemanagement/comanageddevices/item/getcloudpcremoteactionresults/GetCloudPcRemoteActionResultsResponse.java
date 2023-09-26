@@ -15,7 +15,7 @@ public class GetCloudPcRemoteActionResultsResponse extends BaseCollectionPaginat
      */
     private java.util.List<CloudPcRemoteActionResult> value;
     /**
-     * Instantiates a new getCloudPcRemoteActionResultsResponse and sets the default values.
+     * Instantiates a new GetCloudPcRemoteActionResultsResponse and sets the default values.
      */
     public GetCloudPcRemoteActionResultsResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetCloudPcRemoteActionResultsResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getCloudPcRemoteActionResultsResponse
+     * @return a GetCloudPcRemoteActionResultsResponse
      */
     @jakarta.annotation.Nonnull
     public static GetCloudPcRemoteActionResultsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetCloudPcRemoteActionResultsResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcRemoteActionResult
+     * @return a java.util.List<CloudPcRemoteActionResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcRemoteActionResult> getValue() {

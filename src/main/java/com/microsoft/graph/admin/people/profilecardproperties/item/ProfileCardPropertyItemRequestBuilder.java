@@ -59,7 +59,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
-     * @return a CompletableFuture of profileCardProperty
+     * @return a CompletableFuture of ProfileCardProperty
      * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a profileCardProperty entity. The profileCardProperty is identified by its directoryPropertyName property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profileCardProperty
+     * @return a CompletableFuture of ProfileCardProperty
      * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param body The request body
-     * @return a CompletableFuture of profileCardProperty
+     * @return a CompletableFuture of ProfileCardProperty
      * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ProfileCardPropertyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a profileCardProperty object, identified by its directoryPropertyName property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profileCardProperty
+     * @return a CompletableFuture of ProfileCardProperty
      * @see <a href="https://learn.microsoft.com/graph/api/profilecardproperty-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

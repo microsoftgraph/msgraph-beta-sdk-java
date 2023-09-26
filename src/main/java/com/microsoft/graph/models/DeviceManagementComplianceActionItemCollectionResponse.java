@@ -13,7 +13,7 @@ public class DeviceManagementComplianceActionItemCollectionResponse extends Base
      */
     private java.util.List<DeviceManagementComplianceActionItem> value;
     /**
-     * Instantiates a new deviceManagementComplianceActionItemCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementComplianceActionItemCollectionResponse and sets the default values.
      */
     public DeviceManagementComplianceActionItemCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementComplianceActionItemCollectionResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementComplianceActionItemCollectionResponse
+     * @return a DeviceManagementComplianceActionItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementComplianceActionItemCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementComplianceActionItemCollectionResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementComplianceActionItem
+     * @return a java.util.List<DeviceManagementComplianceActionItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementComplianceActionItem> getValue() {

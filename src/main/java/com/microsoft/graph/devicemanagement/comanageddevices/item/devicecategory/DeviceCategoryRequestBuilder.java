@@ -57,7 +57,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Device category
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> get() {
@@ -66,7 +66,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Device category
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceCategory in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> patch(@jakarta.annotation.Nonnull final DeviceCategory body) {
@@ -89,7 +89,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceCategory in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCategory
+     * @return a CompletableFuture of DeviceCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCategory> patch(@jakarta.annotation.Nonnull final DeviceCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceCategoryRequestBuilder
+     * @return a DeviceCategoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceCategoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

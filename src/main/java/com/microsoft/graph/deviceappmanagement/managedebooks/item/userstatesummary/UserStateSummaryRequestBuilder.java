@@ -60,7 +60,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of installation states for this eBook.
-     * @return a CompletableFuture of userInstallStateSummaryCollectionResponse
+     * @return a CompletableFuture of UserInstallStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummaryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of installation states for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userInstallStateSummaryCollectionResponse
+     * @return a CompletableFuture of UserInstallStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to userStateSummary for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> post(@jakarta.annotation.Nonnull final UserInstallStateSummary body) {
@@ -92,7 +92,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userStateSummary for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> post(@jakarta.annotation.Nonnull final UserInstallStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userStateSummaryRequestBuilder
+     * @return a UserStateSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserStateSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

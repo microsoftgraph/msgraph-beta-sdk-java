@@ -57,7 +57,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get operations from connections
-     * @return a CompletableFuture of connectionOperation
+     * @return a CompletableFuture of ConnectionOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperation> get() {
@@ -66,7 +66,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get operations from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectionOperation
+     * @return a CompletableFuture of ConnectionOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in connections
      * @param body The request body
-     * @return a CompletableFuture of connectionOperation
+     * @return a CompletableFuture of ConnectionOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperation> patch(@jakarta.annotation.Nonnull final ConnectionOperation body) {
@@ -89,7 +89,7 @@ public class ConnectionOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in connections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectionOperation
+     * @return a CompletableFuture of ConnectionOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionOperation> patch(@jakarta.annotation.Nonnull final ConnectionOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

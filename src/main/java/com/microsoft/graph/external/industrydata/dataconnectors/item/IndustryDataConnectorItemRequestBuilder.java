@@ -75,7 +75,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of an azureDataLakeConnector object.
-     * @return a CompletableFuture of industryDataConnector
+     * @return a CompletableFuture of IndustryDataConnector
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an azureDataLakeConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataConnector
+     * @return a CompletableFuture of IndustryDataConnector
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the properties of an azureDataLakeConnector object.
      * @param body The request body
-     * @return a CompletableFuture of industryDataConnector
+     * @return a CompletableFuture of IndustryDataConnector
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
      * Update the properties of an azureDataLakeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataConnector
+     * @return a CompletableFuture of IndustryDataConnector
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

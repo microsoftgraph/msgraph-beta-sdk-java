@@ -60,7 +60,7 @@ public class TemplateInsightsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of setting insights in a template
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinitionCollectionResponse
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinitionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TemplateInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * List of setting insights in a template
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinitionCollectionResponse
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TemplateInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to templateInsights for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinition
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinition> post(@jakarta.annotation.Nonnull final DeviceManagementTemplateInsightsDefinition body) {
@@ -92,7 +92,7 @@ public class TemplateInsightsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to templateInsights for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinition
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinition> post(@jakarta.annotation.Nonnull final DeviceManagementTemplateInsightsDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TemplateInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a templateInsightsRequestBuilder
+     * @return a TemplateInsightsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TemplateInsightsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

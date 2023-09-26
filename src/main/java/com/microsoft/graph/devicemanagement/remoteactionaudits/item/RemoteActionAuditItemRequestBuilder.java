@@ -57,7 +57,7 @@ public class RemoteActionAuditItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device remote action audits with the tenant.
-     * @return a CompletableFuture of remoteActionAudit
+     * @return a CompletableFuture of RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAudit> get() {
@@ -66,7 +66,7 @@ public class RemoteActionAuditItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device remote action audits with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteActionAudit
+     * @return a CompletableFuture of RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAudit> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RemoteActionAuditItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property remoteActionAudits in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of remoteActionAudit
+     * @return a CompletableFuture of RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAudit> patch(@jakarta.annotation.Nonnull final RemoteActionAudit body) {
@@ -89,7 +89,7 @@ public class RemoteActionAuditItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property remoteActionAudits in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteActionAudit
+     * @return a CompletableFuture of RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAudit> patch(@jakarta.annotation.Nonnull final RemoteActionAudit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

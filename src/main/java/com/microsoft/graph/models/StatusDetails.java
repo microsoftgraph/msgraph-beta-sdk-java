@@ -29,7 +29,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     private String recommendedAction;
     /**
-     * Instantiates a new statusDetails and sets the default values.
+     * Instantiates a new StatusDetails and sets the default values.
      */
     public StatusDetails() {
         super();
@@ -38,7 +38,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a statusDetails
+     * @return a StatusDetails
      */
     @jakarta.annotation.Nonnull
     public static StatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the additionalDetails property value. Additional details in case of error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -55,7 +55,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
-     * @return a provisioningStatusErrorCategory
+     * @return a ProvisioningStatusErrorCategory
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
@@ -63,7 +63,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -85,7 +85,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -93,7 +93,7 @@ public class StatusDetails extends StatusBase implements Parsable {
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {

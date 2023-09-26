@@ -59,7 +59,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
     /**
      * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
     /**
      * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

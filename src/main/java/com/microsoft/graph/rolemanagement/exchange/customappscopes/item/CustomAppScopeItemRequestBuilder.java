@@ -59,7 +59,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

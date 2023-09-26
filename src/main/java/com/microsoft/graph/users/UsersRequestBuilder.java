@@ -108,7 +108,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCollectionResponse
+     * @return a CompletableFuture of UserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -219,7 +219,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usersRequestBuilder
+     * @return a UsersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

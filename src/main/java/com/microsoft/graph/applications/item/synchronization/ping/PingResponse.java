@@ -34,7 +34,7 @@ public class PingResponse implements AdditionalDataHolder, Parsable {
         return new PingResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class PingResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -69,8 +69,8 @@ public class PingResponse implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

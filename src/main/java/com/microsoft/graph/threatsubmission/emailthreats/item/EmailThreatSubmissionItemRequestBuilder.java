@@ -57,7 +57,7 @@ public class EmailThreatSubmissionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read the properties and relationships of an emailThreatSubmission object.
-     * @return a CompletableFuture of emailThreatSubmission
+     * @return a CompletableFuture of EmailThreatSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class EmailThreatSubmissionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read the properties and relationships of an emailThreatSubmission object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailThreatSubmission
+     * @return a CompletableFuture of EmailThreatSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class EmailThreatSubmissionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property emailThreats in threatSubmission
      * @param body The request body
-     * @return a CompletableFuture of emailThreatSubmission
+     * @return a CompletableFuture of EmailThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmission> patch(@jakarta.annotation.Nonnull final EmailThreatSubmission body) {
@@ -91,7 +91,7 @@ public class EmailThreatSubmissionItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property emailThreats in threatSubmission
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailThreatSubmission
+     * @return a CompletableFuture of EmailThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmission> patch(@jakarta.annotation.Nonnull final EmailThreatSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

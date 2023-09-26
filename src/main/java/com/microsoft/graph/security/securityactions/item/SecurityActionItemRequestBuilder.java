@@ -65,7 +65,7 @@ public class SecurityActionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a securityAction object.
-     * @return a CompletableFuture of securityAction
+     * @return a CompletableFuture of SecurityAction
      * @see <a href="https://learn.microsoft.com/graph/api/securityaction-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class SecurityActionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a securityAction object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityAction
+     * @return a CompletableFuture of SecurityAction
      * @see <a href="https://learn.microsoft.com/graph/api/securityaction-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SecurityActionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property securityActions in security
      * @param body The request body
-     * @return a CompletableFuture of securityAction
+     * @return a CompletableFuture of SecurityAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityAction> patch(@jakarta.annotation.Nonnull final SecurityAction body) {
@@ -99,7 +99,7 @@ public class SecurityActionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property securityActions in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityAction
+     * @return a CompletableFuture of SecurityAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityAction> patch(@jakarta.annotation.Nonnull final SecurityAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

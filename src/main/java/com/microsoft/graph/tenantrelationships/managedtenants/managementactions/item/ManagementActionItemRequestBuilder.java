@@ -65,7 +65,7 @@ public class ManagementActionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a managementAction object.
-     * @return a CompletableFuture of managementAction
+     * @return a CompletableFuture of ManagementAction
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementaction-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ManagementActionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a managementAction object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementAction
+     * @return a CompletableFuture of ManagementAction
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementaction-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ManagementActionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managementActions in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementAction
+     * @return a CompletableFuture of ManagementAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementAction> patch(@jakarta.annotation.Nonnull final ManagementAction body) {
@@ -99,7 +99,7 @@ public class ManagementActionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managementActions in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementAction
+     * @return a CompletableFuture of ManagementAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementAction> patch(@jakarta.annotation.Nonnull final ManagementAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

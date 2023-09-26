@@ -81,7 +81,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Android managed app policies.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> get() {
@@ -90,7 +90,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Android managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property androidManagedAppProtections in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> patch(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body) {
@@ -113,7 +113,7 @@ public class AndroidManagedAppProtectionItemRequestBuilder extends BaseRequestBu
      * Update the navigation property androidManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedAppProtection
+     * @return a CompletableFuture of AndroidManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedAppProtection> patch(@jakarta.annotation.Nonnull final AndroidManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

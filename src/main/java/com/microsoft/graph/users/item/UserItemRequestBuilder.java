@@ -91,6 +91,7 @@ import com.microsoft.graph.users.item.revokesigninsessions.RevokeSignInSessionsR
 import com.microsoft.graph.users.item.scopedrolememberof.ScopedRoleMemberOfRequestBuilder;
 import com.microsoft.graph.users.item.security.SecurityRequestBuilder;
 import com.microsoft.graph.users.item.sendmail.SendMailRequestBuilder;
+import com.microsoft.graph.users.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.users.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.users.item.sponsors.SponsorsRequestBuilder;
 import com.microsoft.graph.users.item.teamwork.TeamworkRequestBuilder;
@@ -727,6 +728,13 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new SendMailRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the settings property of the microsoft.graph.user entity.
      */
     @jakarta.annotation.Nonnull
@@ -872,7 +880,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the exportDeviceAndAppManagementData method.
      * @param skip Usage: skip={skip}
      * @param top Usage: top={top}
-     * @return a exportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder
+     * @return a ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exportDeviceAndAppManagementDataWithSkipWithTop(@jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final Integer top) {
@@ -883,16 +891,16 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findRooms method.
      * @param RoomList Usage: RoomList='{RoomList}'
-     * @return a findRoomsWithRoomListRequestBuilder
+     * @return a FindRoomsWithRoomListRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public FindRoomsWithRoomListRequestBuilder findRoomsWithRoomList(@jakarta.annotation.Nonnull final String roomList) {
-        Objects.requireNonNull(roomList);
-        return new FindRoomsWithRoomListRequestBuilder(pathParameters, requestAdapter, roomList);
+    public FindRoomsWithRoomListRequestBuilder findRoomsWithRoomList(@jakarta.annotation.Nonnull final String RoomList) {
+        Objects.requireNonNull(RoomList);
+        return new FindRoomsWithRoomListRequestBuilder(pathParameters, requestAdapter, RoomList);
     }
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -902,7 +910,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option. Because the user resource supports extensions, you can also use the GET operation to get custom properties and extension data in a user instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/user-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -916,7 +924,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body The request body
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -927,7 +935,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @see <a href="https://learn.microsoft.com/graph/api/user-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -943,13 +951,13 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the reminderView method.
      * @param EndDateTime Usage: EndDateTime='{EndDateTime}'
      * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
-     * @return a reminderViewWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder reminderViewWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String startDateTime) {
-        Objects.requireNonNull(endDateTime);
-        Objects.requireNonNull(startDateTime);
-        return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    public ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder reminderViewWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final String EndDateTime, @jakarta.annotation.Nonnull final String StartDateTime) {
+        Objects.requireNonNull(EndDateTime);
+        Objects.requireNonNull(StartDateTime);
+        return new ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, EndDateTime, StartDateTime);
     }
     /**
      * Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.

@@ -13,7 +13,7 @@ public class GroupPolicyUploadedDefinitionFileCollectionResponse extends BaseCol
      */
     private java.util.List<GroupPolicyUploadedDefinitionFile> value;
     /**
-     * Instantiates a new groupPolicyUploadedDefinitionFileCollectionResponse and sets the default values.
+     * Instantiates a new GroupPolicyUploadedDefinitionFileCollectionResponse and sets the default values.
      */
     public GroupPolicyUploadedDefinitionFileCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class GroupPolicyUploadedDefinitionFileCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyUploadedDefinitionFileCollectionResponse
+     * @return a GroupPolicyUploadedDefinitionFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyUploadedDefinitionFileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class GroupPolicyUploadedDefinitionFileCollectionResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a groupPolicyUploadedDefinitionFile
+     * @return a java.util.List<GroupPolicyUploadedDefinitionFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedDefinitionFile> getValue() {

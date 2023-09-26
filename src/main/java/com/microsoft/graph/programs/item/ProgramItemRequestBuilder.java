@@ -67,7 +67,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from programs by key
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> get() {
@@ -76,7 +76,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from programs by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, update an existing program object.
      * @param body The request body
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, update an existing program object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

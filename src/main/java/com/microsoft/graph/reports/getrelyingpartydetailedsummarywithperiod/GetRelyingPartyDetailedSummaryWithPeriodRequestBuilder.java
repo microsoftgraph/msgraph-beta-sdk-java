@@ -39,7 +39,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends Base
     }
     /**
      * Invoke function getRelyingPartyDetailedSummary
-     * @return a CompletableFuture of getRelyingPartyDetailedSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetRelyingPartyDetailedSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get() {
@@ -48,7 +48,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends Base
     /**
      * Invoke function getRelyingPartyDetailedSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRelyingPartyDetailedSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetRelyingPartyDetailedSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRelyingPartyDetailedSummaryWithPeriodRequestBuilder
+     * @return a GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -15,7 +15,7 @@ public class FindRoomsWithRoomListResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<EmailAddress> value;
     /**
-     * Instantiates a new findRoomsWithRoomListResponse and sets the default values.
+     * Instantiates a new FindRoomsWithRoomListResponse and sets the default values.
      */
     public FindRoomsWithRoomListResponse() {
         super();
@@ -23,7 +23,7 @@ public class FindRoomsWithRoomListResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a findRoomsWithRoomListResponse
+     * @return a FindRoomsWithRoomListResponse
      */
     @jakarta.annotation.Nonnull
     public static FindRoomsWithRoomListResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class FindRoomsWithRoomListResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a emailAddress
+     * @return a java.util.List<EmailAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailAddress> getValue() {

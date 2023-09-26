@@ -73,7 +73,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Retrieve the properties and relationships of a governanceRoleSetting.
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Retrieve the properties and relationships of a governanceRoleSetting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the properties of governanceRoleSetting.
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class GovernanceRoleSettingItemRequestBuilder extends BaseRequestBuilder 
      * Update the properties of governanceRoleSetting.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      * @see <a href="https://learn.microsoft.com/graph/api/governancerolesetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

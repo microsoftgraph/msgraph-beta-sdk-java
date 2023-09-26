@@ -65,7 +65,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get trainings from security
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> get() {
@@ -74,7 +74,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get trainings from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property trainings in security
      * @param body The request body
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> patch(@jakarta.annotation.Nonnull final Training body) {
@@ -97,7 +97,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property trainings in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> patch(@jakarta.annotation.Nonnull final Training body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

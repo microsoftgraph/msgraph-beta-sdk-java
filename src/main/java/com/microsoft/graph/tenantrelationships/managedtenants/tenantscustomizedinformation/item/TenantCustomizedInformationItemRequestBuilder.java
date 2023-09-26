@@ -57,7 +57,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Read the properties and relationships of a tenantCustomizedInformation object.
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
     /**
      * Read the properties and relationships of a tenantCustomizedInformation object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of a tenantCustomizedInformation object.
      * @param body The request body
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
      * Update the properties of a tenantCustomizedInformation object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

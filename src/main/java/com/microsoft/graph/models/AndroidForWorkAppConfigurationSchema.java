@@ -14,13 +14,13 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     /**
      * UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
      */
-    private byte[] exampleJson;
+    private Base64url exampleJson;
     /**
      * Collection of items each representing a named configuration option in the schema
      */
     private java.util.List<AndroidForWorkAppConfigurationSchemaItem> schemaItems;
     /**
-     * Instantiates a new androidForWorkAppConfigurationSchema and sets the default values.
+     * Instantiates a new AndroidForWorkAppConfigurationSchema and sets the default values.
      */
     public AndroidForWorkAppConfigurationSchema() {
         super();
@@ -28,7 +28,7 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkAppConfigurationSchema
+     * @return a AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkAppConfigurationSchema createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,10 +37,10 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     }
     /**
      * Gets the exampleJson property value. UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getExampleJson() {
+    public Base64url getExampleJson() {
         return this.exampleJson;
     }
     /**
@@ -50,13 +50,13 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("exampleJson", (n) -> { this.setExampleJson(n.getByteArrayValue()); });
+        deserializerMap.put("exampleJson", (n) -> { this.setExampleJson(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("schemaItems", (n) -> { this.setSchemaItems(n.getCollectionOfObjectValues(AndroidForWorkAppConfigurationSchemaItem::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the schemaItems property value. Collection of items each representing a named configuration option in the schema
-     * @return a androidForWorkAppConfigurationSchemaItem
+     * @return a java.util.List<AndroidForWorkAppConfigurationSchemaItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidForWorkAppConfigurationSchemaItem> getSchemaItems() {
@@ -69,14 +69,14 @@ public class AndroidForWorkAppConfigurationSchema extends Entity implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("exampleJson", this.getExampleJson());
+        writer.writeObjectValue("exampleJson", this.getExampleJson());
         writer.writeCollectionOfObjectValues("schemaItems", this.getSchemaItems());
     }
     /**
      * Sets the exampleJson property value. UTF8 encoded byte array containing example JSON string conforming to this schema that demonstrates how to set the configuration for this app
      * @param value Value to set for the exampleJson property.
      */
-    public void setExampleJson(@jakarta.annotation.Nullable final byte[] value) {
+    public void setExampleJson(@jakarta.annotation.Nullable final Base64url value) {
         this.exampleJson = value;
     }
     /**

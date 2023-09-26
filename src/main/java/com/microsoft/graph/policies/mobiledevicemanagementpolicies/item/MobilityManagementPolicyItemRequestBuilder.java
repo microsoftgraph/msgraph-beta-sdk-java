@@ -67,7 +67,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Read the properties and relationships of a mobilityManagementPolicy object.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of a mobilityManagementPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Update the properties of a mobilityManagementPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/mobiledevicemanagementpolicies-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

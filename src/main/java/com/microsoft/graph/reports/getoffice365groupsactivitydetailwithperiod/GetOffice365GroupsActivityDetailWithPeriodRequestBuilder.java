@@ -39,7 +39,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodRequestBuilder extends Ba
     }
     /**
      * Invoke function getOffice365GroupsActivityDetail
-     * @return a CompletableFuture of getOffice365GroupsActivityDetailWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365GroupsActivityDetailWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityDetailWithPeriodResponse> get() {
@@ -48,7 +48,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodRequestBuilder extends Ba
     /**
      * Invoke function getOffice365GroupsActivityDetail
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getOffice365GroupsActivityDetailWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365GroupsActivityDetailWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityDetailWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365GroupsActivityDetailWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityDetailWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

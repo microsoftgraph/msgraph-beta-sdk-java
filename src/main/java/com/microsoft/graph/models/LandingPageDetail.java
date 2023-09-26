@@ -21,7 +21,7 @@ public class LandingPageDetail extends Entity implements Parsable {
      */
     private String language;
     /**
-     * Instantiates a new landingPageDetail and sets the default values.
+     * Instantiates a new LandingPageDetail and sets the default values.
      */
     public LandingPageDetail() {
         super();
@@ -29,7 +29,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a landingPageDetail
+     * @return a LandingPageDetail
      */
     @jakarta.annotation.Nonnull
     public static LandingPageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -58,7 +58,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultLangauge property value. The isDefaultLangauge property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
@@ -66,7 +66,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The language property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {

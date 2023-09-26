@@ -18,13 +18,13 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     /**
      * Configuration xml. (UTF8 encoded byte array)
      */
-    private byte[] configurationXml;
+    private Base64url configurationXml;
     /**
      * Configuration file name (.plist
      */
     private String fileName;
     /**
-     * Instantiates a new macOSCustomAppConfiguration and sets the default values.
+     * Instantiates a new MacOSCustomAppConfiguration and sets the default values.
      */
     public MacOSCustomAppConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCustomAppConfiguration
+     * @return a MacOSCustomAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSCustomAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the bundleId property value. Bundle id for targeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -50,10 +50,10 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getConfigurationXml() {
+    public Base64url getConfigurationXml() {
         return this.configurationXml;
     }
     /**
@@ -64,13 +64,13 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
-        deserializerMap.put("configurationXml", (n) -> { this.setConfigurationXml(n.getByteArrayValue()); });
+        deserializerMap.put("configurationXml", (n) -> { this.setConfigurationXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the fileName property value. Configuration file name (.plist
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -84,7 +84,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("bundleId", this.getBundleId());
-        writer.writeByteArrayValue("configurationXml", this.getConfigurationXml());
+        writer.writeObjectValue("configurationXml", this.getConfigurationXml());
         writer.writeStringValue("fileName", this.getFileName());
     }
     /**
@@ -98,7 +98,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * Sets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
      * @param value Value to set for the configurationXml property.
      */
-    public void setConfigurationXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setConfigurationXml(@jakarta.annotation.Nullable final Base64url value) {
         this.configurationXml = value;
     }
     /**

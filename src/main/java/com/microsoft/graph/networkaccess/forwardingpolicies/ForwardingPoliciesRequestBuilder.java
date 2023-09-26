@@ -60,7 +60,7 @@ public class ForwardingPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve information about a specific forwarding policy.
-     * @return a CompletableFuture of forwardingPolicyCollectionResponse
+     * @return a CompletableFuture of ForwardingPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ForwardingPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve information about a specific forwarding policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingPolicyCollectionResponse
+     * @return a CompletableFuture of ForwardingPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ForwardingPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to forwardingPolicies for networkAccess
      * @param body The request body
-     * @return a CompletableFuture of forwardingPolicy
+     * @return a CompletableFuture of ForwardingPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingPolicy> post(@jakarta.annotation.Nonnull final ForwardingPolicy body) {
@@ -92,7 +92,7 @@ public class ForwardingPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to forwardingPolicies for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingPolicy
+     * @return a CompletableFuture of ForwardingPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingPolicy> post(@jakarta.annotation.Nonnull final ForwardingPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ForwardingPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a forwardingPoliciesRequestBuilder
+     * @return a ForwardingPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ForwardingPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

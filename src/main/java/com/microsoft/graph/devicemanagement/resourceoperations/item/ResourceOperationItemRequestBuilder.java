@@ -58,7 +58,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Resource Operations.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> get() {
@@ -67,7 +67,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +80,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getScopesForUser method.
      * @param userid Usage: userid='{userid}'
-     * @return a getScopesForUserWithUseridRequestBuilder
+     * @return a GetScopesForUserWithUseridRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetScopesForUserWithUseridRequestBuilder getScopesForUserWithUserid(@jakarta.annotation.Nonnull final String userid) {
@@ -90,7 +90,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> patch(@jakarta.annotation.Nonnull final ResourceOperation body) {
@@ -100,7 +100,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> patch(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

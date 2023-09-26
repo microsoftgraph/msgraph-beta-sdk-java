@@ -57,7 +57,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the tenant-level settings for Microsoft 365 reports.
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the tenant-level settings for Microsoft 365 reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
      * Update tenant-level settings for Microsoft 365 reports.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportSettingsRequestBuilder
+     * @return a ReportSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

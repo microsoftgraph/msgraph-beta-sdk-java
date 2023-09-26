@@ -57,7 +57,7 @@ public class NetworkAccessTrafficTransactionItemRequestBuilder extends BaseReque
     }
     /**
      * Represents a collection of log entries in the network access traffic log.
-     * @return a CompletableFuture of networkAccessTraffic
+     * @return a CompletableFuture of NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTraffic> get() {
@@ -66,7 +66,7 @@ public class NetworkAccessTrafficTransactionItemRequestBuilder extends BaseReque
     /**
      * Represents a collection of log entries in the network access traffic log.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of networkAccessTraffic
+     * @return a CompletableFuture of NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTraffic> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class NetworkAccessTrafficTransactionItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property traffic in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of networkAccessTraffic
+     * @return a CompletableFuture of NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTraffic> patch(@jakarta.annotation.Nonnull final NetworkAccessTraffic body) {
@@ -89,7 +89,7 @@ public class NetworkAccessTrafficTransactionItemRequestBuilder extends BaseReque
      * Update the navigation property traffic in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of networkAccessTraffic
+     * @return a CompletableFuture of NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTraffic> patch(@jakarta.annotation.Nonnull final NetworkAccessTraffic body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

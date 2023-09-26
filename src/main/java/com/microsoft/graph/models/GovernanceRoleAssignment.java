@@ -66,7 +66,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     private String subjectId;
     /**
-     * Instantiates a new governanceRoleAssignment and sets the default values.
+     * Instantiates a new GovernanceRoleAssignment and sets the default values.
      */
     public GovernanceRoleAssignment() {
         super();
@@ -74,7 +74,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRoleAssignment
+     * @return a GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
@@ -99,7 +99,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The external ID the resource that is used to identify the role assignment in the provider.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -130,7 +130,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the linkedEligibleRoleAssignment property value. Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
-     * @return a governanceRoleAssignment
+     * @return a GovernanceRoleAssignment
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleAssignment getLinkedEligibleRoleAssignment() {
@@ -138,7 +138,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the linkedEligibleRoleAssignmentId property value. If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLinkedEligibleRoleAssignmentId() {
@@ -146,7 +146,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMemberType() {
@@ -154,7 +154,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Read-only. The resource associated with the role assignment.
-     * @return a governanceResource
+     * @return a GovernanceResource
      */
     @jakarta.annotation.Nullable
     public GovernanceResource getResource() {
@@ -162,7 +162,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the resourceId property value. Required. The ID of the resource which the role assignment is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -170,7 +170,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinition property value. Read-only. The role definition associated with the role assignment.
-     * @return a governanceRoleDefinition
+     * @return a GovernanceRoleDefinition
      */
     @jakarta.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
@@ -178,7 +178,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitionId property value. Required. The ID of the role definition which the role assignment is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -194,7 +194,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -202,7 +202,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. Read-only. The subject associated with the role assignment.
-     * @return a governanceSubject
+     * @return a GovernanceSubject
      */
     @jakarta.annotation.Nullable
     public GovernanceSubject getSubject() {
@@ -210,7 +210,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the subjectId property value. Required. The ID of the subject which the role assignment is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {

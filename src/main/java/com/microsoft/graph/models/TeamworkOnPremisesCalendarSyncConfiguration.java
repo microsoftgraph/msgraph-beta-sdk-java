@@ -30,7 +30,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
      */
     private String smtpAddress;
     /**
-     * Instantiates a new teamworkOnPremisesCalendarSyncConfiguration and sets the default values.
+     * Instantiates a new TeamworkOnPremisesCalendarSyncConfiguration and sets the default values.
      */
     public TeamworkOnPremisesCalendarSyncConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkOnPremisesCalendarSyncConfiguration
+     * @return a TeamworkOnPremisesCalendarSyncConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkOnPremisesCalendarSyncConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
         return new TeamworkOnPremisesCalendarSyncConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     }
     /**
      * Gets the domain property value. The fully qualified domain name (FQDN) of the Skype for Business Server. Use the Exchange domain if the Skype for Business SIP domain is different from the Exchange domain of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
@@ -63,7 +63,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     }
     /**
      * Gets the domainUserName property value. The domain and username of the console device, for example, Seattle/RanierConf.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainUserName() {
@@ -84,7 +84,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     }
     /**
      * Gets the smtpAddress property value. The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSmtpAddress() {
@@ -111,8 +111,8 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

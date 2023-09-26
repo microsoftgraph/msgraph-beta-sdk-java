@@ -81,7 +81,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The terms and conditions associated with device management of the company.
-     * @return a CompletableFuture of termsAndConditions
+     * @return a CompletableFuture of TermsAndConditions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> get() {
@@ -90,7 +90,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The terms and conditions associated with device management of the company.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditions
+     * @return a CompletableFuture of TermsAndConditions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property termsAndConditions in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditions
+     * @return a CompletableFuture of TermsAndConditions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> patch(@jakarta.annotation.Nonnull final TermsAndConditions body) {
@@ -113,7 +113,7 @@ public class TermsAndConditionsItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property termsAndConditions in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditions
+     * @return a CompletableFuture of TermsAndConditions
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditions> patch(@jakarta.annotation.Nonnull final TermsAndConditions body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

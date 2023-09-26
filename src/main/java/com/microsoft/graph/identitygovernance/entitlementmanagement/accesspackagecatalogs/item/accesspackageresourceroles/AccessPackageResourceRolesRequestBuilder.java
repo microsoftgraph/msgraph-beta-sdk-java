@@ -66,7 +66,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve a list of accessPackageResourceRole objects of an accessPackageResource in an accessPackageCatalog. The resource should have been added to the catalog by creating an accessPackageResourceRequest. This list of roles can then be used by the caller to select a role, which is needed when subsequently creating an accessPackageResourceRoleScope.
-     * @return a CompletableFuture of accessPackageResourceRoleCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceRoleCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-accesspackageresourceroles?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve a list of accessPackageResourceRole objects of an accessPackageResource in an accessPackageCatalog. The resource should have been added to the catalog by creating an accessPackageResourceRequest. This list of roles can then be used by the caller to select a role, which is needed when subsequently creating an accessPackageResourceRoleScope.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRoleCollectionResponse
+     * @return a CompletableFuture of AccessPackageResourceRoleCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-accesspackageresourceroles?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to accessPackageResourceRoles for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -109,7 +109,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
      * Create new navigation property to accessPackageResourceRoles for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -199,7 +199,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageResourceRolesRequestBuilder
+     * @return a AccessPackageResourceRolesRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

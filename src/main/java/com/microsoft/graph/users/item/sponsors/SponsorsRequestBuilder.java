@@ -59,7 +59,7 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a user's sponsors. Sponsors are users and groups that are responsible for this guest user's privileges in the tenant and for keeping the guest user's information and access up to date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-sponsors?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class SponsorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sponsorsRequestBuilder
+     * @return a SponsorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SponsorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

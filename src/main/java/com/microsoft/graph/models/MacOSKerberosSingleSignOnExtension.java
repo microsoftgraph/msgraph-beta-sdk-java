@@ -132,7 +132,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      */
     private Boolean userSetupDelayed;
     /**
-     * Instantiates a new macOSKerberosSingleSignOnExtension and sets the default values.
+     * Instantiates a new MacOSKerberosSingleSignOnExtension and sets the default values.
      */
     public MacOSKerberosSingleSignOnExtension() {
         super();
@@ -141,7 +141,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSKerberosSingleSignOnExtension
+     * @return a MacOSKerberosSingleSignOnExtension
      */
     @jakarta.annotation.Nonnull
     public static MacOSKerberosSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -150,7 +150,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the activeDirectorySiteCode property value. Gets or sets the Active Directory site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActiveDirectorySiteCode() {
@@ -158,7 +158,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the blockActiveDirectorySiteAutoDiscovery property value. Enables or disables whether the Kerberos extension can automatically determine its site name.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockActiveDirectorySiteAutoDiscovery() {
@@ -166,7 +166,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the blockAutomaticLogin property value. Enables or disables Keychain usage.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockAutomaticLogin() {
@@ -174,7 +174,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the cacheName property value. Gets or sets the Generic Security Services name of the Kerberos cache to use for this profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCacheName() {
@@ -182,7 +182,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the credentialBundleIdAccessControlList property value. Gets or sets a list of app Bundle IDs allowed to access the Kerberos Ticket Granting Ticket.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCredentialBundleIdAccessControlList() {
@@ -190,7 +190,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the credentialsCacheMonitored property value. When set to True, the credential is requested on the next matching Kerberos challenge or network state change. When the credential is expired or missing, a new credential is created. Available for devices running macOS versions 12 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCredentialsCacheMonitored() {
@@ -198,7 +198,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the domainRealms property value. Gets or sets a list of realms for custom domain-realm mapping. Realms are case sensitive.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomainRealms() {
@@ -206,7 +206,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -253,7 +253,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the isDefaultRealm property value. When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultRealm() {
@@ -261,7 +261,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the kerberosAppsInBundleIdACLIncluded property value. When set to True, the Kerberos extension allows any apps entered with the app bundle ID, managed apps, and standard Kerberos utilities, such as TicketViewer and klist, to access and use the credential. Available for devices running macOS versions 12 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKerberosAppsInBundleIdACLIncluded() {
@@ -269,7 +269,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the managedAppsInBundleIdACLIncluded property value. When set to True, the Kerberos extension allows managed apps, and any apps entered with the app bundle ID to access the credential. When set to False, the Kerberos extension allows all apps to access the credential. Available for devices running iOS and iPadOS versions 14 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getManagedAppsInBundleIdACLIncluded() {
@@ -277,7 +277,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the modeCredentialUsed property value. Select how other processes use the Kerberos Extension credential.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModeCredentialUsed() {
@@ -285,7 +285,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordBlockModification property value. Enables or disables password changes.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockModification() {
@@ -293,7 +293,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordChangeUrl property value. Gets or sets the URL that the user will be sent to when they initiate a password change.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordChangeUrl() {
@@ -301,7 +301,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordEnableLocalSync property value. Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordEnableLocalSync() {
@@ -309,7 +309,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordExpirationDays property value. Overrides the default password expiration in days. For most domains, this value is calculated automatically.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -317,7 +317,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordExpirationNotificationDays property value. Gets or sets the number of days until the user is notified that their password will expire (default is 15).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationNotificationDays() {
@@ -325,7 +325,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordMinimumAgeDays property value. Gets or sets the minimum number of days until a user can change their password again.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumAgeDays() {
@@ -333,7 +333,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordMinimumLength property value. Gets or sets the minimum length of a password.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -341,7 +341,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Gets or sets the number of previous passwords to block.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -349,7 +349,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordRequireActiveDirectoryComplexity property value. Enables or disables whether passwords must meet Active Directory's complexity requirements.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequireActiveDirectoryComplexity() {
@@ -357,7 +357,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the passwordRequirementsDescription property value. Gets or sets a description of the password complexity requirements.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordRequirementsDescription() {
@@ -365,7 +365,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPreferredKDCs() {
@@ -373,7 +373,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -381,7 +381,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the requireUserPresence property value. Gets or sets whether to require authentication via Touch ID, Face ID, or a passcode to access the keychain entry.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireUserPresence() {
@@ -389,7 +389,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the signInHelpText property value. Text displayed to the user at the Kerberos sign in window. Available for devices running iOS and iPadOS versions 14 and later.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignInHelpText() {
@@ -397,7 +397,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the tlsForLDAPRequired property value. When set to True, LDAP connections are required to use Transport Layer Security (TLS). Available for devices running macOS versions 11 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTlsForLDAPRequired() {
@@ -405,7 +405,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the usernameLabelCustom property value. This label replaces the user name shown in the Kerberos extension. You can enter a name to match the name of your company or organization. Available for devices running macOS versions 11 and later.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsernameLabelCustom() {
@@ -413,7 +413,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the userPrincipalName property value. Gets or sets the principle user name to use for this profile. The realm name does not need to be included.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -421,7 +421,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the userSetupDelayed property value. When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUserSetupDelayed() {

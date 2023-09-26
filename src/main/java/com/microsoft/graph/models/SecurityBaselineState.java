@@ -32,7 +32,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new securityBaselineState and sets the default values.
+     * Instantiates a new SecurityBaselineState and sets the default values.
      */
     public SecurityBaselineState() {
         super();
@@ -40,7 +40,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineState
+     * @return a SecurityBaselineState
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the security baseline
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the securityBaselineTemplateId property value. The security baseline template id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityBaselineTemplateId() {
@@ -79,7 +79,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the settingStates property value. The security baseline state for different settings for a device
-     * @return a securityBaselineSettingState
+     * @return a java.util.List<SecurityBaselineSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineSettingState> getSettingStates() {
@@ -87,7 +87,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
@@ -95,7 +95,7 @@ public class SecurityBaselineState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

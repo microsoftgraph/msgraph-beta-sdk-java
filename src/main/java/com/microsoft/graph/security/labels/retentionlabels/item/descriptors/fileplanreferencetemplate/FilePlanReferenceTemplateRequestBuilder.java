@@ -38,7 +38,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
-     * @return a CompletableFuture of filePlanReferenceTemplate
+     * @return a CompletableFuture of FilePlanReferenceTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanReferenceTemplate> get() {
@@ -47,7 +47,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     /**
      * Specifies a unique alpha-numeric identifier for an organizations retention schedule.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filePlanReferenceTemplate
+     * @return a CompletableFuture of FilePlanReferenceTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanReferenceTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class FilePlanReferenceTemplateRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filePlanReferenceTemplateRequestBuilder
+     * @return a FilePlanReferenceTemplateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilePlanReferenceTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

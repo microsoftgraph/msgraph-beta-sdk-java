@@ -89,7 +89,7 @@ public class ExactMatchSessionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sessions from dataClassification
-     * @return a CompletableFuture of exactMatchSession
+     * @return a CompletableFuture of ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSession> get() {
@@ -98,7 +98,7 @@ public class ExactMatchSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sessions from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchSession
+     * @return a CompletableFuture of ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSession> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class ExactMatchSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sessions in dataClassification
      * @param body The request body
-     * @return a CompletableFuture of exactMatchSession
+     * @return a CompletableFuture of ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSession> patch(@jakarta.annotation.Nonnull final ExactMatchSession body) {
@@ -121,7 +121,7 @@ public class ExactMatchSessionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sessions in dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchSession
+     * @return a CompletableFuture of ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSession> patch(@jakarta.annotation.Nonnull final ExactMatchSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

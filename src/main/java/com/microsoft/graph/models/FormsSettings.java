@@ -46,7 +46,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new formsSettings and sets the default values.
+     * Instantiates a new FormsSettings and sets the default values.
      */
     public FormsSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a formsSettings
+     * @return a FormsSettings
      */
     @jakarta.annotation.Nonnull
     public static FormsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
         return new FormsSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isBingImageSearchEnabled property value. Controls whether users can add images from Bing to forms.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBingImageSearchEnabled() {
@@ -96,7 +96,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalSendFormEnabled property value. Controls whether users can send a link to a form to an external user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSendFormEnabled() {
@@ -104,7 +104,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalShareCollaborationEnabled property value. Controls whether users can collaborate on a form layout and structure with an external user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareCollaborationEnabled() {
@@ -112,7 +112,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalShareResultEnabled property value. Controls whether users can share form results with external users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareResultEnabled() {
@@ -120,7 +120,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalShareTemplateEnabled property value. Controls whether users can share form templates with external users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareTemplateEnabled() {
@@ -128,7 +128,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isInOrgFormsPhishingScanEnabled property value. Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInOrgFormsPhishingScanEnabled() {
@@ -136,7 +136,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRecordIdentityByDefaultEnabled property value. Controls whether the names of users who fill out forms are recorded.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordIdentityByDefaultEnabled() {
@@ -144,7 +144,7 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -167,8 +167,8 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

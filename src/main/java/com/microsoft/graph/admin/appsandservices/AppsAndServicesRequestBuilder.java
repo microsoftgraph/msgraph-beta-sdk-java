@@ -57,7 +57,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a adminAppsAndServices object.
-     * @return a CompletableFuture of adminAppsAndServices
+     * @return a CompletableFuture of AdminAppsAndServices
      * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a adminAppsAndServices object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminAppsAndServices
+     * @return a CompletableFuture of AdminAppsAndServices
      * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a adminAppsAndServices object.
      * @param body The request body
-     * @return a CompletableFuture of adminAppsAndServices
+     * @return a CompletableFuture of AdminAppsAndServices
      * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a adminAppsAndServices object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminAppsAndServices
+     * @return a CompletableFuture of AdminAppsAndServices
      * @see <a href="https://learn.microsoft.com/graph/api/adminappsandservices-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appsAndServicesRequestBuilder
+     * @return a AppsAndServicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppsAndServicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

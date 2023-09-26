@@ -37,7 +37,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder extends BaseReq
     }
     /**
      * Invoke function getComanagementEligibleDevicesSummary
-     * @return a CompletableFuture of comanagementEligibleDevicesSummary
+     * @return a CompletableFuture of ComanagementEligibleDevicesSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevicesSummary> get() {
@@ -46,7 +46,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder extends BaseReq
     /**
      * Invoke function getComanagementEligibleDevicesSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of comanagementEligibleDevicesSummary
+     * @return a CompletableFuture of ComanagementEligibleDevicesSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevicesSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class GetComanagementEligibleDevicesSummaryRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getComanagementEligibleDevicesSummaryRequestBuilder
+     * @return a GetComanagementEligibleDevicesSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetComanagementEligibleDevicesSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

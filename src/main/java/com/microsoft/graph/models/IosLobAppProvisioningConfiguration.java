@@ -47,7 +47,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     /**
      * Payload. (UTF8 encoded byte array)
      */
-    private byte[] payload;
+    private Base64url payload;
     /**
      * Payload file name (.mobileprovision
      */
@@ -65,7 +65,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
      */
     private Integer version;
     /**
-     * Instantiates a new iosLobAppProvisioningConfiguration and sets the default values.
+     * Instantiates a new IosLobAppProvisioningConfiguration and sets the default values.
      */
     public IosLobAppProvisioningConfiguration() {
         super();
@@ -73,7 +73,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosLobAppProvisioningConfiguration
+     * @return a IosLobAppProvisioningConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosLobAppProvisioningConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the assignments property value. The associated group assignments for IosLobAppProvisioningConfiguration.
-     * @return a iosLobAppProvisioningConfigurationAssignment
+     * @return a java.util.List<IosLobAppProvisioningConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosLobAppProvisioningConfigurationAssignment> getAssignments() {
@@ -98,7 +98,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -106,7 +106,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the deviceStatuses property value. The list of device installation states for this mobile app configuration.
-     * @return a managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationDeviceStatus> getDeviceStatuses() {
@@ -114,7 +114,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -143,7 +143,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("groupAssignments", (n) -> { this.setGroupAssignments(n.getCollectionOfObjectValues(MobileAppProvisioningConfigGroupAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("userStatuses", (n) -> { this.setUserStatuses(n.getCollectionOfObjectValues(ManagedDeviceMobileAppConfigurationUserStatus::createFromDiscriminatorValue)); });
@@ -152,7 +152,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the groupAssignments property value. The associated group assignments.
-     * @return a mobileAppProvisioningConfigGroupAssignment
+     * @return a java.util.List<MobileAppProvisioningConfigGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppProvisioningConfigGroupAssignment> getGroupAssignments() {
@@ -168,15 +168,15 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getPayload() {
+    public Base64url getPayload() {
         return this.payload;
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileprovision
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -184,7 +184,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this iOS LOB app provisioning configuration entity.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -192,7 +192,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the userStatuses property value. The list of user installation states for this mobile app configuration.
-     * @return a managedDeviceMobileAppConfigurationUserStatus
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationUserStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationUserStatus> getUserStatuses() {
@@ -200,7 +200,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
@@ -221,7 +221,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
-        writer.writeByteArrayValue("payload", this.getPayload());
+        writer.writeObjectValue("payload", this.getPayload());
         writer.writeStringValue("payloadFileName", this.getPayloadFileName());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeCollectionOfObjectValues("userStatuses", this.getUserStatuses());
@@ -287,7 +287,7 @@ public class IosLobAppProvisioningConfiguration extends Entity implements Parsab
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      * @param value Value to set for the payload property.
      */
-    public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
+    public void setPayload(@jakarta.annotation.Nullable final Base64url value) {
         this.payload = value;
     }
     /**

@@ -143,7 +143,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alternativeRecordingRequestBuilder
+     * @return a AlternativeRecordingRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlternativeRecordingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

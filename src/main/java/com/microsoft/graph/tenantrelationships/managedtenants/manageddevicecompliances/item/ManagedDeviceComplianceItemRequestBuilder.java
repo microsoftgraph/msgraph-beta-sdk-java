@@ -57,7 +57,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Read the properties and relationships of a managedDeviceCompliance object.
-     * @return a CompletableFuture of managedDeviceCompliance
+     * @return a CompletableFuture of ManagedDeviceCompliance
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
     /**
      * Read the properties and relationships of a managedDeviceCompliance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceCompliance
+     * @return a CompletableFuture of ManagedDeviceCompliance
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliance-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property managedDeviceCompliances in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceCompliance
+     * @return a CompletableFuture of ManagedDeviceCompliance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCompliance> patch(@jakarta.annotation.Nonnull final ManagedDeviceCompliance body) {
@@ -91,7 +91,7 @@ public class ManagedDeviceComplianceItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property managedDeviceCompliances in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceCompliance
+     * @return a CompletableFuture of ManagedDeviceCompliance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCompliance> patch(@jakarta.annotation.Nonnull final ManagedDeviceCompliance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class AlertIncidentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the alert incidents. The alert incidents are a collection of any following type that is derived from the unifiedRoleManagementAlertIncident object:
-     * @return a CompletableFuture of unifiedRoleManagementAlertIncidentCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementAlertIncidentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementalert-list-alertincidents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AlertIncidentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the alert incidents. The alert incidents are a collection of any following type that is derived from the unifiedRoleManagementAlertIncident object:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertIncidentCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementAlertIncidentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementalert-list-alertincidents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AlertIncidentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to alertIncidents for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementAlertIncident
+     * @return a CompletableFuture of UnifiedRoleManagementAlertIncident
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertIncident> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlertIncident body) {
@@ -94,7 +94,7 @@ public class AlertIncidentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to alertIncidents for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertIncident
+     * @return a CompletableFuture of UnifiedRoleManagementAlertIncident
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertIncident> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlertIncident body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class AlertIncidentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertIncidentsRequestBuilder
+     * @return a AlertIncidentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertIncidentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -37,7 +37,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     }
     /**
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
-     * @return a CompletableFuture of authenticationConfigurationValidation
+     * @return a CompletableFuture of AuthenticationConfigurationValidation
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     /**
      * An API to check validity of the endpoint and and authentication configuration for a customAuthenticationExtension.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationConfigurationValidation
+     * @return a CompletableFuture of AuthenticationConfigurationValidation
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-validateauthenticationconfiguration?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a validateAuthenticationConfigurationRequestBuilder
+     * @return a ValidateAuthenticationConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ValidateAuthenticationConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -155,7 +155,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -165,7 +165,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
      * @param body The request body
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

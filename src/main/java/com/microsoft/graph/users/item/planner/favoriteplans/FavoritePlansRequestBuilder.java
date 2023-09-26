@@ -59,7 +59,7 @@ public class FavoritePlansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of plannerPlans that are marked as favorite by a user. You can mark a plan as favorite by updating the plannerUser resource.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-favoriteplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class FavoritePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of plannerPlans that are marked as favorite by a user. You can mark a plan as favorite by updating the plannerUser resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-favoriteplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class FavoritePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a favoritePlansRequestBuilder
+     * @return a FavoritePlansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FavoritePlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

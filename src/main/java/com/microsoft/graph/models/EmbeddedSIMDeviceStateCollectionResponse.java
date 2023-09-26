@@ -13,7 +13,7 @@ public class EmbeddedSIMDeviceStateCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<EmbeddedSIMDeviceState> value;
     /**
-     * Instantiates a new embeddedSIMDeviceStateCollectionResponse and sets the default values.
+     * Instantiates a new EmbeddedSIMDeviceStateCollectionResponse and sets the default values.
      */
     public EmbeddedSIMDeviceStateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class EmbeddedSIMDeviceStateCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a embeddedSIMDeviceStateCollectionResponse
+     * @return a EmbeddedSIMDeviceStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EmbeddedSIMDeviceStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EmbeddedSIMDeviceStateCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a embeddedSIMDeviceState
+     * @return a java.util.List<EmbeddedSIMDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMDeviceState> getValue() {

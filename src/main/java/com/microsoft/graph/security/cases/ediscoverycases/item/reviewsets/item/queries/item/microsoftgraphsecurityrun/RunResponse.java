@@ -15,7 +15,7 @@ public class RunResponse extends BaseCollectionPaginationCountResponse implement
      */
     private java.util.List<EdiscoveryFile> value;
     /**
-     * Instantiates a new runResponse and sets the default values.
+     * Instantiates a new RunResponse and sets the default values.
      */
     public RunResponse() {
         super();
@@ -23,7 +23,7 @@ public class RunResponse extends BaseCollectionPaginationCountResponse implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a runResponse
+     * @return a RunResponse
      */
     @jakarta.annotation.Nonnull
     public static RunResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RunResponse extends BaseCollectionPaginationCountResponse implement
     }
     /**
      * Gets the value property value. The value property
-     * @return a ediscoveryFile
+     * @return a java.util.List<EdiscoveryFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EdiscoveryFile> getValue() {

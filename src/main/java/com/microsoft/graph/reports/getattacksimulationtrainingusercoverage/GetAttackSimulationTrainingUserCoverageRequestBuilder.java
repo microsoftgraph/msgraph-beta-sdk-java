@@ -37,7 +37,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
     }
     /**
      * Invoke function getAttackSimulationTrainingUserCoverage
-     * @return a CompletableFuture of getAttackSimulationTrainingUserCoverageResponse
+     * @return a CompletableFuture of GetAttackSimulationTrainingUserCoverageResponse
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
@@ -49,7 +49,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
     /**
      * Invoke function getAttackSimulationTrainingUserCoverage
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAttackSimulationTrainingUserCoverageResponse
+     * @return a CompletableFuture of GetAttackSimulationTrainingUserCoverageResponse
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
@@ -100,7 +100,7 @@ public class GetAttackSimulationTrainingUserCoverageRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAttackSimulationTrainingUserCoverageRequestBuilder
+     * @return a GetAttackSimulationTrainingUserCoverageRequestBuilder
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */

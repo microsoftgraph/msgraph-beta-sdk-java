@@ -92,7 +92,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of administrativeUnit objects.
-     * @return a CompletableFuture of administrativeUnitCollectionResponse
+     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of administrativeUnit objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnitCollectionResponse
+     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new administrativeUnit.
      * @param body The request body
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new administrativeUnit.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a administrativeUnitsRequestBuilder
+     * @return a AdministrativeUnitsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

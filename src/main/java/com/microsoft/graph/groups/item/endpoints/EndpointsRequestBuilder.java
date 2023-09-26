@@ -60,7 +60,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of endpoint objects.
-     * @return a CompletableFuture of endpointCollectionResponse
+     * @return a CompletableFuture of EndpointCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of endpoint objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endpointCollectionResponse
+     * @return a CompletableFuture of EndpointCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-endpoints?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to endpoints for groups
      * @param body The request body
-     * @return a CompletableFuture of endpoint
+     * @return a CompletableFuture of Endpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Endpoint> post(@jakarta.annotation.Nonnull final Endpoint body) {
@@ -94,7 +94,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to endpoints for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endpoint
+     * @return a CompletableFuture of Endpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Endpoint> post(@jakarta.annotation.Nonnull final Endpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class EndpointsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a endpointsRequestBuilder
+     * @return a EndpointsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EndpointsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

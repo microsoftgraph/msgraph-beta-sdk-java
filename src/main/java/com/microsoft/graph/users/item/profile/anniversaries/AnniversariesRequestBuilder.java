@@ -60,7 +60,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of personAnniversary objects for the given user from their profile.
-     * @return a CompletableFuture of personAnnualEventCollectionResponse
+     * @return a CompletableFuture of PersonAnnualEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personAnniversary objects for the given user from their profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personAnnualEventCollectionResponse
+     * @return a CompletableFuture of PersonAnnualEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new personAnniversary object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of personAnnualEvent
+     * @return a CompletableFuture of PersonAnnualEvent
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new personAnniversary object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personAnnualEvent
+     * @return a CompletableFuture of PersonAnnualEvent
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a anniversariesRequestBuilder
+     * @return a AnniversariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AnniversariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -68,7 +68,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of child folders in the mailFolder.
-     * @return a CompletableFuture of mailFolderCollectionResponse
+     * @return a CompletableFuture of MailFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailFolderCollectionResponse
+     * @return a CompletableFuture of MailFolderCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-list-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
      * @param body The request body
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the isHidden property to true on creation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a childFoldersRequestBuilder
+     * @return a ChildFoldersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChildFoldersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

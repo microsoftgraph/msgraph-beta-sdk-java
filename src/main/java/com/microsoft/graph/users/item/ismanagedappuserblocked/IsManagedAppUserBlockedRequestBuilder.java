@@ -36,7 +36,7 @@ public class IsManagedAppUserBlockedRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Gets the blocked state of a managed app user.
-     * @return a CompletableFuture of isManagedAppUserBlockedResponse
+     * @return a CompletableFuture of IsManagedAppUserBlockedResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IsManagedAppUserBlockedResponse> get() {
@@ -45,7 +45,7 @@ public class IsManagedAppUserBlockedRequestBuilder extends BaseRequestBuilder {
     /**
      * Gets the blocked state of a managed app user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of isManagedAppUserBlockedResponse
+     * @return a CompletableFuture of IsManagedAppUserBlockedResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IsManagedAppUserBlockedResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class IsManagedAppUserBlockedRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a isManagedAppUserBlockedRequestBuilder
+     * @return a IsManagedAppUserBlockedRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IsManagedAppUserBlockedRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

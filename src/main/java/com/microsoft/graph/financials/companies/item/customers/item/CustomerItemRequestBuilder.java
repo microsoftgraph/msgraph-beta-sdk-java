@@ -97,7 +97,7 @@ public class CustomerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get customers from financials
-     * @return a CompletableFuture of customer
+     * @return a CompletableFuture of Customer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Customer> get() {
@@ -106,7 +106,7 @@ public class CustomerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get customers from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customer
+     * @return a CompletableFuture of Customer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Customer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class CustomerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property customers in financials
      * @param body The request body
-     * @return a CompletableFuture of customer
+     * @return a CompletableFuture of Customer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Customer> patch(@jakarta.annotation.Nonnull final Customer body) {
@@ -129,7 +129,7 @@ public class CustomerItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property customers in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customer
+     * @return a CompletableFuture of Customer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Customer> patch(@jakarta.annotation.Nonnull final Customer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

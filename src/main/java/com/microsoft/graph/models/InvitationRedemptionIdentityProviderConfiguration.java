@@ -26,7 +26,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
      */
     private java.util.List<B2bIdentityProvidersType> primaryIdentityProviderPrecedenceOrder;
     /**
-     * Instantiates a new invitationRedemptionIdentityProviderConfiguration and sets the default values.
+     * Instantiates a new InvitationRedemptionIdentityProviderConfiguration and sets the default values.
      */
     public InvitationRedemptionIdentityProviderConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invitationRedemptionIdentityProviderConfiguration
+     * @return a InvitationRedemptionIdentityProviderConfiguration
      */
     @jakarta.annotation.Nonnull
     public static InvitationRedemptionIdentityProviderConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
         return new InvitationRedemptionIdentityProviderConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the fallbackIdentityProvider property value. The fallbackIdentityProvider property
-     * @return a b2bIdentityProvidersType
+     * @return a B2bIdentityProvidersType
      */
     @jakarta.annotation.Nullable
     public B2bIdentityProvidersType getFallbackIdentityProvider() {
@@ -78,7 +78,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,7 +86,7 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
     }
     /**
      * Gets the primaryIdentityProviderPrecedenceOrder property value. The primaryIdentityProviderPrecedenceOrder property
-     * @return a b2bIdentityProvidersType
+     * @return a java.util.List<B2bIdentityProvidersType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2bIdentityProvidersType> getPrimaryIdentityProviderPrecedenceOrder() {
@@ -104,8 +104,8 @@ public class InvitationRedemptionIdentityProviderConfiguration implements Additi
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

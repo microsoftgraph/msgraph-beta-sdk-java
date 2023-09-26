@@ -59,7 +59,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class LearningContentItemRequestBuilder extends BaseRequestBuilder {
      * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of learningContent
+     * @return a CompletableFuture of LearningContent
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

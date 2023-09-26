@@ -131,7 +131,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an accessPackageCatalog object.
-     * @return a CompletableFuture of accessPackageCatalog
+     * @return a CompletableFuture of AccessPackageCatalog
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
@@ -144,7 +144,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an accessPackageCatalog object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageCatalog
+     * @return a CompletableFuture of AccessPackageCatalog
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
-     * @return a CompletableFuture of accessPackageCatalog
+     * @return a CompletableFuture of AccessPackageCatalog
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>
@@ -175,7 +175,7 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageCatalog
+     * @return a CompletableFuture of AccessPackageCatalog
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0">Find more info here</a>

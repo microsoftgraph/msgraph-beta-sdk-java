@@ -113,7 +113,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     }
     /**
      * The available group policy uploaded definition files for this account.
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> get() {
@@ -122,7 +122,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * The available group policy uploaded definition files for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +135,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> patch(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
@@ -145,7 +145,7 @@ public class GroupPolicyUploadedDefinitionFileItemRequestBuilder extends BaseReq
      * Update the navigation property groupPolicyUploadedDefinitionFiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> patch(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

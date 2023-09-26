@@ -42,7 +42,7 @@ public class SearchResponse extends BaseCollectionPaginationCountResponse implem
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageCatalog
+     * @return a java.util.List<AccessPackageCatalog>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageCatalog> getValue() {

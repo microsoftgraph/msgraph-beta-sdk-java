@@ -68,7 +68,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
-     * @return a CompletableFuture of cloudPcDeviceImageCollectionResponse
+     * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcDeviceImageCollectionResponse
+     * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
      * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceImagesRequestBuilder
+     * @return a DeviceImagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceImagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

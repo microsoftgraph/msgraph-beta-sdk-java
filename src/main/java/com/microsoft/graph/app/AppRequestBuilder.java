@@ -54,7 +54,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get app
-     * @return a CompletableFuture of commsApplication
+     * @return a CompletableFuture of CommsApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsApplication> get() {
@@ -63,7 +63,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commsApplication
+     * @return a CompletableFuture of CommsApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsApplication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
     /**
      * Update app
      * @param body The request body
-     * @return a CompletableFuture of commsApplication
+     * @return a CompletableFuture of CommsApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsApplication> patch(@jakarta.annotation.Nonnull final CommsApplication body) {
@@ -86,7 +86,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
      * Update app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commsApplication
+     * @return a CompletableFuture of CommsApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommsApplication> patch(@jakarta.annotation.Nonnull final CommsApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class AppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appRequestBuilder
+     * @return a AppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

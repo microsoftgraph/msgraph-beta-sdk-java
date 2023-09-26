@@ -57,7 +57,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents operations on resources that take a long time to complete and can run in the background until completion.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> get() {
@@ -66,7 +66,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents operations on resources that take a long time to complete and can run in the background until completion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> patch(@jakarta.annotation.Nonnull final LongRunningOperation body) {
@@ -89,7 +89,7 @@ public class LongRunningOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> patch(@jakarta.annotation.Nonnull final LongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

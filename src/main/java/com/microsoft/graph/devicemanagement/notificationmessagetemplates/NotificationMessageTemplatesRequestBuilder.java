@@ -60,7 +60,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
     }
     /**
      * The Notification Message Templates.
-     * @return a CompletableFuture of notificationMessageTemplateCollectionResponse
+     * @return a CompletableFuture of NotificationMessageTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
     /**
      * The Notification Message Templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationMessageTemplateCollectionResponse
+     * @return a CompletableFuture of NotificationMessageTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to notificationMessageTemplates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) {
@@ -92,7 +92,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to notificationMessageTemplates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> post(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class NotificationMessageTemplatesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a notificationMessageTemplatesRequestBuilder
+     * @return a NotificationMessageTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NotificationMessageTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

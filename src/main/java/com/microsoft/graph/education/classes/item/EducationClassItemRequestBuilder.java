@@ -131,7 +131,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
-     * @return a CompletableFuture of educationClass
+     * @return a CompletableFuture of EducationClass
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a class from the system. A class is a universal group with a special property that indicates to the system that the group is a class. Group members represent the students; group admins represent the teachers in the class. If you're using the delegated token, the user will only see classes in which they are members.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationClass
+     * @return a CompletableFuture of EducationClass
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a class.
      * @param body The request body
-     * @return a CompletableFuture of educationClass
+     * @return a CompletableFuture of EducationClass
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class EducationClassItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a class.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationClass
+     * @return a CompletableFuture of EducationClass
      * @see <a href="https://learn.microsoft.com/graph/api/educationclass-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

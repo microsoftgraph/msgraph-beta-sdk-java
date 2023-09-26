@@ -60,7 +60,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of commercial subscriptions that an organization has acquired.
-     * @return a CompletableFuture of companySubscriptionCollectionResponse
+     * @return a CompletableFuture of CompanySubscriptionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of commercial subscriptions that an organization has acquired.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companySubscriptionCollectionResponse
+     * @return a CompletableFuture of CompanySubscriptionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-subscriptions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to subscriptions for directory
      * @param body The request body
-     * @return a CompletableFuture of companySubscription
+     * @return a CompletableFuture of CompanySubscription
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanySubscription> post(@jakarta.annotation.Nonnull final CompanySubscription body) {
@@ -94,7 +94,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to subscriptions for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companySubscription
+     * @return a CompletableFuture of CompanySubscription
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanySubscription> post(@jakarta.annotation.Nonnull final CompanySubscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subscriptionsRequestBuilder
+     * @return a SubscriptionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

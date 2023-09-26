@@ -27,7 +27,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      */
     private java.util.List<GroupPolicyDefinitionValue> updated;
     /**
-     * Instantiates a new updateDefinitionValuesPostRequestBody and sets the default values.
+     * Instantiates a new UpdateDefinitionValuesPostRequestBody and sets the default values.
      */
     public UpdateDefinitionValuesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -35,7 +35,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateDefinitionValuesPostRequestBody
+     * @return a UpdateDefinitionValuesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateDefinitionValuesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,14 +44,14 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the added property value. The added property
-     * @return a groupPolicyDefinitionValue
+     * @return a java.util.List<GroupPolicyDefinitionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getAdded() {
         return this.added;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the deletedIds property value. The deletedIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeletedIds() {
@@ -80,7 +80,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the updated property value. The updated property
-     * @return a groupPolicyDefinitionValue
+     * @return a java.util.List<GroupPolicyDefinitionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getUpdated() {
@@ -105,8 +105,8 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
         this.added = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

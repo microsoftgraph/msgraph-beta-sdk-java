@@ -37,7 +37,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action assign
      * @param body The request body
-     * @return a CompletableFuture of assignResponse
+     * @return a CompletableFuture of AssignResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignResponse> post(@jakarta.annotation.Nonnull final AssignPostRequestBody body) {
@@ -47,7 +47,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
      * Invoke action assign
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignResponse
+     * @return a CompletableFuture of AssignResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignResponse> post(@jakarta.annotation.Nonnull final AssignPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignRequestBuilder
+     * @return a AssignRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

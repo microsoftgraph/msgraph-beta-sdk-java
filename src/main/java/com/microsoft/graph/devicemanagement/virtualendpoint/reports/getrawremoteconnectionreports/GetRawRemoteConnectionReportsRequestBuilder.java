@@ -93,7 +93,7 @@ public class GetRawRemoteConnectionReportsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRawRemoteConnectionReportsRequestBuilder
+     * @return a GetRawRemoteConnectionReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRawRemoteConnectionReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

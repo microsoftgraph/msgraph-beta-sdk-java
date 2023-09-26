@@ -57,7 +57,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the specified Teams async operation that ran or is running on a specific resource.
-     * @return a CompletableFuture of teamsAsyncOperation
+     * @return a CompletableFuture of TeamsAsyncOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the specified Teams async operation that ran or is running on a specific resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAsyncOperation
+     * @return a CompletableFuture of TeamsAsyncOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamsasyncoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in users
      * @param body The request body
-     * @return a CompletableFuture of teamsAsyncOperation
+     * @return a CompletableFuture of TeamsAsyncOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> patch(@jakarta.annotation.Nonnull final TeamsAsyncOperation body) {
@@ -91,7 +91,7 @@ public class TeamsAsyncOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAsyncOperation
+     * @return a CompletableFuture of TeamsAsyncOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> patch(@jakarta.annotation.Nonnull final TeamsAsyncOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

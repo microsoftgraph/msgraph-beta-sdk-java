@@ -93,7 +93,7 @@ public class GetDevicePolicySettingsComplianceReportRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getDevicePolicySettingsComplianceReportRequestBuilder
+     * @return a GetDevicePolicySettingsComplianceReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetDevicePolicySettingsComplianceReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

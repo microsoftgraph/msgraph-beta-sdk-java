@@ -57,7 +57,7 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get loginPages from security
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> get() {
@@ -66,7 +66,7 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get loginPages from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property loginPages in security
      * @param body The request body
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> patch(@jakarta.annotation.Nonnull final LoginPage body) {
@@ -89,7 +89,7 @@ public class LoginPageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property loginPages in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> patch(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

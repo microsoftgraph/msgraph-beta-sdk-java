@@ -68,7 +68,7 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get entities from privilegedRoleAssignments
-     * @return a CompletableFuture of privilegedRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of PrivilegedRoleAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get entities from privilegedRoleAssignments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of PrivilegedRoleAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     /**
      * Add new entity to privilegedRoleAssignments
      * @param body The request body
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a CompletableFuture of PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body) {
@@ -100,7 +100,7 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
      * Add new entity to privilegedRoleAssignments
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a CompletableFuture of PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nonnull final PrivilegedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class PrivilegedRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegedRoleAssignmentsRequestBuilder
+     * @return a PrivilegedRoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegedRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

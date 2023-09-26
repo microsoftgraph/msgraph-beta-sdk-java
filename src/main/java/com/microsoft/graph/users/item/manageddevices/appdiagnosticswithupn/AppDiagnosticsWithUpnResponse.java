@@ -15,7 +15,7 @@ public class AppDiagnosticsWithUpnResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<PowerliftIncidentMetadata> value;
     /**
-     * Instantiates a new appDiagnosticsWithUpnResponse and sets the default values.
+     * Instantiates a new AppDiagnosticsWithUpnResponse and sets the default values.
      */
     public AppDiagnosticsWithUpnResponse() {
         super();
@@ -23,7 +23,7 @@ public class AppDiagnosticsWithUpnResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appDiagnosticsWithUpnResponse
+     * @return a AppDiagnosticsWithUpnResponse
      */
     @jakarta.annotation.Nonnull
     public static AppDiagnosticsWithUpnResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AppDiagnosticsWithUpnResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a powerliftIncidentMetadata
+     * @return a java.util.List<PowerliftIncidentMetadata>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PowerliftIncidentMetadata> getValue() {

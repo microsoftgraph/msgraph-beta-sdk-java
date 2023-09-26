@@ -60,7 +60,7 @@ public class ConfigurationCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of all Configuration Categories
-     * @return a CompletableFuture of deviceManagementConfigurationCategoryCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ConfigurationCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of all Configuration Categories
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationCategoryCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ConfigurationCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to configurationCategories for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationCategory
+     * @return a CompletableFuture of DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategory> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationCategory body) {
@@ -92,7 +92,7 @@ public class ConfigurationCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to configurationCategories for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationCategory
+     * @return a CompletableFuture of DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategory> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ConfigurationCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a configurationCategoriesRequestBuilder
+     * @return a ConfigurationCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConfigurationCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class IpSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get ipSecurityProfiles from security
-     * @return a CompletableFuture of ipSecurityProfile
+     * @return a CompletableFuture of IpSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IpSecurityProfile> get() {
@@ -66,7 +66,7 @@ public class IpSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get ipSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ipSecurityProfile
+     * @return a CompletableFuture of IpSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IpSecurityProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class IpSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property ipSecurityProfiles in security
      * @param body The request body
-     * @return a CompletableFuture of ipSecurityProfile
+     * @return a CompletableFuture of IpSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IpSecurityProfile> patch(@jakarta.annotation.Nonnull final IpSecurityProfile body) {
@@ -89,7 +89,7 @@ public class IpSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property ipSecurityProfiles in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ipSecurityProfile
+     * @return a CompletableFuture of IpSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IpSecurityProfile> patch(@jakarta.annotation.Nonnull final IpSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

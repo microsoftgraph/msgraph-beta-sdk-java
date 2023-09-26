@@ -16,7 +16,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     /**
      * The encryptedBuffer property
      */
-    private byte[] encryptedBuffer;
+    private Base64url encryptedBuffer;
     /**
      * The OdataType property
      */
@@ -24,9 +24,9 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     /**
      * The publishingLicense property
      */
-    private byte[] publishingLicense;
+    private Base64url publishingLicense;
     /**
-     * Instantiates a new bufferEncryptionResult and sets the default values.
+     * Instantiates a new BufferEncryptionResult and sets the default values.
      */
     public BufferEncryptionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bufferEncryptionResult
+     * @return a BufferEncryptionResult
      */
     @jakarta.annotation.Nonnull
     public static BufferEncryptionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
         return new BufferEncryptionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,10 +51,10 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the encryptedBuffer property value. The encryptedBuffer property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getEncryptedBuffer() {
+    public Base64url getEncryptedBuffer() {
         return this.encryptedBuffer;
     }
     /**
@@ -64,14 +64,14 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("encryptedBuffer", (n) -> { this.setEncryptedBuffer(n.getByteArrayValue()); });
+        deserializerMap.put("encryptedBuffer", (n) -> { this.setEncryptedBuffer(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("publishingLicense", (n) -> { this.setPublishingLicense(n.getByteArrayValue()); });
+        deserializerMap.put("publishingLicense", (n) -> { this.setPublishingLicense(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,10 +79,10 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the publishingLicense property value. The publishingLicense property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getPublishingLicense() {
+    public Base64url getPublishingLicense() {
         return this.publishingLicense;
     }
     /**
@@ -91,14 +91,14 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("encryptedBuffer", this.getEncryptedBuffer());
+        writer.writeObjectValue("encryptedBuffer", this.getEncryptedBuffer());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeByteArrayValue("publishingLicense", this.getPublishingLicense());
+        writer.writeObjectValue("publishingLicense", this.getPublishingLicense());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -107,7 +107,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Sets the encryptedBuffer property value. The encryptedBuffer property
      * @param value Value to set for the encryptedBuffer property.
      */
-    public void setEncryptedBuffer(@jakarta.annotation.Nullable final byte[] value) {
+    public void setEncryptedBuffer(@jakarta.annotation.Nullable final Base64url value) {
         this.encryptedBuffer = value;
     }
     /**
@@ -121,7 +121,7 @@ public class BufferEncryptionResult implements AdditionalDataHolder, Parsable {
      * Sets the publishingLicense property value. The publishingLicense property
      * @param value Value to set for the publishingLicense property.
      */
-    public void setPublishingLicense(@jakarta.annotation.Nullable final byte[] value) {
+    public void setPublishingLicense(@jakarta.annotation.Nullable final Base64url value) {
         this.publishingLicense = value;
     }
 }

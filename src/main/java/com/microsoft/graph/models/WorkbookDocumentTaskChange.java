@@ -54,7 +54,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
      */
     private String undoChangeId;
     /**
-     * Instantiates a new workbookDocumentTaskChange and sets the default values.
+     * Instantiates a new WorkbookDocumentTaskChange and sets the default values.
      */
     public WorkbookDocumentTaskChange() {
         super();
@@ -62,7 +62,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookDocumentTaskChange
+     * @return a WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public static WorkbookDocumentTaskChange createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the assignee property value. The user identity the task is assigned to. Only present when the type property is assign. Nullable.
-     * @return a workbookEmailIdentity
+     * @return a WorkbookEmailIdentity
      */
     @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getAssignee() {
@@ -79,7 +79,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the changedBy property value. The changedBy property
-     * @return a workbookEmailIdentity
+     * @return a WorkbookEmailIdentity
      */
     @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getChangedBy() {
@@ -87,7 +87,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the commentId property value. The identifier of the associated comment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommentId() {
@@ -131,7 +131,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
@@ -139,7 +139,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -155,7 +155,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of the task. Only present when the type property is setTitle. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
@@ -163,7 +163,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -171,7 +171,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
     }
     /**
      * Gets the undoChangeId property value. The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUndoChangeId() {

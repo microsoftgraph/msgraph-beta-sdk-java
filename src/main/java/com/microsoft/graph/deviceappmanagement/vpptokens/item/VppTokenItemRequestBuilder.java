@@ -73,7 +73,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of Vpp tokens for this organization.
-     * @return a CompletableFuture of vppToken
+     * @return a CompletableFuture of VppToken
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> get() {
@@ -82,7 +82,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of Vpp tokens for this organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vppToken
+     * @return a CompletableFuture of VppToken
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property vppTokens in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of vppToken
+     * @return a CompletableFuture of VppToken
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> patch(@jakarta.annotation.Nonnull final VppToken body) {
@@ -105,7 +105,7 @@ public class VppTokenItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property vppTokens in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vppToken
+     * @return a CompletableFuture of VppToken
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> patch(@jakarta.annotation.Nonnull final VppToken body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

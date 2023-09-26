@@ -57,7 +57,7 @@ public class ManagementTemplateCollectionTenantSummaryItemRequestBuilder extends
     }
     /**
      * Get managementTemplateCollectionTenantSummaries from tenantRelationships
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummary
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummary> get() {
@@ -66,7 +66,7 @@ public class ManagementTemplateCollectionTenantSummaryItemRequestBuilder extends
     /**
      * Get managementTemplateCollectionTenantSummaries from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummary
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagementTemplateCollectionTenantSummaryItemRequestBuilder extends
     /**
      * Update the navigation property managementTemplateCollectionTenantSummaries in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummary
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummary> patch(@jakarta.annotation.Nonnull final ManagementTemplateCollectionTenantSummary body) {
@@ -89,7 +89,7 @@ public class ManagementTemplateCollectionTenantSummaryItemRequestBuilder extends
      * Update the navigation property managementTemplateCollectionTenantSummaries in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummary
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummary> patch(@jakarta.annotation.Nonnull final ManagementTemplateCollectionTenantSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      */
     private String settingValueTemplateId;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingValueTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingValueTemplate and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingValueTemplate() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingValueTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingValueTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
         return new DeviceManagementConfigurationChoiceSettingValueTemplate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the defaultValue property value. Choice Setting Value Default Template.
-     * @return a deviceManagementConfigurationChoiceSettingValueDefaultTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueDefaultTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefaultTemplate getDefaultValue() {
@@ -84,7 +84,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the recommendedValueDefinition property value. Recommended definition override.
-     * @return a deviceManagementConfigurationChoiceSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate getRecommendedValueDefinition() {
@@ -100,7 +100,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the requiredValueDefinition property value. Required definition override.
-     * @return a deviceManagementConfigurationChoiceSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate getRequiredValueDefinition() {
@@ -108,7 +108,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the settingValueTemplateId property value. Setting Value Template Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingValueTemplateId() {
@@ -128,8 +128,8 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -60,7 +60,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
     }
     /**
      * The list of scheduled action configurations for this compliance policy. This collection can contain a maximum of 100 elements.
-     * @return a CompletableFuture of deviceManagementComplianceActionItemCollectionResponse
+     * @return a CompletableFuture of DeviceManagementComplianceActionItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItemCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
     /**
      * The list of scheduled action configurations for this compliance policy. This collection can contain a maximum of 100 elements.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementComplianceActionItemCollectionResponse
+     * @return a CompletableFuture of DeviceManagementComplianceActionItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementComplianceActionItem
+     * @return a CompletableFuture of DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItem> post(@jakarta.annotation.Nonnull final DeviceManagementComplianceActionItem body) {
@@ -92,7 +92,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to scheduledActionConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementComplianceActionItem
+     * @return a CompletableFuture of DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItem> post(@jakarta.annotation.Nonnull final DeviceManagementComplianceActionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ScheduledActionConfigurationsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scheduledActionConfigurationsRequestBuilder
+     * @return a ScheduledActionConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScheduledActionConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

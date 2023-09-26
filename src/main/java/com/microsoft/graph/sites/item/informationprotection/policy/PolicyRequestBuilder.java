@@ -74,7 +74,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policy from sites
-     * @return a CompletableFuture of informationProtectionPolicy
+     * @return a CompletableFuture of InformationProtectionPolicy
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -86,7 +86,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policy from sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionPolicy
+     * @return a CompletableFuture of InformationProtectionPolicy
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -102,7 +102,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property policy in sites
      * @param body The request body
-     * @return a CompletableFuture of informationProtectionPolicy
+     * @return a CompletableFuture of InformationProtectionPolicy
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -115,7 +115,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property policy in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionPolicy
+     * @return a CompletableFuture of InformationProtectionPolicy
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -238,7 +238,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a policyRequestBuilder
+     * @return a PolicyRequestBuilder
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */

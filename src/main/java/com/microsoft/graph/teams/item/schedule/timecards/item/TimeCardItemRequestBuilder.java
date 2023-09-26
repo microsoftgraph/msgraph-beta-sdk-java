@@ -91,7 +91,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a timeCard object by ID.
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a timeCard object by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Replace an existing timeCard with updated values.
      * @param body The request body
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
      * Replace an existing timeCard with updated values.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-replace?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

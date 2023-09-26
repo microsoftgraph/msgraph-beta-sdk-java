@@ -60,7 +60,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the acronym objects and their properties.
-     * @return a CompletableFuture of acronymCollectionResponse
+     * @return a CompletableFuture of AcronymCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the acronym objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of acronymCollectionResponse
+     * @return a CompletableFuture of AcronymCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-list-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new acronym object.
      * @param body The request body
-     * @return a CompletableFuture of acronym
+     * @return a CompletableFuture of Acronym
      * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
      * Create a new acronym object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of acronym
+     * @return a CompletableFuture of Acronym
      * @see <a href="https://learn.microsoft.com/graph/api/search-searchentity-post-acronyms?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AcronymsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a acronymsRequestBuilder
+     * @return a AcronymsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AcronymsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

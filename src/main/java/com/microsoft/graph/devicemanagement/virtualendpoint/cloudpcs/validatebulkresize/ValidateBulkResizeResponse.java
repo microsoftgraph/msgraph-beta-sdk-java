@@ -15,7 +15,7 @@ public class ValidateBulkResizeResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<CloudPcResizeValidationResult> value;
     /**
-     * Instantiates a new validateBulkResizeResponse and sets the default values.
+     * Instantiates a new ValidateBulkResizeResponse and sets the default values.
      */
     public ValidateBulkResizeResponse() {
         super();
@@ -23,7 +23,7 @@ public class ValidateBulkResizeResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a validateBulkResizeResponse
+     * @return a ValidateBulkResizeResponse
      */
     @jakarta.annotation.Nonnull
     public static ValidateBulkResizeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ValidateBulkResizeResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcResizeValidationResult
+     * @return a java.util.List<CloudPcResizeValidationResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcResizeValidationResult> getValue() {

@@ -57,7 +57,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      * @see <a href="https://learn.microsoft.com/graph/api/appcredentialsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
     /**
      * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      * @see <a href="https://learn.microsoft.com/graph/api/appcredentialsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property appCredentialSignInActivities in reports
      * @param body The request body
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivity> patch(@jakarta.annotation.Nonnull final AppCredentialSignInActivity body) {
@@ -91,7 +91,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
      * Update the navigation property appCredentialSignInActivities in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivity> patch(@jakarta.annotation.Nonnull final AppCredentialSignInActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

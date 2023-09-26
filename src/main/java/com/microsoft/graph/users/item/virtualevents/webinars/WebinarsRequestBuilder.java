@@ -59,7 +59,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get webinars from users
-     * @return a CompletableFuture of virtualEventWebinarCollectionResponse
+     * @return a CompletableFuture of VirtualEventWebinarCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinarCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get webinars from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventWebinarCollectionResponse
+     * @return a CompletableFuture of VirtualEventWebinarCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinarCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a webinarsRequestBuilder
+     * @return a WebinarsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WebinarsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

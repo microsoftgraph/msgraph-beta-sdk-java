@@ -66,7 +66,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the Outlook tasks in the specified folder. By default, this operation (and the POST, PATCH, and complete task operations) returnsdate-related properties in UTC.  You can use a Prefer: outlook.timezone request header to have all the date-related properties in the response represented in a time zonedifferent than UTC. See an example for getting a single task. You can apply the header similarly to get multiple tasks. If there is more than one task group, and you want to get all the tasks in a specific task group, firstget all the task folders in that task group,and then get the tasks in each of these task folders.
-     * @return a CompletableFuture of outlookTaskCollectionResponse
+     * @return a CompletableFuture of OutlookTaskCollectionResponse
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-list-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the Outlook tasks in the specified folder. By default, this operation (and the POST, PATCH, and complete task operations) returnsdate-related properties in UTC.  You can use a Prefer: outlook.timezone request header to have all the date-related properties in the response represented in a time zonedifferent than UTC. See an example for getting a single task. You can apply the header similarly to get multiple tasks. If there is more than one task group, and you want to get all the tasks in a specific task group, firstget all the task folders in that task group,and then get the tasks in each of these task folders.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskCollectionResponse
+     * @return a CompletableFuture of OutlookTaskCollectionResponse
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-list-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an Outlook task in the specified task folder. The POST method always ignores the time portion of startDateTime and dueDateTime in the request body, and assumes the time to be always midnight in the specified time zone.
      * @param body The request body
-     * @return a CompletableFuture of outlookTask
+     * @return a CompletableFuture of OutlookTask
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-post-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +110,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Create an Outlook task in the specified task folder. The POST method always ignores the time portion of startDateTime and dueDateTime in the request body, and assumes the time to be always midnight in the specified time zone.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTask
+     * @return a CompletableFuture of OutlookTask
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskfolder-post-tasks?view=graph-rest-1.0">Find more info here</a>
@@ -201,7 +201,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tasksRequestBuilder
+     * @return a TasksRequestBuilder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */

@@ -39,7 +39,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Invoke function filterByCurrentUser
-     * @return a CompletableFuture of filterByCurrentUserWithOnResponse
+     * @return a CompletableFuture of FilterByCurrentUserWithOnResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -51,7 +51,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
     /**
      * Invoke function filterByCurrentUser
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filterByCurrentUserWithOnResponse
+     * @return a CompletableFuture of FilterByCurrentUserWithOnResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -102,7 +102,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

@@ -17,7 +17,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
     /**
      * The content property
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The contentType property
      */
@@ -39,7 +39,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
      */
     private Integer width;
     /**
-     * Instantiates a new picture and sets the default values.
+     * Instantiates a new Picture and sets the default values.
      */
     public Picture() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a picture
+     * @return a Picture
      */
     @jakarta.annotation.Nonnull
     public static Picture createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
         return new Picture();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,15 +64,15 @@ public class Picture implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
      * Gets the contentType property value. The contentType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {
@@ -85,7 +85,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
         deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
@@ -95,7 +95,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the height property value. The height property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHeight() {
@@ -111,7 +111,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -119,7 +119,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the width property value. The width property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {
@@ -131,7 +131,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeStringValue("contentType", this.getContentType());
         writer.writeIntegerValue("height", this.getHeight());
         writer.writeUUIDValue("id", this.getId());
@@ -140,8 +140,8 @@ public class Picture implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -150,7 +150,7 @@ public class Picture implements AdditionalDataHolder, Parsable {
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

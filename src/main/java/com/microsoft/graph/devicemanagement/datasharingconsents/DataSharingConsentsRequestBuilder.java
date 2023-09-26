@@ -60,7 +60,7 @@ public class DataSharingConsentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Data sharing consents.
-     * @return a CompletableFuture of dataSharingConsentCollectionResponse
+     * @return a CompletableFuture of DataSharingConsentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DataSharingConsentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Data sharing consents.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSharingConsentCollectionResponse
+     * @return a CompletableFuture of DataSharingConsentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DataSharingConsentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to dataSharingConsents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of dataSharingConsent
+     * @return a CompletableFuture of DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsent> post(@jakarta.annotation.Nonnull final DataSharingConsent body) {
@@ -92,7 +92,7 @@ public class DataSharingConsentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to dataSharingConsents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSharingConsent
+     * @return a CompletableFuture of DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsent> post(@jakarta.annotation.Nonnull final DataSharingConsent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DataSharingConsentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataSharingConsentsRequestBuilder
+     * @return a DataSharingConsentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataSharingConsentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

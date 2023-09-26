@@ -57,7 +57,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the activity status of a Microsoft Teams-enabled device. 
-     * @return a CompletableFuture of teamworkDeviceActivity
+     * @return a CompletableFuture of TeamworkDeviceActivity
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the activity status of a Microsoft Teams-enabled device. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceActivity
+     * @return a CompletableFuture of TeamworkDeviceActivity
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property activity in teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamworkDeviceActivity
+     * @return a CompletableFuture of TeamworkDeviceActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceActivity> patch(@jakarta.annotation.Nonnull final TeamworkDeviceActivity body) {
@@ -91,7 +91,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property activity in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceActivity
+     * @return a CompletableFuture of TeamworkDeviceActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceActivity> patch(@jakarta.annotation.Nonnull final TeamworkDeviceActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -193,7 +193,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activityRequestBuilder
+     * @return a ActivityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -15,7 +15,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodResponse extends BaseColl
      */
     private java.util.List<Office365GroupsActivityDetail> value;
     /**
-     * Instantiates a new getOffice365GroupsActivityDetailWithPeriodResponse and sets the default values.
+     * Instantiates a new GetOffice365GroupsActivityDetailWithPeriodResponse and sets the default values.
      */
     public GetOffice365GroupsActivityDetailWithPeriodResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getOffice365GroupsActivityDetailWithPeriodResponse
+     * @return a GetOffice365GroupsActivityDetailWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public static GetOffice365GroupsActivityDetailWithPeriodResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetOffice365GroupsActivityDetailWithPeriodResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a office365GroupsActivityDetail
+     * @return a java.util.List<Office365GroupsActivityDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Office365GroupsActivityDetail> getValue() {

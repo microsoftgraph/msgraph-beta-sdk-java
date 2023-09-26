@@ -118,7 +118,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Nullable. Specifies a list of directoryObjects that feature is enabled for.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */
@@ -130,7 +130,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Nullable. Specifies a list of directoryObjects that feature is enabled for.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObjectCollectionResponse
+     * @return a CompletableFuture of DirectoryObjectCollectionResponse
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */
@@ -146,7 +146,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0">Find more info here</a>
@@ -160,7 +160,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
      * Add an appliesTo on a featureRolloutPolicy object to specify the directoryObject to which the featureRolloutPolicy should be applied.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/featurerolloutpolicy-post-appliesto?view=graph-rest-1.0">Find more info here</a>
@@ -251,7 +251,7 @@ public class AppliesToRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appliesToRequestBuilder
+     * @return a AppliesToRequestBuilder
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */

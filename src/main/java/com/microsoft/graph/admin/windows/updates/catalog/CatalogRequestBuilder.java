@@ -65,7 +65,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Catalog of content that can be approved for deployment by the deployment service. Read-only.
-     * @return a CompletableFuture of catalog
+     * @return a CompletableFuture of Catalog
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Catalog> get() {
@@ -74,7 +74,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Catalog of content that can be approved for deployment by the deployment service. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of catalog
+     * @return a CompletableFuture of Catalog
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Catalog> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property catalog in admin
      * @param body The request body
-     * @return a CompletableFuture of catalog
+     * @return a CompletableFuture of Catalog
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Catalog> patch(@jakarta.annotation.Nonnull final Catalog body) {
@@ -97,7 +97,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property catalog in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of catalog
+     * @return a CompletableFuture of Catalog
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Catalog> patch(@jakarta.annotation.Nonnull final Catalog body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a catalogRequestBuilder
+     * @return a CatalogRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CatalogRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

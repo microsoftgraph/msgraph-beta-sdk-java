@@ -66,7 +66,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get Outlook task folders in a specific outlookTaskGroup.
-     * @return a CompletableFuture of outlookTaskFolderCollectionResponse
+     * @return a CompletableFuture of OutlookTaskFolderCollectionResponse
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskgroup-list-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get Outlook task folders in a specific outlookTaskGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskFolderCollectionResponse
+     * @return a CompletableFuture of OutlookTaskFolderCollectionResponse
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskgroup-list-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an Outlook task folder under a specified outlookTaskGroup.
      * @param body The request body
-     * @return a CompletableFuture of outlookTaskFolder
+     * @return a CompletableFuture of OutlookTaskFolder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskgroup-post-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +110,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
      * Create an Outlook task folder under a specified outlookTaskGroup.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskFolder
+     * @return a CompletableFuture of OutlookTaskFolder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskgroup-post-taskfolders?view=graph-rest-1.0">Find more info here</a>
@@ -201,7 +201,7 @@ public class TaskFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskFoldersRequestBuilder
+     * @return a TaskFoldersRequestBuilder
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */

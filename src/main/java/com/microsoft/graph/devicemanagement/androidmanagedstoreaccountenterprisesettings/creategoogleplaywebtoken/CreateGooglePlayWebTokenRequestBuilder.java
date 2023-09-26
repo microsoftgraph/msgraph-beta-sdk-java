@@ -37,7 +37,7 @@ public class CreateGooglePlayWebTokenRequestBuilder extends BaseRequestBuilder {
     /**
      * Generates a web token that is used in an embeddable component.
      * @param body The request body
-     * @return a CompletableFuture of createGooglePlayWebTokenResponse
+     * @return a CompletableFuture of CreateGooglePlayWebTokenResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CreateGooglePlayWebTokenResponse> post(@jakarta.annotation.Nonnull final CreateGooglePlayWebTokenPostRequestBody body) {
@@ -47,7 +47,7 @@ public class CreateGooglePlayWebTokenRequestBuilder extends BaseRequestBuilder {
      * Generates a web token that is used in an embeddable component.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of createGooglePlayWebTokenResponse
+     * @return a CompletableFuture of CreateGooglePlayWebTokenResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CreateGooglePlayWebTokenResponse> post(@jakarta.annotation.Nonnull final CreateGooglePlayWebTokenPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class CreateGooglePlayWebTokenRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createGooglePlayWebTokenRequestBuilder
+     * @return a CreateGooglePlayWebTokenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreateGooglePlayWebTokenRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get dependentResources from education
-     * @return a CompletableFuture of educationAssignmentResource
+     * @return a CompletableFuture of EducationAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentResource> get() {
@@ -66,7 +66,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
     /**
      * Get dependentResources from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentResource
+     * @return a CompletableFuture of EducationAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentResource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property dependentResources in education
      * @param body The request body
-     * @return a CompletableFuture of educationAssignmentResource
+     * @return a CompletableFuture of EducationAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentResource> patch(@jakarta.annotation.Nonnull final EducationAssignmentResource body) {
@@ -89,7 +89,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
      * Update the navigation property dependentResources in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignmentResource
+     * @return a CompletableFuture of EducationAssignmentResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationAssignmentResource> patch(@jakarta.annotation.Nonnull final EducationAssignmentResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

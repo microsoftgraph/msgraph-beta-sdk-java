@@ -68,7 +68,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get calls from app
-     * @return a CompletableFuture of callCollectionResponse
+     * @return a CompletableFuture of CallCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get calls from app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callCollectionResponse
+     * @return a CompletableFuture of CallCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to calls for app
      * @param body The request body
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> post(@jakarta.annotation.Nonnull final Call body) {
@@ -100,7 +100,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to calls for app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> post(@jakarta.annotation.Nonnull final Call body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class CallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a callsRequestBuilder
+     * @return a CallsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CallsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

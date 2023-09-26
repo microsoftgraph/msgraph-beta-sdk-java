@@ -54,7 +54,7 @@ public class SalesOrderLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesOrderLines from financials
-     * @return a CompletableFuture of salesOrderLine
+     * @return a CompletableFuture of SalesOrderLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesOrderLine> get() {
@@ -63,7 +63,7 @@ public class SalesOrderLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesOrderLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesOrderLine
+     * @return a CompletableFuture of SalesOrderLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesOrderLine> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class SalesOrderLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesOrderLines in financials
      * @param body The request body
-     * @return a CompletableFuture of salesOrderLine
+     * @return a CompletableFuture of SalesOrderLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesOrderLine> patch(@jakarta.annotation.Nonnull final SalesOrderLine body) {
@@ -86,7 +86,7 @@ public class SalesOrderLineItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesOrderLines in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesOrderLine
+     * @return a CompletableFuture of SalesOrderLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesOrderLine> patch(@jakarta.annotation.Nonnull final SalesOrderLine body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

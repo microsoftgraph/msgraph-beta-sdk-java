@@ -126,7 +126,7 @@ public class DataClassificationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get dataClassification
-     * @return a CompletableFuture of dataClassificationService
+     * @return a CompletableFuture of DataClassificationService
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataClassificationService> get() {
@@ -135,7 +135,7 @@ public class DataClassificationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataClassificationService
+     * @return a CompletableFuture of DataClassificationService
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataClassificationService> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -148,7 +148,7 @@ public class DataClassificationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update dataClassification
      * @param body The request body
-     * @return a CompletableFuture of dataClassificationService
+     * @return a CompletableFuture of DataClassificationService
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataClassificationService> patch(@jakarta.annotation.Nonnull final DataClassificationService body) {
@@ -158,7 +158,7 @@ public class DataClassificationRequestBuilder extends BaseRequestBuilder {
      * Update dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataClassificationService
+     * @return a CompletableFuture of DataClassificationService
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataClassificationService> patch(@jakarta.annotation.Nonnull final DataClassificationService body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -233,7 +233,7 @@ public class DataClassificationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataClassificationRequestBuilder
+     * @return a DataClassificationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataClassificationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

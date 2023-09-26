@@ -60,7 +60,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of conversations in this group.
-     * @return a CompletableFuture of conversationCollectionResponse
+     * @return a CompletableFuture of ConversationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of conversations in this group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationCollectionResponse
+     * @return a CompletableFuture of ConversationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-conversations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,21 +82,21 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new conversation by including a thread and a post. Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
-     * @return a CompletableFuture of conversation
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of Conversation
+     * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> post(@jakarta.annotation.Nonnull final Conversation body) {
         return post(body, null);
     }
     /**
-     * Create a new conversation by including a thread and a post. Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversation
-     * @see <a href="https://learn.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of Conversation
+     * @see <a href="https://learn.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Conversation> post(@jakarta.annotation.Nonnull final Conversation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -137,7 +137,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new conversation by including a thread and a post. Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new conversation by including a thread and a post. Use reply thread or reply post to further post to that conversation.
+     * Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. The table in the Permissions section lists the resources that support open extensions.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class ConversationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conversationsRequestBuilder
+     * @return a ConversationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConversationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

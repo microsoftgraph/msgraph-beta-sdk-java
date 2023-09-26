@@ -38,7 +38,7 @@ public class CitationTemplateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> get() {
@@ -47,7 +47,7 @@ public class CitationTemplateRequestBuilder extends BaseRequestBuilder {
     /**
      * The specific rule or regulation created by a jurisdiction used to determine whether certain labels and content should be retained or deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class CitationTemplateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a citationTemplateRequestBuilder
+     * @return a CitationTemplateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CitationTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

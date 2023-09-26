@@ -37,7 +37,7 @@ public class AllMessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function allMessages
-     * @return a CompletableFuture of allMessagesResponse
+     * @return a CompletableFuture of AllMessagesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllMessagesResponse> get() {
@@ -46,7 +46,7 @@ public class AllMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function allMessages
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allMessagesResponse
+     * @return a CompletableFuture of AllMessagesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllMessagesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class AllMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allMessagesRequestBuilder
+     * @return a AllMessagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllMessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

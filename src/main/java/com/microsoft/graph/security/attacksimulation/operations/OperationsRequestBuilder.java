@@ -60,7 +60,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an attack simulation operation to track a long-running operation request for a tenant.
-     * @return a CompletableFuture of attackSimulationOperationCollectionResponse
+     * @return a CompletableFuture of AttackSimulationOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an attack simulation operation to track a long-running operation request for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attackSimulationOperationCollectionResponse
+     * @return a CompletableFuture of AttackSimulationOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to operations for security
      * @param body The request body
-     * @return a CompletableFuture of attackSimulationOperation
+     * @return a CompletableFuture of AttackSimulationOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperation> post(@jakarta.annotation.Nonnull final AttackSimulationOperation body) {
@@ -92,7 +92,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to operations for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attackSimulationOperation
+     * @return a CompletableFuture of AttackSimulationOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperation> post(@jakarta.annotation.Nonnull final AttackSimulationOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a operationsRequestBuilder
+     * @return a OperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

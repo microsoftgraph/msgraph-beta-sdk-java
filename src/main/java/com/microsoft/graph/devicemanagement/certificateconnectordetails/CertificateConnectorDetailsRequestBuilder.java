@@ -60,7 +60,7 @@ public class CertificateConnectorDetailsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
-     * @return a CompletableFuture of certificateConnectorDetailsCollectionResponse
+     * @return a CompletableFuture of CertificateConnectorDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetailsCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CertificateConnectorDetailsRequestBuilder extends BaseRequestBuilde
     /**
      * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateConnectorDetailsCollectionResponse
+     * @return a CompletableFuture of CertificateConnectorDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetailsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CertificateConnectorDetailsRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to certificateConnectorDetails for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of certificateConnectorDetails
+     * @return a CompletableFuture of CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetails> post(@jakarta.annotation.Nonnull final CertificateConnectorDetails body) {
@@ -92,7 +92,7 @@ public class CertificateConnectorDetailsRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to certificateConnectorDetails for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateConnectorDetails
+     * @return a CompletableFuture of CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetails> post(@jakarta.annotation.Nonnull final CertificateConnectorDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CertificateConnectorDetailsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a certificateConnectorDetailsRequestBuilder
+     * @return a CertificateConnectorDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CertificateConnectorDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

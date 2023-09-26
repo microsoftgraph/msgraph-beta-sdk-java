@@ -38,7 +38,7 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The subdomains that are associated with this host.
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> get() {
@@ -47,7 +47,7 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The subdomains that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

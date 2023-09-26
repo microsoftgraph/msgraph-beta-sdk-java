@@ -36,7 +36,7 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
-     * @return a CompletableFuture of importOffice365DeviceConfigurationPoliciesResponse
+     * @return a CompletableFuture of ImportOffice365DeviceConfigurationPoliciesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post() {
@@ -45,7 +45,7 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importOffice365DeviceConfigurationPoliciesResponse
+     * @return a CompletableFuture of ImportOffice365DeviceConfigurationPoliciesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importOffice365DeviceConfigurationPoliciesRequestBuilder
+     * @return a ImportOffice365DeviceConfigurationPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportOffice365DeviceConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

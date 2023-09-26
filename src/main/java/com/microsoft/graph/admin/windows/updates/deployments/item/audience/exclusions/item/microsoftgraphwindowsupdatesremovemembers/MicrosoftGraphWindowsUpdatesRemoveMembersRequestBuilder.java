@@ -92,7 +92,7 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphWindowsUpdatesRemoveMembersRequestBuilder
+     * @return a MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

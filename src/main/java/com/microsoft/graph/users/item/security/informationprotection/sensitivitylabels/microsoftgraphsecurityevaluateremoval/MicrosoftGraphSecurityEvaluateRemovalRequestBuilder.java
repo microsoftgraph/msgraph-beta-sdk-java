@@ -37,7 +37,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
     /**
      * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
-     * @return a CompletableFuture of evaluateRemovalResponse
+     * @return a CompletableFuture of EvaluateRemovalResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
      * Indicate to the consuming application what actions it should take to remove the label information. Given contentInfo as an input, which includes existing content metadata key-value pairs, the API returns an informationProtectionAction that contains some combination of one or more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateRemovalResponse
+     * @return a CompletableFuture of EvaluateRemovalResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateremoval?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MicrosoftGraphSecurityEvaluateRemovalRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityEvaluateRemovalRequestBuilder
+     * @return a MicrosoftGraphSecurityEvaluateRemovalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityEvaluateRemovalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

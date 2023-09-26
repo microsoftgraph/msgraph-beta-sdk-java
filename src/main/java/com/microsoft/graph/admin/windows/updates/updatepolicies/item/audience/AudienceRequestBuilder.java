@@ -89,7 +89,7 @@ public class AudienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies the audience to target.
-     * @return a CompletableFuture of deploymentAudience
+     * @return a CompletableFuture of DeploymentAudience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudience> get() {
@@ -98,7 +98,7 @@ public class AudienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies the audience to target.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deploymentAudience
+     * @return a CompletableFuture of DeploymentAudience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudience> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class AudienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property audience in admin
      * @param body The request body
-     * @return a CompletableFuture of deploymentAudience
+     * @return a CompletableFuture of DeploymentAudience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudience> patch(@jakarta.annotation.Nonnull final DeploymentAudience body) {
@@ -121,7 +121,7 @@ public class AudienceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property audience in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deploymentAudience
+     * @return a CompletableFuture of DeploymentAudience
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeploymentAudience> patch(@jakarta.annotation.Nonnull final DeploymentAudience body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class AudienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a audienceRequestBuilder
+     * @return a AudienceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AudienceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

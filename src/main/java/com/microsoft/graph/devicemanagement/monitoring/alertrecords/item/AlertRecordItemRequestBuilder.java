@@ -65,7 +65,7 @@ public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an alertRecord object.
-     * @return a CompletableFuture of alertRecord
+     * @return a CompletableFuture of AlertRecord
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an alertRecord object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRecord
+     * @return a CompletableFuture of AlertRecord
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property alertRecords in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of alertRecord
+     * @return a CompletableFuture of AlertRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRecord> patch(@jakarta.annotation.Nonnull final AlertRecord body) {
@@ -99,7 +99,7 @@ public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property alertRecords in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRecord
+     * @return a CompletableFuture of AlertRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRecord> patch(@jakarta.annotation.Nonnull final AlertRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

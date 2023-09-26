@@ -14,7 +14,7 @@ public class GetAuditActivityTypesResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<String> value;
     /**
-     * Instantiates a new getAuditActivityTypesResponse and sets the default values.
+     * Instantiates a new GetAuditActivityTypesResponse and sets the default values.
      */
     public GetAuditActivityTypesResponse() {
         super();
@@ -22,7 +22,7 @@ public class GetAuditActivityTypesResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getAuditActivityTypesResponse
+     * @return a GetAuditActivityTypesResponse
      */
     @jakarta.annotation.Nonnull
     public static GetAuditActivityTypesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class GetAuditActivityTypesResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValue() {

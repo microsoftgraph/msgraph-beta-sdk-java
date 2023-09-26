@@ -60,7 +60,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the retentionLabel objects and their properties.
-     * @return a CompletableFuture of retentionLabelCollectionResponse
+     * @return a CompletableFuture of RetentionLabelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the retentionLabel objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionLabelCollectionResponse
+     * @return a CompletableFuture of RetentionLabelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-list-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
-     * @return a CompletableFuture of retentionLabel
+     * @return a CompletableFuture of RetentionLabel
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
      * Create a new retentionLabel object. To create a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionLabel
+     * @return a CompletableFuture of RetentionLabel
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-post-retentionlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class RetentionLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a retentionLabelsRequestBuilder
+     * @return a RetentionLabelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RetentionLabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

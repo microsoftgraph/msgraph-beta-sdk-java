@@ -61,7 +61,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      */
     private String versionInfo;
     /**
-     * Instantiates a new deviceManagementTemplate and sets the default values.
+     * Instantiates a new DeviceManagementTemplate and sets the default values.
      */
     public DeviceManagementTemplate() {
         super();
@@ -69,7 +69,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTemplate
+     * @return a DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. Collection of setting categories within the template
-     * @return a deviceManagementTemplateSettingCategory
+     * @return a java.util.List<DeviceManagementTemplateSettingCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplateSettingCategory> getCategories() {
@@ -93,7 +93,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The template's description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -101,7 +101,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The template's display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -130,7 +130,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the intentCount property value. Number of Intents created from this template.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIntentCount() {
@@ -138,7 +138,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the isDeprecated property value. The template is deprecated or not. Intents cannot be created from a deprecated template.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeprecated() {
@@ -146,7 +146,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the migratableTo property value. Collection of templates this template can migrate to
-     * @return a deviceManagementTemplate
+     * @return a java.util.List<DeviceManagementTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplate> getMigratableTo() {
@@ -154,7 +154,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a policyPlatformType
+     * @return a PolicyPlatformType
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
@@ -170,7 +170,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. Collection of all settings this template has
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {
@@ -178,7 +178,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the templateSubtype property value. Template subtype
-     * @return a deviceManagementTemplateSubtype
+     * @return a DeviceManagementTemplateSubtype
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTemplateSubtype getTemplateSubtype() {
@@ -186,7 +186,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the templateType property value. Template type
-     * @return a deviceManagementTemplateType
+     * @return a DeviceManagementTemplateType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTemplateType getTemplateType() {
@@ -194,7 +194,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the versionInfo property value. The template's version information
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionInfo() {

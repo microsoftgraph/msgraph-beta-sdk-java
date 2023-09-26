@@ -56,7 +56,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to call the compare method.
      * @param templateId Usage: templateId='{templateId}'
-     * @return a compareWithTemplateIdRequestBuilder
+     * @return a CompareWithTemplateIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CompareWithTemplateIdRequestBuilder compareWithTemplateId(@jakarta.annotation.Nonnull final String templateId) {
@@ -100,7 +100,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * The available templates
-     * @return a CompletableFuture of deviceManagementTemplate
+     * @return a CompletableFuture of DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplate> get() {
@@ -109,7 +109,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * The available templates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplate
+     * @return a CompletableFuture of DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +122,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property templates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTemplate
+     * @return a CompletableFuture of DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplate> patch(@jakarta.annotation.Nonnull final DeviceManagementTemplate body) {
@@ -132,7 +132,7 @@ public class DeviceManagementTemplateItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property templates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplate
+     * @return a CompletableFuture of DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplate> patch(@jakarta.annotation.Nonnull final DeviceManagementTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

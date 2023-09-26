@@ -25,7 +25,7 @@ public class Presence extends Entity implements Parsable {
      */
     private PresenceStatusMessage statusMessage;
     /**
-     * Instantiates a new presence and sets the default values.
+     * Instantiates a new Presence and sets the default values.
      */
     public Presence() {
         super();
@@ -33,7 +33,7 @@ public class Presence extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presence
+     * @return a Presence
      */
     @jakarta.annotation.Nonnull
     public static Presence createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class Presence extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The supplemental information to a user's availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive,InAMeeting, Offline, OffWork,OutOfOffice, PresenceUnknown,Presenting, UrgentInterruptionsOnly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
@@ -50,7 +50,7 @@ public class Presence extends Entity implements Parsable {
     }
     /**
      * Gets the availability property value. The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailability() {
@@ -71,7 +71,7 @@ public class Presence extends Entity implements Parsable {
     }
     /**
      * Gets the outOfOfficeSettings property value. The out of office settings for a user.
-     * @return a outOfOfficeSettings
+     * @return a OutOfOfficeSettings
      */
     @jakarta.annotation.Nullable
     public OutOfOfficeSettings getOutOfOfficeSettings() {
@@ -79,7 +79,7 @@ public class Presence extends Entity implements Parsable {
     }
     /**
      * Gets the statusMessage property value. The presence status message of a user.
-     * @return a presenceStatusMessage
+     * @return a PresenceStatusMessage
      */
     @jakarta.annotation.Nullable
     public PresenceStatusMessage getStatusMessage() {

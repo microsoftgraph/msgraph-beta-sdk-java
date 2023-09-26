@@ -63,7 +63,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Retrieve the properties and relationships of an informationProtectionLabel object.
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,7 +76,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
     /**
      * Retrieve the properties and relationships of an informationProtectionLabel object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-get?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property labels in informationProtection
      * @param body The request body
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -106,7 +106,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
      * Update the navigation property labels in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */

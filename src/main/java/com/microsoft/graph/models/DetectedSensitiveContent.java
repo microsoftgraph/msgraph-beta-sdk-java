@@ -30,7 +30,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
      */
     private SensitiveTypeSource sensitiveTypeSource;
     /**
-     * Instantiates a new detectedSensitiveContent and sets the default values.
+     * Instantiates a new DetectedSensitiveContent and sets the default values.
      */
     public DetectedSensitiveContent() {
         super();
@@ -38,7 +38,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectedSensitiveContent
+     * @return a DetectedSensitiveContent
      */
     @jakarta.annotation.Nonnull
     public static DetectedSensitiveContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the classificationAttributes property value. The classificationAttributes property
-     * @return a classificationAttribute
+     * @return a java.util.List<ClassificationAttribute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClassificationAttribute> getClassificationAttributes() {
@@ -62,7 +62,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the classificationMethod property value. The classificationMethod property
-     * @return a classificationMethod
+     * @return a ClassificationMethod
      */
     @jakarta.annotation.Nullable
     public ClassificationMethod getClassificationMethod() {
@@ -84,7 +84,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the matches property value. The matches property
-     * @return a sensitiveContentLocation
+     * @return a java.util.List<SensitiveContentLocation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentLocation> getMatches() {
@@ -92,7 +92,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a sensitiveTypeScope
+     * @return a EnumSet<SensitiveTypeScope>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitiveTypeScope> getScope() {
@@ -100,7 +100,7 @@ public class DetectedSensitiveContent extends DetectedSensitiveContentBase imple
     }
     /**
      * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
-     * @return a sensitiveTypeSource
+     * @return a SensitiveTypeSource
      */
     @jakarta.annotation.Nullable
     public SensitiveTypeSource getSensitiveTypeSource() {

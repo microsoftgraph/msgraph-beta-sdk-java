@@ -57,7 +57,7 @@ public class DeviceManagementScriptAssignmentItemRequestBuilder extends BaseRequ
     }
     /**
      * The list of group assignments for the device management script.
-     * @return a CompletableFuture of deviceManagementScriptAssignment
+     * @return a CompletableFuture of DeviceManagementScriptAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptAssignment> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementScriptAssignmentItemRequestBuilder extends BaseRequ
     /**
      * The list of group assignments for the device management script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScriptAssignment
+     * @return a CompletableFuture of DeviceManagementScriptAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementScriptAssignmentItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementScriptAssignment
+     * @return a CompletableFuture of DeviceManagementScriptAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptAssignment> patch(@jakarta.annotation.Nonnull final DeviceManagementScriptAssignment body) {
@@ -89,7 +89,7 @@ public class DeviceManagementScriptAssignmentItemRequestBuilder extends BaseRequ
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScriptAssignment
+     * @return a CompletableFuture of DeviceManagementScriptAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptAssignment> patch(@jakarta.annotation.Nonnull final DeviceManagementScriptAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder extends B
     }
     /**
      * User experience analytics remote connection
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnection
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnection> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder extends B
     /**
      * User experience analytics remote connection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnection
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder extends B
     /**
      * Update the navigation property userExperienceAnalyticsRemoteConnection in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnection
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnection> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsRemoteConnection body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder extends B
      * Update the navigation property userExperienceAnalyticsRemoteConnection in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnection
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnection> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsRemoteConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

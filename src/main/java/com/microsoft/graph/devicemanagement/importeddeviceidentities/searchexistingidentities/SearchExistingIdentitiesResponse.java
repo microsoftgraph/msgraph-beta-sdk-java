@@ -15,7 +15,7 @@ public class SearchExistingIdentitiesResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<ImportedDeviceIdentity> value;
     /**
-     * Instantiates a new searchExistingIdentitiesResponse and sets the default values.
+     * Instantiates a new SearchExistingIdentitiesResponse and sets the default values.
      */
     public SearchExistingIdentitiesResponse() {
         super();
@@ -23,7 +23,7 @@ public class SearchExistingIdentitiesResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchExistingIdentitiesResponse
+     * @return a SearchExistingIdentitiesResponse
      */
     @jakarta.annotation.Nonnull
     public static SearchExistingIdentitiesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SearchExistingIdentitiesResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a importedDeviceIdentity
+     * @return a java.util.List<ImportedDeviceIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedDeviceIdentity> getValue() {

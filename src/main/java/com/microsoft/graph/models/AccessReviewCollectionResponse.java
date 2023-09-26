@@ -13,7 +13,7 @@ public class AccessReviewCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<AccessReview> value;
     /**
-     * Instantiates a new accessReviewCollectionResponse and sets the default values.
+     * Instantiates a new AccessReviewCollectionResponse and sets the default values.
      */
     public AccessReviewCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AccessReviewCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewCollectionResponse
+     * @return a AccessReviewCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AccessReviewCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessReview
+     * @return a java.util.List<AccessReview>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReview> getValue() {

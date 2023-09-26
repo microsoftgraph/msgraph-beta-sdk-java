@@ -93,7 +93,7 @@ public class GetWindowsUpdateAlertSummaryReportRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getWindowsUpdateAlertSummaryReportRequestBuilder
+     * @return a GetWindowsUpdateAlertSummaryReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetWindowsUpdateAlertSummaryReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

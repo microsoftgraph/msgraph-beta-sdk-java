@@ -92,7 +92,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
-     * @return a CompletableFuture of updatableAssetCollectionResponse
+     * @return a CompletableFuture of UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of updatableAsset objects and their properties. Listing updatable assets returns updatableAsset resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAssetCollectionResponse
+     * @return a CompletableFuture of UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
      * @param body The request body
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
      * Create a new updatableAssetGroup object. The updatableAssetGroup resource inherits from updatableAsset.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updatableAssetsRequestBuilder
+     * @return a UpdatableAssetsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdatableAssetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

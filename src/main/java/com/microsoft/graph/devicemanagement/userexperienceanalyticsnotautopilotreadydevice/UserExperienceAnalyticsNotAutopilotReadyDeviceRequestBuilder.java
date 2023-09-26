@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder extend
     }
     /**
      * User experience analytics devices not Windows Autopilot ready.
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder extend
     /**
      * User experience analytics devices not Windows Autopilot ready.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder extend
     /**
      * Create new navigation property to userExperienceAnalyticsNotAutopilotReadyDevice for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsNotAutopilotReadyDevice body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder extend
      * Create new navigation property to userExperienceAnalyticsNotAutopilotReadyDevice for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsNotAutopilotReadyDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder extend
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder
+     * @return a UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsNotAutopilotReadyDeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

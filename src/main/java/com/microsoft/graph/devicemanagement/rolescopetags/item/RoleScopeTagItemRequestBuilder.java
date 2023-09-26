@@ -73,7 +73,7 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Role Scope Tags.
-     * @return a CompletableFuture of roleScopeTag
+     * @return a CompletableFuture of RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTag> get() {
@@ -82,7 +82,7 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The Role Scope Tags.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleScopeTag
+     * @return a CompletableFuture of RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTag> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleScopeTags in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of roleScopeTag
+     * @return a CompletableFuture of RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTag> patch(@jakarta.annotation.Nonnull final RoleScopeTag body) {
@@ -105,7 +105,7 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleScopeTags in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleScopeTag
+     * @return a CompletableFuture of RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTag> patch(@jakarta.annotation.Nonnull final RoleScopeTag body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -68,7 +68,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
     }
     /**
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
-     * @return a CompletableFuture of customAuthenticationExtensionCollectionResponse
+     * @return a CompletableFuture of CustomAuthenticationExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
     /**
      * Get a list of the customAuthenticationExtension objects and their properties. Currently, only onTokenIssuanceStartCustomExtension objects are returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAuthenticationExtensionCollectionResponse
+     * @return a CompletableFuture of CustomAuthenticationExtensionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
     /**
      * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
      * Create a new customAuthenticationExtension object. Only the onTokenIssuanceStartCustomExtension object type is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-customauthenticationextensions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class CustomAuthenticationExtensionsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customAuthenticationExtensionsRequestBuilder
+     * @return a CustomAuthenticationExtensionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomAuthenticationExtensionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

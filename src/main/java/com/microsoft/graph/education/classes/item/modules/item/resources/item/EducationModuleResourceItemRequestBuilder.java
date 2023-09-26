@@ -59,7 +59,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
     /**
      * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
      * @param body The request body
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
      * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

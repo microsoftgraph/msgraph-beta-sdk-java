@@ -39,7 +39,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
     }
     /**
      * Invoke function findByMethodMode
-     * @return a CompletableFuture of findByMethodModeWithAuthenticationMethodModesResponse
+     * @return a CompletableFuture of FindByMethodModeWithAuthenticationMethodModesResponse
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -51,7 +51,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
     /**
      * Invoke function findByMethodMode
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of findByMethodModeWithAuthenticationMethodModesResponse
+     * @return a CompletableFuture of FindByMethodModeWithAuthenticationMethodModesResponse
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -102,7 +102,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a findByMethodModeWithAuthenticationMethodModesRequestBuilder
+     * @return a FindByMethodModeWithAuthenticationMethodModesRequestBuilder
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
      */

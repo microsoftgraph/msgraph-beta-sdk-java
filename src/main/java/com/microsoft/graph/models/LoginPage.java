@@ -50,7 +50,7 @@ public class LoginPage extends Entity implements Parsable {
      */
     private SimulationContentStatus status;
     /**
-     * Instantiates a new loginPage and sets the default values.
+     * Instantiates a new LoginPage and sets the default values.
      */
     public LoginPage() {
         super();
@@ -58,7 +58,7 @@ public class LoginPage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a loginPage
+     * @return a LoginPage
      */
     @jakarta.annotation.Nonnull
     public static LoginPage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -75,7 +75,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -91,7 +91,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -99,7 +99,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -126,7 +126,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the language property value. The language property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -134,7 +134,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -150,7 +150,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a simulationContentSource
+     * @return a SimulationContentSource
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
@@ -158,7 +158,7 @@ public class LoginPage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a simulationContentStatus
+     * @return a SimulationContentStatus
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {

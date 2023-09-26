@@ -77,7 +77,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List properties and relationships of the cloudPcProvisioningPolicy objects.
-     * @return a CompletableFuture of cloudPcProvisioningPolicyCollectionResponse
+     * @return a CompletableFuture of CloudPcProvisioningPolicyCollectionResponse
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
@@ -90,7 +90,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List properties and relationships of the cloudPcProvisioningPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcProvisioningPolicyCollectionResponse
+     * @return a CompletableFuture of CloudPcProvisioningPolicyCollectionResponse
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
@@ -107,7 +107,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new cloudPcProvisioningPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcProvisioningPolicy
+     * @return a CompletableFuture of CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
@@ -121,7 +121,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create a new cloudPcProvisioningPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcProvisioningPolicy
+     * @return a CompletableFuture of CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-provisioningpolicies?view=graph-rest-1.0">Find more info here</a>
@@ -212,7 +212,7 @@ public class ProvisioningPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a provisioningPoliciesRequestBuilder
+     * @return a ProvisioningPoliciesRequestBuilder
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */

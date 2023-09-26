@@ -17,7 +17,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
      */
     private TrainingReminderNotification trainingReminder;
     /**
-     * Instantiates a new trainingNotificationSetting and sets the default values.
+     * Instantiates a new TrainingNotificationSetting and sets the default values.
      */
     public TrainingNotificationSetting() {
         super();
@@ -26,7 +26,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trainingNotificationSetting
+     * @return a TrainingNotificationSetting
      */
     @jakarta.annotation.Nonnull
     public static TrainingNotificationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     }
     /**
      * Gets the trainingAssignment property value. The trainingAssignment property
-     * @return a baseEndUserNotification
+     * @return a BaseEndUserNotification
      */
     @jakarta.annotation.Nullable
     public BaseEndUserNotification getTrainingAssignment() {
@@ -54,7 +54,7 @@ public class TrainingNotificationSetting extends EndUserNotificationSetting impl
     }
     /**
      * Gets the trainingReminder property value. The trainingReminder property
-     * @return a trainingReminderNotification
+     * @return a TrainingReminderNotification
      */
     @jakarta.annotation.Nullable
     public TrainingReminderNotification getTrainingReminder() {

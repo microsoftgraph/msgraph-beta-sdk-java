@@ -59,7 +59,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     }
     /**
      * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
-     * @return a CompletableFuture of plannerPlanConfigurationLocalization
+     * @return a CompletableFuture of PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     /**
      * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanConfigurationLocalization
+     * @return a CompletableFuture of PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     /**
      * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
-     * @return a CompletableFuture of plannerPlanConfigurationLocalization
+     * @return a CompletableFuture of PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
      * Update the properties of a plannerPlanConfigurationLocalization object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanConfigurationLocalization
+     * @return a CompletableFuture of PlannerPlanConfigurationLocalization
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

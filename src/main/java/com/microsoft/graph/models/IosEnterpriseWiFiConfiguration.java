@@ -56,7 +56,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      */
     private String usernameFormatString;
     /**
-     * Instantiates a new iosEnterpriseWiFiConfiguration and sets the default values.
+     * Instantiates a new IosEnterpriseWiFiConfiguration and sets the default values.
      */
     public IosEnterpriseWiFiConfiguration() {
         super();
@@ -65,7 +65,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosEnterpriseWiFiConfiguration
+     * @return a IosEnterpriseWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosEnterpriseWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
-     * @return a wiFiAuthenticationMethod
+     * @return a WiFiAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public WiFiAuthenticationMethod getAuthenticationMethod() {
@@ -82,7 +82,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
@@ -90,7 +90,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
-     * @return a eapFastConfiguration
+     * @return a EapFastConfiguration
      */
     @jakarta.annotation.Nullable
     public EapFastConfiguration getEapFastConfiguration() {
@@ -98,7 +98,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
-     * @return a eapType
+     * @return a EapType
      */
     @jakarta.annotation.Nullable
     public EapType getEapType() {
@@ -126,7 +126,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
-     * @return a iosCertificateProfileBase
+     * @return a IosCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificateForClientAuthentication() {
@@ -134,7 +134,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a nonEapAuthenticationMethodForEapTtlsType
+     * @return a NonEapAuthenticationMethodForEapTtlsType
      */
     @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEapTtls() {
@@ -142,7 +142,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
@@ -150,7 +150,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the passwordFormatString property value. Password format string used to build the password to connect to wifi
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordFormatString() {
@@ -158,7 +158,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. If you provide this value you do not need to provide trustedServerCertificateNames, and vice versa. This collection can contain a maximum of 500 elements.
-     * @return a iosTrustedRootCertificate
+     * @return a java.util.List<IosTrustedRootCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosTrustedRootCertificate> getRootCertificatesForServerValidation() {
@@ -166,7 +166,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {
@@ -174,7 +174,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
     }
     /**
      * Gets the usernameFormatString property value. Username format string used to build the username to connect to wifi
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsernameFormatString() {

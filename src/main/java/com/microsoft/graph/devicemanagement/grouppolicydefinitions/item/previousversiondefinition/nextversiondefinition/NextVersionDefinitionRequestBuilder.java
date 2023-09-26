@@ -81,7 +81,7 @@ public class NextVersionDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Definition of the next version of this definition
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get() {
@@ -90,7 +90,7 @@ public class NextVersionDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Definition of the next version of this definition
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class NextVersionDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property nextVersionDefinition in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> patch(@jakarta.annotation.Nonnull final GroupPolicyDefinition body) {
@@ -113,7 +113,7 @@ public class NextVersionDefinitionRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property nextVersionDefinition in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> patch(@jakarta.annotation.Nonnull final GroupPolicyDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +215,7 @@ public class NextVersionDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a nextVersionDefinitionRequestBuilder
+     * @return a NextVersionDefinitionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NextVersionDefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

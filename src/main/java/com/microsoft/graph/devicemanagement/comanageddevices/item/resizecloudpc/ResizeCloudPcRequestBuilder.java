@@ -104,7 +104,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resizeCloudPcRequestBuilder
+     * @return a ResizeCloudPcRequestBuilder
      * @deprecated
      * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc on 2023-07-24 and will be removed 2023-10-30
      */

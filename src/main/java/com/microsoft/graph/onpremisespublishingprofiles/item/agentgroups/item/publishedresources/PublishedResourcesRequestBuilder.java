@@ -60,7 +60,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a CompletableFuture of publishedResourceCollectionResponse
+     * @return a CompletableFuture of PublishedResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResourceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of publishedResourceCollectionResponse
+     * @return a CompletableFuture of PublishedResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to publishedResources for onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> post(@jakarta.annotation.Nonnull final PublishedResource body) {
@@ -92,7 +92,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to publishedResources for onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> post(@jakarta.annotation.Nonnull final PublishedResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a publishedResourcesRequestBuilder
+     * @return a PublishedResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PublishedResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

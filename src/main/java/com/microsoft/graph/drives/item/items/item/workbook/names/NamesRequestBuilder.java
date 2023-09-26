@@ -76,8 +76,8 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of nameditem objects.
-     * @return a CompletableFuture of workbookNamedItemCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get() {
@@ -86,8 +86,8 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of nameditem objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItemCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of WorkbookNamedItemCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -100,7 +100,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to names for drives
      * @param body The request body
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> post(@jakarta.annotation.Nonnull final WorkbookNamedItem body) {
@@ -110,7 +110,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to names for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookNamedItem
+     * @return a CompletableFuture of WorkbookNamedItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookNamedItem> post(@jakarta.annotation.Nonnull final WorkbookNamedItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -185,7 +185,7 @@ public class NamesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a namesRequestBuilder
+     * @return a NamesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NamesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

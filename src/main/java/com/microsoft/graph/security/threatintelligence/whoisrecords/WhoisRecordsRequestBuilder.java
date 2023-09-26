@@ -60,7 +60,7 @@ public class WhoisRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of whoisRecord objects.
-     * @return a CompletableFuture of whoisRecordCollectionResponse
+     * @return a CompletableFuture of WhoisRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-whoisrecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class WhoisRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of whoisRecord objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of whoisRecordCollectionResponse
+     * @return a CompletableFuture of WhoisRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-whoisrecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class WhoisRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to whoisRecords for security
      * @param body The request body
-     * @return a CompletableFuture of whoisRecord
+     * @return a CompletableFuture of WhoisRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisRecord> post(@jakarta.annotation.Nonnull final WhoisRecord body) {
@@ -94,7 +94,7 @@ public class WhoisRecordsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to whoisRecords for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of whoisRecord
+     * @return a CompletableFuture of WhoisRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisRecord> post(@jakarta.annotation.Nonnull final WhoisRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class WhoisRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a whoisRecordsRequestBuilder
+     * @return a WhoisRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WhoisRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

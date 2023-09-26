@@ -74,7 +74,7 @@ public class OutlookTaskGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of the specified Outlook task group.
-     * @return a CompletableFuture of outlookTaskGroup
+     * @return a CompletableFuture of OutlookTaskGroup
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskgroup-get?view=graph-rest-1.0">Find more info here</a>
@@ -87,7 +87,7 @@ public class OutlookTaskGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of the specified Outlook task group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskGroup
+     * @return a CompletableFuture of OutlookTaskGroup
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      * @see <a href="https://learn.microsoft.com/graph/api/outlooktaskgroup-get?view=graph-rest-1.0">Find more info here</a>
@@ -104,7 +104,7 @@ public class OutlookTaskGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property taskGroups in users
      * @param body The request body
-     * @return a CompletableFuture of outlookTaskGroup
+     * @return a CompletableFuture of OutlookTaskGroup
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */
@@ -117,7 +117,7 @@ public class OutlookTaskGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property taskGroups in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outlookTaskGroup
+     * @return a CompletableFuture of OutlookTaskGroup
      * @deprecated
      * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks on 2021-02-20 and will be removed 2023-02-20
      */

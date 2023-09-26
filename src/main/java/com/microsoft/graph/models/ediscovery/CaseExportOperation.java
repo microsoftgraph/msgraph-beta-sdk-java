@@ -42,7 +42,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      */
     private ReviewSet reviewSet;
     /**
-     * Instantiates a new caseExportOperation and sets the default values.
+     * Instantiates a new CaseExportOperation and sets the default values.
      */
     public CaseExportOperation() {
         super();
@@ -50,7 +50,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a caseExportOperation
+     * @return a CaseExportOperation
      */
     @jakarta.annotation.Nonnull
     public static CaseExportOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the azureBlobContainer property value. The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureBlobContainer() {
@@ -67,7 +67,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the azureBlobToken property value. The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureBlobToken() {
@@ -75,7 +75,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the description property value. The description provided for the export.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -83,7 +83,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the exportOptions property value. The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
-     * @return a exportOptions
+     * @return a EnumSet<ExportOptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ExportOptions> getExportOptions() {
@@ -91,7 +91,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the exportStructure property value. The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
-     * @return a exportFileStructure
+     * @return a ExportFileStructure
      */
     @jakarta.annotation.Nullable
     public ExportFileStructure getExportStructure() {
@@ -116,7 +116,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the outputFolderId property value. The outputFolderId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOutputFolderId() {
@@ -124,7 +124,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the outputName property value. The name provided for the export.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOutputName() {
@@ -132,7 +132,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
     }
     /**
      * Gets the reviewSet property value. The review set the content is being exported from.
-     * @return a reviewSet
+     * @return a ReviewSet
      */
     @jakarta.annotation.Nullable
     public ReviewSet getReviewSet() {

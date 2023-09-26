@@ -41,7 +41,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
      */
     private EnumSet<AppManagementLevel> targetedAppManagementLevels;
     /**
-     * Instantiates a new targetedManagedAppConfiguration and sets the default values.
+     * Instantiates a new TargetedManagedAppConfiguration and sets the default values.
      */
     public TargetedManagedAppConfiguration() {
         super();
@@ -50,7 +50,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a targetedManagedAppConfiguration
+     * @return a TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TargetedManagedAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the appGroupType property value. Indicates a collection of apps to target which can be one of several pre-defined lists of apps or a manually selected list of apps
-     * @return a targetedManagedAppGroupType
+     * @return a TargetedManagedAppGroupType
      */
     @jakarta.annotation.Nullable
     public TargetedManagedAppGroupType getAppGroupType() {
@@ -67,7 +67,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -75,7 +75,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a targetedManagedAppPolicyAssignment
+     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
@@ -83,7 +83,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -91,7 +91,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a managedAppPolicyDeploymentSummary
+     * @return a ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -115,7 +115,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -123,7 +123,7 @@ public class TargetedManagedAppConfiguration extends ManagedAppConfiguration imp
     }
     /**
      * Gets the targetedAppManagementLevels property value. Management levels for apps
-     * @return a appManagementLevel
+     * @return a EnumSet<AppManagementLevel>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AppManagementLevel> getTargetedAppManagementLevels() {

@@ -21,7 +21,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
      */
     private String externalObjectId;
     /**
-     * Instantiates a new plannerExternalPlanSource and sets the default values.
+     * Instantiates a new PlannerExternalPlanSource and sets the default values.
      */
     public PlannerExternalPlanSource() {
         super();
@@ -30,7 +30,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerExternalPlanSource
+     * @return a PlannerExternalPlanSource
      */
     @jakarta.annotation.Nonnull
     public static PlannerExternalPlanSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
     }
     /**
      * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContextScenarioId() {
@@ -47,7 +47,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
     }
     /**
      * Gets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
@@ -55,7 +55,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
     }
     /**
      * Gets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {

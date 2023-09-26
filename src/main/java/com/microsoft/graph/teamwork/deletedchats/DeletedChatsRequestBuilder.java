@@ -60,7 +60,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a deletedChat object.
-     * @return a CompletableFuture of deletedChatCollectionResponse
+     * @return a CompletableFuture of DeletedChatCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedChatCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a deletedChat object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deletedChatCollectionResponse
+     * @return a CompletableFuture of DeletedChatCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedChatCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deletedChats for teamwork
      * @param body The request body
-     * @return a CompletableFuture of deletedChat
+     * @return a CompletableFuture of DeletedChat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedChat> post(@jakarta.annotation.Nonnull final DeletedChat body) {
@@ -92,7 +92,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deletedChats for teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deletedChat
+     * @return a CompletableFuture of DeletedChat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeletedChat> post(@jakarta.annotation.Nonnull final DeletedChat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeletedChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deletedChatsRequestBuilder
+     * @return a DeletedChatsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeletedChatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

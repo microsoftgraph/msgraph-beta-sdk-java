@@ -145,7 +145,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of the currently authenticated organization. Since the organization resource supports extensions, you can also use the GET operation to get custom properties and extension data in an organization instance.
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      * @see <a href="https://learn.microsoft.com/graph/api/organization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of the currently authenticated organization. Since the organization resource supports extensions, you can also use the GET operation to get custom properties and extension data in an organization instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      * @see <a href="https://learn.microsoft.com/graph/api/organization-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -169,7 +169,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the currently authenticated organization. In this case, organization is defined as a collection of exactly one record, and so its ID must be specified in the request.  The ID is also known as the tenantId of the organization.
      * @param body The request body
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      * @see <a href="https://learn.microsoft.com/graph/api/organization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -180,7 +180,7 @@ public class OrganizationItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the currently authenticated organization. In this case, organization is defined as a collection of exactly one record, and so its ID must be specified in the request.  The ID is also known as the tenantId of the organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organization
+     * @return a CompletableFuture of Organization
      * @see <a href="https://learn.microsoft.com/graph/api/organization-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

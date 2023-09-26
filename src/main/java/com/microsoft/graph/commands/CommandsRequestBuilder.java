@@ -60,7 +60,7 @@ public class CommandsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from commands
-     * @return a CompletableFuture of commandCollectionResponse
+     * @return a CompletableFuture of CommandCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommandCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CommandsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from commands
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of commandCollectionResponse
+     * @return a CompletableFuture of CommandCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CommandCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CommandsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to commands
      * @param body The request body
-     * @return a CompletableFuture of command
+     * @return a CompletableFuture of Command
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Command> post(@jakarta.annotation.Nonnull final Command body) {
@@ -92,7 +92,7 @@ public class CommandsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to commands
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of command
+     * @return a CompletableFuture of Command
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Command> post(@jakarta.annotation.Nonnull final Command body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CommandsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a commandsRequestBuilder
+     * @return a CommandsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CommandsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,7 +59,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a personName object in a user's profile.
-     * @return a CompletableFuture of personName
+     * @return a CompletableFuture of PersonName
      * @see <a href="https://learn.microsoft.com/graph/api/personname-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a personName object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personName
+     * @return a CompletableFuture of PersonName
      * @see <a href="https://learn.microsoft.com/graph/api/personname-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a personName object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of personName
+     * @return a CompletableFuture of PersonName
      * @see <a href="https://learn.microsoft.com/graph/api/personname-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class PersonNameItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a personName object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personName
+     * @return a CompletableFuture of PersonName
      * @see <a href="https://learn.microsoft.com/graph/api/personname-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

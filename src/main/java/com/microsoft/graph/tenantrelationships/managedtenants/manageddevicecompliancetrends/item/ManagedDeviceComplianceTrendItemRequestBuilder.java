@@ -57,7 +57,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read the properties and relationships of a managedDeviceComplianceTrend object.
-     * @return a CompletableFuture of managedDeviceComplianceTrend
+     * @return a CompletableFuture of ManagedDeviceComplianceTrend
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties and relationships of a managedDeviceComplianceTrend object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceComplianceTrend
+     * @return a CompletableFuture of ManagedDeviceComplianceTrend
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-manageddevicecompliancetrend-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property managedDeviceComplianceTrends in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceComplianceTrend
+     * @return a CompletableFuture of ManagedDeviceComplianceTrend
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceComplianceTrend> patch(@jakarta.annotation.Nonnull final ManagedDeviceComplianceTrend body) {
@@ -91,7 +91,7 @@ public class ManagedDeviceComplianceTrendItemRequestBuilder extends BaseRequestB
      * Update the navigation property managedDeviceComplianceTrends in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceComplianceTrend
+     * @return a CompletableFuture of ManagedDeviceComplianceTrend
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceComplianceTrend> patch(@jakarta.annotation.Nonnull final ManagedDeviceComplianceTrend body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

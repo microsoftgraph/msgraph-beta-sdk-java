@@ -1,5 +1,8 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidmanagedstoreapp;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidmanagedstoreapp.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidmanagedstoreapp.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphandroidmanagedstoreapp.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.models.AndroidManagedStoreApp;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +24,27 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphAndroidManagedStoreAppRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RelationshipsRequestBuilder relationships() {
+        return new RelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GraphAndroidManagedStoreAppRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +62,7 @@ public class GraphAndroidManagedStoreAppRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.androidManagedStoreApp
-     * @return a CompletableFuture of androidManagedStoreApp
+     * @return a CompletableFuture of AndroidManagedStoreApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedStoreApp> get() {
@@ -47,7 +71,7 @@ public class GraphAndroidManagedStoreAppRequestBuilder extends BaseRequestBuilde
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.androidManagedStoreApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedStoreApp
+     * @return a CompletableFuture of AndroidManagedStoreApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedStoreApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +113,7 @@ public class GraphAndroidManagedStoreAppRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphAndroidManagedStoreAppRequestBuilder
+     * @return a GraphAndroidManagedStoreAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphAndroidManagedStoreAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

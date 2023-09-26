@@ -16,7 +16,7 @@ public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticatio
      */
     private String appId;
     /**
-     * Instantiates a new serviceNowOauthSecretAuthentication and sets the default values.
+     * Instantiates a new ServiceNowOauthSecretAuthentication and sets the default values.
      */
     public ServiceNowOauthSecretAuthentication() {
         super();
@@ -25,7 +25,7 @@ public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceNowOauthSecretAuthentication
+     * @return a ServiceNowOauthSecretAuthentication
      */
     @jakarta.annotation.Nonnull
     public static ServiceNowOauthSecretAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class ServiceNowOauthSecretAuthentication extends ServiceNowAuthenticatio
     }
     /**
      * Gets the appId property value. Tenant appId registered with Azure AD
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {

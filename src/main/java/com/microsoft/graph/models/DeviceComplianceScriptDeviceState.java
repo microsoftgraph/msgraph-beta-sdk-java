@@ -41,7 +41,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      */
     private String scriptOutput;
     /**
-     * Instantiates a new deviceComplianceScriptDeviceState and sets the default values.
+     * Instantiates a new DeviceComplianceScriptDeviceState and sets the default values.
      */
     public DeviceComplianceScriptDeviceState() {
         super();
@@ -49,7 +49,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptDeviceState
+     * @return a DeviceComplianceScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
@@ -106,7 +106,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device compliance script executed
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
@@ -114,7 +114,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the scriptError property value. Error from the detection script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScriptError() {
@@ -122,7 +122,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the scriptOutput property value. Output of the detection script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScriptOutput() {

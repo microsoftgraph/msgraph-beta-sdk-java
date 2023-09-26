@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilde
     }
     /**
      * The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilde
     /**
      * The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverviewCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilde
     /**
      * Create new navigation property to userExperienceAnalyticsAnomalyCorrelationGroupOverview for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyCorrelationGroupOverview body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilde
      * Create new navigation property to userExperienceAnalyticsAnomalyCorrelationGroupOverview for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyCorrelationGroupOverview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder
+     * @return a UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

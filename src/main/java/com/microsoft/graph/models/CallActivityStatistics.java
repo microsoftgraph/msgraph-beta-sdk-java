@@ -14,7 +14,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
      */
     private PeriodAndDuration afterHours;
     /**
-     * Instantiates a new callActivityStatistics and sets the default values.
+     * Instantiates a new CallActivityStatistics and sets the default values.
      */
     public CallActivityStatistics() {
         super();
@@ -23,7 +23,7 @@ public class CallActivityStatistics extends ActivityStatistics implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callActivityStatistics
+     * @return a CallActivityStatistics
      */
     @jakarta.annotation.Nonnull
     public static CallActivityStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

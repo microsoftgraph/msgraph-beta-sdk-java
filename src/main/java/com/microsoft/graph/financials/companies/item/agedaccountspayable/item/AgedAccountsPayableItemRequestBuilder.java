@@ -38,7 +38,7 @@ public class AgedAccountsPayableItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get agedAccountsPayable from financials
-     * @return a CompletableFuture of agedAccountsPayable
+     * @return a CompletableFuture of AgedAccountsPayable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgedAccountsPayable> get() {
@@ -47,7 +47,7 @@ public class AgedAccountsPayableItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get agedAccountsPayable from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agedAccountsPayable
+     * @return a CompletableFuture of AgedAccountsPayable
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgedAccountsPayable> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

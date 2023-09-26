@@ -15,7 +15,7 @@ public class GetEffectiveDeviceEnrollmentConfigurationsResponse extends BaseColl
      */
     private java.util.List<DeviceEnrollmentConfiguration> value;
     /**
-     * Instantiates a new getEffectiveDeviceEnrollmentConfigurationsResponse and sets the default values.
+     * Instantiates a new GetEffectiveDeviceEnrollmentConfigurationsResponse and sets the default values.
      */
     public GetEffectiveDeviceEnrollmentConfigurationsResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetEffectiveDeviceEnrollmentConfigurationsResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getEffectiveDeviceEnrollmentConfigurationsResponse
+     * @return a GetEffectiveDeviceEnrollmentConfigurationsResponse
      */
     @jakarta.annotation.Nonnull
     public static GetEffectiveDeviceEnrollmentConfigurationsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetEffectiveDeviceEnrollmentConfigurationsResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceEnrollmentConfiguration
+     * @return a java.util.List<DeviceEnrollmentConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceEnrollmentConfiguration> getValue() {

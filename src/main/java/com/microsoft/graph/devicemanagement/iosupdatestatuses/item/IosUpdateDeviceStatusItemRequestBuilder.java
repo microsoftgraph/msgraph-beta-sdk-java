@@ -57,7 +57,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The IOS software update installation statuses for this account.
-     * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @return a CompletableFuture of IosUpdateDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> get() {
@@ -66,7 +66,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
     /**
      * The IOS software update installation statuses for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @return a CompletableFuture of IosUpdateDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property iosUpdateStatuses in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @return a CompletableFuture of IosUpdateDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> patch(@jakarta.annotation.Nonnull final IosUpdateDeviceStatus body) {
@@ -89,7 +89,7 @@ public class IosUpdateDeviceStatusItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property iosUpdateStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosUpdateDeviceStatus
+     * @return a CompletableFuture of IosUpdateDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosUpdateDeviceStatus> patch(@jakarta.annotation.Nonnull final IosUpdateDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

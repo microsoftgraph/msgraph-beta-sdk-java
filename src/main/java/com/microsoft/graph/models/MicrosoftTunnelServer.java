@@ -33,7 +33,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
      */
     private MicrosoftTunnelServerHealthStatus tunnelServerHealthStatus;
     /**
-     * Instantiates a new microsoftTunnelServer and sets the default values.
+     * Instantiates a new MicrosoftTunnelServer and sets the default values.
      */
     public MicrosoftTunnelServer() {
         super();
@@ -41,7 +41,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelServer
+     * @return a MicrosoftTunnelServer
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the agentImageDigest property value. The digest of the current agent image running on this server
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAgentImageDigest() {
@@ -58,7 +58,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -88,7 +88,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the serverImageDigest property value. The digest of the current server image running on this server
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServerImageDigest() {
@@ -96,7 +96,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
     }
     /**
      * Gets the tunnelServerHealthStatus property value. Enum of possible MicrosoftTunnelServer health status types
-     * @return a microsoftTunnelServerHealthStatus
+     * @return a MicrosoftTunnelServerHealthStatus
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelServerHealthStatus getTunnelServerHealthStatus() {

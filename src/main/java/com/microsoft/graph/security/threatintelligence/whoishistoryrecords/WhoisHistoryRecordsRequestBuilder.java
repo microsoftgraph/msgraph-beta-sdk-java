@@ -60,7 +60,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
-     * @return a CompletableFuture of whoisHistoryRecordCollectionResponse
+     * @return a CompletableFuture of WhoisHistoryRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisHistoryRecordCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of whoisHistoryRecordCollectionResponse
+     * @return a CompletableFuture of WhoisHistoryRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisHistoryRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to whoisHistoryRecords for security
      * @param body The request body
-     * @return a CompletableFuture of whoisHistoryRecord
+     * @return a CompletableFuture of WhoisHistoryRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> post(@jakarta.annotation.Nonnull final WhoisHistoryRecord body) {
@@ -92,7 +92,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to whoisHistoryRecords for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of whoisHistoryRecord
+     * @return a CompletableFuture of WhoisHistoryRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> post(@jakarta.annotation.Nonnull final WhoisHistoryRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WhoisHistoryRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a whoisHistoryRecordsRequestBuilder
+     * @return a WhoisHistoryRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WhoisHistoryRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

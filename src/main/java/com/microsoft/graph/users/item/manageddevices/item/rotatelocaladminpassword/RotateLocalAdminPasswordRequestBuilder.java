@@ -83,7 +83,7 @@ public class RotateLocalAdminPasswordRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rotateLocalAdminPasswordRequestBuilder
+     * @return a RotateLocalAdminPasswordRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RotateLocalAdminPasswordRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

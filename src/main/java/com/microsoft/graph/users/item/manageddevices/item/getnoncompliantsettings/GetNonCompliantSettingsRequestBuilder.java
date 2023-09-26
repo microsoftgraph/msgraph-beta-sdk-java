@@ -37,7 +37,7 @@ public class GetNonCompliantSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getNonCompliantSettings
-     * @return a CompletableFuture of getNonCompliantSettingsResponse
+     * @return a CompletableFuture of GetNonCompliantSettingsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetNonCompliantSettingsResponse> get() {
@@ -46,7 +46,7 @@ public class GetNonCompliantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getNonCompliantSettings
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getNonCompliantSettingsResponse
+     * @return a CompletableFuture of GetNonCompliantSettingsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetNonCompliantSettingsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetNonCompliantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getNonCompliantSettingsRequestBuilder
+     * @return a GetNonCompliantSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetNonCompliantSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

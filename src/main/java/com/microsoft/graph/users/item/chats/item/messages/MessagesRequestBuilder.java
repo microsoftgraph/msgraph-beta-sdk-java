@@ -68,7 +68,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the list of messages in a chat. This method supports federation. To list chat messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
-     * @return a CompletableFuture of chatMessageCollectionResponse
+     * @return a CompletableFuture of ChatMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of messages in a chat. This method supports federation. To list chat messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the tenantId property on the channel).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessageCollectionResponse
+     * @return a CompletableFuture of ChatMessageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,21 +90,21 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ChatMessageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Send a new chatMessage in the specified channel or a chat.
+     * Send a new chatMessage in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before creating a chat message.
      * @param body The request body
-     * @return a CompletableFuture of chatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ChatMessage
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body) {
         return post(body, null);
     }
     /**
-     * Send a new chatMessage in the specified channel or a chat.
+     * Send a new chatMessage in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before creating a chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chatMessage
-     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ChatMessage
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-post-messages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChatMessage> post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -145,7 +145,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new chatMessage in the specified channel or a chat.
+     * Send a new chatMessage in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before creating a chat message.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send a new chatMessage in the specified channel or a chat.
+     * Send a new chatMessage in the specified chat. This API cannot create a new chat; you must use the list chats method to retrieve the ID of an existing chat before creating a chat message.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a messagesRequestBuilder
+     * @return a MessagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

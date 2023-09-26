@@ -63,7 +63,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
      */
     private String tenantId;
     /**
-     * Instantiates a new deviceCompliancePolicySettingStateSummary and sets the default values.
+     * Instantiates a new DeviceCompliancePolicySettingStateSummary and sets the default values.
      */
     public DeviceCompliancePolicySettingStateSummary() {
         super();
@@ -71,7 +71,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicySettingStateSummary
+     * @return a DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicySettingStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -80,7 +80,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the conflictDeviceCount property value. The number of devices in a conflict state. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictDeviceCount() {
@@ -88,7 +88,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the errorDeviceCount property value. The number of devices in an error state. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -96,7 +96,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the failedDeviceCount property value. The number of devices in a failed state. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
@@ -126,7 +126,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the intuneAccountId property value. The identifer for the Microsoft Intune account. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIntuneAccountId() {
@@ -134,7 +134,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the intuneSettingId property value. The identifier for the Intune setting. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIntuneSettingId() {
@@ -150,7 +150,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the notApplicableDeviceCount property value. The number of devices in a not applicable state. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -158,7 +158,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the pendingDeviceCount property value. The number of devices in a pending state. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingDeviceCount() {
@@ -166,7 +166,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the policyType property value. The type for the device compliance policy. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyType() {
@@ -174,7 +174,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the settingName property value. The name for the setting within the device compliance policy. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -182,7 +182,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the succeededDeviceCount property value. The number of devices in a succeeded state. Optional. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSucceededDeviceCount() {
@@ -190,7 +190,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -198,7 +198,7 @@ public class DeviceCompliancePolicySettingStateSummary extends Entity implements
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

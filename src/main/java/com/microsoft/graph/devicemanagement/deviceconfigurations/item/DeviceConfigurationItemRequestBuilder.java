@@ -138,7 +138,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The device configurations.
-     * @return a CompletableFuture of deviceConfiguration
+     * @return a CompletableFuture of DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get() {
@@ -147,7 +147,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The device configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfiguration
+     * @return a CompletableFuture of DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -160,7 +160,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOmaSettingPlainTextValue method.
      * @param secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
-     * @return a getOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
+     * @return a GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder getOmaSettingPlainTextValueWithSecretReferenceValueId(@jakarta.annotation.Nonnull final String secretReferenceValueId) {
@@ -170,7 +170,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceConfigurations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceConfiguration
+     * @return a CompletableFuture of DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@jakarta.annotation.Nonnull final DeviceConfiguration body) {
@@ -180,7 +180,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfiguration
+     * @return a CompletableFuture of DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> patch(@jakarta.annotation.Nonnull final DeviceConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

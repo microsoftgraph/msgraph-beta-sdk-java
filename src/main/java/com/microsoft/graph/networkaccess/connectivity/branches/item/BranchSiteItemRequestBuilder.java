@@ -83,7 +83,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve information about a specific branch.
-     * @return a CompletableFuture of branchSite
+     * @return a CompletableFuture of BranchSite
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve information about a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of branchSite
+     * @return a CompletableFuture of BranchSite
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the configuration or properties of a specific branch.
      * @param body The request body
-     * @return a CompletableFuture of branchSite
+     * @return a CompletableFuture of BranchSite
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the configuration or properties of a specific branch.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of branchSite
+     * @return a CompletableFuture of BranchSite
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

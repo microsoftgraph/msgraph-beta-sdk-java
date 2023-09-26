@@ -57,7 +57,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a connectionQuota object.
-     * @return a CompletableFuture of connectionQuota
+     * @return a CompletableFuture of ConnectionQuota
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-connectionquota-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a connectionQuota object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectionQuota
+     * @return a CompletableFuture of ConnectionQuota
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-connectionquota-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property quota in external
      * @param body The request body
-     * @return a CompletableFuture of connectionQuota
+     * @return a CompletableFuture of ConnectionQuota
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionQuota> patch(@jakarta.annotation.Nonnull final ConnectionQuota body) {
@@ -91,7 +91,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property quota in external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectionQuota
+     * @return a CompletableFuture of ConnectionQuota
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectionQuota> patch(@jakarta.annotation.Nonnull final ConnectionQuota body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -193,7 +193,7 @@ public class QuotaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a quotaRequestBuilder
+     * @return a QuotaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public QuotaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

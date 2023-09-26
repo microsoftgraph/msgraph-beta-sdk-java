@@ -66,7 +66,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     }
     /**
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
-     * @return a CompletableFuture of credentialUserRegistrationDetailsCollectionResponse
+     * @return a CompletableFuture of CredentialUserRegistrationDetailsCollectionResponse
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Get a list of credentialUserRegistrationDetails objects for a given tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationDetailsCollectionResponse
+     * @return a CompletableFuture of CredentialUserRegistrationDetailsCollectionResponse
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Create new navigation property to credentialUserRegistrationDetails for reports
      * @param body The request body
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -109,7 +109,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Create new navigation property to credentialUserRegistrationDetails for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -199,7 +199,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a credentialUserRegistrationDetailsRequestBuilder
+     * @return a CredentialUserRegistrationDetailsRequestBuilder
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */

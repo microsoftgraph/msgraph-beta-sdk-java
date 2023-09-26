@@ -57,7 +57,7 @@ public class AlertRuleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an alertRule object.
-     * @return a CompletableFuture of alertRule
+     * @return a CompletableFuture of AlertRule
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AlertRuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an alertRule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRule
+     * @return a CompletableFuture of AlertRule
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AlertRuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an alertRule object.
      * @param body The request body
-     * @return a CompletableFuture of alertRule
+     * @return a CompletableFuture of AlertRule
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AlertRuleItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an alertRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRule
+     * @return a CompletableFuture of AlertRule
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

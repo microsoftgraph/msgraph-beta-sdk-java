@@ -37,7 +37,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Mark an assigned educationAssignment as inactive to signal that the assignment has no further action items for teachers and students. This action can only be performed by a teacher on assigned assignments.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-deactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
     /**
      * Mark an assigned educationAssignment as inactive to signal that the assignment has no further action items for teachers and students. This action can only be performed by a teacher on assigned assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationAssignment
+     * @return a CompletableFuture of EducationAssignment
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignment-deactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class DeactivateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deactivateRequestBuilder
+     * @return a DeactivateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeactivateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

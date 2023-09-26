@@ -57,7 +57,7 @@ public class ReferenceDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a referenceDefinition object.
-     * @return a CompletableFuture of referenceDefinition
+     * @return a CompletableFuture of ReferenceDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-referencedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ReferenceDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a referenceDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of referenceDefinition
+     * @return a CompletableFuture of ReferenceDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-referencedefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ReferenceDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property referenceDefinitions in external
      * @param body The request body
-     * @return a CompletableFuture of referenceDefinition
+     * @return a CompletableFuture of ReferenceDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReferenceDefinition> patch(@jakarta.annotation.Nonnull final ReferenceDefinition body) {
@@ -91,7 +91,7 @@ public class ReferenceDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property referenceDefinitions in external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of referenceDefinition
+     * @return a CompletableFuture of ReferenceDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ReferenceDefinition> patch(@jakarta.annotation.Nonnull final ReferenceDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

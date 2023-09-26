@@ -59,7 +59,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> get() {
@@ -68,7 +68,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of reviewers for an access review, if access review reviewerType is of type delegated.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reviewers in accessReviews
      * @param body The request body
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body) {
@@ -91,7 +91,7 @@ public class AccessReviewReviewerItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reviewers in accessReviews
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewReviewer> patch(@jakarta.annotation.Nonnull final AccessReviewReviewer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

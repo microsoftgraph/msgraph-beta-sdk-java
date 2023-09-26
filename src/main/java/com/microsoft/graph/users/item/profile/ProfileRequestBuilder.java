@@ -211,7 +211,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a profile object for a given user. The profile resource exposes various rich properties that are descriptive of the user as relationships, for example, anniversaries and education activities. To get one of these navigation properties, use the corresponding GET method on that property. See the methods exposed by profile.
-     * @return a CompletableFuture of profile
+     * @return a CompletableFuture of Profile
      * @see <a href="https://learn.microsoft.com/graph/api/profile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -221,7 +221,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a profile object for a given user. The profile resource exposes various rich properties that are descriptive of the user as relationships, for example, anniversaries and education activities. To get one of these navigation properties, use the corresponding GET method on that property. See the methods exposed by profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profile
+     * @return a CompletableFuture of Profile
      * @see <a href="https://learn.microsoft.com/graph/api/profile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -235,7 +235,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property profile in users
      * @param body The request body
-     * @return a CompletableFuture of profile
+     * @return a CompletableFuture of Profile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Profile> patch(@jakarta.annotation.Nonnull final Profile body) {
@@ -245,7 +245,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property profile in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profile
+     * @return a CompletableFuture of Profile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Profile> patch(@jakarta.annotation.Nonnull final Profile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -347,7 +347,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a profileRequestBuilder
+     * @return a ProfileRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProfileRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the ediscoveryFile objects and their properties.
-     * @return a CompletableFuture of ediscoveryFileCollectionResponse
+     * @return a CompletableFuture of EdiscoveryFileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the ediscoveryFile objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryFileCollectionResponse
+     * @return a CompletableFuture of EdiscoveryFileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-list-files?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to files for security
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryFile
+     * @return a CompletableFuture of EdiscoveryFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryFile> post(@jakarta.annotation.Nonnull final EdiscoveryFile body) {
@@ -94,7 +94,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to files for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryFile
+     * @return a CompletableFuture of EdiscoveryFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryFile> post(@jakarta.annotation.Nonnull final EdiscoveryFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class FilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a filesRequestBuilder
+     * @return a FilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

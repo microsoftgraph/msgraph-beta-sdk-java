@@ -65,7 +65,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     }
     /**
      * The list of assignment filters
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> get() {
@@ -74,7 +74,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * The list of assignment filters
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
     /**
      * Update the navigation property assignmentFilters in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> patch(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
@@ -97,7 +97,7 @@ public class DeviceAndAppManagementAssignmentFilterItemRequestBuilder extends Ba
      * Update the navigation property assignmentFilters in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> patch(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

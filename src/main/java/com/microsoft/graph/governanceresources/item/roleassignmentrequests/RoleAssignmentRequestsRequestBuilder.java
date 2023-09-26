@@ -60,7 +60,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of role assignment requests for the resource.
-     * @return a CompletableFuture of governanceRoleAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequestCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of role assignment requests for the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleAssignmentRequests for governanceResources
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleAssignmentRequest
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body) {
@@ -92,7 +92,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleAssignmentRequests for governanceResources
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignmentRequest
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> post(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class RoleAssignmentRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentRequestsRequestBuilder
+     * @return a RoleAssignmentRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

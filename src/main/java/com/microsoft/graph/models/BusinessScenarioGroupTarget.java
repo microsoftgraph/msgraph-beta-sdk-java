@@ -13,7 +13,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
      */
     private String groupId;
     /**
-     * Instantiates a new businessScenarioGroupTarget and sets the default values.
+     * Instantiates a new BusinessScenarioGroupTarget and sets the default values.
      */
     public BusinessScenarioGroupTarget() {
         super();
@@ -22,7 +22,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessScenarioGroupTarget
+     * @return a BusinessScenarioGroupTarget
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenarioGroupTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
     }
     /**
      * Gets the groupId property value. The unique identifier for the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {

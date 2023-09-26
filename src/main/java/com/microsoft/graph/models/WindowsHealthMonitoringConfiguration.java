@@ -25,7 +25,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      */
     private EnumSet<WindowsHealthMonitoringScope> configDeviceHealthMonitoringScope;
     /**
-     * Instantiates a new windowsHealthMonitoringConfiguration and sets the default values.
+     * Instantiates a new WindowsHealthMonitoringConfiguration and sets the default values.
      */
     public WindowsHealthMonitoringConfiguration() {
         super();
@@ -34,7 +34,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsHealthMonitoringConfiguration
+     * @return a WindowsHealthMonitoringConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsHealthMonitoringConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the allowDeviceHealthMonitoring property value. Possible values of a property
-     * @return a enablement
+     * @return a Enablement
      */
     @jakarta.annotation.Nullable
     public Enablement getAllowDeviceHealthMonitoring() {
@@ -51,7 +51,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the configDeviceHealthMonitoringCustomScope property value. Specifies custom set of events collected from the device where health monitoring is enabled
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigDeviceHealthMonitoringCustomScope() {
@@ -59,7 +59,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     }
     /**
      * Gets the configDeviceHealthMonitoringScope property value. Device health monitoring scope
-     * @return a windowsHealthMonitoringScope
+     * @return a EnumSet<WindowsHealthMonitoringScope>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsHealthMonitoringScope> getConfigDeviceHealthMonitoringScope() {

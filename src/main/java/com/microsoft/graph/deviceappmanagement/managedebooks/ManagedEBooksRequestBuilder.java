@@ -60,7 +60,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Managed eBook.
-     * @return a CompletableFuture of managedEBookCollectionResponse
+     * @return a CompletableFuture of ManagedEBookCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     /**
      * The Managed eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBookCollectionResponse
+     * @return a CompletableFuture of ManagedEBookCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedEBooks for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> post(@jakarta.annotation.Nonnull final ManagedEBook body) {
@@ -92,7 +92,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedEBooks for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> post(@jakarta.annotation.Nonnull final ManagedEBook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagedEBooksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedEBooksRequestBuilder
+     * @return a ManagedEBooksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedEBooksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

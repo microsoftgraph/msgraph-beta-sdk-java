@@ -59,7 +59,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
     }
     /**
      * Get a tenant and its properties in the multi-tenant organization.
-     * @return a CompletableFuture of multiTenantOrganizationMember
+     * @return a CompletableFuture of MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
     /**
      * Get a tenant and its properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of multiTenantOrganizationMember
+     * @return a CompletableFuture of MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationmember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property tenants in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of multiTenantOrganizationMember
+     * @return a CompletableFuture of MultiTenantOrganizationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MultiTenantOrganizationMember> patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationMember body) {
@@ -93,7 +93,7 @@ public class MultiTenantOrganizationMemberItemRequestBuilder extends BaseRequest
      * Update the navigation property tenants in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of multiTenantOrganizationMember
+     * @return a CompletableFuture of MultiTenantOrganizationMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MultiTenantOrganizationMember> patch(@jakarta.annotation.Nonnull final MultiTenantOrganizationMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

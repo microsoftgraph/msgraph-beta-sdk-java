@@ -65,7 +65,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Role Definitions.
-     * @return a CompletableFuture of roleDefinition
+     * @return a CompletableFuture of RoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> get() {
@@ -74,7 +74,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The Role Definitions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleDefinition
+     * @return a CompletableFuture of RoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleDefinitions in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of roleDefinition
+     * @return a CompletableFuture of RoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> patch(@jakarta.annotation.Nonnull final RoleDefinition body) {
@@ -97,7 +97,7 @@ public class RoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleDefinitions in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleDefinition
+     * @return a CompletableFuture of RoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleDefinition> patch(@jakarta.annotation.Nonnull final RoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

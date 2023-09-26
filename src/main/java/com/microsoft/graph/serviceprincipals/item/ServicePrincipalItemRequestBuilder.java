@@ -283,7 +283,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -293,7 +293,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a servicePrincipal object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -307,7 +307,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of servicePrincipal object.
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -318,7 +318,7 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of servicePrincipal object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipal
+     * @return a CompletableFuture of ServicePrincipal
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

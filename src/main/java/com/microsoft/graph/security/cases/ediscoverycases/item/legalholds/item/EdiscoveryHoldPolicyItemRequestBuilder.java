@@ -73,7 +73,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of case eDiscoveryHoldPolicy objects for this case.
-     * @return a CompletableFuture of ediscoveryHoldPolicy
+     * @return a CompletableFuture of EdiscoveryHoldPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryHoldPolicy> get() {
@@ -82,7 +82,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a list of case eDiscoveryHoldPolicy objects for this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryHoldPolicy
+     * @return a CompletableFuture of EdiscoveryHoldPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryHoldPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property legalHolds in security
      * @param body The request body
-     * @return a CompletableFuture of ediscoveryHoldPolicy
+     * @return a CompletableFuture of EdiscoveryHoldPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryHoldPolicy> patch(@jakarta.annotation.Nonnull final EdiscoveryHoldPolicy body) {
@@ -105,7 +105,7 @@ public class EdiscoveryHoldPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property legalHolds in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ediscoveryHoldPolicy
+     * @return a CompletableFuture of EdiscoveryHoldPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EdiscoveryHoldPolicy> patch(@jakarta.annotation.Nonnull final EdiscoveryHoldPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

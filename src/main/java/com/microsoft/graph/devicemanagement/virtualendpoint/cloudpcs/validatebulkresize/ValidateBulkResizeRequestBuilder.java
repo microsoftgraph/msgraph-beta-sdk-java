@@ -37,7 +37,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
     /**
      * Validate that a set of cloudPC devices meet the requirements to be bulk resized.
      * @param body The request body
-     * @return a CompletableFuture of validateBulkResizeResponse
+     * @return a CompletableFuture of ValidateBulkResizeResponse
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
      * Validate that a set of cloudPC devices meet the requirements to be bulk resized.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of validateBulkResizeResponse
+     * @return a CompletableFuture of ValidateBulkResizeResponse
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-validatebulkresize?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ValidateBulkResizeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a validateBulkResizeRequestBuilder
+     * @return a ValidateBulkResizeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ValidateBulkResizeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

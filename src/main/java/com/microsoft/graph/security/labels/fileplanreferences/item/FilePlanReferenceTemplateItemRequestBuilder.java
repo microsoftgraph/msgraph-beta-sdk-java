@@ -59,7 +59,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Read the properties and relationships of a filePlanReferenceTemplate object.
-     * @return a CompletableFuture of filePlanReferenceTemplate
+     * @return a CompletableFuture of FilePlanReferenceTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
     /**
      * Read the properties and relationships of a filePlanReferenceTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filePlanReferenceTemplate
+     * @return a CompletableFuture of FilePlanReferenceTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-fileplanreferencetemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property filePlanReferences in security
      * @param body The request body
-     * @return a CompletableFuture of filePlanReferenceTemplate
+     * @return a CompletableFuture of FilePlanReferenceTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanReferenceTemplate> patch(@jakarta.annotation.Nonnull final FilePlanReferenceTemplate body) {
@@ -93,7 +93,7 @@ public class FilePlanReferenceTemplateItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property filePlanReferences in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filePlanReferenceTemplate
+     * @return a CompletableFuture of FilePlanReferenceTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanReferenceTemplate> patch(@jakarta.annotation.Nonnull final FilePlanReferenceTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

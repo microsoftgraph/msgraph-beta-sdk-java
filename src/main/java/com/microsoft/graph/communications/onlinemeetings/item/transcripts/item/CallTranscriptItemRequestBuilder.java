@@ -73,7 +73,7 @@ public class CallTranscriptItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a callTranscript object associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. Retrieving the transcript returns the metadata of the single transcript associated with the online meeting. Retrieving the content of the transcript returns the stream of text associated with the transcript.
-     * @return a CompletableFuture of callTranscript
+     * @return a CompletableFuture of CallTranscript
      * @see <a href="https://learn.microsoft.com/graph/api/calltranscript-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class CallTranscriptItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a callTranscript object associated with a scheduled onlineMeeting. This API does not support getting call transcripts from channel meetings. Retrieving the transcript returns the metadata of the single transcript associated with the online meeting. Retrieving the content of the transcript returns the stream of text associated with the transcript.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callTranscript
+     * @return a CompletableFuture of CallTranscript
      * @see <a href="https://learn.microsoft.com/graph/api/calltranscript-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class CallTranscriptItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property transcripts in communications
      * @param body The request body
-     * @return a CompletableFuture of callTranscript
+     * @return a CompletableFuture of CallTranscript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallTranscript> patch(@jakarta.annotation.Nonnull final CallTranscript body) {
@@ -107,7 +107,7 @@ public class CallTranscriptItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property transcripts in communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callTranscript
+     * @return a CompletableFuture of CallTranscript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CallTranscript> patch(@jakarta.annotation.Nonnull final CallTranscript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class OnPremisesAgentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a CompletableFuture of onPremisesAgent
+     * @return a CompletableFuture of OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgent> get() {
@@ -74,7 +74,7 @@ public class OnPremisesAgentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgent
+     * @return a CompletableFuture of OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class OnPremisesAgentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property agents in onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of onPremisesAgent
+     * @return a CompletableFuture of OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgent> patch(@jakarta.annotation.Nonnull final OnPremisesAgent body) {
@@ -97,7 +97,7 @@ public class OnPremisesAgentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property agents in onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgent
+     * @return a CompletableFuture of OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgent> patch(@jakarta.annotation.Nonnull final OnPremisesAgent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

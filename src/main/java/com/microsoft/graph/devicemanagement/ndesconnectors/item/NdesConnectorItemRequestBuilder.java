@@ -57,7 +57,7 @@ public class NdesConnectorItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of Ndes connectors for this account.
-     * @return a CompletableFuture of ndesConnector
+     * @return a CompletableFuture of NdesConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NdesConnector> get() {
@@ -66,7 +66,7 @@ public class NdesConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of Ndes connectors for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ndesConnector
+     * @return a CompletableFuture of NdesConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NdesConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class NdesConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property ndesConnectors in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of ndesConnector
+     * @return a CompletableFuture of NdesConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NdesConnector> patch(@jakarta.annotation.Nonnull final NdesConnector body) {
@@ -89,7 +89,7 @@ public class NdesConnectorItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property ndesConnectors in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of ndesConnector
+     * @return a CompletableFuture of NdesConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NdesConnector> patch(@jakarta.annotation.Nonnull final NdesConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

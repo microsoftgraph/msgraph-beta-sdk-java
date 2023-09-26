@@ -59,7 +59,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of recent activities that took place on this item.
-     * @return a CompletableFuture of itemActivityOLDCollectionResponse
+     * @return a CompletableFuture of ItemActivityOLDCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityOLDCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of recent activities that took place on this item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityOLDCollectionResponse
+     * @return a CompletableFuture of ItemActivityOLDCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityOLDCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activitiesRequestBuilder
+     * @return a ActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -38,7 +38,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Read-only. Required.
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResource> get() {
@@ -47,7 +47,7 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Read-only. Required.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

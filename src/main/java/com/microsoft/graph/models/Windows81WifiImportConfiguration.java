@@ -14,7 +14,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     /**
      * Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
      */
-    private byte[] payload;
+    private Base64url payload;
     /**
      * Payload file name (.xml).
      */
@@ -24,7 +24,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      */
     private String profileName;
     /**
-     * Instantiates a new windows81WifiImportConfiguration and sets the default values.
+     * Instantiates a new Windows81WifiImportConfiguration and sets the default values.
      */
     public Windows81WifiImportConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81WifiImportConfiguration
+     * @return a Windows81WifiImportConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows81WifiImportConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,22 +47,22 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
         deserializerMap.put("profileName", (n) -> { this.setProfileName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getPayload() {
+    public Base64url getPayload() {
         return this.payload;
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.xml).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -70,7 +70,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the profileName property value. Profile name displayed in the UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {
@@ -83,7 +83,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("payload", this.getPayload());
+        writer.writeObjectValue("payload", this.getPayload());
         writer.writeStringValue("payloadFileName", this.getPayloadFileName());
         writer.writeStringValue("profileName", this.getProfileName());
     }
@@ -91,7 +91,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      * Sets the payload property value. Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
      * @param value Value to set for the payload property.
      */
-    public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
+    public void setPayload(@jakarta.annotation.Nullable final Base64url value) {
         this.payload = value;
     }
     /**

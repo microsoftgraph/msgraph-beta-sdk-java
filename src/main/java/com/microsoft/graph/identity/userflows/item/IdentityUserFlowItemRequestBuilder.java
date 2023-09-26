@@ -65,7 +65,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and associations for an userFlow object.
-     * @return a CompletableFuture of identityUserFlow
+     * @return a CompletableFuture of IdentityUserFlow
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
@@ -78,7 +78,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and associations for an userFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlow
+     * @return a CompletableFuture of IdentityUserFlow
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-1.0">Find more info here</a>
@@ -95,7 +95,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property userFlows in identity
      * @param body The request body
-     * @return a CompletableFuture of identityUserFlow
+     * @return a CompletableFuture of IdentityUserFlow
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
@@ -108,7 +108,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property userFlows in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlow
+     * @return a CompletableFuture of IdentityUserFlow
      * @deprecated
      * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */

@@ -73,7 +73,7 @@ public class CertificateConnectorDetailsItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
-     * @return a CompletableFuture of certificateConnectorDetails
+     * @return a CompletableFuture of CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetails> get() {
@@ -82,7 +82,7 @@ public class CertificateConnectorDetailsItemRequestBuilder extends BaseRequestBu
     /**
      * Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateConnectorDetails
+     * @return a CompletableFuture of CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetails> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class CertificateConnectorDetailsItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property certificateConnectorDetails in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of certificateConnectorDetails
+     * @return a CompletableFuture of CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetails> patch(@jakarta.annotation.Nonnull final CertificateConnectorDetails body) {
@@ -105,7 +105,7 @@ public class CertificateConnectorDetailsItemRequestBuilder extends BaseRequestBu
      * Update the navigation property certificateConnectorDetails in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateConnectorDetails
+     * @return a CompletableFuture of CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateConnectorDetails> patch(@jakarta.annotation.Nonnull final CertificateConnectorDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

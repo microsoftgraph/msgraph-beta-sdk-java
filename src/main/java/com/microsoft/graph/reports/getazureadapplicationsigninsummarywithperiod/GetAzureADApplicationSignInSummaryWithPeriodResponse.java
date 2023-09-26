@@ -15,7 +15,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodResponse extends BaseCo
      */
     private java.util.List<ApplicationSignInSummary> value;
     /**
-     * Instantiates a new getAzureADApplicationSignInSummaryWithPeriodResponse and sets the default values.
+     * Instantiates a new GetAzureADApplicationSignInSummaryWithPeriodResponse and sets the default values.
      */
     public GetAzureADApplicationSignInSummaryWithPeriodResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodResponse extends BaseCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getAzureADApplicationSignInSummaryWithPeriodResponse
+     * @return a GetAzureADApplicationSignInSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public static GetAzureADApplicationSignInSummaryWithPeriodResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodResponse extends BaseCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a applicationSignInSummary
+     * @return a java.util.List<ApplicationSignInSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApplicationSignInSummary> getValue() {

@@ -36,7 +36,7 @@ public class ApproveFotaAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action approveFotaApps
-     * @return a CompletableFuture of approveFotaAppsResponse
+     * @return a CompletableFuture of ApproveFotaAppsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApproveFotaAppsResponse> post() {
@@ -45,7 +45,7 @@ public class ApproveFotaAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action approveFotaApps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approveFotaAppsResponse
+     * @return a CompletableFuture of ApproveFotaAppsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApproveFotaAppsResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class ApproveFotaAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a approveFotaAppsRequestBuilder
+     * @return a ApproveFotaAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApproveFotaAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -98,7 +98,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Read the properties and relationships of a cloudPcProvisioningPolicy object.
-     * @return a CompletableFuture of cloudPcProvisioningPolicy
+     * @return a CompletableFuture of CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -111,7 +111,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     /**
      * Read the properties and relationships of a cloudPcProvisioningPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcProvisioningPolicy
+     * @return a CompletableFuture of CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-get?view=graph-rest-1.0">Find more info here</a>
@@ -128,7 +128,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the properties of a cloudPcProvisioningPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcProvisioningPolicy
+     * @return a CompletableFuture of CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-update?view=graph-rest-1.0">Find more info here</a>
@@ -142,7 +142,7 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
      * Update the properties of a cloudPcProvisioningPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcProvisioningPolicy
+     * @return a CompletableFuture of CloudPcProvisioningPolicy
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-update?view=graph-rest-1.0">Find more info here</a>

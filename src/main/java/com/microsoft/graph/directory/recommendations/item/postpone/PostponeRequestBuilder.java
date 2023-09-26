@@ -38,7 +38,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
     /**
      * Postpone action on a recommendation object to a specified future date and time by marking its status as postponed. On the date and time provided, Azure AD will automatically update the status of the recommendation object to active again.
      * @param body The request body
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-postpone?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
      * Postpone action on a recommendation object to a specified future date and time by marking its status as postponed. On the date and time provided, Azure AD will automatically update the status of the recommendation object to active again.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-postpone?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class PostponeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a postponeRequestBuilder
+     * @return a PostponeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PostponeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

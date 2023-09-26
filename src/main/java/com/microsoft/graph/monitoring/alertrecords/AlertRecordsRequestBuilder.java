@@ -68,7 +68,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the alertRecord objects and their properties.
-     * @return a CompletableFuture of alertRecordCollectionResponse
+     * @return a CompletableFuture of AlertRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the alertRecord objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRecordCollectionResponse
+     * @return a CompletableFuture of AlertRecordCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrecord-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to alertRecords for monitoring
      * @param body The request body
-     * @return a CompletableFuture of alertRecord
+     * @return a CompletableFuture of AlertRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRecord> post(@jakarta.annotation.Nonnull final AlertRecord body) {
@@ -102,7 +102,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to alertRecords for monitoring
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRecord
+     * @return a CompletableFuture of AlertRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AlertRecord> post(@jakarta.annotation.Nonnull final AlertRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -177,7 +177,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertRecordsRequestBuilder
+     * @return a AlertRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

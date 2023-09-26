@@ -65,7 +65,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve information about a specific forwarding profile.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve information about a specific forwarding profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an existing forwarding profile.
      * @param body The request body
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing forwarding profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

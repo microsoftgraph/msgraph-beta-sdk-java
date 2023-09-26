@@ -15,7 +15,7 @@ public class UpdateAlertsResponse extends BaseCollectionPaginationCountResponse 
      */
     private java.util.List<Alert> value;
     /**
-     * Instantiates a new updateAlertsResponse and sets the default values.
+     * Instantiates a new UpdateAlertsResponse and sets the default values.
      */
     public UpdateAlertsResponse() {
         super();
@@ -23,7 +23,7 @@ public class UpdateAlertsResponse extends BaseCollectionPaginationCountResponse 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateAlertsResponse
+     * @return a UpdateAlertsResponse
      */
     @jakarta.annotation.Nonnull
     public static UpdateAlertsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class UpdateAlertsResponse extends BaseCollectionPaginationCountResponse 
     }
     /**
      * Gets the value property value. The value property
-     * @return a alert
+     * @return a java.util.List<Alert>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Alert> getValue() {

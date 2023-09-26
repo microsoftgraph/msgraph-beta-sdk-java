@@ -47,7 +47,7 @@ public class Qna extends SearchAnswer implements Parsable {
      */
     private java.util.List<AnswerVariant> targetedVariations;
     /**
-     * Instantiates a new qna and sets the default values.
+     * Instantiates a new Qna and sets the default values.
      */
     public Qna() {
         super();
@@ -55,7 +55,7 @@ public class Qna extends SearchAnswer implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a qna
+     * @return a Qna
      */
     @jakarta.annotation.Nonnull
     public static Qna createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +98,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the groupIds property value. List of security groups able to view this qna.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupIds() {
@@ -106,7 +106,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the isSuggested property value. True if a user or Microsoft suggested this qna to the admin. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSuggested() {
@@ -114,7 +114,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the keywords property value. Keywords that trigger this qna to appear in search results.
-     * @return a answerKeyword
+     * @return a AnswerKeyword
      */
     @jakarta.annotation.Nullable
     public AnswerKeyword getKeywords() {
@@ -122,7 +122,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the languageTags property value. A list of language names that are geographically specific and that this QnA can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. For the list of possible values, see supported language tags.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLanguageTags() {
@@ -130,7 +130,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the platforms property value. List of devices and operating systems able to view this qna. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
-     * @return a devicePlatformType
+     * @return a java.util.List<DevicePlatformType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DevicePlatformType> getPlatforms() {
@@ -138,7 +138,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a answerState
+     * @return a AnswerState
      */
     @jakarta.annotation.Nullable
     public AnswerState getState() {
@@ -146,7 +146,7 @@ public class Qna extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the targetedVariations property value. Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
-     * @return a answerVariant
+     * @return a java.util.List<AnswerVariant>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AnswerVariant> getTargetedVariations() {

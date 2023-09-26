@@ -37,7 +37,7 @@ public class UpdateScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action updateScopeTags
      * @param body The request body
-     * @return a CompletableFuture of updateScopeTagsResponse
+     * @return a CompletableFuture of UpdateScopeTagsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateScopeTagsResponse> post(@jakarta.annotation.Nonnull final UpdateScopeTagsPostRequestBody body) {
@@ -47,7 +47,7 @@ public class UpdateScopeTagsRequestBuilder extends BaseRequestBuilder {
      * Invoke action updateScopeTags
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updateScopeTagsResponse
+     * @return a CompletableFuture of UpdateScopeTagsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateScopeTagsResponse> post(@jakarta.annotation.Nonnull final UpdateScopeTagsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class UpdateScopeTagsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updateScopeTagsRequestBuilder
+     * @return a UpdateScopeTagsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdateScopeTagsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

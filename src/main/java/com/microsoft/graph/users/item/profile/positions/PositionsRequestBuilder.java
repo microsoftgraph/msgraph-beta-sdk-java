@@ -60,7 +60,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of workPosition objects from a user's profile.
-     * @return a CompletableFuture of workPositionCollectionResponse
+     * @return a CompletableFuture of WorkPositionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of workPosition objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workPositionCollectionResponse
+     * @return a CompletableFuture of WorkPositionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Use this API to create a new workPosition in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of workPosition
+     * @return a CompletableFuture of WorkPosition
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
      * Use this API to create a new workPosition in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workPosition
+     * @return a CompletableFuture of WorkPosition
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-positions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PositionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a positionsRequestBuilder
+     * @return a PositionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PositionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -37,7 +37,7 @@ public class FindRoomsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function findRooms
-     * @return a CompletableFuture of findRoomsResponse
+     * @return a CompletableFuture of FindRoomsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FindRoomsResponse> get() {
@@ -46,7 +46,7 @@ public class FindRoomsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function findRooms
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of findRoomsResponse
+     * @return a CompletableFuture of FindRoomsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FindRoomsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class FindRoomsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a findRoomsRequestBuilder
+     * @return a FindRoomsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FindRoomsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

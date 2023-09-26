@@ -37,7 +37,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder extends BaseRequestBuilder 
     /**
      * Invoke action getHealthMetricTimeSeries
      * @param body The request body
-     * @return a CompletableFuture of getHealthMetricTimeSeriesResponse
+     * @return a CompletableFuture of GetHealthMetricTimeSeriesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@jakarta.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body) {
@@ -47,7 +47,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder extends BaseRequestBuilder 
      * Invoke action getHealthMetricTimeSeries
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getHealthMetricTimeSeriesResponse
+     * @return a CompletableFuture of GetHealthMetricTimeSeriesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetHealthMetricTimeSeriesResponse> post(@jakarta.annotation.Nonnull final GetHealthMetricTimeSeriesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class GetHealthMetricTimeSeriesRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getHealthMetricTimeSeriesRequestBuilder
+     * @return a GetHealthMetricTimeSeriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetHealthMetricTimeSeriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

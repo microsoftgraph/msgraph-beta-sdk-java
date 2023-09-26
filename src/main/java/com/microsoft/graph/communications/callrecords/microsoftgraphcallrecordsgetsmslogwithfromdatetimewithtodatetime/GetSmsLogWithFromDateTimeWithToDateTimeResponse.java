@@ -15,7 +15,7 @@ public class GetSmsLogWithFromDateTimeWithToDateTimeResponse extends BaseCollect
      */
     private java.util.List<SmsLogRow> value;
     /**
-     * Instantiates a new getSmsLogWithFromDateTimeWithToDateTimeResponse and sets the default values.
+     * Instantiates a new GetSmsLogWithFromDateTimeWithToDateTimeResponse and sets the default values.
      */
     public GetSmsLogWithFromDateTimeWithToDateTimeResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetSmsLogWithFromDateTimeWithToDateTimeResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getSmsLogWithFromDateTimeWithToDateTimeResponse
+     * @return a GetSmsLogWithFromDateTimeWithToDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public static GetSmsLogWithFromDateTimeWithToDateTimeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetSmsLogWithFromDateTimeWithToDateTimeResponse extends BaseCollect
     }
     /**
      * Gets the value property value. The value property
-     * @return a smsLogRow
+     * @return a java.util.List<SmsLogRow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SmsLogRow> getValue() {

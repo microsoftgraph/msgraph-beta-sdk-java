@@ -26,7 +26,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
      */
     private Boolean userHasVerifiedAccuracy;
     /**
-     * Instantiates a new inferenceData and sets the default values.
+     * Instantiates a new InferenceData and sets the default values.
      */
     public InferenceData() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inferenceData
+     * @return a InferenceData
      */
     @jakarta.annotation.Nonnull
     public static InferenceData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
         return new InferenceData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the confidenceScore property value. Confidence score reflecting the accuracy of the data inferred about the user.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getConfidenceScore() {
@@ -71,7 +71,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userHasVerifiedAccuracy property value. Records if the user has confirmed this inference as being True or False.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUserHasVerifiedAccuracy() {
@@ -97,8 +97,8 @@ public class InferenceData implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -75,7 +75,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     }
     /**
      * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. Note: To retrieve a language supported for customization, you must first enable language customization on your Azure AD B2C user flow. For more information, see Update b2cIdentityUserFlow. Language customization is enabled by default in Azure Active Directory user flows.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a userFlowLanguageConfiguration object. These objects represent a language available in a user flow. Note: To retrieve a language supported for customization, you must first enable language customization on your Azure AD B2C user flow. For more information, see Update b2cIdentityUserFlow. Language customization is enabled by default in Azure Active Directory user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/userflowlanguageconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     /**
      * This method is used to create or update a custom language in an Azure AD B2C user flow. Note: You must enable language customization in the Azure AD B2C user flow before you can create a custom language. For more information, see Update b2cIdentityUserFlow.
      * @param body The request body
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-put-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
      * This method is used to create or update a custom language in an Azure AD B2C user flow. Note: You must enable language customization in the Azure AD B2C user flow before you can create a custom language. For more information, see Update b2cIdentityUserFlow.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-put-languages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

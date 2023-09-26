@@ -15,7 +15,7 @@ public class EvaluateRemovalResponse extends BaseCollectionPaginationCountRespon
      */
     private java.util.List<InformationProtectionAction> value;
     /**
-     * Instantiates a new evaluateRemovalResponse and sets the default values.
+     * Instantiates a new EvaluateRemovalResponse and sets the default values.
      */
     public EvaluateRemovalResponse() {
         super();
@@ -23,7 +23,7 @@ public class EvaluateRemovalResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateRemovalResponse
+     * @return a EvaluateRemovalResponse
      */
     @jakarta.annotation.Nonnull
     public static EvaluateRemovalResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class EvaluateRemovalResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * Gets the value property value. The value property
-     * @return a informationProtectionAction
+     * @return a java.util.List<InformationProtectionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getValue() {

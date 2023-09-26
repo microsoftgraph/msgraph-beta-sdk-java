@@ -131,7 +131,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of domain object.
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of domain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of domain object.
      * @param body The request body
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +166,7 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of domain object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domain
+     * @return a CompletableFuture of Domain
      * @see <a href="https://learn.microsoft.com/graph/api/domain-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

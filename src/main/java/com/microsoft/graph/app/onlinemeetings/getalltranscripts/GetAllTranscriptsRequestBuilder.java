@@ -37,7 +37,7 @@ public class GetAllTranscriptsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getAllTranscripts
-     * @return a CompletableFuture of getAllTranscriptsResponse
+     * @return a CompletableFuture of GetAllTranscriptsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAllTranscriptsResponse> get() {
@@ -46,7 +46,7 @@ public class GetAllTranscriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getAllTranscripts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAllTranscriptsResponse
+     * @return a CompletableFuture of GetAllTranscriptsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAllTranscriptsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetAllTranscriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAllTranscriptsRequestBuilder
+     * @return a GetAllTranscriptsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAllTranscriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

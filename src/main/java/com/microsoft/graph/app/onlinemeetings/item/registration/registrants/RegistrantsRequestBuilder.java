@@ -60,7 +60,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Registrants of the online meeting.
-     * @return a CompletableFuture of meetingRegistrantBaseCollectionResponse
+     * @return a CompletableFuture of MeetingRegistrantBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBaseCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Registrants of the online meeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrantBaseCollectionResponse
+     * @return a CompletableFuture of MeetingRegistrantBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBaseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to registrants for app
      * @param body The request body
-     * @return a CompletableFuture of meetingRegistrantBase
+     * @return a CompletableFuture of MeetingRegistrantBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBase> post(@jakarta.annotation.Nonnull final MeetingRegistrantBase body) {
@@ -92,7 +92,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to registrants for app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrantBase
+     * @return a CompletableFuture of MeetingRegistrantBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBase> post(@jakarta.annotation.Nonnull final MeetingRegistrantBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class RegistrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a registrantsRequestBuilder
+     * @return a RegistrantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegistrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

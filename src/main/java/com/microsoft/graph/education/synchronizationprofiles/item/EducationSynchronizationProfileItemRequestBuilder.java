@@ -115,7 +115,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     }
     /**
      * Retrieve a school data synchronization profile in the tenant based on the identifier.
-     * @return a CompletableFuture of educationSynchronizationProfile
+     * @return a CompletableFuture of EducationSynchronizationProfile
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationProfile
+     * @return a CompletableFuture of EducationSynchronizationProfile
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property synchronizationProfiles in education
      * @param body The request body
-     * @return a CompletableFuture of educationSynchronizationProfile
+     * @return a CompletableFuture of EducationSynchronizationProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationProfile> patch(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body) {
@@ -149,7 +149,7 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Update the navigation property synchronizationProfiles in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationProfile
+     * @return a CompletableFuture of EducationSynchronizationProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationProfile> patch(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

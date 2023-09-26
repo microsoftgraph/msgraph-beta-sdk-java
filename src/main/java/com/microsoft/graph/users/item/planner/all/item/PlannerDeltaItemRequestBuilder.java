@@ -57,7 +57,7 @@ public class PlannerDeltaItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all from users
-     * @return a CompletableFuture of plannerDelta
+     * @return a CompletableFuture of PlannerDelta
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerDelta> get() {
@@ -66,7 +66,7 @@ public class PlannerDeltaItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerDelta
+     * @return a CompletableFuture of PlannerDelta
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerDelta> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PlannerDeltaItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property all in users
      * @param body The request body
-     * @return a CompletableFuture of plannerDelta
+     * @return a CompletableFuture of PlannerDelta
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerDelta> patch(@jakarta.annotation.Nonnull final PlannerDelta body) {
@@ -89,7 +89,7 @@ public class PlannerDeltaItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property all in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerDelta
+     * @return a CompletableFuture of PlannerDelta
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerDelta> patch(@jakarta.annotation.Nonnull final PlannerDelta body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

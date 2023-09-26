@@ -13,7 +13,7 @@ public class InboundSharedUserProfileCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<InboundSharedUserProfile> value;
     /**
-     * Instantiates a new inboundSharedUserProfileCollectionResponse and sets the default values.
+     * Instantiates a new InboundSharedUserProfileCollectionResponse and sets the default values.
      */
     public InboundSharedUserProfileCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class InboundSharedUserProfileCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inboundSharedUserProfileCollectionResponse
+     * @return a InboundSharedUserProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static InboundSharedUserProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class InboundSharedUserProfileCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a inboundSharedUserProfile
+     * @return a java.util.List<InboundSharedUserProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundSharedUserProfile> getValue() {

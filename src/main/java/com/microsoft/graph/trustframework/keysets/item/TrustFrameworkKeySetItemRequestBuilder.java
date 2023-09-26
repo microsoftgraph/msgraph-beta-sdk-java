@@ -99,7 +99,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and associations for a Trustframeworkkeyset.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and associations for a Trustframeworkkeyset.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

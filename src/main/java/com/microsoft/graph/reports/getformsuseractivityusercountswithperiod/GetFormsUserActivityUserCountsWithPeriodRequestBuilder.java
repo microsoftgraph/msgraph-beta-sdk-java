@@ -88,7 +88,7 @@ public class GetFormsUserActivityUserCountsWithPeriodRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getFormsUserActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetFormsUserActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFormsUserActivityUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

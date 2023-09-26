@@ -57,7 +57,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a fileThreatSubmission object.
-     * @return a CompletableFuture of fileThreatSubmission
+     * @return a CompletableFuture of FileThreatSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/security-filethreatsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a fileThreatSubmission object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fileThreatSubmission
+     * @return a CompletableFuture of FileThreatSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/security-filethreatsubmission-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property fileThreats in security
      * @param body The request body
-     * @return a CompletableFuture of fileThreatSubmission
+     * @return a CompletableFuture of FileThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FileThreatSubmission> patch(@jakarta.annotation.Nonnull final FileThreatSubmission body) {
@@ -91,7 +91,7 @@ public class FileThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property fileThreats in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fileThreatSubmission
+     * @return a CompletableFuture of FileThreatSubmission
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FileThreatSubmission> patch(@jakarta.annotation.Nonnull final FileThreatSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

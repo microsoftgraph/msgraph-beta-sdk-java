@@ -16,13 +16,13 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
     /**
      * The decryptedBuffer property
      */
-    private byte[] decryptedBuffer;
+    private Base64url decryptedBuffer;
     /**
      * The OdataType property
      */
     private String odataType;
     /**
-     * Instantiates a new bufferDecryptionResult and sets the default values.
+     * Instantiates a new BufferDecryptionResult and sets the default values.
      */
     public BufferDecryptionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bufferDecryptionResult
+     * @return a BufferDecryptionResult
      */
     @jakarta.annotation.Nonnull
     public static BufferDecryptionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
         return new BufferDecryptionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -47,10 +47,10 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the decryptedBuffer property value. The decryptedBuffer property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getDecryptedBuffer() {
+    public Base64url getDecryptedBuffer() {
         return this.decryptedBuffer;
     }
     /**
@@ -60,13 +60,13 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("decryptedBuffer", (n) -> { this.setDecryptedBuffer(n.getByteArrayValue()); });
+        deserializerMap.put("decryptedBuffer", (n) -> { this.setDecryptedBuffer(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -78,13 +78,13 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("decryptedBuffer", this.getDecryptedBuffer());
+        writer.writeObjectValue("decryptedBuffer", this.getDecryptedBuffer());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -93,7 +93,7 @@ public class BufferDecryptionResult implements AdditionalDataHolder, Parsable {
      * Sets the decryptedBuffer property value. The decryptedBuffer property
      * @param value Value to set for the decryptedBuffer property.
      */
-    public void setDecryptedBuffer(@jakarta.annotation.Nullable final byte[] value) {
+    public void setDecryptedBuffer(@jakarta.annotation.Nullable final Base64url value) {
         this.decryptedBuffer = value;
     }
     /**

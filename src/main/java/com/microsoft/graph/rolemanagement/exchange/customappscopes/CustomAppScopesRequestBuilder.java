@@ -60,7 +60,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
-     * @return a CompletableFuture of customAppScopeCollectionResponse
+     * @return a CompletableFuture of CustomAppScopeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of customAppScope objects for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAppScopeCollectionResponse
+     * @return a CompletableFuture of CustomAppScopeCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-list-customappscopes?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
      * Create a new customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacapplication-post-customappscope?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class CustomAppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customAppScopesRequestBuilder
+     * @return a CustomAppScopesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomAppScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

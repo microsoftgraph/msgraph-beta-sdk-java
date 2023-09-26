@@ -90,7 +90,7 @@ public class OverrideComplianceStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a overrideComplianceStateRequestBuilder
+     * @return a OverrideComplianceStateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OverrideComplianceStateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

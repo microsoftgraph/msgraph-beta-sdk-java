@@ -15,7 +15,7 @@ public class GetLicensesForAppWithBundleIdResponse extends BaseCollectionPaginat
      */
     private java.util.List<VppTokenLicenseSummary> value;
     /**
-     * Instantiates a new getLicensesForAppWithBundleIdResponse and sets the default values.
+     * Instantiates a new GetLicensesForAppWithBundleIdResponse and sets the default values.
      */
     public GetLicensesForAppWithBundleIdResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetLicensesForAppWithBundleIdResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getLicensesForAppWithBundleIdResponse
+     * @return a GetLicensesForAppWithBundleIdResponse
      */
     @jakarta.annotation.Nonnull
     public static GetLicensesForAppWithBundleIdResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetLicensesForAppWithBundleIdResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a vppTokenLicenseSummary
+     * @return a java.util.List<VppTokenLicenseSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VppTokenLicenseSummary> getValue() {

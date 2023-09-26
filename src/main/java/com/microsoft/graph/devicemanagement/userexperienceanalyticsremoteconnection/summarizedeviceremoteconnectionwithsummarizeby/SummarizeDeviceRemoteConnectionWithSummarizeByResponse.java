@@ -15,7 +15,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByResponse extends Base
      */
     private java.util.List<UserExperienceAnalyticsRemoteConnection> value;
     /**
-     * Instantiates a new summarizeDeviceRemoteConnectionWithSummarizeByResponse and sets the default values.
+     * Instantiates a new SummarizeDeviceRemoteConnectionWithSummarizeByResponse and sets the default values.
      */
     public SummarizeDeviceRemoteConnectionWithSummarizeByResponse() {
         super();
@@ -23,7 +23,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a summarizeDeviceRemoteConnectionWithSummarizeByResponse
+     * @return a SummarizeDeviceRemoteConnectionWithSummarizeByResponse
      */
     @jakarta.annotation.Nonnull
     public static SummarizeDeviceRemoteConnectionWithSummarizeByResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsRemoteConnection
+     * @return a java.util.List<UserExperienceAnalyticsRemoteConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsRemoteConnection> getValue() {

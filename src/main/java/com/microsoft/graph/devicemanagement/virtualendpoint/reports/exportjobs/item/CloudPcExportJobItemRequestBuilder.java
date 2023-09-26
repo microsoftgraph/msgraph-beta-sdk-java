@@ -57,7 +57,7 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a cloudPcExportJob object. You can download a report by first creating a new cloudPcExportJob resource to initiate downloading. Use this GET operation to verify the exportJobStatus property of the cloudPcExportJob resource. When the property becomes completed, the report has finished downloading in the location specified by the exportUrl property. 
-     * @return a CompletableFuture of cloudPcExportJob
+     * @return a CompletableFuture of CloudPcExportJob
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexportjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a cloudPcExportJob object. You can download a report by first creating a new cloudPcExportJob resource to initiate downloading. Use this GET operation to verify the exportJobStatus property of the cloudPcExportJob resource. When the property becomes completed, the report has finished downloading in the location specified by the exportUrl property. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcExportJob
+     * @return a CompletableFuture of CloudPcExportJob
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexportjob-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcExportJob
+     * @return a CompletableFuture of CloudPcExportJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExportJob> patch(@jakarta.annotation.Nonnull final CloudPcExportJob body) {
@@ -91,7 +91,7 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcExportJob
+     * @return a CompletableFuture of CloudPcExportJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcExportJob> patch(@jakarta.annotation.Nonnull final CloudPcExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

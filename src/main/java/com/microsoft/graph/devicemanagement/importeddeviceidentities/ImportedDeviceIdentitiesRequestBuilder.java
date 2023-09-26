@@ -76,7 +76,7 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The imported device identities.
-     * @return a CompletableFuture of importedDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of ImportedDeviceIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedDeviceIdentityCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * The imported device identities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of ImportedDeviceIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedDeviceIdentityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to importedDeviceIdentities for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of importedDeviceIdentity
+     * @return a CompletableFuture of ImportedDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body) {
@@ -108,7 +108,7 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to importedDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedDeviceIdentity
+     * @return a CompletableFuture of ImportedDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -183,7 +183,7 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importedDeviceIdentitiesRequestBuilder
+     * @return a ImportedDeviceIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportedDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

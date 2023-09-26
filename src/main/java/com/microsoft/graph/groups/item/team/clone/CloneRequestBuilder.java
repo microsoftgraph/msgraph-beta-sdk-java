@@ -92,7 +92,7 @@ public class CloneRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cloneRequestBuilder
+     * @return a CloneRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CloneRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

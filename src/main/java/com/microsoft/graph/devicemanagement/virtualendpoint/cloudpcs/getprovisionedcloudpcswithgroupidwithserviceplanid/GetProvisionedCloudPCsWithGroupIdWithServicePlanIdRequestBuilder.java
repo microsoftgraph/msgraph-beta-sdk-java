@@ -41,7 +41,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     }
     /**
      * Invoke function getProvisionedCloudPCs
-     * @return a CompletableFuture of getProvisionedCloudPCsWithGroupIdWithServicePlanIdResponse
+     * @return a CompletableFuture of GetProvisionedCloudPCsWithGroupIdWithServicePlanIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetProvisionedCloudPCsWithGroupIdWithServicePlanIdResponse> get() {
@@ -50,7 +50,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     /**
      * Invoke function getProvisionedCloudPCs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getProvisionedCloudPCsWithGroupIdWithServicePlanIdResponse
+     * @return a CompletableFuture of GetProvisionedCloudPCsWithGroupIdWithServicePlanIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetProvisionedCloudPCsWithGroupIdWithServicePlanIdResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder
+     * @return a GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

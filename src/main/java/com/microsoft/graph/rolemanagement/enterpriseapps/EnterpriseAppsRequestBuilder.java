@@ -60,7 +60,7 @@ public class EnterpriseAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get enterpriseApps from roleManagement
-     * @return a CompletableFuture of rbacApplicationCollectionResponse
+     * @return a CompletableFuture of RbacApplicationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplicationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EnterpriseAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get enterpriseApps from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplicationCollectionResponse
+     * @return a CompletableFuture of RbacApplicationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplicationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EnterpriseAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to enterpriseApps for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> post(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -92,7 +92,7 @@ public class EnterpriseAppsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to enterpriseApps for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> post(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EnterpriseAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a enterpriseAppsRequestBuilder
+     * @return a EnterpriseAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EnterpriseAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

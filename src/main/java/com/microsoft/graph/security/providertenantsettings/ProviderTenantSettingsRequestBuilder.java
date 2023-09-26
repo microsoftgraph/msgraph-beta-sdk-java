@@ -60,7 +60,7 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get providerTenantSettings from security
-     * @return a CompletableFuture of providerTenantSettingCollectionResponse
+     * @return a CompletableFuture of ProviderTenantSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProviderTenantSettingCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get providerTenantSettings from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of providerTenantSettingCollectionResponse
+     * @return a CompletableFuture of ProviderTenantSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProviderTenantSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to providerTenantSettings for security
      * @param body The request body
-     * @return a CompletableFuture of providerTenantSetting
+     * @return a CompletableFuture of ProviderTenantSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProviderTenantSetting> post(@jakarta.annotation.Nonnull final ProviderTenantSetting body) {
@@ -92,7 +92,7 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to providerTenantSettings for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of providerTenantSetting
+     * @return a CompletableFuture of ProviderTenantSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProviderTenantSetting> post(@jakarta.annotation.Nonnull final ProviderTenantSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a providerTenantSettingsRequestBuilder
+     * @return a ProviderTenantSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

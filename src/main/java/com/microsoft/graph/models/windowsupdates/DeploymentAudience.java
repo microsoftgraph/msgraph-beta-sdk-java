@@ -22,7 +22,7 @@ public class DeploymentAudience extends Entity implements Parsable {
      */
     private java.util.List<UpdatableAsset> members;
     /**
-     * Instantiates a new deploymentAudience and sets the default values.
+     * Instantiates a new DeploymentAudience and sets the default values.
      */
     public DeploymentAudience() {
         super();
@@ -30,7 +30,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deploymentAudience
+     * @return a DeploymentAudience
      */
     @jakarta.annotation.Nonnull
     public static DeploymentAudience createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the applicableContent property value. Content eligible to deploy to devices in the audience. Not nullable. Read-only.
-     * @return a applicableContent
+     * @return a java.util.List<ApplicableContent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ApplicableContent> getApplicableContent() {
@@ -47,7 +47,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the exclusions property value. Specifies the assets to exclude from the audience.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getExclusions() {
@@ -67,7 +67,7 @@ public class DeploymentAudience extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. Specifies the assets to include in the audience.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getMembers() {

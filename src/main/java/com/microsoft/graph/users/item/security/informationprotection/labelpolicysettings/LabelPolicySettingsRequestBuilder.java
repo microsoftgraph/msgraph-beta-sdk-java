@@ -57,7 +57,7 @@ public class LabelPolicySettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an informationProtectionPolicySetting object. The settings exposed by this API should be used in applications to populate the moreInfoUrl property for Microsoft Purview Information Protection help, and indicate whether labeling is mandatory for the user and whether justification must be provided on downgrade.
-     * @return a CompletableFuture of informationProtectionPolicySetting
+     * @return a CompletableFuture of InformationProtectionPolicySetting
      * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotectionpolicysetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class LabelPolicySettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an informationProtectionPolicySetting object. The settings exposed by this API should be used in applications to populate the moreInfoUrl property for Microsoft Purview Information Protection help, and indicate whether labeling is mandatory for the user and whether justification must be provided on downgrade.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionPolicySetting
+     * @return a CompletableFuture of InformationProtectionPolicySetting
      * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotectionpolicysetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class LabelPolicySettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property labelPolicySettings in users
      * @param body The request body
-     * @return a CompletableFuture of informationProtectionPolicySetting
+     * @return a CompletableFuture of InformationProtectionPolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtectionPolicySetting> patch(@jakarta.annotation.Nonnull final InformationProtectionPolicySetting body) {
@@ -91,7 +91,7 @@ public class LabelPolicySettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property labelPolicySettings in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionPolicySetting
+     * @return a CompletableFuture of InformationProtectionPolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InformationProtectionPolicySetting> patch(@jakarta.annotation.Nonnull final InformationProtectionPolicySetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -193,7 +193,7 @@ public class LabelPolicySettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a labelPolicySettingsRequestBuilder
+     * @return a LabelPolicySettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LabelPolicySettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

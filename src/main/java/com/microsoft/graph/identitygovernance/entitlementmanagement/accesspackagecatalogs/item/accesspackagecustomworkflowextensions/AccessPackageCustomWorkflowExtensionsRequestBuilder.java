@@ -66,7 +66,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
     }
     /**
      * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
-     * @return a CompletableFuture of customCalloutExtensionCollectionResponse
+     * @return a CompletableFuture of CustomCalloutExtensionCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-accesspackagecustomworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -79,7 +79,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtensionCollectionResponse
+     * @return a CompletableFuture of CustomCalloutExtensionCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-accesspackagecustomworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Create new navigation property to accessPackageCustomWorkflowExtensions for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -109,7 +109,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * Create new navigation property to accessPackageCustomWorkflowExtensions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -199,7 +199,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageCustomWorkflowExtensionsRequestBuilder
+     * @return a AccessPackageCustomWorkflowExtensionsRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

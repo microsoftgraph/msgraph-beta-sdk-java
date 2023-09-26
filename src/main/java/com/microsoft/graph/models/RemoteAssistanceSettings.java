@@ -24,7 +24,7 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
      */
     private RemoteAssistanceState remoteAssistanceState;
     /**
-     * Instantiates a new remoteAssistanceSettings and sets the default values.
+     * Instantiates a new RemoteAssistanceSettings and sets the default values.
      */
     public RemoteAssistanceSettings() {
         super();
@@ -32,7 +32,7 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteAssistanceSettings
+     * @return a RemoteAssistanceSettings
      */
     @jakarta.annotation.Nonnull
     public static RemoteAssistanceSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     }
     /**
      * Gets the allowSessionsToUnenrolledDevices property value. Indicates if sessions to unenrolled devices are allowed for the account. This setting is configurable by the admin. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowSessionsToUnenrolledDevices() {
@@ -49,7 +49,7 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     }
     /**
      * Gets the blockChat property value. Indicates if sessions to block chat function. This setting is configurable by the admin. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockChat() {
@@ -69,7 +69,7 @@ public class RemoteAssistanceSettings extends Entity implements Parsable {
     }
     /**
      * Gets the remoteAssistanceState property value. State of remote assistance for the account
-     * @return a remoteAssistanceState
+     * @return a RemoteAssistanceState
      */
     @jakarta.annotation.Nullable
     public RemoteAssistanceState getRemoteAssistanceState() {

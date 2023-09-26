@@ -60,7 +60,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of itemPatent objects from a user's profile.
-     * @return a CompletableFuture of itemPatentCollectionResponse
+     * @return a CompletableFuture of ItemPatentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of itemPatent objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPatentCollectionResponse
+     * @return a CompletableFuture of ItemPatentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new itemPatent object within a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
      * Create a new itemPatent object within a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-patents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PatentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a patentsRequestBuilder
+     * @return a PatentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PatentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

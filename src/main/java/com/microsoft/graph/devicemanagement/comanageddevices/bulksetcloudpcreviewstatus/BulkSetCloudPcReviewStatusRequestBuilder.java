@@ -38,7 +38,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
     /**
      * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bulkSetCloudPcReviewStatusRequestBuilder
+     * @return a BulkSetCloudPcReviewStatusRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BulkSetCloudPcReviewStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

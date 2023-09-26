@@ -57,7 +57,7 @@ public class AccessReviewPolicyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an accessReviewPolicy object.
-     * @return a CompletableFuture of accessReviewPolicy
+     * @return a CompletableFuture of AccessReviewPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class AccessReviewPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an accessReviewPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewPolicy
+     * @return a CompletableFuture of AccessReviewPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AccessReviewPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an accessReviewPolicy object.
      * @param body The request body
-     * @return a CompletableFuture of accessReviewPolicy
+     * @return a CompletableFuture of AccessReviewPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AccessReviewPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an accessReviewPolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewPolicy
+     * @return a CompletableFuture of AccessReviewPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class AccessReviewPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessReviewPolicyRequestBuilder
+     * @return a AccessReviewPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessReviewPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

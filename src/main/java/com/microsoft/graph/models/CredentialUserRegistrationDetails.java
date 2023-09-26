@@ -37,7 +37,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new credentialUserRegistrationDetails and sets the default values.
+     * Instantiates a new CredentialUserRegistrationDetails and sets the default values.
      */
     public CredentialUserRegistrationDetails() {
         super();
@@ -45,7 +45,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUserRegistrationDetails
+     * @return a CredentialUserRegistrationDetails
      */
     @jakarta.annotation.Nonnull
     public static CredentialUserRegistrationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the authMethods property value. Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
-     * @return a registrationAuthMethod
+     * @return a java.util.List<RegistrationAuthMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RegistrationAuthMethod> getAuthMethods() {
@@ -78,7 +78,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isCapable property value. Indicates whether the user is ready to perform self-service password reset or MFA.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCapable() {
@@ -86,7 +86,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isEnabled property value. Indicates whether the user enabled to perform self-service password reset.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -94,7 +94,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isMfaRegistered property value. Indicates whether the user is registered for MFA.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaRegistered() {
@@ -102,7 +102,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the isRegistered property value. Indicates whether the user has registered any authentication methods for self-service password reset.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRegistered() {
@@ -110,7 +110,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the userDisplayName property value. Provides the user name of the corresponding user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -118,7 +118,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
     }
     /**
      * Gets the userPrincipalName property value. Provides the user principal name of the corresponding user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

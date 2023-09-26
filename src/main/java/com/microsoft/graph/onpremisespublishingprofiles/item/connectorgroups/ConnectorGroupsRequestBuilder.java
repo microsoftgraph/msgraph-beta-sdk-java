@@ -60,7 +60,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of connectorGroup objects.
-     * @return a CompletableFuture of connectorGroupCollectionResponse
+     * @return a CompletableFuture of ConnectorGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of connectorGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectorGroupCollectionResponse
+     * @return a CompletableFuture of ConnectorGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,21 +82,21 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConnectorGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
-     * @return a CompletableFuture of connectorGroup
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ConnectorGroup
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorGroup> post(@jakarta.annotation.Nonnull final ConnectorGroup body) {
         return post(body, null);
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectorGroup
-     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ConnectorGroup
+     * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorGroup> post(@jakarta.annotation.Nonnull final ConnectorGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -137,7 +137,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new connectorGroup.
+     * Create a connectorGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class ConnectorGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectorGroupsRequestBuilder
+     * @return a ConnectorGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectorGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

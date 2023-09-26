@@ -128,19 +128,19 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
-     * @return a CompletableFuture of list
-     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0">Find more info here</a>
+     * Return the metadata for a [list][].
+     * @return a CompletableFuture of List
+     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get() {
         return get(null);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of list
-     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of List
+     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property lists in sites
      * @param body The request body
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> patch(@jakarta.annotation.Nonnull final List body) {
@@ -163,7 +163,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property lists in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of list
+     * @return a CompletableFuture of List
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<List> patch(@jakarta.annotation.Nonnull final List body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -202,7 +202,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a [list][].
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -210,7 +210,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a [list][].
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -279,7 +279,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a [list][].
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

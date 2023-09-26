@@ -60,7 +60,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of all Microsoft Teams-enabled devices provisioned for a tenant.
-     * @return a CompletableFuture of teamworkDeviceCollectionResponse
+     * @return a CompletableFuture of TeamworkDeviceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevice-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of all Microsoft Teams-enabled devices provisioned for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceCollectionResponse
+     * @return a CompletableFuture of TeamworkDeviceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevice-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to devices for teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamworkDevice
+     * @return a CompletableFuture of TeamworkDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDevice> post(@jakarta.annotation.Nonnull final TeamworkDevice body) {
@@ -94,7 +94,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to devices for teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDevice
+     * @return a CompletableFuture of TeamworkDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDevice> post(@jakarta.annotation.Nonnull final TeamworkDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a devicesRequestBuilder
+     * @return a DevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

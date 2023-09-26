@@ -15,7 +15,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
      */
     private java.util.List<UnifiedRoleScheduleInstanceBase> value;
     /**
-     * Instantiates a new roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse and sets the default values.
+     * Instantiates a new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse and sets the default values.
      */
     public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse() {
         super();
@@ -23,7 +23,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse
+     * @return a RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse
      */
     @jakarta.annotation.Nonnull
     public static RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
     }
     /**
      * Gets the value property value. The value property
-     * @return a unifiedRoleScheduleInstanceBase
+     * @return a java.util.List<UnifiedRoleScheduleInstanceBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleScheduleInstanceBase> getValue() {

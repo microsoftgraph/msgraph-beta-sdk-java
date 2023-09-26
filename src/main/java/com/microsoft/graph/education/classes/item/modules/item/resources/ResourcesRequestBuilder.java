@@ -60,7 +60,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a CompletableFuture of educationModuleResourceCollectionResponse
+     * @return a CompletableFuture of EducationModuleResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get all the educationModuleResource objects associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModuleResourceCollectionResponse
+     * @return a CompletableFuture of EducationModuleResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-list-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created. 
      * @param body The request body
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-post-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Create a resource in a module. Only teachers can perform this operation. You can create the following types of module resources: Every resource has an @odata.type property to indicate which type of resource is being created. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-post-resources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourcesRequestBuilder
+     * @return a ResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

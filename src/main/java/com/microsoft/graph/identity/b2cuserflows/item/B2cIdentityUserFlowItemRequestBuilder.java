@@ -91,7 +91,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a b2cUserFlow object.
-     * @return a CompletableFuture of b2cIdentityUserFlow
+     * @return a CompletableFuture of B2cIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a b2cUserFlow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of b2cIdentityUserFlow
+     * @return a CompletableFuture of B2cIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a b2cIdentityUserFlow object.
      * @param body The request body
-     * @return a CompletableFuture of b2cIdentityUserFlow
+     * @return a CompletableFuture of B2cIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class B2cIdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a b2cIdentityUserFlow object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of b2cIdentityUserFlow
+     * @return a CompletableFuture of B2cIdentityUserFlow
      * @see <a href="https://learn.microsoft.com/graph/api/b2cidentityuserflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

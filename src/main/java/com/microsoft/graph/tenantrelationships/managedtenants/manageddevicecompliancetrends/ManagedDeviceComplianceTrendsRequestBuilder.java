@@ -60,7 +60,7 @@ public class ManagedDeviceComplianceTrendsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get a list of the managedDeviceComplianceTrend objects and their properties.
-     * @return a CompletableFuture of managedDeviceComplianceTrendCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceComplianceTrendCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-manageddevicecompliancetrends?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ManagedDeviceComplianceTrendsRequestBuilder extends BaseRequestBuil
     /**
      * Get a list of the managedDeviceComplianceTrend objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceComplianceTrendCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceComplianceTrendCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-manageddevicecompliancetrends?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ManagedDeviceComplianceTrendsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to managedDeviceComplianceTrends for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceComplianceTrend
+     * @return a CompletableFuture of ManagedDeviceComplianceTrend
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceComplianceTrend> post(@jakarta.annotation.Nonnull final ManagedDeviceComplianceTrend body) {
@@ -94,7 +94,7 @@ public class ManagedDeviceComplianceTrendsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to managedDeviceComplianceTrends for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceComplianceTrend
+     * @return a CompletableFuture of ManagedDeviceComplianceTrend
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceComplianceTrend> post(@jakarta.annotation.Nonnull final ManagedDeviceComplianceTrend body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ManagedDeviceComplianceTrendsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedDeviceComplianceTrendsRequestBuilder
+     * @return a ManagedDeviceComplianceTrendsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceComplianceTrendsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

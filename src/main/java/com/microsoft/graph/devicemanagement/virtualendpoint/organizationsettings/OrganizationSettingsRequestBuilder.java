@@ -57,7 +57,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
-     * @return a CompletableFuture of cloudPcOrganizationSettings
+     * @return a CompletableFuture of CloudPcOrganizationSettings
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of the cloudPcOrganizationSettings from the current tenant. A tenant has only one cloudPcOrganizationSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcOrganizationSettings
+     * @return a CompletableFuture of CloudPcOrganizationSettings
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the cloudPcOrganizationSettings object in a tenant.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcOrganizationSettings
+     * @return a CompletableFuture of CloudPcOrganizationSettings
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the cloudPcOrganizationSettings object in a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcOrganizationSettings
+     * @return a CompletableFuture of CloudPcOrganizationSettings
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcorganizationsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class OrganizationSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a organizationSettingsRequestBuilder
+     * @return a OrganizationSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OrganizationSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

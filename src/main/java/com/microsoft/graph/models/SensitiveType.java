@@ -46,7 +46,7 @@ public class SensitiveType extends Entity implements Parsable {
      */
     private String state;
     /**
-     * Instantiates a new sensitiveType and sets the default values.
+     * Instantiates a new SensitiveType and sets the default values.
      */
     public SensitiveType() {
         super();
@@ -54,7 +54,7 @@ public class SensitiveType extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitiveType
+     * @return a SensitiveType
      */
     @jakarta.annotation.Nonnull
     public static SensitiveType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the classificationMethod property value. The classificationMethod property
-     * @return a classificationMethod
+     * @return a ClassificationMethod
      */
     @jakarta.annotation.Nullable
     public ClassificationMethod getClassificationMethod() {
@@ -71,7 +71,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -97,7 +97,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -105,7 +105,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the publisherName property value. The publisherName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
@@ -113,7 +113,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the rulePackageId property value. The rulePackageId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRulePackageId() {
@@ -121,7 +121,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the rulePackageType property value. The rulePackageType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRulePackageType() {
@@ -129,7 +129,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a sensitiveTypeScope
+     * @return a EnumSet<SensitiveTypeScope>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitiveTypeScope> getScope() {
@@ -137,7 +137,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
-     * @return a sensitiveTypeSource
+     * @return a SensitiveTypeSource
      */
     @jakarta.annotation.Nullable
     public SensitiveTypeSource getSensitiveTypeSource() {
@@ -145,7 +145,7 @@ public class SensitiveType extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {

@@ -65,7 +65,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a plannerPlanConfiguration object.
-     * @return a CompletableFuture of plannerPlanConfiguration
+     * @return a CompletableFuture of PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a plannerPlanConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanConfiguration
+     * @return a CompletableFuture of PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
-     * @return a CompletableFuture of plannerPlanConfiguration
+     * @return a CompletableFuture of PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanConfiguration
+     * @return a CompletableFuture of PlannerPlanConfiguration
      * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a planConfigurationRequestBuilder
+     * @return a PlanConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PlanConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

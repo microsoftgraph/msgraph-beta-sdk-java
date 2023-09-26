@@ -57,7 +57,7 @@ public class TenantGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a tenantGroup object.
-     * @return a CompletableFuture of tenantGroup
+     * @return a CompletableFuture of TenantGroup
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TenantGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a tenantGroup object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantGroup
+     * @return a CompletableFuture of TenantGroup
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TenantGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tenantGroups in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of tenantGroup
+     * @return a CompletableFuture of TenantGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantGroup> patch(@jakarta.annotation.Nonnull final TenantGroup body) {
@@ -91,7 +91,7 @@ public class TenantGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tenantGroups in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantGroup
+     * @return a CompletableFuture of TenantGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantGroup> patch(@jakarta.annotation.Nonnull final TenantGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

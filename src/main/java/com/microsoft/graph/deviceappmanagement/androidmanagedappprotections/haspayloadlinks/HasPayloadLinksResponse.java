@@ -15,7 +15,7 @@ public class HasPayloadLinksResponse extends BaseCollectionPaginationCountRespon
      */
     private java.util.List<HasPayloadLinkResultItem> value;
     /**
-     * Instantiates a new hasPayloadLinksResponse and sets the default values.
+     * Instantiates a new HasPayloadLinksResponse and sets the default values.
      */
     public HasPayloadLinksResponse() {
         super();
@@ -23,7 +23,7 @@ public class HasPayloadLinksResponse extends BaseCollectionPaginationCountRespon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hasPayloadLinksResponse
+     * @return a HasPayloadLinksResponse
      */
     @jakarta.annotation.Nonnull
     public static HasPayloadLinksResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class HasPayloadLinksResponse extends BaseCollectionPaginationCountRespon
     }
     /**
      * Gets the value property value. The value property
-     * @return a hasPayloadLinkResultItem
+     * @return a java.util.List<HasPayloadLinkResultItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HasPayloadLinkResultItem> getValue() {

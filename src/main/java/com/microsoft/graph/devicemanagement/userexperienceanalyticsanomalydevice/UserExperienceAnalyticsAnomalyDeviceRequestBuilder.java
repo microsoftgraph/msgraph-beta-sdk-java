@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsAnomalyDeviceRequestBuilder extends BaseRequ
     }
     /**
      * The user experience analytics anomaly entity contains device details.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDeviceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDeviceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsAnomalyDeviceRequestBuilder extends BaseRequ
     /**
      * The user experience analytics anomaly entity contains device details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDeviceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsAnomalyDeviceRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to userExperienceAnalyticsAnomalyDevice for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyDevice body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsAnomalyDeviceRequestBuilder extends BaseRequ
      * Create new navigation property to userExperienceAnalyticsAnomalyDevice for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDevice> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsAnomalyDeviceRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsAnomalyDeviceRequestBuilder
+     * @return a UserExperienceAnalyticsAnomalyDeviceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsAnomalyDeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

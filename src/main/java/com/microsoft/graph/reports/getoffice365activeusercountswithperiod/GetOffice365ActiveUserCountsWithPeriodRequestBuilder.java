@@ -39,7 +39,7 @@ public class GetOffice365ActiveUserCountsWithPeriodRequestBuilder extends BaseRe
     }
     /**
      * Invoke function getOffice365ActiveUserCounts
-     * @return a CompletableFuture of getOffice365ActiveUserCountsWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365ActiveUserCountsWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOffice365ActiveUserCountsWithPeriodResponse> get() {
@@ -48,7 +48,7 @@ public class GetOffice365ActiveUserCountsWithPeriodRequestBuilder extends BaseRe
     /**
      * Invoke function getOffice365ActiveUserCounts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getOffice365ActiveUserCountsWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365ActiveUserCountsWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOffice365ActiveUserCountsWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetOffice365ActiveUserCountsWithPeriodRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365ActiveUserCountsWithPeriodRequestBuilder
+     * @return a GetOffice365ActiveUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ActiveUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

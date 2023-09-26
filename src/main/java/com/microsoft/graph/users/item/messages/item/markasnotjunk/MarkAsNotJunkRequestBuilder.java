@@ -38,7 +38,7 @@ public class MarkAsNotJunkRequestBuilder extends BaseRequestBuilder {
     /**
      * Mark a message as not junk. This API removes the sender from the list of blocked senders and moves the message to the Inbox folder, when moveToInbox is true.
      * @param body The request body
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-markasnotjunk?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class MarkAsNotJunkRequestBuilder extends BaseRequestBuilder {
      * Mark a message as not junk. This API removes the sender from the list of blocked senders and moves the message to the Inbox folder, when moveToInbox is true.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      * @see <a href="https://learn.microsoft.com/graph/api/message-markasnotjunk?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class MarkAsNotJunkRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a markAsNotJunkRequestBuilder
+     * @return a MarkAsNotJunkRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MarkAsNotJunkRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

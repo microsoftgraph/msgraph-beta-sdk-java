@@ -57,7 +57,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get languageDetails from security
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> get() {
@@ -66,7 +66,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get languageDetails from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property languageDetails in security
      * @param body The request body
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> patch(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
@@ -89,7 +89,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property languageDetails in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> patch(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

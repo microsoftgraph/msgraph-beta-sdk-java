@@ -61,7 +61,7 @@ public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get paymentTerms from financials
-     * @return a CompletableFuture of paymentTermCollectionResponse
+     * @return a CompletableFuture of PaymentTermCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTermCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get paymentTerms from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of paymentTermCollectionResponse
+     * @return a CompletableFuture of PaymentTermCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTermCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to paymentTerms for financials
      * @param body The request body
-     * @return a CompletableFuture of paymentTerm
+     * @return a CompletableFuture of PaymentTerm
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTerm> post(@jakarta.annotation.Nonnull final PaymentTerm body) {
@@ -93,7 +93,7 @@ public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to paymentTerms for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of paymentTerm
+     * @return a CompletableFuture of PaymentTerm
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTerm> post(@jakarta.annotation.Nonnull final PaymentTerm body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class PaymentTermsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a paymentTermsRequestBuilder
+     * @return a PaymentTermsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PaymentTermsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

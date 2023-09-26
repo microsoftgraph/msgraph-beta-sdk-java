@@ -161,7 +161,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The RbacApplication for Entitlement Management
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get() {
@@ -170,7 +170,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * The RbacApplication for Entitlement Management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -183,7 +183,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -193,7 +193,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -295,7 +295,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a entitlementManagementRequestBuilder
+     * @return a EntitlementManagementRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

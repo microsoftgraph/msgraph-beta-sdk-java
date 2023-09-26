@@ -67,7 +67,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get groups from external
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> get() {
@@ -76,7 +76,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get groups from external
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property groups in external
      * @param body The request body
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> patch(@jakarta.annotation.Nonnull final ExternalGroup body) {
@@ -99,7 +99,7 @@ public class ExternalGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property groups in external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroup> patch(@jakarta.annotation.Nonnull final ExternalGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

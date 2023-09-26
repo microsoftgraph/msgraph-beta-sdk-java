@@ -90,7 +90,7 @@ public class AssignResourceAccountToDeviceRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignResourceAccountToDeviceRequestBuilder
+     * @return a AssignResourceAccountToDeviceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignResourceAccountToDeviceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

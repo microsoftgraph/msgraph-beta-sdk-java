@@ -39,7 +39,7 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder extends BaseRequestBuild
     }
     /**
      * Invoke function getRoleScopeTagsByIds
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     * @return a CompletableFuture of GetRoleScopeTagsByIdsWithIdsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get() {
@@ -48,7 +48,7 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder extends BaseRequestBuild
     /**
      * Invoke function getRoleScopeTagsByIds
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     * @return a CompletableFuture of GetRoleScopeTagsByIdsWithIdsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRoleScopeTagsByIdsWithIdsRequestBuilder
+     * @return a GetRoleScopeTagsByIdsWithIdsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRoleScopeTagsByIdsWithIdsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

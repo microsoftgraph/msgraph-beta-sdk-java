@@ -37,7 +37,7 @@ public class RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPr
     }
     /**
      * Invoke function roleSchedules
-     * @return a CompletableFuture of roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse
+     * @return a CompletableFuture of RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse> get() {
@@ -46,7 +46,7 @@ public class RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPr
     /**
      * Invoke function roleSchedules
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse
+     * @return a CompletableFuture of RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPr
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder
+     * @return a RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

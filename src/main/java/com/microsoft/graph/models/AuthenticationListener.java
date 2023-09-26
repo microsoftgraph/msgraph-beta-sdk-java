@@ -17,7 +17,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      */
     private AuthenticationSourceFilter sourceFilter;
     /**
-     * Instantiates a new authenticationListener and sets the default values.
+     * Instantiates a new AuthenticationListener and sets the default values.
      */
     public AuthenticationListener() {
         super();
@@ -25,7 +25,7 @@ public class AuthenticationListener extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationListener
+     * @return a AuthenticationListener
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class AuthenticationListener extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -60,7 +60,7 @@ public class AuthenticationListener extends Entity implements Parsable {
     }
     /**
      * Gets the sourceFilter property value. Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
-     * @return a authenticationSourceFilter
+     * @return a AuthenticationSourceFilter
      */
     @jakarta.annotation.Nullable
     public AuthenticationSourceFilter getSourceFilter() {

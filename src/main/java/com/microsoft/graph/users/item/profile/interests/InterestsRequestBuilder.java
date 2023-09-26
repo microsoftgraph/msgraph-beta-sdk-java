@@ -60,7 +60,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of personInterest objects from a user's profile.
-     * @return a CompletableFuture of personInterestCollectionResponse
+     * @return a CompletableFuture of PersonInterestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-interests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personInterest objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personInterestCollectionResponse
+     * @return a CompletableFuture of PersonInterestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-interests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new personInterest.
      * @param body The request body
-     * @return a CompletableFuture of personInterest
+     * @return a CompletableFuture of PersonInterest
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-interests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
      * Create a new personInterest.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personInterest
+     * @return a CompletableFuture of PersonInterest
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-interests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class InterestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a interestsRequestBuilder
+     * @return a InterestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InterestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

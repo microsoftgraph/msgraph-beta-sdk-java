@@ -15,7 +15,7 @@ public class GetPortalNotificationsResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<PortalNotification> value;
     /**
-     * Instantiates a new getPortalNotificationsResponse and sets the default values.
+     * Instantiates a new GetPortalNotificationsResponse and sets the default values.
      */
     public GetPortalNotificationsResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetPortalNotificationsResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getPortalNotificationsResponse
+     * @return a GetPortalNotificationsResponse
      */
     @jakarta.annotation.Nonnull
     public static GetPortalNotificationsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetPortalNotificationsResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a portalNotification
+     * @return a java.util.List<PortalNotification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PortalNotification> getValue() {

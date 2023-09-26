@@ -57,7 +57,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get secureScoreControlProfiles from security
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> get() {
@@ -66,7 +66,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     /**
      * Get secureScoreControlProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecureScoreControlProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
     /**
      * Update an editable secureScoreControlProfiles property within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofiles-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class SecureScoreControlProfileItemRequestBuilder extends BaseRequestBuil
      * Update an editable secureScoreControlProfiles property within any integrated solution to change various properties, such as assignedTo or tenantNote.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of secureScoreControlProfile
+     * @return a CompletableFuture of SecureScoreControlProfile
      * @see <a href="https://learn.microsoft.com/graph/api/securescorecontrolprofiles-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

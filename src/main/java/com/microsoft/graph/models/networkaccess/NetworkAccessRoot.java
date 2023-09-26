@@ -38,7 +38,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      */
     private TenantStatus tenantStatus;
     /**
-     * Instantiates a new networkAccessRoot and sets the default values.
+     * Instantiates a new NetworkAccessRoot and sets the default values.
      */
     public NetworkAccessRoot() {
         super();
@@ -46,7 +46,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkAccessRoot
+     * @return a NetworkAccessRoot
      */
     @jakarta.annotation.Nonnull
     public static NetworkAccessRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.
-     * @return a connectivity
+     * @return a Connectivity
      */
     @jakarta.annotation.Nullable
     public Connectivity getConnectivity() {
@@ -79,7 +79,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
-     * @return a forwardingPolicy
+     * @return a java.util.List<ForwardingPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingPolicy> getForwardingPolicies() {
@@ -87,7 +87,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingProfiles property value. A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
-     * @return a forwardingProfile
+     * @return a java.util.List<ForwardingProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingProfile> getForwardingProfiles() {
@@ -95,7 +95,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the logs property value. Represnts network connections that are routed through Global Secure Access.
-     * @return a logs
+     * @return a Logs
      */
     @jakarta.annotation.Nullable
     public Logs getLogs() {
@@ -103,7 +103,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the reports property value. Represents the status of the Global Secure Access services for the tenant.
-     * @return a reports
+     * @return a Reports
      */
     @jakarta.annotation.Nullable
     public Reports getReports() {
@@ -111,7 +111,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. Global Secure Access settings.
-     * @return a settings
+     * @return a Settings
      */
     @jakarta.annotation.Nullable
     public Settings getSettings() {
@@ -119,7 +119,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the tenantStatus property value. Represents the status of the Global Secure Access services for the tenant.
-     * @return a tenantStatus
+     * @return a TenantStatus
      */
     @jakarta.annotation.Nullable
     public TenantStatus getTenantStatus() {

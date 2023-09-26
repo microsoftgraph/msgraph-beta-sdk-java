@@ -60,7 +60,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
-     * @return a CompletableFuture of authenticationEventsFlowCollectionResponse
+     * @return a CompletableFuture of AuthenticationEventsFlowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get a collection of authentication events policies that are derived from authenticationEventsFlow. Only the externalUsersSelfServiceSignupEventsFlow object type is returned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationEventsFlowCollectionResponse
+     * @return a CompletableFuture of AuthenticationEventsFlowCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
     /**
      * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
-     * @return a CompletableFuture of authenticationEventsFlow
+     * @return a CompletableFuture of AuthenticationEventsFlow
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
      * Create a new authenticationEventsFlow object that is of the type specified in the request body. You can create only an externalUsersSelfServiceSignupEventsFlow object type.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationEventsFlow
+     * @return a CompletableFuture of AuthenticationEventsFlow
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventsflows?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AuthenticationEventsFlowsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationEventsFlowsRequestBuilder
+     * @return a AuthenticationEventsFlowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationEventsFlowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

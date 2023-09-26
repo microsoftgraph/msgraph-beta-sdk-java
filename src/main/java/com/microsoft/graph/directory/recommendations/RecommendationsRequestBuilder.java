@@ -60,7 +60,7 @@ public class RecommendationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the recommendation objects and their properties.
-     * @return a CompletableFuture of recommendationCollectionResponse
+     * @return a CompletableFuture of RecommendationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-recommendation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RecommendationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the recommendation objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recommendationCollectionResponse
+     * @return a CompletableFuture of RecommendationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-recommendation?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RecommendationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to recommendations for directory
      * @param body The request body
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post(@jakarta.annotation.Nonnull final Recommendation body) {
@@ -94,7 +94,7 @@ public class RecommendationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to recommendations for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Recommendation> post(@jakarta.annotation.Nonnull final Recommendation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class RecommendationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a recommendationsRequestBuilder
+     * @return a RecommendationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RecommendationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

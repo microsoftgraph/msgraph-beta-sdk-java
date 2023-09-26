@@ -65,7 +65,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     }
     /**
      * The list of Exchange Connectors configured by the tenant.
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * The list of Exchange Connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property exchangeConnectors in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) {
@@ -97,7 +97,7 @@ public class DeviceManagementExchangeConnectorItemRequestBuilder extends BaseReq
      * Update the navigation property exchangeConnectors in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> patch(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

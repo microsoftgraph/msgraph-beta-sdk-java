@@ -60,7 +60,7 @@ public class CloudPcConnectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the cloudPcConnection objects and their properties.
-     * @return a CompletableFuture of cloudPcConnectionCollectionResponse
+     * @return a CompletableFuture of CloudPcConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CloudPcConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcConnection objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcConnectionCollectionResponse
+     * @return a CompletableFuture of CloudPcConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-cloudpcconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CloudPcConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to cloudPcConnections for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of cloudPcConnection
+     * @return a CompletableFuture of CloudPcConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcConnection> post(@jakarta.annotation.Nonnull final CloudPcConnection body) {
@@ -94,7 +94,7 @@ public class CloudPcConnectionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cloudPcConnections for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcConnection
+     * @return a CompletableFuture of CloudPcConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcConnection> post(@jakarta.annotation.Nonnull final CloudPcConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class CloudPcConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cloudPcConnectionsRequestBuilder
+     * @return a CloudPcConnectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CloudPcConnectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

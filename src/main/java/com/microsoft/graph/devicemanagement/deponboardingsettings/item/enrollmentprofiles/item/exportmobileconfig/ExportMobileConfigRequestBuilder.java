@@ -36,7 +36,7 @@ public class ExportMobileConfigRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Exports the mobile configuration
-     * @return a CompletableFuture of exportMobileConfigResponse
+     * @return a CompletableFuture of ExportMobileConfigResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExportMobileConfigResponse> get() {
@@ -45,7 +45,7 @@ public class ExportMobileConfigRequestBuilder extends BaseRequestBuilder {
     /**
      * Exports the mobile configuration
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exportMobileConfigResponse
+     * @return a CompletableFuture of ExportMobileConfigResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExportMobileConfigResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class ExportMobileConfigRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exportMobileConfigRequestBuilder
+     * @return a ExportMobileConfigRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExportMobileConfigRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

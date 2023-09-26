@@ -57,7 +57,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
-     * @return a CompletableFuture of externalIdentitiesPolicy
+     * @return a CompletableFuture of ExternalIdentitiesPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalIdentitiesPolicy
+     * @return a CompletableFuture of ExternalIdentitiesPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the settings of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param body The request body
-     * @return a CompletableFuture of externalIdentitiesPolicy
+     * @return a CompletableFuture of ExternalIdentitiesPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the settings of the tenant-wide externalIdentitiesPolicy object that controls whether external users can leave an Azure AD tenant via self-service controls.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalIdentitiesPolicy
+     * @return a CompletableFuture of ExternalIdentitiesPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/externalidentitiespolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ExternalIdentitiesPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a externalIdentitiesPolicyRequestBuilder
+     * @return a ExternalIdentitiesPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExternalIdentitiesPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

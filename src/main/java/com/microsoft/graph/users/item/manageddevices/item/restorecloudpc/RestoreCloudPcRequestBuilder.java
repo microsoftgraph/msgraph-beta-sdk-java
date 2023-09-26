@@ -104,7 +104,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a restoreCloudPcRequestBuilder
+     * @return a RestoreCloudPcRequestBuilder
      * @deprecated
      * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
      */

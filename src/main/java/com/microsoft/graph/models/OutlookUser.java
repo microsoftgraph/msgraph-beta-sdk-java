@@ -25,7 +25,7 @@ public class OutlookUser extends Entity implements Parsable {
      */
     private java.util.List<OutlookTask> tasks;
     /**
-     * Instantiates a new outlookUser and sets the default values.
+     * Instantiates a new OutlookUser and sets the default values.
      */
     public OutlookUser() {
         super();
@@ -33,7 +33,7 @@ public class OutlookUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookUser
+     * @return a OutlookUser
      */
     @jakarta.annotation.Nonnull
     public static OutlookUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class OutlookUser extends Entity implements Parsable {
     }
     /**
      * Gets the masterCategories property value. A list of categories defined for the user.
-     * @return a outlookCategory
+     * @return a java.util.List<OutlookCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookCategory> getMasterCategories() {
@@ -63,7 +63,7 @@ public class OutlookUser extends Entity implements Parsable {
     }
     /**
      * Gets the taskFolders property value. The taskFolders property
-     * @return a outlookTaskFolder
+     * @return a java.util.List<OutlookTaskFolder>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTaskFolder> getTaskFolders() {
@@ -71,7 +71,7 @@ public class OutlookUser extends Entity implements Parsable {
     }
     /**
      * Gets the taskGroups property value. The taskGroups property
-     * @return a outlookTaskGroup
+     * @return a java.util.List<OutlookTaskGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTaskGroup> getTaskGroups() {
@@ -79,7 +79,7 @@ public class OutlookUser extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. The tasks property
-     * @return a outlookTask
+     * @return a java.util.List<OutlookTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTask> getTasks() {

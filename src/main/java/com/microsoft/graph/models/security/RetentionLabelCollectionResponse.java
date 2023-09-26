@@ -14,7 +14,7 @@ public class RetentionLabelCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<RetentionLabel> value;
     /**
-     * Instantiates a new retentionLabelCollectionResponse and sets the default values.
+     * Instantiates a new RetentionLabelCollectionResponse and sets the default values.
      */
     public RetentionLabelCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class RetentionLabelCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a retentionLabelCollectionResponse
+     * @return a RetentionLabelCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RetentionLabelCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class RetentionLabelCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a retentionLabel
+     * @return a java.util.List<RetentionLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RetentionLabel> getValue() {

@@ -60,7 +60,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get transitiveRoleAssignments from roleManagement
-     * @return a CompletableFuture of unifiedRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-transitiveroleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get transitiveRoleAssignments from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-transitiveroleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to transitiveRoleAssignments for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignment
+     * @return a CompletableFuture of UnifiedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> post(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body) {
@@ -94,7 +94,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to transitiveRoleAssignments for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignment
+     * @return a CompletableFuture of UnifiedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleAssignment> post(@jakarta.annotation.Nonnull final UnifiedRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a transitiveRoleAssignmentsRequestBuilder
+     * @return a TransitiveRoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TransitiveRoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

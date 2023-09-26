@@ -57,7 +57,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get enrichedAuditLogs from networkAccess
-     * @return a CompletableFuture of enrichedAuditLogs
+     * @return a CompletableFuture of EnrichedAuditLogs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrichedAuditLogs> get() {
@@ -66,7 +66,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get enrichedAuditLogs from networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrichedAuditLogs
+     * @return a CompletableFuture of EnrichedAuditLogs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrichedAuditLogs> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the settings for the enriched audit logs workloads to control the enrichment feature for each partner workload, such as SharePoint, Teams, and Exchange.
      * @param body The request body
-     * @return a CompletableFuture of enrichedAuditLogs
+     * @return a CompletableFuture of EnrichedAuditLogs
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-enrichedauditlogs-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
      * Update the settings for the enriched audit logs workloads to control the enrichment feature for each partner workload, such as SharePoint, Teams, and Exchange.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrichedAuditLogs
+     * @return a CompletableFuture of EnrichedAuditLogs
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-enrichedauditlogs-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -193,7 +193,7 @@ public class EnrichedAuditLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a enrichedAuditLogsRequestBuilder
+     * @return a EnrichedAuditLogsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EnrichedAuditLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -68,7 +68,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the unifiedRoleManagementAlert objects and their properties.
-     * @return a CompletableFuture of unifiedRoleManagementAlertCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementAlertCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alerts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleManagementAlertCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alerts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to alerts for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementAlert
+     * @return a CompletableFuture of UnifiedRoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlert> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlert body) {
@@ -102,7 +102,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to alerts for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlert
+     * @return a CompletableFuture of UnifiedRoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlert> post(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -177,7 +177,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertsRequestBuilder
+     * @return a AlertsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

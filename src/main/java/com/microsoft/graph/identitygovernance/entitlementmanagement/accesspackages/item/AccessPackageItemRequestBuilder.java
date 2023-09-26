@@ -123,7 +123,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an accessPackage object.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an accessPackage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class AccessPackageItemRequestBuilder extends BaseRequestBuilder {
      * Update an existing accessPackage object to change one or more of its properties, such as the display name or description.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

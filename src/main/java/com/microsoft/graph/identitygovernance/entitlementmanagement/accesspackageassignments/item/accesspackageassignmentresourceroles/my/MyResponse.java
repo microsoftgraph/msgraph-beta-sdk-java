@@ -42,7 +42,7 @@ public class MyResponse extends BaseCollectionPaginationCountResponse implements
     }
     /**
      * Gets the value property value. The value property
-     * @return a accessPackageAssignmentResourceRole
+     * @return a java.util.List<AccessPackageAssignmentResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentResourceRole> getValue() {

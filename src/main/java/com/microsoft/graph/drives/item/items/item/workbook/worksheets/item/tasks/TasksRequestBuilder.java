@@ -61,7 +61,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of document tasks on this worksheet. Read-only.
-     * @return a CompletableFuture of workbookDocumentTaskCollectionResponse
+     * @return a CompletableFuture of WorkbookDocumentTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of document tasks on this worksheet. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskCollectionResponse
+     * @return a CompletableFuture of WorkbookDocumentTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -93,7 +93,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to tasks for drives
      * @param body The request body
-     * @return a CompletableFuture of workbookDocumentTask
+     * @return a CompletableFuture of WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTask> post(@jakarta.annotation.Nonnull final WorkbookDocumentTask body) {
@@ -103,7 +103,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tasks for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTask
+     * @return a CompletableFuture of WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTask> post(@jakarta.annotation.Nonnull final WorkbookDocumentTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class TasksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tasksRequestBuilder
+     * @return a TasksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

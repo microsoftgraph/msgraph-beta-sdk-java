@@ -60,7 +60,7 @@ public class DirectoryProvisioningRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get directoryProvisioning from auditLogs
-     * @return a CompletableFuture of provisioningObjectSummaryCollectionResponse
+     * @return a CompletableFuture of ProvisioningObjectSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummaryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DirectoryProvisioningRequestBuilder extends BaseRequestBuilder {
     /**
      * Get directoryProvisioning from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisioningObjectSummaryCollectionResponse
+     * @return a CompletableFuture of ProvisioningObjectSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DirectoryProvisioningRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to directoryProvisioning for auditLogs
      * @param body The request body
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> post(@jakarta.annotation.Nonnull final ProvisioningObjectSummary body) {
@@ -92,7 +92,7 @@ public class DirectoryProvisioningRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to directoryProvisioning for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of provisioningObjectSummary
+     * @return a CompletableFuture of ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProvisioningObjectSummary> post(@jakarta.annotation.Nonnull final ProvisioningObjectSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DirectoryProvisioningRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directoryProvisioningRequestBuilder
+     * @return a DirectoryProvisioningRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryProvisioningRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

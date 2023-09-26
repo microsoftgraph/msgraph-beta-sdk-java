@@ -73,7 +73,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
     }
     /**
      * Read the properties of an inboundSharedUserProfile.
-     * @return a CompletableFuture of inboundSharedUserProfile
+     * @return a CompletableFuture of InboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
     /**
      * Read the properties of an inboundSharedUserProfile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundSharedUserProfile
+     * @return a CompletableFuture of InboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property inboundSharedUserProfiles in directory
      * @param body The request body
-     * @return a CompletableFuture of inboundSharedUserProfile
+     * @return a CompletableFuture of InboundSharedUserProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundSharedUserProfile> patch(@jakarta.annotation.Nonnull final InboundSharedUserProfile body) {
@@ -107,7 +107,7 @@ public class InboundSharedUserProfileUserItemRequestBuilder extends BaseRequestB
      * Update the navigation property inboundSharedUserProfiles in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundSharedUserProfile
+     * @return a CompletableFuture of InboundSharedUserProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundSharedUserProfile> patch(@jakarta.annotation.Nonnull final InboundSharedUserProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

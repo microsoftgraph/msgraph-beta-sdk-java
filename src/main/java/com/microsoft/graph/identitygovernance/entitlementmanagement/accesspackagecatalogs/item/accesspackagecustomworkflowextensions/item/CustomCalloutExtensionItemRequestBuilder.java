@@ -63,7 +63,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Read the properties and relationships of an accessPackageAssignmentWorkflowExtension object.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-get?view=graph-rest-1.0">Find more info here</a>
@@ -76,7 +76,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Read the properties and relationships of an accessPackageAssignmentWorkflowExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-get?view=graph-rest-1.0">Find more info here</a>
@@ -91,12 +91,12 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, CustomCalloutExtension::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -104,13 +104,13 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return patch(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customCalloutExtension
+     * @return a CompletableFuture of CustomCalloutExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequestworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentworkflowextension-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -191,7 +191,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -203,7 +203,7 @@ public class CustomCalloutExtensionItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an accessPackageAssignmentRequestWorkflowExtension object.
+     * Update the properties of an accessPackageAssignmentWorkflowExtension object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

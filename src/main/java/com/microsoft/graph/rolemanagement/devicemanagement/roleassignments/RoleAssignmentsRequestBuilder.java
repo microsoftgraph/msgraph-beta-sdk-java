@@ -60,7 +60,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
-     * @return a CompletableFuture of unifiedRoleAssignmentMultipleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultipleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentMultipleCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultipleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new unifiedRoleAssignmentMultiple object for an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignmentMultiple
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultiple
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplicationmultiple-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create a new unifiedRoleAssignmentMultiple object for an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentMultiple
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultiple
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplicationmultiple-post-roleassignments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentsRequestBuilder
+     * @return a RoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

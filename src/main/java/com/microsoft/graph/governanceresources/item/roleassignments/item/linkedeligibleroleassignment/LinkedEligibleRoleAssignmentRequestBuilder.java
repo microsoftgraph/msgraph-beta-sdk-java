@@ -38,7 +38,7 @@ public class LinkedEligibleRoleAssignmentRequestBuilder extends BaseRequestBuild
     }
     /**
      * Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
-     * @return a CompletableFuture of governanceRoleAssignment
+     * @return a CompletableFuture of GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignment> get() {
@@ -47,7 +47,7 @@ public class LinkedEligibleRoleAssignmentRequestBuilder extends BaseRequestBuild
     /**
      * Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignment
+     * @return a CompletableFuture of GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class LinkedEligibleRoleAssignmentRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a linkedEligibleRoleAssignmentRequestBuilder
+     * @return a LinkedEligibleRoleAssignmentRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LinkedEligibleRoleAssignmentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

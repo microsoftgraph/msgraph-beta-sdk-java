@@ -75,7 +75,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Read the properties and relationships of the cloudPcOnPremisesConnection object.
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
     /**
      * Read the properties and relationships of the cloudPcOnPremisesConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
     /**
      * Update the properties of a cloudPcOnPremisesConnection object.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
      * Update the properties of a cloudPcOnPremisesConnection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

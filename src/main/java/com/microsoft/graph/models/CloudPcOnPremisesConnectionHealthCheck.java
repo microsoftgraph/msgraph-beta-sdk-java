@@ -51,7 +51,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      */
     private CloudPcOnPremisesConnectionStatus status;
     /**
-     * Instantiates a new cloudPcOnPremisesConnectionHealthCheck and sets the default values.
+     * Instantiates a new CloudPcOnPremisesConnectionHealthCheck and sets the default values.
      */
     public CloudPcOnPremisesConnectionHealthCheck() {
         this.setAdditionalData(new HashMap<>());
@@ -59,7 +59,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcOnPremisesConnectionHealthCheck
+     * @return a CloudPcOnPremisesConnectionHealthCheck
      */
     @jakarta.annotation.Nonnull
     public static CloudPcOnPremisesConnectionHealthCheck createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return new CloudPcOnPremisesConnectionHealthCheck();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the additionalDetails property value. Additional details about the health check or the recommended action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalDetails() {
@@ -84,7 +84,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the correlationId property value. The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -92,7 +92,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the displayName property value. The display name for this health check item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -108,7 +108,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the errorType property value. The type of error that occurred during this health check.
-     * @return a cloudPcOnPremisesConnectionHealthCheckErrorType
+     * @return a CloudPcOnPremisesConnectionHealthCheckErrorType
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionHealthCheckErrorType getErrorType() {
@@ -134,7 +134,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -142,7 +142,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
@@ -158,7 +158,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     }
     /**
      * Gets the status property value. The status property
-     * @return a cloudPcOnPremisesConnectionStatus
+     * @return a CloudPcOnPremisesConnectionStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatus getStatus() {
@@ -182,8 +182,8 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

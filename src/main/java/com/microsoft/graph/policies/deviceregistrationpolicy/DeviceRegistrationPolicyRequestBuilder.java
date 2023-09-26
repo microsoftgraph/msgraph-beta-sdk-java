@@ -38,7 +38,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
-     * @return a CompletableFuture of deviceRegistrationPolicy
+     * @return a CompletableFuture of DeviceRegistrationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceRegistrationPolicy
+     * @return a CompletableFuture of DeviceRegistrationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param body The request body
-     * @return a CompletableFuture of deviceRegistrationPolicy
+     * @return a CompletableFuture of DeviceRegistrationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a deviceRegistrationPolicy object. Represents deviceRegistrationPolicy quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceRegistrationPolicy
+     * @return a CompletableFuture of DeviceRegistrationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/deviceregistrationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -149,7 +149,7 @@ public class DeviceRegistrationPolicyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceRegistrationPolicyRequestBuilder
+     * @return a DeviceRegistrationPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceRegistrationPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

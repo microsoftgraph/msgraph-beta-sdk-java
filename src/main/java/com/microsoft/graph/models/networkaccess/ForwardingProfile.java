@@ -21,7 +21,7 @@ public class ForwardingProfile extends Profile implements Parsable {
      */
     private TrafficForwardingType trafficForwardingType;
     /**
-     * Instantiates a new forwardingProfile and sets the default values.
+     * Instantiates a new ForwardingProfile and sets the default values.
      */
     public ForwardingProfile() {
         super();
@@ -30,7 +30,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forwardingProfile
+     * @return a ForwardingProfile
      */
     @jakarta.annotation.Nonnull
     public static ForwardingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     }
     /**
      * Gets the associations property value. Specifies the users, groups, devices, and branch locations whose traffic is associated with the given traffic forwarding profile.
-     * @return a association
+     * @return a java.util.List<Association>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Association> getAssociations() {
@@ -59,7 +59,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     }
     /**
      * Gets the priority property value. Profile priority.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -67,7 +67,7 @@ public class ForwardingProfile extends Profile implements Parsable {
     }
     /**
      * Gets the trafficForwardingType property value. The trafficForwardingType property
-     * @return a trafficForwardingType
+     * @return a TrafficForwardingType
      */
     @jakarta.annotation.Nullable
     public TrafficForwardingType getTrafficForwardingType() {

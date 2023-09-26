@@ -201,7 +201,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a specific cloudPC object.
-     * @return a CompletableFuture of cloudPC
+     * @return a CompletableFuture of CloudPC
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -211,7 +211,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a specific cloudPC object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPC
+     * @return a CompletableFuture of CloudPC
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -225,7 +225,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property cloudPCs in users
      * @param body The request body
-     * @return a CompletableFuture of cloudPC
+     * @return a CompletableFuture of CloudPC
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPC> patch(@jakarta.annotation.Nonnull final CloudPC body) {
@@ -235,7 +235,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cloudPCs in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPC
+     * @return a CompletableFuture of CloudPC
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPC> patch(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -68,7 +68,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of user objects. These user objects will include education-specific properties.
-     * @return a CompletableFuture of educationUserCollectionResponse
+     * @return a CompletableFuture of EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationroot-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of user objects. These user objects will include education-specific properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationUserCollectionResponse
+     * @return a CompletableFuture of EducationUserCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationroot-list-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new user.
      * @param body The request body
-     * @return a CompletableFuture of educationUser
+     * @return a CompletableFuture of EducationUser
      * @see <a href="https://learn.microsoft.com/graph/api/educationroot-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
      * Create a new user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationUser
+     * @return a CompletableFuture of EducationUser
      * @see <a href="https://learn.microsoft.com/graph/api/educationroot-post-users?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usersRequestBuilder
+     * @return a UsersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -41,7 +41,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      */
     private Integer version;
     /**
-     * Instantiates a new deviceManagementResourceAccessProfileBase and sets the default values.
+     * Instantiates a new DeviceManagementResourceAccessProfileBase and sets the default values.
      */
     public DeviceManagementResourceAccessProfileBase() {
         super();
@@ -49,7 +49,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementResourceAccessProfileBase
+     * @return a DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,7 +69,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the assignments property value. The list of assignments for the device configuration profile.
-     * @return a deviceManagementResourceAccessProfileAssignment
+     * @return a java.util.List<DeviceManagementResourceAccessProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementResourceAccessProfileAssignment> getAssignments() {
@@ -85,7 +85,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the description property value. Profile description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -93,7 +93,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the displayName property value. Profile display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -125,7 +125,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the roleScopeTagIds property value. Scope Tags
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -133,7 +133,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     }
     /**
      * Gets the version property value. Version of the profile
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

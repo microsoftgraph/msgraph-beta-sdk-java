@@ -65,7 +65,7 @@ public class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The list of Device Management Partners configured by the tenant.
-     * @return a CompletableFuture of deviceManagementPartner
+     * @return a CompletableFuture of DeviceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartner> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilde
     /**
      * The list of Device Management Partners configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementPartner
+     * @return a CompletableFuture of DeviceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property deviceManagementPartners in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementPartner
+     * @return a CompletableFuture of DeviceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartner> patch(@jakarta.annotation.Nonnull final DeviceManagementPartner body) {
@@ -97,7 +97,7 @@ public class DeviceManagementPartnerItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property deviceManagementPartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementPartner
+     * @return a CompletableFuture of DeviceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementPartner> patch(@jakarta.annotation.Nonnull final DeviceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

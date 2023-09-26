@@ -142,7 +142,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of sourceCollection objects associated with this case.
-     * @return a CompletableFuture of sourceCollection
+     * @return a CompletableFuture of SourceCollection
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -154,7 +154,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a list of sourceCollection objects associated with this case.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sourceCollection
+     * @return a CompletableFuture of SourceCollection
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -170,7 +170,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a sourceCollection object.
      * @param body The request body
-     * @return a CompletableFuture of sourceCollection
+     * @return a CompletableFuture of SourceCollection
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-1.0">Find more info here</a>
@@ -184,7 +184,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a sourceCollection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sourceCollection
+     * @return a CompletableFuture of SourceCollection
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-1.0">Find more info here</a>

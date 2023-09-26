@@ -68,7 +68,7 @@ public class ResourceAccessProfilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of resource access settings associated with account.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBaseCollectionResponse
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBaseCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class ResourceAccessProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of resource access settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBaseCollectionResponse
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBaseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class ResourceAccessProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resourceAccessProfiles for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> post(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body) {
@@ -100,7 +100,7 @@ public class ResourceAccessProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resourceAccessProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> post(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class ResourceAccessProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceAccessProfilesRequestBuilder
+     * @return a ResourceAccessProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceAccessProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

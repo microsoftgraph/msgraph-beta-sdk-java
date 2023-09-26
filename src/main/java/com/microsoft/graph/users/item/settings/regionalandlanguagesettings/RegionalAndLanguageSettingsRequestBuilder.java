@@ -57,7 +57,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Retrieve the properties of a user's regionalAndLanguageSettings.
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     /**
      * Retrieve the properties of a user's regionalAndLanguageSettings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     /**
      * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
      * Update some or all of the properties of a regionalAndLanguageSettings object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a regionalAndLanguageSettingsRequestBuilder
+     * @return a RegionalAndLanguageSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegionalAndLanguageSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

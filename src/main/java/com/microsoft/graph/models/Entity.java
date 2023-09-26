@@ -10,9 +10,10 @@ import com.microsoft.graph.models.ediscovery.AddToReviewSetOperation;
 import com.microsoft.graph.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.models.ediscovery.CaseIndexOperation;
+import com.microsoft.graph.models.ediscovery.CaseOperation;
 import com.microsoft.graph.models.ediscovery.CaseSettings;
 import com.microsoft.graph.models.ediscovery.Custodian;
-import com.microsoft.graph.models.ediscovery.DataSource;
+import com.microsoft.graph.models.ediscovery.DataSourceContainer;
 import com.microsoft.graph.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.models.ediscovery.EstimateStatisticsOperation;
 import com.microsoft.graph.models.ediscovery.LegalHold;
@@ -20,9 +21,7 @@ import com.microsoft.graph.models.ediscovery.NoncustodialDataSource;
 import com.microsoft.graph.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.models.ediscovery.ReviewSet;
 import com.microsoft.graph.models.ediscovery.ReviewSetQuery;
-import com.microsoft.graph.models.ediscovery.SiteSource;
 import com.microsoft.graph.models.ediscovery.SourceCollection;
-import com.microsoft.graph.models.ediscovery.Tag;
 import com.microsoft.graph.models.ediscovery.TagOperation;
 import com.microsoft.graph.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.models.externalconnectors.ConnectionOperation;
@@ -133,12 +132,11 @@ import com.microsoft.graph.models.security.ArticleIndicator;
 import com.microsoft.graph.models.security.Artifact;
 import com.microsoft.graph.models.security.AuthorityTemplate;
 import com.microsoft.graph.models.security.CaseEscaped;
-import com.microsoft.graph.models.security.CaseOperation;
 import com.microsoft.graph.models.security.CasesRoot;
 import com.microsoft.graph.models.security.CategoryTemplate;
 import com.microsoft.graph.models.security.CitationTemplate;
 import com.microsoft.graph.models.security.DataSet;
-import com.microsoft.graph.models.security.DataSourceContainer;
+import com.microsoft.graph.models.security.DataSource;
 import com.microsoft.graph.models.security.DepartmentTemplate;
 import com.microsoft.graph.models.security.DetectionRule;
 import com.microsoft.graph.models.security.DispositionReviewStage;
@@ -196,9 +194,11 @@ import com.microsoft.graph.models.security.RetentionLabel;
 import com.microsoft.graph.models.security.Search;
 import com.microsoft.graph.models.security.Security;
 import com.microsoft.graph.models.security.SensitivityLabel;
+import com.microsoft.graph.models.security.SiteSource;
 import com.microsoft.graph.models.security.SslCertificate;
 import com.microsoft.graph.models.security.SubCategoryTemplate;
 import com.microsoft.graph.models.security.Subdomain;
+import com.microsoft.graph.models.security.Tag;
 import com.microsoft.graph.models.security.ThreatIntelligence;
 import com.microsoft.graph.models.security.ThreatSubmission;
 import com.microsoft.graph.models.security.ThreatSubmissionRoot;
@@ -257,7 +257,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new entity and sets the default values.
+     * Instantiates a new Entity and sets the default values.
      */
     public Entity() {
         this.setAdditionalData(new HashMap<>());
@@ -265,7 +265,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     public static Entity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -273,21 +273,21 @@ public class Entity implements AdditionalDataHolder, Parsable {
         final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
-            final Entity CreateFromDiscriminatorValue_0_result = createFromDiscriminatorValue_0(mappingValue);
-            if (CreateFromDiscriminatorValue_0_result != null) {
-                return CreateFromDiscriminatorValue_0_result;
+            final Entity createFromDiscriminatorValue_0_result = createFromDiscriminatorValue_0(mappingValue);
+            if (createFromDiscriminatorValue_0_result != null) {
+                return createFromDiscriminatorValue_0_result;
             }
-            final Entity CreateFromDiscriminatorValue_1_result = createFromDiscriminatorValue_1(mappingValue);
-            if (CreateFromDiscriminatorValue_1_result != null) {
-                return CreateFromDiscriminatorValue_1_result;
+            final Entity createFromDiscriminatorValue_1_result = createFromDiscriminatorValue_1(mappingValue);
+            if (createFromDiscriminatorValue_1_result != null) {
+                return createFromDiscriminatorValue_1_result;
             }
-            final Entity CreateFromDiscriminatorValue_2_result = createFromDiscriminatorValue_2(mappingValue);
-            if (CreateFromDiscriminatorValue_2_result != null) {
-                return CreateFromDiscriminatorValue_2_result;
+            final Entity createFromDiscriminatorValue_2_result = createFromDiscriminatorValue_2(mappingValue);
+            if (createFromDiscriminatorValue_2_result != null) {
+                return createFromDiscriminatorValue_2_result;
             }
-            final Entity CreateFromDiscriminatorValue_3_result = createFromDiscriminatorValue_3(mappingValue);
-            if (CreateFromDiscriminatorValue_3_result != null) {
-                return CreateFromDiscriminatorValue_3_result;
+            final Entity createFromDiscriminatorValue_3_result = createFromDiscriminatorValue_3(mappingValue);
+            if (createFromDiscriminatorValue_3_result != null) {
+                return createFromDiscriminatorValue_3_result;
             }
         }
         return new Entity();
@@ -295,7 +295,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_0(@jakarta.annotation.Nonnull final String discriminatorValue) {
@@ -806,7 +806,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
@@ -1317,7 +1317,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
@@ -1828,7 +1828,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param discriminatorValue Discriminator value from the payload
-     * @return a entity
+     * @return a Entity
      */
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
@@ -2027,7 +2027,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
         return null;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -2047,7 +2047,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The unique identifier for an entity. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -2055,7 +2055,7 @@ public class Entity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -2072,8 +2072,8 @@ public class Entity implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

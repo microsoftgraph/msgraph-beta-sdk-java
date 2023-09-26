@@ -81,7 +81,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get [itemAnalytics][] about the views that took place under this resource.The itemAnalytics resource is a convenient way to get activity stats for allTime and the lastSevenDays.For a custom time range or interval, use the [getActivitiesByInterval][] API.
-     * @return a CompletableFuture of itemAnalytics
+     * @return a CompletableFuture of ItemAnalytics
      * @see <a href="https://learn.microsoft.com/graph/api/itemanalytics-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get [itemAnalytics][] about the views that took place under this resource.The itemAnalytics resource is a convenient way to get activity stats for allTime and the lastSevenDays.For a custom time range or interval, use the [getActivitiesByInterval][] API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemAnalytics
+     * @return a CompletableFuture of ItemAnalytics
      * @see <a href="https://learn.microsoft.com/graph/api/itemanalytics-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property analytics in drives
      * @param body The request body
-     * @return a CompletableFuture of itemAnalytics
+     * @return a CompletableFuture of ItemAnalytics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAnalytics> patch(@jakarta.annotation.Nonnull final ItemAnalytics body) {
@@ -115,7 +115,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property analytics in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemAnalytics
+     * @return a CompletableFuture of ItemAnalytics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemAnalytics> patch(@jakarta.annotation.Nonnull final ItemAnalytics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -217,7 +217,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a analyticsRequestBuilder
+     * @return a AnalyticsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

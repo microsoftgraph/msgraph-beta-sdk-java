@@ -29,7 +29,7 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
      */
     private Long value;
     /**
-     * Instantiates a new keyLongValuePair and sets the default values.
+     * Instantiates a new KeyLongValuePair and sets the default values.
      */
     public KeyLongValuePair() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a keyLongValuePair
+     * @return a KeyLongValuePair
      */
     @jakarta.annotation.Nonnull
     public static KeyLongValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
         return new KeyLongValuePair();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name for this key long value pair
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -74,7 +74,7 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -82,7 +82,7 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the value property value. Value for this key long value pair
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getValue() {
@@ -100,8 +100,8 @@ public class KeyLongValuePair implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

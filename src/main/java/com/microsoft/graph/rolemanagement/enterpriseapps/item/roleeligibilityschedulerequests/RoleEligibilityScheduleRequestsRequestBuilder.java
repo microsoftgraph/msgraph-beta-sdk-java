@@ -62,7 +62,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     }
     /**
      * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     /**
      * Get a list of the unifiedRoleEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     /**
      * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
      * Create a new unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilityScheduleRequest
+     * @return a CompletableFuture of UnifiedRoleEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class RoleEligibilityScheduleRequestsRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleEligibilityScheduleRequestsRequestBuilder
+     * @return a RoleEligibilityScheduleRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

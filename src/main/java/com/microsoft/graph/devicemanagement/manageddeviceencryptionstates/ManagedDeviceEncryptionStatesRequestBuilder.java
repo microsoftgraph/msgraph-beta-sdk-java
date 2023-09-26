@@ -60,7 +60,7 @@ public class ManagedDeviceEncryptionStatesRequestBuilder extends BaseRequestBuil
     }
     /**
      * Encryption report for devices in this account
-     * @return a CompletableFuture of managedDeviceEncryptionStateCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceEncryptionStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagedDeviceEncryptionStatesRequestBuilder extends BaseRequestBuil
     /**
      * Encryption report for devices in this account
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceEncryptionStateCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceEncryptionStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagedDeviceEncryptionStatesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to managedDeviceEncryptionStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceEncryptionState
+     * @return a CompletableFuture of ManagedDeviceEncryptionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionState> post(@jakarta.annotation.Nonnull final ManagedDeviceEncryptionState body) {
@@ -92,7 +92,7 @@ public class ManagedDeviceEncryptionStatesRequestBuilder extends BaseRequestBuil
      * Create new navigation property to managedDeviceEncryptionStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceEncryptionState
+     * @return a CompletableFuture of ManagedDeviceEncryptionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionState> post(@jakarta.annotation.Nonnull final ManagedDeviceEncryptionState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagedDeviceEncryptionStatesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedDeviceEncryptionStatesRequestBuilder
+     * @return a ManagedDeviceEncryptionStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceEncryptionStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

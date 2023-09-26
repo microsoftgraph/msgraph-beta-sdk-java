@@ -59,7 +59,7 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-rosterplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the list of plannerPlans that are contained by the plannerRosters of which the user is a member.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-rosterplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class RosterPlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a rosterPlansRequestBuilder
+     * @return a RosterPlansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RosterPlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

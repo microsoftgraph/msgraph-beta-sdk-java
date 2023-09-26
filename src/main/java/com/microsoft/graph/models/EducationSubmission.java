@@ -70,7 +70,7 @@ public class EducationSubmission extends Entity implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new educationSubmission and sets the default values.
+     * Instantiates a new EducationSubmission and sets the default values.
      */
     public EducationSubmission() {
         super();
@@ -78,7 +78,7 @@ public class EducationSubmission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSubmission
+     * @return a EducationSubmission
      */
     @jakarta.annotation.Nonnull
     public static EducationSubmission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -111,7 +111,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the outcomes property value. The outcomes property
-     * @return a educationOutcome
+     * @return a java.util.List<EducationOutcome>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationOutcome> getOutcomes() {
@@ -119,7 +119,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the reassignedBy property value. User who moved the status of this submission to reassigned.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getReassignedBy() {
@@ -135,7 +135,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the recipient property value. Who this submission is assigned to.
-     * @return a educationSubmissionRecipient
+     * @return a EducationSubmissionRecipient
      */
     @jakarta.annotation.Nullable
     public EducationSubmissionRecipient getRecipient() {
@@ -143,7 +143,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. The resources property
-     * @return a educationSubmissionResource
+     * @return a java.util.List<EducationSubmissionResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getResources() {
@@ -151,7 +151,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the resourcesFolderUrl property value. Folder where all file resources for this submission need to be stored.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
@@ -159,7 +159,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the returnedBy property value. User who moved the status of this submission to returned.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getReturnedBy() {
@@ -175,7 +175,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Read-only. Possible values are: working, submitted, returned, unknownFutureValue and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
-     * @return a educationSubmissionStatus
+     * @return a EducationSubmissionStatus
      */
     @jakarta.annotation.Nullable
     public EducationSubmissionStatus getStatus() {
@@ -183,7 +183,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the submittedBy property value. User who moved the resource into the submitted state.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getSubmittedBy() {
@@ -199,7 +199,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the submittedResources property value. The submittedResources property
-     * @return a educationSubmissionResource
+     * @return a java.util.List<EducationSubmissionResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getSubmittedResources() {
@@ -207,7 +207,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the unsubmittedBy property value. User who moved the resource from submitted into the working state.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getUnsubmittedBy() {
@@ -223,7 +223,7 @@ public class EducationSubmission extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The deep link URL for the given submission.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

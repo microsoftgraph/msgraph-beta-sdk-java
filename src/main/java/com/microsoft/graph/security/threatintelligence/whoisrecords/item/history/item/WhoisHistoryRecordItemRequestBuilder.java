@@ -38,7 +38,7 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of historical records associated to this WHOIS object.
-     * @return a CompletableFuture of whoisHistoryRecord
+     * @return a CompletableFuture of WhoisHistoryRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> get() {
@@ -47,7 +47,7 @@ public class WhoisHistoryRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of historical records associated to this WHOIS object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of whoisHistoryRecord
+     * @return a CompletableFuture of WhoisHistoryRecord
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WhoisHistoryRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

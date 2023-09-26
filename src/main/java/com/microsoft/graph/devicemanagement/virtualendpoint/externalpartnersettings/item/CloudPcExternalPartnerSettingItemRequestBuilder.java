@@ -57,7 +57,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
     }
     /**
      * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
-     * @return a CompletableFuture of cloudPcExternalPartnerSetting
+     * @return a CompletableFuture of CloudPcExternalPartnerSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a cloudPcExternalPartnerSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcExternalPartnerSetting
+     * @return a CompletableFuture of CloudPcExternalPartnerSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
     /**
      * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcExternalPartnerSetting
+     * @return a CompletableFuture of CloudPcExternalPartnerSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class CloudPcExternalPartnerSettingItemRequestBuilder extends BaseRequest
      * Update the properties of a cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcExternalPartnerSetting
+     * @return a CompletableFuture of CloudPcExternalPartnerSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexternalpartnersetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

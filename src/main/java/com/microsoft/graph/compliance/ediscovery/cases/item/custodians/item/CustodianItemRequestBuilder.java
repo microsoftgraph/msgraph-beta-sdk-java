@@ -162,7 +162,7 @@ public class CustodianItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a custodian object.
-     * @return a CompletableFuture of custodian
+     * @return a CompletableFuture of Custodian
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-get?view=graph-rest-1.0">Find more info here</a>
@@ -175,7 +175,7 @@ public class CustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a custodian object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of custodian
+     * @return a CompletableFuture of Custodian
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-get?view=graph-rest-1.0">Find more info here</a>
@@ -192,7 +192,7 @@ public class CustodianItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a custodian object.
      * @param body The request body
-     * @return a CompletableFuture of custodian
+     * @return a CompletableFuture of Custodian
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-update?view=graph-rest-1.0">Find more info here</a>
@@ -206,7 +206,7 @@ public class CustodianItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a custodian object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of custodian
+     * @return a CompletableFuture of Custodian
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-update?view=graph-rest-1.0">Find more info here</a>

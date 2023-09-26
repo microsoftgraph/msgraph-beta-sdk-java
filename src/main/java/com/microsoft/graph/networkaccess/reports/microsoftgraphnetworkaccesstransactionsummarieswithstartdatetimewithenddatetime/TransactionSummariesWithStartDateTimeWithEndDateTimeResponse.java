@@ -15,7 +15,7 @@ public class TransactionSummariesWithStartDateTimeWithEndDateTimeResponse extend
      */
     private java.util.List<TransactionSummary> value;
     /**
-     * Instantiates a new transactionSummariesWithStartDateTimeWithEndDateTimeResponse and sets the default values.
+     * Instantiates a new TransactionSummariesWithStartDateTimeWithEndDateTimeResponse and sets the default values.
      */
     public TransactionSummariesWithStartDateTimeWithEndDateTimeResponse() {
         super();
@@ -23,7 +23,7 @@ public class TransactionSummariesWithStartDateTimeWithEndDateTimeResponse extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a transactionSummariesWithStartDateTimeWithEndDateTimeResponse
+     * @return a TransactionSummariesWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public static TransactionSummariesWithStartDateTimeWithEndDateTimeResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class TransactionSummariesWithStartDateTimeWithEndDateTimeResponse extend
     }
     /**
      * Gets the value property value. The value property
-     * @return a transactionSummary
+     * @return a java.util.List<TransactionSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TransactionSummary> getValue() {

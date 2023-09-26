@@ -60,7 +60,7 @@ public class DerivedCredentialsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of Derived credential settings associated with account.
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettingsCollectionResponse
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettingsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettingsCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DerivedCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of Derived credential settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettingsCollectionResponse
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettingsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettingsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DerivedCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to derivedCredentials for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettings
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettings> post(@jakarta.annotation.Nonnull final DeviceManagementDerivedCredentialSettings body) {
@@ -92,7 +92,7 @@ public class DerivedCredentialsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to derivedCredentials for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettings
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettings> post(@jakarta.annotation.Nonnull final DeviceManagementDerivedCredentialSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DerivedCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a derivedCredentialsRequestBuilder
+     * @return a DerivedCredentialsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DerivedCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

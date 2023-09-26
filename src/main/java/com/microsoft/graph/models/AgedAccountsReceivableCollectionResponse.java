@@ -13,7 +13,7 @@ public class AgedAccountsReceivableCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<AgedAccountsReceivable> value;
     /**
-     * Instantiates a new agedAccountsReceivableCollectionResponse and sets the default values.
+     * Instantiates a new AgedAccountsReceivableCollectionResponse and sets the default values.
      */
     public AgedAccountsReceivableCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AgedAccountsReceivableCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agedAccountsReceivableCollectionResponse
+     * @return a AgedAccountsReceivableCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AgedAccountsReceivableCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AgedAccountsReceivableCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a agedAccountsReceivable
+     * @return a java.util.List<AgedAccountsReceivable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsReceivable> getValue() {

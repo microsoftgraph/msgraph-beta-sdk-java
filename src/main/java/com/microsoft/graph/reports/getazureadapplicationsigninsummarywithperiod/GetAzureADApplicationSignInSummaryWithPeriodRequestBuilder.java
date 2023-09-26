@@ -39,7 +39,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
     }
     /**
      * Invoke function getAzureADApplicationSignInSummary
-     * @return a CompletableFuture of getAzureADApplicationSignInSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetAzureADApplicationSignInSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAzureADApplicationSignInSummaryWithPeriodResponse> get() {
@@ -48,7 +48,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
     /**
      * Invoke function getAzureADApplicationSignInSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAzureADApplicationSignInSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetAzureADApplicationSignInSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetAzureADApplicationSignInSummaryWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAzureADApplicationSignInSummaryWithPeriodRequestBuilder
+     * @return a GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

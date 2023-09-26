@@ -57,7 +57,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     /**
      * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property operations in teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceOperation> patch(@jakarta.annotation.Nonnull final TeamworkDeviceOperation body) {
@@ -91,7 +91,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property operations in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceOperation> patch(@jakarta.annotation.Nonnull final TeamworkDeviceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

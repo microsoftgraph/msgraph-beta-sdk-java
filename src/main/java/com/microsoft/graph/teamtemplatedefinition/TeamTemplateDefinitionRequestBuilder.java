@@ -60,7 +60,7 @@ public class TeamTemplateDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from teamTemplateDefinition
-     * @return a CompletableFuture of teamTemplateDefinitionCollectionResponse
+     * @return a CompletableFuture of TeamTemplateDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinitionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TeamTemplateDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from teamTemplateDefinition
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplateDefinitionCollectionResponse
+     * @return a CompletableFuture of TeamTemplateDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TeamTemplateDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to teamTemplateDefinition
      * @param body The request body
-     * @return a CompletableFuture of teamTemplateDefinition
+     * @return a CompletableFuture of TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinition> post(@jakarta.annotation.Nonnull final TeamTemplateDefinition body) {
@@ -92,7 +92,7 @@ public class TeamTemplateDefinitionRequestBuilder extends BaseRequestBuilder {
      * Add new entity to teamTemplateDefinition
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplateDefinition
+     * @return a CompletableFuture of TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinition> post(@jakarta.annotation.Nonnull final TeamTemplateDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TeamTemplateDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamTemplateDefinitionRequestBuilder
+     * @return a TeamTemplateDefinitionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamTemplateDefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

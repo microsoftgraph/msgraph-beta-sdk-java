@@ -107,7 +107,7 @@ public class GetSharedUseLicenseUsageReportRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getSharedUseLicenseUsageReportRequestBuilder
+     * @return a GetSharedUseLicenseUsageReportRequestBuilder
      * @deprecated
      * The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead. as of 2023-05/getSharedUseLicenseUsageReport on 2023-05-17 and will be removed 2023-10-17
      */

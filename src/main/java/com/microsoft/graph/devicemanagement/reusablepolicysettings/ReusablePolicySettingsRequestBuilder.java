@@ -60,7 +60,7 @@ public class ReusablePolicySettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of all reusable settings that can be referred in a policy
-     * @return a CompletableFuture of deviceManagementReusablePolicySettingCollectionResponse
+     * @return a CompletableFuture of DeviceManagementReusablePolicySettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySettingCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ReusablePolicySettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * List of all reusable settings that can be referred in a policy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReusablePolicySettingCollectionResponse
+     * @return a CompletableFuture of DeviceManagementReusablePolicySettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ReusablePolicySettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to reusablePolicySettings for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> post(@jakarta.annotation.Nonnull final DeviceManagementReusablePolicySetting body) {
@@ -92,7 +92,7 @@ public class ReusablePolicySettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to reusablePolicySettings for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> post(@jakarta.annotation.Nonnull final DeviceManagementReusablePolicySetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ReusablePolicySettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reusablePolicySettingsRequestBuilder
+     * @return a ReusablePolicySettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReusablePolicySettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

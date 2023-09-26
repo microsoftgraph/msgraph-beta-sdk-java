@@ -38,7 +38,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Run summary for device management script.
-     * @return a CompletableFuture of deviceManagementScriptRunSummary
+     * @return a CompletableFuture of DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptRunSummary> get() {
@@ -47,7 +47,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Run summary for device management script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScriptRunSummary
+     * @return a CompletableFuture of DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptRunSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a runSummaryRequestBuilder
+     * @return a RunSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RunSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -38,7 +38,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The flow that was run by this activity.
-     * @return a CompletableFuture of industryDataActivity
+     * @return a CompletableFuture of IndustryDataActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataActivity> get() {
@@ -47,7 +47,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * The flow that was run by this activity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataActivity
+     * @return a CompletableFuture of IndustryDataActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataActivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activityRequestBuilder
+     * @return a ActivityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

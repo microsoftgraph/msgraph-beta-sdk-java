@@ -131,7 +131,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     }
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -144,7 +144,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     /**
      * In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0">Find more info here</a>
@@ -161,7 +161,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property accessPackageAssignmentRequests in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -174,7 +174,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Update the navigation property accessPackageAssignmentRequests in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

@@ -60,7 +60,7 @@ public class GroupAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of group assignments for this T&C policy.
-     * @return a CompletableFuture of termsAndConditionsGroupAssignmentCollectionResponse
+     * @return a CompletableFuture of TermsAndConditionsGroupAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsGroupAssignmentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GroupAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of group assignments for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsGroupAssignmentCollectionResponse
+     * @return a CompletableFuture of TermsAndConditionsGroupAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsGroupAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class GroupAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to groupAssignments for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditionsGroupAssignment
+     * @return a CompletableFuture of TermsAndConditionsGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsGroupAssignment> post(@jakarta.annotation.Nonnull final TermsAndConditionsGroupAssignment body) {
@@ -92,7 +92,7 @@ public class GroupAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to groupAssignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsGroupAssignment
+     * @return a CompletableFuture of TermsAndConditionsGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsGroupAssignment> post(@jakarta.annotation.Nonnull final TermsAndConditionsGroupAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class GroupAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupAssignmentsRequestBuilder
+     * @return a GroupAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

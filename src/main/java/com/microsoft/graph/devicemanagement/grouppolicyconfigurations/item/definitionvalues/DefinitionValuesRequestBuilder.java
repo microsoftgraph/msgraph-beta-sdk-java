@@ -60,7 +60,7 @@ public class DefinitionValuesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of enabled or disabled group policy definition values for the configuration.
-     * @return a CompletableFuture of groupPolicyDefinitionValueCollectionResponse
+     * @return a CompletableFuture of GroupPolicyDefinitionValueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValueCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DefinitionValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of enabled or disabled group policy definition values for the configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinitionValueCollectionResponse
+     * @return a CompletableFuture of GroupPolicyDefinitionValueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValueCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DefinitionValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to definitionValues for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyDefinitionValue
+     * @return a CompletableFuture of GroupPolicyDefinitionValue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> post(@jakarta.annotation.Nonnull final GroupPolicyDefinitionValue body) {
@@ -92,7 +92,7 @@ public class DefinitionValuesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to definitionValues for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinitionValue
+     * @return a CompletableFuture of GroupPolicyDefinitionValue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinitionValue> post(@jakarta.annotation.Nonnull final GroupPolicyDefinitionValue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DefinitionValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a definitionValuesRequestBuilder
+     * @return a DefinitionValuesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefinitionValuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Access this property from the derived type itemInsights.
-     * @return a CompletableFuture of trendingCollectionResponse
+     * @return a CompletableFuture of TrendingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrendingCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Access this property from the derived type itemInsights.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trendingCollectionResponse
+     * @return a CompletableFuture of TrendingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrendingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to trending for users
      * @param body The request body
-     * @return a CompletableFuture of trending
+     * @return a CompletableFuture of Trending
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Trending> post(@jakarta.annotation.Nonnull final Trending body) {
@@ -92,7 +92,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trending for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trending
+     * @return a CompletableFuture of Trending
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Trending> post(@jakarta.annotation.Nonnull final Trending body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TrendingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a trendingRequestBuilder
+     * @return a TrendingRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TrendingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

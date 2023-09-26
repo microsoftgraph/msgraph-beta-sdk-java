@@ -59,7 +59,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Read the properties and relationships of a yearTimePeriodDefinition object.
-     * @return a CompletableFuture of yearTimePeriodDefinition
+     * @return a CompletableFuture of YearTimePeriodDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of a yearTimePeriodDefinition object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of yearTimePeriodDefinition
+     * @return a CompletableFuture of YearTimePeriodDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the properties of a yearTimePeriodDefinition object.
      * @param body The request body
-     * @return a CompletableFuture of yearTimePeriodDefinition
+     * @return a CompletableFuture of YearTimePeriodDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class YearTimePeriodDefinitionItemRequestBuilder extends BaseRequestBuild
      * Update the properties of a yearTimePeriodDefinition object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of yearTimePeriodDefinition
+     * @return a CompletableFuture of YearTimePeriodDefinition
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-yeartimeperioddefinition-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

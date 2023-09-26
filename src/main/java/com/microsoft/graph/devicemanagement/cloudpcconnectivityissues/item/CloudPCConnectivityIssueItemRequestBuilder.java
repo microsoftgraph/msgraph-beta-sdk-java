@@ -57,7 +57,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * The list of CloudPC Connectivity Issue.
-     * @return a CompletableFuture of cloudPCConnectivityIssue
+     * @return a CompletableFuture of CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssue> get() {
@@ -66,7 +66,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder extends BaseRequestBuild
     /**
      * The list of CloudPC Connectivity Issue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPCConnectivityIssue
+     * @return a CompletableFuture of CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssue> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property cloudPCConnectivityIssues in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPCConnectivityIssue
+     * @return a CompletableFuture of CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssue> patch(@jakarta.annotation.Nonnull final CloudPCConnectivityIssue body) {
@@ -89,7 +89,7 @@ public class CloudPCConnectivityIssueItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property cloudPCConnectivityIssues in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPCConnectivityIssue
+     * @return a CompletableFuture of CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssue> patch(@jakarta.annotation.Nonnull final CloudPCConnectivityIssue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

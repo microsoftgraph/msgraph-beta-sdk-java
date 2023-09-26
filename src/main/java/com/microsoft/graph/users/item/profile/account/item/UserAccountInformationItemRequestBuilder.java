@@ -59,7 +59,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
-     * @return a CompletableFuture of userAccountInformation
+     * @return a CompletableFuture of UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Retrieve the properties and relationships of an userAccountInformation object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userAccountInformation
+     * @return a CompletableFuture of UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the properties of an userAccountInformation object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of userAccountInformation
+     * @return a CompletableFuture of UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class UserAccountInformationItemRequestBuilder extends BaseRequestBuilder
      * Update the properties of an userAccountInformation object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userAccountInformation
+     * @return a CompletableFuture of UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/useraccountinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -60,7 +60,7 @@ public class DeviceConfigurationRestrictedAppsViolationsRequestBuilder extends B
     }
     /**
      * Restricted apps violations for this account.
-     * @return a CompletableFuture of restrictedAppsViolationCollectionResponse
+     * @return a CompletableFuture of RestrictedAppsViolationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceConfigurationRestrictedAppsViolationsRequestBuilder extends B
     /**
      * Restricted apps violations for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of restrictedAppsViolationCollectionResponse
+     * @return a CompletableFuture of RestrictedAppsViolationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceConfigurationRestrictedAppsViolationsRequestBuilder extends B
     /**
      * Create new navigation property to deviceConfigurationRestrictedAppsViolations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of restrictedAppsViolation
+     * @return a CompletableFuture of RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolation> post(@jakarta.annotation.Nonnull final RestrictedAppsViolation body) {
@@ -92,7 +92,7 @@ public class DeviceConfigurationRestrictedAppsViolationsRequestBuilder extends B
      * Create new navigation property to deviceConfigurationRestrictedAppsViolations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of restrictedAppsViolation
+     * @return a CompletableFuture of RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolation> post(@jakarta.annotation.Nonnull final RestrictedAppsViolation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceConfigurationRestrictedAppsViolationsRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceConfigurationRestrictedAppsViolationsRequestBuilder
+     * @return a DeviceConfigurationRestrictedAppsViolationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceConfigurationRestrictedAppsViolationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

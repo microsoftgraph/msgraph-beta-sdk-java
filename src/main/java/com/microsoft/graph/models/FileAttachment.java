@@ -11,7 +11,7 @@ public class FileAttachment extends Attachment implements Parsable {
     /**
      * The base64-encoded contents of the file.
      */
-    private byte[] contentBytes;
+    private Base64url contentBytes;
     /**
      * The ID of the attachment in the Exchange store.
      */
@@ -21,7 +21,7 @@ public class FileAttachment extends Attachment implements Parsable {
      */
     private String contentLocation;
     /**
-     * Instantiates a new fileAttachment and sets the default values.
+     * Instantiates a new FileAttachment and sets the default values.
      */
     public FileAttachment() {
         super();
@@ -30,7 +30,7 @@ public class FileAttachment extends Attachment implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileAttachment
+     * @return a FileAttachment
      */
     @jakarta.annotation.Nonnull
     public static FileAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,15 +39,15 @@ public class FileAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the contentBytes property value. The base64-encoded contents of the file.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContentBytes() {
+    public Base64url getContentBytes() {
         return this.contentBytes;
     }
     /**
      * Gets the contentId property value. The ID of the attachment in the Exchange store.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentId() {
@@ -55,7 +55,7 @@ public class FileAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the contentLocation property value. Don't use this property as it isn't supported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentLocation() {
@@ -68,7 +68,7 @@ public class FileAttachment extends Attachment implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getByteArrayValue()); });
+        deserializerMap.put("contentBytes", (n) -> { this.setContentBytes(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("contentId", (n) -> { this.setContentId(n.getStringValue()); });
         deserializerMap.put("contentLocation", (n) -> { this.setContentLocation(n.getStringValue()); });
         return deserializerMap;
@@ -80,7 +80,7 @@ public class FileAttachment extends Attachment implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("contentBytes", this.getContentBytes());
+        writer.writeObjectValue("contentBytes", this.getContentBytes());
         writer.writeStringValue("contentId", this.getContentId());
         writer.writeStringValue("contentLocation", this.getContentLocation());
     }
@@ -88,7 +88,7 @@ public class FileAttachment extends Attachment implements Parsable {
      * Sets the contentBytes property value. The base64-encoded contents of the file.
      * @param value Value to set for the contentBytes property.
      */
-    public void setContentBytes(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContentBytes(@jakarta.annotation.Nullable final Base64url value) {
         this.contentBytes = value;
     }
     /**

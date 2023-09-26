@@ -60,7 +60,7 @@ public class GroupPolicyObjectFilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A list of Group Policy Object files uploaded.
-     * @return a CompletableFuture of groupPolicyObjectFileCollectionResponse
+     * @return a CompletableFuture of GroupPolicyObjectFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyObjectFileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GroupPolicyObjectFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * A list of Group Policy Object files uploaded.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyObjectFileCollectionResponse
+     * @return a CompletableFuture of GroupPolicyObjectFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyObjectFileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class GroupPolicyObjectFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to groupPolicyObjectFiles for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyObjectFile
+     * @return a CompletableFuture of GroupPolicyObjectFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyObjectFile> post(@jakarta.annotation.Nonnull final GroupPolicyObjectFile body) {
@@ -92,7 +92,7 @@ public class GroupPolicyObjectFilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to groupPolicyObjectFiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyObjectFile
+     * @return a CompletableFuture of GroupPolicyObjectFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyObjectFile> post(@jakarta.annotation.Nonnull final GroupPolicyObjectFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class GroupPolicyObjectFilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupPolicyObjectFilesRequestBuilder
+     * @return a GroupPolicyObjectFilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyObjectFilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

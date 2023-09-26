@@ -39,7 +39,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends B
     }
     /**
      * Invoke function getOffice365GroupsActivityStorage
-     * @return a CompletableFuture of getOffice365GroupsActivityStorageWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365GroupsActivityStorageWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityStorageWithPeriodResponse> get() {
@@ -48,7 +48,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends B
     /**
      * Invoke function getOffice365GroupsActivityStorage
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getOffice365GroupsActivityStorageWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365GroupsActivityStorageWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityStorageWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365GroupsActivityStorageWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityStorageWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityStorageWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

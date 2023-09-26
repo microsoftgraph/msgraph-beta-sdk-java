@@ -37,7 +37,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
     }
     /**
      * Carries out the appropriate procedures to remove a managed tenant from the multi-tenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multi-tenant management platform.
-     * @return a CompletableFuture of tenant
+     * @return a CompletableFuture of Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-offboardtenant?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
     /**
      * Carries out the appropriate procedures to remove a managed tenant from the multi-tenant management platform. No relationships, such as commerce and delegate administrative privileges, will be impacted. The only change made by invoking this action is the tenant will be deprovisioned from the multi-tenant management platform.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenant
+     * @return a CompletableFuture of Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-offboardtenant?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsOffboardTenantRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

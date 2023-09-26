@@ -57,7 +57,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a schema for an externalConnection.
-     * @return a CompletableFuture of schema
+     * @return a CompletableFuture of Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a schema for an externalConnection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schema
+     * @return a CompletableFuture of Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a schema for an externalConnection.
      * @param body The request body
-     * @return a CompletableFuture of schema
+     * @return a CompletableFuture of Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a schema for an externalConnection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of schema
+     * @return a CompletableFuture of Schema
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a schemaRequestBuilder
+     * @return a SchemaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SchemaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -32,7 +32,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
      */
     private String primaryBundleVersion;
     /**
-     * Instantiates a new macOSPkgApp and sets the default values.
+     * Instantiates a new MacOSPkgApp and sets the default values.
      */
     public MacOSPkgApp() {
         super();
@@ -41,7 +41,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSPkgApp
+     * @return a MacOSPkgApp
      */
     @jakarta.annotation.Nonnull
     public static MacOSPkgApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the ignoreVersionDetection property value. A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
@@ -72,7 +72,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the includedApps property value. The list of apps expected to be installed by the .pkg.
-     * @return a macOSIncludedApp
+     * @return a java.util.List<MacOSIncludedApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSIncludedApp> getIncludedApps() {
@@ -80,7 +80,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a macOSMinimumOperatingSystem
+     * @return a MacOSMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public MacOSMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -88,7 +88,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the primaryBundleId property value. The primary CFBundleIdentifier of the .pkg.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryBundleId() {
@@ -96,7 +96,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the primaryBundleVersion property value. The primary CFBundleVersion of the .pkg.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryBundleVersion() {

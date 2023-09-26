@@ -1,5 +1,9 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp.contentversions.ContentVersionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphwin32lobapp.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.Win32LobApp;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +25,34 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentVersions property of the microsoft.graph.mobileLobApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ContentVersionsRequestBuilder contentVersions() {
+        return new ContentVersionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RelationshipsRequestBuilder relationships() {
+        return new RelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GraphWin32LobAppRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +70,7 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.win32LobApp
-     * @return a CompletableFuture of win32LobApp
+     * @return a CompletableFuture of Win32LobApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Win32LobApp> get() {
@@ -47,7 +79,7 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.win32LobApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of win32LobApp
+     * @return a CompletableFuture of Win32LobApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Win32LobApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +121,7 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphWin32LobAppRequestBuilder
+     * @return a GraphWin32LobAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphWin32LobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

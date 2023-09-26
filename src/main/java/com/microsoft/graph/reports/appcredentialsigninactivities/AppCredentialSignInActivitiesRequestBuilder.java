@@ -60,7 +60,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
-     * @return a CompletableFuture of appCredentialSignInActivityCollectionResponse
+     * @return a CompletableFuture of AppCredentialSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
     /**
      * Get a list of appCredentialSignInActivity objects that contains recent activity of application credentials.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCredentialSignInActivityCollectionResponse
+     * @return a CompletableFuture of AppCredentialSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-appcredentialsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to appCredentialSignInActivities for reports
      * @param body The request body
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivity> post(@jakarta.annotation.Nonnull final AppCredentialSignInActivity body) {
@@ -94,7 +94,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
      * Create new navigation property to appCredentialSignInActivities for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivity> post(@jakarta.annotation.Nonnull final AppCredentialSignInActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class AppCredentialSignInActivitiesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appCredentialSignInActivitiesRequestBuilder
+     * @return a AppCredentialSignInActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppCredentialSignInActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -34,7 +34,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
      */
     private MultiTenantOrganizationMemberProcessingStatus status;
     /**
-     * Instantiates a new multiTenantOrganizationMemberTransitionDetails and sets the default values.
+     * Instantiates a new MultiTenantOrganizationMemberTransitionDetails and sets the default values.
      */
     public MultiTenantOrganizationMemberTransitionDetails() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a multiTenantOrganizationMemberTransitionDetails
+     * @return a MultiTenantOrganizationMemberTransitionDetails
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganizationMemberTransitionDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
         return new MultiTenantOrganizationMemberTransitionDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the desiredRole property value. Role of the tenant in the multi-tenant organization. The possible values are: owner, member, unknownFutureValue.
-     * @return a multiTenantOrganizationMemberRole
+     * @return a MultiTenantOrganizationMemberRole
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberRole getDesiredRole() {
@@ -67,7 +67,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the desiredState property value. State of the tenant in the multi-tenant organization currently being processed. The possible values are: pending, active, removed, unknownFutureValue. Read-only.
-     * @return a multiTenantOrganizationMemberState
+     * @return a MultiTenantOrganizationMemberState
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberState getDesiredState() {
@@ -75,7 +75,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the details property value. Details that explain the processing status if any. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDetails() {
@@ -97,7 +97,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
     }
     /**
      * Gets the status property value. Processing state of the asynchronous job. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue. Read-only.
-     * @return a multiTenantOrganizationMemberProcessingStatus
+     * @return a MultiTenantOrganizationMemberProcessingStatus
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberProcessingStatus getStatus() {
@@ -125,8 +125,8 @@ public class MultiTenantOrganizationMemberTransitionDetails implements Additiona
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

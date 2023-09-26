@@ -38,7 +38,7 @@ public class WhoisRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the current whoisRecord resource for a host.
-     * @return a CompletableFuture of whoisRecord
+     * @return a CompletableFuture of WhoisRecord
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get-whois?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class WhoisRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the current whoisRecord resource for a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of whoisRecord
+     * @return a CompletableFuture of WhoisRecord
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-get-whois?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class WhoisRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a whoisRequestBuilder
+     * @return a WhoisRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WhoisRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

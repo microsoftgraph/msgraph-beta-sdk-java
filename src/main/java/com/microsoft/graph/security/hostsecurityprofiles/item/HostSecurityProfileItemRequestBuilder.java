@@ -57,7 +57,7 @@ public class HostSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get hostSecurityProfiles from security
-     * @return a CompletableFuture of hostSecurityProfile
+     * @return a CompletableFuture of HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfile> get() {
@@ -66,7 +66,7 @@ public class HostSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get hostSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSecurityProfile
+     * @return a CompletableFuture of HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class HostSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hostSecurityProfiles in security
      * @param body The request body
-     * @return a CompletableFuture of hostSecurityProfile
+     * @return a CompletableFuture of HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfile> patch(@jakarta.annotation.Nonnull final HostSecurityProfile body) {
@@ -89,7 +89,7 @@ public class HostSecurityProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hostSecurityProfiles in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSecurityProfile
+     * @return a CompletableFuture of HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfile> patch(@jakarta.annotation.Nonnull final HostSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -57,7 +57,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder extends BaseRequ
     }
     /**
      * Retrieve the properties and relationships of an applicationSignInDetailedSummary object.
-     * @return a CompletableFuture of applicationSignInDetailedSummary
+     * @return a CompletableFuture of ApplicationSignInDetailedSummary
      * @see <a href="https://learn.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder extends BaseRequ
     /**
      * Retrieve the properties and relationships of an applicationSignInDetailedSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationSignInDetailedSummary
+     * @return a CompletableFuture of ApplicationSignInDetailedSummary
      * @see <a href="https://learn.microsoft.com/graph/api/applicationsignindetailedsummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property applicationSignInDetailedSummary in reports
      * @param body The request body
-     * @return a CompletableFuture of applicationSignInDetailedSummary
+     * @return a CompletableFuture of ApplicationSignInDetailedSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationSignInDetailedSummary> patch(@jakarta.annotation.Nonnull final ApplicationSignInDetailedSummary body) {
@@ -91,7 +91,7 @@ public class ApplicationSignInDetailedSummaryItemRequestBuilder extends BaseRequ
      * Update the navigation property applicationSignInDetailedSummary in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationSignInDetailedSummary
+     * @return a CompletableFuture of ApplicationSignInDetailedSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApplicationSignInDetailedSummary> patch(@jakarta.annotation.Nonnull final ApplicationSignInDetailedSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

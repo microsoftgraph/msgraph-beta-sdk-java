@@ -60,7 +60,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the properties and relationships of the cloudPcGalleryImage objects.
-     * @return a CompletableFuture of cloudPcGalleryImageCollectionResponse
+     * @return a CompletableFuture of CloudPcGalleryImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * List the properties and relationships of the cloudPcGalleryImage objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcGalleryImageCollectionResponse
+     * @return a CompletableFuture of CloudPcGalleryImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-galleryimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to galleryImages for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcGalleryImage
+     * @return a CompletableFuture of CloudPcGalleryImage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcGalleryImage> post(@jakarta.annotation.Nonnull final CloudPcGalleryImage body) {
@@ -94,7 +94,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to galleryImages for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcGalleryImage
+     * @return a CompletableFuture of CloudPcGalleryImage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcGalleryImage> post(@jakarta.annotation.Nonnull final CloudPcGalleryImage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class GalleryImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a galleryImagesRequestBuilder
+     * @return a GalleryImagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GalleryImagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

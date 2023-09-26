@@ -60,7 +60,7 @@ public class UsageRightsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of usageRight objects for a given user.
-     * @return a CompletableFuture of usageRightCollectionResponse
+     * @return a CompletableFuture of UsageRightCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-usagerights?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class UsageRightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of usageRight objects for a given user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of usageRightCollectionResponse
+     * @return a CompletableFuture of UsageRightCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-usagerights?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UsageRightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to usageRights for users
      * @param body The request body
-     * @return a CompletableFuture of usageRight
+     * @return a CompletableFuture of UsageRight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsageRight> post(@jakarta.annotation.Nonnull final UsageRight body) {
@@ -94,7 +94,7 @@ public class UsageRightsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to usageRights for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of usageRight
+     * @return a CompletableFuture of UsageRight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UsageRight> post(@jakarta.annotation.Nonnull final UsageRight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class UsageRightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a usageRightsRequestBuilder
+     * @return a UsageRightsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UsageRightsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

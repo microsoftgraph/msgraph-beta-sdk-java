@@ -54,7 +54,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new plannerPlan and sets the default values.
+     * Instantiates a new PlannerPlan and sets the default values.
      */
     public PlannerPlan() {
         super();
@@ -62,7 +62,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlan
+     * @return a PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the buckets property value. Collection of buckets in the plan. Read-only. Nullable.
-     * @return a plannerBucket
+     * @return a java.util.List<PlannerBucket>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
@@ -79,7 +79,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the container property value. Identifies the container of the plan. Specify only the url, the containerId and type, or all properties. After it is set, this property cant be updated. Required.
-     * @return a plannerPlanContainer
+     * @return a PlannerPlanContainer
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContainer getContainer() {
@@ -87,7 +87,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the contexts property value. Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries.
-     * @return a plannerPlanContextCollection
+     * @return a PlannerPlanContextCollection
      */
     @jakarta.annotation.Nullable
     public PlannerPlanContextCollection getContexts() {
@@ -95,7 +95,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the createdBy property value. Read-only. The user who created the plan.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -111,7 +111,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the creationSource property value. Contains information about the origin of the plan.
-     * @return a plannerPlanCreation
+     * @return a PlannerPlanCreation
      */
     @jakarta.annotation.Nullable
     public PlannerPlanCreation getCreationSource() {
@@ -119,7 +119,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the details property value. Additional details about the plan. Read-only. Nullable.
-     * @return a plannerPlanDetails
+     * @return a PlannerPlanDetails
      */
     @jakarta.annotation.Nullable
     public PlannerPlanDetails getDetails() {
@@ -147,7 +147,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the owner property value. The owner property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -155,7 +155,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the sharedWithContainers property value. List of containers the plan is shared with.
-     * @return a plannerSharedWithContainer
+     * @return a java.util.List<PlannerSharedWithContainer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerSharedWithContainer> getSharedWithContainers() {
@@ -163,7 +163,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the tasks property value. Collection of tasks in the plan. Read-only. Nullable.
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {
@@ -171,7 +171,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the title property value. Required. Title of the plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

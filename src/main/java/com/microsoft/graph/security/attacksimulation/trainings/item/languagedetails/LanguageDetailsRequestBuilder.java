@@ -60,7 +60,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get languageDetails from security
-     * @return a CompletableFuture of trainingLanguageDetailCollectionResponse
+     * @return a CompletableFuture of TrainingLanguageDetailCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetailCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get languageDetails from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetailCollectionResponse
+     * @return a CompletableFuture of TrainingLanguageDetailCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetailCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to languageDetails for security
      * @param body The request body
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
@@ -92,7 +92,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to languageDetails for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> post(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class LanguageDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a languageDetailsRequestBuilder
+     * @return a LanguageDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LanguageDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

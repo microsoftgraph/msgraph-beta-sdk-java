@@ -33,7 +33,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
      */
     private java.util.List<String> termIds;
     /**
-     * Instantiates a new educationOneRosterApiDataProvider and sets the default values.
+     * Instantiates a new EducationOneRosterApiDataProvider and sets the default values.
      */
     public EducationOneRosterApiDataProvider() {
         super();
@@ -42,7 +42,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationOneRosterApiDataProvider
+     * @return a EducationOneRosterApiDataProvider
      */
     @jakarta.annotation.Nonnull
     public static EducationOneRosterApiDataProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     }
     /**
      * Gets the connectionSettings property value. The connectionSettings property
-     * @return a educationSynchronizationConnectionSettings
+     * @return a EducationSynchronizationConnectionSettings
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationConnectionSettings getConnectionSettings() {
@@ -59,7 +59,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     }
     /**
      * Gets the connectionUrl property value. The connection URL to the OneRoster instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionUrl() {
@@ -67,7 +67,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     }
     /**
      * Gets the customizations property value. Optional customization to be applied to the synchronization profile.
-     * @return a educationSynchronizationCustomizations
+     * @return a EducationSynchronizationCustomizations
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomizations getCustomizations() {
@@ -90,7 +90,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     }
     /**
      * Gets the providerName property value. The OneRoster Service Provider name as defined by the [OneRoster specification][oneroster].
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
@@ -98,7 +98,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     }
     /**
      * Gets the schoolsIds property value. The list of [School/Org][orgs] sourcedId to sync.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSchoolsIds() {
@@ -106,7 +106,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
     }
     /**
      * Gets the termIds property value. The list of [academic sessions][terms] to sync.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTermIds() {

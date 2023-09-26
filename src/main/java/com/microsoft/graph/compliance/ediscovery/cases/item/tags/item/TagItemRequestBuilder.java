@@ -87,7 +87,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a tag object.
-     * @return a CompletableFuture of tag
+     * @return a CompletableFuture of Tag
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-get?view=graph-rest-1.0">Find more info here</a>
@@ -100,7 +100,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a tag object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tag
+     * @return a CompletableFuture of Tag
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-get?view=graph-rest-1.0">Find more info here</a>
@@ -117,7 +117,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a tag object.
      * @param body The request body
-     * @return a CompletableFuture of tag
+     * @return a CompletableFuture of Tag
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-update?view=graph-rest-1.0">Find more info here</a>
@@ -131,7 +131,7 @@ public class TagItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a tag object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tag
+     * @return a CompletableFuture of Tag
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-tag-update?view=graph-rest-1.0">Find more info here</a>

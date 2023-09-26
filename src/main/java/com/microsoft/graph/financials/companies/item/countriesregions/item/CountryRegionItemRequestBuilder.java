@@ -57,7 +57,7 @@ public class CountryRegionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get countriesRegions from financials
-     * @return a CompletableFuture of countryRegion
+     * @return a CompletableFuture of CountryRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegion> get() {
@@ -66,7 +66,7 @@ public class CountryRegionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get countriesRegions from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of countryRegion
+     * @return a CompletableFuture of CountryRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CountryRegionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property countriesRegions in financials
      * @param body The request body
-     * @return a CompletableFuture of countryRegion
+     * @return a CompletableFuture of CountryRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegion> patch(@jakarta.annotation.Nonnull final CountryRegion body) {
@@ -89,7 +89,7 @@ public class CountryRegionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property countriesRegions in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of countryRegion
+     * @return a CompletableFuture of CountryRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegion> patch(@jakarta.annotation.Nonnull final CountryRegion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

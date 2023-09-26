@@ -60,7 +60,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of personWebsite objects from a user's profile.
-     * @return a CompletableFuture of personWebsiteCollectionResponse
+     * @return a CompletableFuture of PersonWebsiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personWebsite objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personWebsiteCollectionResponse
+     * @return a CompletableFuture of PersonWebsiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new personWebsite object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of personWebsite
+     * @return a CompletableFuture of PersonWebsite
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
      * Create a new personWebsite object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personWebsite
+     * @return a CompletableFuture of PersonWebsite
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-websites?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class WebsitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a websitesRequestBuilder
+     * @return a WebsitesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WebsitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

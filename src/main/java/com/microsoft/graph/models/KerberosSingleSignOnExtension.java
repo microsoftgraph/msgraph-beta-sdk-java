@@ -96,7 +96,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new kerberosSingleSignOnExtension and sets the default values.
+     * Instantiates a new KerberosSingleSignOnExtension and sets the default values.
      */
     public KerberosSingleSignOnExtension() {
         super();
@@ -105,7 +105,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a kerberosSingleSignOnExtension
+     * @return a KerberosSingleSignOnExtension
      */
     @jakarta.annotation.Nonnull
     public static KerberosSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,7 +114,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the activeDirectorySiteCode property value. Gets or sets the Active Directory site.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActiveDirectorySiteCode() {
@@ -122,7 +122,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the blockActiveDirectorySiteAutoDiscovery property value. Enables or disables whether the Kerberos extension can automatically determine its site name.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockActiveDirectorySiteAutoDiscovery() {
@@ -130,7 +130,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the blockAutomaticLogin property value. Enables or disables Keychain usage.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockAutomaticLogin() {
@@ -138,7 +138,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the cacheName property value. Gets or sets the Generic Security Services name of the Kerberos cache to use for this profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCacheName() {
@@ -146,7 +146,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the credentialBundleIdAccessControlList property value. Gets or sets a list of app Bundle IDs allowed to access the Kerberos Ticket Granting Ticket.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCredentialBundleIdAccessControlList() {
@@ -154,7 +154,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the domainRealms property value. Gets or sets a list of realms for custom domain-realm mapping. Realms are case sensitive.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomainRealms() {
@@ -162,7 +162,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -200,7 +200,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the isDefaultRealm property value. When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultRealm() {
@@ -208,7 +208,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordBlockModification property value. Enables or disables password changes.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockModification() {
@@ -216,7 +216,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordChangeUrl property value. Gets or sets the URL that the user will be sent to when they initiate a password change.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordChangeUrl() {
@@ -224,7 +224,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordEnableLocalSync property value. Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordEnableLocalSync() {
@@ -232,7 +232,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordExpirationDays property value. Overrides the default password expiration in days. For most domains, this value is calculated automatically.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -240,7 +240,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordExpirationNotificationDays property value. Gets or sets the number of days until the user is notified that their password will expire (default is 15).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationNotificationDays() {
@@ -248,7 +248,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordMinimumAgeDays property value. Gets or sets the minimum number of days until a user can change their password again.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumAgeDays() {
@@ -256,7 +256,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordMinimumLength property value. Gets or sets the minimum length of a password.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -264,7 +264,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Gets or sets the number of previous passwords to block.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -272,7 +272,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordRequireActiveDirectoryComplexity property value. Enables or disables whether passwords must meet Active Directory's complexity requirements.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequireActiveDirectoryComplexity() {
@@ -280,7 +280,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the passwordRequirementsDescription property value. Gets or sets a description of the password complexity requirements.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordRequirementsDescription() {
@@ -288,7 +288,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -296,7 +296,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the requireUserPresence property value. Gets or sets whether to require authentication via Touch ID, Face ID, or a passcode to access the keychain entry.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireUserPresence() {
@@ -304,7 +304,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
     }
     /**
      * Gets the userPrincipalName property value. Gets or sets the principle user name to use for this profile. The realm name does not need to be included.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

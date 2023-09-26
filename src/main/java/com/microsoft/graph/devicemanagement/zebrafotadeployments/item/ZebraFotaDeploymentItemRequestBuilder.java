@@ -65,7 +65,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of ZebraFotaDeployments associated with account.
-     * @return a CompletableFuture of zebraFotaDeployment
+     * @return a CompletableFuture of ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeployment> get() {
@@ -74,7 +74,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of ZebraFotaDeployments associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of zebraFotaDeployment
+     * @return a CompletableFuture of ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeployment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property zebraFotaDeployments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of zebraFotaDeployment
+     * @return a CompletableFuture of ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeployment> patch(@jakarta.annotation.Nonnull final ZebraFotaDeployment body) {
@@ -97,7 +97,7 @@ public class ZebraFotaDeploymentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property zebraFotaDeployments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of zebraFotaDeployment
+     * @return a CompletableFuture of ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeployment> patch(@jakarta.annotation.Nonnull final ZebraFotaDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

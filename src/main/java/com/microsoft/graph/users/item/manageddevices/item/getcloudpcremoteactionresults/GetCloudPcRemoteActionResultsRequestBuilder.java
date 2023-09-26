@@ -37,7 +37,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Invoke function getCloudPcRemoteActionResults
-     * @return a CompletableFuture of getCloudPcRemoteActionResultsResponse
+     * @return a CompletableFuture of GetCloudPcRemoteActionResultsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCloudPcRemoteActionResultsResponse> get() {
@@ -46,7 +46,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
     /**
      * Invoke function getCloudPcRemoteActionResults
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getCloudPcRemoteActionResultsResponse
+     * @return a CompletableFuture of GetCloudPcRemoteActionResultsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCloudPcRemoteActionResultsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCloudPcRemoteActionResultsRequestBuilder
+     * @return a GetCloudPcRemoteActionResultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCloudPcRemoteActionResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

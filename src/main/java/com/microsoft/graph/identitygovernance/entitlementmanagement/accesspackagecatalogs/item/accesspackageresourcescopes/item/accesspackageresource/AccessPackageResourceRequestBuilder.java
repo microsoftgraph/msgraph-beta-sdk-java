@@ -96,7 +96,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get accessPackageResource from identityGovernance
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -108,7 +108,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get accessPackageResource from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -124,7 +124,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property accessPackageResource in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -137,7 +137,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property accessPackageResource in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -260,7 +260,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageResourceRequestBuilder
+     * @return a AccessPackageResourceRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

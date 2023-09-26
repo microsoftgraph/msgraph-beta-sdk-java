@@ -18,7 +18,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     /**
      * Payload. (UTF8 encoded byte array)
      */
-    private byte[] payload;
+    private Base64url payload;
     /**
      * Payload file name (.mobileconfig
      */
@@ -28,7 +28,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      */
     private String payloadName;
     /**
-     * Instantiates a new macOSCustomConfiguration and sets the default values.
+     * Instantiates a new MacOSCustomConfiguration and sets the default values.
      */
     public MacOSCustomConfiguration() {
         super();
@@ -37,7 +37,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCustomConfiguration
+     * @return a MacOSCustomConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSCustomConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the deploymentChannel property value. Indicates the channel used to deploy the configuration profile. Available choices are DeviceChannel, UserChannel
-     * @return a appleDeploymentChannel
+     * @return a AppleDeploymentChannel
      */
     @jakarta.annotation.Nullable
     public AppleDeploymentChannel getDeploymentChannel() {
@@ -60,22 +60,22 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel.class)); });
-        deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
         deserializerMap.put("payloadName", (n) -> { this.setPayloadName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getPayload() {
+    public Base64url getPayload() {
         return this.payload;
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.mobileconfig
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -83,7 +83,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the payloadName property value. Name that is displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadName() {
@@ -97,7 +97,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
-        writer.writeByteArrayValue("payload", this.getPayload());
+        writer.writeObjectValue("payload", this.getPayload());
         writer.writeStringValue("payloadFileName", this.getPayloadFileName());
         writer.writeStringValue("payloadName", this.getPayloadName());
     }
@@ -112,7 +112,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * Sets the payload property value. Payload. (UTF8 encoded byte array)
      * @param value Value to set for the payload property.
      */
-    public void setPayload(@jakarta.annotation.Nullable final byte[] value) {
+    public void setPayload(@jakarta.annotation.Nullable final Base64url value) {
         this.payload = value;
     }
     /**

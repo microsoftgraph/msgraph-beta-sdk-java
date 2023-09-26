@@ -60,7 +60,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the emailThreatSubmission objects and their properties.
-     * @return a CompletableFuture of emailThreatSubmissionCollectionResponse
+     * @return a CompletableFuture of EmailThreatSubmissionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the emailThreatSubmission objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailThreatSubmissionCollectionResponse
+     * @return a CompletableFuture of EmailThreatSubmissionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new emailThreatSubmission object.
      * @param body The request body
-     * @return a CompletableFuture of emailThreatSubmission
+     * @return a CompletableFuture of EmailThreatSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-post-emailthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
      * Create a new emailThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailThreatSubmission
+     * @return a CompletableFuture of EmailThreatSubmission
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmission-post-emailthreats?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class EmailThreatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a emailThreatsRequestBuilder
+     * @return a EmailThreatsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EmailThreatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

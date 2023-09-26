@@ -36,7 +36,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     }
     /**
      * Set mobile device management authority
-     * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityResponse> post() {
@@ -45,7 +45,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     /**
      * Set mobile device management authority
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of setMobileDeviceManagementAuthorityResponse
+     * @return a CompletableFuture of SetMobileDeviceManagementAuthorityResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SetMobileDeviceManagementAuthorityResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class SetMobileDeviceManagementAuthorityRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setMobileDeviceManagementAuthorityRequestBuilder
+     * @return a SetMobileDeviceManagementAuthorityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetMobileDeviceManagementAuthorityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

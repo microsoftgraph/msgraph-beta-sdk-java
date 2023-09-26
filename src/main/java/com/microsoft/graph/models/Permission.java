@@ -54,7 +54,7 @@ public class Permission extends Entity implements Parsable {
      */
     private String shareId;
     /**
-     * Instantiates a new permission and sets the default values.
+     * Instantiates a new Permission and sets the default values.
      */
     public Permission() {
         super();
@@ -62,7 +62,7 @@ public class Permission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a permission
+     * @return a Permission
      */
     @jakarta.annotation.Nonnull
     public static Permission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -99,7 +99,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedTo property value. The grantedTo property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getGrantedTo() {
@@ -107,7 +107,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedToIdentities property value. The grantedToIdentities property
-     * @return a identitySet
+     * @return a java.util.List<IdentitySet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentitySet> getGrantedToIdentities() {
@@ -115,7 +115,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedToIdentitiesV2 property value. For link type permissions, the details of the users to whom permission was granted. Read-only.
-     * @return a sharePointIdentitySet
+     * @return a java.util.List<SharePointIdentitySet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SharePointIdentitySet> getGrantedToIdentitiesV2() {
@@ -123,7 +123,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the grantedToV2 property value. For user type permissions, the details of the users and applications for this permission. Read-only.
-     * @return a sharePointIdentitySet
+     * @return a SharePointIdentitySet
      */
     @jakarta.annotation.Nullable
     public SharePointIdentitySet getGrantedToV2() {
@@ -131,7 +131,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the hasPassword property value. Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. For OneDrive Personal only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPassword() {
@@ -139,7 +139,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it is inherited from an ancestor. Read-only.
-     * @return a itemReference
+     * @return a ItemReference
      */
     @jakarta.annotation.Nullable
     public ItemReference getInheritedFrom() {
@@ -147,7 +147,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the invitation property value. Details of any associated sharing invitation for this permission. Read-only.
-     * @return a sharingInvitation
+     * @return a SharingInvitation
      */
     @jakarta.annotation.Nullable
     public SharingInvitation getInvitation() {
@@ -155,7 +155,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the link property value. Provides the link details of the current permission, if it is a link type permissions. Read-only.
-     * @return a sharingLink
+     * @return a SharingLink
      */
     @jakarta.annotation.Nullable
     public SharingLink getLink() {
@@ -163,7 +163,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the roles property value. The type of permission, for example, read. See below for the full list of roles. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoles() {
@@ -171,7 +171,7 @@ public class Permission extends Entity implements Parsable {
     }
     /**
      * Gets the shareId property value. A unique token that can be used to access this shared item via the [shares API][]. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShareId() {

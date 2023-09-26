@@ -70,7 +70,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get planner
-     * @return a CompletableFuture of planner
+     * @return a CompletableFuture of Planner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Planner> get() {
@@ -79,7 +79,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Get planner
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of planner
+     * @return a CompletableFuture of Planner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Planner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Update planner
      * @param body The request body
-     * @return a CompletableFuture of planner
+     * @return a CompletableFuture of Planner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Planner> patch(@jakarta.annotation.Nonnull final Planner body) {
@@ -102,7 +102,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * Update planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of planner
+     * @return a CompletableFuture of Planner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Planner> patch(@jakarta.annotation.Nonnull final Planner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -177,7 +177,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a plannerRequestBuilder
+     * @return a PlannerRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PlannerRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -38,7 +38,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination.
      * @param body The request body
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directory-deleteditems-getuserownedobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of recently deleted application and group objects owned by the specified user. This API returns up to 1,000 deleted objects owned by the user, sorted by ID, and doesn't support pagination.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryObject
+     * @return a CompletableFuture of DirectoryObject
      * @see <a href="https://learn.microsoft.com/graph/api/directory-deleteditems-getuserownedobjects?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class GetUserOwnedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getUserOwnedObjectsRequestBuilder
+     * @return a GetUserOwnedObjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetUserOwnedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

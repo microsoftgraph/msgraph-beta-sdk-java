@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Endpoint extends DirectoryObject implements Parsable {
     /**
-     * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
      */
     private String capability;
     /**
@@ -21,7 +21,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     private String providerName;
     /**
-     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
      */
     private String providerResourceId;
     /**
@@ -29,7 +29,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
      */
     private String uri;
     /**
-     * Instantiates a new endpoint and sets the default values.
+     * Instantiates a new Endpoint and sets the default values.
      */
     public Endpoint() {
         super();
@@ -38,7 +38,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a endpoint
+     * @return a Endpoint
      */
     @jakarta.annotation.Nonnull
     public static Endpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,8 +46,8 @@ public class Endpoint extends DirectoryObject implements Parsable {
         return new Endpoint();
     }
     /**
-     * Gets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
-     * @return a string
+     * Gets the capability property value. Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCapability() {
@@ -69,7 +69,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerId property value. Application id of the publishing underlying service. Not nullable. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderId() {
@@ -77,15 +77,15 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the providerName property value. Name of the publishing underlying service. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
         return this.providerName;
     }
     /**
-     * Gets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
-     * @return a string
+     * Gets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderResourceId() {
@@ -93,7 +93,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the uri property value. URL of the published resource. Not nullable. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUri() {
@@ -113,7 +113,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
         writer.writeStringValue("uri", this.getUri());
     }
     /**
-     * Sets the capability property value. Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * Sets the capability property value. Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
      * @param value Value to set for the capability property.
      */
     public void setCapability(@jakarta.annotation.Nullable final String value) {
@@ -134,7 +134,7 @@ public class Endpoint extends DirectoryObject implements Parsable {
         this.providerName = value;
     }
     /**
-     * Sets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * Sets the providerResourceId property value. For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
      * @param value Value to set for the providerResourceId property.
      */
     public void setProviderResourceId(@jakarta.annotation.Nullable final String value) {

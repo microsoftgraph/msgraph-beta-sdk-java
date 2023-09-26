@@ -63,7 +63,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the status of the Global Secure Access services for the tenant.
-     * @return a CompletableFuture of reports
+     * @return a CompletableFuture of Reports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Reports> get() {
@@ -72,7 +72,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the status of the Global Secure Access services for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reports
+     * @return a CompletableFuture of Reports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Reports> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the entitiesSummaries method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -99,7 +99,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param discoveryPivotDateTime Usage: discoveryPivotDateTime={discoveryPivotDateTime}
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder microsoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTime(@jakarta.annotation.Nonnull final OffsetDateTime discoveryPivotDateTime, @jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -113,7 +113,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param aggregatedBy Usage: aggregatedBy='{aggregatedBy}'
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder microsoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedBy(@jakarta.annotation.Nonnull final String aggregatedBy, @jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -127,7 +127,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param activityPivotDateTime Usage: activityPivotDateTime={activityPivotDateTime}
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWithEndDateTimeWithActivityPivotDateTimeRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWithEndDateTimeWithActivityPivotDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWithEndDateTimeWithActivityPivotDateTimeRequestBuilder microsoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWithEndDateTimeWithActivityPivotDateTime(@jakarta.annotation.Nonnull final OffsetDateTime activityPivotDateTime, @jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -140,7 +140,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the transactionSummaries method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a microsoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -151,7 +151,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reports in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of reports
+     * @return a CompletableFuture of Reports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Reports> patch(@jakarta.annotation.Nonnull final Reports body) {
@@ -161,7 +161,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reports in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reports
+     * @return a CompletableFuture of Reports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Reports> patch(@jakarta.annotation.Nonnull final Reports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -263,7 +263,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportsRequestBuilder
+     * @return a ReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

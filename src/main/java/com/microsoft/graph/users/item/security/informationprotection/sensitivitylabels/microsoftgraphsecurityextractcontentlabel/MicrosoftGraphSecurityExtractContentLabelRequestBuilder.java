@@ -38,7 +38,7 @@ public class MicrosoftGraphSecurityExtractContentLabelRequestBuilder extends Bas
     /**
      * Use the metadata that exists on an already-labeled piece of information to resolve the metadata to a specific sensitivity label. The contentInfo input is resolved to informationProtectionContentLabel.
      * @param body The request body
-     * @return a CompletableFuture of contentLabel
+     * @return a CompletableFuture of ContentLabel
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-extractcontentlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class MicrosoftGraphSecurityExtractContentLabelRequestBuilder extends Bas
      * Use the metadata that exists on an already-labeled piece of information to resolve the metadata to a specific sensitivity label. The contentInfo input is resolved to informationProtectionContentLabel.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentLabel
+     * @return a CompletableFuture of ContentLabel
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-extractcontentlabel?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class MicrosoftGraphSecurityExtractContentLabelRequestBuilder extends Bas
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityExtractContentLabelRequestBuilder
+     * @return a MicrosoftGraphSecurityExtractContentLabelRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityExtractContentLabelRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

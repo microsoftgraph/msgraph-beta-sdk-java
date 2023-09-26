@@ -29,7 +29,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
      */
     private String url;
     /**
-     * Instantiates a new customTrainingSetting and sets the default values.
+     * Instantiates a new CustomTrainingSetting and sets the default values.
      */
     public CustomTrainingSetting() {
         super();
@@ -38,7 +38,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customTrainingSetting
+     * @return a CustomTrainingSetting
      */
     @jakarta.annotation.Nonnull
     public static CustomTrainingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the assignedTo property value. The assignedTo property
-     * @return a trainingAssignedTo
+     * @return a java.util.List<TrainingAssignedTo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingAssignedTo> getAssignedTo() {
@@ -55,7 +55,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -63,7 +63,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -71,7 +71,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the durationInMinutes property value. The durationInMinutes property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDurationInMinutes() {
@@ -93,7 +93,7 @@ public class CustomTrainingSetting extends TrainingSetting implements Parsable {
     }
     /**
      * Gets the url property value. The url property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

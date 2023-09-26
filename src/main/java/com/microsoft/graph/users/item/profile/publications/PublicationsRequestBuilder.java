@@ -60,7 +60,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of itemPublication objects from a user's profile.
-     * @return a CompletableFuture of itemPublicationCollectionResponse
+     * @return a CompletableFuture of ItemPublicationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of itemPublication objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPublicationCollectionResponse
+     * @return a CompletableFuture of ItemPublicationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new itemPublication object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of itemPublication
+     * @return a CompletableFuture of ItemPublication
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
      * Create a new itemPublication object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPublication
+     * @return a CompletableFuture of ItemPublication
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-publications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PublicationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a publicationsRequestBuilder
+     * @return a PublicationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PublicationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

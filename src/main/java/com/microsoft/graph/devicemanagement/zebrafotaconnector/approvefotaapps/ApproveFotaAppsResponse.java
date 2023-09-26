@@ -18,7 +18,7 @@ public class ApproveFotaAppsResponse implements AdditionalDataHolder, Parsable {
      */
     private Boolean value;
     /**
-     * Instantiates a new approveFotaAppsResponse and sets the default values.
+     * Instantiates a new ApproveFotaAppsResponse and sets the default values.
      */
     public ApproveFotaAppsResponse() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class ApproveFotaAppsResponse implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approveFotaAppsResponse
+     * @return a ApproveFotaAppsResponse
      */
     @jakarta.annotation.Nonnull
     public static ApproveFotaAppsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class ApproveFotaAppsResponse implements AdditionalDataHolder, Parsable {
         return new ApproveFotaAppsResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ApproveFotaAppsResponse implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the value property value. The value property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getValue() {
@@ -69,8 +69,8 @@ public class ApproveFotaAppsResponse implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

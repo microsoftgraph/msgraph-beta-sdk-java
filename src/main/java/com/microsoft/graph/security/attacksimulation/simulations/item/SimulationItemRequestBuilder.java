@@ -83,7 +83,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get an attack simulation campaign for a tenant.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get an attack simulation campaign for a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an attack simulation campaign for a tenant.
      * @param body The request body
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
      * Update an attack simulation campaign for a tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

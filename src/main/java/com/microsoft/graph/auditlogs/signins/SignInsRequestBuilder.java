@@ -76,7 +76,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of signIn objects. The list contains the user sign-ins for your Azure Active Directory tenant. Sign-ins where a username and password are passed as part of authorization token, and successful federated sign-ins are currently included in the sign-in logs. The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Azure Active Directory (Azure AD) default retention period are available.
-     * @return a CompletableFuture of signInCollectionResponse
+     * @return a CompletableFuture of SignInCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of signIn objects. The list contains the user sign-ins for your Azure Active Directory tenant. Sign-ins where a username and password are passed as part of authorization token, and successful federated sign-ins are currently included in the sign-in logs. The maximum and default page size is 1,000 objects and by default, the most recent sign-ins are returned first. Only sign-in events that occurred within the Azure Active Directory (Azure AD) default retention period are available.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of signInCollectionResponse
+     * @return a CompletableFuture of SignInCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/signin-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
-     * @return a CompletableFuture of signIn
+     * @return a CompletableFuture of SignIn
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SignIn> post(@jakarta.annotation.Nonnull final SignIn body) {
@@ -110,7 +110,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to signIns for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of signIn
+     * @return a CompletableFuture of SignIn
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SignIn> post(@jakarta.annotation.Nonnull final SignIn body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -185,7 +185,7 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a signInsRequestBuilder
+     * @return a SignInsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SignInsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

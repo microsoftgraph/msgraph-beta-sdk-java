@@ -68,7 +68,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of plannerPlan objects.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of plannerPlan objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/planner-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new plannerPlan.
      * @param body The request body
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      * @see <a href="https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
      * Create a new plannerPlan.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      * @see <a href="https://learn.microsoft.com/graph/api/planner-post-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a plansRequestBuilder
+     * @return a PlansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

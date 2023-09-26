@@ -59,7 +59,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an itemPhone object in a user's profile.
-     * @return a CompletableFuture of itemPhone
+     * @return a CompletableFuture of ItemPhone
      * @see <a href="https://learn.microsoft.com/graph/api/itemphone-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an itemPhone object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPhone
+     * @return a CompletableFuture of ItemPhone
      * @see <a href="https://learn.microsoft.com/graph/api/itemphone-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an itemPhone object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of itemPhone
+     * @return a CompletableFuture of ItemPhone
      * @see <a href="https://learn.microsoft.com/graph/api/itemphone-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an itemPhone object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPhone
+     * @return a CompletableFuture of ItemPhone
      * @see <a href="https://learn.microsoft.com/graph/api/itemphone-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

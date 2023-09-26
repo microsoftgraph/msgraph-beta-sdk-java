@@ -37,7 +37,7 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action addGroup
      * @param body The request body
-     * @return a CompletableFuture of addGroupResponse
+     * @return a CompletableFuture of AddGroupResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddGroupResponse> post(@jakarta.annotation.Nonnull final AddGroupPostRequestBody body) {
@@ -47,7 +47,7 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
      * Invoke action addGroup
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of addGroupResponse
+     * @return a CompletableFuture of AddGroupResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AddGroupResponse> post(@jakarta.annotation.Nonnull final AddGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class AddGroupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addGroupRequestBuilder
+     * @return a AddGroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

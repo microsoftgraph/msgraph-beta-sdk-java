@@ -45,7 +45,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
      */
     private PerfectForwardSecrecyGroup pfsGroup;
     /**
-     * Instantiates a new cryptographySuite and sets the default values.
+     * Instantiates a new CryptographySuite and sets the default values.
      */
     public CryptographySuite() {
         this.setAdditionalData(new HashMap<>());
@@ -53,7 +53,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cryptographySuite
+     * @return a CryptographySuite
      */
     @jakarta.annotation.Nonnull
     public static CryptographySuite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         return new CryptographySuite();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationTransformConstants property value. Authentication Transform Constants. Possible values are: md596, sha196, sha256128, aes128Gcm, aes192Gcm, aes256Gcm.
-     * @return a authenticationTransformConstant
+     * @return a AuthenticationTransformConstant
      */
     @jakarta.annotation.Nullable
     public AuthenticationTransformConstant getAuthenticationTransformConstants() {
@@ -78,7 +78,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the cipherTransformConstants property value. Cipher Transform Constants. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a vpnEncryptionAlgorithmType
+     * @return a VpnEncryptionAlgorithmType
      */
     @jakarta.annotation.Nullable
     public VpnEncryptionAlgorithmType getCipherTransformConstants() {
@@ -86,7 +86,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dhGroup property value. Diffie Hellman Group. Possible values are: group1, group2, group14, ecp256, ecp384, group24.
-     * @return a diffieHellmanGroup
+     * @return a DiffieHellmanGroup
      */
     @jakarta.annotation.Nullable
     public DiffieHellmanGroup getDhGroup() {
@@ -94,7 +94,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the encryptionMethod property value. Encryption Method. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
-     * @return a vpnEncryptionAlgorithmType
+     * @return a VpnEncryptionAlgorithmType
      */
     @jakarta.annotation.Nullable
     public VpnEncryptionAlgorithmType getEncryptionMethod() {
@@ -118,7 +118,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the integrityCheckMethod property value. Integrity Check Method. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
-     * @return a vpnIntegrityAlgorithmType
+     * @return a VpnIntegrityAlgorithmType
      */
     @jakarta.annotation.Nullable
     public VpnIntegrityAlgorithmType getIntegrityCheckMethod() {
@@ -126,7 +126,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -134,7 +134,7 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the pfsGroup property value. Perfect Forward Secrecy Group. Possible values are: pfs1, pfs2, pfs2048, ecp256, ecp384, pfsMM, pfs24.
-     * @return a perfectForwardSecrecyGroup
+     * @return a PerfectForwardSecrecyGroup
      */
     @jakarta.annotation.Nullable
     public PerfectForwardSecrecyGroup getPfsGroup() {
@@ -156,8 +156,8 @@ public class CryptographySuite implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

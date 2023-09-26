@@ -65,7 +65,7 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a subdomain object.
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      * @see <a href="https://learn.microsoft.com/graph/api/security-subdomain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a subdomain object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      * @see <a href="https://learn.microsoft.com/graph/api/security-subdomain-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property subdomains in security
      * @param body The request body
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> patch(@jakarta.annotation.Nonnull final Subdomain body) {
@@ -99,7 +99,7 @@ public class SubdomainItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property subdomains in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> patch(@jakarta.annotation.Nonnull final Subdomain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

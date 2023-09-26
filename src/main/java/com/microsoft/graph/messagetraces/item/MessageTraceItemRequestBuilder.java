@@ -65,7 +65,7 @@ public class MessageTraceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from messageTraces by key
-     * @return a CompletableFuture of messageTrace
+     * @return a CompletableFuture of MessageTrace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageTrace> get() {
@@ -74,7 +74,7 @@ public class MessageTraceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from messageTraces by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageTrace
+     * @return a CompletableFuture of MessageTrace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageTrace> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MessageTraceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in messageTraces
      * @param body The request body
-     * @return a CompletableFuture of messageTrace
+     * @return a CompletableFuture of MessageTrace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageTrace> patch(@jakarta.annotation.Nonnull final MessageTrace body) {
@@ -97,7 +97,7 @@ public class MessageTraceItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in messageTraces
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageTrace
+     * @return a CompletableFuture of MessageTrace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageTrace> patch(@jakarta.annotation.Nonnull final MessageTrace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

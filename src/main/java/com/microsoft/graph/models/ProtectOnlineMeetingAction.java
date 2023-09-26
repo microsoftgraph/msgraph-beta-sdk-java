@@ -29,7 +29,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
      */
     private LobbyBypassSettings lobbyBypassSettings;
     /**
-     * Instantiates a new protectOnlineMeetingAction and sets the default values.
+     * Instantiates a new ProtectOnlineMeetingAction and sets the default values.
      */
     public ProtectOnlineMeetingAction() {
         super();
@@ -38,7 +38,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectOnlineMeetingAction
+     * @return a ProtectOnlineMeetingAction
      */
     @jakarta.annotation.Nonnull
     public static ProtectOnlineMeetingAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the allowedForwarders property value. The allowedForwarders property
-     * @return a onlineMeetingForwarders
+     * @return a OnlineMeetingForwarders
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingForwarders getAllowedForwarders() {
@@ -55,7 +55,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the allowedPresenters property value. The allowedPresenters property
-     * @return a onlineMeetingPresenters
+     * @return a OnlineMeetingPresenters
      */
     @jakarta.annotation.Nullable
     public OnlineMeetingPresenters getAllowedPresenters() {
@@ -77,7 +77,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the isCopyToClipboardEnabled property value. The isCopyToClipboardEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCopyToClipboardEnabled() {
@@ -85,7 +85,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the isLobbyEnabled property value. The isLobbyEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLobbyEnabled() {
@@ -93,7 +93,7 @@ public class ProtectOnlineMeetingAction extends LabelActionBase implements Parsa
     }
     /**
      * Gets the lobbyBypassSettings property value. The lobbyBypassSettings property
-     * @return a lobbyBypassSettings
+     * @return a LobbyBypassSettings
      */
     @jakarta.annotation.Nullable
     public LobbyBypassSettings getLobbyBypassSettings() {

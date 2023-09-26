@@ -137,7 +137,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * This collections of multiple DEP tokens per-tenant.
-     * @return a CompletableFuture of depOnboardingSetting
+     * @return a CompletableFuture of DepOnboardingSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> get() {
@@ -146,7 +146,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * This collections of multiple DEP tokens per-tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of depOnboardingSetting
+     * @return a CompletableFuture of DepOnboardingSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of depOnboardingSetting
+     * @return a CompletableFuture of DepOnboardingSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> patch(@jakarta.annotation.Nonnull final DepOnboardingSetting body) {
@@ -169,7 +169,7 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property depOnboardingSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of depOnboardingSetting
+     * @return a CompletableFuture of DepOnboardingSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> patch(@jakarta.annotation.Nonnull final DepOnboardingSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

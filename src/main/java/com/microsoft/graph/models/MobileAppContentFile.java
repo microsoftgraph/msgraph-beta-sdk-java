@@ -39,7 +39,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * The manifest information.
      */
-    private byte[] manifest;
+    private Base64url manifest;
     /**
      * the file name.
      */
@@ -57,7 +57,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     private MobileAppContentFileUploadState uploadState;
     /**
-     * Instantiates a new mobileAppContentFile and sets the default values.
+     * Instantiates a new MobileAppContentFile and sets the default values.
      */
     public MobileAppContentFile() {
         super();
@@ -65,7 +65,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppContentFile
+     * @return a MobileAppContentFile
      */
     @jakarta.annotation.Nonnull
     public static MobileAppContentFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the azureStorageUri property value. The Azure Storage URI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageUri() {
@@ -109,7 +109,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         deserializerMap.put("isCommitted", (n) -> { this.setIsCommitted(n.getBooleanValue()); });
         deserializerMap.put("isDependency", (n) -> { this.setIsDependency(n.getBooleanValue()); });
         deserializerMap.put("isFrameworkFile", (n) -> { this.setIsFrameworkFile(n.getBooleanValue()); });
-        deserializerMap.put("manifest", (n) -> { this.setManifest(n.getByteArrayValue()); });
+        deserializerMap.put("manifest", (n) -> { this.setManifest(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
         deserializerMap.put("sizeEncrypted", (n) -> { this.setSizeEncrypted(n.getLongValue()); });
@@ -118,7 +118,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isCommitted property value. A value indicating whether the file is committed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommitted() {
@@ -126,7 +126,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isDependency property value. Whether the content file is a dependency for the main content file.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDependency() {
@@ -134,7 +134,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isFrameworkFile property value. A value indicating whether the file is a framework file.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFrameworkFile() {
@@ -142,15 +142,15 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the manifest property value. The manifest information.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getManifest() {
+    public Base64url getManifest() {
         return this.manifest;
     }
     /**
      * Gets the name property value. the file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -158,7 +158,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size of the file prior to encryption.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -166,7 +166,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the sizeEncrypted property value. The size of the file after encryption.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSizeEncrypted() {
@@ -174,7 +174,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the uploadState property value. Contains properties for upload request states.
-     * @return a mobileAppContentFileUploadState
+     * @return a MobileAppContentFileUploadState
      */
     @jakarta.annotation.Nullable
     public MobileAppContentFileUploadState getUploadState() {
@@ -193,7 +193,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         writer.writeBooleanValue("isCommitted", this.getIsCommitted());
         writer.writeBooleanValue("isDependency", this.getIsDependency());
         writer.writeBooleanValue("isFrameworkFile", this.getIsFrameworkFile());
-        writer.writeByteArrayValue("manifest", this.getManifest());
+        writer.writeObjectValue("manifest", this.getManifest());
         writer.writeStringValue("name", this.getName());
         writer.writeLongValue("size", this.getSize());
         writer.writeLongValue("sizeEncrypted", this.getSizeEncrypted());
@@ -245,7 +245,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * Sets the manifest property value. The manifest information.
      * @param value Value to set for the manifest property.
      */
-    public void setManifest(@jakarta.annotation.Nullable final byte[] value) {
+    public void setManifest(@jakarta.annotation.Nullable final Base64url value) {
         this.manifest = value;
     }
     /**

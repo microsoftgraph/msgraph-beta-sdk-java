@@ -60,7 +60,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostPair object.
-     * @return a CompletableFuture of hostPairCollectionResponse
+     * @return a CompletableFuture of HostPairCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPairCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a hostPair object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPairCollectionResponse
+     * @return a CompletableFuture of HostPairCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPairCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostPairs for security
      * @param body The request body
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> post(@jakarta.annotation.Nonnull final HostPair body) {
@@ -92,7 +92,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostPairs for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> post(@jakarta.annotation.Nonnull final HostPair body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostPairsRequestBuilder
+     * @return a HostPairsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostPairsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

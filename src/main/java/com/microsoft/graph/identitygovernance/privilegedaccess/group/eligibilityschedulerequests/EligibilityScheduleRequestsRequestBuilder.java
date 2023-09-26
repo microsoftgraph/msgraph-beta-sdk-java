@@ -62,7 +62,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,7 +106,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
      * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a eligibilityScheduleRequestsRequestBuilder
+     * @return a EligibilityScheduleRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EligibilityScheduleRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

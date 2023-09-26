@@ -73,7 +73,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. The role definition that is enforced with this role setting.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> get() {
@@ -82,7 +82,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. The role definition that is enforced with this role setting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleDefinition in privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> patch(@jakarta.annotation.Nonnull final GovernanceRoleDefinition body) {
@@ -105,7 +105,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleDefinition in privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> patch(@jakarta.annotation.Nonnull final GovernanceRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleDefinitionRequestBuilder
+     * @return a RoleDefinitionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

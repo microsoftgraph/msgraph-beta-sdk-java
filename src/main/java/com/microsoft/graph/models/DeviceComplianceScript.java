@@ -27,7 +27,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     /**
      * The entire content of the detection powershell script
      */
-    private byte[] detectionScriptContent;
+    private Base64url detectionScriptContent;
     /**
      * List of run states for the device compliance script across all devices
      */
@@ -69,7 +69,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new deviceComplianceScript and sets the default values.
+     * Instantiates a new DeviceComplianceScript and sets the default values.
      */
     public DeviceComplianceScript() {
         super();
@@ -77,7 +77,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScript
+     * @return a DeviceComplianceScript
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +86,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device compliance script
-     * @return a deviceHealthScriptAssignment
+     * @return a java.util.List<DeviceHealthScriptAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScriptAssignment> getAssignments() {
@@ -102,7 +102,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the device compliance script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -110,15 +110,15 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the detectionScriptContent property value. The entire content of the detection powershell script
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getDetectionScriptContent() {
+    public Base64url getDetectionScriptContent() {
         return this.detectionScriptContent;
     }
     /**
      * Gets the deviceRunStates property value. List of run states for the device compliance script across all devices
-     * @return a deviceComplianceScriptDeviceState
+     * @return a java.util.List<DeviceComplianceScriptDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScriptDeviceState> getDeviceRunStates() {
@@ -126,7 +126,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the device compliance script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -134,7 +134,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
@@ -150,7 +150,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceHealthScriptAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("detectionScriptContent", (n) -> { this.setDetectionScriptContent(n.getByteArrayValue()); });
+        deserializerMap.put("detectionScriptContent", (n) -> { this.setDetectionScriptContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceRunStates", (n) -> { this.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceComplianceScriptDeviceState::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enforceSignatureCheck", (n) -> { this.setEnforceSignatureCheck(n.getBooleanValue()); });
@@ -173,7 +173,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. Name of the device compliance script publisher
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -181,7 +181,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for the device compliance script
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -189,7 +189,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAs32Bit property value. Indicate whether PowerShell script(s) should run as 32-bit
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
@@ -197,7 +197,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -205,7 +205,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the runSummary property value. High level run summary for device compliance script.
-     * @return a deviceComplianceScriptRunSummary
+     * @return a DeviceComplianceScriptRunSummary
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceScriptRunSummary getRunSummary() {
@@ -213,7 +213,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the device compliance script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -228,7 +228,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeByteArrayValue("detectionScriptContent", this.getDetectionScriptContent());
+        writer.writeObjectValue("detectionScriptContent", this.getDetectionScriptContent());
         writer.writeCollectionOfObjectValues("deviceRunStates", this.getDeviceRunStates());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("enforceSignatureCheck", this.getEnforceSignatureCheck());
@@ -264,7 +264,7 @@ public class DeviceComplianceScript extends Entity implements Parsable {
      * Sets the detectionScriptContent property value. The entire content of the detection powershell script
      * @param value Value to set for the detectionScriptContent property.
      */
-    public void setDetectionScriptContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setDetectionScriptContent(@jakarta.annotation.Nullable final Base64url value) {
         this.detectionScriptContent = value;
     }
     /**

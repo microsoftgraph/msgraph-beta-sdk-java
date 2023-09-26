@@ -37,7 +37,7 @@ public class EvaluateClassificationResultsRequestBuilder extends BaseRequestBuil
     /**
      * Using classification results, compute the information protection label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set automatically based on classification of the file contents, rather than labeled directly by a user or service.  To evaluate based on classification results, provide contentInfo, which includes existing content metadata key/value pairs, and classification results. The API returns an informationProtectionAction that contains one of more of the following: 
      * @param body The request body
-     * @return a CompletableFuture of evaluateClassificationResultsResponse
+     * @return a CompletableFuture of EvaluateClassificationResultsResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-evaluateclassificationresults?view=graph-rest-1.0">Find more info here</a>
@@ -51,7 +51,7 @@ public class EvaluateClassificationResultsRequestBuilder extends BaseRequestBuil
      * Using classification results, compute the information protection label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set automatically based on classification of the file contents, rather than labeled directly by a user or service.  To evaluate based on classification results, provide contentInfo, which includes existing content metadata key/value pairs, and classification results. The API returns an informationProtectionAction that contains one of more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateClassificationResultsResponse
+     * @return a CompletableFuture of EvaluateClassificationResultsResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-evaluateclassificationresults?view=graph-rest-1.0">Find more info here</a>
@@ -107,7 +107,7 @@ public class EvaluateClassificationResultsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a evaluateClassificationResultsRequestBuilder
+     * @return a EvaluateClassificationResultsRequestBuilder
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */

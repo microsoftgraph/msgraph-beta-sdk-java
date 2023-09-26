@@ -69,7 +69,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of cloudPcSnapshot objects and their properties.
-     * @return a CompletableFuture of cloudPcSnapshotCollectionResponse
+     * @return a CompletableFuture of CloudPcSnapshotCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,7 +79,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of cloudPcSnapshot objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSnapshotCollectionResponse
+     * @return a CompletableFuture of CloudPcSnapshotCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-snapshots?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getStorageAccounts method.
      * @param subscriptionId Usage: subscriptionId='{subscriptionId}'
-     * @return a getStorageAccountsWithSubscriptionIdRequestBuilder
+     * @return a GetStorageAccountsWithSubscriptionIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetStorageAccountsWithSubscriptionIdRequestBuilder getStorageAccountsWithSubscriptionId(@jakarta.annotation.Nonnull final String subscriptionId) {
@@ -103,7 +103,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to snapshots for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcSnapshot
+     * @return a CompletableFuture of CloudPcSnapshot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSnapshot> post(@jakarta.annotation.Nonnull final CloudPcSnapshot body) {
@@ -113,7 +113,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to snapshots for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSnapshot
+     * @return a CompletableFuture of CloudPcSnapshot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSnapshot> post(@jakarta.annotation.Nonnull final CloudPcSnapshot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -188,7 +188,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a snapshotsRequestBuilder
+     * @return a SnapshotsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SnapshotsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

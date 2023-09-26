@@ -60,7 +60,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get landingPages from security
-     * @return a CompletableFuture of landingPageCollectionResponse
+     * @return a CompletableFuture of LandingPageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get landingPages from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPageCollectionResponse
+     * @return a CompletableFuture of LandingPageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to landingPages for security
      * @param body The request body
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> post(@jakarta.annotation.Nonnull final LandingPage body) {
@@ -92,7 +92,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to landingPages for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> post(@jakarta.annotation.Nonnull final LandingPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a landingPagesRequestBuilder
+     * @return a LandingPagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LandingPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

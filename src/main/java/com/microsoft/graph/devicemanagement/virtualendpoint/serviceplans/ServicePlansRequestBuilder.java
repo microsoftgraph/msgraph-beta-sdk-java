@@ -60,7 +60,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the currently available service plans that an organization can purchase for their Cloud PCs. For examples of currently available service plans, see Windows 365 compare plans and pricing. Currently, Microsoft Graph API is available for Windows 365 Enterprise.
-     * @return a CompletableFuture of cloudPcServicePlanCollectionResponse
+     * @return a CompletableFuture of CloudPcServicePlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-serviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * List the currently available service plans that an organization can purchase for their Cloud PCs. For examples of currently available service plans, see Windows 365 compare plans and pricing. Currently, Microsoft Graph API is available for Windows 365 Enterprise.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcServicePlanCollectionResponse
+     * @return a CompletableFuture of CloudPcServicePlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-serviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to servicePlans for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcServicePlan
+     * @return a CompletableFuture of CloudPcServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcServicePlan> post(@jakarta.annotation.Nonnull final CloudPcServicePlan body) {
@@ -94,7 +94,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to servicePlans for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcServicePlan
+     * @return a CompletableFuture of CloudPcServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcServicePlan> post(@jakarta.annotation.Nonnull final CloudPcServicePlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePlansRequestBuilder
+     * @return a ServicePlansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -65,7 +65,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     }
     /**
      * The list of scheduled action for this rule
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> get() {
@@ -74,7 +74,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     /**
      * The list of scheduled action for this rule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     /**
      * Update the navigation property scheduledActionsForRule in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> patch(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body) {
@@ -97,7 +97,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
      * Update the navigation property scheduledActionsForRule in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> patch(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

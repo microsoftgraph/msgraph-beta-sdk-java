@@ -30,7 +30,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new todoSettings and sets the default values.
+     * Instantiates a new TodoSettings and sets the default values.
      */
     public TodoSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a todoSettings
+     * @return a TodoSettings
      */
     @jakarta.annotation.Nonnull
     public static TodoSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
         return new TodoSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalJoinEnabled property value. Controls whether users can join lists from users external to your organization.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalJoinEnabled() {
@@ -76,7 +76,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isExternalShareEnabled property value. Controls whether users can share lists with external users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareEnabled() {
@@ -84,7 +84,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isPushNotificationEnabled property value. Controls whether push notifications are enabled for your users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPushNotificationEnabled() {
@@ -92,7 +92,7 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class TodoSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

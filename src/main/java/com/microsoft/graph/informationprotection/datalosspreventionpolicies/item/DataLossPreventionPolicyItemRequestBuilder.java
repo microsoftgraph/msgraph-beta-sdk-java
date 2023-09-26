@@ -57,7 +57,7 @@ public class DataLossPreventionPolicyItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get dataLossPreventionPolicies from informationProtection
-     * @return a CompletableFuture of dataLossPreventionPolicy
+     * @return a CompletableFuture of DataLossPreventionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicy> get() {
@@ -66,7 +66,7 @@ public class DataLossPreventionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Get dataLossPreventionPolicies from informationProtection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataLossPreventionPolicy
+     * @return a CompletableFuture of DataLossPreventionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DataLossPreventionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property dataLossPreventionPolicies in informationProtection
      * @param body The request body
-     * @return a CompletableFuture of dataLossPreventionPolicy
+     * @return a CompletableFuture of DataLossPreventionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicy> patch(@jakarta.annotation.Nonnull final DataLossPreventionPolicy body) {
@@ -89,7 +89,7 @@ public class DataLossPreventionPolicyItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property dataLossPreventionPolicies in informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataLossPreventionPolicy
+     * @return a CompletableFuture of DataLossPreventionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicy> patch(@jakarta.annotation.Nonnull final DataLossPreventionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -38,7 +38,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
     /**
      * Invoke action changeDeploymentStatus
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a CompletableFuture of ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> post(@jakarta.annotation.Nonnull final ChangeDeploymentStatusPostRequestBody body) {
@@ -48,7 +48,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
      * Invoke action changeDeploymentStatus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a CompletableFuture of ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> post(@jakarta.annotation.Nonnull final ChangeDeploymentStatusPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsChangeDeploymentStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

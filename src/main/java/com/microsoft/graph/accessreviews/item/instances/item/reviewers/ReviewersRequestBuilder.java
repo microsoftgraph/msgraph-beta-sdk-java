@@ -60,7 +60,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In the Azure AD access reviews feature, retrieve the reviewers of an accessReview object.
-     * @return a CompletableFuture of accessReviewReviewerCollectionResponse
+     * @return a CompletableFuture of AccessReviewReviewerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, retrieve the reviewers of an accessReview object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewerCollectionResponse
+     * @return a CompletableFuture of AccessReviewReviewerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listreviewers?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that isn't yet completed, and only for an access review where the reviewers are explicitly specified. This operation isn't permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, update an existing accessReview object to add another user as a reviewer.  This operation is only permitted for an access review that isn't yet completed, and only for an access review where the reviewers are explicitly specified. This operation isn't permitted for an access review in which users review their own access, and not intended for an access review in which the group owners are assigned as the reviewers. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewReviewer
+     * @return a CompletableFuture of AccessReviewReviewer
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-addreviewer?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ReviewersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reviewersRequestBuilder
+     * @return a ReviewersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReviewersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

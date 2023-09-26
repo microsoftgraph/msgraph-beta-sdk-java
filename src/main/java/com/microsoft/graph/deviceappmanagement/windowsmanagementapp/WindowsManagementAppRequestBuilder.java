@@ -38,7 +38,7 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Windows management app.
-     * @return a CompletableFuture of windowsManagementApp
+     * @return a CompletableFuture of WindowsManagementApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsManagementApp> get() {
@@ -47,7 +47,7 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Windows management app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsManagementApp
+     * @return a CompletableFuture of WindowsManagementApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsManagementApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class WindowsManagementAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsManagementAppRequestBuilder
+     * @return a WindowsManagementAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsManagementAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

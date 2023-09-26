@@ -60,7 +60,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
     }
     /**
      * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
-     * @return a CompletableFuture of servicePrincipalSignInActivityCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
     /**
      * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalSignInActivityCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to servicePrincipalSignInActivities for reports
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipalSignInActivity
+     * @return a CompletableFuture of ServicePrincipalSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalSignInActivity> post(@jakarta.annotation.Nonnull final ServicePrincipalSignInActivity body) {
@@ -94,7 +94,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
      * Create new navigation property to servicePrincipalSignInActivities for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalSignInActivity
+     * @return a CompletableFuture of ServicePrincipalSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalSignInActivity> post(@jakarta.annotation.Nonnull final ServicePrincipalSignInActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePrincipalSignInActivitiesRequestBuilder
+     * @return a ServicePrincipalSignInActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalSignInActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

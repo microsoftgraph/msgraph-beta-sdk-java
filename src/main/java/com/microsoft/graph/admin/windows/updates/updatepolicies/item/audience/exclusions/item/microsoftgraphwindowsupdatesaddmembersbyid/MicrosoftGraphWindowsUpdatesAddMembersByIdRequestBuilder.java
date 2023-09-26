@@ -92,7 +92,7 @@ public class MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphWindowsUpdatesAddMembersByIdRequestBuilder
+     * @return a MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesAddMembersByIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

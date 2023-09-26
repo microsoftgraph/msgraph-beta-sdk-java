@@ -13,7 +13,7 @@ public class GovernanceRoleDefinitionCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<GovernanceRoleDefinition> value;
     /**
-     * Instantiates a new governanceRoleDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new GovernanceRoleDefinitionCollectionResponse and sets the default values.
      */
     public GovernanceRoleDefinitionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class GovernanceRoleDefinitionCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRoleDefinitionCollectionResponse
+     * @return a GovernanceRoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class GovernanceRoleDefinitionCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a governanceRoleDefinition
+     * @return a java.util.List<GovernanceRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceRoleDefinition> getValue() {

@@ -37,7 +37,7 @@ public class SearchExistingIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action searchExistingIdentities
      * @param body The request body
-     * @return a CompletableFuture of searchExistingIdentitiesResponse
+     * @return a CompletableFuture of SearchExistingIdentitiesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body) {
@@ -47,7 +47,7 @@ public class SearchExistingIdentitiesRequestBuilder extends BaseRequestBuilder {
      * Invoke action searchExistingIdentities
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of searchExistingIdentitiesResponse
+     * @return a CompletableFuture of SearchExistingIdentitiesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class SearchExistingIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a searchExistingIdentitiesRequestBuilder
+     * @return a SearchExistingIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchExistingIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

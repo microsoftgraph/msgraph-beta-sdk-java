@@ -97,7 +97,7 @@ public class ManagedTenantAlertItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get managedTenantAlerts from tenantRelationships
-     * @return a CompletableFuture of managedTenantAlert
+     * @return a CompletableFuture of ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlert> get() {
@@ -106,7 +106,7 @@ public class ManagedTenantAlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get managedTenantAlerts from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlert
+     * @return a CompletableFuture of ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlert> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class ManagedTenantAlertItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedTenantAlerts in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantAlert
+     * @return a CompletableFuture of ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlert> patch(@jakarta.annotation.Nonnull final ManagedTenantAlert body) {
@@ -129,7 +129,7 @@ public class ManagedTenantAlertItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedTenantAlerts in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlert
+     * @return a CompletableFuture of ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlert> patch(@jakarta.annotation.Nonnull final ManagedTenantAlert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

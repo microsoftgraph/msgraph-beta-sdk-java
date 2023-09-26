@@ -70,7 +70,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -79,7 +79,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
-     * @return a CompletableFuture of accessPackageCollectionResponse
+     * @return a CompletableFuture of AccessPackageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageCollectionResponse
+     * @return a CompletableFuture of AccessPackageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog. After the access package is created, you can then create accessPackageAssignmentPolicies which specify how users are assigned to the access package.
      * @param body The request body
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
      * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog. After the access package is created, you can then create accessPackageAssignmentPolicies which specify how users are assigned to the access package.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackage
+     * @return a CompletableFuture of AccessPackage
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -190,7 +190,7 @@ public class AccessPackagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackagesRequestBuilder
+     * @return a AccessPackagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

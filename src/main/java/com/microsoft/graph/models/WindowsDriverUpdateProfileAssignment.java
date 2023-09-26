@@ -16,7 +16,7 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
      */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new windowsDriverUpdateProfileAssignment and sets the default values.
+     * Instantiates a new WindowsDriverUpdateProfileAssignment and sets the default values.
      */
     public WindowsDriverUpdateProfileAssignment() {
         super();
@@ -24,7 +24,7 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDriverUpdateProfileAssignment
+     * @return a WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public static WindowsDriverUpdateProfileAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class WindowsDriverUpdateProfileAssignment extends Entity implements Pars
     }
     /**
      * Gets the target property value. Base type for assignment targets.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

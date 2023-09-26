@@ -37,7 +37,7 @@ public class ImportAppleDeviceIdentityListRequestBuilder extends BaseRequestBuil
     /**
      * Invoke action importAppleDeviceIdentityList
      * @param body The request body
-     * @return a CompletableFuture of importAppleDeviceIdentityListResponse
+     * @return a CompletableFuture of ImportAppleDeviceIdentityListResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportAppleDeviceIdentityListResponse> post(@jakarta.annotation.Nonnull final ImportAppleDeviceIdentityListPostRequestBody body) {
@@ -47,7 +47,7 @@ public class ImportAppleDeviceIdentityListRequestBuilder extends BaseRequestBuil
      * Invoke action importAppleDeviceIdentityList
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importAppleDeviceIdentityListResponse
+     * @return a CompletableFuture of ImportAppleDeviceIdentityListResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportAppleDeviceIdentityListResponse> post(@jakarta.annotation.Nonnull final ImportAppleDeviceIdentityListPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class ImportAppleDeviceIdentityListRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importAppleDeviceIdentityListRequestBuilder
+     * @return a ImportAppleDeviceIdentityListRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportAppleDeviceIdentityListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

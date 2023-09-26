@@ -37,7 +37,7 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Return the directory objects specified in a list of IDs. Some common uses for this function are to:
      * @param body The request body
-     * @return a CompletableFuture of getByIdsResponse
+     * @return a CompletableFuture of GetByIdsResponse
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0">Find more info here</a>
@@ -51,7 +51,7 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
      * Return the directory objects specified in a list of IDs. Some common uses for this function are to:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getByIdsResponse
+     * @return a CompletableFuture of GetByIdsResponse
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0">Find more info here</a>
@@ -107,7 +107,7 @@ public class GetByIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getByIdsRequestBuilder
+     * @return a GetByIdsRequestBuilder
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */

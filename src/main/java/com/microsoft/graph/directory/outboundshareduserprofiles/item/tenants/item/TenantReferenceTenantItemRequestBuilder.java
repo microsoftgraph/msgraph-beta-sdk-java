@@ -65,7 +65,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The collection of external Azure AD tenants that the user has shared profile data with. Read-only.
-     * @return a CompletableFuture of tenantReference
+     * @return a CompletableFuture of TenantReference
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantReference> get() {
@@ -74,7 +74,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
     /**
      * The collection of external Azure AD tenants that the user has shared profile data with. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantReference
+     * @return a CompletableFuture of TenantReference
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantReference> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property tenants in directory
      * @param body The request body
-     * @return a CompletableFuture of tenantReference
+     * @return a CompletableFuture of TenantReference
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantReference> patch(@jakarta.annotation.Nonnull final TenantReference body) {
@@ -97,7 +97,7 @@ public class TenantReferenceTenantItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property tenants in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantReference
+     * @return a CompletableFuture of TenantReference
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantReference> patch(@jakarta.annotation.Nonnull final TenantReference body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

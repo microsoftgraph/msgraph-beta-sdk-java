@@ -139,7 +139,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get() {
@@ -148,7 +148,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -172,7 +172,7 @@ public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of the specified onlineMeeting object. Please see Request body section for the list of properties that support updating.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

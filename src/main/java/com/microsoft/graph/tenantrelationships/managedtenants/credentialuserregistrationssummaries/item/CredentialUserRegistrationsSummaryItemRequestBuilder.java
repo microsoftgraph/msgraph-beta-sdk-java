@@ -57,7 +57,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
     }
     /**
      * Read the properties and relationships of a credentialUserRegistrationsSummary object.
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
     /**
      * Read the properties and relationships of a credentialUserRegistrationsSummary object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property credentialUserRegistrationsSummaries in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationsSummary> patch(@jakarta.annotation.Nonnull final CredentialUserRegistrationsSummary body) {
@@ -91,7 +91,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
      * Update the navigation property credentialUserRegistrationsSummaries in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationsSummary> patch(@jakarta.annotation.Nonnull final CredentialUserRegistrationsSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

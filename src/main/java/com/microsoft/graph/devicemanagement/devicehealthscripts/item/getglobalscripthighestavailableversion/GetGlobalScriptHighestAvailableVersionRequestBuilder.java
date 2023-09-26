@@ -36,7 +36,7 @@ public class GetGlobalScriptHighestAvailableVersionRequestBuilder extends BaseRe
     }
     /**
      * Update the Proprietary Device Health Script
-     * @return a CompletableFuture of getGlobalScriptHighestAvailableVersionResponse
+     * @return a CompletableFuture of GetGlobalScriptHighestAvailableVersionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetGlobalScriptHighestAvailableVersionResponse> post() {
@@ -45,7 +45,7 @@ public class GetGlobalScriptHighestAvailableVersionRequestBuilder extends BaseRe
     /**
      * Update the Proprietary Device Health Script
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getGlobalScriptHighestAvailableVersionResponse
+     * @return a CompletableFuture of GetGlobalScriptHighestAvailableVersionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetGlobalScriptHighestAvailableVersionResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class GetGlobalScriptHighestAvailableVersionRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getGlobalScriptHighestAvailableVersionRequestBuilder
+     * @return a GetGlobalScriptHighestAvailableVersionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetGlobalScriptHighestAvailableVersionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

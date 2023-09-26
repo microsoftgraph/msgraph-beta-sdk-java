@@ -26,7 +26,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      */
     private String moreInfoUrl;
     /**
-     * Instantiates a new informationProtectionPolicySetting and sets the default values.
+     * Instantiates a new InformationProtectionPolicySetting and sets the default values.
      */
     public InformationProtectionPolicySetting() {
         super();
@@ -34,7 +34,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtectionPolicySetting
+     * @return a InformationProtectionPolicySetting
      */
     @jakarta.annotation.Nonnull
     public static InformationProtectionPolicySetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     }
     /**
      * Gets the defaultLabelId property value. The defaultLabelId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLabelId() {
@@ -64,7 +64,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     }
     /**
      * Gets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDowngradeJustificationRequired() {
@@ -72,7 +72,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     }
     /**
      * Gets the isMandatory property value. Exposes whether mandatory labeling is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {
@@ -80,7 +80,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     }
     /**
      * Gets the moreInfoUrl property value. Exposes the more information URL that can be configured by the administrator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMoreInfoUrl() {

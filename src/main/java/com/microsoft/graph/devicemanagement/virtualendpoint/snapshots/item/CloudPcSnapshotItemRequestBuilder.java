@@ -57,7 +57,7 @@ public class CloudPcSnapshotItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a cloudPcSnapshot object.
-     * @return a CompletableFuture of cloudPcSnapshot
+     * @return a CompletableFuture of CloudPcSnapshot
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcsnapshot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CloudPcSnapshotItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a cloudPcSnapshot object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSnapshot
+     * @return a CompletableFuture of CloudPcSnapshot
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcsnapshot-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CloudPcSnapshotItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property snapshots in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcSnapshot
+     * @return a CompletableFuture of CloudPcSnapshot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSnapshot> patch(@jakarta.annotation.Nonnull final CloudPcSnapshot body) {
@@ -91,7 +91,7 @@ public class CloudPcSnapshotItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property snapshots in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSnapshot
+     * @return a CompletableFuture of CloudPcSnapshot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSnapshot> patch(@jakarta.annotation.Nonnull final CloudPcSnapshot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

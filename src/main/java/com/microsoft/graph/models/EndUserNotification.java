@@ -54,7 +54,7 @@ public class EndUserNotification extends Entity implements Parsable {
      */
     private java.util.List<String> supportedLocales;
     /**
-     * Instantiates a new endUserNotification and sets the default values.
+     * Instantiates a new EndUserNotification and sets the default values.
      */
     public EndUserNotification() {
         super();
@@ -62,7 +62,7 @@ public class EndUserNotification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a endUserNotification
+     * @return a EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public static EndUserNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -87,7 +87,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -95,7 +95,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. The details property
-     * @return a endUserNotificationDetail
+     * @return a java.util.List<EndUserNotificationDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EndUserNotificationDetail> getDetails() {
@@ -103,7 +103,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -131,7 +131,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -147,7 +147,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the notificationType property value. The notificationType property
-     * @return a endUserNotificationType
+     * @return a EndUserNotificationType
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationType getNotificationType() {
@@ -155,7 +155,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a simulationContentSource
+     * @return a SimulationContentSource
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
@@ -163,7 +163,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a simulationContentStatus
+     * @return a SimulationContentStatus
      */
     @jakarta.annotation.Nullable
     public SimulationContentStatus getStatus() {
@@ -171,7 +171,7 @@ public class EndUserNotification extends Entity implements Parsable {
     }
     /**
      * Gets the supportedLocales property value. The supportedLocales property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedLocales() {

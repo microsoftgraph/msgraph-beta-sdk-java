@@ -83,7 +83,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents how customers can manage their data, whether and for how long to retain or delete it.
-     * @return a CompletableFuture of retentionLabel
+     * @return a CompletableFuture of RetentionLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionLabel> get() {
@@ -92,7 +92,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents how customers can manage their data, whether and for how long to retain or delete it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionLabel
+     * @return a CompletableFuture of RetentionLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RetentionLabel> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
-     * @return a CompletableFuture of retentionLabel
+     * @return a CompletableFuture of RetentionLabel
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionlabel-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class RetentionLabelItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a retentionLabel object. To update a disposition review stage, include the actionAfterRetentionPeriod property in the request body with one of the possible values specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of retentionLabel
+     * @return a CompletableFuture of RetentionLabel
      * @see <a href="https://learn.microsoft.com/graph/api/security-retentionlabel-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -59,7 +59,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an itemPatent object.
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an itemPatent object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an itemPatent object.
      * @param body The request body
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an itemPatent object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

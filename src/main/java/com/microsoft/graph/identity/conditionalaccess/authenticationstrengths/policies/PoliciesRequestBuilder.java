@@ -68,7 +68,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findByMethodMode method.
      * @param authenticationMethodModes Usage: authenticationMethodModes={authenticationMethodModes}
-     * @return a findByMethodModeWithAuthenticationMethodModesRequestBuilder
+     * @return a FindByMethodModeWithAuthenticationMethodModesRequestBuilder
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -80,7 +80,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
+     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -92,7 +92,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
+     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -108,7 +108,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to policies for identity
      * @param body The request body
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -121,7 +121,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policies for identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -211,7 +211,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a policiesRequestBuilder
+     * @return a PoliciesRequestBuilder
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */

@@ -15,7 +15,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodResponse extends BaseCol
      */
     private java.util.List<Office365GroupsActivityStorage> value;
     /**
-     * Instantiates a new getOffice365GroupsActivityStorageWithPeriodResponse and sets the default values.
+     * Instantiates a new GetOffice365GroupsActivityStorageWithPeriodResponse and sets the default values.
      */
     public GetOffice365GroupsActivityStorageWithPeriodResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getOffice365GroupsActivityStorageWithPeriodResponse
+     * @return a GetOffice365GroupsActivityStorageWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public static GetOffice365GroupsActivityStorageWithPeriodResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetOffice365GroupsActivityStorageWithPeriodResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a office365GroupsActivityStorage
+     * @return a java.util.List<Office365GroupsActivityStorage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Office365GroupsActivityStorage> getValue() {

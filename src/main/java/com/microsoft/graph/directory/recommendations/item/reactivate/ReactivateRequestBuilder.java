@@ -37,7 +37,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
     /**
      * Reactivate a completed, dismissed, or postponed recommendation object. This action updates the status of the recommendation to active. This method only works when the status of the recommendation is completedByUser, dismissed, or postponed.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-reactivate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reactivateRequestBuilder
+     * @return a ReactivateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReactivateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

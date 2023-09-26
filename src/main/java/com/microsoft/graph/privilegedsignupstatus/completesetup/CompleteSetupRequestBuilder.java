@@ -37,7 +37,7 @@ public class CompleteSetupRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action completeSetup
      * @param body The request body
-     * @return a CompletableFuture of completeSetupResponse
+     * @return a CompletableFuture of CompleteSetupResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@jakarta.annotation.Nonnull final CompleteSetupPostRequestBody body) {
@@ -47,7 +47,7 @@ public class CompleteSetupRequestBuilder extends BaseRequestBuilder {
      * Invoke action completeSetup
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of completeSetupResponse
+     * @return a CompletableFuture of CompleteSetupResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompleteSetupResponse> post(@jakarta.annotation.Nonnull final CompleteSetupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class CompleteSetupRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a completeSetupRequestBuilder
+     * @return a CompleteSetupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CompleteSetupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

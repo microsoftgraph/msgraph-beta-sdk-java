@@ -39,7 +39,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
     }
     /**
      * Invoke function getCredentialUsageSummary
-     * @return a CompletableFuture of getCredentialUsageSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetCredentialUsageSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse> get() {
@@ -48,7 +48,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
     /**
      * Invoke function getCredentialUsageSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getCredentialUsageSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetCredentialUsageSummaryWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCredentialUsageSummaryWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GetCredentialUsageSummaryWithPeriodRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCredentialUsageSummaryWithPeriodRequestBuilder
+     * @return a GetCredentialUsageSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCredentialUsageSummaryWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

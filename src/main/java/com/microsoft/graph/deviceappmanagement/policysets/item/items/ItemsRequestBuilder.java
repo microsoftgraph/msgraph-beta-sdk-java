@@ -60,7 +60,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Items of the PolicySet with maximum count 100.
-     * @return a CompletableFuture of policySetItemCollectionResponse
+     * @return a CompletableFuture of PolicySetItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItemCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Items of the PolicySet with maximum count 100.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetItemCollectionResponse
+     * @return a CompletableFuture of PolicySetItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to items for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of policySetItem
+     * @return a CompletableFuture of PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItem> post(@jakarta.annotation.Nonnull final PolicySetItem body) {
@@ -92,7 +92,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to items for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetItem
+     * @return a CompletableFuture of PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItem> post(@jakarta.annotation.Nonnull final PolicySetItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemsRequestBuilder
+     * @return a ItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

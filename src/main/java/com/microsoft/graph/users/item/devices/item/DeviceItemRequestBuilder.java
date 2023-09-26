@@ -153,7 +153,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get devices from users
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> get() {
@@ -162,7 +162,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get devices from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property devices in users
      * @param body The request body
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> patch(@jakarta.annotation.Nonnull final Device body) {
@@ -185,7 +185,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property devices in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> patch(@jakarta.annotation.Nonnull final Device body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -57,7 +57,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a contactMergeSuggestions object.
-     * @return a CompletableFuture of contactMergeSuggestions
+     * @return a CompletableFuture of ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a contactMergeSuggestions object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactMergeSuggestions
+     * @return a CompletableFuture of ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
-     * @return a CompletableFuture of contactMergeSuggestions
+     * @return a CompletableFuture of ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a contactMergeSuggestions object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contactMergeSuggestions
+     * @return a CompletableFuture of ContactMergeSuggestions
      * @see <a href="https://learn.microsoft.com/graph/api/contactmergesuggestions-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ContactMergeSuggestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a contactMergeSuggestionsRequestBuilder
+     * @return a ContactMergeSuggestionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContactMergeSuggestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

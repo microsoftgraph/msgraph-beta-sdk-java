@@ -77,7 +77,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the cloudPC devices in a tenant.
-     * @return a CompletableFuture of cloudPCCollectionResponse
+     * @return a CompletableFuture of CloudPCCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the cloudPC devices in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPCCollectionResponse
+     * @return a CompletableFuture of CloudPCCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getProvisionedCloudPCs method.
      * @param groupId Usage: groupId='{groupId}'
      * @param servicePlanId Usage: servicePlanId='{servicePlanId}'
-     * @return a getProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder
+     * @return a GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder getProvisionedCloudPCsWithGroupIdWithServicePlanId(@jakarta.annotation.Nonnull final String groupId, @jakarta.annotation.Nonnull final String servicePlanId) {
@@ -113,7 +113,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to cloudPCs for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPC
+     * @return a CompletableFuture of CloudPC
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPC> post(@jakarta.annotation.Nonnull final CloudPC body) {
@@ -123,7 +123,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cloudPCs for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPC
+     * @return a CompletableFuture of CloudPC
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPC> post(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -198,7 +198,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cloudPCsRequestBuilder
+     * @return a CloudPCsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CloudPCsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

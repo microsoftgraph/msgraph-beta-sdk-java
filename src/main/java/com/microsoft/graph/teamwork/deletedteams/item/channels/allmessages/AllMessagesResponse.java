@@ -15,7 +15,7 @@ public class AllMessagesResponse extends BaseCollectionPaginationCountResponse i
      */
     private java.util.List<ChatMessage> value;
     /**
-     * Instantiates a new allMessagesResponse and sets the default values.
+     * Instantiates a new AllMessagesResponse and sets the default values.
      */
     public AllMessagesResponse() {
         super();
@@ -23,7 +23,7 @@ public class AllMessagesResponse extends BaseCollectionPaginationCountResponse i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a allMessagesResponse
+     * @return a AllMessagesResponse
      */
     @jakarta.annotation.Nonnull
     public static AllMessagesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AllMessagesResponse extends BaseCollectionPaginationCountResponse i
     }
     /**
      * Gets the value property value. The value property
-     * @return a chatMessage
+     * @return a java.util.List<ChatMessage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getValue() {

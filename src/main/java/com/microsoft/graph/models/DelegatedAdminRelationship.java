@@ -63,7 +63,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
      */
     private DelegatedAdminRelationshipStatus status;
     /**
-     * Instantiates a new delegatedAdminRelationship and sets the default values.
+     * Instantiates a new DelegatedAdminRelationship and sets the default values.
      */
     public DelegatedAdminRelationship() {
         super();
@@ -71,7 +71,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a delegatedAdminRelationship
+     * @return a DelegatedAdminRelationship
      */
     @jakarta.annotation.Nonnull
     public static DelegatedAdminRelationship createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the accessAssignments property value. The access assignments associated with the delegated admin relationship.
-     * @return a delegatedAdminAccessAssignment
+     * @return a java.util.List<DelegatedAdminAccessAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminAccessAssignment> getAccessAssignments() {
@@ -95,7 +95,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the accessDetails property value. The accessDetails property
-     * @return a delegatedAdminAccessDetails
+     * @return a DelegatedAdminAccessDetails
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminAccessDetails getAccessDetails() {
@@ -127,7 +127,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the customer property value. The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Can't be changed by the customer.
-     * @return a delegatedAdminRelationshipCustomerParticipant
+     * @return a DelegatedAdminRelationshipCustomerParticipant
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipCustomerParticipant getCustomer() {
@@ -135,7 +135,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and can't be changed by the customer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -189,7 +189,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The long running operations associated with the delegated admin relationship.
-     * @return a delegatedAdminRelationshipOperation
+     * @return a java.util.List<DelegatedAdminRelationshipOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipOperation> getOperations() {
@@ -197,7 +197,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the requests property value. The requests associated with the delegated admin relationship.
-     * @return a delegatedAdminRelationshipRequest
+     * @return a java.util.List<DelegatedAdminRelationshipRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DelegatedAdminRelationshipRequest> getRequests() {
@@ -205,7 +205,7 @@ public class DelegatedAdminRelationship extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderby.
-     * @return a delegatedAdminRelationshipStatus
+     * @return a DelegatedAdminRelationshipStatus
      */
     @jakarta.annotation.Nullable
     public DelegatedAdminRelationshipStatus getStatus() {

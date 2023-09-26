@@ -73,7 +73,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
     }
     /**
      * The Role Assignments.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> get() {
@@ -82,7 +82,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
     /**
      * The Role Assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
     /**
      * Update the navigation property roleAssignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> patch(@jakarta.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body) {
@@ -105,7 +105,7 @@ public class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends Base
      * Update the navigation property roleAssignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> patch(@jakarta.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

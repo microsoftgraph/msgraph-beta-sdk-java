@@ -60,7 +60,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a hostSslCertificate object.
-     * @return a CompletableFuture of hostSslCertificateCollectionResponse
+     * @return a CompletableFuture of HostSslCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a hostSslCertificate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSslCertificateCollectionResponse
+     * @return a CompletableFuture of HostSslCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostSslCertificates for security
      * @param body The request body
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificate> post(@jakarta.annotation.Nonnull final HostSslCertificate body) {
@@ -92,7 +92,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostSslCertificates for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificate> post(@jakarta.annotation.Nonnull final HostSslCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class HostSslCertificatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostSslCertificatesRequestBuilder
+     * @return a HostSslCertificatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostSslCertificatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

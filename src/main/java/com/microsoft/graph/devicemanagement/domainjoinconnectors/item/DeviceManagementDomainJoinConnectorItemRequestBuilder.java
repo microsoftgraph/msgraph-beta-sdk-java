@@ -57,7 +57,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder extends BaseR
     }
     /**
      * A list of connector objects.
-     * @return a CompletableFuture of deviceManagementDomainJoinConnector
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnector> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder extends BaseR
     /**
      * A list of connector objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDomainJoinConnector
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder extends BaseR
     /**
      * Update the navigation property domainJoinConnectors in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementDomainJoinConnector
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnector> patch(@jakarta.annotation.Nonnull final DeviceManagementDomainJoinConnector body) {
@@ -89,7 +89,7 @@ public class DeviceManagementDomainJoinConnectorItemRequestBuilder extends BaseR
      * Update the navigation property domainJoinConnectors in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDomainJoinConnector
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnector> patch(@jakarta.annotation.Nonnull final DeviceManagementDomainJoinConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

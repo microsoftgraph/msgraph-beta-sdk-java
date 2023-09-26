@@ -38,7 +38,7 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
      * @param body The request body
-     * @return a CompletableFuture of updateAllowedCombinationsResult
+     * @return a CompletableFuture of UpdateAllowedCombinationsResult
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-updateallowedcombinations?view=graph-rest-1.0">Find more info here</a>
@@ -52,7 +52,7 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
      * Update the allowedCombinations property of an authenticationStrengthPolicy object. To update other properties of an authenticationStrengthPolicy object, use the Update authenticationStrengthPolicy method.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updateAllowedCombinationsResult
+     * @return a CompletableFuture of UpdateAllowedCombinationsResult
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthpolicy-updateallowedcombinations?view=graph-rest-1.0">Find more info here</a>
@@ -108,7 +108,7 @@ public class UpdateAllowedCombinationsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updateAllowedCombinationsRequestBuilder
+     * @return a UpdateAllowedCombinationsRequestBuilder
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */

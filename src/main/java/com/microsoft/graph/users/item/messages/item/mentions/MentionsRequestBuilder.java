@@ -60,7 +60,7 @@ public class MentionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
-     * @return a CompletableFuture of mentionCollectionResponse
+     * @return a CompletableFuture of MentionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MentionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MentionsRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mentionCollectionResponse
+     * @return a CompletableFuture of MentionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MentionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MentionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to mentions for users
      * @param body The request body
-     * @return a CompletableFuture of mention
+     * @return a CompletableFuture of Mention
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Mention> post(@jakarta.annotation.Nonnull final Mention body) {
@@ -92,7 +92,7 @@ public class MentionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to mentions for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mention
+     * @return a CompletableFuture of Mention
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Mention> post(@jakarta.annotation.Nonnull final Mention body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MentionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mentionsRequestBuilder
+     * @return a MentionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MentionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

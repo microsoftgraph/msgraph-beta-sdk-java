@@ -36,7 +36,7 @@ public class CanSignUpRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function canSignUp
-     * @return a CompletableFuture of canSignUpResponse
+     * @return a CompletableFuture of CanSignUpResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CanSignUpResponse> get() {
@@ -45,7 +45,7 @@ public class CanSignUpRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function canSignUp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of canSignUpResponse
+     * @return a CompletableFuture of CanSignUpResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CanSignUpResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class CanSignUpRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a canSignUpRequestBuilder
+     * @return a CanSignUpRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CanSignUpRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

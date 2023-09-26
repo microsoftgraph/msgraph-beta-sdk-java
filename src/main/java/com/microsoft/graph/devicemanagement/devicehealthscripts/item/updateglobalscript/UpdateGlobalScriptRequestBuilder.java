@@ -37,7 +37,7 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the Proprietary Device Health Script
      * @param body The request body
-     * @return a CompletableFuture of updateGlobalScriptResponse
+     * @return a CompletableFuture of UpdateGlobalScriptResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateGlobalScriptResponse> post(@jakarta.annotation.Nonnull final UpdateGlobalScriptPostRequestBody body) {
@@ -47,7 +47,7 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
      * Update the Proprietary Device Health Script
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updateGlobalScriptResponse
+     * @return a CompletableFuture of UpdateGlobalScriptResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdateGlobalScriptResponse> post(@jakarta.annotation.Nonnull final UpdateGlobalScriptPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class UpdateGlobalScriptRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updateGlobalScriptRequestBuilder
+     * @return a UpdateGlobalScriptRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdateGlobalScriptRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

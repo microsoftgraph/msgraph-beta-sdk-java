@@ -60,7 +60,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
     }
     /**
      * The summary states of compliance policy settings for this account.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummaryCollectionResponse
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummaryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
     /**
      * The summary states of compliance policy settings for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummaryCollectionResponse
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
     /**
      * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body) {
@@ -92,7 +92,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
      * Create new navigation property to deviceCompliancePolicySettingStateSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> post(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceCompliancePolicySettingStateSummariesRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceCompliancePolicySettingStateSummariesRequestBuilder
+     * @return a DeviceCompliancePolicySettingStateSummariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicySettingStateSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

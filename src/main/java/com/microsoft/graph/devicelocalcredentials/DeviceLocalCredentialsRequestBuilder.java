@@ -52,7 +52,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
-     * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
+     * @return a CompletableFuture of DeviceLocalCredentialInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the deviceLocalCredentialInfo objects and their properties excluding the credentials. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLocalCredentialInfoCollectionResponse
+     * @return a CompletableFuture of DeviceLocalCredentialInfoCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to deviceLocalCredentials
      * @param body The request body
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a CompletableFuture of DeviceLocalCredentialInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
@@ -86,7 +86,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to deviceLocalCredentials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a CompletableFuture of DeviceLocalCredentialInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> post(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class DeviceLocalCredentialsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceLocalCredentialsRequestBuilder
+     * @return a DeviceLocalCredentialsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceLocalCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

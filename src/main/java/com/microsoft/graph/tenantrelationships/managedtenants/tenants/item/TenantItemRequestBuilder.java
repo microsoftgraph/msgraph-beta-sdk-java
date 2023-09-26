@@ -73,7 +73,7 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a tenant object.
-     * @return a CompletableFuture of tenant
+     * @return a CompletableFuture of Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a tenant object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenant
+     * @return a CompletableFuture of Tenant
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tenants in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of tenant
+     * @return a CompletableFuture of Tenant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Tenant> patch(@jakarta.annotation.Nonnull final Tenant body) {
@@ -107,7 +107,7 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tenants in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenant
+     * @return a CompletableFuture of Tenant
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Tenant> patch(@jakarta.annotation.Nonnull final Tenant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -37,7 +37,7 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
-     * @return a CompletableFuture of findRoomListsResponse
+     * @return a CompletableFuture of FindRoomListsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-findroomlists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of findRoomListsResponse
+     * @return a CompletableFuture of FindRoomListsResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-findroomlists?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a findRoomListsRequestBuilder
+     * @return a FindRoomListsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FindRoomListsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

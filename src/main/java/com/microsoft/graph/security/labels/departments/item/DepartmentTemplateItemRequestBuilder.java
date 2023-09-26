@@ -59,7 +59,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a departmentTemplate object.
-     * @return a CompletableFuture of departmentTemplate
+     * @return a CompletableFuture of DepartmentTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-departmenttemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a departmentTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of departmentTemplate
+     * @return a CompletableFuture of DepartmentTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-departmenttemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property departments in security
      * @param body The request body
-     * @return a CompletableFuture of departmentTemplate
+     * @return a CompletableFuture of DepartmentTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplate> patch(@jakarta.annotation.Nonnull final DepartmentTemplate body) {
@@ -93,7 +93,7 @@ public class DepartmentTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property departments in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of departmentTemplate
+     * @return a CompletableFuture of DepartmentTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplate> patch(@jakarta.annotation.Nonnull final DepartmentTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

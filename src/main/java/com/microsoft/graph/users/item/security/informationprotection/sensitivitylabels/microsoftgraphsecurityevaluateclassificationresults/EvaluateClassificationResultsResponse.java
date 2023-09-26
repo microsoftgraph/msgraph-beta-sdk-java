@@ -15,7 +15,7 @@ public class EvaluateClassificationResultsResponse extends BaseCollectionPaginat
      */
     private java.util.List<InformationProtectionAction> value;
     /**
-     * Instantiates a new evaluateClassificationResultsResponse and sets the default values.
+     * Instantiates a new EvaluateClassificationResultsResponse and sets the default values.
      */
     public EvaluateClassificationResultsResponse() {
         super();
@@ -23,7 +23,7 @@ public class EvaluateClassificationResultsResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateClassificationResultsResponse
+     * @return a EvaluateClassificationResultsResponse
      */
     @jakarta.annotation.Nonnull
     public static EvaluateClassificationResultsResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class EvaluateClassificationResultsResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a informationProtectionAction
+     * @return a java.util.List<InformationProtectionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getValue() {

@@ -13,7 +13,7 @@ public class DeviceManagementScriptGroupAssignmentCollectionResponse extends Bas
      */
     private java.util.List<DeviceManagementScriptGroupAssignment> value;
     /**
-     * Instantiates a new deviceManagementScriptGroupAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementScriptGroupAssignmentCollectionResponse and sets the default values.
      */
     public DeviceManagementScriptGroupAssignmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementScriptGroupAssignmentCollectionResponse extends Bas
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptGroupAssignmentCollectionResponse
+     * @return a DeviceManagementScriptGroupAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptGroupAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementScriptGroupAssignmentCollectionResponse extends Bas
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementScriptGroupAssignment
+     * @return a java.util.List<DeviceManagementScriptGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptGroupAssignment> getValue() {

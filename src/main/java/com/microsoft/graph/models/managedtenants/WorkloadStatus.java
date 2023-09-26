@@ -35,7 +35,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
      */
     private WorkloadOnboardingStatus onboardingStatus;
     /**
-     * Instantiates a new workloadStatus and sets the default values.
+     * Instantiates a new WorkloadStatus and sets the default values.
      */
     public WorkloadStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workloadStatus
+     * @return a WorkloadStatus
      */
     @jakarta.annotation.Nonnull
     public static WorkloadStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
         return new WorkloadStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the workload. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -82,7 +82,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The onboardingStatus property
-     * @return a workloadOnboardingStatus
+     * @return a WorkloadOnboardingStatus
      */
     @jakarta.annotation.Nullable
     public WorkloadOnboardingStatus getOnboardingStatus() {
@@ -126,8 +126,8 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

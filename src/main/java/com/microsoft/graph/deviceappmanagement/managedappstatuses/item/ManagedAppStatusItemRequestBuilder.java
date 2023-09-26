@@ -57,7 +57,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The managed app statuses.
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> get() {
@@ -66,7 +66,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed app statuses.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedAppStatuses in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> patch(@jakarta.annotation.Nonnull final ManagedAppStatus body) {
@@ -89,7 +89,7 @@ public class ManagedAppStatusItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedAppStatuses in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> patch(@jakarta.annotation.Nonnull final ManagedAppStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

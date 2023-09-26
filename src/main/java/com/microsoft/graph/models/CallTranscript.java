@@ -12,7 +12,7 @@ public class CallTranscript extends Entity implements Parsable {
     /**
      * The content of the transcript. Read-only.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
@@ -32,13 +32,13 @@ public class CallTranscript extends Entity implements Parsable {
     /**
      * The time-aligned metadata of the utterances in the transcript. Read-only.
      */
-    private byte[] metadataContent;
+    private Base64url metadataContent;
     /**
      * The URL which can be used to access the content of the transcript. Read-only.
      */
     private String transcriptContentUrl;
     /**
-     * Instantiates a new callTranscript and sets the default values.
+     * Instantiates a new CallTranscript and sets the default values.
      */
     public CallTranscript() {
         super();
@@ -46,7 +46,7 @@ public class CallTranscript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callTranscript
+     * @return a CallTranscript
      */
     @jakarta.annotation.Nonnull
     public static CallTranscript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,10 +55,10 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of the transcript. Read-only.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -76,18 +76,18 @@ public class CallTranscript extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingId", (n) -> { this.setMeetingId(n.getStringValue()); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("meetingOrganizerId", (n) -> { this.setMeetingOrganizerId(n.getStringValue()); });
-        deserializerMap.put("metadataContent", (n) -> { this.setMetadataContent(n.getByteArrayValue()); });
+        deserializerMap.put("metadataContent", (n) -> { this.setMetadataContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("transcriptContentUrl", (n) -> { this.setTranscriptContentUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the meetingId property value. The unique identifier of the online meeting related to this transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingId() {
@@ -95,7 +95,7 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the meetingOrganizer property value. The meetingOrganizer property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
@@ -103,7 +103,7 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingOrganizerId() {
@@ -111,15 +111,15 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getMetadataContent() {
+    public Base64url getMetadataContent() {
         return this.metadataContent;
     }
     /**
      * Gets the transcriptContentUrl property value. The URL which can be used to access the content of the transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTranscriptContentUrl() {
@@ -132,19 +132,19 @@ public class CallTranscript extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("meetingId", this.getMeetingId());
         writer.writeObjectValue("meetingOrganizer", this.getMeetingOrganizer());
         writer.writeStringValue("meetingOrganizerId", this.getMeetingOrganizerId());
-        writer.writeByteArrayValue("metadataContent", this.getMetadataContent());
+        writer.writeObjectValue("metadataContent", this.getMetadataContent());
         writer.writeStringValue("transcriptContentUrl", this.getTranscriptContentUrl());
     }
     /**
      * Sets the content property value. The content of the transcript. Read-only.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**
@@ -179,7 +179,7 @@ public class CallTranscript extends Entity implements Parsable {
      * Sets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
      * @param value Value to set for the metadataContent property.
      */
-    public void setMetadataContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setMetadataContent(@jakarta.annotation.Nullable final Base64url value) {
         this.metadataContent = value;
     }
     /**

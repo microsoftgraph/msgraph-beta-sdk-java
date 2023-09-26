@@ -30,7 +30,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
      */
     private String statusDetails;
     /**
-     * Instantiates a new cloudPcExternalPartnerSetting and sets the default values.
+     * Instantiates a new CloudPcExternalPartnerSetting and sets the default values.
      */
     public CloudPcExternalPartnerSetting() {
         super();
@@ -38,7 +38,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcExternalPartnerSetting
+     * @return a CloudPcExternalPartnerSetting
      */
     @jakarta.annotation.Nonnull
     public static CloudPcExternalPartnerSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API will accept incoming calls from external partners. Required. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableConnection() {
@@ -77,7 +77,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the partnerId property value. The external partner ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPartnerId() {
@@ -85,7 +85,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a cloudPcExternalPartnerStatus
+     * @return a CloudPcExternalPartnerStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerStatus getStatus() {
@@ -93,7 +93,7 @@ public class CloudPcExternalPartnerSetting extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. Status details message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusDetails() {

@@ -59,19 +59,19 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
-     * @return a CompletableFuture of teamTemplateCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
+     * Get the list of teamTemplate objects that are available for a tenant. 
+     * @return a CompletableFuture of TeamTemplateCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateCollectionResponse> get() {
         return get(null);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplateCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/teamtemplate-list-definitions?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of TeamTemplateCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-list-teamtemplates?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,7 +84,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to teamTemplates for teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamTemplate
+     * @return a CompletableFuture of TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplate> post(@jakarta.annotation.Nonnull final TeamTemplate body) {
@@ -94,7 +94,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to teamTemplates for teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplate
+     * @return a CompletableFuture of TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplate> post(@jakarta.annotation.Nonnull final TeamTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamTemplatesRequestBuilder
+     * @return a TeamTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class TeamTemplatesRequestBuilder extends BaseRequestBuilder {
         return new TeamTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the teamTemplateDefinition objects associated with a teamTemplate. 
+     * Get the list of teamTemplate objects that are available for a tenant. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

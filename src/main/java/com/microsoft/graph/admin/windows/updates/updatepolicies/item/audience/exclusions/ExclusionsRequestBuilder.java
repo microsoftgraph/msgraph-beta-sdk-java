@@ -92,7 +92,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the updatableAsset resources that are excluded from a deploymentAudience.
-     * @return a CompletableFuture of updatableAssetCollectionResponse
+     * @return a CompletableFuture of UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-list-exclusions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the updatableAsset resources that are excluded from a deploymentAudience.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAssetCollectionResponse
+     * @return a CompletableFuture of UpdatableAssetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-list-exclusions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to exclusions for admin
      * @param body The request body
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@jakarta.annotation.Nonnull final UpdatableAsset body) {
@@ -126,7 +126,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to exclusions for admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class ExclusionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exclusionsRequestBuilder
+     * @return a ExclusionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExclusionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

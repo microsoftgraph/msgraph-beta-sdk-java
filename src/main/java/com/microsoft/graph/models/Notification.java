@@ -38,7 +38,7 @@ public class Notification extends Entity implements Parsable {
      */
     private TargetPolicyEndpoints targetPolicy;
     /**
-     * Instantiates a new notification and sets the default values.
+     * Instantiates a new Notification and sets the default values.
      */
     public Notification() {
         super();
@@ -46,7 +46,7 @@ public class Notification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notification
+     * @return a Notification
      */
     @jakarta.annotation.Nonnull
     public static Notification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the displayTimeToLive property value. Sets how long (in seconds) this notification content will stay in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user's Windows Action Center.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDisplayTimeToLive() {
@@ -87,7 +87,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the groupName property value. The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupName() {
@@ -95,7 +95,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the payload property value. The payload property
-     * @return a payloadTypes
+     * @return a PayloadTypes
      */
     @jakarta.annotation.Nullable
     public PayloadTypes getPayload() {
@@ -103,7 +103,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Indicates the priority of a raw user notification. Visual notifications are sent with high priority by default. Valid values are None, High and Low.
-     * @return a priority
+     * @return a Priority
      */
     @jakarta.annotation.Nullable
     public Priority getPriority() {
@@ -111,7 +111,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the targetHostName property value. Represents the host name of the app to which the calling service wants to post the notification, for the given user. If targeting web endpoints (see targetPolicy.platformTypes), ensure that targetHostName is the same as the name used when creating a subscription on the client side within the application JSON property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetHostName() {
@@ -119,7 +119,7 @@ public class Notification extends Entity implements Parsable {
     }
     /**
      * Gets the targetPolicy property value. Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user.
-     * @return a targetPolicyEndpoints
+     * @return a TargetPolicyEndpoints
      */
     @jakarta.annotation.Nullable
     public TargetPolicyEndpoints getTargetPolicy() {

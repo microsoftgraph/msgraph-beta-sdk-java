@@ -38,7 +38,7 @@ public class ApprovalStep extends Entity implements Parsable {
      */
     private String status;
     /**
-     * Instantiates a new approvalStep and sets the default values.
+     * Instantiates a new ApprovalStep and sets the default values.
      */
     public ApprovalStep() {
         super();
@@ -46,7 +46,7 @@ public class ApprovalStep extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a approvalStep
+     * @return a ApprovalStep
      */
     @jakarta.annotation.Nonnull
     public static ApprovalStep createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the assignedToMe property value. Indicates whether the step is assigned to the calling user to review. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAssignedToMe() {
@@ -63,7 +63,7 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The label provided by the policy creator to identify an approval step. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -87,7 +87,7 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the justification property value. The justification associated with the approval step decision.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -95,7 +95,7 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Read-only.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getReviewedBy() {
@@ -111,7 +111,7 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the reviewResult property value. The result of this approval record. Possible values include: NotReviewed, Approved, Denied.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewResult() {
@@ -119,7 +119,7 @@ public class ApprovalStep extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The step status. Possible values: InProgress, Initializing, Completed, Expired. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

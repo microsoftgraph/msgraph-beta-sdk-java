@@ -97,7 +97,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/directorysettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/directorysettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in directorySettingTemplates
      * @param body The request body
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> patch(@jakarta.annotation.Nonnull final DirectorySettingTemplate body) {
@@ -131,7 +131,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
      * Update entity in directorySettingTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> patch(@jakarta.annotation.Nonnull final DirectorySettingTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

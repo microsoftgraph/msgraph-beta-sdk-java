@@ -89,7 +89,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies the assets to exclude from the audience.
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> get() {
@@ -98,7 +98,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies the assets to exclude from the audience.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property exclusions in admin
      * @param body The request body
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> patch(@jakarta.annotation.Nonnull final UpdatableAsset body) {
@@ -121,7 +121,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property exclusions in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> patch(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

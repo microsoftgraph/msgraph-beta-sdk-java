@@ -37,7 +37,7 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
     /**
      * Compute the sensitivity label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set manually or explicitly by a user or service, rather than automatically based on file contents. Given contentInfo, which includes existing content metadata key-value pairs, and labelingOptions as an input, the API returns an informationProtectionAction object that contains one of more of the following: 
      * @param body The request body
-     * @return a CompletableFuture of evaluateApplicationResponse
+     * @return a CompletableFuture of EvaluateApplicationResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateapplication?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
      * Compute the sensitivity label that should be applied and return the set of actions that must be taken to correctly label the information. This API is useful when a label should be set manually or explicitly by a user or service, rather than automatically based on file contents. Given contentInfo, which includes existing content metadata key-value pairs, and labelingOptions as an input, the API returns an informationProtectionAction object that contains one of more of the following: 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateApplicationResponse
+     * @return a CompletableFuture of EvaluateApplicationResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateapplication?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class MicrosoftGraphSecurityEvaluateApplicationRequestBuilder extends Bas
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityEvaluateApplicationRequestBuilder
+     * @return a MicrosoftGraphSecurityEvaluateApplicationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityEvaluateApplicationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

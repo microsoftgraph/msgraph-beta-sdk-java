@@ -60,7 +60,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get trainings from security
-     * @return a CompletableFuture of trainingCollectionResponse
+     * @return a CompletableFuture of TrainingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get trainings from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingCollectionResponse
+     * @return a CompletableFuture of TrainingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to trainings for security
      * @param body The request body
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> post(@jakarta.annotation.Nonnull final Training body) {
@@ -92,7 +92,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trainings for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> post(@jakarta.annotation.Nonnull final Training body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a trainingsRequestBuilder
+     * @return a TrainingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TrainingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

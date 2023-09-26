@@ -57,7 +57,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestB
     }
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
-     * @return a CompletableFuture of mobileThreatDefenseConnector
+     * @return a CompletableFuture of MobileThreatDefenseConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> get() {
@@ -66,7 +66,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestB
     /**
      * The list of Mobile threat Defense connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileThreatDefenseConnector
+     * @return a CompletableFuture of MobileThreatDefenseConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileThreatDefenseConnector
+     * @return a CompletableFuture of MobileThreatDefenseConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> patch(@jakarta.annotation.Nonnull final MobileThreatDefenseConnector body) {
@@ -89,7 +89,7 @@ public class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestB
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileThreatDefenseConnector
+     * @return a CompletableFuture of MobileThreatDefenseConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileThreatDefenseConnector> patch(@jakarta.annotation.Nonnull final MobileThreatDefenseConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

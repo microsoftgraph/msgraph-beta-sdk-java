@@ -97,7 +97,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of child folders in the mailFolder.
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> get() {
@@ -106,7 +106,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property childFolders in users
      * @param body The request body
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@jakarta.annotation.Nonnull final MailFolder body) {
@@ -129,7 +129,7 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property childFolders in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailFolder
+     * @return a CompletableFuture of MailFolder
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MailFolder> patch(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

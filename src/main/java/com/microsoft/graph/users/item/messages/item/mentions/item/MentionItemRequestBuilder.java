@@ -59,7 +59,7 @@ public class MentionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
-     * @return a CompletableFuture of mention
+     * @return a CompletableFuture of Mention
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Mention> get() {
@@ -68,7 +68,7 @@ public class MentionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mention
+     * @return a CompletableFuture of Mention
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Mention> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

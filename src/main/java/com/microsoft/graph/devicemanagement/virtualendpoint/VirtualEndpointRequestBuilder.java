@@ -201,7 +201,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get virtualEndpoint from deviceManagement
-     * @return a CompletableFuture of virtualEndpoint
+     * @return a CompletableFuture of VirtualEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEndpoint> get() {
@@ -210,7 +210,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Get virtualEndpoint from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEndpoint
+     * @return a CompletableFuture of VirtualEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEndpoint> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of virtualEndpoint
+     * @return a CompletableFuture of VirtualEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEndpoint> patch(@jakarta.annotation.Nonnull final VirtualEndpoint body) {
@@ -233,7 +233,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property virtualEndpoint in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEndpoint
+     * @return a CompletableFuture of VirtualEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEndpoint> patch(@jakarta.annotation.Nonnull final VirtualEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -335,7 +335,7 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a virtualEndpointRequestBuilder
+     * @return a VirtualEndpointRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VirtualEndpointRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

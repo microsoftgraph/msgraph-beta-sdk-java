@@ -65,7 +65,7 @@ public class TrendingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Access this property from the derived type itemInsights.
-     * @return a CompletableFuture of trending
+     * @return a CompletableFuture of Trending
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Trending> get() {
@@ -74,7 +74,7 @@ public class TrendingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Access this property from the derived type itemInsights.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trending
+     * @return a CompletableFuture of Trending
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Trending> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TrendingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property trending in users
      * @param body The request body
-     * @return a CompletableFuture of trending
+     * @return a CompletableFuture of Trending
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Trending> patch(@jakarta.annotation.Nonnull final Trending body) {
@@ -97,7 +97,7 @@ public class TrendingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property trending in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trending
+     * @return a CompletableFuture of Trending
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Trending> patch(@jakarta.annotation.Nonnull final Trending body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

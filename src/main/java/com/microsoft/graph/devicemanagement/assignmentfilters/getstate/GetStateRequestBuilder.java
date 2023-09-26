@@ -37,7 +37,7 @@ public class GetStateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getState
-     * @return a CompletableFuture of assignmentFilterState
+     * @return a CompletableFuture of AssignmentFilterState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterState> get() {
@@ -46,7 +46,7 @@ public class GetStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterState
+     * @return a CompletableFuture of AssignmentFilterState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class GetStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getStateRequestBuilder
+     * @return a GetStateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetStateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

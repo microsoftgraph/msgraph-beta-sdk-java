@@ -60,7 +60,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the alertRule objects and their properties.
-     * @return a CompletableFuture of alertRuleCollectionResponse
+     * @return a CompletableFuture of AlertRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the alertRule objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRuleCollectionResponse
+     * @return a CompletableFuture of AlertRuleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create an alertRule object.
      * @param body The request body
-     * @return a CompletableFuture of alertRule
+     * @return a CompletableFuture of AlertRule
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
      * Create an alertRule object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of alertRule
+     * @return a CompletableFuture of AlertRule
      * @see <a href="https://learn.microsoft.com/graph/api/devicemanagement-alertrule-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertRulesRequestBuilder
+     * @return a AlertRulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

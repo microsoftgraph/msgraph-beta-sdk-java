@@ -60,7 +60,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of personCertification objects from a user's profile.
-     * @return a CompletableFuture of personCertificationCollectionResponse
+     * @return a CompletableFuture of PersonCertificationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of personCertification objects from a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personCertificationCollectionResponse
+     * @return a CompletableFuture of PersonCertificationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new personCertification object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of personCertification
+     * @return a CompletableFuture of PersonCertification
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
      * Create a new personCertification object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personCertification
+     * @return a CompletableFuture of PersonCertification
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-certifications?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class CertificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a certificationsRequestBuilder
+     * @return a CertificationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CertificationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

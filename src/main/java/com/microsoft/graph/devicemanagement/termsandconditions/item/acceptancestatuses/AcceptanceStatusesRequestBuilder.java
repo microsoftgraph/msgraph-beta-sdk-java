@@ -60,7 +60,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of acceptance statuses for this T&C policy.
-     * @return a CompletableFuture of termsAndConditionsAcceptanceStatusCollectionResponse
+     * @return a CompletableFuture of TermsAndConditionsAcceptanceStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatusCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of acceptance statuses for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAcceptanceStatusCollectionResponse
+     * @return a CompletableFuture of TermsAndConditionsAcceptanceStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to acceptanceStatuses for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
+     * @return a CompletableFuture of TermsAndConditionsAcceptanceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> post(@jakarta.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body) {
@@ -92,7 +92,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to acceptanceStatuses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAcceptanceStatus
+     * @return a CompletableFuture of TermsAndConditionsAcceptanceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAcceptanceStatus> post(@jakarta.annotation.Nonnull final TermsAndConditionsAcceptanceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AcceptanceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a acceptanceStatusesRequestBuilder
+     * @return a AcceptanceStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AcceptanceStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -121,7 +121,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     }
     /**
      * The singleton Android managed store account enterprise settings entity.
-     * @return a CompletableFuture of androidManagedStoreAccountEnterpriseSettings
+     * @return a CompletableFuture of AndroidManagedStoreAccountEnterpriseSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedStoreAccountEnterpriseSettings> get() {
@@ -130,7 +130,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     /**
      * The singleton Android managed store account enterprise settings entity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedStoreAccountEnterpriseSettings
+     * @return a CompletableFuture of AndroidManagedStoreAccountEnterpriseSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedStoreAccountEnterpriseSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,7 +143,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     /**
      * Update the navigation property androidManagedStoreAccountEnterpriseSettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidManagedStoreAccountEnterpriseSettings
+     * @return a CompletableFuture of AndroidManagedStoreAccountEnterpriseSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedStoreAccountEnterpriseSettings> patch(@jakarta.annotation.Nonnull final AndroidManagedStoreAccountEnterpriseSettings body) {
@@ -153,7 +153,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
      * Update the navigation property androidManagedStoreAccountEnterpriseSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidManagedStoreAccountEnterpriseSettings
+     * @return a CompletableFuture of AndroidManagedStoreAccountEnterpriseSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidManagedStoreAccountEnterpriseSettings> patch(@jakarta.annotation.Nonnull final AndroidManagedStoreAccountEnterpriseSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -255,7 +255,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a androidManagedStoreAccountEnterpriseSettingsRequestBuilder
+     * @return a AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

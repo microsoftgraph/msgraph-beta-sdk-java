@@ -38,7 +38,7 @@ public class ActivatedUsingRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilitySchedule
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilitySchedule> get() {
@@ -47,7 +47,7 @@ public class ActivatedUsingRequestBuilder extends BaseRequestBuilder {
     /**
      * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilitySchedule
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilitySchedule> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ActivatedUsingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activatedUsingRequestBuilder
+     * @return a ActivatedUsingRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivatedUsingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

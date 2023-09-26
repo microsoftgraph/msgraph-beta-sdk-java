@@ -60,7 +60,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List the tenants and their properties in the multi-tenant organization.
-     * @return a CompletableFuture of multiTenantOrganizationMemberCollectionResponse
+     * @return a CompletableFuture of MultiTenantOrganizationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-list-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * List the tenants and their properties in the multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of multiTenantOrganizationMemberCollectionResponse
+     * @return a CompletableFuture of MultiTenantOrganizationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-list-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a tenant to a multi-tenant organization. The administrator of an owner tenant has the permissions to add tenants to the multi-tenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multi-tenant organization by submitting a join request. Note that a tenant can be part of only one multi-tenant organization.
      * @param body The request body
-     * @return a CompletableFuture of multiTenantOrganizationMember
+     * @return a CompletableFuture of MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-post-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
      * Add a tenant to a multi-tenant organization. The administrator of an owner tenant has the permissions to add tenants to the multi-tenant organization. The added tenant is in the pending state until the administrator of the added tenant joins the multi-tenant organization by submitting a join request. Note that a tenant can be part of only one multi-tenant organization.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of multiTenantOrganizationMember
+     * @return a CompletableFuture of MultiTenantOrganizationMember
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganization-post-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tenantsRequestBuilder
+     * @return a TenantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TenantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

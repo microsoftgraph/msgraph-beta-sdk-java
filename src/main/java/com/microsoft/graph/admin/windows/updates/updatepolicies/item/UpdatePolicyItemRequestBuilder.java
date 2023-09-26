@@ -75,7 +75,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an updatePolicy object.
-     * @return a CompletableFuture of updatePolicy
+     * @return a CompletableFuture of UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an updatePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatePolicy
+     * @return a CompletableFuture of UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an updatePolicy object.
      * @param body The request body
-     * @return a CompletableFuture of updatePolicy
+     * @return a CompletableFuture of UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class UpdatePolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an updatePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatePolicy
+     * @return a CompletableFuture of UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatepolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

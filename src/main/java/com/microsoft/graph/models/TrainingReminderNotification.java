@@ -13,7 +13,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
      */
     private NotificationDeliveryFrequency deliveryFrequency;
     /**
-     * Instantiates a new trainingReminderNotification and sets the default values.
+     * Instantiates a new TrainingReminderNotification and sets the default values.
      */
     public TrainingReminderNotification() {
         super();
@@ -22,7 +22,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trainingReminderNotification
+     * @return a TrainingReminderNotification
      */
     @jakarta.annotation.Nonnull
     public static TrainingReminderNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class TrainingReminderNotification extends BaseEndUserNotification implem
     }
     /**
      * Gets the deliveryFrequency property value. The deliveryFrequency property
-     * @return a notificationDeliveryFrequency
+     * @return a NotificationDeliveryFrequency
      */
     @jakarta.annotation.Nullable
     public NotificationDeliveryFrequency getDeliveryFrequency() {

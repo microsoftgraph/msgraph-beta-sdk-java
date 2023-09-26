@@ -67,7 +67,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     }
     /**
      * Read the properties and relationships of a customAuthenticationExtension object.
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -77,7 +77,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Read the properties and relationships of a customAuthenticationExtension object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property customAuthenticationExtensions in identity
      * @param body The request body
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
@@ -101,7 +101,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Update the navigation property customAuthenticationExtensions in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -73,7 +73,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Default managed app policies.
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> get() {
@@ -82,7 +82,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Default managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property defaultManagedAppProtections in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> patch(@jakarta.annotation.Nonnull final DefaultManagedAppProtection body) {
@@ -105,7 +105,7 @@ public class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBu
      * Update the navigation property defaultManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> patch(@jakarta.annotation.Nonnull final DefaultManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

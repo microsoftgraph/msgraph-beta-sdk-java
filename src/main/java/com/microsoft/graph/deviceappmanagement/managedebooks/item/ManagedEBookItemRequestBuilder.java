@@ -105,7 +105,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Managed eBook.
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> get() {
@@ -114,7 +114,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The Managed eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property managedEBooks in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> patch(@jakarta.annotation.Nonnull final ManagedEBook body) {
@@ -137,7 +137,7 @@ public class ManagedEBookItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedEBooks in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBook
+     * @return a CompletableFuture of ManagedEBook
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBook> patch(@jakarta.annotation.Nonnull final ManagedEBook body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

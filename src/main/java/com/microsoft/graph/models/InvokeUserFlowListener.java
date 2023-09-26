@@ -13,7 +13,7 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
      */
     private B2xIdentityUserFlow userFlow;
     /**
-     * Instantiates a new invokeUserFlowListener and sets the default values.
+     * Instantiates a new InvokeUserFlowListener and sets the default values.
      */
     public InvokeUserFlowListener() {
         super();
@@ -22,7 +22,7 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invokeUserFlowListener
+     * @return a InvokeUserFlowListener
      */
     @jakarta.annotation.Nonnull
     public static InvokeUserFlowListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class InvokeUserFlowListener extends AuthenticationListener implements Pa
     }
     /**
      * Gets the userFlow property value. The user flow that is invoked when this action executes.
-     * @return a b2xIdentityUserFlow
+     * @return a B2xIdentityUserFlow
      */
     @jakarta.annotation.Nullable
     public B2xIdentityUserFlow getUserFlow() {

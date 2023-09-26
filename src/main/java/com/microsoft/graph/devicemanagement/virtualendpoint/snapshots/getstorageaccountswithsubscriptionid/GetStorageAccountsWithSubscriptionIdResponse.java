@@ -15,7 +15,7 @@ public class GetStorageAccountsWithSubscriptionIdResponse extends BaseCollection
      */
     private java.util.List<CloudPcForensicStorageAccount> value;
     /**
-     * Instantiates a new getStorageAccountsWithSubscriptionIdResponse and sets the default values.
+     * Instantiates a new GetStorageAccountsWithSubscriptionIdResponse and sets the default values.
      */
     public GetStorageAccountsWithSubscriptionIdResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetStorageAccountsWithSubscriptionIdResponse extends BaseCollection
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getStorageAccountsWithSubscriptionIdResponse
+     * @return a GetStorageAccountsWithSubscriptionIdResponse
      */
     @jakarta.annotation.Nonnull
     public static GetStorageAccountsWithSubscriptionIdResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetStorageAccountsWithSubscriptionIdResponse extends BaseCollection
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcForensicStorageAccount
+     * @return a java.util.List<CloudPcForensicStorageAccount>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcForensicStorageAccount> getValue() {

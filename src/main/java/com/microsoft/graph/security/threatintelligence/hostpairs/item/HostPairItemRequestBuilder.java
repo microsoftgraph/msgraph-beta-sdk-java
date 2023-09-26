@@ -73,7 +73,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a hostPair object.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostpair-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a hostPair object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostpair-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hostPairs in security
      * @param body The request body
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> patch(@jakarta.annotation.Nonnull final HostPair body) {
@@ -107,7 +107,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hostPairs in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> patch(@jakarta.annotation.Nonnull final HostPair body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

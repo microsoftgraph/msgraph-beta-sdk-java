@@ -66,7 +66,7 @@ public class Training extends Entity implements Parsable {
      */
     private TrainingType type;
     /**
-     * Instantiates a new training and sets the default values.
+     * Instantiates a new Training and sets the default values.
      */
     public Training() {
         super();
@@ -74,7 +74,7 @@ public class Training extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a training
+     * @return a Training
      */
     @jakarta.annotation.Nonnull
     public static Training createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the availabilityStatus property value. The availabilityStatus property
-     * @return a trainingAvailabilityStatus
+     * @return a TrainingAvailabilityStatus
      */
     @jakarta.annotation.Nullable
     public TrainingAvailabilityStatus getAvailabilityStatus() {
@@ -91,7 +91,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
@@ -107,7 +107,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -115,7 +115,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -123,7 +123,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the durationInMinutes property value. The durationInMinutes property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInMinutes() {
@@ -154,7 +154,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the hasEvaluation property value. The hasEvaluation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasEvaluation() {
@@ -162,7 +162,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the languageDetails property value. The languageDetails property
-     * @return a trainingLanguageDetail
+     * @return a java.util.List<TrainingLanguageDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingLanguageDetail> getLanguageDetails() {
@@ -170,7 +170,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a emailIdentity
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
@@ -186,7 +186,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The source property
-     * @return a simulationContentSource
+     * @return a SimulationContentSource
      */
     @jakarta.annotation.Nullable
     public SimulationContentSource getSource() {
@@ -194,7 +194,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the supportedLocales property value. The supportedLocales property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedLocales() {
@@ -202,7 +202,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -210,7 +210,7 @@ public class Training extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a trainingType
+     * @return a TrainingType
      */
     @jakarta.annotation.Nullable
     public TrainingType getType() {

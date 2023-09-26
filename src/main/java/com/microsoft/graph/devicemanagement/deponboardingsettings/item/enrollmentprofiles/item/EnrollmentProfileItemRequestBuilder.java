@@ -81,7 +81,7 @@ public class EnrollmentProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The enrollment profiles.
-     * @return a CompletableFuture of enrollmentProfile
+     * @return a CompletableFuture of EnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentProfile> get() {
@@ -90,7 +90,7 @@ public class EnrollmentProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The enrollment profiles.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrollmentProfile
+     * @return a CompletableFuture of EnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class EnrollmentProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property enrollmentProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of enrollmentProfile
+     * @return a CompletableFuture of EnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentProfile> patch(@jakarta.annotation.Nonnull final EnrollmentProfile body) {
@@ -113,7 +113,7 @@ public class EnrollmentProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property enrollmentProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrollmentProfile
+     * @return a CompletableFuture of EnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentProfile> patch(@jakarta.annotation.Nonnull final EnrollmentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of device links associated with a specific branch.
-     * @return a CompletableFuture of deviceLinkCollectionResponse
+     * @return a CompletableFuture of DeviceLinkCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of device links associated with a specific branch.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLinkCollectionResponse
+     * @return a CompletableFuture of DeviceLinkCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-list-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a branch site with associated device links.
      * @param body The request body
-     * @return a CompletableFuture of deviceLink
+     * @return a CompletableFuture of DeviceLink
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
      * Create a branch site with associated device links.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLink
+     * @return a CompletableFuture of DeviceLink
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchsite-post-devicelinks?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DeviceLinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceLinksRequestBuilder
+     * @return a DeviceLinksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceLinksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

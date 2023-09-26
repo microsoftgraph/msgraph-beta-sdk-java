@@ -13,7 +13,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
      */
     private String resourceId;
     /**
-     * Instantiates a new azureAdTokenAuthentication and sets the default values.
+     * Instantiates a new AzureAdTokenAuthentication and sets the default values.
      */
     public AzureAdTokenAuthentication() {
         super();
@@ -22,7 +22,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureAdTokenAuthentication
+     * @return a AzureAdTokenAuthentication
      */
     @jakarta.annotation.Nonnull
     public static AzureAdTokenAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     }
     /**
      * Gets the resourceId property value. The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {

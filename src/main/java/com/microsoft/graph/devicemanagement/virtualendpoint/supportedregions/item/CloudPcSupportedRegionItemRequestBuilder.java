@@ -57,7 +57,7 @@ public class CloudPcSupportedRegionItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Cloud PC supported regions.
-     * @return a CompletableFuture of cloudPcSupportedRegion
+     * @return a CompletableFuture of CloudPcSupportedRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSupportedRegion> get() {
@@ -66,7 +66,7 @@ public class CloudPcSupportedRegionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Cloud PC supported regions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSupportedRegion
+     * @return a CompletableFuture of CloudPcSupportedRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSupportedRegion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CloudPcSupportedRegionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property supportedRegions in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcSupportedRegion
+     * @return a CompletableFuture of CloudPcSupportedRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSupportedRegion> patch(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body) {
@@ -89,7 +89,7 @@ public class CloudPcSupportedRegionItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property supportedRegions in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSupportedRegion
+     * @return a CompletableFuture of CloudPcSupportedRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSupportedRegion> patch(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

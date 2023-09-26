@@ -18,7 +18,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
      */
     private TrainingCompletionDuration trainingCompletionDuration;
     /**
-     * Instantiates a new microsoftManagedTrainingSetting and sets the default values.
+     * Instantiates a new MicrosoftManagedTrainingSetting and sets the default values.
      */
     public MicrosoftManagedTrainingSetting() {
         super();
@@ -27,7 +27,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftManagedTrainingSetting
+     * @return a MicrosoftManagedTrainingSetting
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftManagedTrainingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class MicrosoftManagedTrainingSetting extends TrainingSetting implements 
     }
     /**
      * Gets the trainingCompletionDuration property value. The trainingCompletionDuration property
-     * @return a trainingCompletionDuration
+     * @return a TrainingCompletionDuration
      */
     @jakarta.annotation.Nullable
     public TrainingCompletionDuration getTrainingCompletionDuration() {

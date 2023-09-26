@@ -66,7 +66,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageAssignmentPolicyCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentPolicyCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicyCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentPolicyCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Create new navigation property to accessPackageAssignmentPolicies for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -107,7 +107,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
      * Create new navigation property to accessPackageAssignmentPolicies for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -197,7 +197,7 @@ public class AccessPackageAssignmentPoliciesRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentPoliciesRequestBuilder
+     * @return a AccessPackageAssignmentPoliciesRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

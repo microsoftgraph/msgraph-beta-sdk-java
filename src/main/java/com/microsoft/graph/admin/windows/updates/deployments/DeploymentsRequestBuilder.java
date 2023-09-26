@@ -60,7 +60,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of deployment objects and their properties.
-     * @return a CompletableFuture of deploymentCollectionResponse
+     * @return a CompletableFuture of DeploymentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deployments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of deployment objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deploymentCollectionResponse
+     * @return a CompletableFuture of DeploymentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deployments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new deployment object.
      * @param body The request body
-     * @return a CompletableFuture of deployment
+     * @return a CompletableFuture of Deployment
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deployments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
      * Create a new deployment object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deployment
+     * @return a CompletableFuture of Deployment
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deployments?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class DeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deploymentsRequestBuilder
+     * @return a DeploymentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeploymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

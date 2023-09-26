@@ -38,7 +38,7 @@ public class MicrosoftGraphManagedTenantsApplyRequestBuilder extends BaseRequest
     /**
      * Applies a management action against a specific managed tenant. By performing this operation the appropriate configurations will be made and policies created. As example when applying the require multi-factor authentication for admins management action will create an Azure Active Directory conditional access policy that requires multi-factor authentication for all users that have been assigned an administrative directory role.
      * @param body The request body
-     * @return a CompletableFuture of managementActionDeploymentStatus
+     * @return a CompletableFuture of ManagementActionDeploymentStatus
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementaction-apply?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class MicrosoftGraphManagedTenantsApplyRequestBuilder extends BaseRequest
      * Applies a management action against a specific managed tenant. By performing this operation the appropriate configurations will be made and policies created. As example when applying the require multi-factor authentication for admins management action will create an Azure Active Directory conditional access policy that requires multi-factor authentication for all users that have been assigned an administrative directory role.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementActionDeploymentStatus
+     * @return a CompletableFuture of ManagementActionDeploymentStatus
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementaction-apply?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class MicrosoftGraphManagedTenantsApplyRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsApplyRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsApplyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsApplyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

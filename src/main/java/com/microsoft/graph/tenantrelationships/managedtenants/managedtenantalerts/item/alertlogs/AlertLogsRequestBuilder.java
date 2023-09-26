@@ -59,7 +59,7 @@ public class AlertLogsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get alertLogs from tenantRelationships
-     * @return a CompletableFuture of managedTenantAlertLogCollectionResponse
+     * @return a CompletableFuture of ManagedTenantAlertLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertLogCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class AlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get alertLogs from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertLogCollectionResponse
+     * @return a CompletableFuture of ManagedTenantAlertLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertLogCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class AlertLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertLogsRequestBuilder
+     * @return a AlertLogsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertLogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

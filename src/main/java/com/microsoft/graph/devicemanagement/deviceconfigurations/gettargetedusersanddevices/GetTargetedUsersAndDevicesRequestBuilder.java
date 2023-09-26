@@ -37,7 +37,7 @@ public class GetTargetedUsersAndDevicesRequestBuilder extends BaseRequestBuilder
     /**
      * Invoke action getTargetedUsersAndDevices
      * @param body The request body
-     * @return a CompletableFuture of getTargetedUsersAndDevicesResponse
+     * @return a CompletableFuture of GetTargetedUsersAndDevicesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetTargetedUsersAndDevicesResponse> post(@jakarta.annotation.Nonnull final GetTargetedUsersAndDevicesPostRequestBody body) {
@@ -47,7 +47,7 @@ public class GetTargetedUsersAndDevicesRequestBuilder extends BaseRequestBuilder
      * Invoke action getTargetedUsersAndDevices
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getTargetedUsersAndDevicesResponse
+     * @return a CompletableFuture of GetTargetedUsersAndDevicesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetTargetedUsersAndDevicesResponse> post(@jakarta.annotation.Nonnull final GetTargetedUsersAndDevicesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class GetTargetedUsersAndDevicesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getTargetedUsersAndDevicesRequestBuilder
+     * @return a GetTargetedUsersAndDevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTargetedUsersAndDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -68,7 +68,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -80,7 +80,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
     }
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
-     * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -93,7 +93,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
     /**
      * In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequestCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentRequestCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -110,7 +110,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
     /**
      * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -124,7 +124,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
      * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentRequest
+     * @return a CompletableFuture of AccessPackageAssignmentRequest
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-post-accesspackageassignmentrequests?view=graph-rest-1.0">Find more info here</a>
@@ -215,7 +215,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentRequestsRequestBuilder
+     * @return a AccessPackageAssignmentRequestsRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

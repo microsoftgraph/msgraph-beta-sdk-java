@@ -72,13 +72,13 @@ public class DeviceShellScript extends Entity implements Parsable {
     /**
      * The script content.
      */
-    private byte[] scriptContent;
+    private Base64url scriptContent;
     /**
      * List of run states for this script across all users.
      */
     private java.util.List<DeviceManagementScriptUserState> userRunStates;
     /**
-     * Instantiates a new deviceShellScript and sets the default values.
+     * Instantiates a new DeviceShellScript and sets the default values.
      */
     public DeviceShellScript() {
         super();
@@ -86,7 +86,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceShellScript
+     * @return a DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public static DeviceShellScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -95,7 +95,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device management script.
-     * @return a deviceManagementScriptAssignment
+     * @return a java.util.List<DeviceManagementScriptAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptAssignment> getAssignments() {
@@ -103,7 +103,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the blockExecutionNotifications property value. Does not notify the user a script is being executed
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockExecutionNotifications() {
@@ -119,7 +119,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional description for the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -127,7 +127,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRunStates property value. List of run states for this script across all devices.
-     * @return a deviceManagementScriptDeviceState
+     * @return a java.util.List<DeviceManagementScriptDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
@@ -135,7 +135,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -170,13 +170,13 @@ public class DeviceShellScript extends Entity implements Parsable {
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("runAsAccount", (n) -> { this.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
         deserializerMap.put("runSummary", (n) -> { this.setRunSummary(n.getObjectValue(DeviceManagementScriptRunSummary::createFromDiscriminatorValue)); });
-        deserializerMap.put("scriptContent", (n) -> { this.setScriptContent(n.getByteArrayValue()); });
+        deserializerMap.put("scriptContent", (n) -> { this.setScriptContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("userRunStates", (n) -> { this.setUserRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptUserState::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the fileName property value. Script file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -184,7 +184,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for the device management script.
-     * @return a deviceManagementScriptGroupAssignment
+     * @return a java.util.List<DeviceManagementScriptGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptGroupAssignment> getGroupAssignments() {
@@ -200,7 +200,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the retryCount property value. Number of times for the script to be retried if it fails
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRetryCount() {
@@ -208,7 +208,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for this PowerShellScript instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -216,7 +216,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -224,7 +224,7 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the runSummary property value. Run summary for device management script.
-     * @return a deviceManagementScriptRunSummary
+     * @return a DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScriptRunSummary getRunSummary() {
@@ -232,15 +232,15 @@ public class DeviceShellScript extends Entity implements Parsable {
     }
     /**
      * Gets the scriptContent property value. The script content.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getScriptContent() {
+    public Base64url getScriptContent() {
         return this.scriptContent;
     }
     /**
      * Gets the userRunStates property value. List of run states for this script across all users.
-     * @return a deviceManagementScriptUserState
+     * @return a java.util.List<DeviceManagementScriptUserState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptUserState> getUserRunStates() {
@@ -265,7 +265,7 @@ public class DeviceShellScript extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeEnumValue("runAsAccount", this.getRunAsAccount());
         writer.writeObjectValue("runSummary", this.getRunSummary());
-        writer.writeByteArrayValue("scriptContent", this.getScriptContent());
+        writer.writeObjectValue("scriptContent", this.getScriptContent());
         writer.writeCollectionOfObjectValues("userRunStates", this.getUserRunStates());
     }
     /**
@@ -370,7 +370,7 @@ public class DeviceShellScript extends Entity implements Parsable {
      * Sets the scriptContent property value. The script content.
      * @param value Value to set for the scriptContent property.
      */
-    public void setScriptContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setScriptContent(@jakarta.annotation.Nullable final Base64url value) {
         this.scriptContent = value;
     }
     /**

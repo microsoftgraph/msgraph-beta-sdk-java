@@ -42,7 +42,7 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
     }
     /**
      * Invoke function transactionSummaries
-     * @return a CompletableFuture of transactionSummariesWithStartDateTimeWithEndDateTimeResponse
+     * @return a CompletableFuture of TransactionSummariesWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TransactionSummariesWithStartDateTimeWithEndDateTimeResponse> get() {
@@ -51,7 +51,7 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
     /**
      * Invoke function transactionSummaries
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of transactionSummariesWithStartDateTimeWithEndDateTimeResponse
+     * @return a CompletableFuture of TransactionSummariesWithStartDateTimeWithEndDateTimeResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TransactionSummariesWithStartDateTimeWithEndDateTimeResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWit
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

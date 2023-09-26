@@ -60,7 +60,7 @@ public class WindowsFeatureUpdateProfilesRequestBuilder extends BaseRequestBuild
     }
     /**
      * A collection of windows feature update profiles
-     * @return a CompletableFuture of windowsFeatureUpdateProfileCollectionResponse
+     * @return a CompletableFuture of WindowsFeatureUpdateProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class WindowsFeatureUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * A collection of windows feature update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsFeatureUpdateProfileCollectionResponse
+     * @return a CompletableFuture of WindowsFeatureUpdateProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WindowsFeatureUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to windowsFeatureUpdateProfiles for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsFeatureUpdateProfile
+     * @return a CompletableFuture of WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfile> post(@jakarta.annotation.Nonnull final WindowsFeatureUpdateProfile body) {
@@ -92,7 +92,7 @@ public class WindowsFeatureUpdateProfilesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to windowsFeatureUpdateProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsFeatureUpdateProfile
+     * @return a CompletableFuture of WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfile> post(@jakarta.annotation.Nonnull final WindowsFeatureUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WindowsFeatureUpdateProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsFeatureUpdateProfilesRequestBuilder
+     * @return a WindowsFeatureUpdateProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsFeatureUpdateProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,7 +59,7 @@ public class SkillProficiencyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a skillproficiency object in a user's profile.
-     * @return a CompletableFuture of skillProficiency
+     * @return a CompletableFuture of SkillProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/skillproficiency-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SkillProficiencyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a skillproficiency object in a user's profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of skillProficiency
+     * @return a CompletableFuture of SkillProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/skillproficiency-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class SkillProficiencyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a skillProficiency object in a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of skillProficiency
+     * @return a CompletableFuture of SkillProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/skillproficiency-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class SkillProficiencyItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a skillProficiency object in a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of skillProficiency
+     * @return a CompletableFuture of SkillProficiency
      * @see <a href="https://learn.microsoft.com/graph/api/skillproficiency-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -60,7 +60,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of onPremisesAgentGroup objects.
-     * @return a CompletableFuture of onPremisesAgentGroupCollectionResponse
+     * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onPremisesAgentGroup objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgentGroupCollectionResponse
+     * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new onPremisesAgentGroup object.
      * @param body The request body
-     * @return a CompletableFuture of onPremisesAgentGroup
+     * @return a CompletableFuture of OnPremisesAgentGroup
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
      * Create a new onPremisesAgentGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgentGroup
+     * @return a CompletableFuture of OnPremisesAgentGroup
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagentgroup-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agentGroupsRequestBuilder
+     * @return a AgentGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgentGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -20,7 +20,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     /**
      * The contents of the uploaded ADML file.
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The file name of the uploaded ADML file.
      */
@@ -42,7 +42,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     private String odataType;
     /**
-     * Instantiates a new groupPolicyUploadedLanguageFile and sets the default values.
+     * Instantiates a new GroupPolicyUploadedLanguageFile and sets the default values.
      */
     public GroupPolicyUploadedLanguageFile() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyUploadedLanguageFile
+     * @return a GroupPolicyUploadedLanguageFile
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyUploadedLanguageFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
         return new GroupPolicyUploadedLanguageFile();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,10 +67,10 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the content property value. The contents of the uploaded ADML file.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -80,7 +80,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("languageCode", (n) -> { this.setLanguageCode(n.getStringValue()); });
@@ -90,7 +90,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the fileName property value. The file name of the uploaded ADML file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -98,7 +98,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the id property value. Key of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -106,7 +106,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the languageCode property value. The language code of the uploaded ADML file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageCode() {
@@ -122,7 +122,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -134,7 +134,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeStringValue("fileName", this.getFileName());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("languageCode", this.getLanguageCode());
@@ -143,8 +143,8 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -153,7 +153,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * Sets the content property value. The contents of the uploaded ADML file.
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

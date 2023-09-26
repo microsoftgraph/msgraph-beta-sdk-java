@@ -60,7 +60,7 @@ public class GroupPolicyUploadedDefinitionFilesRequestBuilder extends BaseReques
     }
     /**
      * The available group policy uploaded definition files for this account.
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFileCollectionResponse
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GroupPolicyUploadedDefinitionFilesRequestBuilder extends BaseReques
     /**
      * The available group policy uploaded definition files for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFileCollectionResponse
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class GroupPolicyUploadedDefinitionFilesRequestBuilder extends BaseReques
     /**
      * Create new navigation property to groupPolicyUploadedDefinitionFiles for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> post(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body) {
@@ -92,7 +92,7 @@ public class GroupPolicyUploadedDefinitionFilesRequestBuilder extends BaseReques
      * Create new navigation property to groupPolicyUploadedDefinitionFiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyUploadedDefinitionFile
+     * @return a CompletableFuture of GroupPolicyUploadedDefinitionFile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyUploadedDefinitionFile> post(@jakarta.annotation.Nonnull final GroupPolicyUploadedDefinitionFile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class GroupPolicyUploadedDefinitionFilesRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupPolicyUploadedDefinitionFilesRequestBuilder
+     * @return a GroupPolicyUploadedDefinitionFilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyUploadedDefinitionFilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

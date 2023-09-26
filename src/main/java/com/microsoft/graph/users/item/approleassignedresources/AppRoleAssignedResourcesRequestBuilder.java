@@ -59,7 +59,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the service principals to which the user has an app role assignment either directly or through group membership.
-     * @return a CompletableFuture of servicePrincipalCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the service principals to which the user has an app role assignment either directly or through group membership.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-approleassignedresources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AppRoleAssignedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appRoleAssignedResourcesRequestBuilder
+     * @return a AppRoleAssignedResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppRoleAssignedResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

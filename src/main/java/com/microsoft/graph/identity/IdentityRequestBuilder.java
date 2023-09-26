@@ -126,7 +126,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identity
-     * @return a CompletableFuture of identityContainer
+     * @return a CompletableFuture of IdentityContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityContainer> get() {
@@ -135,7 +135,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityContainer
+     * @return a CompletableFuture of IdentityContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityContainer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -148,7 +148,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identity
      * @param body The request body
-     * @return a CompletableFuture of identityContainer
+     * @return a CompletableFuture of IdentityContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityContainer> patch(@jakarta.annotation.Nonnull final IdentityContainer body) {
@@ -158,7 +158,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
      * Update identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityContainer
+     * @return a CompletableFuture of IdentityContainer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityContainer> patch(@jakarta.annotation.Nonnull final IdentityContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -233,7 +233,7 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a identityRequestBuilder
+     * @return a IdentityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IdentityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

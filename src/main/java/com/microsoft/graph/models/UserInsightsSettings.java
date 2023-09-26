@@ -13,7 +13,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
      */
     private Boolean isEnabled;
     /**
-     * Instantiates a new userInsightsSettings and sets the default values.
+     * Instantiates a new UserInsightsSettings and sets the default values.
      */
     public UserInsightsSettings() {
         super();
@@ -21,7 +21,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userInsightsSettings
+     * @return a UserInsightsSettings
      */
     @jakarta.annotation.Nonnull
     public static UserInsightsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UserInsightsSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. true if user's itemInsights and meeting hours insights are enabled; false if user's itemInsights and meeting hours insights are disabled. Default is true. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {

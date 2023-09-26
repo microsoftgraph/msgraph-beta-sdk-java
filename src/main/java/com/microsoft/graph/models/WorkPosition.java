@@ -29,7 +29,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      */
     private RelatedPerson manager;
     /**
-     * Instantiates a new workPosition and sets the default values.
+     * Instantiates a new WorkPosition and sets the default values.
      */
     public WorkPosition() {
         super();
@@ -38,7 +38,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workPosition
+     * @return a WorkPosition
      */
     @jakarta.annotation.Nonnull
     public static WorkPosition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the categories property value. Categories that the user has associated with this position.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -55,7 +55,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the colleagues property value. Colleagues that are associated with this position.
-     * @return a relatedPerson
+     * @return a java.util.List<RelatedPerson>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getColleagues() {
@@ -63,7 +63,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the detail property value. The detail property
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nullable
     public PositionDetail getDetail() {
@@ -85,7 +85,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the isCurrent property value. Denotes whether or not the position is current.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCurrent() {
@@ -93,7 +93,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
     }
     /**
      * Gets the manager property value. Contains detail of the user's manager in this position.
-     * @return a relatedPerson
+     * @return a RelatedPerson
      */
     @jakarta.annotation.Nullable
     public RelatedPerson getManager() {

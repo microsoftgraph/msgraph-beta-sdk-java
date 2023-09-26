@@ -123,7 +123,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an administrativeUnit object. Since the administrativeUnit resource supports extensions, you can also use the GET operation to get custom properties and extension data in an administrativeUnit instance.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an administrativeUnit object. Since the administrativeUnit resource supports extensions, you can also use the GET operation to get custom properties and extension data in an administrativeUnit instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an administrativeUnit object.
      * @param body The request body
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an administrativeUnit object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      * @see <a href="https://learn.microsoft.com/graph/api/administrativeunit-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

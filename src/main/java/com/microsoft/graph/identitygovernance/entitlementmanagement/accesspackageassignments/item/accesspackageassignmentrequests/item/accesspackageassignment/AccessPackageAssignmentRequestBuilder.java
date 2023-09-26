@@ -38,7 +38,7 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder {
     /**
      * For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -101,7 +101,7 @@ public class AccessPackageAssignmentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentRequestBuilder
+     * @return a AccessPackageAssignmentRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

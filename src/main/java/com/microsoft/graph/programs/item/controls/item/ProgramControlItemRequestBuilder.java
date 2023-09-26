@@ -65,7 +65,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Controls associated with the program.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> get() {
@@ -74,7 +74,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Controls associated with the program.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property controls in programs
      * @param body The request body
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> patch(@jakarta.annotation.Nonnull final ProgramControl body) {
@@ -97,7 +97,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property controls in programs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> patch(@jakarta.annotation.Nonnull final ProgramControl body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

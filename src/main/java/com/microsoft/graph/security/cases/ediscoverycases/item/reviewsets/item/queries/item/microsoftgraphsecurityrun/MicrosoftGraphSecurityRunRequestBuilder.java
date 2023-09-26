@@ -37,7 +37,7 @@ public class MicrosoftGraphSecurityRunRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Invoke function run
-     * @return a CompletableFuture of runResponse
+     * @return a CompletableFuture of RunResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RunResponse> get() {
@@ -46,7 +46,7 @@ public class MicrosoftGraphSecurityRunRequestBuilder extends BaseRequestBuilder 
     /**
      * Invoke function run
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of runResponse
+     * @return a CompletableFuture of RunResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RunResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class MicrosoftGraphSecurityRunRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityRunRequestBuilder
+     * @return a MicrosoftGraphSecurityRunRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityRunRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

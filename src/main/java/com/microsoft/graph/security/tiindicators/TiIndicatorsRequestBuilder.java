@@ -92,7 +92,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of tiIndicator objects.
-     * @return a CompletableFuture of tiIndicatorCollectionResponse
+     * @return a CompletableFuture of TiIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of tiIndicator objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tiIndicatorCollectionResponse
+     * @return a CompletableFuture of TiIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new tiIndicator object.
      * @param body The request body
-     * @return a CompletableFuture of tiIndicator
+     * @return a CompletableFuture of TiIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * Create a new tiIndicator object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tiIndicator
+     * @return a CompletableFuture of TiIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tiIndicatorsRequestBuilder
+     * @return a TiIndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TiIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

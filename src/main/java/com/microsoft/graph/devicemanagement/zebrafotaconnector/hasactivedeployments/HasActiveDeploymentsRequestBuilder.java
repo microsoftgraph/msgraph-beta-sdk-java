@@ -36,7 +36,7 @@ public class HasActiveDeploymentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action hasActiveDeployments
-     * @return a CompletableFuture of hasActiveDeploymentsResponse
+     * @return a CompletableFuture of HasActiveDeploymentsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HasActiveDeploymentsResponse> post() {
@@ -45,7 +45,7 @@ public class HasActiveDeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action hasActiveDeployments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hasActiveDeploymentsResponse
+     * @return a CompletableFuture of HasActiveDeploymentsResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HasActiveDeploymentsResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class HasActiveDeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hasActiveDeploymentsRequestBuilder
+     * @return a HasActiveDeploymentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HasActiveDeploymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

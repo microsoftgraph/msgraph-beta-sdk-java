@@ -83,7 +83,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of the school object.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of the school object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a school object.
      * @param body The request body
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class EducationSchoolItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a school object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSchool
+     * @return a CompletableFuture of EducationSchool
      * @see <a href="https://learn.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

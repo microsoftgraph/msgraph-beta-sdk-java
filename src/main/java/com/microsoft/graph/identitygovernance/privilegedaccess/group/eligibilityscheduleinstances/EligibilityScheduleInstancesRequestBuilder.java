@@ -62,7 +62,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleInstance object.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse> get() {
@@ -80,7 +80,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
     /**
      * Read the properties and relationships of a privilegedAccessGroupEligibilityScheduleInstance object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleInstance
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstance> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleInstance body) {
@@ -103,7 +103,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to eligibilityScheduleInstances for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleInstance
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupEligibilityScheduleInstance> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupEligibilityScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class EligibilityScheduleInstancesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a eligibilityScheduleInstancesRequestBuilder
+     * @return a EligibilityScheduleInstancesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EligibilityScheduleInstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

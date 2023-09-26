@@ -65,7 +65,7 @@ public class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get appConsentRequestsForApproval from users
-     * @return a CompletableFuture of appConsentRequest
+     * @return a CompletableFuture of AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequest> get() {
@@ -74,7 +74,7 @@ public class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get appConsentRequestsForApproval from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appConsentRequest
+     * @return a CompletableFuture of AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property appConsentRequestsForApproval in users
      * @param body The request body
-     * @return a CompletableFuture of appConsentRequest
+     * @return a CompletableFuture of AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequest> patch(@jakarta.annotation.Nonnull final AppConsentRequest body) {
@@ -97,7 +97,7 @@ public class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property appConsentRequestsForApproval in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appConsentRequest
+     * @return a CompletableFuture of AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppConsentRequest> patch(@jakarta.annotation.Nonnull final AppConsentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

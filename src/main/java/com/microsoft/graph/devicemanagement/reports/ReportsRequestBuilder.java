@@ -633,7 +633,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Reports singleton
-     * @return a CompletableFuture of deviceManagementReports
+     * @return a CompletableFuture of DeviceManagementReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> get() {
@@ -642,7 +642,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Reports singleton
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReports
+     * @return a CompletableFuture of DeviceManagementReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -655,7 +655,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reports in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementReports
+     * @return a CompletableFuture of DeviceManagementReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> patch(@jakarta.annotation.Nonnull final DeviceManagementReports body) {
@@ -665,7 +665,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reports in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReports
+     * @return a CompletableFuture of DeviceManagementReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReports> patch(@jakarta.annotation.Nonnull final DeviceManagementReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -767,7 +767,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportsRequestBuilder
+     * @return a ReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

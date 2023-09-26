@@ -38,7 +38,7 @@ public class ManagedEBookCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of categories for this eBook.
-     * @return a CompletableFuture of managedEBookCategory
+     * @return a CompletableFuture of ManagedEBookCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookCategory> get() {
@@ -47,7 +47,7 @@ public class ManagedEBookCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of categories for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBookCategory
+     * @return a CompletableFuture of ManagedEBookCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of pages in the section.  Read-only. Nullable.
-     * @return a CompletableFuture of onenotePageCollectionResponse
+     * @return a CompletableFuture of OnenotePageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of pages in the section.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePageCollectionResponse
+     * @return a CompletableFuture of OnenotePageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to pages for sites
      * @param body The request body
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@jakarta.annotation.Nonnull final OnenotePage body) {
@@ -92,7 +92,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to pages for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> post(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pagesRequestBuilder
+     * @return a PagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

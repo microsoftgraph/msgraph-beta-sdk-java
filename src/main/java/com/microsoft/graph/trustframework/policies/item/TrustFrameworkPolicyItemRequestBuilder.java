@@ -67,7 +67,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policies from trustFramework
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> get() {
@@ -76,7 +76,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policies from trustFramework
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property policies in trustFramework
      * @param body The request body
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> patch(@jakarta.annotation.Nonnull final TrustFrameworkPolicy body) {
@@ -99,7 +99,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property policies in trustFramework
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> patch(@jakarta.annotation.Nonnull final TrustFrameworkPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

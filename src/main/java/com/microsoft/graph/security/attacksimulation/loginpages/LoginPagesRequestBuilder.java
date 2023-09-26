@@ -60,7 +60,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get loginPages from security
-     * @return a CompletableFuture of loginPageCollectionResponse
+     * @return a CompletableFuture of LoginPageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get loginPages from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of loginPageCollectionResponse
+     * @return a CompletableFuture of LoginPageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to loginPages for security
      * @param body The request body
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> post(@jakarta.annotation.Nonnull final LoginPage body) {
@@ -92,7 +92,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to loginPages for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> post(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a loginPagesRequestBuilder
+     * @return a LoginPagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LoginPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

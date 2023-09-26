@@ -36,7 +36,7 @@ public class GetFileVaultKeyRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getFileVaultKey
-     * @return a CompletableFuture of getFileVaultKeyResponse
+     * @return a CompletableFuture of GetFileVaultKeyResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetFileVaultKeyResponse> get() {
@@ -45,7 +45,7 @@ public class GetFileVaultKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getFileVaultKey
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getFileVaultKeyResponse
+     * @return a CompletableFuture of GetFileVaultKeyResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetFileVaultKeyResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,7 +86,7 @@ public class GetFileVaultKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getFileVaultKeyRequestBuilder
+     * @return a GetFileVaultKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFileVaultKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

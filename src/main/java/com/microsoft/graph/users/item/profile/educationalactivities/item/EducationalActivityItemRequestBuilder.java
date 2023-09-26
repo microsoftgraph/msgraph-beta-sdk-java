@@ -59,7 +59,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of an educationalActivity object from a users profile.
-     * @return a CompletableFuture of educationalActivity
+     * @return a CompletableFuture of EducationalActivity
      * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of an educationalActivity object from a users profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationalActivity
+     * @return a CompletableFuture of EducationalActivity
      * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of an educationalActivity object within a user's profile.
      * @param body The request body
-     * @return a CompletableFuture of educationalActivity
+     * @return a CompletableFuture of EducationalActivity
      * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class EducationalActivityItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an educationalActivity object within a user's profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationalActivity
+     * @return a CompletableFuture of EducationalActivity
      * @see <a href="https://learn.microsoft.com/graph/api/educationalactivity-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

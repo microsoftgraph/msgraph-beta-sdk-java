@@ -38,7 +38,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get accessPackageCatalog from identityGovernance
-     * @return a CompletableFuture of accessPackageCatalog
+     * @return a CompletableFuture of AccessPackageCatalog
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -50,7 +50,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Get accessPackageCatalog from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageCatalog
+     * @return a CompletableFuture of AccessPackageCatalog
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -101,7 +101,7 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageCatalogRequestBuilder
+     * @return a AccessPackageCatalogRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

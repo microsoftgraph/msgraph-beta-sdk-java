@@ -75,7 +75,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a cloudPcUserSetting object.
-     * @return a CompletableFuture of cloudPcUserSetting
+     * @return a CompletableFuture of CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a cloudPcUserSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcUserSetting
+     * @return a CompletableFuture of CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a cloudPcUserSetting object.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcUserSetting
+     * @return a CompletableFuture of CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class CloudPcUserSettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a cloudPcUserSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcUserSetting
+     * @return a CompletableFuture of CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

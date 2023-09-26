@@ -65,7 +65,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Traffic forwarding policies associated with this profile.
-     * @return a CompletableFuture of policyLink
+     * @return a CompletableFuture of PolicyLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyLink> get() {
@@ -74,7 +74,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Traffic forwarding policies associated with this profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policyLink
+     * @return a CompletableFuture of PolicyLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyLink> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property policies in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of policyLink
+     * @return a CompletableFuture of PolicyLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyLink> patch(@jakarta.annotation.Nonnull final PolicyLink body) {
@@ -97,7 +97,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property policies in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policyLink
+     * @return a CompletableFuture of PolicyLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyLink> patch(@jakarta.annotation.Nonnull final PolicyLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

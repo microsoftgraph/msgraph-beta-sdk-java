@@ -55,7 +55,7 @@ public class HostPort extends Entity implements Parsable {
      */
     private Integer timesObserved;
     /**
-     * Instantiates a new hostPort and sets the default values.
+     * Instantiates a new HostPort and sets the default values.
      */
     public HostPort() {
         super();
@@ -63,7 +63,7 @@ public class HostPort extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPort
+     * @return a HostPort
      */
     @jakarta.annotation.Nonnull
     public static HostPort createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +72,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the banners property value. The banners property
-     * @return a hostPortBanner
+     * @return a java.util.List<HostPortBanner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPortBanner> getBanners() {
@@ -108,7 +108,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -132,7 +132,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the mostRecentSslCertificate property value. The mostRecentSslCertificate property
-     * @return a sslCertificate
+     * @return a SslCertificate
      */
     @jakarta.annotation.Nullable
     public SslCertificate getMostRecentSslCertificate() {
@@ -140,7 +140,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the port property value. The port property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -148,7 +148,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the protocol property value. The protocol property
-     * @return a hostPortProtocol
+     * @return a HostPortProtocol
      */
     @jakarta.annotation.Nullable
     public HostPortProtocol getProtocol() {
@@ -156,7 +156,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the services property value. The services property
-     * @return a hostPortComponent
+     * @return a java.util.List<HostPortComponent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPortComponent> getServices() {
@@ -164,7 +164,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a hostPortStatus
+     * @return a HostPortStatus
      */
     @jakarta.annotation.Nullable
     public HostPortStatus getStatus() {
@@ -172,7 +172,7 @@ public class HostPort extends Entity implements Parsable {
     }
     /**
      * Gets the timesObserved property value. The timesObserved property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimesObserved() {

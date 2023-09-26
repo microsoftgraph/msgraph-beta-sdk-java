@@ -57,7 +57,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder extends Ba
     }
     /**
      * Windows information protection wipe actions.
-     * @return a CompletableFuture of windowsInformationProtectionWipeAction
+     * @return a CompletableFuture of WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeAction> get() {
@@ -66,7 +66,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder extends Ba
     /**
      * Windows information protection wipe actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionWipeAction
+     * @return a CompletableFuture of WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeAction> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder extends Ba
     /**
      * Update the navigation property windowsInformationProtectionWipeActions in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionWipeAction
+     * @return a CompletableFuture of WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeAction> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionWipeAction body) {
@@ -89,7 +89,7 @@ public class WindowsInformationProtectionWipeActionItemRequestBuilder extends Ba
      * Update the navigation property windowsInformationProtectionWipeActions in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionWipeAction
+     * @return a CompletableFuture of WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeAction> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionWipeAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

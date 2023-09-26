@@ -35,6 +35,7 @@ import com.microsoft.graph.groups.item.renew.RenewRequestBuilder;
 import com.microsoft.graph.groups.item.resetunseencount.ResetUnseenCountRequestBuilder;
 import com.microsoft.graph.groups.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.groups.item.retryserviceprovisioning.RetryServiceProvisioningRequestBuilder;
+import com.microsoft.graph.groups.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.groups.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.groups.item.subscribebymail.SubscribeByMailRequestBuilder;
@@ -310,6 +311,13 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
         return new RetryServiceProvisioningRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the settings property of the microsoft.graph.group entity.
      */
     @jakarta.annotation.Nonnull
@@ -411,7 +419,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are not returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query. Because the group resource supports extensions, you can also use the GET operation to get custom properties and extension data in a group instance.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -421,7 +429,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a group object. This operation returns by default only a subset of all the available properties, as noted in the Properties section. To get properties that are not returned by default, specify them in a $select OData query option. The hasMembersWithLicenseErrors and isArchived properties are an exception and are not returned in the $select query. Because the group resource supports extensions, you can also use the GET operation to get custom properties and extension data in a group instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/group-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -435,7 +443,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a group object.
      * @param body The request body
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -446,7 +454,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a group object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a CompletableFuture of Group
      * @see <a href="https://learn.microsoft.com/graph/api/group-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

@@ -68,7 +68,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
-     * @return a CompletableFuture of onPremisesAgentGroupCollectionResponse
+     * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgentGroupCollectionResponse
+     * @return a CompletableFuture of OnPremisesAgentGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to agentGroups for onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of onPremisesAgentGroup
+     * @return a CompletableFuture of OnPremisesAgentGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@jakarta.annotation.Nonnull final OnPremisesAgentGroup body) {
@@ -100,7 +100,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to agentGroups for onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgentGroup
+     * @return a CompletableFuture of OnPremisesAgentGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgentGroup> post(@jakarta.annotation.Nonnull final OnPremisesAgentGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class AgentGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agentGroupsRequestBuilder
+     * @return a AgentGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgentGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

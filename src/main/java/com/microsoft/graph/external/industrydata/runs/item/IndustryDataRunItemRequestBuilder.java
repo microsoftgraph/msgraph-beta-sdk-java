@@ -54,7 +54,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of an industryDataRun object.
-     * @return a CompletableFuture of industryDataRun
+     * @return a CompletableFuture of IndustryDataRun
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class IndustryDataRunItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of an industryDataRun object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataRun
+     * @return a CompletableFuture of IndustryDataRun
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

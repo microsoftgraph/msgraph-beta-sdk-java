@@ -60,7 +60,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of publishedResource objects.
-     * @return a CompletableFuture of publishedResourceCollectionResponse
+     * @return a CompletableFuture of PublishedResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of publishedResource objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of publishedResourceCollectionResponse
+     * @return a CompletableFuture of PublishedResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new publishedResource object.
      * @param body The request body
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
      * Create a new publishedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      * @see <a href="https://learn.microsoft.com/graph/api/publishedresource-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PublishedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a publishedResourcesRequestBuilder
+     * @return a PublishedResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PublishedResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

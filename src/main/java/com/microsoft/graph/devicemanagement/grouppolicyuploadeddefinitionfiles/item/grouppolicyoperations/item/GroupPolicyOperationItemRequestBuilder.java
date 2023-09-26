@@ -57,7 +57,7 @@ public class GroupPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of operations on the uploaded ADMX file.
-     * @return a CompletableFuture of groupPolicyOperation
+     * @return a CompletableFuture of GroupPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyOperation> get() {
@@ -66,7 +66,7 @@ public class GroupPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of operations on the uploaded ADMX file.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyOperation
+     * @return a CompletableFuture of GroupPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class GroupPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property groupPolicyOperations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyOperation
+     * @return a CompletableFuture of GroupPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyOperation> patch(@jakarta.annotation.Nonnull final GroupPolicyOperation body) {
@@ -89,7 +89,7 @@ public class GroupPolicyOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property groupPolicyOperations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyOperation
+     * @return a CompletableFuture of GroupPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyOperation> patch(@jakarta.annotation.Nonnull final GroupPolicyOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

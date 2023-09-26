@@ -22,7 +22,7 @@ public class PolicyLink extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new policyLink and sets the default values.
+     * Instantiates a new PolicyLink and sets the default values.
      */
     public PolicyLink() {
         super();
@@ -30,7 +30,7 @@ public class PolicyLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyLink
+     * @return a PolicyLink
      */
     @jakarta.annotation.Nonnull
     public static PolicyLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a policy
+     * @return a Policy
      */
     @jakarta.annotation.Nullable
     public Policy getPolicy() {
@@ -66,7 +66,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getState() {
@@ -74,7 +74,7 @@ public class PolicyLink extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

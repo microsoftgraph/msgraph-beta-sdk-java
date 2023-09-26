@@ -37,7 +37,7 @@ public class GetSupportedPropertiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getSupportedProperties
-     * @return a CompletableFuture of getSupportedPropertiesResponse
+     * @return a CompletableFuture of GetSupportedPropertiesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetSupportedPropertiesResponse> get() {
@@ -46,7 +46,7 @@ public class GetSupportedPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getSupportedProperties
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getSupportedPropertiesResponse
+     * @return a CompletableFuture of GetSupportedPropertiesResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetSupportedPropertiesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetSupportedPropertiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getSupportedPropertiesRequestBuilder
+     * @return a GetSupportedPropertiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSupportedPropertiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

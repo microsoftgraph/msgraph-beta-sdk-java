@@ -38,7 +38,7 @@ public class CategoryTemplateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies a group of similar types of content in a particular department.
-     * @return a CompletableFuture of categoryTemplate
+     * @return a CompletableFuture of CategoryTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplate> get() {
@@ -47,7 +47,7 @@ public class CategoryTemplateRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies a group of similar types of content in a particular department.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of categoryTemplate
+     * @return a CompletableFuture of CategoryTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CategoryTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class CategoryTemplateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a categoryTemplateRequestBuilder
+     * @return a CategoryTemplateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CategoryTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of securityAction objects.
-     * @return a CompletableFuture of securityActionCollectionResponse
+     * @return a CompletableFuture of SecurityActionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of securityAction objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityActionCollectionResponse
+     * @return a CompletableFuture of SecurityActionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new securityAction object.
      * @param body The request body
-     * @return a CompletableFuture of securityAction
+     * @return a CompletableFuture of SecurityAction
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Create a new securityAction object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityAction
+     * @return a CompletableFuture of SecurityAction
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a securityActionsRequestBuilder
+     * @return a SecurityActionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SecurityActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

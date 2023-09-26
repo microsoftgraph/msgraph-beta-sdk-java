@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     private EnumSet<DeviceManagementConfigurationSettingVisibility> visibility;
     /**
-     * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingDefinition and sets the default values.
      */
     public DeviceManagementConfigurationSettingDefinition() {
         super();
@@ -90,7 +90,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a DeviceManagementConfigurationSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -112,7 +112,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the accessTypes property value. The accessTypes property
-     * @return a deviceManagementConfigurationSettingAccessTypes
+     * @return a EnumSet<DeviceManagementConfigurationSettingAccessTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingAccessTypes> getAccessTypes() {
@@ -120,7 +120,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the applicability property value. Details which device setting is applicable on. Supports: $filters.
-     * @return a deviceManagementConfigurationSettingApplicability
+     * @return a DeviceManagementConfigurationSettingApplicability
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingApplicability getApplicability() {
@@ -128,7 +128,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the baseUri property value. Base CSP Path
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBaseUri() {
@@ -136,7 +136,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the categoryId property value. Specify category in which the setting is under. Support $filters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategoryId() {
@@ -144,7 +144,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the description property value. Description of the setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -152,7 +152,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the displayName property value. Name of the setting. For example: Allow Toast.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -187,7 +187,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the helpText property value. Help text of the setting. Give more details of the setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpText() {
@@ -195,7 +195,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the infoUrls property value. List of links more info for the setting can be found at.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInfoUrls() {
@@ -203,7 +203,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the keywords property value. Tokens which to search settings on
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKeywords() {
@@ -211,7 +211,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the name property value. Name of the item
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -219,7 +219,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the occurrence property value. Indicates whether the setting is required or not
-     * @return a deviceManagementConfigurationSettingOccurrence
+     * @return a DeviceManagementConfigurationSettingOccurrence
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingOccurrence getOccurrence() {
@@ -227,7 +227,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the offsetUri property value. Offset CSP Path from Base
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOffsetUri() {
@@ -235,7 +235,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the referredSettingInformationList property value. List of referred setting information.
-     * @return a deviceManagementConfigurationReferredSettingInformation
+     * @return a java.util.List<DeviceManagementConfigurationReferredSettingInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationReferredSettingInformation> getReferredSettingInformationList() {
@@ -243,7 +243,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRootDefinitionId() {
@@ -251,7 +251,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the settingUsage property value. Supported setting types
-     * @return a deviceManagementConfigurationSettingUsage
+     * @return a EnumSet<DeviceManagementConfigurationSettingUsage>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingUsage> getSettingUsage() {
@@ -259,7 +259,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the uxBehavior property value. Setting control type representation in the UX
-     * @return a deviceManagementConfigurationControlType
+     * @return a DeviceManagementConfigurationControlType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationControlType getUxBehavior() {
@@ -267,7 +267,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the version property value. Item Version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -275,7 +275,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the visibility property value. Supported setting types
-     * @return a deviceManagementConfigurationSettingVisibility
+     * @return a EnumSet<DeviceManagementConfigurationSettingVisibility>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingVisibility> getVisibility() {

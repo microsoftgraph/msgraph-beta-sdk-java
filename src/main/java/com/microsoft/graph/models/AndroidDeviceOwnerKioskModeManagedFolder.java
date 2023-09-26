@@ -33,7 +33,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
      */
     private String odataType;
     /**
-     * Instantiates a new androidDeviceOwnerKioskModeManagedFolder and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerKioskModeManagedFolder and sets the default values.
      */
     public AndroidDeviceOwnerKioskModeManagedFolder() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerKioskModeManagedFolder
+     * @return a AndroidDeviceOwnerKioskModeManagedFolder
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeManagedFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
         return new AndroidDeviceOwnerKioskModeManagedFolder();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
     }
     /**
      * Gets the folderIdentifier property value. Unique identifier for the folder
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFolderIdentifier() {
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
     }
     /**
      * Gets the folderName property value. Display name for the folder
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFolderName() {
@@ -87,7 +87,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
     }
     /**
      * Gets the items property value. Items to be added to managed folder. This collection can contain a maximum of 500 elements.
-     * @return a androidDeviceOwnerKioskModeFolderItem
+     * @return a java.util.List<AndroidDeviceOwnerKioskModeFolderItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerKioskModeFolderItem> getItems() {
@@ -95,7 +95,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,8 +114,8 @@ public class AndroidDeviceOwnerKioskModeManagedFolder implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

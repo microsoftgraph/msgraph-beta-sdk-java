@@ -68,7 +68,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
-     * @return a CompletableFuture of conversationMemberCollectionResponse
+     * @return a CompletableFuture of ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of conversationMembers from a channel. This method supports federation. Only a user who is a member of the shared channel can retrieve the channel member list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMemberCollectionResponse
+     * @return a CompletableFuture of ConversationMemberCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/channel-list-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,7 +103,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
      * Add a conversationMember to a channel. This operation is allowed only for channels with a membershipType value of private or shared.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationMember
+     * @return a CompletableFuture of ConversationMember
      * @see <a href="https://learn.microsoft.com/graph/api/channel-post-members?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -179,7 +179,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a membersRequestBuilder
+     * @return a MembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

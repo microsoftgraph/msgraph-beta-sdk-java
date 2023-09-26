@@ -65,7 +65,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
     }
     /**
      * The list of scheduled action for this rule
-     * @return a CompletableFuture of deviceManagementComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceManagementComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceScheduledActionForRule> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
     /**
      * The list of scheduled action for this rule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceManagementComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceScheduledActionForRule> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
     /**
      * Update the navigation property scheduledActionsForRule in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceManagementComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceScheduledActionForRule> patch(@jakarta.annotation.Nonnull final DeviceManagementComplianceScheduledActionForRule body) {
@@ -97,7 +97,7 @@ public class DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder 
      * Update the navigation property scheduledActionsForRule in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceManagementComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceScheduledActionForRule> patch(@jakarta.annotation.Nonnull final DeviceManagementComplianceScheduledActionForRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

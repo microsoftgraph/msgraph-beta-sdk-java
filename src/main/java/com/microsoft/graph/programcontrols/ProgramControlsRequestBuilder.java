@@ -60,7 +60,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
-     * @return a CompletableFuture of programControlCollectionResponse
+     * @return a CompletableFuture of ProgramControlCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, list all the programControl objects, across all programs in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControlCollectionResponse
+     * @return a CompletableFuture of ProgramControlCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, create a new programControl object.  This links an access review to a program. Prior to making this request, the caller must have previously
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ProgramControlsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a programControlsRequestBuilder
+     * @return a ProgramControlsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProgramControlsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

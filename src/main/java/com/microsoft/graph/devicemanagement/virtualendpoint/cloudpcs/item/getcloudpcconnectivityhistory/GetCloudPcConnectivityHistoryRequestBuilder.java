@@ -37,7 +37,7 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
     }
     /**
      * Invoke function getCloudPcConnectivityHistory
-     * @return a CompletableFuture of getCloudPcConnectivityHistoryResponse
+     * @return a CompletableFuture of GetCloudPcConnectivityHistoryResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCloudPcConnectivityHistoryResponse> get() {
@@ -46,7 +46,7 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
     /**
      * Invoke function getCloudPcConnectivityHistory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getCloudPcConnectivityHistoryResponse
+     * @return a CompletableFuture of GetCloudPcConnectivityHistoryResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GetCloudPcConnectivityHistoryResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -88,7 +88,7 @@ public class GetCloudPcConnectivityHistoryRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCloudPcConnectivityHistoryRequestBuilder
+     * @return a GetCloudPcConnectivityHistoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCloudPcConnectivityHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

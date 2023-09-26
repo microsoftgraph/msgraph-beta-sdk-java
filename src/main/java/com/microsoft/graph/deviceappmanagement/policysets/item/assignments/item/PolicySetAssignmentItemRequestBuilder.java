@@ -57,7 +57,7 @@ public class PolicySetAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Assignments of the PolicySet.
-     * @return a CompletableFuture of policySetAssignment
+     * @return a CompletableFuture of PolicySetAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetAssignment> get() {
@@ -66,7 +66,7 @@ public class PolicySetAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Assignments of the PolicySet.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetAssignment
+     * @return a CompletableFuture of PolicySetAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PolicySetAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of policySetAssignment
+     * @return a CompletableFuture of PolicySetAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetAssignment> patch(@jakarta.annotation.Nonnull final PolicySetAssignment body) {
@@ -89,7 +89,7 @@ public class PolicySetAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetAssignment
+     * @return a CompletableFuture of PolicySetAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetAssignment> patch(@jakarta.annotation.Nonnull final PolicySetAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

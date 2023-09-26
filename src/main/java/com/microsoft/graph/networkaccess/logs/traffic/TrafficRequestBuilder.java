@@ -60,7 +60,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of log events for traffic routed through the Global Secure Access services.
-     * @return a CompletableFuture of networkAccessTrafficCollectionResponse
+     * @return a CompletableFuture of NetworkAccessTrafficCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of log events for traffic routed through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of networkAccessTrafficCollectionResponse
+     * @return a CompletableFuture of NetworkAccessTrafficCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-logs-list-traffic?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to traffic for networkAccess
      * @param body The request body
-     * @return a CompletableFuture of networkAccessTraffic
+     * @return a CompletableFuture of NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTraffic> post(@jakarta.annotation.Nonnull final NetworkAccessTraffic body) {
@@ -94,7 +94,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to traffic for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of networkAccessTraffic
+     * @return a CompletableFuture of NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessTraffic> post(@jakarta.annotation.Nonnull final NetworkAccessTraffic body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class TrafficRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a trafficRequestBuilder
+     * @return a TrafficRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TrafficRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -81,7 +81,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * The managed app registrations.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get() {
@@ -90,7 +90,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * The managed app registrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
@@ -113,7 +113,7 @@ public class ManagedAppRegistrationItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property managedAppRegistrations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> patch(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

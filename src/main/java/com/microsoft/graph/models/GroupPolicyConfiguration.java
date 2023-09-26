@@ -45,7 +45,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new groupPolicyConfiguration and sets the default values.
+     * Instantiates a new GroupPolicyConfiguration and sets the default values.
      */
     public GroupPolicyConfiguration() {
         super();
@@ -53,7 +53,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfiguration
+     * @return a GroupPolicyConfiguration
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the configuration.
-     * @return a groupPolicyConfigurationAssignment
+     * @return a java.util.List<GroupPolicyConfigurationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyConfigurationAssignment> getAssignments() {
@@ -78,7 +78,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the definitionValues property value. The list of enabled or disabled group policy definition values for the configuration.
-     * @return a groupPolicyDefinitionValue
+     * @return a java.util.List<GroupPolicyDefinitionValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionValue> getDefinitionValues() {
@@ -86,7 +86,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. User provided description for the resource object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -94,7 +94,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. User provided name for the resource object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -127,7 +127,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the policyConfigurationIngestionType property value. Group Policy Configuration Ingestion Type
-     * @return a groupPolicyConfigurationIngestionType
+     * @return a GroupPolicyConfigurationIngestionType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyConfigurationIngestionType getPolicyConfigurationIngestionType() {
@@ -135,7 +135,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

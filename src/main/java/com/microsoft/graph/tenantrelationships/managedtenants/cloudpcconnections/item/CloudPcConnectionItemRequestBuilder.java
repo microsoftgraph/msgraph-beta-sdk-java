@@ -57,7 +57,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a cloudPcConnection object.
-     * @return a CompletableFuture of cloudPcConnection
+     * @return a CompletableFuture of CloudPcConnection
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-cloudpcconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a cloudPcConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcConnection
+     * @return a CompletableFuture of CloudPcConnection
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-cloudpcconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property cloudPcConnections in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of cloudPcConnection
+     * @return a CompletableFuture of CloudPcConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcConnection> patch(@jakarta.annotation.Nonnull final CloudPcConnection body) {
@@ -91,7 +91,7 @@ public class CloudPcConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cloudPcConnections in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcConnection
+     * @return a CompletableFuture of CloudPcConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcConnection> patch(@jakarta.annotation.Nonnull final CloudPcConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
-     * @return a CompletableFuture of educationSynchronizationErrorCollectionResponse
+     * @return a CompletableFuture of EducationSynchronizationErrorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationErrorCollectionResponse
+     * @return a CompletableFuture of EducationSynchronizationErrorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to errors for education
      * @param body The request body
-     * @return a CompletableFuture of educationSynchronizationError
+     * @return a CompletableFuture of EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationError> post(@jakarta.annotation.Nonnull final EducationSynchronizationError body) {
@@ -94,7 +94,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to errors for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationError
+     * @return a CompletableFuture of EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationError> post(@jakarta.annotation.Nonnull final EducationSynchronizationError body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a errorsRequestBuilder
+     * @return a ErrorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ErrorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

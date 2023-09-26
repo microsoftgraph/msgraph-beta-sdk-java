@@ -57,7 +57,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the conditional access settings, which include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
-     * @return a CompletableFuture of conditionalAccessSettings
+     * @return a CompletableFuture of ConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the conditional access settings, which include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessSettings
+     * @return a CompletableFuture of ConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the conditional access settings to include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessSettings
+     * @return a CompletableFuture of ConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Update the conditional access settings to include the preservation of the original source IP address in network traffic for accurate identification and tracking, as well as the establishment of scalable network connectivity through the Global Secure Access services.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessSettings
+     * @return a CompletableFuture of ConditionalAccessSettings
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-conditionalaccesssettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conditionalAccessRequestBuilder
+     * @return a ConditionalAccessRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

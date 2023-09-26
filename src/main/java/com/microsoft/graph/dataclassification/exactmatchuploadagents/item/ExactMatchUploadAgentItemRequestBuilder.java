@@ -57,7 +57,7 @@ public class ExactMatchUploadAgentItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get exactMatchUploadAgents from dataClassification
-     * @return a CompletableFuture of exactMatchUploadAgent
+     * @return a CompletableFuture of ExactMatchUploadAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchUploadAgent> get() {
@@ -66,7 +66,7 @@ public class ExactMatchUploadAgentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Get exactMatchUploadAgents from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchUploadAgent
+     * @return a CompletableFuture of ExactMatchUploadAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchUploadAgent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ExactMatchUploadAgentItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property exactMatchUploadAgents in dataClassification
      * @param body The request body
-     * @return a CompletableFuture of exactMatchUploadAgent
+     * @return a CompletableFuture of ExactMatchUploadAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchUploadAgent> patch(@jakarta.annotation.Nonnull final ExactMatchUploadAgent body) {
@@ -89,7 +89,7 @@ public class ExactMatchUploadAgentItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property exactMatchUploadAgents in dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchUploadAgent
+     * @return a CompletableFuture of ExactMatchUploadAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchUploadAgent> patch(@jakarta.annotation.Nonnull final ExactMatchUploadAgent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

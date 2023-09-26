@@ -60,7 +60,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * In the Azure AD access reviews feature, list all the program objects.
-     * @return a CompletableFuture of programCollectionResponse
+     * @return a CompletableFuture of ProgramCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, list all the program objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programCollectionResponse
+     * @return a CompletableFuture of ProgramCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
     /**
      * In the Azure AD access reviews feature, create a new program object.
      * @param body The request body
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
      * In the Azure AD access reviews feature, create a new program object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a programsRequestBuilder
+     * @return a ProgramsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProgramsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

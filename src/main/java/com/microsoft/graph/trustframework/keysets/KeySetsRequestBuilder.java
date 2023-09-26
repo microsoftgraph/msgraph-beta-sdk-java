@@ -60,7 +60,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of trustFrameworkKeySets.
-     * @return a CompletableFuture of trustFrameworkKeySetCollectionResponse
+     * @return a CompletableFuture of TrustFrameworkKeySetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of trustFrameworkKeySets.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKeySetCollectionResponse
+     * @return a CompletableFuture of TrustFrameworkKeySetCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-list-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
      * Create a new trustFrameworkKeySet. The ID of the trustFrameworkKeySet is expected in the create request; however, it can be modified by the service. The modified ID will be available in the response and in the location header.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframework-post-keysets?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class KeySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a keySetsRequestBuilder
+     * @return a KeySetsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public KeySetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

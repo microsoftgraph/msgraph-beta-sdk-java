@@ -14,7 +14,7 @@ public class DepartmentTemplateCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<DepartmentTemplate> value;
     /**
-     * Instantiates a new departmentTemplateCollectionResponse and sets the default values.
+     * Instantiates a new DepartmentTemplateCollectionResponse and sets the default values.
      */
     public DepartmentTemplateCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class DepartmentTemplateCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a departmentTemplateCollectionResponse
+     * @return a DepartmentTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DepartmentTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DepartmentTemplateCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a departmentTemplate
+     * @return a java.util.List<DepartmentTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DepartmentTemplate> getValue() {

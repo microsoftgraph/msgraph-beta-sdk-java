@@ -57,7 +57,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a specific endpoint object.
-     * @return a CompletableFuture of endpoint
+     * @return a CompletableFuture of Endpoint
      * @see <a href="https://learn.microsoft.com/graph/api/endpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a specific endpoint object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endpoint
+     * @return a CompletableFuture of Endpoint
      * @see <a href="https://learn.microsoft.com/graph/api/endpoint-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property endpoints in groups
      * @param body The request body
-     * @return a CompletableFuture of endpoint
+     * @return a CompletableFuture of Endpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Endpoint> patch(@jakarta.annotation.Nonnull final Endpoint body) {
@@ -91,7 +91,7 @@ public class EndpointItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property endpoints in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endpoint
+     * @return a CompletableFuture of Endpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Endpoint> patch(@jakarta.annotation.Nonnull final Endpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

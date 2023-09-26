@@ -97,7 +97,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reprovisionCloudPcRequestBuilder
+     * @return a ReprovisionCloudPcRequestBuilder
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
      */

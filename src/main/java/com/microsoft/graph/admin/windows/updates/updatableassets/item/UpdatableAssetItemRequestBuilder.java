@@ -90,19 +90,19 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an updatableAssetGroup object.
-     * @return a CompletableFuture of updatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-get?view=graph-rest-1.0">Find more info here</a>
+     * Read the properties and relationships of an updatableAsset object.
+     * @return a CompletableFuture of UpdatableAsset
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an updatableAssetGroup object.
+     * Read the properties and relationships of an updatableAsset object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of UpdatableAsset
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableasset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,7 +115,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property updatableAssets in admin
      * @param body The request body
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> patch(@jakarta.annotation.Nonnull final UpdatableAsset body) {
@@ -125,7 +125,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property updatableAssets in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatableAsset
+     * @return a CompletableFuture of UpdatableAsset
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> patch(@jakarta.annotation.Nonnull final UpdatableAsset body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -164,7 +164,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an updatableAssetGroup object.
+     * Read the properties and relationships of an updatableAsset object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -172,7 +172,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an updatableAssetGroup object.
+     * Read the properties and relationships of an updatableAsset object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -241,7 +241,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an updatableAssetGroup object.
+     * Read the properties and relationships of an updatableAsset object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

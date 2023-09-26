@@ -99,7 +99,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the properties and relationships of a module. Only teachers, students, and applications with application permissions can perform this operation. Students can only see published modules; teachers and applications with application permissions can see all modules in a class.
-     * @return a CompletableFuture of educationModule
+     * @return a CompletableFuture of EducationModule
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -109,7 +109,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the properties and relationships of a module. Only teachers, students, and applications with application permissions can perform this operation. Students can only see published modules; teachers and applications with application permissions can see all modules in a class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModule
+     * @return a CompletableFuture of EducationModule
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update an educationModule object in a class. Only teachers in the class can perform this operation. Note that you can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
      * @param body The request body
-     * @return a CompletableFuture of educationModule
+     * @return a CompletableFuture of EducationModule
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class EducationModuleItemRequestBuilder extends BaseRequestBuilder {
      * Update an educationModule object in a class. Only teachers in the class can perform this operation. Note that you can't use a PATCH request to change the status of a module. Use the publish action to change the module status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModule
+     * @return a CompletableFuture of EducationModule
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

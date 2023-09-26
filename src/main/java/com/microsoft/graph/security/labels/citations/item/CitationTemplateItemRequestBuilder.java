@@ -59,7 +59,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a citationTemplate object.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a citationTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property citations in security
      * @param body The request body
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> patch(@jakarta.annotation.Nonnull final CitationTemplate body) {
@@ -93,7 +93,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property citations in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> patch(@jakarta.annotation.Nonnull final CitationTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

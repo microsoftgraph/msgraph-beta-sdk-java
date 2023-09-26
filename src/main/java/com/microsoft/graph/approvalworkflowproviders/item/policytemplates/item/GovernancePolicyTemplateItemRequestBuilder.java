@@ -57,7 +57,7 @@ public class GovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get policyTemplates from approvalWorkflowProviders
-     * @return a CompletableFuture of governancePolicyTemplate
+     * @return a CompletableFuture of GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplate> get() {
@@ -66,7 +66,7 @@ public class GovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * Get policyTemplates from approvalWorkflowProviders
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governancePolicyTemplate
+     * @return a CompletableFuture of GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class GovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property policyTemplates in approvalWorkflowProviders
      * @param body The request body
-     * @return a CompletableFuture of governancePolicyTemplate
+     * @return a CompletableFuture of GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplate> patch(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body) {
@@ -89,7 +89,7 @@ public class GovernancePolicyTemplateItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property policyTemplates in approvalWorkflowProviders
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governancePolicyTemplate
+     * @return a CompletableFuture of GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplate> patch(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a Teams app icon associated with a specific definition of an app.
-     * @return a CompletableFuture of teamsAppIcon
+     * @return a CompletableFuture of TeamsAppIcon
      * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a Teams app icon associated with a specific definition of an app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppIcon
+     * @return a CompletableFuture of TeamsAppIcon
      * @see <a href="https://learn.microsoft.com/graph/api/teamsappicon-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property outlineIcon in appCatalogs
      * @param body The request body
-     * @return a CompletableFuture of teamsAppIcon
+     * @return a CompletableFuture of TeamsAppIcon
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppIcon> patch(@jakarta.annotation.Nonnull final TeamsAppIcon body) {
@@ -99,7 +99,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property outlineIcon in appCatalogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAppIcon
+     * @return a CompletableFuture of TeamsAppIcon
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAppIcon> patch(@jakarta.annotation.Nonnull final TeamsAppIcon body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -201,7 +201,7 @@ public class OutlineIconRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a outlineIconRequestBuilder
+     * @return a OutlineIconRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OutlineIconRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

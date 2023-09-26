@@ -35,8 +35,8 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/start", rawUrl);
     }
     /**
-     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization will start on the profile. Otherwise, the response will contain errors and warnings. If the response contains errors, the synchronization will not start. If the response contains only warnings, synchronization will start.
-     * @return a CompletableFuture of startResponse
+     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization starts on the profile. Otherwise, the response contains errors and warnings. If the response contains errors, the synchronization won't start. If the response contains only warnings, synchronization starts.
+     * @return a CompletableFuture of StartResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -44,9 +44,9 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization will start on the profile. Otherwise, the response will contain errors and warnings. If the response contains errors, the synchronization will not start. If the response contains only warnings, synchronization will start.
+     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization starts on the profile. Otherwise, the response contains errors and warnings. If the response contains errors, the synchronization won't start. If the response contains only warnings, synchronization starts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of startResponse
+     * @return a CompletableFuture of StartResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-start?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, StartResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization will start on the profile. Otherwise, the response will contain errors and warnings. If the response contains errors, the synchronization will not start. If the response contains only warnings, synchronization will start.
+     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization starts on the profile. Otherwise, the response contains errors and warnings. If the response contains errors, the synchronization won't start. If the response contains only warnings, synchronization starts.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization will start on the profile. Otherwise, the response will contain errors and warnings. If the response contains errors, the synchronization will not start. If the response contains only warnings, synchronization will start.
+     * Verify the files uploaded to a specific school data synchronization profile in the tenant. If the verification is successful, synchronization starts on the profile. Otherwise, the response contains errors and warnings. If the response contains errors, the synchronization won't start. If the response contains only warnings, synchronization starts.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -88,7 +88,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a startRequestBuilder
+     * @return a StartRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public StartRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

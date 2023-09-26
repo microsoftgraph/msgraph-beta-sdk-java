@@ -15,7 +15,7 @@ public class GetTargetedUsersAndDevicesResponse extends BaseCollectionPagination
      */
     private java.util.List<DeviceConfigurationTargetedUserAndDevice> value;
     /**
-     * Instantiates a new getTargetedUsersAndDevicesResponse and sets the default values.
+     * Instantiates a new GetTargetedUsersAndDevicesResponse and sets the default values.
      */
     public GetTargetedUsersAndDevicesResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetTargetedUsersAndDevicesResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getTargetedUsersAndDevicesResponse
+     * @return a GetTargetedUsersAndDevicesResponse
      */
     @jakarta.annotation.Nonnull
     public static GetTargetedUsersAndDevicesResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetTargetedUsersAndDevicesResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceConfigurationTargetedUserAndDevice
+     * @return a java.util.List<DeviceConfigurationTargetedUserAndDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationTargetedUserAndDevice> getValue() {

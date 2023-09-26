@@ -60,7 +60,7 @@ public class MessageEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from messageEvents
-     * @return a CompletableFuture of messageEventCollectionResponse
+     * @return a CompletableFuture of MessageEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEventCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MessageEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from messageEvents
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageEventCollectionResponse
+     * @return a CompletableFuture of MessageEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MessageEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to messageEvents
      * @param body The request body
-     * @return a CompletableFuture of messageEvent
+     * @return a CompletableFuture of MessageEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEvent> post(@jakarta.annotation.Nonnull final MessageEvent body) {
@@ -92,7 +92,7 @@ public class MessageEventsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to messageEvents
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageEvent
+     * @return a CompletableFuture of MessageEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEvent> post(@jakarta.annotation.Nonnull final MessageEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MessageEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a messageEventsRequestBuilder
+     * @return a MessageEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MessageEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

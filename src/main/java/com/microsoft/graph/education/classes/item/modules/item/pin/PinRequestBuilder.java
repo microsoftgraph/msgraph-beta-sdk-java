@@ -37,7 +37,7 @@ public class PinRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Pin an educationModule in the classwork list. This action sets the isPinned property to true for an educationModule. Only teachers can perform this action and only one module at a time can be pinned in the classwork list.
-     * @return a CompletableFuture of educationModule
+     * @return a CompletableFuture of EducationModule
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-pin?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -47,7 +47,7 @@ public class PinRequestBuilder extends BaseRequestBuilder {
     /**
      * Pin an educationModule in the classwork list. This action sets the isPinned property to true for an educationModule. Only teachers can perform this action and only one module at a time can be pinned in the classwork list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModule
+     * @return a CompletableFuture of EducationModule
      * @see <a href="https://learn.microsoft.com/graph/api/educationmodule-pin?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PinRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a pinRequestBuilder
+     * @return a PinRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PinRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

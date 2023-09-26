@@ -60,7 +60,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a list of the resourceConnection objects and their properties.
-     * @return a CompletableFuture of resourceConnectionCollectionResponse
+     * @return a CompletableFuture of ResourceConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-resourceconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the resourceConnection objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceConnectionCollectionResponse
+     * @return a CompletableFuture of ResourceConnectionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-resourceconnections?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create a new operationalInsightsConnection object.
      * @param body The request body
-     * @return a CompletableFuture of resourceConnection
+     * @return a CompletableFuture of ResourceConnection
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-resourceconnections-operationalinsightsconnection?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
      * Create a new operationalInsightsConnection object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceConnection
+     * @return a CompletableFuture of ResourceConnection
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-resourceconnections-operationalinsightsconnection?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class ResourceConnectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceConnectionsRequestBuilder
+     * @return a ResourceConnectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceConnectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

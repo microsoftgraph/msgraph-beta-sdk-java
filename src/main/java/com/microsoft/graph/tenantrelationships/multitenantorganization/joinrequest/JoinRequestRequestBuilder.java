@@ -57,7 +57,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the status of a tenant joining a multi-tenant organization.
-     * @return a CompletableFuture of multiTenantOrganizationJoinRequestRecord
+     * @return a CompletableFuture of MultiTenantOrganizationJoinRequestRecord
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the status of a tenant joining a multi-tenant organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of multiTenantOrganizationJoinRequestRecord
+     * @return a CompletableFuture of MultiTenantOrganizationJoinRequestRecord
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
     /**
      * Join a multi-tenant organization, after the owner of the multi-tenant organization has added your tenant to the multi-tenant organization as pending. Before a tenant added to a multi-tenant organization can participate in the multi-tenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization. Furthermore, to allow for asynchronous processing, you must wait up to 4 hours before joining a multi-tenant organization is completed.
      * @param body The request body
-     * @return a CompletableFuture of multiTenantOrganizationJoinRequestRecord
+     * @return a CompletableFuture of MultiTenantOrganizationJoinRequestRecord
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
      * Join a multi-tenant organization, after the owner of the multi-tenant organization has added your tenant to the multi-tenant organization as pending. Before a tenant added to a multi-tenant organization can participate in the multi-tenant organization, the administrator of the joining tenant must submit a join request. To allow for asynchronous processing, you must wait a minimum of 2 hours between creation and joining a multi-tenant organization. Furthermore, to allow for asynchronous processing, you must wait up to 4 hours before joining a multi-tenant organization is completed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of multiTenantOrganizationJoinRequestRecord
+     * @return a CompletableFuture of MultiTenantOrganizationJoinRequestRecord
      * @see <a href="https://learn.microsoft.com/graph/api/multitenantorganizationjoinrequestrecord-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -195,7 +195,7 @@ public class JoinRequestRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a joinRequestRequestBuilder
+     * @return a JoinRequestRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public JoinRequestRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -75,7 +75,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties of a connectorGroup.
-     * @return a CompletableFuture of connectorGroup
+     * @return a CompletableFuture of ConnectorGroup
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties of a connectorGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectorGroup
+     * @return a CompletableFuture of ConnectorGroup
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a connectorGroup object.
      * @param body The request body
-     * @return a CompletableFuture of connectorGroup
+     * @return a CompletableFuture of ConnectorGroup
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class ConnectorGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a connectorGroup object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectorGroup
+     * @return a CompletableFuture of ConnectorGroup
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

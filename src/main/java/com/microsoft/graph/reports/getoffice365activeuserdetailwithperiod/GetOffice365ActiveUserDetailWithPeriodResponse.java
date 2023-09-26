@@ -15,7 +15,7 @@ public class GetOffice365ActiveUserDetailWithPeriodResponse extends BaseCollecti
      */
     private java.util.List<Office365ActiveUserDetail> value;
     /**
-     * Instantiates a new getOffice365ActiveUserDetailWithPeriodResponse and sets the default values.
+     * Instantiates a new GetOffice365ActiveUserDetailWithPeriodResponse and sets the default values.
      */
     public GetOffice365ActiveUserDetailWithPeriodResponse() {
         super();
@@ -23,7 +23,7 @@ public class GetOffice365ActiveUserDetailWithPeriodResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getOffice365ActiveUserDetailWithPeriodResponse
+     * @return a GetOffice365ActiveUserDetailWithPeriodResponse
      */
     @jakarta.annotation.Nonnull
     public static GetOffice365ActiveUserDetailWithPeriodResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GetOffice365ActiveUserDetailWithPeriodResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a office365ActiveUserDetail
+     * @return a java.util.List<Office365ActiveUserDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Office365ActiveUserDetail> getValue() {

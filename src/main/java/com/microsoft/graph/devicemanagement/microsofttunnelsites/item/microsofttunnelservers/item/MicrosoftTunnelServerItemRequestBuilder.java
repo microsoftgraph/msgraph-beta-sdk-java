@@ -89,7 +89,7 @@ public class MicrosoftTunnelServerItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
-     * @return a CompletableFuture of microsoftTunnelServer
+     * @return a CompletableFuture of MicrosoftTunnelServer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServer> get() {
@@ -98,7 +98,7 @@ public class MicrosoftTunnelServerItemRequestBuilder extends BaseRequestBuilder 
     /**
      * A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelServer
+     * @return a CompletableFuture of MicrosoftTunnelServer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServer> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class MicrosoftTunnelServerItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property microsoftTunnelServers in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of microsoftTunnelServer
+     * @return a CompletableFuture of MicrosoftTunnelServer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServer> patch(@jakarta.annotation.Nonnull final MicrosoftTunnelServer body) {
@@ -121,7 +121,7 @@ public class MicrosoftTunnelServerItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property microsoftTunnelServers in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelServer
+     * @return a CompletableFuture of MicrosoftTunnelServer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServer> patch(@jakarta.annotation.Nonnull final MicrosoftTunnelServer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

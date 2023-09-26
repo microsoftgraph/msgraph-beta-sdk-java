@@ -57,7 +57,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get details from security
-     * @return a CompletableFuture of endUserNotificationDetail
+     * @return a CompletableFuture of EndUserNotificationDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotificationDetail> get() {
@@ -66,7 +66,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Get details from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endUserNotificationDetail
+     * @return a CompletableFuture of EndUserNotificationDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotificationDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property details in security
      * @param body The request body
-     * @return a CompletableFuture of endUserNotificationDetail
+     * @return a CompletableFuture of EndUserNotificationDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotificationDetail> patch(@jakarta.annotation.Nonnull final EndUserNotificationDetail body) {
@@ -89,7 +89,7 @@ public class EndUserNotificationDetailItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property details in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endUserNotificationDetail
+     * @return a CompletableFuture of EndUserNotificationDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotificationDetail> patch(@jakarta.annotation.Nonnull final EndUserNotificationDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

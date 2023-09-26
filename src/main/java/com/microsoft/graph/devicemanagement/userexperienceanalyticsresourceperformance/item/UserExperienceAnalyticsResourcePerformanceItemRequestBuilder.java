@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsResourcePerformanceItemRequestBuilder extend
     }
     /**
      * User experience analytics resource performance
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsResourcePerformanceItemRequestBuilder extend
     /**
      * User experience analytics resource performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsResourcePerformanceItemRequestBuilder extend
     /**
      * Update the navigation property userExperienceAnalyticsResourcePerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsResourcePerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsResourcePerformanceItemRequestBuilder extend
      * Update the navigation property userExperienceAnalyticsResourcePerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsResourcePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

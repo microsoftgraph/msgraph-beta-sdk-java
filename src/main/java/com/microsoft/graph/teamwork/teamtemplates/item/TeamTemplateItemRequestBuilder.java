@@ -65,7 +65,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The templates associated with a team.
-     * @return a CompletableFuture of teamTemplate
+     * @return a CompletableFuture of TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplate> get() {
@@ -74,7 +74,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The templates associated with a team.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplate
+     * @return a CompletableFuture of TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property teamTemplates in teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamTemplate
+     * @return a CompletableFuture of TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplate> patch(@jakarta.annotation.Nonnull final TeamTemplate body) {
@@ -97,7 +97,7 @@ public class TeamTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property teamTemplates in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplate
+     * @return a CompletableFuture of TeamTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplate> patch(@jakarta.annotation.Nonnull final TeamTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

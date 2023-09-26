@@ -73,7 +73,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder extend
     }
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponse> get() {
@@ -82,7 +82,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder extend
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder extend
     /**
      * Update the navigation property microsoftTunnelServerLogCollectionResponses in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponse> patch(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body) {
@@ -105,7 +105,7 @@ public class MicrosoftTunnelServerLogCollectionResponseItemRequestBuilder extend
      * Update the navigation property microsoftTunnelServerLogCollectionResponses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponse> patch(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

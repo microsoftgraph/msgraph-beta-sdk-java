@@ -95,7 +95,7 @@ public class GetRemoteConnectionHistoricalReportsRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRemoteConnectionHistoricalReportsRequestBuilder
+     * @return a GetRemoteConnectionHistoricalReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRemoteConnectionHistoricalReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

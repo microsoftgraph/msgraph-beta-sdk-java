@@ -60,7 +60,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve a list of onPremisesAgent objects.
-     * @return a CompletableFuture of onPremisesAgentCollectionResponse
+     * @return a CompletableFuture of OnPremisesAgentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of onPremisesAgent objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgentCollectionResponse
+     * @return a CompletableFuture of OnPremisesAgentCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/onpremisesagent-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to agents for onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of onPremisesAgent
+     * @return a CompletableFuture of OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgent> post(@jakarta.annotation.Nonnull final OnPremisesAgent body) {
@@ -94,7 +94,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to agents for onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesAgent
+     * @return a CompletableFuture of OnPremisesAgent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesAgent> post(@jakarta.annotation.Nonnull final OnPremisesAgent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -169,7 +169,7 @@ public class AgentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agentsRequestBuilder
+     * @return a AgentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

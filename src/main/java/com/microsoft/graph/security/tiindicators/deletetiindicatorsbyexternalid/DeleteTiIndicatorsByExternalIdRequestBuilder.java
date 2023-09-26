@@ -37,7 +37,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder extends BaseRequestBui
     /**
      * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs.
      * @param body The request body
-     * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
+     * @return a CompletableFuture of DeleteTiIndicatorsByExternalIdResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-deletetiindicatorsbyexternalid?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder extends BaseRequestBui
      * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests, when the request contains external IDs instead of IDs.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deleteTiIndicatorsByExternalIdResponse
+     * @return a CompletableFuture of DeleteTiIndicatorsByExternalIdResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-deletetiindicatorsbyexternalid?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeleteTiIndicatorsByExternalIdRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deleteTiIndicatorsByExternalIdRequestBuilder
+     * @return a DeleteTiIndicatorsByExternalIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeleteTiIndicatorsByExternalIdRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

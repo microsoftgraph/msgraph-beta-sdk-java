@@ -57,7 +57,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
     }
     /**
      * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> get() {
@@ -66,7 +66,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
     /**
      * The list of scheduled action configurations for this compliance policy. Compliance policy must have one and only one block scheduled action.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property scheduledActionConfigurations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> patch(@jakarta.annotation.Nonnull final DeviceComplianceActionItem body) {
@@ -89,7 +89,7 @@ public class DeviceComplianceActionItemItemRequestBuilder extends BaseRequestBui
      * Update the navigation property scheduledActionConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceActionItem
+     * @return a CompletableFuture of DeviceComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceActionItem> patch(@jakarta.annotation.Nonnull final DeviceComplianceActionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

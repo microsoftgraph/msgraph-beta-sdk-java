@@ -110,7 +110,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a collection of information protection labels available to the user or to the organization.
-     * @return a CompletableFuture of informationProtectionLabelCollectionResponse
+     * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionpolicy-list-labels?view=graph-rest-1.0">Find more info here</a>
@@ -123,7 +123,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a collection of information protection labels available to the user or to the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionLabelCollectionResponse
+     * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionpolicy-list-labels?view=graph-rest-1.0">Find more info here</a>
@@ -140,7 +140,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to labels for sites
      * @param body The request body
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -153,7 +153,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to labels for sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -243,7 +243,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a labelsRequestBuilder
+     * @return a LabelsRequestBuilder
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */

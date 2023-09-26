@@ -56,19 +56,19 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
-     * @return a CompletableFuture of riskDetection
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0">Find more info here</a>
+     * Retrieve the properties of a collection of riskDetection objects.
+     * @return a CompletableFuture of RiskDetection
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of RiskDetection
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +81,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property riskDetections in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> patch(@jakarta.annotation.Nonnull final RiskDetection body) {
@@ -91,7 +91,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property riskDetections in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> patch(@jakarta.annotation.Nonnull final RiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a riskDetection object.
+     * Retrieve the properties of a collection of riskDetection objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

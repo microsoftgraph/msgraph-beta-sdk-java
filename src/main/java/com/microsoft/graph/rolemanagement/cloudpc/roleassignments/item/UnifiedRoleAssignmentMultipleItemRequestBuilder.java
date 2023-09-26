@@ -91,7 +91,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
     }
     /**
      * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
-     * @return a CompletableFuture of unifiedRoleAssignmentMultiple
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultiple
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
     /**
      * Get the properties and relationships of a unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) For other Microsoft 365 applications (like Azure AD), use unifiedRoleAssignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentMultiple
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultiple
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
     /**
      * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleAssignmentMultiple
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultiple
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
      * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleAssignmentMultiple
+     * @return a CompletableFuture of UnifiedRoleAssignmentMultiple
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentmultiple-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull

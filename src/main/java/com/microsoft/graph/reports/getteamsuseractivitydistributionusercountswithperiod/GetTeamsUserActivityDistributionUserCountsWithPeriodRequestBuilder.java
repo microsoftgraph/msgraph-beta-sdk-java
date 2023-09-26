@@ -88,7 +88,7 @@ public class GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

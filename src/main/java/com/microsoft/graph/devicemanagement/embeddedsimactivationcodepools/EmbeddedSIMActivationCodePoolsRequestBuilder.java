@@ -60,7 +60,7 @@ public class EmbeddedSIMActivationCodePoolsRequestBuilder extends BaseRequestBui
     }
     /**
      * The embedded SIM activation code pools created by this account.
-     * @return a CompletableFuture of embeddedSIMActivationCodePoolCollectionResponse
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePoolCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePoolCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EmbeddedSIMActivationCodePoolsRequestBuilder extends BaseRequestBui
     /**
      * The embedded SIM activation code pools created by this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of embeddedSIMActivationCodePoolCollectionResponse
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePoolCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePoolCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EmbeddedSIMActivationCodePoolsRequestBuilder extends BaseRequestBui
     /**
      * Create new navigation property to embeddedSIMActivationCodePools for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of embeddedSIMActivationCodePool
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePool> post(@jakarta.annotation.Nonnull final EmbeddedSIMActivationCodePool body) {
@@ -92,7 +92,7 @@ public class EmbeddedSIMActivationCodePoolsRequestBuilder extends BaseRequestBui
      * Create new navigation property to embeddedSIMActivationCodePools for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of embeddedSIMActivationCodePool
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePool> post(@jakarta.annotation.Nonnull final EmbeddedSIMActivationCodePool body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EmbeddedSIMActivationCodePoolsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a embeddedSIMActivationCodePoolsRequestBuilder
+     * @return a EmbeddedSIMActivationCodePoolsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EmbeddedSIMActivationCodePoolsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ZebraFotaDeploymentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of ZebraFotaDeployments associated with account.
-     * @return a CompletableFuture of zebraFotaDeploymentCollectionResponse
+     * @return a CompletableFuture of ZebraFotaDeploymentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeploymentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ZebraFotaDeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of ZebraFotaDeployments associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of zebraFotaDeploymentCollectionResponse
+     * @return a CompletableFuture of ZebraFotaDeploymentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeploymentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ZebraFotaDeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to zebraFotaDeployments for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of zebraFotaDeployment
+     * @return a CompletableFuture of ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeployment> post(@jakarta.annotation.Nonnull final ZebraFotaDeployment body) {
@@ -92,7 +92,7 @@ public class ZebraFotaDeploymentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to zebraFotaDeployments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of zebraFotaDeployment
+     * @return a CompletableFuture of ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaDeployment> post(@jakarta.annotation.Nonnull final ZebraFotaDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ZebraFotaDeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a zebraFotaDeploymentsRequestBuilder
+     * @return a ZebraFotaDeploymentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ZebraFotaDeploymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

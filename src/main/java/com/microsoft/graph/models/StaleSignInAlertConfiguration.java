@@ -14,7 +14,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
      */
     private PeriodAndDuration duration;
     /**
-     * Instantiates a new staleSignInAlertConfiguration and sets the default values.
+     * Instantiates a new StaleSignInAlertConfiguration and sets the default values.
      */
     public StaleSignInAlertConfiguration() {
         super();
@@ -23,7 +23,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a staleSignInAlertConfiguration
+     * @return a StaleSignInAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static StaleSignInAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

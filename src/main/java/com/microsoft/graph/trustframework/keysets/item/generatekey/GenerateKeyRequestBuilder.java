@@ -38,7 +38,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.
      * @param body The request body
-     * @return a CompletableFuture of trustFrameworkKey
+     * @return a CompletableFuture of TrustFrameworkKey
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-generatekey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
      * Generate a trustFrameworkKey and a secret automatically in the trustFrameworkKeyset. The caller doesn't have to provide a secret.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKey
+     * @return a CompletableFuture of TrustFrameworkKey
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-generatekey?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class GenerateKeyRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a generateKeyRequestBuilder
+     * @return a GenerateKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GenerateKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -97,7 +97,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     }
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Update the navigation property assignmentScheduleRequests in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) {
@@ -131,7 +131,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Update the navigation property assignmentScheduleRequests in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleRequest> patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

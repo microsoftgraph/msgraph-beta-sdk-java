@@ -53,17 +53,17 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/threads/{conversationThread%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Delete conversationThread.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete a thread object.
+     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete conversationThread.
+     * Delete a thread object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -75,7 +75,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get a thread object.
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a thread object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update a thread object.
      * @param body The request body
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +110,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
      * Update a thread object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conversationThread
+     * @return a CompletableFuture of ConversationThread
      * @see <a href="https://learn.microsoft.com/graph/api/group-update-thread?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConversationThread::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete conversationThread.
+     * Delete a thread object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class ConversationThreadItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete conversationThread.
+     * Delete a thread object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
