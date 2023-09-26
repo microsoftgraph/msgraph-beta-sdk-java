@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.InboundOutboundPolicyConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
+import com.microsoft.graph.models.DefaultInvitationRedemptionIdentityProviderConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
 import com.microsoft.graph.models.Entity;
 
@@ -82,6 +83,15 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     @Expose
 	@Nullable
     public CrossTenantAccessPolicyInboundTrust inboundTrust;
+
+    /**
+     * The Invitation Redemption Identity Provider Configuration.
+     * 
+     */
+    @SerializedName(value = "invitationRedemptionIdentityProviderConfiguration", alternate = {"InvitationRedemptionIdentityProviderConfiguration"})
+    @Expose
+	@Nullable
+    public DefaultInvitationRedemptionIdentityProviderConfiguration invitationRedemptionIdentityProviderConfiguration;
 
     /**
      * The Is Service Default.

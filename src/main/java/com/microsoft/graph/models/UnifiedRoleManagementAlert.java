@@ -94,7 +94,7 @@ public class UnifiedRoleManagementAlert extends Entity implements IJsonBackedObj
 
     /**
      * The Alert Configuration.
-     * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $expand.
+     * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
      */
     @SerializedName(value = "alertConfiguration", alternate = {"AlertConfiguration"})
     @Expose

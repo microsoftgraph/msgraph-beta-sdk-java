@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
 
     /**
      * The Battery Age In Days.
-     * Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647
+     * Estimated battery age. Unit in days. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryAgeInDays", alternate = {"BatteryAgeInDays"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
 
     /**
      * The Device Battery Health Score.
-     * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
      */
     @SerializedName(value = "deviceBatteryHealthScore", alternate = {"DeviceBatteryHealthScore"})
     @Expose
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
 
     /**
      * The Estimated Runtime In Minutes.
-     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values -2147483648 to 2147483647
+     * The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
      */
     @SerializedName(value = "estimatedRuntimeInMinutes", alternate = {"EstimatedRuntimeInMinutes"})
     @Expose
@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
 
     /**
      * The Max Capacity Percentage.
-     * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values -2147483648 to 2147483647
+     * Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
      */
     @SerializedName(value = "maxCapacityPercentage", alternate = {"MaxCapacityPercentage"})
     @Expose

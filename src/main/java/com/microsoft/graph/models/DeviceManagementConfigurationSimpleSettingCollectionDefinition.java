@@ -27,7 +27,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
 
     /**
      * The Maximum Count.
-     * Maximum number of simple settings in the collection
+     * Maximum number of simple settings in the collection. Valid values 1 to 100
      */
     @SerializedName(value = "maximumCount", alternate = {"MaximumCount"})
     @Expose
@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
 
     /**
      * The Minimum Count.
-     * Minimum number of simple settings in the collection
+     * Minimum number of simple settings in the collection. Valid values 1 to 100
      */
     @SerializedName(value = "minimumCount", alternate = {"MinimumCount"})
     @Expose

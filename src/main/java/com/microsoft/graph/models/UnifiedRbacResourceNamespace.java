@@ -38,7 +38,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements IJsonBackedO
 
     /**
      * The Resource Actions.
-     * Operations that an authorized principal are allowed to perform.
+     * Operations that an authorized principal is allowed to perform.
      */
     @SerializedName(value = "resourceActions", alternate = {"ResourceActions"})
     @Expose

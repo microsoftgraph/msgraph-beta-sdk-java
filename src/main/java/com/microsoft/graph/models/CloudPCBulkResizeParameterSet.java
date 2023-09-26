@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Cloud PCBulk Resize Parameter Set.
+ * @deprecated The bulkResize action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
  */
+@Deprecated
 public class CloudPCBulkResizeParameterSet {
     /**
      * The cloud Pc Ids.

@@ -8,6 +8,7 @@ import com.microsoft.graph.security.requests.EdiscoveryCustodianUpdateIndexReque
 import com.microsoft.graph.security.models.EdiscoveryCustodian;
 
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.security.models.EdiscoveryCustodianUpdateIndexParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -20,6 +21,7 @@ import javax.annotation.Nonnull;
  */
 public class EdiscoveryCustodianUpdateIndexRequestBuilder extends BaseActionRequestBuilder<EdiscoveryCustodian> {
 
+    private EdiscoveryCustodianUpdateIndexParameterSet body;
     /**
      * The request builder for this EdiscoveryCustodianUpdateIndex
      *
@@ -29,6 +31,18 @@ public class EdiscoveryCustodianUpdateIndexRequestBuilder extends BaseActionRequ
      */
     public EdiscoveryCustodianUpdateIndexRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
+    }
+    /**
+     * The request builder for this EdiscoveryCustodianUpdateIndex
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public EdiscoveryCustodianUpdateIndexRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EdiscoveryCustodianUpdateIndexParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
     }
 
     /**
@@ -54,6 +68,7 @@ public class EdiscoveryCustodianUpdateIndexRequestBuilder extends BaseActionRequ
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }

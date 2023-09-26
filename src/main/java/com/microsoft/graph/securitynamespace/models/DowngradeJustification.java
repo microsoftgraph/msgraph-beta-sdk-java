@@ -39,7 +39,7 @@ public class DowngradeJustification implements IJsonBackedObject {
 
     /**
      * The Is Downgrade Justified.
-     * Indicates whether the downgrade is or is not justified.
+     * Indicates whether the downgrade is or isn't justified.
      */
     @SerializedName(value = "isDowngradeJustified", alternate = {"IsDowngradeJustified"})
     @Expose
@@ -48,7 +48,7 @@ public class DowngradeJustification implements IJsonBackedObject {
 
     /**
      * The Justification Message.
-     * Message that indicates why a downgrade is justified. The message will appear in administrative logs.
+     * Message that indicates why a downgrade is justified. The message appears in administrative logs.
      */
     @SerializedName(value = "justificationMessage", alternate = {"JustificationMessage"})
     @Expose

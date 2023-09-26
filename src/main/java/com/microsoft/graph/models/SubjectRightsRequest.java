@@ -140,7 +140,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Include All Versions.
-     * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
+     * Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "includeAllVersions", alternate = {"IncludeAllVersions"})
     @Expose
@@ -193,17 +193,17 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
-     * The Mailboxlocations.
-     * 
+     * The Mailbox Locations.
+     * The mailbox locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
-    @SerializedName(value = "mailboxlocations", alternate = {"Mailboxlocations"})
+    @SerializedName(value = "mailboxLocations", alternate = {"MailboxLocations"})
     @Expose
 	@Nullable
-    public SubjectRightsRequestMailboxLocation mailboxlocations;
+    public SubjectRightsRequestMailboxLocation mailboxLocations;
 
     /**
      * The Pause After Estimate.
-     * Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
+     * Pause the request after estimate has finished. By default, the data estimate runs and then pauses, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
     @SerializedName(value = "pauseAfterEstimate", alternate = {"PauseAfterEstimate"})
     @Expose
@@ -212,7 +212,7 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
 
     /**
      * The Regulations.
-     * List of regulations that this request will fulfill.
+     * List of regulations that this request fulfills.
      */
     @SerializedName(value = "regulations", alternate = {"Regulations"})
     @Expose
@@ -220,13 +220,13 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public java.util.List<String> regulations;
 
     /**
-     * The Sitelocations.
-     * 
+     * The Site Locations.
+     * The SharePoint and OneDrive site locations that should be searched. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      */
-    @SerializedName(value = "sitelocations", alternate = {"Sitelocations"})
+    @SerializedName(value = "siteLocations", alternate = {"SiteLocations"})
     @Expose
 	@Nullable
-    public SubjectRightsRequestSiteLocation sitelocations;
+    public SubjectRightsRequestSiteLocation siteLocations;
 
     /**
      * The Stages.

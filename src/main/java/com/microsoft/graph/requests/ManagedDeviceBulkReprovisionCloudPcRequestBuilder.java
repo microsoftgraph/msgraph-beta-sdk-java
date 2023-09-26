@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Managed Device Bulk Reprovision Cloud Pc Request Builder.
+ * @deprecated The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
  */
+@Deprecated
 public class ManagedDeviceBulkReprovisionCloudPcRequestBuilder extends BaseActionRequestBuilder<CloudPcBulkRemoteActionResult> {
 
     /**

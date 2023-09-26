@@ -50,7 +50,7 @@ public class CloudPcPartnerAgentInstallResult implements IJsonBackedObject {
 
     /**
      * The Is Third Party Partner.
-     * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent.  When 'FALSE', the agent is a Microsoft agent or is not known.  The default value is 'FALSE'.
+     * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known.  The default value is 'FALSE'
      */
     @SerializedName(value = "isThirdPartyPartner", alternate = {"IsThirdPartyPartner"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcPartnerAgentInstallResult implements IJsonBackedObject {
 
     /**
      * The Partner Agent Name.
-     * Indicates the name of a partner agent and includes first-party and third-party. Currently, Citrix is the only third-party value. Read-Only.
+     * The name of the partner agent, whether first party or third party. Possible values for third-party partners are Citrix and VMware. Read-Only.
      */
     @SerializedName(value = "partnerAgentName", alternate = {"PartnerAgentName"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcPartnerAgentInstallResult implements IJsonBackedObject {
 
     /**
      * The Retriable.
-     * Indicates if the partner agent is a third party. When 'TRUE', the agent is a third-party (non-Microsoft) agent. When 'FALSE', the agent is a Microsoft agent or is not known. The default value is 'FALSE'.
+     * Indicates if the partner agent is a third party. When 'TRUE' the agent is a third-party (non-Microsoft) agent and when 'FALSE' the agent is a Microsoft agent or isn't known. The default value is 'FALSE'
      */
     @SerializedName(value = "retriable", alternate = {"Retriable"})
     @Expose

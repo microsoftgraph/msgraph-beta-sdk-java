@@ -40,7 +40,7 @@ public class RetentionLabelSettings implements IJsonBackedObject {
 
     /**
      * The Behavior During Retention Period.
-     * 
+     * Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "behaviorDuringRetentionPeriod", alternate = {"BehaviorDuringRetentionPeriod"})
     @Expose
@@ -49,7 +49,7 @@ public class RetentionLabelSettings implements IJsonBackedObject {
 
     /**
      * The Is Content Update Allowed.
-     * 
+     * Specifies whether updates to document content are allowed. Read-only.
      */
     @SerializedName(value = "isContentUpdateAllowed", alternate = {"IsContentUpdateAllowed"})
     @Expose
@@ -58,7 +58,7 @@ public class RetentionLabelSettings implements IJsonBackedObject {
 
     /**
      * The Is Delete Allowed.
-     * 
+     * Specifies whether the document deletion is allowed. Read-only.
      */
     @SerializedName(value = "isDeleteAllowed", alternate = {"IsDeleteAllowed"})
     @Expose
@@ -67,7 +67,7 @@ public class RetentionLabelSettings implements IJsonBackedObject {
 
     /**
      * The Is Label Update Allowed.
-     * 
+     * Specifies whether you're allowed to change the retention label on the document. Read-only.
      */
     @SerializedName(value = "isLabelUpdateAllowed", alternate = {"IsLabelUpdateAllowed"})
     @Expose
@@ -76,7 +76,7 @@ public class RetentionLabelSettings implements IJsonBackedObject {
 
     /**
      * The Is Metadata Update Allowed.
-     * 
+     * Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
      */
     @SerializedName(value = "isMetadataUpdateAllowed", alternate = {"IsMetadataUpdateAllowed"})
     @Expose
@@ -85,7 +85,7 @@ public class RetentionLabelSettings implements IJsonBackedObject {
 
     /**
      * The Is Record Locked.
-     * 
+     * Specifies whether the item is locked. Read-write.
      */
     @SerializedName(value = "isRecordLocked", alternate = {"IsRecordLocked"})
     @Expose

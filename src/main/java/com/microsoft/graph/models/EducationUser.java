@@ -125,7 +125,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The External Source Detail.
-     * The name of the external source this resources was generated from.
+     * The name of the external source this resource was generated from.
      */
     @SerializedName(value = "externalSourceDetail", alternate = {"ExternalSourceDetail"})
     @Expose
@@ -152,7 +152,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Mailing Address.
-     * Mail address of user. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
      */
     @SerializedName(value = "mailingAddress", alternate = {"MailingAddress"})
     @Expose
@@ -197,7 +197,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Info.
-     * Additional information used to associate the AAD user with it's Active Directory counterpart.
+     * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
      */
     @SerializedName(value = "onPremisesInfo", alternate = {"OnPremisesInfo"})
     @Expose
@@ -206,7 +206,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Password Policies.
-     * Specifies password policies for the user. See standard [user] resource for additional details.
+     * Specifies password policies for the user. See standard [user] resource for more details.
      */
     @SerializedName(value = "passwordPolicies", alternate = {"PasswordPolicies"})
     @Expose
@@ -215,7 +215,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Password Profile.
-     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for additional details.
+     * Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
      */
     @SerializedName(value = "passwordProfile", alternate = {"PasswordProfile"})
     @Expose
@@ -260,7 +260,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Residence Address.
-     * Address where user lives. Note: type and postOfficeBox are not supported for educationUser resources.
+     * Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
      */
     @SerializedName(value = "residenceAddress", alternate = {"ResidenceAddress"})
     @Expose
@@ -278,7 +278,7 @@ public class EducationUser extends Entity implements IJsonBackedObject {
 
     /**
      * The Student.
-     * If the primary role is student, this block will contain student specific data.
+     * If the primary role is student, this block contains student specific data.
      */
     @SerializedName(value = "student", alternate = {"Student"})
     @Expose

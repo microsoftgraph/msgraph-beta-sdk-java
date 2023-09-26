@@ -32,7 +32,7 @@ public class Qna extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Availability End Date Time.
-     * Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
+     * Timestamp of when the qna stops to appear as a search result. Set as null for always available.
      */
     @SerializedName(value = "availabilityEndDateTime", alternate = {"AvailabilityEndDateTime"})
     @Expose
@@ -41,7 +41,7 @@ public class Qna extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Availability Start Date Time.
-     * Timestamp of when the qna will start to appear as a search result. Set as null for always available.
+     * Timestamp of when the qna starts to appear as a search result. Set as null for always available.
      */
     @SerializedName(value = "availabilityStartDateTime", alternate = {"AvailabilityStartDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class Qna extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Is Suggested.
-     * True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
+     * True if a user or Microsoft suggested this qna to the admin. Read-only.
      */
     @SerializedName(value = "isSuggested", alternate = {"IsSuggested"})
     @Expose
@@ -104,7 +104,7 @@ public class Qna extends SearchAnswer implements IJsonBackedObject {
 
     /**
      * The Targeted Variations.
-     * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.
+     * Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings apply to all variations.
      */
     @SerializedName(value = "targetedVariations", alternate = {"TargetedVariations"})
     @Expose

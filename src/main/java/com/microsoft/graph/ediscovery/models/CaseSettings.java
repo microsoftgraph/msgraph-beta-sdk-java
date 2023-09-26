@@ -48,7 +48,7 @@ public class CaseSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Topic Modeling.
-     * The Topic Modeling (Themes) settings for the case.
+     * The article Modeling (Themes) settings for the case.
      */
     @SerializedName(value = "topicModeling", alternate = {"TopicModeling"})
     @Expose

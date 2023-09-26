@@ -133,6 +133,15 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
     public SignInLocation location;
 
     /**
+     * The Mitre Technique Id.
+     * 
+     */
+    @SerializedName(value = "mitreTechniqueId", alternate = {"MitreTechniqueId"})
+    @Expose
+	@Nullable
+    public String mitreTechniqueId;
+
+    /**
      * The Request Id.
      * Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
      */

@@ -45,7 +45,7 @@ public class Contract extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Default Domain Name.
-     * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
+     * A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's default domain name changes.
      */
     @SerializedName(value = "defaultDomainName", alternate = {"DefaultDomainName"})
     @Expose
@@ -54,7 +54,7 @@ public class Contract extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
+     * A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It isn't automatically updated if the customer tenant's display name changes.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

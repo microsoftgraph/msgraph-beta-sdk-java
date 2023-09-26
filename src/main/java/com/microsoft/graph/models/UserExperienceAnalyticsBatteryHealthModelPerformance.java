@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 
     /**
      * The Active Devices.
-     * Number of active devices for that model. Valid values -2147483648 to 2147483647
+     * Number of active devices for that model. Valid values 0 to 2147483647
      */
     @SerializedName(value = "activeDevices", alternate = {"ActiveDevices"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 
     /**
      * The Average Battery Age In Days.
-     * The mean of the battery age for all devices of a given model in a tenant. Unit in days. Valid values -2147483648 to 2147483647
+     * The mean of the battery age for all devices of a given model in a tenant. Unit in days. Valid values 0 to 2147483647
      */
     @SerializedName(value = "averageBatteryAgeInDays", alternate = {"AverageBatteryAgeInDays"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 
     /**
      * The Average Estimated Runtime In Minutes.
-     * The mean of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values -2147483648 to 2147483647
+     * The mean of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
      */
     @SerializedName(value = "averageEstimatedRuntimeInMinutes", alternate = {"AverageEstimatedRuntimeInMinutes"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 
     /**
      * The Average Max Capacity Percentage.
-     * The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values 0 to 2147483647
      */
     @SerializedName(value = "averageMaxCapacityPercentage", alternate = {"AverageMaxCapacityPercentage"})
     @Expose
@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 
     /**
      * The Model Battery Health Score.
-     * A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
      */
     @SerializedName(value = "modelBatteryHealthScore", alternate = {"ModelBatteryHealthScore"})
     @Expose
@@ -127,7 +127,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
 
     /**
      * The Model Health Status.
-     * The overall battery health status of a given model in a tenant.
+     * The overall battery health status of a given model in a tenant. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "modelHealthStatus", alternate = {"ModelHealthStatus"})
     @Expose
