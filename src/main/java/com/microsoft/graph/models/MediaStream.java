@@ -59,7 +59,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Media Type.
-     * The media type. The possible value are unknown, audio, video, videoBasedScreenSharing, data.
+     * The media type. The possible values are unknown, audio, video, videoBasedScreenSharing, data.
      */
     @SerializedName(value = "mediaType", alternate = {"MediaType"})
     @Expose
@@ -68,7 +68,7 @@ public class MediaStream implements IJsonBackedObject {
 
     /**
      * The Server Muted.
-     * Indicates whether the media is muted by the server.
+     * Indicates whether the server has muted the media.
      */
     @SerializedName(value = "serverMuted", alternate = {"ServerMuted"})
     @Expose

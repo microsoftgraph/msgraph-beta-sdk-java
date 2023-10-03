@@ -34,7 +34,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Associated Hubs Urls.
-     * List of canonical URLs for hub sites with which this content type is associated to. This will contain all hubsites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
+     * List of canonical URLs for hub sites with which this content type is associated to. This contains all hub sites where this content type is queued to be enforced or is already enforced. Enforcing a content type means that the content type will be applied to the lists in the enforced sites.
      */
     @SerializedName(value = "associatedHubsUrls", alternate = {"AssociatedHubsUrls"})
     @Expose
@@ -142,7 +142,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Read Only.
-     * If true, the content type cannot be modified unless this value is first set to false.
+     * If true, the content type can't be modified unless this value is first set to false.
      */
     @SerializedName(value = "readOnly", alternate = {"ReadOnly"})
     @Expose
@@ -151,7 +151,7 @@ public class ContentType extends Entity implements IJsonBackedObject {
 
     /**
      * The Sealed.
-     * If true, the content type cannot be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
+     * If true, the content type can't be modified by users or through push-down operations. Only site collection administrators can seal or unseal content types.
      */
     @SerializedName(value = "sealed", alternate = {"Sealed"})
     @Expose

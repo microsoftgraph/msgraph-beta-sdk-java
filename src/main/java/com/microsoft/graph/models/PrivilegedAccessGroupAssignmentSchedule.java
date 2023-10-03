@@ -78,7 +78,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
 
     /**
      * The Activated Using.
-     * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
+     * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
      */
     @SerializedName(value = "activatedUsing", alternate = {"ActivatedUsing"})
     @Expose

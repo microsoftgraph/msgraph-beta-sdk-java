@@ -57,7 +57,7 @@ public class TopicModelingSettings implements IJsonBackedObject {
 
     /**
      * The Is Enabled.
-     * Indicates whether themes is enabled for the case.
+     * Indicates whether themes are enabled for the case.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

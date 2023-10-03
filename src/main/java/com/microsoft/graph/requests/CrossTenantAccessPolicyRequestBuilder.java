@@ -93,6 +93,16 @@ public class CrossTenantAccessPolicyRequestBuilder extends BaseRequestBuilder<Cr
     }
 
     /**
+     * Gets the request builder for PolicyTemplate
+     *
+     * @return the PolicyTemplateRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PolicyTemplateRequestBuilder templates() {
+        return new com.microsoft.graph.requests.PolicyTemplateRequestBuilder(getRequestUrlWithAdditionalSegment("templates"), getClient(), null);
+    }
+
+    /**
      * Gets a builder to execute the method
      * @return the request builder
      */

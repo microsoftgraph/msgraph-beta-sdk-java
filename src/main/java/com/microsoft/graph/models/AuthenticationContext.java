@@ -49,7 +49,7 @@ public class AuthenticationContext implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The identifier of a authentication context in your tenant.
+     * The identifier of an authentication context in your tenant.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

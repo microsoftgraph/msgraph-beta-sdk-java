@@ -304,6 +304,16 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     public PermissionRequestBuilder permissions(@Nonnull final String id) {
         return new PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for RecycleBin
+     *
+     * @return the RecycleBinRequestBuilder instance
+     */
+    @Nonnull
+    public RecycleBinRequestBuilder recycleBin() {
+        return new RecycleBinRequestBuilder(getRequestUrlWithAdditionalSegment("recycleBin"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the Site collection
      *

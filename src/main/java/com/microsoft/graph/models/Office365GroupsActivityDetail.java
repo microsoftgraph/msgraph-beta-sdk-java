@@ -45,7 +45,7 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
 
     /**
      * The Exchange Received Email Count.
-     * The number of email that the group mailbox received.
+     * The number of emails that the group mailbox received.
      */
     @SerializedName(value = "exchangeReceivedEmailCount", alternate = {"ExchangeReceivedEmailCount"})
     @Expose

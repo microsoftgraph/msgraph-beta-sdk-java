@@ -26,6 +26,15 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 
 
     /**
+     * The Build Number.
+     * The build number of the feature update. Read-only.
+     */
+    @SerializedName(value = "buildNumber", alternate = {"BuildNumber"})
+    @Expose
+	@Nullable
+    public String buildNumber;
+
+    /**
      * The Version.
      * The version of the feature update. Read-only.
      */

@@ -30,7 +30,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements IJsonBack
 
     /**
      * The Attack Simulation Info.
-     * If the email is phishing simulation, this field will not be null.
+     * If the email is phishing simulation, this field won't be null.
      */
     @SerializedName(value = "attackSimulationInfo", alternate = {"AttackSimulationInfo"})
     @Expose
@@ -39,7 +39,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements IJsonBack
 
     /**
      * The Internet Message Id.
-     * Specifies the internet message id of the email being submitted. This information is present in the email header.
+     * Specifies the internet message ID of the email being submitted. This information is present in the email header.
      */
     @SerializedName(value = "internetMessageId", alternate = {"InternetMessageId"})
     @Expose
@@ -93,7 +93,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements IJsonBack
 
     /**
      * The Subject.
-     * Specifies the subject of the email .
+     * Specifies the subject of the email.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -102,7 +102,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements IJsonBack
 
     /**
      * The Tenant Allow Or Block List Action.
-     * It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
+     * It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      */
     @SerializedName(value = "tenantAllowOrBlockListAction", alternate = {"TenantAllowOrBlockListAction"})
     @Expose

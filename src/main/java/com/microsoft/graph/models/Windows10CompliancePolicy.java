@@ -139,6 +139,33 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     public Boolean earlyLaunchAntiMalwareDriverEnabled;
 
     /**
+     * The Firmware Protection Enabled.
+     * When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
+     */
+    @SerializedName(value = "firmwareProtectionEnabled", alternate = {"FirmwareProtectionEnabled"})
+    @Expose
+	@Nullable
+    public Boolean firmwareProtectionEnabled;
+
+    /**
+     * The Kernel Dma Protection Enabled.
+     * When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
+     */
+    @SerializedName(value = "kernelDmaProtectionEnabled", alternate = {"KernelDmaProtectionEnabled"})
+    @Expose
+	@Nullable
+    public Boolean kernelDmaProtectionEnabled;
+
+    /**
+     * The Memory Integrity Enabled.
+     * When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
+     */
+    @SerializedName(value = "memoryIntegrityEnabled", alternate = {"MemoryIntegrityEnabled"})
+    @Expose
+	@Nullable
+    public Boolean memoryIntegrityEnabled;
+
+    /**
      * The Mobile Os Maximum Version.
      * Maximum Windows Phone version.
      */
@@ -317,6 +344,15 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     @Expose
 	@Nullable
     public java.util.List<OperatingSystemVersionRange> validOperatingSystemBuildRanges;
+
+    /**
+     * The Virtualization Based Security Enabled.
+     * When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
+     */
+    @SerializedName(value = "virtualizationBasedSecurityEnabled", alternate = {"VirtualizationBasedSecurityEnabled"})
+    @Expose
+	@Nullable
+    public Boolean virtualizationBasedSecurityEnabled;
 
 
     /**

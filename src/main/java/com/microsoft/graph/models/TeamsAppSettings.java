@@ -36,7 +36,7 @@ public class TeamsAppSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Chat Resource Specific Consent Enabled.
-     * Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
+     * Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. False blocks the installation of any Teams app that requires resource-specific permissions in a chat or a meeting.
      */
     @SerializedName(value = "isChatResourceSpecificConsentEnabled", alternate = {"IsChatResourceSpecificConsentEnabled"})
     @Expose
@@ -45,7 +45,7 @@ public class TeamsAppSettings extends Entity implements IJsonBackedObject {
 
     /**
      * The Is User Personal Scope Resource Specific Consent Enabled.
-     * 
+     * Indicates whether resource-specific consent for personal scope in Teams apps has been enabled for the tenant. True indicates that Teams apps that are allowed in the tenant and require resource-specific permissions can be installed in the personal scope. False blocks the installation of any Teams app that requires resource-specific permissions in the personal scope.
      */
     @SerializedName(value = "isUserPersonalScopeResourceSpecificConsentEnabled", alternate = {"IsUserPersonalScopeResourceSpecificConsentEnabled"})
     @Expose

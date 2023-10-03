@@ -38,7 +38,7 @@ public class CustomExtensionHandler extends Entity implements IJsonBackedObject 
 
     /**
      * The Custom Extension.
-     * Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand.
+     * Indicates which custom workflow extension is executed at this stage. Nullable. Supports $expand.
      * @deprecated 
      */
     @Deprecated

@@ -46,7 +46,7 @@ public class WorkbookTableColumn extends Entity implements IJsonBackedObject {
 
     /**
      * The Values.
-     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contain an error will return the error string.
+     * Represents the raw values of the specified range. The data returned could be of type string, number, or a boolean. Cell that contains an error returns the error string.
      */
     @SerializedName(value = "values", alternate = {"Values"})
     @Expose

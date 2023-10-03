@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Cloud Pc Reports Get Shared Use License Usage Report Parameter Set.
+ * @deprecated The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead.
  */
+@Deprecated
 public class CloudPcReportsGetSharedUseLicenseUsageReportParameterSet {
     /**
      * The report Name.

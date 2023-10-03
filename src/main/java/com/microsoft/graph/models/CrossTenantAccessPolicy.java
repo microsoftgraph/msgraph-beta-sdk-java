@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
+import com.microsoft.graph.models.PolicyTemplate;
 import com.microsoft.graph.models.TenantRelationshipAccessPolicyBase;
 import com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage;
 
@@ -54,6 +55,15 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage partners;
+
+    /**
+     * The Templates.
+     * Represents the base policy in the directory for multi-tenant organization settings.
+     */
+    @SerializedName(value = "templates", alternate = {"Templates"})
+    @Expose
+	@Nullable
+    public PolicyTemplate templates;
 
 
     /**

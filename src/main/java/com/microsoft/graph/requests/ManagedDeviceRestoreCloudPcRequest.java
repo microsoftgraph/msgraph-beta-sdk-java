@@ -19,7 +19,9 @@ import com.microsoft.graph.models.ManagedDeviceRestoreCloudPcParameterSet;
 
 /**
  * The class for the Managed Device Restore Cloud Pc Request.
+ * @deprecated The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead
  */
+@Deprecated
 public class ManagedDeviceRestoreCloudPcRequest extends BaseRequest<Void> {
     /**
      * The request for this ManagedDeviceRestoreCloudPc

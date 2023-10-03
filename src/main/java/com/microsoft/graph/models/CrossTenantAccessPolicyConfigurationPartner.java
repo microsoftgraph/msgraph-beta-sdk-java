@@ -98,7 +98,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Is In Multi Tenant Organization.
-     * 
+     * Identifies whether a tenant is a member of a multi-tenant organization.
      */
     @SerializedName(value = "isInMultiTenantOrganization", alternate = {"IsInMultiTenantOrganization"})
     @Expose
@@ -135,9 +135,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     /**
      * The Identity Synchronization.
      * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
-     * @deprecated 
      */
-    @Deprecated
     @SerializedName(value = "identitySynchronization", alternate = {"IdentitySynchronization"})
     @Expose
 	@Nullable

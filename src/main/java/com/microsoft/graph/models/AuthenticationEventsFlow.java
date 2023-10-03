@@ -28,7 +28,7 @@ public class AuthenticationEventsFlow extends Entity implements IJsonBackedObjec
 
     /**
      * The Conditions.
-     * The conditions representing the context of the authentication request which will be used to decide whether the events policy will be invoked.
+     * The conditions representing the context of the authentication request that will be used to decide whether the events policy will be invoked.
      */
     @SerializedName(value = "conditions", alternate = {"Conditions"})
     @Expose
