@@ -57,7 +57,7 @@ public class RemoteAssistanceSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The remote assistance settings singleton
-     * @return a CompletableFuture of remoteAssistanceSettings
+     * @return a CompletableFuture of RemoteAssistanceSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistanceSettings> get() {
@@ -66,7 +66,7 @@ public class RemoteAssistanceSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * The remote assistance settings singleton
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteAssistanceSettings
+     * @return a CompletableFuture of RemoteAssistanceSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistanceSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RemoteAssistanceSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property remoteAssistanceSettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of remoteAssistanceSettings
+     * @return a CompletableFuture of RemoteAssistanceSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistanceSettings> patch(@jakarta.annotation.Nonnull final RemoteAssistanceSettings body) {
@@ -89,7 +89,7 @@ public class RemoteAssistanceSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property remoteAssistanceSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteAssistanceSettings
+     * @return a CompletableFuture of RemoteAssistanceSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistanceSettings> patch(@jakarta.annotation.Nonnull final RemoteAssistanceSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class RemoteAssistanceSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a remoteAssistanceSettingsRequestBuilder
+     * @return a RemoteAssistanceSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RemoteAssistanceSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

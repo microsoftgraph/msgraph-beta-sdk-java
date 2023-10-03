@@ -35,7 +35,7 @@ public class UpdateSoftwareRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}/updateSoftware", rawUrl);
     }
     /**
-     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation.
+     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevice-updatesoftware?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class UpdateSoftwareRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation.
+     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdevice-updatesoftware?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class UpdateSoftwareRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation.
+     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class UpdateSoftwareRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation.
+     * Update the software for a Microsoft Teams-enabled device. This API triggers a long-running operation. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class UpdateSoftwareRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updateSoftwareRequestBuilder
+     * @return a UpdateSoftwareRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdateSoftwareRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

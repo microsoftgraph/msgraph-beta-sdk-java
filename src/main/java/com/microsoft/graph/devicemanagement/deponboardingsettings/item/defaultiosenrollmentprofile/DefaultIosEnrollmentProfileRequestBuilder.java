@@ -38,7 +38,7 @@ public class DefaultIosEnrollmentProfileRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Default iOS Enrollment Profile
-     * @return a CompletableFuture of depIOSEnrollmentProfile
+     * @return a CompletableFuture of DepIOSEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepIOSEnrollmentProfile> get() {
@@ -47,7 +47,7 @@ public class DefaultIosEnrollmentProfileRequestBuilder extends BaseRequestBuilde
     /**
      * Default iOS Enrollment Profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of depIOSEnrollmentProfile
+     * @return a CompletableFuture of DepIOSEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepIOSEnrollmentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class DefaultIosEnrollmentProfileRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultIosEnrollmentProfileRequestBuilder
+     * @return a DefaultIosEnrollmentProfileRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultIosEnrollmentProfileRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

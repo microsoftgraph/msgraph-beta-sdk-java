@@ -46,7 +46,7 @@ public class Printer extends PrinterBase implements Parsable {
      */
     private java.util.List<PrintTaskTrigger> taskTriggers;
     /**
-     * Instantiates a new printer and sets the default values.
+     * Instantiates a new Printer and sets the default values.
      */
     public Printer() {
         super();
@@ -55,7 +55,7 @@ public class Printer extends PrinterBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printer
+     * @return a Printer
      */
     @jakarta.annotation.Nonnull
     public static Printer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the acceptingJobs property value. The acceptingJobs property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAcceptingJobs() {
@@ -72,7 +72,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the connectors property value. The connectors that are associated with the printer.
-     * @return a printConnector
+     * @return a java.util.List<PrintConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintConnector> getConnectors() {
@@ -98,7 +98,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasPhysicalDevice() {
@@ -106,7 +106,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the isShared property value. True if the printer is shared; false otherwise. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsShared() {
@@ -130,7 +130,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the share property value. The share property
-     * @return a printerShare
+     * @return a PrinterShare
      */
     @jakarta.annotation.Nullable
     public PrinterShare getShare() {
@@ -138,7 +138,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the shares property value. The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-     * @return a printerShare
+     * @return a java.util.List<PrinterShare>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrinterShare> getShares() {
@@ -146,7 +146,7 @@ public class Printer extends PrinterBase implements Parsable {
     }
     /**
      * Gets the taskTriggers property value. A list of task triggers that are associated with the printer.
-     * @return a printTaskTrigger
+     * @return a java.util.List<PrintTaskTrigger>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintTaskTrigger> getTaskTriggers() {

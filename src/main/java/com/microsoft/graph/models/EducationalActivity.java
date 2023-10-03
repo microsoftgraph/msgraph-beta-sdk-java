@@ -30,7 +30,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      */
     private LocalDate startMonthYear;
     /**
-     * Instantiates a new educationalActivity and sets the default values.
+     * Instantiates a new EducationalActivity and sets the default values.
      */
     public EducationalActivity() {
         super();
@@ -39,7 +39,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationalActivity
+     * @return a EducationalActivity
      */
     @jakarta.annotation.Nonnull
     public static EducationalActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the institution property value. The institution property
-     * @return a institutionData
+     * @return a InstitutionData
      */
     @jakarta.annotation.Nullable
     public InstitutionData getInstitution() {
@@ -86,7 +86,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     }
     /**
      * Gets the program property value. The program property
-     * @return a educationalActivityDetail
+     * @return a EducationalActivityDetail
      */
     @jakarta.annotation.Nullable
     public EducationalActivityDetail getProgram() {

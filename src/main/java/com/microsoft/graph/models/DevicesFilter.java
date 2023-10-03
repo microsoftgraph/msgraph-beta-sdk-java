@@ -26,7 +26,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
      */
     private String rule;
     /**
-     * Instantiates a new devicesFilter and sets the default values.
+     * Instantiates a new DevicesFilter and sets the default values.
      */
     public DevicesFilter() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a devicesFilter
+     * @return a DevicesFilter
      */
     @jakarta.annotation.Nonnull
     public static DevicesFilter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         return new DevicesFilter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
-     * @return a crossTenantAccessPolicyTargetConfigurationAccessType
+     * @return a CrossTenantAccessPolicyTargetConfigurationAccessType
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfigurationAccessType getMode() {
@@ -71,7 +71,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRule() {
@@ -97,8 +97,8 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

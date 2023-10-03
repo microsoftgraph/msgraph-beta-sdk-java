@@ -30,7 +30,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      */
     private Long siteStorageUsedInBytes;
     /**
-     * Instantiates a new office365GroupsActivityStorage and sets the default values.
+     * Instantiates a new Office365GroupsActivityStorage and sets the default values.
      */
     public Office365GroupsActivityStorage() {
         super();
@@ -38,7 +38,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityStorage
+     * @return a Office365GroupsActivityStorage
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityStorage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMailboxStorageUsedInBytes() {
@@ -77,7 +77,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -93,7 +93,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     }
     /**
      * Gets the siteStorageUsedInBytes property value. The storage used in SharePoint document library.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSiteStorageUsedInBytes() {

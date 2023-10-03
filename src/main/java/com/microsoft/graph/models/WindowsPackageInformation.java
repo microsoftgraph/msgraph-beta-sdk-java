@@ -50,7 +50,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     private String odataType;
     /**
-     * Instantiates a new windowsPackageInformation and sets the default values.
+     * Instantiates a new WindowsPackageInformation and sets the default values.
      */
     public WindowsPackageInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPackageInformation
+     * @return a WindowsPackageInformation
      */
     @jakarta.annotation.Nonnull
     public static WindowsPackageInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         return new WindowsPackageInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the applicableArchitecture property value. Contains properties for Windows architecture.
-     * @return a windowsArchitecture
+     * @return a EnumSet<WindowsArchitecture>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitecture() {
@@ -83,7 +83,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the displayName property value. The Display Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -108,7 +108,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identityName property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -116,7 +116,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identityPublisher property value. The Identity Publisher.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisher() {
@@ -124,7 +124,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
@@ -132,7 +132,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identityVersion property value. The Identity Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -140,7 +140,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -148,7 +148,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -171,8 +171,8 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -50,7 +50,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     private String requestType;
     /**
-     * Instantiates a new accessPackageResourceRequest and sets the default values.
+     * Instantiates a new AccessPackageResourceRequest and sets the default values.
      */
     public AccessPackageResourceRequest() {
         super();
@@ -58,7 +58,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageResourceRequest
+     * @return a AccessPackageResourceRequest
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageResourceRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResource property value. The accessPackageResource property
-     * @return a accessPackageResource
+     * @return a AccessPackageResource
      */
     @jakarta.annotation.Nullable
     public AccessPackageResource getAccessPackageResource() {
@@ -75,7 +75,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the catalogId property value. The unique ID of the access package catalog.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
@@ -83,7 +83,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the executeImmediately property value. The executeImmediately property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExecuteImmediately() {
@@ -118,7 +118,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the isValidationOnly property value. If set, does not add the resource.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValidationOnly() {
@@ -126,7 +126,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the justification property value. The requestor's justification for adding or removing the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -134,7 +134,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestor property value. Read-only. Nullable. Supports $expand.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getRequestor() {
@@ -142,7 +142,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestState property value. The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestState() {
@@ -150,7 +150,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestStatus property value. The requestStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestStatus() {
@@ -158,7 +158,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
     }
     /**
      * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestType() {

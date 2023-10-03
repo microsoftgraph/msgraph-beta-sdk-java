@@ -65,7 +65,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     private VpnTrafficDirection vpnTrafficDirection;
     /**
-     * Instantiates a new vpnTrafficRule and sets the default values.
+     * Instantiates a new VpnTrafficRule and sets the default values.
      */
     public VpnTrafficRule() {
         this.setAdditionalData(new HashMap<>());
@@ -73,7 +73,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnTrafficRule
+     * @return a VpnTrafficRule
      */
     @jakarta.annotation.Nonnull
     public static VpnTrafficRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         return new VpnTrafficRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appId property value. App identifier, if this traffic rule is triggered by an app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -98,7 +98,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
-     * @return a vpnTrafficRuleAppType
+     * @return a VpnTrafficRuleAppType
      */
     @jakarta.annotation.Nullable
     public VpnTrafficRuleAppType getAppType() {
@@ -106,7 +106,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the claims property value. Claims associated with this traffic rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClaims() {
@@ -135,7 +135,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localAddressRanges property value. Local address range. This collection can contain a maximum of 500 elements.
-     * @return a iPv4Range
+     * @return a java.util.List<IPv4Range>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IPv4Range> getLocalAddressRanges() {
@@ -143,7 +143,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localPortRanges property value. Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     * @return a numberRange
+     * @return a java.util.List<NumberRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NumberRange> getLocalPortRanges() {
@@ -151,7 +151,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -159,7 +159,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -167,7 +167,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the protocols property value. Protocols (0-255). Valid values 0 to 255
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProtocols() {
@@ -175,7 +175,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remoteAddressRanges property value. Remote address range. This collection can contain a maximum of 500 elements.
-     * @return a iPv4Range
+     * @return a java.util.List<IPv4Range>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IPv4Range> getRemoteAddressRanges() {
@@ -183,7 +183,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remotePortRanges property value. Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
-     * @return a numberRange
+     * @return a java.util.List<NumberRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NumberRange> getRemotePortRanges() {
@@ -191,7 +191,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
-     * @return a vpnTrafficRuleRoutingPolicyType
+     * @return a VpnTrafficRuleRoutingPolicyType
      */
     @jakarta.annotation.Nullable
     public VpnTrafficRuleRoutingPolicyType getRoutingPolicyType() {
@@ -199,7 +199,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vpnTrafficDirection property value. Specify whether the rule applies to inbound traffic or outbound traffic.
-     * @return a vpnTrafficDirection
+     * @return a VpnTrafficDirection
      */
     @jakarta.annotation.Nullable
     public VpnTrafficDirection getVpnTrafficDirection() {
@@ -226,8 +226,8 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

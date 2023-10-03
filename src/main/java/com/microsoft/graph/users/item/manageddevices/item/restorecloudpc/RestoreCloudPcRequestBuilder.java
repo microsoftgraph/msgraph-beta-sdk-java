@@ -35,7 +35,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/restoreCloudPc", rawUrl);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @deprecated
      * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
@@ -47,7 +47,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
@@ -65,7 +65,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -77,7 +77,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Restore a Cloud PC device to a previous state with an Intune managed device ID. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -104,7 +104,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a restoreCloudPcRequestBuilder
+     * @return a RestoreCloudPcRequestBuilder
      * @deprecated
      * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc on 2023-08-22 and will be removed 2023-10-30
      */

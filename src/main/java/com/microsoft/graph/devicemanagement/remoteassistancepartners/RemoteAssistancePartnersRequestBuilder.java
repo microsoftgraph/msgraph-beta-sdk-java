@@ -60,7 +60,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The remote assist partners.
-     * @return a CompletableFuture of remoteAssistancePartnerCollectionResponse
+     * @return a CompletableFuture of RemoteAssistancePartnerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartnerCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
     /**
      * The remote assist partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteAssistancePartnerCollectionResponse
+     * @return a CompletableFuture of RemoteAssistancePartnerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartnerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to remoteAssistancePartners for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of remoteAssistancePartner
+     * @return a CompletableFuture of RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> post(@jakarta.annotation.Nonnull final RemoteAssistancePartner body) {
@@ -92,7 +92,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to remoteAssistancePartners for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteAssistancePartner
+     * @return a CompletableFuture of RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> post(@jakarta.annotation.Nonnull final RemoteAssistancePartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class RemoteAssistancePartnersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a remoteAssistancePartnersRequestBuilder
+     * @return a RemoteAssistancePartnersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RemoteAssistancePartnersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

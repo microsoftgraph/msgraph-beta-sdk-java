@@ -13,7 +13,7 @@ public class TextWebPart extends WebPart implements Parsable {
      */
     private String innerHtml;
     /**
-     * Instantiates a new textWebPart and sets the default values.
+     * Instantiates a new TextWebPart and sets the default values.
      */
     public TextWebPart() {
         super();
@@ -22,7 +22,7 @@ public class TextWebPart extends WebPart implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a textWebPart
+     * @return a TextWebPart
      */
     @jakarta.annotation.Nonnull
     public static TextWebPart createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TextWebPart extends WebPart implements Parsable {
     }
     /**
      * Gets the innerHtml property value. The HTML string in text web part.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInnerHtml() {

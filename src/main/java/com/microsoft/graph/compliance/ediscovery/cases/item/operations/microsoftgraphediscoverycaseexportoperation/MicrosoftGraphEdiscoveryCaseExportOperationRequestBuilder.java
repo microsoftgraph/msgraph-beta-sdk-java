@@ -49,7 +49,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     }
     /**
      * Get the items of type microsoft.graph.ediscovery.caseExportOperation in the microsoft.graph.ediscovery.caseOperation collection
-     * @return a CompletableFuture of caseExportOperationCollectionResponse
+     * @return a CompletableFuture of CaseExportOperationCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -61,7 +61,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     /**
      * Get the items of type microsoft.graph.ediscovery.caseExportOperation in the microsoft.graph.ediscovery.caseOperation collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of caseExportOperationCollectionResponse
+     * @return a CompletableFuture of CaseExportOperationCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -112,7 +112,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphEdiscoveryCaseExportOperationRequestBuilder
+     * @return a MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

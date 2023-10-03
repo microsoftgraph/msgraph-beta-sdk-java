@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WindowsKioskVisitor extends WindowsKioskUser implements Parsable {
     /**
-     * Instantiates a new windowsKioskVisitor and sets the default values.
+     * Instantiates a new WindowsKioskVisitor and sets the default values.
      */
     public WindowsKioskVisitor() {
         super();
@@ -21,7 +21,7 @@ public class WindowsKioskVisitor extends WindowsKioskUser implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskVisitor
+     * @return a WindowsKioskVisitor
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskVisitor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

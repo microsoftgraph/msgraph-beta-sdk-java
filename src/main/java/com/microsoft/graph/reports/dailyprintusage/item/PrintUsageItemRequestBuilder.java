@@ -57,7 +57,7 @@ public class PrintUsageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get dailyPrintUsage from reports
-     * @return a CompletableFuture of printUsage
+     * @return a CompletableFuture of PrintUsage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsage> get() {
@@ -66,7 +66,7 @@ public class PrintUsageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get dailyPrintUsage from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsage
+     * @return a CompletableFuture of PrintUsage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PrintUsageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property dailyPrintUsage in reports
      * @param body The request body
-     * @return a CompletableFuture of printUsage
+     * @return a CompletableFuture of PrintUsage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsage> patch(@jakarta.annotation.Nonnull final PrintUsage body) {
@@ -89,7 +89,7 @@ public class PrintUsageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property dailyPrintUsage in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsage
+     * @return a CompletableFuture of PrintUsage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintUsage> patch(@jakarta.annotation.Nonnull final PrintUsage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

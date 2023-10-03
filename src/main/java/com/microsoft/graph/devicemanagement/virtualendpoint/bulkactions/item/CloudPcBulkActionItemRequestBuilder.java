@@ -57,7 +57,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get bulkActions from deviceManagement
-     * @return a CompletableFuture of cloudPcBulkAction
+     * @return a CompletableFuture of CloudPcBulkAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkAction> get() {
@@ -66,7 +66,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get bulkActions from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkAction
+     * @return a CompletableFuture of CloudPcBulkAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkAction> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property bulkActions in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcBulkAction
+     * @return a CompletableFuture of CloudPcBulkAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkAction> patch(@jakarta.annotation.Nonnull final CloudPcBulkAction body) {
@@ -89,7 +89,7 @@ public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property bulkActions in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkAction
+     * @return a CompletableFuture of CloudPcBulkAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkAction> patch(@jakarta.annotation.Nonnull final CloudPcBulkAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

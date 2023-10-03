@@ -16,7 +16,7 @@ public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity impleme
      */
     private Boolean status;
     /**
-     * Instantiates a new importedDeviceIdentityResult and sets the default values.
+     * Instantiates a new ImportedDeviceIdentityResult and sets the default values.
      */
     public ImportedDeviceIdentityResult() {
         super();
@@ -24,7 +24,7 @@ public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedDeviceIdentityResult
+     * @return a ImportedDeviceIdentityResult
      */
     @jakarta.annotation.Nonnull
     public static ImportedDeviceIdentityResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ImportedDeviceIdentityResult extends ImportedDeviceIdentity impleme
     }
     /**
      * Gets the status property value. Status of imported device identity
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStatus() {

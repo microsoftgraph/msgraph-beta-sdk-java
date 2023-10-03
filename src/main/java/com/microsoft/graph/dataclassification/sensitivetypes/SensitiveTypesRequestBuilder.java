@@ -60,7 +60,7 @@ public class SensitiveTypesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sensitiveTypes from dataClassification
-     * @return a CompletableFuture of sensitiveTypeCollectionResponse
+     * @return a CompletableFuture of SensitiveTypeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveTypeCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SensitiveTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sensitiveTypes from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitiveTypeCollectionResponse
+     * @return a CompletableFuture of SensitiveTypeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveTypeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SensitiveTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sensitiveTypes for dataClassification
      * @param body The request body
-     * @return a CompletableFuture of sensitiveType
+     * @return a CompletableFuture of SensitiveType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveType> post(@jakarta.annotation.Nonnull final SensitiveType body) {
@@ -92,7 +92,7 @@ public class SensitiveTypesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sensitiveTypes for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitiveType
+     * @return a CompletableFuture of SensitiveType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveType> post(@jakarta.annotation.Nonnull final SensitiveType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SensitiveTypesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sensitiveTypesRequestBuilder
+     * @return a SensitiveTypesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SensitiveTypesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

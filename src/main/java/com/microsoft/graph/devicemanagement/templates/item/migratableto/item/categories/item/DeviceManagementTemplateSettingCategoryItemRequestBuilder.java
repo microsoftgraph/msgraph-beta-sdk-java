@@ -73,7 +73,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder extends B
     }
     /**
      * Collection of setting categories within the template
-     * @return a CompletableFuture of deviceManagementTemplateSettingCategory
+     * @return a CompletableFuture of DeviceManagementTemplateSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateSettingCategory> get() {
@@ -82,7 +82,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder extends B
     /**
      * Collection of setting categories within the template
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateSettingCategory
+     * @return a CompletableFuture of DeviceManagementTemplateSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateSettingCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder extends B
     /**
      * Update the navigation property categories in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTemplateSettingCategory
+     * @return a CompletableFuture of DeviceManagementTemplateSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateSettingCategory> patch(@jakarta.annotation.Nonnull final DeviceManagementTemplateSettingCategory body) {
@@ -105,7 +105,7 @@ public class DeviceManagementTemplateSettingCategoryItemRequestBuilder extends B
      * Update the navigation property categories in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateSettingCategory
+     * @return a CompletableFuture of DeviceManagementTemplateSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateSettingCategory> patch(@jakarta.annotation.Nonnull final DeviceManagementTemplateSettingCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

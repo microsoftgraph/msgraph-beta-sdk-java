@@ -13,7 +13,7 @@ public class MacOSLobAppCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<MacOSLobApp> value;
     /**
-     * Instantiates a new macOSLobAppCollectionResponse and sets the default values.
+     * Instantiates a new MacOSLobAppCollectionResponse and sets the default values.
      */
     public MacOSLobAppCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MacOSLobAppCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSLobAppCollectionResponse
+     * @return a MacOSLobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MacOSLobAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MacOSLobAppCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a macOSLobApp
+     * @return a java.util.List<MacOSLobApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSLobApp> getValue() {

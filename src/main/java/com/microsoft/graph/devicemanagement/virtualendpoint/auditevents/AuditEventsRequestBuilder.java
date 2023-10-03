@@ -67,8 +67,8 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/auditEvents{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant.
-     * @return a CompletableFuture of cloudPcAuditEventCollectionResponse
+     * List all the cloudPcAuditEvent objects for the tenant. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcAuditEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant.
+     * List all the cloudPcAuditEvent objects for the tenant. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcAuditEventCollectionResponse
+     * @return a CompletableFuture of CloudPcAuditEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-auditevents?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcAuditEvent
+     * @return a CompletableFuture of CloudPcAuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcAuditEvent> post(@jakarta.annotation.Nonnull final CloudPcAuditEvent body) {
@@ -102,7 +102,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcAuditEvent
+     * @return a CompletableFuture of CloudPcAuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcAuditEvent> post(@jakarta.annotation.Nonnull final CloudPcAuditEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcAuditEvent::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant.
+     * List all the cloudPcAuditEvent objects for the tenant. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant.
+     * List all the cloudPcAuditEvent objects for the tenant. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a auditEventsRequestBuilder
+     * @return a AuditEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -185,7 +185,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
         return new AuditEventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all the cloudPcAuditEvent objects for the tenant.
+     * List all the cloudPcAuditEvent objects for the tenant. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -17,13 +17,13 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * The content property
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The groupPolicyUploadedLanguageFiles property
      */
     private java.util.List<GroupPolicyUploadedLanguageFile> groupPolicyUploadedLanguageFiles;
     /**
-     * Instantiates a new uploadNewVersionPostRequestBody and sets the default values.
+     * Instantiates a new UploadNewVersionPostRequestBody and sets the default values.
      */
     public UploadNewVersionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -31,7 +31,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uploadNewVersionPostRequestBody
+     * @return a UploadNewVersionPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UploadNewVersionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
         return new UploadNewVersionPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -48,10 +48,10 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the content property value. The content property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -61,13 +61,13 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("groupPolicyUploadedLanguageFiles", (n) -> { this.setGroupPolicyUploadedLanguageFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedLanguageFile::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the groupPolicyUploadedLanguageFiles property value. The groupPolicyUploadedLanguageFiles property
-     * @return a groupPolicyUploadedLanguageFile
+     * @return a java.util.List<GroupPolicyUploadedLanguageFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedLanguageFile> getGroupPolicyUploadedLanguageFiles() {
@@ -79,13 +79,13 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeCollectionOfObjectValues("groupPolicyUploadedLanguageFiles", this.getGroupPolicyUploadedLanguageFiles());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -94,7 +94,7 @@ public class UploadNewVersionPostRequestBody implements AdditionalDataHolder, Pa
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**

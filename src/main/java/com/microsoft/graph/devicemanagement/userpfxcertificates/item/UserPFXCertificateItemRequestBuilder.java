@@ -57,7 +57,7 @@ public class UserPFXCertificateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of PFX certificates associated with a user.
-     * @return a CompletableFuture of userPFXCertificate
+     * @return a CompletableFuture of UserPFXCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserPFXCertificate> get() {
@@ -66,7 +66,7 @@ public class UserPFXCertificateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of PFX certificates associated with a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userPFXCertificate
+     * @return a CompletableFuture of UserPFXCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserPFXCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserPFXCertificateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property userPfxCertificates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userPFXCertificate
+     * @return a CompletableFuture of UserPFXCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserPFXCertificate> patch(@jakarta.annotation.Nonnull final UserPFXCertificate body) {
@@ -89,7 +89,7 @@ public class UserPFXCertificateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property userPfxCertificates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userPFXCertificate
+     * @return a CompletableFuture of UserPFXCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserPFXCertificate> patch(@jakarta.annotation.Nonnull final UserPFXCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

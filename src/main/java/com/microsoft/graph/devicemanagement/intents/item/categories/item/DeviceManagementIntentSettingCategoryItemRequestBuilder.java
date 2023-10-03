@@ -73,7 +73,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder extends Bas
     }
     /**
      * Collection of setting categories within the intent
-     * @return a CompletableFuture of deviceManagementIntentSettingCategory
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategory> get() {
@@ -82,7 +82,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder extends Bas
     /**
      * Collection of setting categories within the intent
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentSettingCategory
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder extends Bas
     /**
      * Update the navigation property categories in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntentSettingCategory
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategory> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentSettingCategory body) {
@@ -105,7 +105,7 @@ public class DeviceManagementIntentSettingCategoryItemRequestBuilder extends Bas
      * Update the navigation property categories in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentSettingCategory
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategory> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentSettingCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

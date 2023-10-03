@@ -37,7 +37,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters/{plannerRoster%2Did}/members/{plannerRosterMember%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a plannerRosterMember object.
+     * Delete a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerrostermember-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a plannerRosterMember object.
+     * Delete a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerrostermember-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a plannerRosterMember object.
-     * @return a CompletableFuture of plannerRosterMember
+     * Read the properties and relationships of a plannerRosterMember object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of PlannerRosterMember
      * @see <a href="https://learn.microsoft.com/graph/api/plannerrostermember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a plannerRosterMember object.
+     * Read the properties and relationships of a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerRosterMember
+     * @return a CompletableFuture of PlannerRosterMember
      * @see <a href="https://learn.microsoft.com/graph/api/plannerrostermember-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property members in planner
      * @param body The request body
-     * @return a CompletableFuture of plannerRosterMember
+     * @return a CompletableFuture of PlannerRosterMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerRosterMember> patch(@jakarta.annotation.Nonnull final PlannerRosterMember body) {
@@ -93,7 +93,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property members in planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerRosterMember
+     * @return a CompletableFuture of PlannerRosterMember
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerRosterMember> patch(@jakarta.annotation.Nonnull final PlannerRosterMember body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PlannerRosterMember::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a plannerRosterMember object.
+     * Delete a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerRosterMember object.
+     * Delete a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a plannerRosterMember object.
+     * Read the properties and relationships of a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a plannerRosterMember object.
+     * Read the properties and relationships of a plannerRosterMember object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class PlannerRosterMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a plannerRosterMember object.
+     * Read the properties and relationships of a plannerRosterMember object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

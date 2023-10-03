@@ -76,7 +76,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Collection of ChromeOSOnboardingSettings settings associated with account.
-     * @return a CompletableFuture of chromeOSOnboardingSettingsCollectionResponse
+     * @return a CompletableFuture of ChromeOSOnboardingSettingsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettingsCollectionResponse> get() {
@@ -85,7 +85,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Collection of ChromeOSOnboardingSettings settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chromeOSOnboardingSettingsCollectionResponse
+     * @return a CompletableFuture of ChromeOSOnboardingSettingsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettingsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -98,7 +98,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to chromeOSOnboardingSettings for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of chromeOSOnboardingSettings
+     * @return a CompletableFuture of ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettings> post(@jakarta.annotation.Nonnull final ChromeOSOnboardingSettings body) {
@@ -108,7 +108,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder extends BaseRequestBuilder
      * Create new navigation property to chromeOSOnboardingSettings for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chromeOSOnboardingSettings
+     * @return a CompletableFuture of ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettings> post(@jakarta.annotation.Nonnull final ChromeOSOnboardingSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -183,7 +183,7 @@ public class ChromeOSOnboardingSettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a chromeOSOnboardingSettingsRequestBuilder
+     * @return a ChromeOSOnboardingSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChromeOSOnboardingSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

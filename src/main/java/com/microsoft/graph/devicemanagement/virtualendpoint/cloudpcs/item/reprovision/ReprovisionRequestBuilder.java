@@ -35,7 +35,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/reprovision", rawUrl);
     }
     /**
-     * Reprovision a specific Cloud PC.
+     * Reprovision a specific Cloud PC. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-reprovision?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Reprovision a specific Cloud PC.
+     * Reprovision a specific Cloud PC. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-reprovision?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Reprovision a specific Cloud PC.
+     * Reprovision a specific Cloud PC. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Reprovision a specific Cloud PC.
+     * Reprovision a specific Cloud PC. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class ReprovisionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reprovisionRequestBuilder
+     * @return a ReprovisionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReprovisionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

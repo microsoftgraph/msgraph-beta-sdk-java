@@ -13,7 +13,7 @@ public class DeviceManagementResourceAccessProfileAssignmentCollectionResponse e
      */
     private java.util.List<DeviceManagementResourceAccessProfileAssignment> value;
     /**
-     * Instantiates a new deviceManagementResourceAccessProfileAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementResourceAccessProfileAssignmentCollectionResponse and sets the default values.
      */
     public DeviceManagementResourceAccessProfileAssignmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementResourceAccessProfileAssignmentCollectionResponse e
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementResourceAccessProfileAssignmentCollectionResponse
+     * @return a DeviceManagementResourceAccessProfileAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementResourceAccessProfileAssignmentCollectionResponse e
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementResourceAccessProfileAssignment
+     * @return a java.util.List<DeviceManagementResourceAccessProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementResourceAccessProfileAssignment> getValue() {

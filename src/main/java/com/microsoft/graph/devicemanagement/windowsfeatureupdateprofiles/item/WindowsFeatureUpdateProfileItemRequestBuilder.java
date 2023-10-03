@@ -73,7 +73,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder extends BaseRequestBu
     }
     /**
      * A collection of windows feature update profiles
-     * @return a CompletableFuture of windowsFeatureUpdateProfile
+     * @return a CompletableFuture of WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfile> get() {
@@ -82,7 +82,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder extends BaseRequestBu
     /**
      * A collection of windows feature update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsFeatureUpdateProfile
+     * @return a CompletableFuture of WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property windowsFeatureUpdateProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsFeatureUpdateProfile
+     * @return a CompletableFuture of WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfile> patch(@jakarta.annotation.Nonnull final WindowsFeatureUpdateProfile body) {
@@ -105,7 +105,7 @@ public class WindowsFeatureUpdateProfileItemRequestBuilder extends BaseRequestBu
      * Update the navigation property windowsFeatureUpdateProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsFeatureUpdateProfile
+     * @return a CompletableFuture of WindowsFeatureUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsFeatureUpdateProfile> patch(@jakarta.annotation.Nonnull final WindowsFeatureUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

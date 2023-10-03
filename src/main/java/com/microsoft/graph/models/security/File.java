@@ -14,7 +14,7 @@ public class File extends Entity implements Parsable {
     /**
      * The content property
      */
-    private byte[] content;
+    private Base64url content;
     /**
      * The dateTime property
      */
@@ -26,7 +26,7 @@ public class File extends Entity implements Parsable {
     /**
      * The extractedTextContent property
      */
-    private byte[] extractedTextContent;
+    private Base64url extractedTextContent;
     /**
      * The mediaType property
      */
@@ -60,7 +60,7 @@ public class File extends Entity implements Parsable {
      */
     private String subjectTitle;
     /**
-     * Instantiates a new file and sets the default values.
+     * Instantiates a new File and sets the default values.
      */
     public File() {
         super();
@@ -68,7 +68,7 @@ public class File extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a file
+     * @return a File
      */
     @jakarta.annotation.Nonnull
     public static File createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -84,10 +84,10 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getContent() {
+    public Base64url getContent() {
         return this.content;
     }
     /**
@@ -100,7 +100,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the extension property value. The extension property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtension() {
@@ -108,10 +108,10 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the extractedTextContent property value. The extractedTextContent property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getExtractedTextContent() {
+    public Base64url getExtractedTextContent() {
         return this.extractedTextContent;
     }
     /**
@@ -121,10 +121,10 @@ public class File extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("dateTime", (n) -> { this.setDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("extension", (n) -> { this.setExtension(n.getStringValue()); });
-        deserializerMap.put("extractedTextContent", (n) -> { this.setExtractedTextContent(n.getByteArrayValue()); });
+        deserializerMap.put("extractedTextContent", (n) -> { this.setExtractedTextContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("otherProperties", (n) -> { this.setOtherProperties(n.getObjectValue(StringValueDictionary::createFromDiscriminatorValue)); });
@@ -137,7 +137,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -145,7 +145,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -153,7 +153,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the otherProperties property value. The otherProperties property
-     * @return a stringValueDictionary
+     * @return a StringValueDictionary
      */
     @jakarta.annotation.Nullable
     public StringValueDictionary getOtherProperties() {
@@ -161,7 +161,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a fileProcessingStatus
+     * @return a FileProcessingStatus
      */
     @jakarta.annotation.Nullable
     public FileProcessingStatus getProcessingStatus() {
@@ -169,7 +169,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the senderOrAuthors property value. The senderOrAuthors property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSenderOrAuthors() {
@@ -177,7 +177,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -185,7 +185,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the sourceType property value. The sourceType property
-     * @return a sourceType
+     * @return a EnumSet<SourceType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getSourceType() {
@@ -193,7 +193,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the subjectTitle property value. The subjectTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectTitle() {
@@ -206,10 +206,10 @@ public class File extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("content", this.getContent());
+        writer.writeObjectValue("content", this.getContent());
         writer.writeOffsetDateTimeValue("dateTime", this.getDateTime());
         writer.writeStringValue("extension", this.getExtension());
-        writer.writeByteArrayValue("extractedTextContent", this.getExtractedTextContent());
+        writer.writeObjectValue("extractedTextContent", this.getExtractedTextContent());
         writer.writeStringValue("mediaType", this.getMediaType());
         writer.writeStringValue("name", this.getName());
         writer.writeObjectValue("otherProperties", this.getOtherProperties());
@@ -223,7 +223,7 @@ public class File extends Entity implements Parsable {
      * Sets the content property value. The content property
      * @param value Value to set for the content property.
      */
-    public void setContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setContent(@jakarta.annotation.Nullable final Base64url value) {
         this.content = value;
     }
     /**
@@ -244,7 +244,7 @@ public class File extends Entity implements Parsable {
      * Sets the extractedTextContent property value. The extractedTextContent property
      * @param value Value to set for the extractedTextContent property.
      */
-    public void setExtractedTextContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setExtractedTextContent(@jakarta.annotation.Nullable final Base64url value) {
         this.extractedTextContent = value;
     }
     /**

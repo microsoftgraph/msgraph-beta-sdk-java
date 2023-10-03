@@ -59,8 +59,8 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
-     * @return a CompletableFuture of branchSiteCollectionResponse
+     * Retrieve a list of branches within a tenant connected to the Global Secure Access services. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of BranchSiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-list-branches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
+     * Retrieve a list of branches within a tenant connected to the Global Secure Access services. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of branchSiteCollectionResponse
+     * @return a CompletableFuture of BranchSiteCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-list-branches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BranchSiteCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new branch.
+     * Create a new branch. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of branchSite
+     * @return a CompletableFuture of BranchSite
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-branches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new branch.
+     * Create a new branch. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of branchSite
+     * @return a CompletableFuture of BranchSite
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-connectivity-post-branches?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, BranchSite::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
+     * Retrieve a list of branches within a tenant connected to the Global Secure Access services. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
+     * Retrieve a list of branches within a tenant connected to the Global Secure Access services. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new branch.
+     * Create a new branch. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new branch.
+     * Create a new branch. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a branchesRequestBuilder
+     * @return a BranchesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BranchesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class BranchesRequestBuilder extends BaseRequestBuilder {
         return new BranchesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of branches within a tenant connected to the Global Secure Access services.
+     * Retrieve a list of branches within a tenant connected to the Global Secure Access services. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

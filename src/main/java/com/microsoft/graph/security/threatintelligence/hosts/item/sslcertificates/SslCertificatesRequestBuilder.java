@@ -58,8 +58,8 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/sslCertificates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
-     * @return a CompletableFuture of hostSslCertificateCollectionResponse
+     * Get a list of hostSslCertificate objects from the host navigation property. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of HostSslCertificateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostsslcertificate-list-host?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
+     * Get a list of hostSslCertificate objects from the host navigation property. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSslCertificateCollectionResponse
+     * @return a CompletableFuture of HostSslCertificateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostsslcertificate-list-host?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostSslCertificateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
+     * Get a list of hostSslCertificate objects from the host navigation property. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
+     * Get a list of hostSslCertificate objects from the host navigation property. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sslCertificatesRequestBuilder
+     * @return a SslCertificatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SslCertificatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class SslCertificatesRequestBuilder extends BaseRequestBuilder {
         return new SslCertificatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of hostSslCertificate objects from the host navigation property.
+     * Get a list of hostSslCertificate objects from the host navigation property. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

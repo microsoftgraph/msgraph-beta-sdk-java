@@ -57,7 +57,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Device compliance devices status overview
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceDeviceOverview> get() {
@@ -66,7 +66,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Device compliance devices status overview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceDeviceOverview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceStatusOverview in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceDeviceOverview> patch(@jakarta.annotation.Nonnull final DeviceComplianceDeviceOverview body) {
@@ -89,7 +89,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceStatusOverview in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceDeviceOverview
+     * @return a CompletableFuture of DeviceComplianceDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceDeviceOverview> patch(@jakarta.annotation.Nonnull final DeviceComplianceDeviceOverview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DeviceStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatusOverviewRequestBuilder
+     * @return a DeviceStatusOverviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatusOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

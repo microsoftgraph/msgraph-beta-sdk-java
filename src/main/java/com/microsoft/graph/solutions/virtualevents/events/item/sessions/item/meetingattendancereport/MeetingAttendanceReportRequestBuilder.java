@@ -64,8 +64,8 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
-     * @return a CompletableFuture of meetingAttendanceReport
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of MeetingAttendanceReport
      * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingAttendanceReport
+     * @return a CompletableFuture of MeetingAttendanceReport
      * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property meetingAttendanceReport in solutions
      * @param body The request body
-     * @return a CompletableFuture of meetingAttendanceReport
+     * @return a CompletableFuture of MeetingAttendanceReport
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body) {
@@ -99,7 +99,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property meetingAttendanceReport in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingAttendanceReport
+     * @return a CompletableFuture of MeetingAttendanceReport
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingAttendanceReport> patch(@jakarta.annotation.Nonnull final MeetingAttendanceReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a meetingAttendanceReportRequestBuilder
+     * @return a MeetingAttendanceReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MeetingAttendanceReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -215,7 +215,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session.
+     * Get the meetingAttendanceReport for an onlineMeeting. Each time an online meeting ends, an attendance report will be generated for that session. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

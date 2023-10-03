@@ -62,7 +62,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<IdentityUserFlow> userFlows;
     /**
-     * Instantiates a new identityContainer and sets the default values.
+     * Instantiates a new IdentityContainer and sets the default values.
      */
     public IdentityContainer() {
         this.setAdditionalData(new HashMap<>());
@@ -70,7 +70,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityContainer
+     * @return a IdentityContainer
      */
     @jakarta.annotation.Nonnull
     public static IdentityContainer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
         return new IdentityContainer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the apiConnectors property value. Represents entry point for API connectors.
-     * @return a identityApiConnector
+     * @return a java.util.List<IdentityApiConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityApiConnector> getApiConnectors() {
@@ -95,7 +95,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationEventListeners property value. The authenticationEventListeners property
-     * @return a authenticationEventListener
+     * @return a java.util.List<AuthenticationEventListener>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationEventListener> getAuthenticationEventListeners() {
@@ -103,7 +103,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationEventsFlows property value. Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
-     * @return a authenticationEventsFlow
+     * @return a java.util.List<AuthenticationEventsFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationEventsFlow> getAuthenticationEventsFlows() {
@@ -111,7 +111,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the b2cUserFlows property value. Represents entry point for B2C identity userflows.
-     * @return a b2cIdentityUserFlow
+     * @return a java.util.List<B2cIdentityUserFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2cIdentityUserFlow> getB2cUserFlows() {
@@ -119,7 +119,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the b2xUserFlows property value. Represents entry point for B2X and self-service sign-up identity userflows.
-     * @return a b2xIdentityUserFlow
+     * @return a java.util.List<B2xIdentityUserFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<B2xIdentityUserFlow> getB2xUserFlows() {
@@ -127,7 +127,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the conditionalAccess property value. the entry point for the Conditional Access (CA) object model.
-     * @return a conditionalAccessRoot
+     * @return a ConditionalAccessRoot
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessRoot getConditionalAccess() {
@@ -135,7 +135,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the continuousAccessEvaluationPolicy property value. Represents entry point for continuous access evaluation policy.
-     * @return a continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      */
     @jakarta.annotation.Nullable
     public ContinuousAccessEvaluationPolicy getContinuousAccessEvaluationPolicy() {
@@ -143,7 +143,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customAuthenticationExtensions property value. The customAuthenticationExtensions property
-     * @return a customAuthenticationExtension
+     * @return a java.util.List<CustomAuthenticationExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomAuthenticationExtension> getCustomAuthenticationExtensions() {
@@ -172,7 +172,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identityProviders property value. Represents entry point for identity provider base.
-     * @return a identityProviderBase
+     * @return a java.util.List<IdentityProviderBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityProviderBase> getIdentityProviders() {
@@ -180,7 +180,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -188,7 +188,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
-     * @return a identityUserFlowAttribute
+     * @return a java.util.List<IdentityUserFlowAttribute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getUserFlowAttributes() {
@@ -196,7 +196,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userFlows property value. The userFlows property
-     * @return a identityUserFlow
+     * @return a java.util.List<IdentityUserFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlow> getUserFlows() {
@@ -223,8 +223,8 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

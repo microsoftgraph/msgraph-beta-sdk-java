@@ -57,7 +57,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder extends BaseReque
     }
     /**
      * The list of group assignments for the branding profile
-     * @return a CompletableFuture of intuneBrandingProfileAssignment
+     * @return a CompletableFuture of IntuneBrandingProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfileAssignment> get() {
@@ -66,7 +66,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder extends BaseReque
     /**
      * The list of group assignments for the branding profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intuneBrandingProfileAssignment
+     * @return a CompletableFuture of IntuneBrandingProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfileAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of intuneBrandingProfileAssignment
+     * @return a CompletableFuture of IntuneBrandingProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfileAssignment> patch(@jakarta.annotation.Nonnull final IntuneBrandingProfileAssignment body) {
@@ -89,7 +89,7 @@ public class IntuneBrandingProfileAssignmentItemRequestBuilder extends BaseReque
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intuneBrandingProfileAssignment
+     * @return a CompletableFuture of IntuneBrandingProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfileAssignment> patch(@jakarta.annotation.Nonnull final IntuneBrandingProfileAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

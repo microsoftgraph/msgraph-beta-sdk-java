@@ -59,17 +59,17 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/roleSettings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting.
-     * @return a CompletableFuture of governanceRoleSettingCollectionResponse
+     * Retrieve the properties and relationships of a governanceRoleSetting. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of GovernanceRoleSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSettingCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting.
+     * Retrieve the properties and relationships of a governanceRoleSetting. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleSettingCollectionResponse
+     * @return a CompletableFuture of GovernanceRoleSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleSettings for privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSetting> post(@jakarta.annotation.Nonnull final GovernanceRoleSetting body) {
@@ -92,7 +92,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleSettings for privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSetting> post(@jakarta.annotation.Nonnull final GovernanceRoleSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting.
+     * Retrieve the properties and relationships of a governanceRoleSetting. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting.
+     * Retrieve the properties and relationships of a governanceRoleSetting. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleSettingsRequestBuilder
+     * @return a RoleSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class RoleSettingsRequestBuilder extends BaseRequestBuilder {
         return new RoleSettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a governanceRoleSetting.
+     * Retrieve the properties and relationships of a governanceRoleSetting. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

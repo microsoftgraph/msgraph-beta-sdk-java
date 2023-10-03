@@ -26,7 +26,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      */
     private String passwordBase64;
     /**
-     * Instantiates a new deviceLocalCredential and sets the default values.
+     * Instantiates a new DeviceLocalCredential and sets the default values.
      */
     public DeviceLocalCredential() {
         super();
@@ -34,7 +34,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceLocalCredential
+     * @return a DeviceLocalCredential
      */
     @jakarta.annotation.Nonnull
     public static DeviceLocalCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the accountName property value. The name of the local admin account for which LAPS is enabled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -51,7 +51,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountSid() {
@@ -80,7 +80,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordBase64() {

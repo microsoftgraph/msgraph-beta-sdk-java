@@ -21,7 +21,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      */
     private Integer priority;
     /**
-     * Instantiates a new authenticationEventListener and sets the default values.
+     * Instantiates a new AuthenticationEventListener and sets the default values.
      */
     public AuthenticationEventListener() {
         super();
@@ -29,7 +29,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationEventListener
+     * @return a AuthenticationEventListener
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationEventListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationEventsFlowId property value. The identifier of the authenticationEventsFlow object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationEventsFlowId() {
@@ -57,7 +57,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     }
     /**
      * Gets the conditions property value. The conditions on which this authenticationEventListener should trigger.
-     * @return a authenticationConditions
+     * @return a AuthenticationConditions
      */
     @jakarta.annotation.Nullable
     public AuthenticationConditions getConditions() {
@@ -77,7 +77,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {

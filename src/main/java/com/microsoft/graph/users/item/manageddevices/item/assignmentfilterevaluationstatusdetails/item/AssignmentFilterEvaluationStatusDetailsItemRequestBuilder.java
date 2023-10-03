@@ -57,7 +57,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder extends B
     }
     /**
      * Managed device mobile app configuration states for this device.
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetails
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetails> get() {
@@ -66,7 +66,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder extends B
     /**
      * Managed device mobile app configuration states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetails
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetails> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder extends B
     /**
      * Update the navigation property assignmentFilterEvaluationStatusDetails in users
      * @param body The request body
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetails
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetails> patch(@jakarta.annotation.Nonnull final AssignmentFilterEvaluationStatusDetails body) {
@@ -89,7 +89,7 @@ public class AssignmentFilterEvaluationStatusDetailsItemRequestBuilder extends B
      * Update the navigation property assignmentFilterEvaluationStatusDetails in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetails
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetails> patch(@jakarta.annotation.Nonnull final AssignmentFilterEvaluationStatusDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

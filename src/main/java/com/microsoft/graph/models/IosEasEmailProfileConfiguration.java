@@ -121,7 +121,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     private Boolean useOAuth;
     /**
-     * Instantiates a new iosEasEmailProfileConfiguration and sets the default values.
+     * Instantiates a new IosEasEmailProfileConfiguration and sets the default values.
      */
     public IosEasEmailProfileConfiguration() {
         super();
@@ -130,7 +130,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosEasEmailProfileConfiguration
+     * @return a IosEasEmailProfileConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosEasEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -139,7 +139,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the accountName property value. Account name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -147,7 +147,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
-     * @return a easAuthenticationMethod
+     * @return a EasAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
@@ -155,7 +155,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the blockMovingMessagesToOtherEmailAccounts property value. Indicates whether or not to block moving messages to other email accounts.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMovingMessagesToOtherEmailAccounts() {
@@ -163,7 +163,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the blockSendingEmailFromThirdPartyApps property value. Indicates whether or not to block sending email from third party apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSendingEmailFromThirdPartyApps() {
@@ -171,7 +171,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the blockSyncingRecentlyUsedEmailAddresses property value. Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSyncingRecentlyUsedEmailAddresses() {
@@ -179,7 +179,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
@@ -187,7 +187,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
@@ -195,7 +195,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
-     * @return a easServices
+     * @return a EnumSet<EasServices>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EasServices> getEasServices() {
@@ -203,7 +203,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the easServicesUserOverrideEnabled property value. Allow users to change sync settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEasServicesUserOverrideEnabled() {
@@ -211,7 +211,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
@@ -219,7 +219,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     * @return a emailCertificateType
+     * @return a EmailCertificateType
      */
     @jakarta.annotation.Nullable
     public EmailCertificateType getEncryptionCertificateType() {
@@ -263,7 +263,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
@@ -271,7 +271,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the identityCertificate property value. Identity certificate.
-     * @return a iosCertificateProfileBase
+     * @return a IosCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificate() {
@@ -279,7 +279,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the perAppVPNProfileId property value. Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPerAppVPNProfileId() {
@@ -287,7 +287,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSmime() {
@@ -295,7 +295,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
@@ -303,7 +303,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     * @return a emailCertificateType
+     * @return a EmailCertificateType
      */
     @jakarta.annotation.Nullable
     public EmailCertificateType getSigningCertificateType() {
@@ -311,7 +311,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeEnablePerMessageSwitch property value. Indicates whether or not to allow unencrypted emails.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEnablePerMessageSwitch() {
@@ -319,7 +319,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeEncryptByDefaultEnabled property value. If set to true S/MIME encryption is enabled by default.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultEnabled() {
@@ -327,7 +327,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeEncryptByDefaultUserOverrideEnabled property value. If set to true, the user can toggle the encryption by default setting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultUserOverrideEnabled() {
@@ -335,7 +335,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeEncryptionCertificate property value. S/MIME encryption certificate.
-     * @return a iosCertificateProfile
+     * @return a IosCertificateProfile
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfile getSmimeEncryptionCertificate() {
@@ -343,7 +343,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeEncryptionCertificateUserOverrideEnabled property value. If set to true the user can select the S/MIME encryption identity.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptionCertificateUserOverrideEnabled() {
@@ -351,7 +351,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeSigningCertificate property value. S/MIME signing certificate.
-     * @return a iosCertificateProfile
+     * @return a IosCertificateProfile
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfile getSmimeSigningCertificate() {
@@ -359,7 +359,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeSigningCertificateUserOverrideEnabled property value. If set to true, the user can select the signing identity.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeSigningCertificateUserOverrideEnabled() {
@@ -367,7 +367,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeSigningEnabled property value. If set to true S/MIME signing is enabled for this account
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeSigningEnabled() {
@@ -375,7 +375,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the smimeSigningUserOverrideEnabled property value. If set to true, the user can toggle S/MIME signing on or off.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeSigningUserOverrideEnabled() {
@@ -383,7 +383,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the useOAuth property value. Specifies whether the connection should use OAuth for authentication.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseOAuth() {

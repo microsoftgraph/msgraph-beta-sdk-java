@@ -81,7 +81,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
     }
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
-     * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @return a CompletableFuture of WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> get() {
@@ -90,7 +90,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @return a CompletableFuture of WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @return a CompletableFuture of WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body) {
@@ -113,7 +113,7 @@ public class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRe
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @return a CompletableFuture of WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

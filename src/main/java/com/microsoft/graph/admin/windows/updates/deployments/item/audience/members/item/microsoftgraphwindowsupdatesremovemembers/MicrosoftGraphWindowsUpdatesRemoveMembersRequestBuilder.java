@@ -35,7 +35,7 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments/{deployment%2Did}/audience/members/{updatableAsset%2Did}/microsoft.graph.windowsUpdates.removeMembers", rawUrl);
     }
     /**
-     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members.
+     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-removemembers?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
         return post(body, null);
     }
     /**
-     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members.
+     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-removemembers?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members.
+     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
         return toPostRequestInformation(body, null);
     }
     /**
-     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members.
+     * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphWindowsUpdatesRemoveMembersRequestBuilder
+     * @return a MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

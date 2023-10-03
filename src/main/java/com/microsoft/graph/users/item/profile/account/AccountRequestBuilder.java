@@ -59,8 +59,8 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/account{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
-     * @return a CompletableFuture of userAccountInformationCollectionResponse
+     * Retrieves properties related to the user's accounts from the profile. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of UserAccountInformationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Retrieves properties related to the user's accounts from the profile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userAccountInformationCollectionResponse
+     * @return a CompletableFuture of UserAccountInformationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserAccountInformationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create a new userAccountInformation object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of userAccountInformation
+     * @return a CompletableFuture of UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create a new userAccountInformation object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userAccountInformation
+     * @return a CompletableFuture of UserAccountInformation
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-accounts?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserAccountInformation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Retrieves properties related to the user's accounts from the profile. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Retrieves properties related to the user's accounts from the profile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create a new userAccountInformation object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userAccountInformation object in a user's profile.
+     * Create a new userAccountInformation object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accountRequestBuilder
+     * @return a AccountRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class AccountRequestBuilder extends BaseRequestBuilder {
         return new AccountRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieves properties related to the user's accounts from the profile.
+     * Retrieves properties related to the user's accounts from the profile. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

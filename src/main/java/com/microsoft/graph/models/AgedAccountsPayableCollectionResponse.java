@@ -13,7 +13,7 @@ public class AgedAccountsPayableCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<AgedAccountsPayable> value;
     /**
-     * Instantiates a new agedAccountsPayableCollectionResponse and sets the default values.
+     * Instantiates a new AgedAccountsPayableCollectionResponse and sets the default values.
      */
     public AgedAccountsPayableCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AgedAccountsPayableCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agedAccountsPayableCollectionResponse
+     * @return a AgedAccountsPayableCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AgedAccountsPayableCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AgedAccountsPayableCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a agedAccountsPayable
+     * @return a java.util.List<AgedAccountsPayable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AgedAccountsPayable> getValue() {

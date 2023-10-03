@@ -74,7 +74,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * The roles in each resource in a catalog. Read-only.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -86,7 +86,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     /**
      * The roles in each resource in a catalog. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -102,7 +102,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property accessPackageResourceRoles in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -115,7 +115,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property accessPackageResourceRoles in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

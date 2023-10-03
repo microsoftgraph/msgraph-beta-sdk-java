@@ -68,7 +68,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sensitivityLabels from dataClassification
-     * @return a CompletableFuture of sensitivityLabelCollectionResponse
+     * @return a CompletableFuture of SensitivityLabelCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabelCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sensitivityLabels from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityLabelCollectionResponse
+     * @return a CompletableFuture of SensitivityLabelCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabelCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sensitivityLabels for dataClassification
      * @param body The request body
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> post(@jakarta.annotation.Nonnull final SensitivityLabel body) {
@@ -100,7 +100,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sensitivityLabels for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> post(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sensitivityLabelsRequestBuilder
+     * @return a SensitivityLabelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SensitivityLabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

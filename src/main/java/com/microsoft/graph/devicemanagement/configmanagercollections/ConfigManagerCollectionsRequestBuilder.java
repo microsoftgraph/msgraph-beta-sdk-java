@@ -61,7 +61,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A list of ConfigManagerCollection
-     * @return a CompletableFuture of configManagerCollectionCollectionResponse
+     * @return a CompletableFuture of ConfigManagerCollectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollectionCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * A list of ConfigManagerCollection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of configManagerCollectionCollectionResponse
+     * @return a CompletableFuture of ConfigManagerCollectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getPolicySummary method.
      * @param policyId Usage: policyId='{policyId}'
-     * @return a getPolicySummaryWithPolicyIdRequestBuilder
+     * @return a GetPolicySummaryWithPolicyIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetPolicySummaryWithPolicyIdRequestBuilder getPolicySummaryWithPolicyId(@jakarta.annotation.Nonnull final String policyId) {
@@ -93,7 +93,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to configManagerCollections for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of configManagerCollection
+     * @return a CompletableFuture of ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollection> post(@jakarta.annotation.Nonnull final ConfigManagerCollection body) {
@@ -103,7 +103,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to configManagerCollections for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of configManagerCollection
+     * @return a CompletableFuture of ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollection> post(@jakarta.annotation.Nonnull final ConfigManagerCollection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a configManagerCollectionsRequestBuilder
+     * @return a ConfigManagerCollectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConfigManagerCollectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

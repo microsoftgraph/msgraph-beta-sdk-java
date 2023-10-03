@@ -26,7 +26,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
      */
     private java.util.List<UUID> responsibleSensitiveTypeIds;
     /**
-     * Instantiates a new applyLabelAction and sets the default values.
+     * Instantiates a new ApplyLabelAction and sets the default values.
      */
     public ApplyLabelAction() {
         super();
@@ -35,7 +35,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applyLabelAction
+     * @return a ApplyLabelAction
      */
     @jakarta.annotation.Nonnull
     public static ApplyLabelAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the actions property value. The collection of specific actions that should be taken by the consuming application to label the document. See  informationProtectionAction for the full list.
-     * @return a informationProtectionAction
+     * @return a java.util.List<InformationProtectionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionAction> getActions() {
@@ -52,7 +52,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the actionSource property value. The actionSource property
-     * @return a actionSource
+     * @return a ActionSource
      */
     @jakarta.annotation.Nullable
     public ActionSource getActionSource() {
@@ -73,7 +73,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the label property value. Object that describes the details of the label to apply.
-     * @return a labelDetails
+     * @return a LabelDetails
      */
     @jakarta.annotation.Nullable
     public LabelDetails getLabel() {
@@ -81,7 +81,7 @@ public class ApplyLabelAction extends InformationProtectionAction implements Par
     }
     /**
      * Gets the responsibleSensitiveTypeIds property value. If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label.
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getResponsibleSensitiveTypeIds() {

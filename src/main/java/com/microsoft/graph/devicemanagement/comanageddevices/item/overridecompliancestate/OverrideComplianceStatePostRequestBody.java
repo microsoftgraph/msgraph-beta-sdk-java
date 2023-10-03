@@ -23,7 +23,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
      */
     private String remediationUrl;
     /**
-     * Instantiates a new overrideComplianceStatePostRequestBody and sets the default values.
+     * Instantiates a new OverrideComplianceStatePostRequestBody and sets the default values.
      */
     public OverrideComplianceStatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -31,7 +31,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a overrideComplianceStatePostRequestBody
+     * @return a OverrideComplianceStatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static OverrideComplianceStatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
         return new OverrideComplianceStatePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -48,7 +48,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the complianceState property value. Administrator configured device compliance state Enum
-     * @return a administratorConfiguredDeviceComplianceState
+     * @return a AdministratorConfiguredDeviceComplianceState
      */
     @jakarta.annotation.Nullable
     public AdministratorConfiguredDeviceComplianceState getComplianceState() {
@@ -67,7 +67,7 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
     }
     /**
      * Gets the remediationUrl property value. The remediationUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationUrl() {
@@ -84,8 +84,8 @@ public class OverrideComplianceStatePostRequestBody implements AdditionalDataHol
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

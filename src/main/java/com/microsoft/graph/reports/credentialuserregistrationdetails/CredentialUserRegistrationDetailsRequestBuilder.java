@@ -65,8 +65,8 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/reports/credentialUserRegistrationDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
-     * @return a CompletableFuture of credentialUserRegistrationDetailsCollectionResponse
+     * Get a list of credentialUserRegistrationDetails objects for a given tenant. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of CredentialUserRegistrationDetailsCollectionResponse
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
@@ -77,9 +77,9 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Get a list of credentialUserRegistrationDetails objects for a given tenant. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationDetailsCollectionResponse
+     * @return a CompletableFuture of CredentialUserRegistrationDetailsCollectionResponse
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-credentialuserregistrationdetails?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Create new navigation property to credentialUserRegistrationDetails for reports
      * @param body The request body
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -109,7 +109,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
      * Create new navigation property to credentialUserRegistrationDetails for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -124,7 +124,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return this.requestAdapter.sendAsync(requestInfo, CredentialUserRegistrationDetails::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Get a list of credentialUserRegistrationDetails objects for a given tenant. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
@@ -135,7 +135,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Get a list of credentialUserRegistrationDetails objects for a given tenant. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -199,7 +199,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a credentialUserRegistrationDetailsRequestBuilder
+     * @return a CredentialUserRegistrationDetailsRequestBuilder
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -210,7 +210,7 @@ public class CredentialUserRegistrationDetailsRequestBuilder extends BaseRequest
         return new CredentialUserRegistrationDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of credentialUserRegistrationDetails objects for a given tenant.
+     * Get a list of credentialUserRegistrationDetails objects for a given tenant. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

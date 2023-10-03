@@ -65,7 +65,7 @@ public class DataSharingConsentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Data sharing consents.
-     * @return a CompletableFuture of dataSharingConsent
+     * @return a CompletableFuture of DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsent> get() {
@@ -74,7 +74,7 @@ public class DataSharingConsentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Data sharing consents.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSharingConsent
+     * @return a CompletableFuture of DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DataSharingConsentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property dataSharingConsents in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of dataSharingConsent
+     * @return a CompletableFuture of DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsent> patch(@jakarta.annotation.Nonnull final DataSharingConsent body) {
@@ -97,7 +97,7 @@ public class DataSharingConsentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property dataSharingConsents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataSharingConsent
+     * @return a CompletableFuture of DataSharingConsent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataSharingConsent> patch(@jakarta.annotation.Nonnull final DataSharingConsent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

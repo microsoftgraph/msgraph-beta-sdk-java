@@ -65,7 +65,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
     }
     /**
      * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
-     * @return a CompletableFuture of unifiedRoleManagementAlertConfiguration
+     * @return a CompletableFuture of UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertConfiguration> get() {
@@ -74,7 +74,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
     /**
      * The various configurations of an alert for Azure AD roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertConfiguration
+     * @return a CompletableFuture of UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
     /**
      * Update the navigation property alertConfigurations in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementAlertConfiguration
+     * @return a CompletableFuture of UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertConfiguration> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlertConfiguration body) {
@@ -97,7 +97,7 @@ public class UnifiedRoleManagementAlertConfigurationItemRequestBuilder extends B
      * Update the navigation property alertConfigurations in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertConfiguration
+     * @return a CompletableFuture of UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertConfiguration> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlertConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -57,7 +57,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of notes associated with the request.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> get() {
@@ -66,7 +66,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of notes associated with the request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property notes in security
      * @param body The request body
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> patch(@jakarta.annotation.Nonnull final AuthoredNote body) {
@@ -89,7 +89,7 @@ public class AuthoredNoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property notes in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authoredNote
+     * @return a CompletableFuture of AuthoredNote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthoredNote> patch(@jakarta.annotation.Nonnull final AuthoredNote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

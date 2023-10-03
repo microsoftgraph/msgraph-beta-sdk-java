@@ -73,7 +73,7 @@ public class ItemActivityOLDItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of recent activities that took place on this item.
-     * @return a CompletableFuture of itemActivityOLD
+     * @return a CompletableFuture of ItemActivityOLD
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityOLD> get() {
@@ -82,7 +82,7 @@ public class ItemActivityOLDItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of recent activities that took place on this item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityOLD
+     * @return a CompletableFuture of ItemActivityOLD
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityOLD> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class ItemActivityOLDItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property activities in drives
      * @param body The request body
-     * @return a CompletableFuture of itemActivityOLD
+     * @return a CompletableFuture of ItemActivityOLD
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityOLD> patch(@jakarta.annotation.Nonnull final ItemActivityOLD body) {
@@ -105,7 +105,7 @@ public class ItemActivityOLDItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property activities in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityOLD
+     * @return a CompletableFuture of ItemActivityOLD
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityOLD> patch(@jakarta.annotation.Nonnull final ItemActivityOLD body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

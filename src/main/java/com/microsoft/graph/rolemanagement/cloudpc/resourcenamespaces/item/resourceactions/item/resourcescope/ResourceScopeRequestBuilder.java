@@ -57,7 +57,7 @@ public class ResourceScopeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get resourceScope from roleManagement
-     * @return a CompletableFuture of unifiedRbacResourceScope
+     * @return a CompletableFuture of UnifiedRbacResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceScope> get() {
@@ -66,7 +66,7 @@ public class ResourceScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get resourceScope from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceScope
+     * @return a CompletableFuture of UnifiedRbacResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ResourceScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property resourceScope in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRbacResourceScope
+     * @return a CompletableFuture of UnifiedRbacResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceScope> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceScope body) {
@@ -89,7 +89,7 @@ public class ResourceScopeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property resourceScope in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceScope
+     * @return a CompletableFuture of UnifiedRbacResourceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceScope> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class ResourceScopeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceScopeRequestBuilder
+     * @return a ResourceScopeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

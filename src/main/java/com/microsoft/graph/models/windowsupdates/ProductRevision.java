@@ -35,7 +35,7 @@ public class ProductRevision extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new productRevision and sets the default values.
+     * Instantiates a new ProductRevision and sets the default values.
      */
     public ProductRevision() {
         super();
@@ -43,7 +43,7 @@ public class ProductRevision extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a productRevision
+     * @return a ProductRevision
      */
     @jakarta.annotation.Nonnull
     public static ProductRevision createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the content. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
-     * @return a knowledgeBaseArticle
+     * @return a KnowledgeBaseArticle
      */
     @jakarta.annotation.Nullable
     public KnowledgeBaseArticle getKnowledgeBaseArticle() {
@@ -83,7 +83,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the osBuild property value. The osBuild property
-     * @return a buildVersionDetails
+     * @return a BuildVersionDetails
      */
     @jakarta.annotation.Nullable
     public BuildVersionDetails getOsBuild() {
@@ -91,7 +91,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProduct() {
@@ -107,7 +107,7 @@ public class ProductRevision extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version of the feature update. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

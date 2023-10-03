@@ -60,7 +60,7 @@ public class PrivilegedOperationEventsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get entities from privilegedOperationEvents
-     * @return a CompletableFuture of privilegedOperationEventCollectionResponse
+     * @return a CompletableFuture of PrivilegedOperationEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEventCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PrivilegedOperationEventsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get entities from privilegedOperationEvents
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedOperationEventCollectionResponse
+     * @return a CompletableFuture of PrivilegedOperationEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PrivilegedOperationEventsRequestBuilder extends BaseRequestBuilder 
     /**
      * Add new entity to privilegedOperationEvents
      * @param body The request body
-     * @return a CompletableFuture of privilegedOperationEvent
+     * @return a CompletableFuture of PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEvent> post(@jakarta.annotation.Nonnull final PrivilegedOperationEvent body) {
@@ -92,7 +92,7 @@ public class PrivilegedOperationEventsRequestBuilder extends BaseRequestBuilder 
      * Add new entity to privilegedOperationEvents
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedOperationEvent
+     * @return a CompletableFuture of PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEvent> post(@jakarta.annotation.Nonnull final PrivilegedOperationEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PrivilegedOperationEventsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegedOperationEventsRequestBuilder
+     * @return a PrivilegedOperationEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegedOperationEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

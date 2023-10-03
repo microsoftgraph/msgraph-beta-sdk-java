@@ -36,24 +36,24 @@ public class GenerateApplePushNotificationCertificateSigningRequestRequestBuilde
     }
     /**
      * Download Apple push notification certificate signing request
-     * @return a CompletableFuture of generateApplePushNotificationCertificateSigningRequestResponse
+     * @return a CompletableFuture of GenerateApplePushNotificationCertificateSigningRequestPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GenerateApplePushNotificationCertificateSigningRequestResponse> post() {
+    public java.util.concurrent.CompletableFuture<GenerateApplePushNotificationCertificateSigningRequestPostResponse> post() {
         return post(null);
     }
     /**
      * Download Apple push notification certificate signing request
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of generateApplePushNotificationCertificateSigningRequestResponse
+     * @return a CompletableFuture of GenerateApplePushNotificationCertificateSigningRequestPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GenerateApplePushNotificationCertificateSigningRequestResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GenerateApplePushNotificationCertificateSigningRequestPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GenerateApplePushNotificationCertificateSigningRequestResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GenerateApplePushNotificationCertificateSigningRequestPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Download Apple push notification certificate signing request
@@ -86,7 +86,7 @@ public class GenerateApplePushNotificationCertificateSigningRequestRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a generateApplePushNotificationCertificateSigningRequestRequestBuilder
+     * @return a GenerateApplePushNotificationCertificateSigningRequestRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GenerateApplePushNotificationCertificateSigningRequestRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

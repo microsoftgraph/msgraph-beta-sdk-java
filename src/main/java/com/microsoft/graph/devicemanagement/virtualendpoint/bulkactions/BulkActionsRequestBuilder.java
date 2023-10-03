@@ -60,7 +60,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get bulkActions from deviceManagement
-     * @return a CompletableFuture of cloudPcBulkActionCollectionResponse
+     * @return a CompletableFuture of CloudPcBulkActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkActionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get bulkActions from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkActionCollectionResponse
+     * @return a CompletableFuture of CloudPcBulkActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkActionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to bulkActions for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcBulkAction
+     * @return a CompletableFuture of CloudPcBulkAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkAction> post(@jakarta.annotation.Nonnull final CloudPcBulkAction body) {
@@ -92,7 +92,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to bulkActions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkAction
+     * @return a CompletableFuture of CloudPcBulkAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcBulkAction> post(@jakarta.annotation.Nonnull final CloudPcBulkAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class BulkActionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bulkActionsRequestBuilder
+     * @return a BulkActionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BulkActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class AgedAccountsReceivableRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get agedAccountsReceivable from financials
-     * @return a CompletableFuture of agedAccountsReceivableCollectionResponse
+     * @return a CompletableFuture of AgedAccountsReceivableCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgedAccountsReceivableCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AgedAccountsReceivableRequestBuilder extends BaseRequestBuilder {
     /**
      * Get agedAccountsReceivable from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of agedAccountsReceivableCollectionResponse
+     * @return a CompletableFuture of AgedAccountsReceivableCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AgedAccountsReceivableCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class AgedAccountsReceivableRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a agedAccountsReceivableRequestBuilder
+     * @return a AgedAccountsReceivableRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AgedAccountsReceivableRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

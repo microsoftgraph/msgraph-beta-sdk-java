@@ -68,7 +68,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     /**
      * The discountAmount property
      */
-    private BigDecimal discountAmount;
+    private Decimal discountAmount;
     /**
      * The discountAppliedBeforeTax property
      */
@@ -168,17 +168,17 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     /**
      * The totalAmountExcludingTax property
      */
-    private BigDecimal totalAmountExcludingTax;
+    private Decimal totalAmountExcludingTax;
     /**
      * The totalAmountIncludingTax property
      */
-    private BigDecimal totalAmountIncludingTax;
+    private Decimal totalAmountIncludingTax;
     /**
      * The totalTaxAmount property
      */
-    private BigDecimal totalTaxAmount;
+    private Decimal totalTaxAmount;
     /**
-     * Instantiates a new salesInvoice and sets the default values.
+     * Instantiates a new SalesInvoice and sets the default values.
      */
     public SalesInvoice() {
         this.setAdditionalData(new HashMap<>());
@@ -186,7 +186,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a salesInvoice
+     * @return a SalesInvoice
      */
     @jakarta.annotation.Nonnull
     public static SalesInvoice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -194,7 +194,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
         return new SalesInvoice();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the billingPostalAddress property value. The billingPostalAddress property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getBillingPostalAddress() {
@@ -219,7 +219,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the billToCustomerNumber property value. The billToCustomerNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBillToCustomerNumber() {
@@ -227,7 +227,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the billToName property value. The billToName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBillToName() {
@@ -235,7 +235,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a currency
+     * @return a Currency
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
@@ -243,7 +243,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -259,7 +259,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customer property value. The customer property
-     * @return a customer
+     * @return a Customer
      */
     @jakarta.annotation.Nullable
     public Customer getCustomer() {
@@ -275,7 +275,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customerName property value. The customerName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomerName() {
@@ -283,7 +283,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customerNumber property value. The customerNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomerNumber() {
@@ -291,7 +291,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customerPurchaseOrderReference property value. The customerPurchaseOrderReference property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomerPurchaseOrderReference() {
@@ -299,15 +299,15 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getDiscountAmount() {
+    public Decimal getDiscountAmount() {
         return this.discountAmount;
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
@@ -323,7 +323,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -331,7 +331,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
@@ -356,7 +356,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
         deserializerMap.put("customerName", (n) -> { this.setCustomerName(n.getStringValue()); });
         deserializerMap.put("customerNumber", (n) -> { this.setCustomerNumber(n.getStringValue()); });
         deserializerMap.put("customerPurchaseOrderReference", (n) -> { this.setCustomerPurchaseOrderReference(n.getStringValue()); });
-        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("discountAppliedBeforeTax", (n) -> { this.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
         deserializerMap.put("dueDate", (n) -> { this.setDueDate(n.getLocalDateValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
@@ -381,9 +381,9 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
         deserializerMap.put("shipToContact", (n) -> { this.setShipToContact(n.getStringValue()); });
         deserializerMap.put("shipToName", (n) -> { this.setShipToName(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
-        deserializerMap.put("totalAmountExcludingTax", (n) -> { this.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
-        deserializerMap.put("totalAmountIncludingTax", (n) -> { this.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
-        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("totalAmountExcludingTax", (n) -> { this.setTotalAmountExcludingTax(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalAmountIncludingTax", (n) -> { this.setTotalAmountIncludingTax(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -412,7 +412,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -420,7 +420,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -436,7 +436,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the orderNumber property value. The orderNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrderNumber() {
@@ -444,7 +444,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the paymentTerm property value. The paymentTerm property
-     * @return a paymentTerm
+     * @return a PaymentTerm
      */
     @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
@@ -460,7 +460,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -468,7 +468,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPricesIncludeTax() {
@@ -476,7 +476,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the salesInvoiceLines property value. The salesInvoiceLines property
-     * @return a salesInvoiceLine
+     * @return a java.util.List<SalesInvoiceLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesInvoiceLine> getSalesInvoiceLines() {
@@ -484,7 +484,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the salesperson property value. The salesperson property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSalesperson() {
@@ -492,7 +492,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sellingPostalAddress property value. The sellingPostalAddress property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getSellingPostalAddress() {
@@ -500,7 +500,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shipmentMethod property value. The shipmentMethod property
-     * @return a shipmentMethod
+     * @return a ShipmentMethod
      */
     @jakarta.annotation.Nullable
     public ShipmentMethod getShipmentMethod() {
@@ -516,7 +516,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shippingPostalAddress property value. The shippingPostalAddress property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getShippingPostalAddress() {
@@ -524,7 +524,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shipToContact property value. The shipToContact property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShipToContact() {
@@ -532,7 +532,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shipToName property value. The shipToName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShipToName() {
@@ -540,7 +540,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -548,26 +548,26 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getTotalAmountExcludingTax() {
+    public Decimal getTotalAmountExcludingTax() {
         return this.totalAmountExcludingTax;
     }
     /**
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getTotalAmountIncludingTax() {
+    public Decimal getTotalAmountIncludingTax() {
         return this.totalAmountIncludingTax;
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getTotalTaxAmount() {
+    public Decimal getTotalTaxAmount() {
         return this.totalTaxAmount;
     }
     /**
@@ -588,7 +588,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("customerName", this.getCustomerName());
         writer.writeStringValue("customerNumber", this.getCustomerNumber());
         writer.writeStringValue("customerPurchaseOrderReference", this.getCustomerPurchaseOrderReference());
-        writer.writeBigDecimalValue("discountAmount", this.getDiscountAmount());
+        writer.writeObjectValue("discountAmount", this.getDiscountAmount());
         writer.writeBooleanValue("discountAppliedBeforeTax", this.getDiscountAppliedBeforeTax());
         writer.writeLocalDateValue("dueDate", this.getDueDate());
         writer.writeStringValue("email", this.getEmail());
@@ -613,14 +613,14 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("shipToContact", this.getShipToContact());
         writer.writeStringValue("shipToName", this.getShipToName());
         writer.writeStringValue("status", this.getStatus());
-        writer.writeBigDecimalValue("totalAmountExcludingTax", this.getTotalAmountExcludingTax());
-        writer.writeBigDecimalValue("totalAmountIncludingTax", this.getTotalAmountIncludingTax());
-        writer.writeBigDecimalValue("totalTaxAmount", this.getTotalTaxAmount());
+        writer.writeObjectValue("totalAmountExcludingTax", this.getTotalAmountExcludingTax());
+        writer.writeObjectValue("totalAmountIncludingTax", this.getTotalAmountIncludingTax());
+        writer.writeObjectValue("totalTaxAmount", this.getTotalTaxAmount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -713,7 +713,7 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
      */
-    public void setDiscountAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setDiscountAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.discountAmount = value;
     }
     /**
@@ -888,21 +888,21 @@ public class SalesInvoice implements AdditionalDataHolder, Parsable {
      * Sets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
      * @param value Value to set for the totalAmountExcludingTax property.
      */
-    public void setTotalAmountExcludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setTotalAmountExcludingTax(@jakarta.annotation.Nullable final Decimal value) {
         this.totalAmountExcludingTax = value;
     }
     /**
      * Sets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
      * @param value Value to set for the totalAmountIncludingTax property.
      */
-    public void setTotalAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setTotalAmountIncludingTax(@jakarta.annotation.Nullable final Decimal value) {
         this.totalAmountIncludingTax = value;
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
      */
-    public void setTotalTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setTotalTaxAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.totalTaxAmount = value;
     }
 }

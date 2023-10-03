@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder
     }
     /**
      * User experience analytics devices without cloud identity.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentity> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder
     /**
      * User experience analytics devices without cloud identity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder
     /**
      * Update the navigation property userExperienceAnalyticsDevicesWithoutCloudIdentity in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentity> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceWithoutCloudIdentity body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder
      * Update the navigation property userExperienceAnalyticsDevicesWithoutCloudIdentity in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentity> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceWithoutCloudIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

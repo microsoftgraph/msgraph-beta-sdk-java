@@ -16,17 +16,17 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
     /**
      * The digest property
      */
-    private byte[] digest;
+    private Base64url digest;
     /**
      * The signature property
      */
-    private byte[] signature;
+    private Base64url signature;
     /**
      * The signingKeyId property
      */
     private String signingKeyId;
     /**
-     * Instantiates a new verifySignaturePostRequestBody and sets the default values.
+     * Instantiates a new VerifySignaturePostRequestBody and sets the default values.
      */
     public VerifySignaturePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a verifySignaturePostRequestBody
+     * @return a VerifySignaturePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static VerifySignaturePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
         return new VerifySignaturePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,10 +51,10 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
     }
     /**
      * Gets the digest property value. The digest property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getDigest() {
+    public Base64url getDigest() {
         return this.digest;
     }
     /**
@@ -64,22 +64,22 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("digest", (n) -> { this.setDigest(n.getByteArrayValue()); });
-        deserializerMap.put("signature", (n) -> { this.setSignature(n.getByteArrayValue()); });
+        deserializerMap.put("digest", (n) -> { this.setDigest(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
+        deserializerMap.put("signature", (n) -> { this.setSignature(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("signingKeyId", (n) -> { this.setSigningKeyId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the signature property value. The signature property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getSignature() {
+    public Base64url getSignature() {
         return this.signature;
     }
     /**
      * Gets the signingKeyId property value. The signingKeyId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSigningKeyId() {
@@ -91,14 +91,14 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("digest", this.getDigest());
-        writer.writeByteArrayValue("signature", this.getSignature());
+        writer.writeObjectValue("digest", this.getDigest());
+        writer.writeObjectValue("signature", this.getSignature());
         writer.writeStringValue("signingKeyId", this.getSigningKeyId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -107,14 +107,14 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * Sets the digest property value. The digest property
      * @param value Value to set for the digest property.
      */
-    public void setDigest(@jakarta.annotation.Nullable final byte[] value) {
+    public void setDigest(@jakarta.annotation.Nullable final Base64url value) {
         this.digest = value;
     }
     /**
      * Sets the signature property value. The signature property
      * @param value Value to set for the signature property.
      */
-    public void setSignature(@jakarta.annotation.Nullable final byte[] value) {
+    public void setSignature(@jakarta.annotation.Nullable final Base64url value) {
         this.signature = value;
     }
     /**

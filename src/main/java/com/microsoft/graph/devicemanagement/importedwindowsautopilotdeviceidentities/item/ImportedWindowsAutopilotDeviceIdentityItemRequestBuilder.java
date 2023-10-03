@@ -57,7 +57,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     }
     /**
      * Collection of imported Windows autopilot devices.
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> get() {
@@ -66,7 +66,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     /**
      * Collection of imported Windows autopilot devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body) {
@@ -89,7 +89,7 @@ public class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder extends Ba
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedWindowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of ImportedWindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedWindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedWindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

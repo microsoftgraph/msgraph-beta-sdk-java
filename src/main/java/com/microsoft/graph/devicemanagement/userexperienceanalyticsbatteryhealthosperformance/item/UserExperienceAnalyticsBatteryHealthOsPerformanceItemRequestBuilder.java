@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder
     }
     /**
      * User Experience Analytics Battery Health Os Performance
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthOsPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthOsPerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder
     /**
      * User Experience Analytics Battery Health Os Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthOsPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthOsPerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder
     /**
      * Update the navigation property userExperienceAnalyticsBatteryHealthOsPerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthOsPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthOsPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthOsPerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder
      * Update the navigation property userExperienceAnalyticsBatteryHealthOsPerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthOsPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthOsPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthOsPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

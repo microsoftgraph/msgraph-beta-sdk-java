@@ -60,7 +60,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
     }
     /**
      * The Windows Enterprise Code Signing Certificate.
-     * @return a CompletableFuture of enterpriseCodeSigningCertificateCollectionResponse
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
     /**
      * The Windows Enterprise Code Signing Certificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enterpriseCodeSigningCertificateCollectionResponse
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
     /**
      * Create new navigation property to enterpriseCodeSigningCertificates for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of enterpriseCodeSigningCertificate
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificate> post(@jakarta.annotation.Nonnull final EnterpriseCodeSigningCertificate body) {
@@ -92,7 +92,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
      * Create new navigation property to enterpriseCodeSigningCertificates for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enterpriseCodeSigningCertificate
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificate> post(@jakarta.annotation.Nonnull final EnterpriseCodeSigningCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a enterpriseCodeSigningCertificatesRequestBuilder
+     * @return a EnterpriseCodeSigningCertificatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EnterpriseCodeSigningCertificatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

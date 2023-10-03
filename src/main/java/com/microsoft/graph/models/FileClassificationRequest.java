@@ -11,13 +11,13 @@ public class FileClassificationRequest extends Entity implements Parsable {
     /**
      * The file property
      */
-    private byte[] file;
+    private Base64url file;
     /**
      * The sensitiveTypeIds property
      */
     private java.util.List<String> sensitiveTypeIds;
     /**
-     * Instantiates a new fileClassificationRequest and sets the default values.
+     * Instantiates a new FileClassificationRequest and sets the default values.
      */
     public FileClassificationRequest() {
         super();
@@ -25,7 +25,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fileClassificationRequest
+     * @return a FileClassificationRequest
      */
     @jakarta.annotation.Nonnull
     public static FileClassificationRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,21 +39,21 @@ public class FileClassificationRequest extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("file", (n) -> { this.setFile(n.getByteArrayValue()); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("sensitiveTypeIds", (n) -> { this.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
      * Gets the file property value. The file property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getFile() {
+    public Base64url getFile() {
         return this.file;
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
@@ -66,14 +66,14 @@ public class FileClassificationRequest extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("file", this.getFile());
+        writer.writeObjectValue("file", this.getFile());
         writer.writeCollectionOfPrimitiveValues("sensitiveTypeIds", this.getSensitiveTypeIds());
     }
     /**
      * Sets the file property value. The file property
      * @param value Value to set for the file property.
      */
-    public void setFile(@jakarta.annotation.Nullable final byte[] value) {
+    public void setFile(@jakarta.annotation.Nullable final Base64url value) {
         this.file = value;
     }
     /**

@@ -73,7 +73,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     }
     /**
      * The Notification Message Templates.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get() {
@@ -82,7 +82,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     /**
      * The Notification Message Templates.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property notificationMessageTemplates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@jakarta.annotation.Nonnull final NotificationMessageTemplate body) {
@@ -105,7 +105,7 @@ public class NotificationMessageTemplateItemRequestBuilder extends BaseRequestBu
      * Update the navigation property notificationMessageTemplates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationMessageTemplate
+     * @return a CompletableFuture of NotificationMessageTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NotificationMessageTemplate> patch(@jakarta.annotation.Nonnull final NotificationMessageTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

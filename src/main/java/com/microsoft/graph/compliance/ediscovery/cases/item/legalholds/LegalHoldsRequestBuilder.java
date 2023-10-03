@@ -65,8 +65,8 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/legalHolds{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
-     * @return a CompletableFuture of legalHoldCollectionResponse
+     * Read the properties and relationships of a legalHold object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of LegalHoldCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -76,9 +76,9 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Read the properties and relationships of a legalHold object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of legalHoldCollectionResponse
+     * @return a CompletableFuture of LegalHoldCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -94,7 +94,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to legalHolds for compliance
      * @param body The request body
-     * @return a CompletableFuture of legalHold
+     * @return a CompletableFuture of LegalHold
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -107,7 +107,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to legalHolds for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of legalHold
+     * @return a CompletableFuture of LegalHold
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -122,7 +122,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LegalHold::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Read the properties and relationships of a legalHold object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -133,7 +133,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Read the properties and relationships of a legalHold object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -197,7 +197,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a legalHoldsRequestBuilder
+     * @return a LegalHoldsRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -208,7 +208,7 @@ public class LegalHoldsRequestBuilder extends BaseRequestBuilder {
         return new LegalHoldsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a legalHold object.
+     * Read the properties and relationships of a legalHold object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

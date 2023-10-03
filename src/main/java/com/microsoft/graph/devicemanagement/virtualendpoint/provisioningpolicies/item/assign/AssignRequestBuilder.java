@@ -35,7 +35,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assign", rawUrl);
     }
     /**
-     * Assign cloudPcProvisioningPolicy to user groups.
+     * Assign cloudPcProvisioningPolicy to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
@@ -47,7 +47,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Assign cloudPcProvisioningPolicy to user groups.
+     * Assign cloudPcProvisioningPolicy to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
@@ -65,7 +65,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Assign cloudPcProvisioningPolicy to user groups.
+     * Assign cloudPcProvisioningPolicy to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -77,7 +77,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign cloudPcProvisioningPolicy to user groups.
+     * Assign cloudPcProvisioningPolicy to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -104,7 +104,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignRequestBuilder
+     * @return a AssignRequestBuilder
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */

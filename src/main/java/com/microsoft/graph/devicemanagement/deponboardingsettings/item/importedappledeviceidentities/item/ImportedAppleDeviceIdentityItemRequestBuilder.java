@@ -57,7 +57,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder extends BaseRequestBu
     }
     /**
      * The imported Apple device identities.
-     * @return a CompletableFuture of importedAppleDeviceIdentity
+     * @return a CompletableFuture of ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentity> get() {
@@ -66,7 +66,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder extends BaseRequestBu
     /**
      * The imported Apple device identities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedAppleDeviceIdentity
+     * @return a CompletableFuture of ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property importedAppleDeviceIdentities in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of importedAppleDeviceIdentity
+     * @return a CompletableFuture of ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body) {
@@ -89,7 +89,7 @@ public class ImportedAppleDeviceIdentityItemRequestBuilder extends BaseRequestBu
      * Update the navigation property importedAppleDeviceIdentities in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedAppleDeviceIdentity
+     * @return a CompletableFuture of ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentity> patch(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

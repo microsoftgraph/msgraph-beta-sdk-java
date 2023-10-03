@@ -57,7 +57,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
     }
     /**
      * Get federatedTokenValidationPolicy from policies
-     * @return a CompletableFuture of federatedTokenValidationPolicy
+     * @return a CompletableFuture of FederatedTokenValidationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedTokenValidationPolicy> get() {
@@ -66,7 +66,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
     /**
      * Get federatedTokenValidationPolicy from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of federatedTokenValidationPolicy
+     * @return a CompletableFuture of FederatedTokenValidationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedTokenValidationPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property federatedTokenValidationPolicy in policies
      * @param body The request body
-     * @return a CompletableFuture of federatedTokenValidationPolicy
+     * @return a CompletableFuture of FederatedTokenValidationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedTokenValidationPolicy> patch(@jakarta.annotation.Nonnull final FederatedTokenValidationPolicy body) {
@@ -89,7 +89,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
      * Update the navigation property federatedTokenValidationPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of federatedTokenValidationPolicy
+     * @return a CompletableFuture of FederatedTokenValidationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedTokenValidationPolicy> patch(@jakarta.annotation.Nonnull final FederatedTokenValidationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class FederatedTokenValidationPolicyRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a federatedTokenValidationPolicyRequestBuilder
+     * @return a FederatedTokenValidationPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FederatedTokenValidationPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder extends BaseRequ
     }
     /**
      * The Windows Enterprise Code Signing Certificate.
-     * @return a CompletableFuture of enterpriseCodeSigningCertificate
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificate> get() {
@@ -66,7 +66,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder extends BaseRequ
     /**
      * The Windows Enterprise Code Signing Certificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enterpriseCodeSigningCertificate
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property enterpriseCodeSigningCertificates in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of enterpriseCodeSigningCertificate
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificate> patch(@jakarta.annotation.Nonnull final EnterpriseCodeSigningCertificate body) {
@@ -89,7 +89,7 @@ public class EnterpriseCodeSigningCertificateItemRequestBuilder extends BaseRequ
      * Update the navigation property enterpriseCodeSigningCertificates in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enterpriseCodeSigningCertificate
+     * @return a CompletableFuture of EnterpriseCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnterpriseCodeSigningCertificate> patch(@jakarta.annotation.Nonnull final EnterpriseCodeSigningCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

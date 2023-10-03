@@ -66,7 +66,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get unifiedGroupSources from compliance
-     * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
+     * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -78,7 +78,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get unifiedGroupSources from compliance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
+     * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -94,7 +94,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to unifiedGroupSources for compliance
      * @param body The request body
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -107,7 +107,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to unifiedGroupSources for compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -197,7 +197,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unifiedGroupSourcesRequestBuilder
+     * @return a UnifiedGroupSourcesRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

@@ -60,7 +60,7 @@ public class ManagementTemplateCollectionTenantSummariesRequestBuilder extends B
     }
     /**
      * Get managementTemplateCollectionTenantSummaries from tenantRelationships
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummaryCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummaryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagementTemplateCollectionTenantSummariesRequestBuilder extends B
     /**
      * Get managementTemplateCollectionTenantSummaries from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummaryCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagementTemplateCollectionTenantSummariesRequestBuilder extends B
     /**
      * Create new navigation property to managementTemplateCollectionTenantSummaries for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummary
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummary> post(@jakarta.annotation.Nonnull final ManagementTemplateCollectionTenantSummary body) {
@@ -92,7 +92,7 @@ public class ManagementTemplateCollectionTenantSummariesRequestBuilder extends B
      * Create new navigation property to managementTemplateCollectionTenantSummaries for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollectionTenantSummary
+     * @return a CompletableFuture of ManagementTemplateCollectionTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionTenantSummary> post(@jakarta.annotation.Nonnull final ManagementTemplateCollectionTenantSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagementTemplateCollectionTenantSummariesRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managementTemplateCollectionTenantSummariesRequestBuilder
+     * @return a ManagementTemplateCollectionTenantSummariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateCollectionTenantSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

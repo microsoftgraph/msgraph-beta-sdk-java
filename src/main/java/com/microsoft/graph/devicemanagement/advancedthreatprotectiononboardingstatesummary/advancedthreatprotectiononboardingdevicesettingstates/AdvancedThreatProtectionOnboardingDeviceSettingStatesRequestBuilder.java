@@ -60,7 +60,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
     }
     /**
      * Get advancedThreatProtectionOnboardingDeviceSettingStates from deviceManagement
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
     /**
      * Get advancedThreatProtectionOnboardingDeviceSettingStates from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingDeviceSettingStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
     /**
      * Create new navigation property to advancedThreatProtectionOnboardingDeviceSettingStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingDeviceSettingState
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingDeviceSettingState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingDeviceSettingState> post(@jakarta.annotation.Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState body) {
@@ -92,7 +92,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
      * Create new navigation property to advancedThreatProtectionOnboardingDeviceSettingStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingDeviceSettingState
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingDeviceSettingState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingDeviceSettingState> post(@jakarta.annotation.Nonnull final AdvancedThreatProtectionOnboardingDeviceSettingState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a advancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
+     * @return a AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

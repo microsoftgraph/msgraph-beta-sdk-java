@@ -63,7 +63,7 @@ public class NotificationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get notifications from users
-     * @return a CompletableFuture of notification
+     * @return a CompletableFuture of Notification
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -75,7 +75,7 @@ public class NotificationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get notifications from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notification
+     * @return a CompletableFuture of Notification
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -91,7 +91,7 @@ public class NotificationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property notifications in users
      * @param body The request body
-     * @return a CompletableFuture of notification
+     * @return a CompletableFuture of Notification
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -104,7 +104,7 @@ public class NotificationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property notifications in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notification
+     * @return a CompletableFuture of Notification
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */

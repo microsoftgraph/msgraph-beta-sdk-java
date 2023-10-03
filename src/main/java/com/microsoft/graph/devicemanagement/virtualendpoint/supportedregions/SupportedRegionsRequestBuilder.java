@@ -59,8 +59,8 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/supportedRegions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the supported regions that are available for creating Cloud PC connections.
-     * @return a CompletableFuture of cloudPcSupportedRegionCollectionResponse
+     * List the supported regions that are available for creating Cloud PC connections. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcSupportedRegionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-supportedregions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the supported regions that are available for creating Cloud PC connections.
+     * List the supported regions that are available for creating Cloud PC connections. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSupportedRegionCollectionResponse
+     * @return a CompletableFuture of CloudPcSupportedRegionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-supportedregions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to supportedRegions for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcSupportedRegion
+     * @return a CompletableFuture of CloudPcSupportedRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSupportedRegion> post(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body) {
@@ -94,7 +94,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to supportedRegions for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSupportedRegion
+     * @return a CompletableFuture of CloudPcSupportedRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcSupportedRegion> post(@jakarta.annotation.Nonnull final CloudPcSupportedRegion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcSupportedRegion::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the supported regions that are available for creating Cloud PC connections.
+     * List the supported regions that are available for creating Cloud PC connections. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the supported regions that are available for creating Cloud PC connections.
+     * List the supported regions that are available for creating Cloud PC connections. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a supportedRegionsRequestBuilder
+     * @return a SupportedRegionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SupportedRegionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class SupportedRegionsRequestBuilder extends BaseRequestBuilder {
         return new SupportedRegionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the supported regions that are available for creating Cloud PC connections.
+     * List the supported regions that are available for creating Cloud PC connections. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

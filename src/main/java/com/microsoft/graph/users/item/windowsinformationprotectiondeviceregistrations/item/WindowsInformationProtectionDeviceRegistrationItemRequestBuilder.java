@@ -38,7 +38,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder ex
     }
     /**
      * Zero or more WIP device registrations that belong to the user.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistration
+     * @return a CompletableFuture of WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistration> get() {
@@ -47,7 +47,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder ex
     /**
      * Zero or more WIP device registrations that belong to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistration
+     * @return a CompletableFuture of WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

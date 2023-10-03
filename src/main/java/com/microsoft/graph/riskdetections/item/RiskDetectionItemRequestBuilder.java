@@ -57,7 +57,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from riskDetections by key
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> get() {
@@ -66,7 +66,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from riskDetections by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in riskDetections
      * @param body The request body
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> patch(@jakarta.annotation.Nonnull final RiskDetection body) {
@@ -89,7 +89,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in riskDetections
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskDetection
+     * @return a CompletableFuture of RiskDetection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskDetection> patch(@jakarta.annotation.Nonnull final RiskDetection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

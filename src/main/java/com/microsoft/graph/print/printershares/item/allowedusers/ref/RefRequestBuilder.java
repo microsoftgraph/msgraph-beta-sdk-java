@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/allowedUsers/$ref{?%24top,%24skip,%24search,%24filter,%24count,%24orderby}", rawUrl);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @return a CompletableFuture of StringCollectionResponse
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -50,7 +50,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of StringCollectionResponse
      * @deprecated
@@ -67,7 +67,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, StringCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Grant the specified user access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -79,7 +79,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Grant the specified user access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
@@ -97,7 +97,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -108,7 +108,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -132,7 +132,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Grant the specified user access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -144,7 +144,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Grant the specified user access to submit print jobs to the associated printerShare.
+     * Grant the specified user access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -182,7 +182,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare.
+     * Retrieve a list of users who have been granted access to submit print jobs to the associated printerShare. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

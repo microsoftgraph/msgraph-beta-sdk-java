@@ -59,8 +59,8 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/deploymentAudiences{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of deploymentAudience objects and their properties.
-     * @return a CompletableFuture of deploymentAudienceCollectionResponse
+     * Get a list of deploymentAudience objects and their properties. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of DeploymentAudienceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of deploymentAudience objects and their properties.
+     * Get a list of deploymentAudience objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deploymentAudienceCollectionResponse
+     * @return a CompletableFuture of DeploymentAudienceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeploymentAudienceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new deploymentAudience object.
+     * Create a new deploymentAudience object. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of deploymentAudience
+     * @return a CompletableFuture of DeploymentAudience
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new deploymentAudience object.
+     * Create a new deploymentAudience object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deploymentAudience
+     * @return a CompletableFuture of DeploymentAudience
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-deploymentaudiences?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, DeploymentAudience::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of deploymentAudience objects and their properties.
+     * Get a list of deploymentAudience objects and their properties. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of deploymentAudience objects and their properties.
+     * Get a list of deploymentAudience objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new deploymentAudience object.
+     * Create a new deploymentAudience object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new deploymentAudience object.
+     * Create a new deploymentAudience object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deploymentAudiencesRequestBuilder
+     * @return a DeploymentAudiencesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeploymentAudiencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class DeploymentAudiencesRequestBuilder extends BaseRequestBuilder {
         return new DeploymentAudiencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of deploymentAudience objects and their properties.
+     * Get a list of deploymentAudience objects and their properties. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

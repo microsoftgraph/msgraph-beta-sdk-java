@@ -91,8 +91,8 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/directorySettingTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects.
-     * @return a CompletableFuture of directorySettingTemplateCollectionResponse
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of DirectorySettingTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directorysettingtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,9 +100,9 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects.
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySettingTemplateCollectionResponse
+     * @return a CompletableFuture of DirectorySettingTemplateCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directorysettingtemplate-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
     /**
      * Add new entity to directorySettingTemplates
      * @param body The request body
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> post(@jakarta.annotation.Nonnull final DirectorySettingTemplate body) {
@@ -126,7 +126,7 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
      * Add new entity to directorySettingTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> post(@jakarta.annotation.Nonnull final DirectorySettingTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, DirectorySettingTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects.
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects.
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directorySettingTemplatesRequestBuilder
+     * @return a DirectorySettingTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectorySettingTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class DirectorySettingTemplatesRequestBuilder extends BaseRequestBuilder 
         return new DirectorySettingTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects.
+     * Directory setting templates represents a set of templates of directory settings, from which directory settings may be created and used within a tenant.  This operation retrieves the list of available directorySettingTemplates objects. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -60,7 +60,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get links from networkAccess
-     * @return a CompletableFuture of connectivityConfigurationLinkCollectionResponse
+     * @return a CompletableFuture of ConnectivityConfigurationLinkCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLinkCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Get links from networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectivityConfigurationLinkCollectionResponse
+     * @return a CompletableFuture of ConnectivityConfigurationLinkCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLinkCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to links for networkAccess
      * @param body The request body
-     * @return a CompletableFuture of connectivityConfigurationLink
+     * @return a CompletableFuture of ConnectivityConfigurationLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLink> post(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body) {
@@ -92,7 +92,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to links for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectivityConfigurationLink
+     * @return a CompletableFuture of ConnectivityConfigurationLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLink> post(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a linksRequestBuilder
+     * @return a LinksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LinksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder e
     }
     /**
      * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
-     * @return a CompletableFuture of deviceManagementIntentDeviceSettingStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceSettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceSettingStateSummary> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder e
     /**
      * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentDeviceSettingStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceSettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceSettingStateSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder e
     /**
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntentDeviceSettingStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceSettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceSettingStateSummary> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceSettingStateSummary body) {
@@ -89,7 +89,7 @@ public class DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder e
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentDeviceSettingStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceSettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceSettingStateSummary> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceSettingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

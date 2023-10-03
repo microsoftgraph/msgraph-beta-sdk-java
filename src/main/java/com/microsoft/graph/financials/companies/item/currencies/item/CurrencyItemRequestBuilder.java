@@ -57,7 +57,7 @@ public class CurrencyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get currencies from financials
-     * @return a CompletableFuture of currency
+     * @return a CompletableFuture of Currency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Currency> get() {
@@ -66,7 +66,7 @@ public class CurrencyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get currencies from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of currency
+     * @return a CompletableFuture of Currency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Currency> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CurrencyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property currencies in financials
      * @param body The request body
-     * @return a CompletableFuture of currency
+     * @return a CompletableFuture of Currency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Currency> patch(@jakarta.annotation.Nonnull final Currency body) {
@@ -89,7 +89,7 @@ public class CurrencyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property currencies in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of currency
+     * @return a CompletableFuture of Currency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Currency> patch(@jakarta.annotation.Nonnull final Currency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

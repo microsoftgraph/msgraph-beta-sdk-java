@@ -36,9 +36,9 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}/microsoft.graph.managedTenants.assignTag", rawUrl);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of tenantTag
+     * @return a CompletableFuture of TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantTag
+     * @return a CompletableFuture of TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-assigntag?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return this.requestAdapter.sendAsync(requestInfo, TenantTag::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign the tenant tag to the specified managed tenants.
+     * Assign the tenant tag to the specified managed tenants. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class MicrosoftGraphManagedTenantsAssignTagRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsAssignTagRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsAssignTagRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsAssignTagRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

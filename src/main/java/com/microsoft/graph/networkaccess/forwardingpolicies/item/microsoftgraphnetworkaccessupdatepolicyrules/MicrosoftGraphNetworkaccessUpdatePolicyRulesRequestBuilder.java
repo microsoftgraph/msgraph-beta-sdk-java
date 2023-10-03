@@ -35,7 +35,7 @@ public class MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/networkAccess/forwardingPolicies/{forwardingPolicy%2Did}/microsoft.graph.networkaccess.updatePolicyRules", rawUrl);
     }
     /**
-     * Update the rules within a forwarding policy.
+     * Update the rules within a forwarding policy. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-updatepolicyrules?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder extends 
         return post(body, null);
     }
     /**
-     * Update the rules within a forwarding policy.
+     * Update the rules within a forwarding policy. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingpolicy-updatepolicyrules?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder extends 
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Update the rules within a forwarding policy.
+     * Update the rules within a forwarding policy. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder extends 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the rules within a forwarding policy.
+     * Update the rules within a forwarding policy. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder extends 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessUpdatePolicyRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

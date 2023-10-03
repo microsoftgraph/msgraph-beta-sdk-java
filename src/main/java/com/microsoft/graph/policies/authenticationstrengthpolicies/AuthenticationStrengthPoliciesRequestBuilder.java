@@ -62,7 +62,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to call the findByMethodMode method.
      * @param authenticationMethodModes Usage: authenticationMethodModes={authenticationMethodModes}
-     * @return a findByMethodModeWithAuthenticationMethodModesRequestBuilder
+     * @return a FindByMethodModeWithAuthenticationMethodModesRequestBuilder
      * @deprecated
      * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -73,8 +73,8 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return new FindByMethodModeWithAuthenticationMethodModesRequestBuilder(pathParameters, requestAdapter, authenticationMethodModes);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
-     * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicyCollectionResponse
+     * @return a CompletableFuture of AuthenticationStrengthPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-list-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,9 +96,9 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create a new custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -106,10 +106,10 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return post(body, null);
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create a new custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationstrengthroot-post-policies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationStrengthPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -151,7 +151,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create a new custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -160,7 +160,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new custom authenticationStrengthPolicy object.
+     * Create a new custom authenticationStrengthPolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -185,7 +185,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationStrengthPoliciesRequestBuilder
+     * @return a AuthenticationStrengthPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -193,7 +193,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
         return new AuthenticationStrengthPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies.
+     * Get a list of the authenticationStrengthPolicy objects and their properties. This API returns both built-in and custom policies. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

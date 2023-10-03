@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuil
     }
     /**
      * User Experience Analytics Battery Health Model Performance
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthModelPerformance> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuil
     /**
      * User Experience Analytics Battery Health Model Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthModelPerformance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuil
     /**
      * Update the navigation property userExperienceAnalyticsBatteryHealthModelPerformance in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthModelPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthModelPerformance body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformanceItemRequestBuil
      * Update the navigation property userExperienceAnalyticsBatteryHealthModelPerformance in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthModelPerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthModelPerformance> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthModelPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

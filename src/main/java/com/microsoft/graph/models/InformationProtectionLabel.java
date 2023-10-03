@@ -37,7 +37,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      */
     private String tooltip;
     /**
-     * Instantiates a new informationProtectionLabel and sets the default values.
+     * Instantiates a new InformationProtectionLabel and sets the default values.
      */
     public InformationProtectionLabel() {
         super();
@@ -45,7 +45,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtectionLabel
+     * @return a InformationProtectionLabel
      */
     @jakarta.annotation.Nonnull
     public static InformationProtectionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the color property value. The color that the UI should display for the label, if configured.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -62,7 +62,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The admin-defined description for the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -86,7 +86,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -94,7 +94,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The plaintext name of the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -102,7 +102,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the parent property value. The parent label associated with a child label. Null if label has no parent.
-     * @return a parentLabelDetails
+     * @return a ParentLabelDetails
      */
     @jakarta.annotation.Nullable
     public ParentLabelDetails getParent() {
@@ -110,7 +110,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSensitivity() {
@@ -118,7 +118,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTooltip() {

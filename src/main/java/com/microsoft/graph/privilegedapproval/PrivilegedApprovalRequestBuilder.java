@@ -68,7 +68,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from privilegedApproval
-     * @return a CompletableFuture of privilegedApprovalCollectionResponse
+     * @return a CompletableFuture of PrivilegedApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApprovalCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from privilegedApproval
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedApprovalCollectionResponse
+     * @return a CompletableFuture of PrivilegedApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApprovalCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to privilegedApproval
      * @param body The request body
-     * @return a CompletableFuture of privilegedApproval
+     * @return a CompletableFuture of PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> post(@jakarta.annotation.Nonnull final PrivilegedApproval body) {
@@ -100,7 +100,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder {
      * Add new entity to privilegedApproval
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedApproval
+     * @return a CompletableFuture of PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> post(@jakarta.annotation.Nonnull final PrivilegedApproval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class PrivilegedApprovalRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegedApprovalRequestBuilder
+     * @return a PrivilegedApprovalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegedApprovalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

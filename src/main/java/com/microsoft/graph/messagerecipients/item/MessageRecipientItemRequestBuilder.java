@@ -65,7 +65,7 @@ public class MessageRecipientItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from messageRecipients by key
-     * @return a CompletableFuture of messageRecipient
+     * @return a CompletableFuture of MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipient> get() {
@@ -74,7 +74,7 @@ public class MessageRecipientItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from messageRecipients by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageRecipient
+     * @return a CompletableFuture of MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipient> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MessageRecipientItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in messageRecipients
      * @param body The request body
-     * @return a CompletableFuture of messageRecipient
+     * @return a CompletableFuture of MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipient> patch(@jakarta.annotation.Nonnull final MessageRecipient body) {
@@ -97,7 +97,7 @@ public class MessageRecipientItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in messageRecipients
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageRecipient
+     * @return a CompletableFuture of MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipient> patch(@jakarta.annotation.Nonnull final MessageRecipient body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

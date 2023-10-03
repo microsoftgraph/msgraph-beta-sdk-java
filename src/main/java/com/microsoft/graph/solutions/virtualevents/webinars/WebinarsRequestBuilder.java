@@ -59,17 +59,17 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
-     * @return a CompletableFuture of virtualEventWebinarCollectionResponse
+     * Read the properties and relationships of a virtualEventWebinar object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of VirtualEventWebinarCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinarCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventWebinarCollectionResponse
+     * @return a CompletableFuture of VirtualEventWebinarCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinarCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to webinars for solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventWebinar
+     * @return a CompletableFuture of VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinar> post(@jakarta.annotation.Nonnull final VirtualEventWebinar body) {
@@ -92,7 +92,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to webinars for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventWebinar
+     * @return a CompletableFuture of VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinar> post(@jakarta.annotation.Nonnull final VirtualEventWebinar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventWebinar::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a webinarsRequestBuilder
+     * @return a WebinarsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WebinarsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return new WebinarsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

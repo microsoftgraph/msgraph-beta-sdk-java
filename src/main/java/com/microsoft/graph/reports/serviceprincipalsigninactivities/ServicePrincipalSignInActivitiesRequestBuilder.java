@@ -59,8 +59,8 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/reports/servicePrincipalSignInActivities{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
-     * @return a CompletableFuture of servicePrincipalSignInActivityCollectionResponse
+     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of ServicePrincipalSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalSignInActivityCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalSignInActivityCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-serviceprincipalsigninactivities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to servicePrincipalSignInActivities for reports
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipalSignInActivity
+     * @return a CompletableFuture of ServicePrincipalSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalSignInActivity> post(@jakarta.annotation.Nonnull final ServicePrincipalSignInActivity body) {
@@ -94,7 +94,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
      * Create new navigation property to servicePrincipalSignInActivities for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalSignInActivity
+     * @return a CompletableFuture of ServicePrincipalSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalSignInActivity> post(@jakarta.annotation.Nonnull final ServicePrincipalSignInActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendAsync(requestInfo, ServicePrincipalSignInActivity::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePrincipalSignInActivitiesRequestBuilder
+     * @return a ServicePrincipalSignInActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalSignInActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class ServicePrincipalSignInActivitiesRequestBuilder extends BaseRequestB
         return new ServicePrincipalSignInActivitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context.
+     * Get a list of servicePrincipalSignInActivity objects that contains sign-in activity information for service principals in an Azure Active Directory tenant. You can use a service principal as a client or resource. A service principal supports delegated or app-only authentication context. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

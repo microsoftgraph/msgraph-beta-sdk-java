@@ -66,7 +66,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
      */
     private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
     /**
-     * Instantiates a new deviceManagementCompliancePolicy and sets the default values.
+     * Instantiates a new DeviceManagementCompliancePolicy and sets the default values.
      */
     public DeviceManagementCompliancePolicy() {
         super();
@@ -74,7 +74,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCompliancePolicy
+     * @return a DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the assignments property value. Policy assignments
-     * @return a deviceManagementConfigurationPolicyAssignment
+     * @return a java.util.List<DeviceManagementConfigurationPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyAssignment> getAssignments() {
@@ -99,7 +99,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the creationSource property value. Policy creation source
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreationSource() {
@@ -107,7 +107,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the description property value. Policy description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -137,7 +137,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the isAssigned property value. Policy assignment status. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -153,7 +153,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the name property value. Policy name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -161,7 +161,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
@@ -169,7 +169,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -177,7 +177,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
-     * @return a deviceManagementComplianceScheduledActionForRule
+     * @return a java.util.List<DeviceManagementComplianceScheduledActionForRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementComplianceScheduledActionForRule> getScheduledActionsForRule() {
@@ -185,7 +185,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the settingCount property value. Number of settings. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
@@ -193,7 +193,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the settings property value. Policy settings
-     * @return a deviceManagementConfigurationSetting
+     * @return a java.util.List<DeviceManagementConfigurationSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {
@@ -201,7 +201,7 @@ public class DeviceManagementCompliancePolicy extends Entity implements Parsable
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {

@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
     }
     /**
      * User Experience Analytics Battery Health Device Performance
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
     /**
      * User Experience Analytics Battery Health Device Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDevicePerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
     /**
      * Create new navigation property to userExperienceAnalyticsBatteryHealthDevicePerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDevicePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDevicePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthDevicePerformance body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
      * Create new navigation property to userExperienceAnalyticsBatteryHealthDevicePerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDevicePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDevicePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthDevicePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

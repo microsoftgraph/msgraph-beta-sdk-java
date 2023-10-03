@@ -38,7 +38,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
     /**
      * Invoke action evaluateDynamicMembership
      * @param body The request body
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      * @see <a href="https://learn.microsoft.com/graph/api/group-evaluatedynamicmembership?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
      * Invoke action evaluateDynamicMembership
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      * @see <a href="https://learn.microsoft.com/graph/api/group-evaluatedynamicmembership?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a evaluateDynamicMembershipRequestBuilder
+     * @return a EvaluateDynamicMembershipRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EvaluateDynamicMembershipRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

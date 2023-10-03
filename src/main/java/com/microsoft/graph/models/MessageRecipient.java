@@ -21,7 +21,7 @@ public class MessageRecipient extends Entity implements Parsable {
      */
     private String recipientEmail;
     /**
-     * Instantiates a new messageRecipient and sets the default values.
+     * Instantiates a new MessageRecipient and sets the default values.
      */
     public MessageRecipient() {
         super();
@@ -29,7 +29,7 @@ public class MessageRecipient extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageRecipient
+     * @return a MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public static MessageRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class MessageRecipient extends Entity implements Parsable {
     }
     /**
      * Gets the deliveryStatus property value. The deliveryStatus property
-     * @return a messageStatus
+     * @return a MessageStatus
      */
     @jakarta.annotation.Nullable
     public MessageStatus getDeliveryStatus() {
@@ -46,7 +46,7 @@ public class MessageRecipient extends Entity implements Parsable {
     }
     /**
      * Gets the events property value. The events property
-     * @return a messageEvent
+     * @return a java.util.List<MessageEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageEvent> getEvents() {
@@ -66,7 +66,7 @@ public class MessageRecipient extends Entity implements Parsable {
     }
     /**
      * Gets the recipientEmail property value. The recipientEmail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecipientEmail() {

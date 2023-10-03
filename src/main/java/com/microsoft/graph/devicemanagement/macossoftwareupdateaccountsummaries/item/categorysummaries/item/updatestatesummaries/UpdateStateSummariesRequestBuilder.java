@@ -60,7 +60,7 @@ public class UpdateStateSummariesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Summary of the update states.
-     * @return a CompletableFuture of macOSSoftwareUpdateStateSummaryCollectionResponse
+     * @return a CompletableFuture of MacOSSoftwareUpdateStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateStateSummaryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UpdateStateSummariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Summary of the update states.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSSoftwareUpdateStateSummaryCollectionResponse
+     * @return a CompletableFuture of MacOSSoftwareUpdateStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateStateSummaryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UpdateStateSummariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to updateStateSummaries for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of macOSSoftwareUpdateStateSummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateStateSummary> post(@jakarta.annotation.Nonnull final MacOSSoftwareUpdateStateSummary body) {
@@ -92,7 +92,7 @@ public class UpdateStateSummariesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to updateStateSummaries for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSSoftwareUpdateStateSummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateStateSummary> post(@jakarta.annotation.Nonnull final MacOSSoftwareUpdateStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UpdateStateSummariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updateStateSummariesRequestBuilder
+     * @return a UpdateStateSummariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdateStateSummariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

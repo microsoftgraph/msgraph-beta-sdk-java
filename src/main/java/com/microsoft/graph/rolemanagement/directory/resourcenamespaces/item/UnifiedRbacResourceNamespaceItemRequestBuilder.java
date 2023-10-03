@@ -72,8 +72,8 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedrbacresourcenamespace-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property resourceNamespaces in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body) {
@@ -107,7 +107,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
      * Update the navigation property resourceNamespaces in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an unifiedRbacResourceNamespace object.
+     * Read the properties and relationships of an unifiedRbacResourceNamespace object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -33,7 +33,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
      */
     private String smdpPlusServerAddress;
     /**
-     * Instantiates a new embeddedSIMActivationCode and sets the default values.
+     * Instantiates a new EmbeddedSIMActivationCode and sets the default values.
      */
     public EmbeddedSIMActivationCode() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a embeddedSIMActivationCode
+     * @return a EmbeddedSIMActivationCode
      */
     @jakarta.annotation.Nonnull
     public static EmbeddedSIMActivationCode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
         return new EmbeddedSIMActivationCode();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the integratedCircuitCardIdentifier property value. The Integrated Circuit Card Identifier (ICCID) for this embedded SIM activation code as provided by the mobile operator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIntegratedCircuitCardIdentifier() {
@@ -79,7 +79,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the matchingIdentifier property value. The MatchingIdentifier (MatchingID) as specified in the GSMA Association SGP.22 RSP Technical Specification section 4.1.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMatchingIdentifier() {
@@ -87,7 +87,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the smdpPlusServerAddress property value. The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSmdpPlusServerAddress() {
@@ -114,8 +114,8 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

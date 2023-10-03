@@ -57,7 +57,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
     }
     /**
      * The list of group assignments for the device configuration profile
-     * @return a CompletableFuture of enrollmentConfigurationAssignment
+     * @return a CompletableFuture of EnrollmentConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> get() {
@@ -66,7 +66,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
     /**
      * The list of group assignments for the device configuration profile
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrollmentConfigurationAssignment
+     * @return a CompletableFuture of EnrollmentConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of enrollmentConfigurationAssignment
+     * @return a CompletableFuture of EnrollmentConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> patch(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body) {
@@ -89,7 +89,7 @@ public class EnrollmentConfigurationAssignmentItemRequestBuilder extends BaseReq
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of enrollmentConfigurationAssignment
+     * @return a CompletableFuture of EnrollmentConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EnrollmentConfigurationAssignment> patch(@jakarta.annotation.Nonnull final EnrollmentConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

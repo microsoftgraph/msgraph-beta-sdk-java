@@ -21,7 +21,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
      */
     private String externalObjectId;
     /**
-     * Instantiates a new plannerExternalBucketSource and sets the default values.
+     * Instantiates a new PlannerExternalBucketSource and sets the default values.
      */
     public PlannerExternalBucketSource() {
         super();
@@ -30,7 +30,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerExternalBucketSource
+     * @return a PlannerExternalBucketSource
      */
     @jakarta.annotation.Nonnull
     public static PlannerExternalBucketSource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     }
     /**
      * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContextScenarioId() {
@@ -47,7 +47,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     }
     /**
      * Gets the externalContextId property value. Nullable. The id of the external entity's containing entity or context.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
@@ -55,7 +55,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
     }
     /**
      * Gets the externalObjectId property value. Nullable. The id of the entity that an external service associates with a bucket.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {

@@ -67,7 +67,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get members from onPremisesPublishingProfiles
-     * @return a CompletableFuture of connectorCollectionResponse
+     * @return a CompletableFuture of ConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorCollectionResponse> get() {
@@ -76,7 +76,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get members from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectorCollectionResponse
+     * @return a CompletableFuture of ConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,7 +118,7 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a membersRequestBuilder
+     * @return a MembersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

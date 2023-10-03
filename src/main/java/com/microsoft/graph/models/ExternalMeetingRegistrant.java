@@ -17,7 +17,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      */
     private String userId;
     /**
-     * Instantiates a new externalMeetingRegistrant and sets the default values.
+     * Instantiates a new ExternalMeetingRegistrant and sets the default values.
      */
     public ExternalMeetingRegistrant() {
         super();
@@ -26,7 +26,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalMeetingRegistrant
+     * @return a ExternalMeetingRegistrant
      */
     @jakarta.annotation.Nonnull
     public static ExternalMeetingRegistrant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
     }
     /**
      * Gets the tenantId property value. The tenant ID of this registrant if in Azure Active Directory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -54,7 +54,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
     }
     /**
      * Gets the userId property value. The user ID of this registrant if in Azure Active Directory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

@@ -56,7 +56,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
-     * @return a CompletableFuture of string
+     * @return a CompletableFuture of String
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<String> get() {
@@ -65,7 +65,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of string
+     * @return a CompletableFuture of String
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<String> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, String.class, errorMapping);
     }
     /**
-     * Assign a connectorGroup to an application.
+     * Assign a connectorGroup to an application. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-applications?view=graph-rest-1.0">Find more info here</a>
      */
@@ -85,7 +85,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Assign a connectorGroup to an application.
+     * Assign a connectorGroup to an application. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/connectorgroup-post-applications?view=graph-rest-1.0">Find more info here</a>
@@ -155,7 +155,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Assign a connectorGroup to an application.
+     * Assign a connectorGroup to an application. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -164,7 +164,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Assign a connectorGroup to an application.
+     * Assign a connectorGroup to an application. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

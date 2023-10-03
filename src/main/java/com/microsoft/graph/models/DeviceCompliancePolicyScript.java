@@ -24,9 +24,9 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
     /**
      * Json of the rules.
      */
-    private byte[] rulesContent;
+    private Base64url rulesContent;
     /**
-     * Instantiates a new deviceCompliancePolicyScript and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyScript and sets the default values.
      */
     public DeviceCompliancePolicyScript() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyScript
+     * @return a DeviceCompliancePolicyScript
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
         return new DeviceCompliancePolicyScript();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceComplianceScriptId property value. Device compliance script Id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceComplianceScriptId() {
@@ -66,12 +66,12 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("deviceComplianceScriptId", (n) -> { this.setDeviceComplianceScriptId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("rulesContent", (n) -> { this.setRulesContent(n.getByteArrayValue()); });
+        deserializerMap.put("rulesContent", (n) -> { this.setRulesContent(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,10 +79,10 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the rulesContent property value. Json of the rules.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getRulesContent() {
+    public Base64url getRulesContent() {
         return this.rulesContent;
     }
     /**
@@ -93,12 +93,12 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceComplianceScriptId", this.getDeviceComplianceScriptId());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeByteArrayValue("rulesContent", this.getRulesContent());
+        writer.writeObjectValue("rulesContent", this.getRulesContent());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -121,7 +121,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * Sets the rulesContent property value. Json of the rules.
      * @param value Value to set for the rulesContent property.
      */
-    public void setRulesContent(@jakarta.annotation.Nullable final byte[] value) {
+    public void setRulesContent(@jakarta.annotation.Nullable final Base64url value) {
         this.rulesContent = value;
     }
 }

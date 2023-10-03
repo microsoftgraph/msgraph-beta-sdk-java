@@ -45,7 +45,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
      */
     private DeviceManagementReportStatus status;
     /**
-     * Instantiates a new deviceManagementCachedReportConfiguration and sets the default values.
+     * Instantiates a new DeviceManagementCachedReportConfiguration and sets the default values.
      */
     public DeviceManagementCachedReportConfiguration() {
         super();
@@ -53,7 +53,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCachedReportConfiguration
+     * @return a DeviceManagementCachedReportConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCachedReportConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the filter property value. Filters applied on report creation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -103,7 +103,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the metadata property value. Caller-managed metadata associated with the report
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMetadata() {
@@ -111,7 +111,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the orderBy property value. Ordering of columns in the report
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -119,7 +119,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the reportName property value. Name of the report. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportName() {
@@ -127,7 +127,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the select property value. Columns selected from the report
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -135,7 +135,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
     }
     /**
      * Gets the status property value. Possible statuses associated with a generated report
-     * @return a deviceManagementReportStatus
+     * @return a DeviceManagementReportStatus
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReportStatus getStatus() {

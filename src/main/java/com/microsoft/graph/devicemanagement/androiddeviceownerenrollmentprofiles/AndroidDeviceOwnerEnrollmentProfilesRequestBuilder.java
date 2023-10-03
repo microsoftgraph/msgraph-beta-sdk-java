@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerEnrollmentProfilesRequestBuilder extends BaseRequ
     }
     /**
      * Android device owner enrollment profile entities.
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfileCollectionResponse
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AndroidDeviceOwnerEnrollmentProfilesRequestBuilder extends BaseRequ
     /**
      * Android device owner enrollment profile entities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfileCollectionResponse
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AndroidDeviceOwnerEnrollmentProfilesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to androidDeviceOwnerEnrollmentProfiles for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfile
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfile> post(@jakarta.annotation.Nonnull final AndroidDeviceOwnerEnrollmentProfile body) {
@@ -92,7 +92,7 @@ public class AndroidDeviceOwnerEnrollmentProfilesRequestBuilder extends BaseRequ
      * Create new navigation property to androidDeviceOwnerEnrollmentProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfile
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfile> post(@jakarta.annotation.Nonnull final AndroidDeviceOwnerEnrollmentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AndroidDeviceOwnerEnrollmentProfilesRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a androidDeviceOwnerEnrollmentProfilesRequestBuilder
+     * @return a AndroidDeviceOwnerEnrollmentProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AndroidDeviceOwnerEnrollmentProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

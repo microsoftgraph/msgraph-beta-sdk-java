@@ -105,7 +105,7 @@ public class DeviceShellScriptItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device shell scripts associated with the tenant.
-     * @return a CompletableFuture of deviceShellScript
+     * @return a CompletableFuture of DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScript> get() {
@@ -114,7 +114,7 @@ public class DeviceShellScriptItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device shell scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceShellScript
+     * @return a CompletableFuture of DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScript> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class DeviceShellScriptItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceShellScripts in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceShellScript
+     * @return a CompletableFuture of DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScript> patch(@jakarta.annotation.Nonnull final DeviceShellScript body) {
@@ -137,7 +137,7 @@ public class DeviceShellScriptItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceShellScripts in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceShellScript
+     * @return a CompletableFuture of DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScript> patch(@jakarta.annotation.Nonnull final DeviceShellScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

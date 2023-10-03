@@ -60,7 +60,7 @@ public class AutopilotEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of autopilot events for the tenant.
-     * @return a CompletableFuture of deviceManagementAutopilotEventCollectionResponse
+     * @return a CompletableFuture of DeviceManagementAutopilotEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEventCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AutopilotEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of autopilot events for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementAutopilotEventCollectionResponse
+     * @return a CompletableFuture of DeviceManagementAutopilotEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AutopilotEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to autopilotEvents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementAutopilotEvent
+     * @return a CompletableFuture of DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEvent> post(@jakarta.annotation.Nonnull final DeviceManagementAutopilotEvent body) {
@@ -92,7 +92,7 @@ public class AutopilotEventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to autopilotEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementAutopilotEvent
+     * @return a CompletableFuture of DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEvent> post(@jakarta.annotation.Nonnull final DeviceManagementAutopilotEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AutopilotEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a autopilotEventsRequestBuilder
+     * @return a AutopilotEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AutopilotEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

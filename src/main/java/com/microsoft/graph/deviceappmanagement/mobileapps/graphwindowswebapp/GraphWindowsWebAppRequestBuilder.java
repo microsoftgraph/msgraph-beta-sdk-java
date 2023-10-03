@@ -46,7 +46,7 @@ public class GraphWindowsWebAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.windowsWebApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of windowsWebAppCollectionResponse
+     * @return a CompletableFuture of WindowsWebAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsWebAppCollectionResponse> get() {
@@ -55,7 +55,7 @@ public class GraphWindowsWebAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.windowsWebApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsWebAppCollectionResponse
+     * @return a CompletableFuture of WindowsWebAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsWebAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GraphWindowsWebAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphWindowsWebAppRequestBuilder
+     * @return a GraphWindowsWebAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphWindowsWebAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

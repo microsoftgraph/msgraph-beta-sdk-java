@@ -60,7 +60,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Cart To Class Associations.
-     * @return a CompletableFuture of cartToClassAssociationCollectionResponse
+     * @return a CompletableFuture of CartToClassAssociationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Cart To Class Associations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cartToClassAssociationCollectionResponse
+     * @return a CompletableFuture of CartToClassAssociationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to cartToClassAssociations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cartToClassAssociation
+     * @return a CompletableFuture of CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociation> post(@jakarta.annotation.Nonnull final CartToClassAssociation body) {
@@ -92,7 +92,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cartToClassAssociations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cartToClassAssociation
+     * @return a CompletableFuture of CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociation> post(@jakarta.annotation.Nonnull final CartToClassAssociation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CartToClassAssociationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cartToClassAssociationsRequestBuilder
+     * @return a CartToClassAssociationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CartToClassAssociationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

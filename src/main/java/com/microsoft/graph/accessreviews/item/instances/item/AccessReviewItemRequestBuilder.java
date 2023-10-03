@@ -113,7 +113,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of access reviews instances past, present and future, if this object is a recurring access review.
-     * @return a CompletableFuture of accessReview
+     * @return a CompletableFuture of AccessReview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReview> get() {
@@ -122,7 +122,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of access reviews instances past, present and future, if this object is a recurring access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReview
+     * @return a CompletableFuture of AccessReview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +135,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property instances in accessReviews
      * @param body The request body
-     * @return a CompletableFuture of accessReview
+     * @return a CompletableFuture of AccessReview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReview> patch(@jakarta.annotation.Nonnull final AccessReview body) {
@@ -145,7 +145,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property instances in accessReviews
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReview
+     * @return a CompletableFuture of AccessReview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReview> patch(@jakarta.annotation.Nonnull final AccessReview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

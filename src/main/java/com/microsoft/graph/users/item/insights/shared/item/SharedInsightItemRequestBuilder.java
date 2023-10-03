@@ -73,7 +73,7 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Access this property from the derived type itemInsights.
-     * @return a CompletableFuture of sharedInsight
+     * @return a CompletableFuture of SharedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedInsight> get() {
@@ -82,7 +82,7 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Access this property from the derived type itemInsights.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedInsight
+     * @return a CompletableFuture of SharedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedInsight> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property shared in users
      * @param body The request body
-     * @return a CompletableFuture of sharedInsight
+     * @return a CompletableFuture of SharedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedInsight> patch(@jakarta.annotation.Nonnull final SharedInsight body) {
@@ -105,7 +105,7 @@ public class SharedInsightItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property shared in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedInsight
+     * @return a CompletableFuture of SharedInsight
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedInsight> patch(@jakarta.annotation.Nonnull final SharedInsight body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -59,8 +59,8 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/registration/customQuestions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
-     * @return a CompletableFuture of meetingRegistrationQuestionCollectionResponse
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of MeetingRegistrationQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrationQuestionCollectionResponse
+     * @return a CompletableFuture of MeetingRegistrationQuestionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-list-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MeetingRegistrationQuestionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-post-customquestions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MeetingRegistrationQuestion::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Create a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customQuestionsRequestBuilder
+     * @return a CustomQuestionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomQuestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
         return new CustomQuestionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

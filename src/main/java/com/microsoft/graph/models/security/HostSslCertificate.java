@@ -30,7 +30,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
      */
     private SslCertificate sslCertificate;
     /**
-     * Instantiates a new hostSslCertificate and sets the default values.
+     * Instantiates a new HostSslCertificate and sets the default values.
      */
     public HostSslCertificate() {
         super();
@@ -39,7 +39,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostSslCertificate
+     * @return a HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public static HostSslCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
     }
     /**
      * Gets the host property value. The host for this hostSslCertificate.
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -86,7 +86,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
     }
     /**
      * Gets the ports property value. The ports related with this hostSslCertificate.
-     * @return a hostSslCertificatePort
+     * @return a java.util.List<HostSslCertificatePort>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificatePort> getPorts() {
@@ -94,7 +94,7 @@ public class HostSslCertificate extends Artifact implements Parsable {
     }
     /**
      * Gets the sslCertificate property value. The sslCertificate for this hostSslCertificate.
-     * @return a sslCertificate
+     * @return a SslCertificate
      */
     @jakarta.annotation.Nullable
     public SslCertificate getSslCertificate() {

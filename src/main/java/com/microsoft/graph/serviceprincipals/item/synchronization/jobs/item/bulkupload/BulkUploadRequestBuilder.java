@@ -74,7 +74,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The bulk upload operation for the job.
-     * @return a CompletableFuture of bulkUpload
+     * @return a CompletableFuture of BulkUpload
      * @deprecated
      *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
@@ -86,7 +86,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
     /**
      * The bulk upload operation for the job.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bulkUpload
+     * @return a CompletableFuture of BulkUpload
      * @deprecated
      *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
@@ -102,7 +102,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property bulkUpload in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of bulkUpload
+     * @return a CompletableFuture of BulkUpload
      * @deprecated
      *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
@@ -115,7 +115,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property bulkUpload in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of bulkUpload
+     * @return a CompletableFuture of BulkUpload
      * @deprecated
      *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
@@ -238,7 +238,7 @@ public class BulkUploadRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bulkUploadRequestBuilder
+     * @return a BulkUploadRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */

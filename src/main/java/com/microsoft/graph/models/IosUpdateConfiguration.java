@@ -49,7 +49,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
      */
     private Integer utcTimeOffsetInMinutes;
     /**
-     * Instantiates a new iosUpdateConfiguration and sets the default values.
+     * Instantiates a new IosUpdateConfiguration and sets the default values.
      */
     public IosUpdateConfiguration() {
         super();
@@ -58,7 +58,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosUpdateConfiguration
+     * @return a IosUpdateConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosUpdateConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the customUpdateTimeWindows property value. If update schedule type is set to use time window scheduling, custom time windows when updates will be scheduled. This collection can contain a maximum of 20 elements.
-     * @return a customUpdateTimeWindow
+     * @return a java.util.List<CustomUpdateTimeWindow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomUpdateTimeWindow> getCustomUpdateTimeWindows() {
@@ -91,7 +91,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the desiredOsVersion property value. If left unspecified, devices will update to the latest version of the OS.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDesiredOsVersion() {
@@ -99,7 +99,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the enforcedSoftwareUpdateDelayInDays property value. Days before software updates are visible to iOS devices ranging from 0 to 90 inclusive
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnforcedSoftwareUpdateDelayInDays() {
@@ -125,7 +125,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the isEnabled property value. Is setting enabled in UI
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -133,7 +133,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     * @return a dayOfWeek
+     * @return a java.util.List<DayOfWeek>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DayOfWeek> getScheduledInstallDays() {
@@ -141,7 +141,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the updateScheduleType property value. Updatescheduletypefor iOS software updates.
-     * @return a iosSoftwareUpdateScheduleType
+     * @return a IosSoftwareUpdateScheduleType
      */
     @jakarta.annotation.Nullable
     public IosSoftwareUpdateScheduleType getUpdateScheduleType() {
@@ -149,7 +149,7 @@ public class IosUpdateConfiguration extends DeviceConfiguration implements Parsa
     }
     /**
      * Gets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUtcTimeOffsetInMinutes() {

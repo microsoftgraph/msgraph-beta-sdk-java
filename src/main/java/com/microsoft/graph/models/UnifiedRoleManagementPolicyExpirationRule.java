@@ -18,7 +18,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
      */
     private PeriodAndDuration maximumDuration;
     /**
-     * Instantiates a new unifiedRoleManagementPolicyExpirationRule and sets the default values.
+     * Instantiates a new UnifiedRoleManagementPolicyExpirationRule and sets the default values.
      */
     public UnifiedRoleManagementPolicyExpirationRule() {
         super();
@@ -27,7 +27,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementPolicyExpirationRule
+     * @return a UnifiedRoleManagementPolicyExpirationRule
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementPolicyExpirationRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManage
     }
     /**
      * Gets the isExpirationRequired property value. Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExpirationRequired() {

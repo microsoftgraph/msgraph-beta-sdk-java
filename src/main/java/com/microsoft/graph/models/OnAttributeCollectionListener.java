@@ -13,7 +13,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
      */
     private OnAttributeCollectionHandler handler;
     /**
-     * Instantiates a new onAttributeCollectionListener and sets the default values.
+     * Instantiates a new OnAttributeCollectionListener and sets the default values.
      */
     public OnAttributeCollectionListener() {
         super();
@@ -22,7 +22,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onAttributeCollectionListener
+     * @return a OnAttributeCollectionListener
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a onAttributeCollectionHandler
+     * @return a OnAttributeCollectionHandler
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getHandler() {

@@ -80,8 +80,8 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentSchedule
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentSchedule
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,9 +89,9 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
         return get(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentSchedule
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentSchedule
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
     /**
      * Update the navigation property assignmentSchedules in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentSchedule
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentSchedule> patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentSchedule body) {
@@ -115,7 +115,7 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
      * Update the navigation property assignmentSchedules in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentSchedule
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentSchedule> patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentSchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -154,7 +154,7 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -162,7 +162,7 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -231,7 +231,7 @@ public class PrivilegedAccessGroupAssignmentScheduleItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object.
+     * Read the properties and relationships of a privilegedAccessGroupAssignmentSchedule object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

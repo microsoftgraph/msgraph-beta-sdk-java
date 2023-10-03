@@ -18,13 +18,13 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     /**
      * Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
      */
-    private byte[] customXml;
+    private Base64url customXml;
     /**
      * List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
      */
     private java.util.List<VpnServer> servers;
     /**
-     * Instantiates a new windowsVpnConfiguration and sets the default values.
+     * Instantiates a new WindowsVpnConfiguration and sets the default values.
      */
     public WindowsVpnConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsVpnConfiguration
+     * @return a WindowsVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -59,10 +59,10 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getCustomXml() {
+    public Base64url getCustomXml() {
         return this.customXml;
     }
     /**
@@ -73,13 +73,13 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectionName", (n) -> { this.setConnectionName(n.getStringValue()); });
-        deserializerMap.put("customXml", (n) -> { this.setCustomXml(n.getByteArrayValue()); });
+        deserializerMap.put("customXml", (n) -> { this.setCustomXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("servers", (n) -> { this.setServers(n.getCollectionOfObjectValues(VpnServer::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a vpnServer
+     * @return a java.util.List<VpnServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {
@@ -93,7 +93,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("connectionName", this.getConnectionName());
-        writer.writeByteArrayValue("customXml", this.getCustomXml());
+        writer.writeObjectValue("customXml", this.getCustomXml());
         writer.writeCollectionOfObjectValues("servers", this.getServers());
     }
     /**
@@ -107,7 +107,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * Sets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 encoded byte array)
      * @param value Value to set for the customXml property.
      */
-    public void setCustomXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setCustomXml(@jakarta.annotation.Nullable final Base64url value) {
         this.customXml = value;
     }
     /**

@@ -58,17 +58,17 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations/{virtualEventRegistration%2Did}/sessions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get sessions from solutions
-     * @return a CompletableFuture of virtualEventSessionCollectionResponse
+     * Sessions of the webinar.
+     * @return a CompletableFuture of VirtualEventSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSessionCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventSessionCollectionResponse
+     * @return a CompletableFuture of VirtualEventSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSessionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventSessionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -110,7 +110,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sessionsRequestBuilder
+     * @return a SessionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -118,7 +118,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return new SessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

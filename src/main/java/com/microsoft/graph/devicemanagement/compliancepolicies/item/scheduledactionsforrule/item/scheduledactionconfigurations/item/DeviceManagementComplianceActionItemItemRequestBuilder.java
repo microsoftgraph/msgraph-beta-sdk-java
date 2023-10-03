@@ -57,7 +57,7 @@ public class DeviceManagementComplianceActionItemItemRequestBuilder extends Base
     }
     /**
      * The list of scheduled action configurations for this compliance policy. This collection can contain a maximum of 100 elements.
-     * @return a CompletableFuture of deviceManagementComplianceActionItem
+     * @return a CompletableFuture of DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItem> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementComplianceActionItemItemRequestBuilder extends Base
     /**
      * The list of scheduled action configurations for this compliance policy. This collection can contain a maximum of 100 elements.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementComplianceActionItem
+     * @return a CompletableFuture of DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementComplianceActionItemItemRequestBuilder extends Base
     /**
      * Update the navigation property scheduledActionConfigurations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementComplianceActionItem
+     * @return a CompletableFuture of DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItem> patch(@jakarta.annotation.Nonnull final DeviceManagementComplianceActionItem body) {
@@ -89,7 +89,7 @@ public class DeviceManagementComplianceActionItemItemRequestBuilder extends Base
      * Update the navigation property scheduledActionConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementComplianceActionItem
+     * @return a CompletableFuture of DeviceManagementComplianceActionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementComplianceActionItem> patch(@jakarta.annotation.Nonnull final DeviceManagementComplianceActionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -38,7 +38,7 @@ public class PersonItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
-     * @return a CompletableFuture of person
+     * @return a CompletableFuture of Person
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Person> get() {
@@ -47,7 +47,7 @@ public class PersonItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. The most relevant people to the user. The collection is ordered by their relevance to the user, which is determined by the user's communication, collaboration and business relationships. A person is an aggregation of information from across mail, contacts and social networks.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of person
+     * @return a CompletableFuture of Person
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Person> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

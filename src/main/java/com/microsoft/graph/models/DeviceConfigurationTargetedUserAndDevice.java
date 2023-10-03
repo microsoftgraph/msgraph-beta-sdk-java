@@ -46,7 +46,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceConfigurationTargetedUserAndDevice and sets the default values.
+     * Instantiates a new DeviceConfigurationTargetedUserAndDevice and sets the default values.
      */
     public DeviceConfigurationTargetedUserAndDevice() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationTargetedUserAndDevice
+     * @return a DeviceConfigurationTargetedUserAndDevice
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationTargetedUserAndDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
         return new DeviceConfigurationTargetedUserAndDevice();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     }
     /**
      * Gets the deviceId property value. The id of the device in the checkin.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -79,7 +79,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     }
     /**
      * Gets the deviceName property value. The name of the device in the checkin.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -111,7 +111,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -119,7 +119,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     }
     /**
      * Gets the userDisplayName property value. The display name of the user in the checkin
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -127,7 +127,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     }
     /**
      * Gets the userId property value. The id of the user in the checkin.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -135,7 +135,7 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
     }
     /**
      * Gets the userPrincipalName property value. The UPN of the user in the checkin.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -157,8 +157,8 @@ public class DeviceConfigurationTargetedUserAndDevice implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

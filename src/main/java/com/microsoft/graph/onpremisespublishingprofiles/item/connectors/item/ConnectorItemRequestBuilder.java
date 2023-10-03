@@ -65,7 +65,7 @@ public class ConnectorItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of a connector object.
-     * @return a CompletableFuture of connector
+     * @return a CompletableFuture of Connector
      * @see <a href="https://learn.microsoft.com/graph/api/connector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a connector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connector
+     * @return a CompletableFuture of Connector
      * @see <a href="https://learn.microsoft.com/graph/api/connector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ConnectorItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property connectors in onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of connector
+     * @return a CompletableFuture of Connector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Connector> patch(@jakarta.annotation.Nonnull final Connector body) {
@@ -99,7 +99,7 @@ public class ConnectorItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property connectors in onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connector
+     * @return a CompletableFuture of Connector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Connector> patch(@jakarta.annotation.Nonnull final Connector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

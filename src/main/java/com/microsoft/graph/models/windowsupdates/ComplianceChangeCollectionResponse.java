@@ -14,7 +14,7 @@ public class ComplianceChangeCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<ComplianceChange> value;
     /**
-     * Instantiates a new complianceChangeCollectionResponse and sets the default values.
+     * Instantiates a new ComplianceChangeCollectionResponse and sets the default values.
      */
     public ComplianceChangeCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ComplianceChangeCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a complianceChangeCollectionResponse
+     * @return a ComplianceChangeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ComplianceChangeCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ComplianceChangeCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a complianceChange
+     * @return a java.util.List<ComplianceChange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceChange> getValue() {

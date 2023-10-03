@@ -65,7 +65,7 @@ public class DeviceComplianceScriptDeviceStateItemRequestBuilder extends BaseReq
     }
     /**
      * List of run states for the device compliance script across all devices
-     * @return a CompletableFuture of deviceComplianceScriptDeviceState
+     * @return a CompletableFuture of DeviceComplianceScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptDeviceState> get() {
@@ -74,7 +74,7 @@ public class DeviceComplianceScriptDeviceStateItemRequestBuilder extends BaseReq
     /**
      * List of run states for the device compliance script across all devices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScriptDeviceState
+     * @return a CompletableFuture of DeviceComplianceScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptDeviceState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceComplianceScriptDeviceStateItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property deviceRunStates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScriptDeviceState
+     * @return a CompletableFuture of DeviceComplianceScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptDeviceState> patch(@jakarta.annotation.Nonnull final DeviceComplianceScriptDeviceState body) {
@@ -97,7 +97,7 @@ public class DeviceComplianceScriptDeviceStateItemRequestBuilder extends BaseReq
      * Update the navigation property deviceRunStates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScriptDeviceState
+     * @return a CompletableFuture of DeviceComplianceScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptDeviceState> patch(@jakarta.annotation.Nonnull final DeviceComplianceScriptDeviceState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

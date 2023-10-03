@@ -38,7 +38,7 @@ public class ManagedTenantEmailNotificationItemRequestBuilder extends BaseReques
     }
     /**
      * Get emailNotifications from tenantRelationships
-     * @return a CompletableFuture of managedTenantEmailNotification
+     * @return a CompletableFuture of ManagedTenantEmailNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantEmailNotification> get() {
@@ -47,7 +47,7 @@ public class ManagedTenantEmailNotificationItemRequestBuilder extends BaseReques
     /**
      * Get emailNotifications from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantEmailNotification
+     * @return a CompletableFuture of ManagedTenantEmailNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantEmailNotification> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

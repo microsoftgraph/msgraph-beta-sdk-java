@@ -61,7 +61,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get items from financials
-     * @return a CompletableFuture of itemCollectionResponse
+     * @return a CompletableFuture of ItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get items from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemCollectionResponse
+     * @return a CompletableFuture of ItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to items for financials
      * @param body The request body
-     * @return a CompletableFuture of item
+     * @return a CompletableFuture of Item
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Item> post(@jakarta.annotation.Nonnull final Item body) {
@@ -93,7 +93,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to items for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of item
+     * @return a CompletableFuture of Item
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Item> post(@jakarta.annotation.Nonnull final Item body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemsRequestBuilder
+     * @return a ItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

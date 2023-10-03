@@ -46,7 +46,7 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The set of activities performed during the run.
-     * @return a CompletableFuture of industryDataRunActivity
+     * @return a CompletableFuture of IndustryDataRunActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataRunActivity> get() {
@@ -55,7 +55,7 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
     /**
      * The set of activities performed during the run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataRunActivity
+     * @return a CompletableFuture of IndustryDataRunActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataRunActivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

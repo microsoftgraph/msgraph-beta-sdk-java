@@ -38,7 +38,7 @@ public class IntendedDeploymentProfileRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Deployment profile intended to be assigned to the Windows autopilot device.
-     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
+     * @return a CompletableFuture of WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get() {
@@ -47,7 +47,7 @@ public class IntendedDeploymentProfileRequestBuilder extends BaseRequestBuilder 
     /**
      * Deployment profile intended to be assigned to the Windows autopilot device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
+     * @return a CompletableFuture of WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class IntendedDeploymentProfileRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a intendedDeploymentProfileRequestBuilder
+     * @return a IntendedDeploymentProfileRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IntendedDeploymentProfileRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

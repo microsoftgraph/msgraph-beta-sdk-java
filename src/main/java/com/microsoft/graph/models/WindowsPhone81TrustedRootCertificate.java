@@ -18,9 +18,9 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     /**
      * Trusted Root Certificate
      */
-    private byte[] trustedRootCertificate;
+    private Base64url trustedRootCertificate;
     /**
-     * Instantiates a new windowsPhone81TrustedRootCertificate and sets the default values.
+     * Instantiates a new WindowsPhone81TrustedRootCertificate and sets the default values.
      */
     public WindowsPhone81TrustedRootCertificate() {
         super();
@@ -29,7 +29,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhone81TrustedRootCertificate
+     * @return a WindowsPhone81TrustedRootCertificate
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81TrustedRootCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     }
     /**
      * Gets the certFileName property value. File name to display in UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertFileName() {
@@ -52,15 +52,15 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
-        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getTrustedRootCertificate() {
+    public Base64url getTrustedRootCertificate() {
         return this.trustedRootCertificate;
     }
     /**
@@ -71,7 +71,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("certFileName", this.getCertFileName());
-        writer.writeByteArrayValue("trustedRootCertificate", this.getTrustedRootCertificate());
+        writer.writeObjectValue("trustedRootCertificate", this.getTrustedRootCertificate());
     }
     /**
      * Sets the certFileName property value. File name to display in UI.
@@ -84,7 +84,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
      * Sets the trustedRootCertificate property value. Trusted Root Certificate
      * @param value Value to set for the trustedRootCertificate property.
      */
-    public void setTrustedRootCertificate(@jakarta.annotation.Nullable final byte[] value) {
+    public void setTrustedRootCertificate(@jakarta.annotation.Nullable final Base64url value) {
         this.trustedRootCertificate = value;
     }
 }

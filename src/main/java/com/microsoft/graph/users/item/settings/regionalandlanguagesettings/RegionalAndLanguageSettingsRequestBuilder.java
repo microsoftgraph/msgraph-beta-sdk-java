@@ -56,8 +56,8 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, RegionalAndLanguageSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of regionalAndLanguageSettings
+     * @return a CompletableFuture of RegionalAndLanguageSettings
      * @see <a href="https://learn.microsoft.com/graph/api/regionalandlanguagesettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update some or all of the properties of a regionalAndLanguageSettings object.
+     * Update some or all of the properties of a regionalAndLanguageSettings object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a regionalAndLanguageSettingsRequestBuilder
+     * @return a RegionalAndLanguageSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegionalAndLanguageSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a user's regionalAndLanguageSettings.
+     * Retrieve the properties of a user's regionalAndLanguageSettings. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -64,8 +64,8 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
-     * @return a CompletableFuture of outboundSharedUserProfile
+     * Get the details of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of OutboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get the details of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outboundSharedUserProfile
+     * @return a CompletableFuture of OutboundSharedUserProfile
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property outboundSharedUserProfiles in directory
      * @param body The request body
-     * @return a CompletableFuture of outboundSharedUserProfile
+     * @return a CompletableFuture of OutboundSharedUserProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutboundSharedUserProfile> patch(@jakarta.annotation.Nonnull final OutboundSharedUserProfile body) {
@@ -99,7 +99,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
      * Update the navigation property outboundSharedUserProfiles in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of outboundSharedUserProfile
+     * @return a CompletableFuture of OutboundSharedUserProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OutboundSharedUserProfile> patch(@jakarta.annotation.Nonnull final OutboundSharedUserProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get the details of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get the details of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -215,7 +215,7 @@ public class OutboundSharedUserProfileUserItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of an outboundSharedUserProfile.
+     * Get the details of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

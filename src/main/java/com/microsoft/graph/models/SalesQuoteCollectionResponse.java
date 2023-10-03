@@ -13,7 +13,7 @@ public class SalesQuoteCollectionResponse extends BaseCollectionPaginationCountR
      */
     private java.util.List<SalesQuote> value;
     /**
-     * Instantiates a new salesQuoteCollectionResponse and sets the default values.
+     * Instantiates a new SalesQuoteCollectionResponse and sets the default values.
      */
     public SalesQuoteCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class SalesQuoteCollectionResponse extends BaseCollectionPaginationCountR
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a salesQuoteCollectionResponse
+     * @return a SalesQuoteCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SalesQuoteCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SalesQuoteCollectionResponse extends BaseCollectionPaginationCountR
     }
     /**
      * Gets the value property value. The value property
-     * @return a salesQuote
+     * @return a java.util.List<SalesQuote>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesQuote> getValue() {

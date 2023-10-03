@@ -35,7 +35,7 @@ public class MicrosoftGraphEdiscoveryReopenRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/microsoft.graph.ediscovery.reopen", rawUrl);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is supported in the following national cloud deployments.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-case-reopen?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class MicrosoftGraphEdiscoveryReopenRequestBuilder extends BaseRequestBui
         return post(null);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -62,7 +62,7 @@ public class MicrosoftGraphEdiscoveryReopenRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -73,7 +73,7 @@ public class MicrosoftGraphEdiscoveryReopenRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(null);
     }
     /**
-     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case.
+     * Reopen an eDiscovery case that was closed. For details, see Reopen a closed case. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -97,7 +97,7 @@ public class MicrosoftGraphEdiscoveryReopenRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphEdiscoveryReopenRequestBuilder
+     * @return a MicrosoftGraphEdiscoveryReopenRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

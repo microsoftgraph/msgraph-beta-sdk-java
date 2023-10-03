@@ -36,9 +36,9 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/recommendations/{recommendation%2Did}/dismiss", rawUrl);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of recommendation
+     * @return a CompletableFuture of Recommendation
      * @see <a href="https://learn.microsoft.com/graph/api/recommendation-dismiss?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Recommendation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed .
+     * Dismiss a recommendation object that you consider to be inapplicable to your tenant and update its status to dismissed . This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dismissRequestBuilder
+     * @return a DismissRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DismissRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

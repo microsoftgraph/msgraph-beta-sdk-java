@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationPolicyTemplateItemRequestBuilder exten
     }
     /**
      * List of all templates
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplate
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplate> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementConfigurationPolicyTemplateItemRequestBuilder exten
     /**
      * List of all templates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplate
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementConfigurationPolicyTemplateItemRequestBuilder exten
     /**
      * Update the navigation property configurationPolicyTemplates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplate
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplate> patch(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicyTemplate body) {
@@ -97,7 +97,7 @@ public class DeviceManagementConfigurationPolicyTemplateItemRequestBuilder exten
      * Update the navigation property configurationPolicyTemplates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplate
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplate> patch(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

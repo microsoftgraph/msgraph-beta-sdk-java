@@ -38,7 +38,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * Instantiates a new teamworkDisplayConfiguration and sets the default values.
+     * Instantiates a new TeamworkDisplayConfiguration and sets the default values.
      */
     public TeamworkDisplayConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDisplayConfiguration
+     * @return a TeamworkDisplayConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDisplayConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
         return new TeamworkDisplayConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the configuredDisplays property value. The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
-     * @return a teamworkConfiguredPeripheral
+     * @return a java.util.List<TeamworkConfiguredPeripheral>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkConfiguredPeripheral> getConfiguredDisplays() {
@@ -71,7 +71,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the displayCount property value. Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDisplayCount() {
@@ -94,7 +94,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the inBuiltDisplayScreenConfiguration property value. Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
-     * @return a teamworkDisplayScreenConfiguration
+     * @return a TeamworkDisplayScreenConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDisplayScreenConfiguration getInBuiltDisplayScreenConfiguration() {
@@ -102,7 +102,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isContentDuplicationAllowed property value. True if content duplication is allowed. Applicable only for Teams Rooms devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsContentDuplicationAllowed() {
@@ -110,7 +110,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isDualDisplayModeEnabled property value. True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDualDisplayModeEnabled() {
@@ -118,7 +118,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,8 +139,8 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

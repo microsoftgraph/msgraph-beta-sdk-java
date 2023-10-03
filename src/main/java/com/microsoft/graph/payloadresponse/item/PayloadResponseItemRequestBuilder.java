@@ -57,7 +57,7 @@ public class PayloadResponseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from payloadResponse by key
-     * @return a CompletableFuture of payloadResponse
+     * @return a CompletableFuture of PayloadResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponse> get() {
@@ -66,7 +66,7 @@ public class PayloadResponseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from payloadResponse by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of payloadResponse
+     * @return a CompletableFuture of PayloadResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PayloadResponseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in payloadResponse
      * @param body The request body
-     * @return a CompletableFuture of payloadResponse
+     * @return a CompletableFuture of PayloadResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponse> patch(@jakarta.annotation.Nonnull final PayloadResponse body) {
@@ -89,7 +89,7 @@ public class PayloadResponseItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in payloadResponse
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of payloadResponse
+     * @return a CompletableFuture of PayloadResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponse> patch(@jakarta.annotation.Nonnull final PayloadResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

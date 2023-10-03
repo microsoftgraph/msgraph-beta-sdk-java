@@ -13,7 +13,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
      */
     private Integer durationInDays;
     /**
-     * Instantiates a new businessFlowSettings and sets the default values.
+     * Instantiates a new BusinessFlowSettings and sets the default values.
      */
     public BusinessFlowSettings() {
         super();
@@ -22,7 +22,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessFlowSettings
+     * @return a BusinessFlowSettings
      */
     @jakarta.annotation.Nonnull
     public static BusinessFlowSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class BusinessFlowSettings extends AccessReviewSettings implements Parsab
     }
     /**
      * Gets the durationInDays property value. The durationInDays property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {

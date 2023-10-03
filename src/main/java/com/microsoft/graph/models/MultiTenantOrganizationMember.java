@@ -43,7 +43,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
      */
     private MultiTenantOrganizationMemberTransitionDetails transitionDetails;
     /**
-     * Instantiates a new multiTenantOrganizationMember and sets the default values.
+     * Instantiates a new MultiTenantOrganizationMember and sets the default values.
      */
     public MultiTenantOrganizationMember() {
         super();
@@ -52,7 +52,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a multiTenantOrganizationMember
+     * @return a MultiTenantOrganizationMember
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganizationMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,7 +77,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the displayName property value. Display name of the tenant added to the multi-tenant organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -110,7 +110,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the role property value. Role of the tenant in the multi-tenant organization. The possible values are: owner, member (default), unknownFutureValue. Tenants with the owner role can manage the multi-tenant organization but tenants with the member role can only participate in a multi-tenant organization. There can be multiple tenants with the owner role in a multi-tenant organization.
-     * @return a multiTenantOrganizationMemberRole
+     * @return a MultiTenantOrganizationMemberRole
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberRole getRole() {
@@ -118,7 +118,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the state property value. State of the tenant in the multi-tenant organization. The possible values are: pending, active, removed, unknownFutureValue. Tenants in the pending state must join the multi-tenant organization to participate in the multi-tenant organization. Tenants in the active state can participate in the multi-tenant organization. Tenants in the removed state are in the process of being removed from the multi-tenant organization. Read-only.
-     * @return a multiTenantOrganizationMemberState
+     * @return a MultiTenantOrganizationMemberState
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberState getState() {
@@ -126,7 +126,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the tenantId property value. Tenant ID of the Azure Active Directory tenant added to the multi-tenant organization. Set at the time tenant is added.Supports $filter. Key.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -134,7 +134,7 @@ public class MultiTenantOrganizationMember extends DirectoryObject implements Pa
     }
     /**
      * Gets the transitionDetails property value. Details of the processing status for a tenant in a multi-tenant organization. Read-only. Nullable.
-     * @return a multiTenantOrganizationMemberTransitionDetails
+     * @return a MultiTenantOrganizationMemberTransitionDetails
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationMemberTransitionDetails getTransitionDetails() {

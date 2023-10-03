@@ -97,7 +97,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The available group policy definitions for this account.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get() {
@@ -106,7 +106,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * The available group policy definitions for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property groupPolicyDefinitions in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> patch(@jakarta.annotation.Nonnull final GroupPolicyDefinition body) {
@@ -129,7 +129,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property groupPolicyDefinitions in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> patch(@jakarta.annotation.Nonnull final GroupPolicyDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

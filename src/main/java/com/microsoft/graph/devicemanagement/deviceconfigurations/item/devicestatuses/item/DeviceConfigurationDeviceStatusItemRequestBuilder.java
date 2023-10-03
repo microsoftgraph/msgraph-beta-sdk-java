@@ -57,7 +57,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     }
     /**
      * Device configuration installation status by device.
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> get() {
@@ -66,7 +66,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     /**
      * Device configuration installation status by device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property deviceStatuses in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> patch(@jakarta.annotation.Nonnull final DeviceConfigurationDeviceStatus body) {
@@ -89,7 +89,7 @@ public class DeviceConfigurationDeviceStatusItemRequestBuilder extends BaseReque
      * Update the navigation property deviceStatuses in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationDeviceStatus
+     * @return a CompletableFuture of DeviceConfigurationDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationDeviceStatus> patch(@jakarta.annotation.Nonnull final DeviceConfigurationDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

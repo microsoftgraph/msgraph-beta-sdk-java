@@ -66,7 +66,7 @@ public class NotificationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get notifications from users
-     * @return a CompletableFuture of notificationCollectionResponse
+     * @return a CompletableFuture of NotificationCollectionResponse
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -78,7 +78,7 @@ public class NotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get notifications from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notificationCollectionResponse
+     * @return a CompletableFuture of NotificationCollectionResponse
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -94,7 +94,7 @@ public class NotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to notifications for users
      * @param body The request body
-     * @return a CompletableFuture of notification
+     * @return a CompletableFuture of Notification
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -107,7 +107,7 @@ public class NotificationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to notifications for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of notification
+     * @return a CompletableFuture of Notification
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */
@@ -197,7 +197,7 @@ public class NotificationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a notificationsRequestBuilder
+     * @return a NotificationsRequestBuilder
      * @deprecated
      * The Graph Notification API is deprecated and will stop returning data on March 20, 2023. as of 2023-03/Notification_Deprecation on 2023-03-09 and will be removed 2023-03-20
      */

@@ -63,7 +63,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     /**
      * The picture property
      */
-    private byte[] picture;
+    private Base64url picture;
     /**
      * The taxRegistrationNumber property
      */
@@ -73,7 +73,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      */
     private String website;
     /**
-     * Instantiates a new companyInformation and sets the default values.
+     * Instantiates a new CompanyInformation and sets the default values.
      */
     public CompanyInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -81,7 +81,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a companyInformation
+     * @return a CompanyInformation
      */
     @jakarta.annotation.Nonnull
     public static CompanyInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
         return new CompanyInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +98,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. The address property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
@@ -106,7 +106,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -122,7 +122,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -130,7 +130,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -138,7 +138,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the faxNumber property value. The faxNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFaxNumber() {
@@ -162,7 +162,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
-        deserializerMap.put("picture", (n) -> { this.setPicture(n.getByteArrayValue()); });
+        deserializerMap.put("picture", (n) -> { this.setPicture(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("taxRegistrationNumber", (n) -> { this.setTaxRegistrationNumber(n.getStringValue()); });
         deserializerMap.put("website", (n) -> { this.setWebsite(n.getStringValue()); });
         return deserializerMap;
@@ -177,7 +177,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the industry property value. The industry property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIndustry() {
@@ -193,7 +193,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -201,7 +201,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -209,15 +209,15 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getPicture() {
+    public Base64url getPicture() {
         return this.picture;
     }
     /**
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
@@ -225,7 +225,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the website property value. The website property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {
@@ -248,14 +248,14 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("phoneNumber", this.getPhoneNumber());
-        writer.writeByteArrayValue("picture", this.getPicture());
+        writer.writeObjectValue("picture", this.getPicture());
         writer.writeStringValue("taxRegistrationNumber", this.getTaxRegistrationNumber());
         writer.writeStringValue("website", this.getWebsite());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -341,7 +341,7 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
      */
-    public void setPicture(@jakarta.annotation.Nullable final byte[] value) {
+    public void setPicture(@jakarta.annotation.Nullable final Base64url value) {
         this.picture = value;
     }
     /**

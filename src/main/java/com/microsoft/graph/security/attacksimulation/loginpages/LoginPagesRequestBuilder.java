@@ -59,17 +59,19 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/loginPages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get loginPages from security
-     * @return a CompletableFuture of loginPageCollectionResponse
+     * Get a list of the loginPage objects and their properties. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of LoginPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of loginPageCollectionResponse
+     * @return a CompletableFuture of LoginPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-loginpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +84,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to loginPages for security
      * @param body The request body
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> post(@jakarta.annotation.Nonnull final LoginPage body) {
@@ -92,7 +94,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to loginPages for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of loginPage
+     * @return a CompletableFuture of LoginPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LoginPage> post(@jakarta.annotation.Nonnull final LoginPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +106,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LoginPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a loginPagesRequestBuilder
+     * @return a LoginPagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LoginPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +177,7 @@ public class LoginPagesRequestBuilder extends BaseRequestBuilder {
         return new LoginPagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get loginPages from security
+     * Get a list of the loginPage objects and their properties. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

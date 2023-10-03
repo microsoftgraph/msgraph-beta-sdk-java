@@ -59,8 +59,8 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}/myDecisions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
-     * @return a CompletableFuture of accessReviewDecisionCollectionResponse
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewDecisionCollectionResponse
+     * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/accessreview-listmydecisions?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to myDecisions for accessReviews
      * @param body The request body
-     * @return a CompletableFuture of accessReviewDecision
+     * @return a CompletableFuture of AccessReviewDecision
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecision> post(@jakarta.annotation.Nonnull final AccessReviewDecision body) {
@@ -94,7 +94,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to myDecisions for accessReviews
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewDecision
+     * @return a CompletableFuture of AccessReviewDecision
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecision> post(@jakarta.annotation.Nonnull final AccessReviewDecision body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AccessReviewDecision::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a myDecisionsRequestBuilder
+     * @return a MyDecisionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MyDecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class MyDecisionsRequestBuilder extends BaseRequestBuilder {
         return new MyDecisionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer.
+     * In the Azure AD access reviews feature, retrieve the decisions of an accessReview object for the calling user as reviewer. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

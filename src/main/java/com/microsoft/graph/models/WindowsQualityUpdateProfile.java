@@ -49,7 +49,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new windowsQualityUpdateProfile and sets the default values.
+     * Instantiates a new WindowsQualityUpdateProfile and sets the default values.
      */
     public WindowsQualityUpdateProfile() {
         super();
@@ -57,7 +57,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsQualityUpdateProfile
+     * @return a WindowsQualityUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsQualityUpdateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments of the profile.
-     * @return a windowsQualityUpdateProfileAssignment
+     * @return a java.util.List<WindowsQualityUpdateProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsQualityUpdateProfileAssignment> getAssignments() {
@@ -82,7 +82,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deployableContentDisplayName property value. Friendly display name of the quality update profile deployable content
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeployableContentDisplayName() {
@@ -90,7 +90,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the profile which is specified by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -98,7 +98,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -106,7 +106,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the expeditedUpdateSettings property value. Expedited update settings.
-     * @return a expeditedWindowsQualityUpdateSettings
+     * @return a ExpeditedWindowsQualityUpdateSettings
      */
     @jakarta.annotation.Nullable
     public ExpeditedWindowsQualityUpdateSettings getExpeditedUpdateSettings() {
@@ -140,7 +140,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the releaseDateDisplayName property value. Friendly release date to display for a Quality Update release
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReleaseDateDisplayName() {
@@ -148,7 +148,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Quality Update entity.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

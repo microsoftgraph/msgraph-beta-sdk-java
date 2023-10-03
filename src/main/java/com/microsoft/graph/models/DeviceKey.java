@@ -21,7 +21,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
     /**
      * The keyMaterial property
      */
-    private byte[] keyMaterial;
+    private Base64url keyMaterial;
     /**
      * The keyType property
      */
@@ -31,7 +31,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new deviceKey and sets the default values.
+     * Instantiates a new DeviceKey and sets the default values.
      */
     public DeviceKey() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceKey
+     * @return a DeviceKey
      */
     @jakarta.annotation.Nonnull
     public static DeviceKey createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
         return new DeviceKey();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,22 +70,22 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getUUIDValue()); });
-        deserializerMap.put("keyMaterial", (n) -> { this.setKeyMaterial(n.getByteArrayValue()); });
+        deserializerMap.put("keyMaterial", (n) -> { this.setKeyMaterial(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("keyType", (n) -> { this.setKeyType(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the keyMaterial property value. The keyMaterial property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getKeyMaterial() {
+    public Base64url getKeyMaterial() {
         return this.keyMaterial;
     }
     /**
      * Gets the keyType property value. The keyType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKeyType() {
@@ -93,7 +93,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,14 +106,14 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeUUIDValue("deviceId", this.getDeviceId());
-        writer.writeByteArrayValue("keyMaterial", this.getKeyMaterial());
+        writer.writeObjectValue("keyMaterial", this.getKeyMaterial());
         writer.writeStringValue("keyType", this.getKeyType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -129,7 +129,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * Sets the keyMaterial property value. The keyMaterial property
      * @param value Value to set for the keyMaterial property.
      */
-    public void setKeyMaterial(@jakarta.annotation.Nullable final byte[] value) {
+    public void setKeyMaterial(@jakarta.annotation.Nullable final Base64url value) {
         this.keyMaterial = value;
     }
     /**

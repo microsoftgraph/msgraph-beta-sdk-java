@@ -37,7 +37,7 @@ public class GetRemediationSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getRemediationSummary
-     * @return a CompletableFuture of deviceHealthScriptRemediationSummary
+     * @return a CompletableFuture of DeviceHealthScriptRemediationSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationSummary> get() {
@@ -46,7 +46,7 @@ public class GetRemediationSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getRemediationSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptRemediationSummary
+     * @return a CompletableFuture of DeviceHealthScriptRemediationSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptRemediationSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class GetRemediationSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRemediationSummaryRequestBuilder
+     * @return a GetRemediationSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRemediationSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

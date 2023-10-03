@@ -97,7 +97,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
      */
     private LocalDate terminationDate;
     /**
-     * Instantiates a new employee and sets the default values.
+     * Instantiates a new Employee and sets the default values.
      */
     public Employee() {
         this.setAdditionalData(new HashMap<>());
@@ -105,7 +105,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a employee
+     * @return a Employee
      */
     @jakarta.annotation.Nonnull
     public static Employee createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -113,7 +113,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
         return new Employee();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. The address property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
@@ -138,7 +138,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -146,7 +146,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -191,7 +191,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the givenName property value. The givenName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -207,7 +207,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jobTitle property value. The jobTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -223,7 +223,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the middleName property value. The middleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMiddleName() {
@@ -231,7 +231,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mobilePhone property value. The mobilePhone property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
@@ -239,7 +239,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -247,7 +247,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -255,7 +255,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the personalEmail property value. The personalEmail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPersonalEmail() {
@@ -263,7 +263,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -271,7 +271,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a picture
+     * @return a java.util.List<Picture>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -279,7 +279,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the statisticsGroupCode property value. The statisticsGroupCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatisticsGroupCode() {
@@ -287,7 +287,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -295,7 +295,7 @@ public class Employee implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the surname property value. The surname property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -338,8 +338,8 @@ public class Employee implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

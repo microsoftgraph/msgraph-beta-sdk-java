@@ -60,7 +60,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The mobile app categories.
-     * @return a CompletableFuture of mobileAppCategoryCollectionResponse
+     * @return a CompletableFuture of MobileAppCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * The mobile app categories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategoryCollectionResponse
+     * @return a CompletableFuture of MobileAppCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to mobileAppCategories for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> post(@jakarta.annotation.Nonnull final MobileAppCategory body) {
@@ -92,7 +92,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to mobileAppCategories for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> post(@jakarta.annotation.Nonnull final MobileAppCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MobileAppCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mobileAppCategoriesRequestBuilder
+     * @return a MobileAppCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MobileAppCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

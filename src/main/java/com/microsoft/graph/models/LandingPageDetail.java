@@ -9,19 +9,19 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LandingPageDetail extends Entity implements Parsable {
     /**
-     * The content property
+     * Landing page detail content.
      */
     private String content;
     /**
-     * The isDefaultLangauge property
+     * Indicates whether this language detail is default for the landing page.
      */
     private Boolean isDefaultLangauge;
     /**
-     * The language property
+     * The content language for the landing page.
      */
     private String language;
     /**
-     * Instantiates a new landingPageDetail and sets the default values.
+     * Instantiates a new LandingPageDetail and sets the default values.
      */
     public LandingPageDetail() {
         super();
@@ -29,7 +29,7 @@ public class LandingPageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a landingPageDetail
+     * @return a LandingPageDetail
      */
     @jakarta.annotation.Nonnull
     public static LandingPageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,8 +37,8 @@ public class LandingPageDetail extends Entity implements Parsable {
         return new LandingPageDetail();
     }
     /**
-     * Gets the content property value. The content property
-     * @return a string
+     * Gets the content property value. Landing page detail content.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -57,16 +57,16 @@ public class LandingPageDetail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
-     * @return a boolean
+     * Gets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
         return this.isDefaultLangauge;
     }
     /**
-     * Gets the language property value. The language property
-     * @return a string
+     * Gets the language property value. The content language for the landing page.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -84,21 +84,21 @@ public class LandingPageDetail extends Entity implements Parsable {
         writer.writeStringValue("language", this.getLanguage());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Landing page detail content.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether this language detail is default for the landing page.
      * @param value Value to set for the isDefaultLangauge property.
      */
     public void setIsDefaultLangauge(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultLangauge = value;
     }
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. The content language for the landing page.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {

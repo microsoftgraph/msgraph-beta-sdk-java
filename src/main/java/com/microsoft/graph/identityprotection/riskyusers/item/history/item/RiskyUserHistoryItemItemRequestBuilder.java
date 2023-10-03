@@ -56,8 +56,8 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a riskyUserHistoryItem object of a riskyUser.
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * Get a riskyUserHistoryItem object of a riskyUser. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of RiskyUserHistoryItem
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuserhistoryitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a riskyUserHistoryItem object of a riskyUser.
+     * Get a riskyUserHistoryItem object of a riskyUser. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      * @see <a href="https://learn.microsoft.com/graph/api/riskyuserhistoryitem-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property history in identityProtection
      * @param body The request body
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body) {
@@ -91,7 +91,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property history in identityProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of riskyUserHistoryItem
+     * @return a CompletableFuture of RiskyUserHistoryItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RiskyUserHistoryItem> patch(@jakarta.annotation.Nonnull final RiskyUserHistoryItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a riskyUserHistoryItem object of a riskyUser.
+     * Get a riskyUserHistoryItem object of a riskyUser. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a riskyUserHistoryItem object of a riskyUser.
+     * Get a riskyUserHistoryItem object of a riskyUser. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class RiskyUserHistoryItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a riskyUserHistoryItem object of a riskyUser.
+     * Get a riskyUserHistoryItem object of a riskyUser. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

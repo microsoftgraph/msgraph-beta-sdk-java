@@ -46,7 +46,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
      */
     private OffsetDateTime sequenceStartDateTime;
     /**
-     * Instantiates a new sequentialActivationRenewalsAlertIncident and sets the default values.
+     * Instantiates a new SequentialActivationRenewalsAlertIncident and sets the default values.
      */
     public SequentialActivationRenewalsAlertIncident() {
         super();
@@ -55,7 +55,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sequentialActivationRenewalsAlertIncident
+     * @return a SequentialActivationRenewalsAlertIncident
      */
     @jakarta.annotation.Nonnull
     public static SequentialActivationRenewalsAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the activationCount property value. The length of sequential activation of the same role.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActivationCount() {
@@ -72,7 +72,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
@@ -80,7 +80,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeId() {
@@ -88,7 +88,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
@@ -114,7 +114,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -122,7 +122,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the roleDisplayName property value. The display name for the directory role.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDisplayName() {
@@ -130,7 +130,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
     }
     /**
      * Gets the roleTemplateId property value. The globally unique identifier for the directory role.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleTemplateId() {

@@ -39,24 +39,24 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
     }
     /**
      * Invoke function getRoleScopeTagsByResource
-     * @return a CompletableFuture of getRoleScopeTagsByResourceWithResourceResponse
+     * @return a CompletableFuture of GetRoleScopeTagsByResourceWithResourceGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByResourceWithResourceResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByResourceWithResourceGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getRoleScopeTagsByResource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRoleScopeTagsByResourceWithResourceResponse
+     * @return a CompletableFuture of GetRoleScopeTagsByResourceWithResourceGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByResourceWithResourceResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByResourceWithResourceGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByResourceWithResourceResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByResourceWithResourceGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getRoleScopeTagsByResource
@@ -90,7 +90,7 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRoleScopeTagsByResourceWithResourceRequestBuilder
+     * @return a GetRoleScopeTagsByResourceWithResourceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRoleScopeTagsByResourceWithResourceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

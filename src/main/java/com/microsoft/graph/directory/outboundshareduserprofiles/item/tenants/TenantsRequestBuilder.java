@@ -59,8 +59,8 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/outboundSharedUserProfiles/{outboundSharedUserProfile%2DuserId}/tenants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile.
-     * @return a CompletableFuture of tenantReferenceCollectionResponse
+     * List the tenant references of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of TenantReferenceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-list-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile.
+     * List the tenant references of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantReferenceCollectionResponse
+     * @return a CompletableFuture of TenantReferenceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/outboundshareduserprofile-list-tenants?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to tenants for directory
      * @param body The request body
-     * @return a CompletableFuture of tenantReference
+     * @return a CompletableFuture of TenantReference
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantReference> post(@jakarta.annotation.Nonnull final TenantReference body) {
@@ -94,7 +94,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tenants for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantReference
+     * @return a CompletableFuture of TenantReference
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantReference> post(@jakarta.annotation.Nonnull final TenantReference body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TenantReference::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile.
+     * List the tenant references of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile.
+     * List the tenant references of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tenantsRequestBuilder
+     * @return a TenantsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TenantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class TenantsRequestBuilder extends BaseRequestBuilder {
         return new TenantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the tenant references of an outboundSharedUserProfile.
+     * List the tenant references of an outboundSharedUserProfile. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

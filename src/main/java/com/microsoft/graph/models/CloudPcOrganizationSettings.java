@@ -29,7 +29,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      */
     private CloudPcWindowsSettings windowsSettings;
     /**
-     * Instantiates a new cloudPcOrganizationSettings and sets the default values.
+     * Instantiates a new CloudPcOrganizationSettings and sets the default values.
      */
     public CloudPcOrganizationSettings() {
         super();
@@ -37,7 +37,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcOrganizationSettings
+     * @return a CloudPcOrganizationSettings
      */
     @jakarta.annotation.Nonnull
     public static CloudPcOrganizationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the enableMEMAutoEnroll property value. Specifies whether new Cloud PCs will be automatically enrolled in Microsoft Endpoint Manager (MEM). The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableMEMAutoEnroll() {
@@ -54,7 +54,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSingleSignOn() {
@@ -76,7 +76,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
-     * @return a cloudPcOperatingSystem
+     * @return a CloudPcOperatingSystem
      */
     @jakarta.annotation.Nullable
     public CloudPcOperatingSystem getOsVersion() {
@@ -84,7 +84,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
-     * @return a cloudPcUserAccountType
+     * @return a CloudPcUserAccountType
      */
     @jakarta.annotation.Nullable
     public CloudPcUserAccountType getUserAccountType() {
@@ -92,7 +92,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the windowsSettings property value. Represents the Cloud PC organization settings for a tenant. A tenant has only one cloudPcOrganizationSettings object. The default language value en-US.
-     * @return a cloudPcWindowsSettings
+     * @return a CloudPcWindowsSettings
      */
     @jakarta.annotation.Nullable
     public CloudPcWindowsSettings getWindowsSettings() {

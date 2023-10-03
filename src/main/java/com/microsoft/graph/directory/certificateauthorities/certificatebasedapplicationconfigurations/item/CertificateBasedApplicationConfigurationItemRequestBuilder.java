@@ -45,17 +45,15 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
+     * Delete navigation property certificateBasedApplicationConfigurations for directory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete() {
         return delete(null);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Delete navigation property certificateBasedApplicationConfigurations for directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -66,19 +64,17 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
-     * @return a CompletableFuture of certificateBasedApplicationConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * Get certificateBasedApplicationConfigurations from directory
+     * @return a CompletableFuture of CertificateBasedApplicationConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedApplicationConfiguration> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Get certificateBasedApplicationConfigurations from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedApplicationConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of CertificateBasedApplicationConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedApplicationConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,21 +85,19 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return this.requestAdapter.sendAsync(requestInfo, CertificateBasedApplicationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a certificateBasedApplicationConfiguration object. To update the trustedCertificateAuthorities within a certificateBasedApplicationConfiguration object, use the Update certificateAuthorityAsEntity operation.
+     * Update the navigation property certificateBasedApplicationConfigurations in directory
      * @param body The request body
-     * @return a CompletableFuture of certificateBasedApplicationConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of CertificateBasedApplicationConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedApplicationConfiguration> patch(@jakarta.annotation.Nonnull final CertificateBasedApplicationConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a certificateBasedApplicationConfiguration object. To update the trustedCertificateAuthorities within a certificateBasedApplicationConfiguration object, use the Update certificateAuthorityAsEntity operation.
+     * Update the navigation property certificateBasedApplicationConfigurations in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateBasedApplicationConfiguration
-     * @see <a href="https://learn.microsoft.com/graph/api/certificatebasedapplicationconfiguration-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of CertificateBasedApplicationConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateBasedApplicationConfiguration> patch(@jakarta.annotation.Nonnull final CertificateBasedApplicationConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -115,7 +109,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return this.requestAdapter.sendAsync(requestInfo, CertificateBasedApplicationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Delete navigation property certificateBasedApplicationConfigurations for directory
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +117,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Delete navigation property certificateBasedApplicationConfigurations for directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -142,7 +136,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Get certificateBasedApplicationConfigurations from directory
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +144,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Get certificateBasedApplicationConfigurations from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -171,7 +165,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return requestInfo;
     }
     /**
-     * Update the properties of a certificateBasedApplicationConfiguration object. To update the trustedCertificateAuthorities within a certificateBasedApplicationConfiguration object, use the Update certificateAuthorityAsEntity operation.
+     * Update the navigation property certificateBasedApplicationConfigurations in directory
      * @param body The request body
      * @return a RequestInformation
      */
@@ -180,7 +174,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a certificateBasedApplicationConfiguration object. To update the trustedCertificateAuthorities within a certificateBasedApplicationConfiguration object, use the Update certificateAuthorityAsEntity operation.
+     * Update the navigation property certificateBasedApplicationConfigurations in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -219,7 +213,7 @@ public class CertificateBasedApplicationConfigurationItemRequestBuilder extends 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a certificateBasedApplicationConfiguration object.
+     * Get certificateBasedApplicationConfigurations from directory
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

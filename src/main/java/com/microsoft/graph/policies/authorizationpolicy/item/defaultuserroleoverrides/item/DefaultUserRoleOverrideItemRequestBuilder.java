@@ -57,7 +57,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get defaultUserRoleOverrides from policies
-     * @return a CompletableFuture of defaultUserRoleOverride
+     * @return a CompletableFuture of DefaultUserRoleOverride
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultUserRoleOverride> get() {
@@ -66,7 +66,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder extends BaseRequestBuilde
     /**
      * Get defaultUserRoleOverrides from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultUserRoleOverride
+     * @return a CompletableFuture of DefaultUserRoleOverride
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultUserRoleOverride> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property defaultUserRoleOverrides in policies
      * @param body The request body
-     * @return a CompletableFuture of defaultUserRoleOverride
+     * @return a CompletableFuture of DefaultUserRoleOverride
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultUserRoleOverride> patch(@jakarta.annotation.Nonnull final DefaultUserRoleOverride body) {
@@ -89,7 +89,7 @@ public class DefaultUserRoleOverrideItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property defaultUserRoleOverrides in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultUserRoleOverride
+     * @return a CompletableFuture of DefaultUserRoleOverride
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultUserRoleOverride> patch(@jakarta.annotation.Nonnull final DefaultUserRoleOverride body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

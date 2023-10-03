@@ -57,7 +57,7 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get details from security
-     * @return a CompletableFuture of landingPageDetail
+     * @return a CompletableFuture of LandingPageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageDetail> get() {
@@ -66,7 +66,7 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get details from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPageDetail
+     * @return a CompletableFuture of LandingPageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property details in security
      * @param body The request body
-     * @return a CompletableFuture of landingPageDetail
+     * @return a CompletableFuture of LandingPageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageDetail> patch(@jakarta.annotation.Nonnull final LandingPageDetail body) {
@@ -89,7 +89,7 @@ public class LandingPageDetailItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property details in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPageDetail
+     * @return a CompletableFuture of LandingPageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageDetail> patch(@jakarta.annotation.Nonnull final LandingPageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -13,7 +13,7 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
      */
     private String targetServicePlanId;
     /**
-     * Instantiates a new cloudPcBulkResize and sets the default values.
+     * Instantiates a new CloudPcBulkResize and sets the default values.
      */
     public CloudPcBulkResize() {
         super();
@@ -22,7 +22,7 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcBulkResize
+     * @return a CloudPcBulkResize
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkResize createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
     }
     /**
      * Gets the targetServicePlanId property value. The targetServicePlanId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetServicePlanId() {

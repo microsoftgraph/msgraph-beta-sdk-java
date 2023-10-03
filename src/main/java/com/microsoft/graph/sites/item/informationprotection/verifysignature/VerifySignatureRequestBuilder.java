@@ -38,7 +38,7 @@ public class VerifySignatureRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action verifySignature
      * @param body The request body
-     * @return a CompletableFuture of verificationResult
+     * @return a CompletableFuture of VerificationResult
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -51,7 +51,7 @@ public class VerifySignatureRequestBuilder extends BaseRequestBuilder {
      * Invoke action verifySignature
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of verificationResult
+     * @return a CompletableFuture of VerificationResult
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -106,7 +106,7 @@ public class VerifySignatureRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a verifySignatureRequestBuilder
+     * @return a VerifySignatureRequestBuilder
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */

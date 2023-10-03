@@ -57,7 +57,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get summary from privilegedRoleAssignments
-     * @return a CompletableFuture of privilegedRoleSummary
+     * @return a CompletableFuture of PrivilegedRoleSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleSummary> get() {
@@ -66,7 +66,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Get summary from privilegedRoleAssignments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleSummary
+     * @return a CompletableFuture of PrivilegedRoleSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property summary in privilegedRoleAssignments
      * @param body The request body
-     * @return a CompletableFuture of privilegedRoleSummary
+     * @return a CompletableFuture of PrivilegedRoleSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleSummary> patch(@jakarta.annotation.Nonnull final PrivilegedRoleSummary body) {
@@ -89,7 +89,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property summary in privilegedRoleAssignments
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleSummary
+     * @return a CompletableFuture of PrivilegedRoleSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleSummary> patch(@jakarta.annotation.Nonnull final PrivilegedRoleSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a summaryRequestBuilder
+     * @return a SummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

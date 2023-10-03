@@ -37,7 +37,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
      */
     private java.util.List<GroupPolicyPresentationValue> presentationValues;
     /**
-     * Instantiates a new groupPolicyDefinitionValue and sets the default values.
+     * Instantiates a new GroupPolicyDefinitionValue and sets the default values.
      */
     public GroupPolicyDefinitionValue() {
         super();
@@ -45,7 +45,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyDefinitionValue
+     * @return a GroupPolicyDefinitionValue
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyDefinitionValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the configurationType property value. Group Policy Configuration Type
-     * @return a groupPolicyConfigurationType
+     * @return a GroupPolicyConfigurationType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyConfigurationType getConfigurationType() {
@@ -70,7 +70,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the definition property value. The associated group policy definition with the value.
-     * @return a groupPolicyDefinition
+     * @return a GroupPolicyDefinition
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
@@ -78,7 +78,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the enabled property value. Enables or disables the associated group policy definition.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -109,7 +109,7 @@ public class GroupPolicyDefinitionValue extends Entity implements Parsable {
     }
     /**
      * Gets the presentationValues property value. The associated group policy presentation values with the definition value.
-     * @return a groupPolicyPresentationValue
+     * @return a java.util.List<GroupPolicyPresentationValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyPresentationValue> getPresentationValues() {

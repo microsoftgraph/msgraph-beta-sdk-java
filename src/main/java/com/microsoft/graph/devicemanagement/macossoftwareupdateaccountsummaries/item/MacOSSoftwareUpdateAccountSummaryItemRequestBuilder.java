@@ -65,7 +65,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder extends BaseReq
     }
     /**
      * The MacOS software update account summaries for this account.
-     * @return a CompletableFuture of macOSSoftwareUpdateAccountSummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateAccountSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateAccountSummary> get() {
@@ -74,7 +74,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder extends BaseReq
     /**
      * The MacOS software update account summaries for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSSoftwareUpdateAccountSummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateAccountSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateAccountSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property macOSSoftwareUpdateAccountSummaries in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of macOSSoftwareUpdateAccountSummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateAccountSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateAccountSummary> patch(@jakarta.annotation.Nonnull final MacOSSoftwareUpdateAccountSummary body) {
@@ -97,7 +97,7 @@ public class MacOSSoftwareUpdateAccountSummaryItemRequestBuilder extends BaseReq
      * Update the navigation property macOSSoftwareUpdateAccountSummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSSoftwareUpdateAccountSummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateAccountSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateAccountSummary> patch(@jakarta.annotation.Nonnull final MacOSSoftwareUpdateAccountSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

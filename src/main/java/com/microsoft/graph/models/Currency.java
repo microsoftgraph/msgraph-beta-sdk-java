@@ -23,7 +23,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     /**
      * The amountRoundingPrecision property
      */
-    private BigDecimal amountRoundingPrecision;
+    private Decimal amountRoundingPrecision;
     /**
      * The code property
      */
@@ -49,7 +49,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
      */
     private String symbol;
     /**
-     * Instantiates a new currency and sets the default values.
+     * Instantiates a new Currency and sets the default values.
      */
     public Currency() {
         this.setAdditionalData(new HashMap<>());
@@ -57,7 +57,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a currency
+     * @return a Currency
      */
     @jakarta.annotation.Nonnull
     public static Currency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
         return new Currency();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the amountDecimalPlaces property value. The amountDecimalPlaces property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAmountDecimalPlaces() {
@@ -82,15 +82,15 @@ public class Currency implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the amountRoundingPrecision property value. The amountRoundingPrecision property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getAmountRoundingPrecision() {
+    public Decimal getAmountRoundingPrecision() {
         return this.amountRoundingPrecision;
     }
     /**
      * Gets the code property value. The code property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -98,7 +98,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -112,7 +112,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("amountDecimalPlaces", (n) -> { this.setAmountDecimalPlaces(n.getStringValue()); });
-        deserializerMap.put("amountRoundingPrecision", (n) -> { this.setAmountRoundingPrecision(n.getBigDecimalValue()); });
+        deserializerMap.put("amountRoundingPrecision", (n) -> { this.setAmountRoundingPrecision(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getUUIDValue()); });
@@ -139,7 +139,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -147,7 +147,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the symbol property value. The symbol property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSymbol() {
@@ -160,7 +160,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("amountDecimalPlaces", this.getAmountDecimalPlaces());
-        writer.writeBigDecimalValue("amountRoundingPrecision", this.getAmountRoundingPrecision());
+        writer.writeObjectValue("amountRoundingPrecision", this.getAmountRoundingPrecision());
         writer.writeStringValue("code", this.getCode());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeUUIDValue("id", this.getId());
@@ -170,8 +170,8 @@ public class Currency implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -187,7 +187,7 @@ public class Currency implements AdditionalDataHolder, Parsable {
      * Sets the amountRoundingPrecision property value. The amountRoundingPrecision property
      * @param value Value to set for the amountRoundingPrecision property.
      */
-    public void setAmountRoundingPrecision(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setAmountRoundingPrecision(@jakarta.annotation.Nullable final Decimal value) {
         this.amountRoundingPrecision = value;
     }
     /**

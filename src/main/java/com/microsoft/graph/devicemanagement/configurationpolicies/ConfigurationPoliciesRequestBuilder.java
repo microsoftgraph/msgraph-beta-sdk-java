@@ -60,7 +60,7 @@ public class ConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of all Configuration policies
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of all Configuration policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to configurationPolicies for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationPolicy
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicy> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body) {
@@ -92,7 +92,7 @@ public class ConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to configurationPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicy
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicy> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ConfigurationPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a configurationPoliciesRequestBuilder
+     * @return a ConfigurationPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

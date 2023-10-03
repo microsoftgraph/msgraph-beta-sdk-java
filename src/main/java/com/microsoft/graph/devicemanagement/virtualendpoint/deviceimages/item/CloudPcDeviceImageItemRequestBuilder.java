@@ -45,7 +45,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/deviceImages/{cloudPcDeviceImage%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a cloudPcDeviceImage object.
+     * Delete a cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcdeviceimage-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a cloudPcDeviceImage object.
+     * Delete a cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcdeviceimage-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a specific cloudPcDeviceImage object.
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * Read the properties and relationships of a specific cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcDeviceImage
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcdeviceimage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a specific cloudPcDeviceImage object.
+     * Read the properties and relationships of a specific cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcdeviceimage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceImages in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImage> patch(@jakarta.annotation.Nonnull final CloudPcDeviceImage body) {
@@ -101,7 +101,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceImages in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcDeviceImage> patch(@jakarta.annotation.Nonnull final CloudPcDeviceImage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcDeviceImage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a cloudPcDeviceImage object.
+     * Delete a cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a cloudPcDeviceImage object.
+     * Delete a cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -140,7 +140,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a specific cloudPcDeviceImage object.
+     * Read the properties and relationships of a specific cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a specific cloudPcDeviceImage object.
+     * Read the properties and relationships of a specific cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a specific cloudPcDeviceImage object.
+     * Read the properties and relationships of a specific cloudPcDeviceImage object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

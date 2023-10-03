@@ -19,13 +19,13 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     /**
      * Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
      */
-    private byte[] customXml;
+    private Base64url customXml;
     /**
      * Custom Xml file name.
      */
     private String customXmlFileName;
     /**
-     * Instantiates a new windows10XVpnConfiguration and sets the default values.
+     * Instantiates a new Windows10XVpnConfiguration and sets the default values.
      */
     public Windows10XVpnConfiguration() {
         super();
@@ -34,7 +34,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10XVpnConfiguration
+     * @return a Windows10XVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10XVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,15 +51,15 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     }
     /**
      * Gets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getCustomXml() {
+    public Base64url getCustomXml() {
         return this.customXml;
     }
     /**
      * Gets the customXmlFileName property value. Custom Xml file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomXmlFileName() {
@@ -73,7 +73,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationCertificateId", (n) -> { this.setAuthenticationCertificateId(n.getUUIDValue()); });
-        deserializerMap.put("customXml", (n) -> { this.setCustomXml(n.getByteArrayValue()); });
+        deserializerMap.put("customXml", (n) -> { this.setCustomXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("customXmlFileName", (n) -> { this.setCustomXmlFileName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -85,7 +85,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeUUIDValue("authenticationCertificateId", this.getAuthenticationCertificateId());
-        writer.writeByteArrayValue("customXml", this.getCustomXml());
+        writer.writeObjectValue("customXml", this.getCustomXml());
         writer.writeStringValue("customXmlFileName", this.getCustomXmlFileName());
     }
     /**
@@ -99,7 +99,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
      * Sets the customXml property value. Custom XML commands that configures the VPN connection. (UTF8 byte encoding)
      * @param value Value to set for the customXml property.
      */
-    public void setCustomXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setCustomXml(@jakarta.annotation.Nullable final Base64url value) {
         this.customXml = value;
     }
     /**

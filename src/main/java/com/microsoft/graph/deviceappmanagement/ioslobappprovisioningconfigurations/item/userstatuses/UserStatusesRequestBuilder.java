@@ -60,7 +60,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of user installation states for this mobile app configuration.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatusCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of user installation states for this mobile app configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatusCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to userStatuses for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body) {
@@ -92,7 +92,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to userStatuses for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationUserStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationUserStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationUserStatus> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationUserStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userStatusesRequestBuilder
+     * @return a UserStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

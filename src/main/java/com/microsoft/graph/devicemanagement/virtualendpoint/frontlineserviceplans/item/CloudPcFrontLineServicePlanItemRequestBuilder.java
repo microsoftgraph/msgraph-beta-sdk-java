@@ -57,7 +57,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get frontLineServicePlans from deviceManagement
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> get() {
@@ -66,7 +66,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
     /**
      * Get frontLineServicePlans from deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property frontLineServicePlans in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> patch(@jakarta.annotation.Nonnull final CloudPcFrontLineServicePlan body) {
@@ -89,7 +89,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
      * Update the navigation property frontLineServicePlans in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> patch(@jakarta.annotation.Nonnull final CloudPcFrontLineServicePlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

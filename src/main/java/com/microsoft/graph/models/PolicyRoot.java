@@ -130,7 +130,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
     /**
-     * Instantiates a new policyRoot and sets the default values.
+     * Instantiates a new PolicyRoot and sets the default values.
      */
     public PolicyRoot() {
         this.setAdditionalData(new HashMap<>());
@@ -138,7 +138,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyRoot
+     * @return a PolicyRoot
      */
     @jakarta.annotation.Nonnull
     public static PolicyRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -147,7 +147,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessReviewPolicy property value. The policy that contains directory-level access review settings.
-     * @return a accessReviewPolicy
+     * @return a AccessReviewPolicy
      */
     @jakarta.annotation.Nullable
     public AccessReviewPolicy getAccessReviewPolicy() {
@@ -155,14 +155,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the activityBasedTimeoutPolicies property value. The policy that controls the idle time out for web sessions for applications.
-     * @return a activityBasedTimeoutPolicy
+     * @return a java.util.List<ActivityBasedTimeoutPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getActivityBasedTimeoutPolicies() {
         return this.activityBasedTimeoutPolicies;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -171,7 +171,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
-     * @return a adminConsentRequestPolicy
+     * @return a AdminConsentRequestPolicy
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy getAdminConsentRequestPolicy() {
@@ -179,7 +179,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     * @return a appManagementPolicy
+     * @return a java.util.List<AppManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
@@ -187,7 +187,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
-     * @return a authenticationFlowsPolicy
+     * @return a AuthenticationFlowsPolicy
      */
     @jakarta.annotation.Nullable
     public AuthenticationFlowsPolicy getAuthenticationFlowsPolicy() {
@@ -195,7 +195,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
-     * @return a authenticationMethodsPolicy
+     * @return a AuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy getAuthenticationMethodsPolicy() {
@@ -203,7 +203,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
-     * @return a authenticationStrengthPolicy
+     * @return a java.util.List<AuthenticationStrengthPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationStrengthPolicy> getAuthenticationStrengthPolicies() {
@@ -211,7 +211,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
-     * @return a authorizationPolicy
+     * @return a java.util.List<AuthorizationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationPolicy> getAuthorizationPolicy() {
@@ -219,7 +219,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the b2cAuthenticationMethodsPolicy property value. The Azure AD B2C policies that define how end users register via local accounts.
-     * @return a b2cAuthenticationMethodsPolicy
+     * @return a B2cAuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy getB2cAuthenticationMethodsPolicy() {
@@ -227,7 +227,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
-     * @return a claimsMappingPolicy
+     * @return a java.util.List<ClaimsMappingPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClaimsMappingPolicy> getClaimsMappingPolicies() {
@@ -235,7 +235,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
-     * @return a conditionalAccessPolicy
+     * @return a java.util.List<ConditionalAccessPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getConditionalAccessPolicies() {
@@ -243,7 +243,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
-     * @return a crossTenantAccessPolicy
+     * @return a CrossTenantAccessPolicy
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy getCrossTenantAccessPolicy() {
@@ -251,7 +251,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
-     * @return a tenantAppManagementPolicy
+     * @return a TenantAppManagementPolicy
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy getDefaultAppManagementPolicy() {
@@ -259,7 +259,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
-     * @return a deviceRegistrationPolicy
+     * @return a DeviceRegistrationPolicy
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationPolicy getDeviceRegistrationPolicy() {
@@ -267,7 +267,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the directoryRoleAccessReviewPolicy property value. The directoryRoleAccessReviewPolicy property
-     * @return a directoryRoleAccessReviewPolicy
+     * @return a DirectoryRoleAccessReviewPolicy
      */
     @jakarta.annotation.Nullable
     public DirectoryRoleAccessReviewPolicy getDirectoryRoleAccessReviewPolicy() {
@@ -275,7 +275,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
-     * @return a externalIdentitiesPolicy
+     * @return a ExternalIdentitiesPolicy
      */
     @jakarta.annotation.Nullable
     public ExternalIdentitiesPolicy getExternalIdentitiesPolicy() {
@@ -283,7 +283,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
-     * @return a featureRolloutPolicy
+     * @return a java.util.List<FeatureRolloutPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
@@ -291,7 +291,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
-     * @return a federatedTokenValidationPolicy
+     * @return a FederatedTokenValidationPolicy
      */
     @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy getFederatedTokenValidationPolicy() {
@@ -337,7 +337,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
-     * @return a homeRealmDiscoveryPolicy
+     * @return a java.util.List<HomeRealmDiscoveryPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
@@ -345,7 +345,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
-     * @return a identitySecurityDefaultsEnforcementPolicy
+     * @return a IdentitySecurityDefaultsEnforcementPolicy
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy getIdentitySecurityDefaultsEnforcementPolicy() {
@@ -353,7 +353,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mobileAppManagementPolicies property value. The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
-     * @return a mobilityManagementPolicy
+     * @return a java.util.List<MobilityManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getMobileAppManagementPolicies() {
@@ -361,7 +361,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mobileDeviceManagementPolicies property value. The mobileDeviceManagementPolicies property
-     * @return a mobilityManagementPolicy
+     * @return a java.util.List<MobilityManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getMobileDeviceManagementPolicies() {
@@ -369,7 +369,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -377,7 +377,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
-     * @return a permissionGrantPolicy
+     * @return a java.util.List<PermissionGrantPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantPolicy> getPermissionGrantPolicies() {
@@ -385,7 +385,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roleManagementPolicies property value. Represents the role management policies.
-     * @return a unifiedRoleManagementPolicy
+     * @return a java.util.List<UnifiedRoleManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicy> getRoleManagementPolicies() {
@@ -393,7 +393,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
-     * @return a unifiedRoleManagementPolicyAssignment
+     * @return a java.util.List<UnifiedRoleManagementPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyAssignment> getRoleManagementPolicyAssignments() {
@@ -401,7 +401,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePrincipalCreationPolicies property value. The servicePrincipalCreationPolicies property
-     * @return a servicePrincipalCreationPolicy
+     * @return a java.util.List<ServicePrincipalCreationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationPolicy> getServicePrincipalCreationPolicies() {
@@ -409,7 +409,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
-     * @return a tokenIssuancePolicy
+     * @return a java.util.List<TokenIssuancePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
@@ -417,7 +417,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
-     * @return a tokenLifetimePolicy
+     * @return a java.util.List<TokenLifetimePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
@@ -475,8 +475,8 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         this.activityBasedTimeoutPolicies = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

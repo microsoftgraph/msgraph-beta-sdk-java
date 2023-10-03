@@ -46,7 +46,7 @@ public class CompanyInformationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get companyInformation from financials
-     * @return a CompletableFuture of companyInformation
+     * @return a CompletableFuture of CompanyInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanyInformation> get() {
@@ -55,7 +55,7 @@ public class CompanyInformationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get companyInformation from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companyInformation
+     * @return a CompletableFuture of CompanyInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanyInformation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -68,7 +68,7 @@ public class CompanyInformationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property companyInformation in financials
      * @param body The request body
-     * @return a CompletableFuture of companyInformation
+     * @return a CompletableFuture of CompanyInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanyInformation> patch(@jakarta.annotation.Nonnull final CompanyInformation body) {
@@ -78,7 +78,7 @@ public class CompanyInformationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property companyInformation in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companyInformation
+     * @return a CompletableFuture of CompanyInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanyInformation> patch(@jakarta.annotation.Nonnull final CompanyInformation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

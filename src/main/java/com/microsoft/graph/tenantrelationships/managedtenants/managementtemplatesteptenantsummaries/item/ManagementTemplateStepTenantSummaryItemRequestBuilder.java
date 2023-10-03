@@ -57,7 +57,7 @@ public class ManagementTemplateStepTenantSummaryItemRequestBuilder extends BaseR
     }
     /**
      * Get managementTemplateStepTenantSummaries from tenantRelationships
-     * @return a CompletableFuture of managementTemplateStepTenantSummary
+     * @return a CompletableFuture of ManagementTemplateStepTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepTenantSummary> get() {
@@ -66,7 +66,7 @@ public class ManagementTemplateStepTenantSummaryItemRequestBuilder extends BaseR
     /**
      * Get managementTemplateStepTenantSummaries from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepTenantSummary
+     * @return a CompletableFuture of ManagementTemplateStepTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepTenantSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagementTemplateStepTenantSummaryItemRequestBuilder extends BaseR
     /**
      * Update the navigation property managementTemplateStepTenantSummaries in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateStepTenantSummary
+     * @return a CompletableFuture of ManagementTemplateStepTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepTenantSummary> patch(@jakarta.annotation.Nonnull final ManagementTemplateStepTenantSummary body) {
@@ -89,7 +89,7 @@ public class ManagementTemplateStepTenantSummaryItemRequestBuilder extends BaseR
      * Update the navigation property managementTemplateStepTenantSummaries in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepTenantSummary
+     * @return a CompletableFuture of ManagementTemplateStepTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepTenantSummary> patch(@jakarta.annotation.Nonnull final ManagementTemplateStepTenantSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

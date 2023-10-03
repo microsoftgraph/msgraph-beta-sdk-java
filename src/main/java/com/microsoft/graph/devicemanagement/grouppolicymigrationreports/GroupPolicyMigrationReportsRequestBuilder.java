@@ -68,7 +68,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     }
     /**
      * A list of Group Policy migration reports.
-     * @return a CompletableFuture of groupPolicyMigrationReportCollectionResponse
+     * @return a CompletableFuture of GroupPolicyMigrationReportCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyMigrationReportCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * A list of Group Policy migration reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyMigrationReportCollectionResponse
+     * @return a CompletableFuture of GroupPolicyMigrationReportCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyMigrationReportCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to groupPolicyMigrationReports for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyMigrationReport
+     * @return a CompletableFuture of GroupPolicyMigrationReport
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyMigrationReport> post(@jakarta.annotation.Nonnull final GroupPolicyMigrationReport body) {
@@ -100,7 +100,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to groupPolicyMigrationReports for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyMigrationReport
+     * @return a CompletableFuture of GroupPolicyMigrationReport
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyMigrationReport> post(@jakarta.annotation.Nonnull final GroupPolicyMigrationReport body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class GroupPolicyMigrationReportsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupPolicyMigrationReportsRequestBuilder
+     * @return a GroupPolicyMigrationReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyMigrationReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

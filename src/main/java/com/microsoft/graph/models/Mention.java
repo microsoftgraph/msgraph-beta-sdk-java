@@ -42,7 +42,7 @@ public class Mention extends Entity implements Parsable {
      */
     private OffsetDateTime serverCreatedDateTime;
     /**
-     * Instantiates a new mention and sets the default values.
+     * Instantiates a new Mention and sets the default values.
      */
     public Mention() {
         super();
@@ -50,7 +50,7 @@ public class Mention extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mention
+     * @return a Mention
      */
     @jakarta.annotation.Nonnull
     public static Mention createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the application property value. The name of the application where the mention is created. Optional. Not used and defaulted as null for message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplication() {
@@ -67,7 +67,7 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the clientReference property value. A unique identifier that represents a parent of the resource instance. Optional. Not used and defaulted as null for message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientReference() {
@@ -75,7 +75,7 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The email information of the user who made the mention.
-     * @return a emailAddress
+     * @return a EmailAddress
      */
     @jakarta.annotation.Nullable
     public EmailAddress getCreatedBy() {
@@ -91,7 +91,7 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the deepLink property value. A deep web link to the context of the mention in the resource instance. Optional. Not used and defaulted as null for message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeepLink() {
@@ -116,7 +116,7 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the mentioned property value. The mentioned property
-     * @return a emailAddress
+     * @return a EmailAddress
      */
     @jakarta.annotation.Nullable
     public EmailAddress getMentioned() {
@@ -124,7 +124,7 @@ public class Mention extends Entity implements Parsable {
     }
     /**
      * Gets the mentionText property value. Optional. Not used and defaulted as null for message. To get the mentions in a message, see the bodyPreview property of the message instead.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMentionText() {

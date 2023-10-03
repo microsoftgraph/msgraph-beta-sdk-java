@@ -185,7 +185,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of messages in the mailFolder.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> get() {
@@ -194,7 +194,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of messages in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property messages in users
      * @param body The request body
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> patch(@jakarta.annotation.Nonnull final Message body) {
@@ -217,7 +217,7 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property messages in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of message
+     * @return a CompletableFuture of Message
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Message> patch(@jakarta.annotation.Nonnull final Message body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

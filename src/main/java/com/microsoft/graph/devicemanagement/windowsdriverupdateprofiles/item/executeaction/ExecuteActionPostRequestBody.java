@@ -28,7 +28,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      */
     private java.util.List<String> driverIds;
     /**
-     * Instantiates a new executeActionPostRequestBody and sets the default values.
+     * Instantiates a new ExecuteActionPostRequestBody and sets the default values.
      */
     public ExecuteActionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -36,7 +36,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a executeActionPostRequestBody
+     * @return a ExecuteActionPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ExecuteActionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,14 +45,14 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the actionName property value. An enum type to represent approval actions of single or list of drivers.
-     * @return a driverApprovalAction
+     * @return a DriverApprovalAction
      */
     @jakarta.annotation.Nullable
     public DriverApprovalAction getActionName() {
         return this.actionName;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the driverIds property value. The driverIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDriverIds() {
@@ -106,8 +106,8 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
         this.actionName = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

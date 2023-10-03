@@ -34,7 +34,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<MeetingParticipantInfo> producers;
     /**
-     * Instantiates a new meetingParticipants and sets the default values.
+     * Instantiates a new MeetingParticipants and sets the default values.
      */
     public MeetingParticipants() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingParticipants
+     * @return a MeetingParticipants
      */
     @jakarta.annotation.Nonnull
     public static MeetingParticipants createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
         return new MeetingParticipants();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the attendees property value. Information of the meeting attendees.
-     * @return a meetingParticipantInfo
+     * @return a java.util.List<MeetingParticipantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingParticipantInfo> getAttendees() {
@@ -67,7 +67,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contributors property value. The contributors property
-     * @return a meetingParticipantInfo
+     * @return a java.util.List<MeetingParticipantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingParticipantInfo> getContributors() {
@@ -89,7 +89,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organizer property value. Information of the meeting organizer.
-     * @return a meetingParticipantInfo
+     * @return a MeetingParticipantInfo
      */
     @jakarta.annotation.Nullable
     public MeetingParticipantInfo getOrganizer() {
@@ -105,7 +105,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the producers property value. The producers property
-     * @return a meetingParticipantInfo
+     * @return a java.util.List<MeetingParticipantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingParticipantInfo> getProducers() {
@@ -125,8 +125,8 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

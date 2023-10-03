@@ -318,7 +318,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get companies from financials
-     * @return a CompletableFuture of company
+     * @return a CompletableFuture of Company
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Company> get() {
@@ -327,7 +327,7 @@ public class CompanyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get companies from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of company
+     * @return a CompletableFuture of Company
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Company> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

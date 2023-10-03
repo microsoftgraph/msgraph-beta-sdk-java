@@ -34,7 +34,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      */
     private UserNewMessageRestriction userNewMessageRestriction;
     /**
-     * Instantiates a new channelModerationSettings and sets the default values.
+     * Instantiates a new ChannelModerationSettings and sets the default values.
      */
     public ChannelModerationSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a channelModerationSettings
+     * @return a ChannelModerationSettings
      */
     @jakarta.annotation.Nonnull
     public static ChannelModerationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
         return new ChannelModerationSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the allowNewMessageFromBots property value. Indicates whether bots are allowed to post messages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowNewMessageFromBots() {
@@ -67,7 +67,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the allowNewMessageFromConnectors property value. Indicates whether connectors are allowed to post messages.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowNewMessageFromConnectors() {
@@ -89,7 +89,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
-     * @return a replyRestriction
+     * @return a ReplyRestriction
      */
     @jakarta.annotation.Nullable
     public ReplyRestriction getReplyRestriction() {
@@ -105,7 +105,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the userNewMessageRestriction property value. Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
-     * @return a userNewMessageRestriction
+     * @return a UserNewMessageRestriction
      */
     @jakarta.annotation.Nullable
     public UserNewMessageRestriction getUserNewMessageRestriction() {
@@ -125,8 +125,8 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

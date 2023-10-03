@@ -57,7 +57,7 @@ public class DeviceManagementIntentDeviceStateItemRequestBuilder extends BaseReq
     }
     /**
      * Collection of states of all devices that the intent is applied to
-     * @return a CompletableFuture of deviceManagementIntentDeviceState
+     * @return a CompletableFuture of DeviceManagementIntentDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceState> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementIntentDeviceStateItemRequestBuilder extends BaseReq
     /**
      * Collection of states of all devices that the intent is applied to
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentDeviceState
+     * @return a CompletableFuture of DeviceManagementIntentDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementIntentDeviceStateItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property deviceStates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntentDeviceState
+     * @return a CompletableFuture of DeviceManagementIntentDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceState> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceState body) {
@@ -89,7 +89,7 @@ public class DeviceManagementIntentDeviceStateItemRequestBuilder extends BaseReq
      * Update the navigation property deviceStates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentDeviceState
+     * @return a CompletableFuture of DeviceManagementIntentDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceState> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

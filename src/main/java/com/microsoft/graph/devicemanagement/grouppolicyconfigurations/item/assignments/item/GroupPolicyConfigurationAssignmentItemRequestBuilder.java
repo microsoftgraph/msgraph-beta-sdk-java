@@ -57,7 +57,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder extends BaseRe
     }
     /**
      * The list of group assignments for the configuration.
-     * @return a CompletableFuture of groupPolicyConfigurationAssignment
+     * @return a CompletableFuture of GroupPolicyConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyConfigurationAssignment> get() {
@@ -66,7 +66,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder extends BaseRe
     /**
      * The list of group assignments for the configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyConfigurationAssignment
+     * @return a CompletableFuture of GroupPolicyConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyConfigurationAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyConfigurationAssignment
+     * @return a CompletableFuture of GroupPolicyConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyConfigurationAssignment> patch(@jakarta.annotation.Nonnull final GroupPolicyConfigurationAssignment body) {
@@ -89,7 +89,7 @@ public class GroupPolicyConfigurationAssignmentItemRequestBuilder extends BaseRe
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyConfigurationAssignment
+     * @return a CompletableFuture of GroupPolicyConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyConfigurationAssignment> patch(@jakarta.annotation.Nonnull final GroupPolicyConfigurationAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

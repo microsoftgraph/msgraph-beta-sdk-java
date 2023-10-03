@@ -57,7 +57,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder extends Base
     }
     /**
      * The list of group assignments of the profile.
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignment
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignment> get() {
@@ -66,7 +66,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder extends Base
     /**
      * The list of group assignments of the profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignment
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder extends Base
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignment
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignment> patch(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfileAssignment body) {
@@ -89,7 +89,7 @@ public class WindowsDriverUpdateProfileAssignmentItemRequestBuilder extends Base
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignment
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignment> patch(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfileAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

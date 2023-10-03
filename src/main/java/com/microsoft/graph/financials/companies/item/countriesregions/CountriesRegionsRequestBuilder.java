@@ -61,7 +61,7 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get countriesRegions from financials
-     * @return a CompletableFuture of countryRegionCollectionResponse
+     * @return a CompletableFuture of CountryRegionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegionCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get countriesRegions from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of countryRegionCollectionResponse
+     * @return a CompletableFuture of CountryRegionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to countriesRegions for financials
      * @param body The request body
-     * @return a CompletableFuture of countryRegion
+     * @return a CompletableFuture of CountryRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegion> post(@jakarta.annotation.Nonnull final CountryRegion body) {
@@ -93,7 +93,7 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to countriesRegions for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of countryRegion
+     * @return a CompletableFuture of CountryRegion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CountryRegion> post(@jakarta.annotation.Nonnull final CountryRegion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class CountriesRegionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a countriesRegionsRequestBuilder
+     * @return a CountriesRegionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CountriesRegionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

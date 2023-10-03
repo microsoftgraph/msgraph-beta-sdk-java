@@ -66,7 +66,7 @@ public class AccessReview extends Entity implements Parsable {
      */
     private String status;
     /**
-     * Instantiates a new accessReview and sets the default values.
+     * Instantiates a new AccessReview and sets the default values.
      */
     public AccessReview() {
         super();
@@ -74,7 +74,7 @@ public class AccessReview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReview
+     * @return a AccessReview
      */
     @jakarta.annotation.Nonnull
     public static AccessReview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the businessFlowTemplateId property value. The business flow template identifier. Required on create.  This value is case sensitive.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBusinessFlowTemplateId() {
@@ -91,7 +91,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created this review.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getCreatedBy() {
@@ -99,7 +99,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. The collection of decisions for this access review.
-     * @return a accessReviewDecision
+     * @return a java.util.List<AccessReviewDecision>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewDecision> getDecisions() {
@@ -107,7 +107,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description provided by the access review creator, to show to the reviewers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -115,7 +115,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The access review name. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -154,7 +154,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the instances property value. The collection of access reviews instances past, present and future, if this object is a recurring access review.
-     * @return a accessReview
+     * @return a java.util.List<AccessReview>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReview> getInstances() {
@@ -162,7 +162,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the myDecisions property value. The collection of decisions for the caller, if the caller is a reviewer.
-     * @return a accessReviewDecision
+     * @return a java.util.List<AccessReviewDecision>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewDecision> getMyDecisions() {
@@ -170,7 +170,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the reviewedEntity property value. The object for which the access reviews is reviewing the access rights assignments. This can be the group for the review of memberships of users in a group, or the app for a review of assignments of users to an application. Required on create.
-     * @return a identity
+     * @return a Identity
      */
     @jakarta.annotation.Nullable
     public Identity getReviewedEntity() {
@@ -178,7 +178,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the reviewers property value. The collection of reviewers for an access review, if access review reviewerType is of type delegated.
-     * @return a accessReviewReviewer
+     * @return a java.util.List<AccessReviewReviewer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewReviewer> getReviewers() {
@@ -186,7 +186,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the reviewerType property value. The relationship type of reviewer to the target object, one of self, delegated or entityOwners. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewerType() {
@@ -194,7 +194,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings of an accessReview, see type definition below.
-     * @return a accessReviewSettings
+     * @return a AccessReviewSettings
      */
     @jakarta.annotation.Nullable
     public AccessReviewSettings getSettings() {
@@ -210,7 +210,7 @@ public class AccessReview extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

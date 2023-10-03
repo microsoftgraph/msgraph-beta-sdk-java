@@ -65,7 +65,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     }
     /**
      * The summary states of compliance policy settings for this account.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> get() {
@@ -74,7 +74,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     /**
      * The summary states of compliance policy settings for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
     /**
      * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body) {
@@ -97,7 +97,7 @@ public class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder extends
      * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicySettingStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicySettingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicySettingStateSummary> patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicySettingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

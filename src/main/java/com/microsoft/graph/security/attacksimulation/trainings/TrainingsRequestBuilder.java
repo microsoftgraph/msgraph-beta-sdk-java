@@ -59,17 +59,19 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/trainings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get trainings from security
-     * @return a CompletableFuture of trainingCollectionResponse
+     * Get a list of the training objects and their properties. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of TrainingCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get trainings from security
+     * Get a list of the training objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingCollectionResponse
+     * @return a CompletableFuture of TrainingCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-trainings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +84,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to trainings for security
      * @param body The request body
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> post(@jakarta.annotation.Nonnull final Training body) {
@@ -92,7 +94,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to trainings for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> post(@jakarta.annotation.Nonnull final Training body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +106,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Training::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get trainings from security
+     * Get a list of the training objects and their properties. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get trainings from security
+     * Get a list of the training objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a trainingsRequestBuilder
+     * @return a TrainingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TrainingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +177,7 @@ public class TrainingsRequestBuilder extends BaseRequestBuilder {
         return new TrainingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get trainings from security
+     * Get a list of the training objects and their properties. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

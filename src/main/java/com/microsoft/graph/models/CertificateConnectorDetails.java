@@ -33,7 +33,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      */
     private String machineName;
     /**
-     * Instantiates a new certificateConnectorDetails and sets the default values.
+     * Instantiates a new CertificateConnectorDetails and sets the default values.
      */
     public CertificateConnectorDetails() {
         super();
@@ -41,7 +41,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateConnectorDetails
+     * @return a CertificateConnectorDetails
      */
     @jakarta.annotation.Nonnull
     public static CertificateConnectorDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the connectorName property value. Connector name (set during enrollment).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorName() {
@@ -58,7 +58,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the connectorVersion property value. Version of the connector installed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorVersion() {
@@ -96,7 +96,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. Name of the machine hosting this connector service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {

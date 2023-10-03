@@ -59,7 +59,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
-     * @return a CompletableFuture of printerShareCollectionResponse
+     * @return a CompletableFuture of PrinterShareCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShareCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerShareCollectionResponse
+     * @return a CompletableFuture of PrinterShareCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrinterShareCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class SharesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharesRequestBuilder
+     * @return a SharesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

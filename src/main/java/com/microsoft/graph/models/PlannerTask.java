@@ -123,7 +123,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new plannerTask and sets the default values.
+     * Instantiates a new PlannerTask and sets the default values.
      */
     public PlannerTask() {
         super();
@@ -131,7 +131,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTask
+     * @return a PlannerTask
      */
     @jakarta.annotation.Nonnull
     public static PlannerTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -147,7 +147,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the activeChecklistItemCount property value. Number of checklist items with value set to false, representing incomplete items.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveChecklistItemCount() {
@@ -155,7 +155,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
-     * @return a plannerAppliedCategories
+     * @return a PlannerAppliedCategories
      */
     @jakarta.annotation.Nullable
     public PlannerAppliedCategories getAppliedCategories() {
@@ -163,7 +163,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
-     * @return a plannerAssignedToTaskBoardTaskFormat
+     * @return a PlannerAssignedToTaskBoardTaskFormat
      */
     @jakarta.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat getAssignedToTaskBoardFormat() {
@@ -171,7 +171,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the assigneePriority property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneePriority() {
@@ -179,7 +179,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the assignments property value. The set of assignees the task is assigned to.
-     * @return a plannerAssignments
+     * @return a PlannerAssignments
      */
     @jakarta.annotation.Nullable
     public PlannerAssignments getAssignments() {
@@ -187,7 +187,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBucketId() {
@@ -195,7 +195,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
-     * @return a plannerBucketTaskBoardTaskFormat
+     * @return a PlannerBucketTaskBoardTaskFormat
      */
     @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat getBucketTaskBoardFormat() {
@@ -203,7 +203,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the checklistItemCount property value. Number of checklist items that are present on the task.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getChecklistItemCount() {
@@ -211,7 +211,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the completedBy property value. Identity of the user that completed the task.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCompletedBy() {
@@ -227,7 +227,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the conversationThreadId property value. Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConversationThreadId() {
@@ -235,7 +235,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user that created the task.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -251,7 +251,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the creationSource property value. Contains information about the origin of the task.
-     * @return a plannerTaskCreation
+     * @return a PlannerTaskCreation
      */
     @jakarta.annotation.Nullable
     public PlannerTaskCreation getCreationSource() {
@@ -259,7 +259,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the details property value. Read-only. Nullable. Additional details about the task.
-     * @return a plannerTaskDetails
+     * @return a PlannerTaskDetails
      */
     @jakarta.annotation.Nullable
     public PlannerTaskDetails getDetails() {
@@ -312,7 +312,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasDescription() {
@@ -320,7 +320,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
@@ -328,7 +328,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
@@ -336,7 +336,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the planId property value. Plan ID to which the task belongs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlanId() {
@@ -344,7 +344,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
-     * @return a plannerPreviewType
+     * @return a PlannerPreviewType
      */
     @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
@@ -352,7 +352,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -360,7 +360,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
-     * @return a plannerProgressTaskBoardTaskFormat
+     * @return a PlannerProgressTaskBoardTaskFormat
      */
     @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat getProgressTaskBoardFormat() {
@@ -368,7 +368,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the recurrence property value. Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
-     * @return a plannerTaskRecurrence
+     * @return a PlannerTaskRecurrence
      */
     @jakarta.annotation.Nullable
     public PlannerTaskRecurrence getRecurrence() {
@@ -376,7 +376,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the referenceCount property value. Number of external references that exist on the task.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReferenceCount() {
@@ -384,7 +384,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
-     * @return a plannerTaskCompletionRequirements
+     * @return a EnumSet<PlannerTaskCompletionRequirements>
      */
     @jakarta.annotation.Nullable
     public EnumSet<PlannerTaskCompletionRequirements> getSpecifiedCompletionRequirements() {
@@ -400,7 +400,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the title property value. Title of the task.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

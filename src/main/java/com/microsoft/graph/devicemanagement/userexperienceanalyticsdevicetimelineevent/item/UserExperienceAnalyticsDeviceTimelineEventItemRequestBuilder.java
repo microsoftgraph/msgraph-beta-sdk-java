@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceTimelineEventItemRequestBuilder extend
     }
     /**
      * The user experience analytics device events entity contains NRT device timeline event details.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceTimelineEvent
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceTimelineEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceTimelineEvent> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsDeviceTimelineEventItemRequestBuilder extend
     /**
      * The user experience analytics device events entity contains NRT device timeline event details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceTimelineEvent
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceTimelineEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceTimelineEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsDeviceTimelineEventItemRequestBuilder extend
     /**
      * Update the navigation property userExperienceAnalyticsDeviceTimelineEvent in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceTimelineEvent
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceTimelineEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceTimelineEvent> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceTimelineEvent body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsDeviceTimelineEventItemRequestBuilder extend
      * Update the navigation property userExperienceAnalyticsDeviceTimelineEvent in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceTimelineEvent
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceTimelineEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceTimelineEvent> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceTimelineEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

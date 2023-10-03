@@ -13,7 +13,7 @@ public class DeviceManagementConfigurationPolicyTemplateCollectionResponse exten
      */
     private java.util.List<DeviceManagementConfigurationPolicyTemplate> value;
     /**
-     * Instantiates a new deviceManagementConfigurationPolicyTemplateCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicyTemplateCollectionResponse and sets the default values.
      */
     public DeviceManagementConfigurationPolicyTemplateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationPolicyTemplateCollectionResponse exten
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicyTemplateCollectionResponse
+     * @return a DeviceManagementConfigurationPolicyTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementConfigurationPolicyTemplateCollectionResponse exten
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementConfigurationPolicyTemplate
+     * @return a java.util.List<DeviceManagementConfigurationPolicyTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyTemplate> getValue() {

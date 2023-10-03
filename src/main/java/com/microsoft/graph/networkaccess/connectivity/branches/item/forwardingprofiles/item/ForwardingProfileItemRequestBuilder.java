@@ -65,7 +65,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Each forwarding profile associated with a branch site is specified. Supports $expand.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingProfile> get() {
@@ -74,7 +74,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Each forwarding profile associated with a branch site is specified. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingProfile> patch(@jakarta.annotation.Nonnull final ForwardingProfile body) {
@@ -97,7 +97,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property forwardingProfiles in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ForwardingProfile> patch(@jakarta.annotation.Nonnull final ForwardingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

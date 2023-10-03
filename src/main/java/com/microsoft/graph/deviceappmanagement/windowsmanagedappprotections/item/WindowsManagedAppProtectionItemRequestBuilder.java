@@ -89,7 +89,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Windows managed app policies.
-     * @return a CompletableFuture of windowsManagedAppProtection
+     * @return a CompletableFuture of WindowsManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsManagedAppProtection> get() {
@@ -98,7 +98,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Windows managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsManagedAppProtection
+     * @return a CompletableFuture of WindowsManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsManagedAppProtection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property windowsManagedAppProtections in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsManagedAppProtection
+     * @return a CompletableFuture of WindowsManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsManagedAppProtection> patch(@jakarta.annotation.Nonnull final WindowsManagedAppProtection body) {
@@ -121,7 +121,7 @@ public class WindowsManagedAppProtectionItemRequestBuilder extends BaseRequestBu
      * Update the navigation property windowsManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsManagedAppProtection
+     * @return a CompletableFuture of WindowsManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsManagedAppProtection> patch(@jakarta.annotation.Nonnull final WindowsManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

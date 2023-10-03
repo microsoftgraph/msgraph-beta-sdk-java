@@ -57,7 +57,7 @@ public class PrivilegeManagementElevationItemRequestBuilder extends BaseRequestB
     }
     /**
      * The endpoint privilege management elevation event entity contains elevation details.
-     * @return a CompletableFuture of privilegeManagementElevation
+     * @return a CompletableFuture of PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevation> get() {
@@ -66,7 +66,7 @@ public class PrivilegeManagementElevationItemRequestBuilder extends BaseRequestB
     /**
      * The endpoint privilege management elevation event entity contains elevation details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegeManagementElevation
+     * @return a CompletableFuture of PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PrivilegeManagementElevationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property privilegeManagementElevations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of privilegeManagementElevation
+     * @return a CompletableFuture of PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevation> patch(@jakarta.annotation.Nonnull final PrivilegeManagementElevation body) {
@@ -89,7 +89,7 @@ public class PrivilegeManagementElevationItemRequestBuilder extends BaseRequestB
      * Update the navigation property privilegeManagementElevations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegeManagementElevation
+     * @return a CompletableFuture of PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevation> patch(@jakarta.annotation.Nonnull final PrivilegeManagementElevation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

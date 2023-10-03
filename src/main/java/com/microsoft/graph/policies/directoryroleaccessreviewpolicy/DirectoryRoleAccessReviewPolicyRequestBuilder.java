@@ -57,7 +57,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
     }
     /**
      * Get directoryRoleAccessReviewPolicy from policies
-     * @return a CompletableFuture of directoryRoleAccessReviewPolicy
+     * @return a CompletableFuture of DirectoryRoleAccessReviewPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryRoleAccessReviewPolicy> get() {
@@ -66,7 +66,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
     /**
      * Get directoryRoleAccessReviewPolicy from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryRoleAccessReviewPolicy
+     * @return a CompletableFuture of DirectoryRoleAccessReviewPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryRoleAccessReviewPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property directoryRoleAccessReviewPolicy in policies
      * @param body The request body
-     * @return a CompletableFuture of directoryRoleAccessReviewPolicy
+     * @return a CompletableFuture of DirectoryRoleAccessReviewPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryRoleAccessReviewPolicy> patch(@jakarta.annotation.Nonnull final DirectoryRoleAccessReviewPolicy body) {
@@ -89,7 +89,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
      * Update the navigation property directoryRoleAccessReviewPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directoryRoleAccessReviewPolicy
+     * @return a CompletableFuture of DirectoryRoleAccessReviewPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectoryRoleAccessReviewPolicy> patch(@jakarta.annotation.Nonnull final DirectoryRoleAccessReviewPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DirectoryRoleAccessReviewPolicyRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directoryRoleAccessReviewPolicyRequestBuilder
+     * @return a DirectoryRoleAccessReviewPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryRoleAccessReviewPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

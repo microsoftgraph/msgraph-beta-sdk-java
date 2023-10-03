@@ -75,8 +75,8 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teams{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all teams in an organization.
-     * @return a CompletableFuture of teamCollectionResponse
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,9 +84,9 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all teams in an organization.
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamCollectionResponse
+     * @return a CompletableFuture of TeamCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/teams-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -98,9 +98,9 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new team.
+     * Create a new team. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,10 +108,10 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new team.
+     * Create a new team. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      * @see <a href="https://learn.microsoft.com/graph/api/team-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Team::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List all teams in an organization.
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all teams in an organization.
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -153,7 +153,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new team.
+     * Create a new team. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -162,7 +162,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new team.
+     * Create a new team. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -187,7 +187,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamsRequestBuilder
+     * @return a TeamsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -195,7 +195,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return new TeamsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all teams in an organization.
+     * List all teams in an organization. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

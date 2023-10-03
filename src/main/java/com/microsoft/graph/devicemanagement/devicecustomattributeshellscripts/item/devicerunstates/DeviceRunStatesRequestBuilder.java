@@ -60,7 +60,7 @@ public class DeviceRunStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of run states for this script across all devices.
-     * @return a CompletableFuture of deviceManagementScriptDeviceStateCollectionResponse
+     * @return a CompletableFuture of DeviceManagementScriptDeviceStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptDeviceStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceRunStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of run states for this script across all devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScriptDeviceStateCollectionResponse
+     * @return a CompletableFuture of DeviceManagementScriptDeviceStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptDeviceStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceRunStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceRunStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementScriptDeviceState
+     * @return a CompletableFuture of DeviceManagementScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptDeviceState> post(@jakarta.annotation.Nonnull final DeviceManagementScriptDeviceState body) {
@@ -92,7 +92,7 @@ public class DeviceRunStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceRunStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScriptDeviceState
+     * @return a CompletableFuture of DeviceManagementScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScriptDeviceState> post(@jakarta.annotation.Nonnull final DeviceManagementScriptDeviceState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceRunStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceRunStatesRequestBuilder
+     * @return a DeviceRunStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceRunStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

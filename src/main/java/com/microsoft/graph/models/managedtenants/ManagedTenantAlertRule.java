@@ -72,7 +72,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
      */
     private java.util.List<TenantInfo> tenantIds;
     /**
-     * Instantiates a new managedTenantAlertRule and sets the default values.
+     * Instantiates a new ManagedTenantAlertRule and sets the default values.
      */
     public ManagedTenantAlertRule() {
         super();
@@ -80,7 +80,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlertRule
+     * @return a ManagedTenantAlertRule
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the alertDisplayName property value. The alertDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertDisplayName() {
@@ -97,7 +97,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the alerts property value. The alerts property
-     * @return a managedTenantAlert
+     * @return a java.util.List<ManagedTenantAlert>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlert> getAlerts() {
@@ -105,7 +105,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the alertTTL property value. The alertTTL property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAlertTTL() {
@@ -113,7 +113,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -129,7 +129,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -137,7 +137,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -169,7 +169,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -193,7 +193,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the notificationFinalDestinations property value. The notificationFinalDestinations property
-     * @return a notificationDestination
+     * @return a EnumSet<NotificationDestination>
      */
     @jakarta.annotation.Nullable
     public EnumSet<NotificationDestination> getNotificationFinalDestinations() {
@@ -201,7 +201,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the ruleDefinition property value. The ruleDefinition property
-     * @return a managedTenantAlertRuleDefinition
+     * @return a ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlertRuleDefinition getRuleDefinition() {
@@ -209,7 +209,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverity() {
@@ -217,7 +217,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the targets property value. The targets property
-     * @return a notificationTarget
+     * @return a java.util.List<NotificationTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationTarget> getTargets() {
@@ -225,7 +225,7 @@ public class ManagedTenantAlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the tenantIds property value. The tenantIds property
-     * @return a tenantInfo
+     * @return a java.util.List<TenantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantInfo> getTenantIds() {

@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
      */
     private String publisher;
     /**
-     * Instantiates a new userExperienceAnalyticsImpactingProcess and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsImpactingProcess and sets the default values.
      */
     public UserExperienceAnalyticsImpactingProcess() {
         super();
@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsImpactingProcess
+     * @return a UserExperienceAnalyticsImpactingProcess
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsImpactingProcess createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the category property value. The category of impacting process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the description property value. The description of process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the deviceId property value. The unique identifier of the impacted device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the impactValue property value. The impact value of the process. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getImpactValue() {
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the processName property value. The process name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProcessName() {
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsImpactingProcess extends Entity implements P
     }
     /**
      * Gets the publisher property value. The publisher of the process.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {

@@ -72,17 +72,17 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * A collection of role defintions for the provider.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * A collection of role definitions for the provider.
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> get() {
         return get(null);
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property roleDefinitions in privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> patch(@jakarta.annotation.Nonnull final GovernanceRoleDefinition body) {
@@ -105,7 +105,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property roleDefinitions in privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> patch(@jakarta.annotation.Nonnull final GovernanceRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -144,7 +144,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -152,7 +152,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -221,7 +221,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

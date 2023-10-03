@@ -56,17 +56,17 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Collection of trusted certificate authorities.
-     * @return a CompletableFuture of certificateAuthorityAsEntity
+     * Get trustedCertificateAuthorities from directory
+     * @return a CompletableFuture of CertificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateAuthorityAsEntity> get() {
         return get(null);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Get trustedCertificateAuthorities from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateAuthorityAsEntity
+     * @return a CompletableFuture of CertificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateAuthorityAsEntity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property trustedCertificateAuthorities in directory
      * @param body The request body
-     * @return a CompletableFuture of certificateAuthorityAsEntity
+     * @return a CompletableFuture of CertificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateAuthorityAsEntity> patch(@jakarta.annotation.Nonnull final CertificateAuthorityAsEntity body) {
@@ -89,7 +89,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
      * Update the navigation property trustedCertificateAuthorities in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of certificateAuthorityAsEntity
+     * @return a CompletableFuture of CertificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CertificateAuthorityAsEntity> patch(@jakarta.annotation.Nonnull final CertificateAuthorityAsEntity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Get trustedCertificateAuthorities from directory
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Get trustedCertificateAuthorities from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Collection of trusted certificate authorities.
+     * Get trustedCertificateAuthorities from directory
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

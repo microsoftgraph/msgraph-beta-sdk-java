@@ -60,7 +60,7 @@ public class AndroidForWorkAppConfigurationSchemasRequestBuilder extends BaseReq
     }
     /**
      * Android for Work app configuration schema entities.
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchemaCollectionResponse
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchemaCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AndroidForWorkAppConfigurationSchemasRequestBuilder extends BaseReq
     /**
      * Android for Work app configuration schema entities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchemaCollectionResponse
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchemaCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AndroidForWorkAppConfigurationSchemasRequestBuilder extends BaseReq
     /**
      * Create new navigation property to androidForWorkAppConfigurationSchemas for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchema
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchema> post(@jakarta.annotation.Nonnull final AndroidForWorkAppConfigurationSchema body) {
@@ -92,7 +92,7 @@ public class AndroidForWorkAppConfigurationSchemasRequestBuilder extends BaseReq
      * Create new navigation property to androidForWorkAppConfigurationSchemas for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchema
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchema> post(@jakarta.annotation.Nonnull final AndroidForWorkAppConfigurationSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AndroidForWorkAppConfigurationSchemasRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a androidForWorkAppConfigurationSchemasRequestBuilder
+     * @return a AndroidForWorkAppConfigurationSchemasRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AndroidForWorkAppConfigurationSchemasRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

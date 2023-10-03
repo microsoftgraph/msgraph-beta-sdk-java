@@ -60,7 +60,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
-     * @return a CompletableFuture of activityStatisticsCollectionResponse
+     * @return a CompletableFuture of ActivityStatisticsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityStatisticsCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of activityStatisticsCollectionResponse
+     * @return a CompletableFuture of ActivityStatisticsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityStatisticsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to activityStatistics for users
      * @param body The request body
-     * @return a CompletableFuture of activityStatistics
+     * @return a CompletableFuture of ActivityStatistics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityStatistics> post(@jakarta.annotation.Nonnull final ActivityStatistics body) {
@@ -92,7 +92,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to activityStatistics for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of activityStatistics
+     * @return a CompletableFuture of ActivityStatistics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ActivityStatistics> post(@jakarta.annotation.Nonnull final ActivityStatistics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ActivityStatisticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activityStatisticsRequestBuilder
+     * @return a ActivityStatisticsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivityStatisticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

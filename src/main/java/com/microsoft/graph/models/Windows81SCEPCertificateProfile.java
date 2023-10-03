@@ -49,7 +49,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
      */
     private String subjectNameFormatString;
     /**
-     * Instantiates a new windows81SCEPCertificateProfile and sets the default values.
+     * Instantiates a new Windows81SCEPCertificateProfile and sets the default values.
      */
     public Windows81SCEPCertificateProfile() {
         super();
@@ -58,7 +58,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81SCEPCertificateProfile
+     * @return a Windows81SCEPCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static Windows81SCEPCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -93,7 +93,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a hashAlgorithms
+     * @return a EnumSet<HashAlgorithms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
@@ -101,7 +101,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
@@ -109,7 +109,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
@@ -117,7 +117,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -125,7 +125,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate
-     * @return a windows81TrustedRootCertificate
+     * @return a Windows81TrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getRootCertificate() {
@@ -133,7 +133,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
@@ -141,7 +141,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -149,7 +149,7 @@ public class Windows81SCEPCertificateProfile extends Windows81CertificateProfile
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

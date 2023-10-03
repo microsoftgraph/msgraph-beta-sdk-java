@@ -45,7 +45,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return delete(null);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,8 +66,8 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
-     * @return a CompletableFuture of passwordlessMicrosoftAuthenticatorAuthenticationMethod
+     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return get(null);
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passwordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @return a CompletableFuture of PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return this.requestAdapter.sendAsync(requestInfo, PasswordlessMicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -116,7 +116,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return requestInfo;
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Retrieve a user's single Microsoft Authenticator Passwordless Phone Sign-in method object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

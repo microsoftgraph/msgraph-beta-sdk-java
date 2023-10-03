@@ -57,7 +57,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
     }
     /**
      * The device compliance state summary for this account.
-     * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicyDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> get() {
@@ -66,7 +66,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
     /**
      * The device compliance state summary for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicyDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
     /**
      * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicyDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body) {
@@ -89,7 +89,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
      * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCompliancePolicyDeviceStateSummary
+     * @return a CompletableFuture of DeviceCompliancePolicyDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCompliancePolicyDeviceStateSummary> patch(@jakarta.annotation.Nonnull final DeviceCompliancePolicyDeviceStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceCompliancePolicyDeviceStateSummaryRequestBuilder
+     * @return a DeviceCompliancePolicyDeviceStateSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicyDeviceStateSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

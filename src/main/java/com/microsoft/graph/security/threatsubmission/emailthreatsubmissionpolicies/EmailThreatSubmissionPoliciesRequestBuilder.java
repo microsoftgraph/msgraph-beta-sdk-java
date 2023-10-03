@@ -59,8 +59,8 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/threatSubmission/emailThreatSubmissionPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
-     * @return a CompletableFuture of emailThreatSubmissionPolicyCollectionResponse
+     * Get a list of the emailThreatSubmissionPolicy objects and their properties. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of EmailThreatSubmissionPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmissionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get a list of the emailThreatSubmissionPolicy objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailThreatSubmissionPolicyCollectionResponse
+     * @return a CompletableFuture of EmailThreatSubmissionPolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-emailthreatsubmissionpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to emailThreatSubmissionPolicies for security
      * @param body The request body
-     * @return a CompletableFuture of emailThreatSubmissionPolicy
+     * @return a CompletableFuture of EmailThreatSubmissionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmissionPolicy> post(@jakarta.annotation.Nonnull final EmailThreatSubmissionPolicy body) {
@@ -94,7 +94,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
      * Create new navigation property to emailThreatSubmissionPolicies for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of emailThreatSubmissionPolicy
+     * @return a CompletableFuture of EmailThreatSubmissionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmailThreatSubmissionPolicy> post(@jakarta.annotation.Nonnull final EmailThreatSubmissionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendAsync(requestInfo, EmailThreatSubmissionPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get a list of the emailThreatSubmissionPolicy objects and their properties. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get a list of the emailThreatSubmissionPolicy objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a emailThreatSubmissionPoliciesRequestBuilder
+     * @return a EmailThreatSubmissionPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EmailThreatSubmissionPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class EmailThreatSubmissionPoliciesRequestBuilder extends BaseRequestBuil
         return new EmailThreatSubmissionPoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the emailThreatSubmissionPolicy objects and their properties.
+     * Get a list of the emailThreatSubmissionPolicy objects and their properties. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

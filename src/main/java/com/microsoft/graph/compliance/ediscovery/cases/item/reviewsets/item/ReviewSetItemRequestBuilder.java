@@ -95,8 +95,8 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object.
-     * @return a CompletableFuture of reviewSet
+     * Retrieve the properties and relationships of a reviewSet object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of ReviewSet
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewset-get?view=graph-rest-1.0">Find more info here</a>
@@ -107,9 +107,9 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object.
+     * Retrieve the properties and relationships of a reviewSet object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reviewSet
+     * @return a CompletableFuture of ReviewSet
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-reviewset-get?view=graph-rest-1.0">Find more info here</a>
@@ -126,7 +126,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reviewSets in compliance
      * @param body The request body
-     * @return a CompletableFuture of reviewSet
+     * @return a CompletableFuture of ReviewSet
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -139,7 +139,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reviewSets in compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reviewSet
+     * @return a CompletableFuture of ReviewSet
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -187,7 +187,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object.
+     * Retrieve the properties and relationships of a reviewSet object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -198,7 +198,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object.
+     * Retrieve the properties and relationships of a reviewSet object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -279,7 +279,7 @@ public class ReviewSetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a reviewSet object.
+     * Retrieve the properties and relationships of a reviewSet object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

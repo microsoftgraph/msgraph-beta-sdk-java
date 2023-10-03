@@ -58,8 +58,8 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters/{plannerRoster%2Did}/plans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the plannerPlans contained by the plannerRoster.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * Get the plannerPlans contained by the plannerRoster. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the plannerPlans contained by the plannerRoster.
+     * Get the plannerPlans contained by the plannerRoster. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlanCollectionResponse
+     * @return a CompletableFuture of PlannerPlanCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-list-plans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PlannerPlanCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the plannerPlans contained by the plannerRoster.
+     * Get the plannerPlans contained by the plannerRoster. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the plannerPlans contained by the plannerRoster.
+     * Get the plannerPlans contained by the plannerRoster. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a plansRequestBuilder
+     * @return a PlansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class PlansRequestBuilder extends BaseRequestBuilder {
         return new PlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the plannerPlans contained by the plannerRoster.
+     * Get the plannerPlans contained by the plannerRoster. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

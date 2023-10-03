@@ -60,7 +60,7 @@ public class PolicyTemplatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policyTemplates from approvalWorkflowProviders
-     * @return a CompletableFuture of governancePolicyTemplateCollectionResponse
+     * @return a CompletableFuture of GovernancePolicyTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PolicyTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policyTemplates from approvalWorkflowProviders
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governancePolicyTemplateCollectionResponse
+     * @return a CompletableFuture of GovernancePolicyTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PolicyTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to policyTemplates for approvalWorkflowProviders
      * @param body The request body
-     * @return a CompletableFuture of governancePolicyTemplate
+     * @return a CompletableFuture of GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplate> post(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body) {
@@ -92,7 +92,7 @@ public class PolicyTemplatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policyTemplates for approvalWorkflowProviders
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governancePolicyTemplate
+     * @return a CompletableFuture of GovernancePolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernancePolicyTemplate> post(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PolicyTemplatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a policyTemplatesRequestBuilder
+     * @return a PolicyTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PolicyTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

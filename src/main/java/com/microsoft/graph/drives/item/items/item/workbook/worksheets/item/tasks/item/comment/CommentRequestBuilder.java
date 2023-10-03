@@ -73,7 +73,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The comment that the task is associated with.
-     * @return a CompletableFuture of workbookComment
+     * @return a CompletableFuture of WorkbookComment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookComment> get() {
@@ -82,7 +82,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
     /**
      * The comment that the task is associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookComment
+     * @return a CompletableFuture of WorkbookComment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookComment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property comment in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookComment
+     * @return a CompletableFuture of WorkbookComment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookComment> patch(@jakarta.annotation.Nonnull final WorkbookComment body) {
@@ -105,7 +105,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property comment in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookComment
+     * @return a CompletableFuture of WorkbookComment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookComment> patch(@jakarta.annotation.Nonnull final WorkbookComment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -207,7 +207,7 @@ public class CommentRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a commentRequestBuilder
+     * @return a CommentRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CommentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

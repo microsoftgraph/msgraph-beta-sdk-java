@@ -13,7 +13,7 @@ public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseColle
      */
     private java.util.List<MacOSSoftwareUpdateStateSummary> value;
     /**
-     * Instantiates a new macOSSoftwareUpdateStateSummaryCollectionResponse and sets the default values.
+     * Instantiates a new MacOSSoftwareUpdateStateSummaryCollectionResponse and sets the default values.
      */
     public MacOSSoftwareUpdateStateSummaryCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSSoftwareUpdateStateSummaryCollectionResponse
+     * @return a MacOSSoftwareUpdateStateSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MacOSSoftwareUpdateStateSummaryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MacOSSoftwareUpdateStateSummaryCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a macOSSoftwareUpdateStateSummary
+     * @return a java.util.List<MacOSSoftwareUpdateStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateStateSummary> getValue() {

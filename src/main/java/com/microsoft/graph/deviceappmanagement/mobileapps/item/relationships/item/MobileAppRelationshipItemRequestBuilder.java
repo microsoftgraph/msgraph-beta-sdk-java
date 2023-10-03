@@ -57,7 +57,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * List of relationships for this mobile app.
-     * @return a CompletableFuture of mobileAppRelationship
+     * @return a CompletableFuture of MobileAppRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppRelationship> get() {
@@ -66,7 +66,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
     /**
      * List of relationships for this mobile app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppRelationship
+     * @return a CompletableFuture of MobileAppRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppRelationship> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property relationships in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileAppRelationship
+     * @return a CompletableFuture of MobileAppRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppRelationship> patch(@jakarta.annotation.Nonnull final MobileAppRelationship body) {
@@ -89,7 +89,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property relationships in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppRelationship
+     * @return a CompletableFuture of MobileAppRelationship
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppRelationship> patch(@jakarta.annotation.Nonnull final MobileAppRelationship body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

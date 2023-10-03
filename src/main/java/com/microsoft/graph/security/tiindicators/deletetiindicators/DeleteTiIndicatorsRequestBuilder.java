@@ -35,33 +35,33 @@ public class DeleteTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/tiIndicators/deleteTiIndicators", rawUrl);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of deleteTiIndicatorsResponse
+     * @return a CompletableFuture of DeleteTiIndicatorsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-deletetiindicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsPostResponse> post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deleteTiIndicatorsResponse
+     * @return a CompletableFuture of DeleteTiIndicatorsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-deletetiindicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsResponse> post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DeleteTiIndicatorsPostResponse> post(@jakarta.annotation.Nonnull final DeleteTiIndicatorsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, DeleteTiIndicatorsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class DeleteTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Delete multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -95,7 +95,7 @@ public class DeleteTiIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deleteTiIndicatorsRequestBuilder
+     * @return a DeleteTiIndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeleteTiIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -59,8 +59,8 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/userSettings{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of cloudPcUserSetting objects.
-     * @return a CompletableFuture of cloudPcUserSettingCollectionResponse
+     * Retrieve a list of cloudPcUserSetting objects. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcUserSettingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-usersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of cloudPcUserSetting objects.
+     * Retrieve a list of cloudPcUserSetting objects. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcUserSettingCollectionResponse
+     * @return a CompletableFuture of CloudPcUserSettingCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-usersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcUserSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new cloudPcUserSetting object.
+     * Create a new cloudPcUserSetting object. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcUserSetting
+     * @return a CompletableFuture of CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-usersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new cloudPcUserSetting object.
+     * Create a new cloudPcUserSetting object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcUserSetting
+     * @return a CompletableFuture of CloudPcUserSetting
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-usersettings?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcUserSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of cloudPcUserSetting objects.
+     * Retrieve a list of cloudPcUserSetting objects. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of cloudPcUserSetting objects.
+     * Retrieve a list of cloudPcUserSetting objects. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new cloudPcUserSetting object.
+     * Create a new cloudPcUserSetting object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new cloudPcUserSetting object.
+     * Create a new cloudPcUserSetting object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userSettingsRequestBuilder
+     * @return a UserSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class UserSettingsRequestBuilder extends BaseRequestBuilder {
         return new UserSettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of cloudPcUserSetting objects.
+     * Retrieve a list of cloudPcUserSetting objects. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

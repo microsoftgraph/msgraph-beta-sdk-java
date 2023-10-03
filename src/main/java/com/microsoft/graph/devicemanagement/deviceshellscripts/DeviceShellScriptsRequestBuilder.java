@@ -60,7 +60,7 @@ public class DeviceShellScriptsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device shell scripts associated with the tenant.
-     * @return a CompletableFuture of deviceShellScriptCollectionResponse
+     * @return a CompletableFuture of DeviceShellScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScriptCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceShellScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device shell scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceShellScriptCollectionResponse
+     * @return a CompletableFuture of DeviceShellScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScriptCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceShellScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceShellScripts for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceShellScript
+     * @return a CompletableFuture of DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScript> post(@jakarta.annotation.Nonnull final DeviceShellScript body) {
@@ -92,7 +92,7 @@ public class DeviceShellScriptsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceShellScripts for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceShellScript
+     * @return a CompletableFuture of DeviceShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceShellScript> post(@jakarta.annotation.Nonnull final DeviceShellScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceShellScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceShellScriptsRequestBuilder
+     * @return a DeviceShellScriptsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceShellScriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

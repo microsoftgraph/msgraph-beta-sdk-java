@@ -62,7 +62,7 @@ public class RoleAssignmentApprovalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -71,7 +71,7 @@ public class RoleAssignmentApprovalsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get roleAssignmentApprovals from roleManagement
-     * @return a CompletableFuture of approvalCollectionResponse
+     * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get() {
@@ -80,7 +80,7 @@ public class RoleAssignmentApprovalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleAssignmentApprovals from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalCollectionResponse
+     * @return a CompletableFuture of ApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -93,7 +93,7 @@ public class RoleAssignmentApprovalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleAssignmentApprovals for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of approval
+     * @return a CompletableFuture of Approval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body) {
@@ -103,7 +103,7 @@ public class RoleAssignmentApprovalsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleAssignmentApprovals for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approval
+     * @return a CompletableFuture of Approval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Approval> post(@jakarta.annotation.Nonnull final Approval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class RoleAssignmentApprovalsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentApprovalsRequestBuilder
+     * @return a RoleAssignmentApprovalsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentApprovalsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

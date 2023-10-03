@@ -65,7 +65,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The device protection status. This property is read-only.
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> get() {
@@ -74,7 +74,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     /**
      * The device protection status. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property windowsProtectionState in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> patch(@jakarta.annotation.Nonnull final WindowsProtectionState body) {
@@ -97,7 +97,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property windowsProtectionState in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsProtectionState
+     * @return a CompletableFuture of WindowsProtectionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsProtectionState> patch(@jakarta.annotation.Nonnull final WindowsProtectionState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class WindowsProtectionStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsProtectionStateRequestBuilder
+     * @return a WindowsProtectionStateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsProtectionStateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

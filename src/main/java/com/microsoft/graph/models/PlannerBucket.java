@@ -29,7 +29,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      */
     private java.util.List<PlannerTask> tasks;
     /**
-     * Instantiates a new plannerBucket and sets the default values.
+     * Instantiates a new PlannerBucket and sets the default values.
      */
     public PlannerBucket() {
         super();
@@ -37,7 +37,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerBucket
+     * @return a PlannerBucket
      */
     @jakarta.annotation.Nonnull
     public static PlannerBucket createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the creationSource property value. Contains information about the origin of the bucket.
-     * @return a plannerBucketCreation
+     * @return a PlannerBucketCreation
      */
     @jakarta.annotation.Nullable
     public PlannerBucketCreation getCreationSource() {
@@ -68,7 +68,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the name property value. Name of the bucket.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -76,7 +76,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
@@ -84,7 +84,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the planId property value. Plan ID to which the bucket belongs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlanId() {
@@ -92,7 +92,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. The collection of tasks in the bucket.
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {

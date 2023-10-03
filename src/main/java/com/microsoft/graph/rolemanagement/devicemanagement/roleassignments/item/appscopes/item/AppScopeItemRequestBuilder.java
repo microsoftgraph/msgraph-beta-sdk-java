@@ -57,7 +57,7 @@ public class AppScopeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> get() {
@@ -66,7 +66,7 @@ public class AppScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AppScopeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property appScopes in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> patch(@jakarta.annotation.Nonnull final AppScope body) {
@@ -89,7 +89,7 @@ public class AppScopeItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property appScopes in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> patch(@jakarta.annotation.Nonnull final AppScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -37,7 +37,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/patents/{itemPatent%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes an itemPatent object.
+     * Deletes an itemPatent object. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Deletes an itemPatent object.
+     * Deletes an itemPatent object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an itemPatent object.
-     * @return a CompletableFuture of itemPatent
+     * Read the properties and relationships of an itemPatent object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an itemPatent object.
+     * Read the properties and relationships of an itemPatent object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ItemPatent::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an itemPatent object.
+     * Update the properties of an itemPatent object. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an itemPatent object.
+     * Update the properties of an itemPatent object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemPatent
+     * @return a CompletableFuture of ItemPatent
      * @see <a href="https://learn.microsoft.com/graph/api/itempatent-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ItemPatent::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes an itemPatent object.
+     * Deletes an itemPatent object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an itemPatent object.
+     * Deletes an itemPatent object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an itemPatent object.
+     * Read the properties and relationships of an itemPatent object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an itemPatent object.
+     * Read the properties and relationships of an itemPatent object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an itemPatent object.
+     * Update the properties of an itemPatent object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an itemPatent object.
+     * Update the properties of an itemPatent object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class ItemPatentItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an itemPatent object.
+     * Read the properties and relationships of an itemPatent object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

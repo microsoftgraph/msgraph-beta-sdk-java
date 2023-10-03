@@ -38,7 +38,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> get() {
@@ -47,7 +47,7 @@ public class HostPairItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

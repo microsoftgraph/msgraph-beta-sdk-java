@@ -53,7 +53,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters/{plannerRoster%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a plannerRoster object.
+     * Delete a plannerRoster object. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a plannerRoster object.
+     * Delete a plannerRoster object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -74,8 +74,8 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object.
-     * @return a CompletableFuture of plannerRoster
+     * Read the properties and relationships of a plannerRoster object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of PlannerRoster
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,9 +83,9 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object.
+     * Read the properties and relationships of a plannerRoster object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerRoster
+     * @return a CompletableFuture of PlannerRoster
      * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -99,7 +99,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property rosters in planner
      * @param body The request body
-     * @return a CompletableFuture of plannerRoster
+     * @return a CompletableFuture of PlannerRoster
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerRoster> patch(@jakarta.annotation.Nonnull final PlannerRoster body) {
@@ -109,7 +109,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property rosters in planner
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerRoster
+     * @return a CompletableFuture of PlannerRoster
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerRoster> patch(@jakarta.annotation.Nonnull final PlannerRoster body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -121,7 +121,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PlannerRoster::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a plannerRoster object.
+     * Delete a plannerRoster object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerRoster object.
+     * Delete a plannerRoster object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +148,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a plannerRoster object.
+     * Read the properties and relationships of a plannerRoster object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -156,7 +156,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a plannerRoster object.
+     * Read the properties and relationships of a plannerRoster object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -225,7 +225,7 @@ public class PlannerRosterItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a plannerRoster object.
+     * Read the properties and relationships of a plannerRoster object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

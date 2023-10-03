@@ -20,7 +20,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      */
     private Integer minimumValue;
     /**
-     * Instantiates a new deviceManagementSettingIntegerConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingIntegerConstraint and sets the default values.
      */
     public DeviceManagementSettingIntegerConstraint() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingIntegerConstraint
+     * @return a DeviceManagementSettingIntegerConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingIntegerConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     }
     /**
      * Gets the maximumValue property value. The maximum permitted value
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumValue() {
@@ -57,7 +57,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     }
     /**
      * Gets the minimumValue property value. The minimum permitted value
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumValue() {

@@ -65,7 +65,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of Role assignments for this role definition.
-     * @return a CompletableFuture of roleAssignment
+     * @return a CompletableFuture of RoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> get() {
@@ -74,7 +74,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of Role assignments for this role definition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleAssignment
+     * @return a CompletableFuture of RoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleAssignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of roleAssignment
+     * @return a CompletableFuture of RoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@jakarta.annotation.Nonnull final RoleAssignment body) {
@@ -97,7 +97,7 @@ public class RoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleAssignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleAssignment
+     * @return a CompletableFuture of RoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleAssignment> patch(@jakarta.annotation.Nonnull final RoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class AuthorizationPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The policy that controls Azure AD authorization settings.
-     * @return a CompletableFuture of authorizationPolicy
+     * @return a CompletableFuture of AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> get() {
@@ -74,7 +74,7 @@ public class AuthorizationPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The policy that controls Azure AD authorization settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authorizationPolicy
+     * @return a CompletableFuture of AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AuthorizationPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property authorizationPolicy in policies
      * @param body The request body
-     * @return a CompletableFuture of authorizationPolicy
+     * @return a CompletableFuture of AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> patch(@jakarta.annotation.Nonnull final AuthorizationPolicy body) {
@@ -97,7 +97,7 @@ public class AuthorizationPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authorizationPolicy in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authorizationPolicy
+     * @return a CompletableFuture of AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorizationPolicy> patch(@jakarta.annotation.Nonnull final AuthorizationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -81,7 +81,7 @@ public class PolicySetItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The PolicySet of Policies and Applications
-     * @return a CompletableFuture of policySet
+     * @return a CompletableFuture of PolicySet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySet> get() {
@@ -90,7 +90,7 @@ public class PolicySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The PolicySet of Policies and Applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySet
+     * @return a CompletableFuture of PolicySet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySet> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class PolicySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property policySets in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of policySet
+     * @return a CompletableFuture of PolicySet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySet> patch(@jakarta.annotation.Nonnull final PolicySet body) {
@@ -113,7 +113,7 @@ public class PolicySetItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property policySets in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySet
+     * @return a CompletableFuture of PolicySet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySet> patch(@jakarta.annotation.Nonnull final PolicySet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

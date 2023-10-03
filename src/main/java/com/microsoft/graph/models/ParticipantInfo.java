@@ -46,11 +46,11 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
      */
     private String platformId;
     /**
-     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * The home region of the participant, and can be a country, a continent, or a larger geographic region. The region doesn't change based on the participant's current physical location, unlike countryCode. Read-only.
      */
     private String region;
     /**
-     * Instantiates a new participantInfo and sets the default values.
+     * Instantiates a new ParticipantInfo and sets the default values.
      */
     public ParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a participantInfo
+     * @return a ParticipantInfo
      */
     @jakarta.annotation.Nonnull
     public static ParticipantInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         return new ParticipantInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the countryCode property value. The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryCode() {
@@ -83,7 +83,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the endpointType property value. The type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue. Read-only.
-     * @return a endpointType
+     * @return a EndpointType
      */
     @jakarta.annotation.Nullable
     public EndpointType getEndpointType() {
@@ -109,7 +109,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identity property value. The identity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getIdentity() {
@@ -117,7 +117,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the languageId property value. The language culture string. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageId() {
@@ -125,7 +125,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the nonAnonymizedIdentity property value. The nonAnonymizedIdentity property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getNonAnonymizedIdentity() {
@@ -133,7 +133,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -141,7 +141,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the participantId property value. The participant ID of the participant. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParticipantId() {
@@ -149,15 +149,15 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the platformId property value. The client platform ID of the participant. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlatformId() {
         return this.platformId;
     }
     /**
-     * Gets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
-     * @return a string
+     * Gets the region property value. The home region of the participant, and can be a country, a continent, or a larger geographic region. The region doesn't change based on the participant's current physical location, unlike countryCode. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
@@ -181,8 +181,8 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -244,7 +244,7 @@ public class ParticipantInfo implements AdditionalDataHolder, Parsable {
         this.platformId = value;
     }
     /**
-     * Sets the region property value. The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * Sets the region property value. The home region of the participant, and can be a country, a continent, or a larger geographic region. The region doesn't change based on the participant's current physical location, unlike countryCode. Read-only.
      * @param value Value to set for the region property.
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {

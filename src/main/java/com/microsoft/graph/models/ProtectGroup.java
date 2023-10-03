@@ -21,7 +21,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
      */
     private GroupPrivacy privacy;
     /**
-     * Instantiates a new protectGroup and sets the default values.
+     * Instantiates a new ProtectGroup and sets the default values.
      */
     public ProtectGroup() {
         super();
@@ -30,7 +30,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectGroup
+     * @return a ProtectGroup
      */
     @jakarta.annotation.Nonnull
     public static ProtectGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the allowEmailFromGuestUsers property value. The allowEmailFromGuestUsers property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEmailFromGuestUsers() {
@@ -47,7 +47,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the allowGuestUsers property value. The allowGuestUsers property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowGuestUsers() {
@@ -67,7 +67,7 @@ public class ProtectGroup extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the privacy property value. The privacy property
-     * @return a groupPrivacy
+     * @return a GroupPrivacy
      */
     @jakarta.annotation.Nullable
     public GroupPrivacy getPrivacy() {

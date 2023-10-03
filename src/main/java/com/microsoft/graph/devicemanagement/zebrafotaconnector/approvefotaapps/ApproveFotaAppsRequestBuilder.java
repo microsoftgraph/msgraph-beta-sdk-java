@@ -36,24 +36,24 @@ public class ApproveFotaAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action approveFotaApps
-     * @return a CompletableFuture of approveFotaAppsResponse
+     * @return a CompletableFuture of ApproveFotaAppsPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApproveFotaAppsResponse> post() {
+    public java.util.concurrent.CompletableFuture<ApproveFotaAppsPostResponse> post() {
         return post(null);
     }
     /**
      * Invoke action approveFotaApps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approveFotaAppsResponse
+     * @return a CompletableFuture of ApproveFotaAppsPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApproveFotaAppsResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ApproveFotaAppsPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ApproveFotaAppsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, ApproveFotaAppsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action approveFotaApps
@@ -86,7 +86,7 @@ public class ApproveFotaAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a approveFotaAppsRequestBuilder
+     * @return a ApproveFotaAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApproveFotaAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

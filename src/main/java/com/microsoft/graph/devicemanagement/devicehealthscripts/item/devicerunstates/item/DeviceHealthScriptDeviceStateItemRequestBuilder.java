@@ -65,7 +65,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder extends BaseRequest
     }
     /**
      * List of run states for the device health script across all devices
-     * @return a CompletableFuture of deviceHealthScriptDeviceState
+     * @return a CompletableFuture of DeviceHealthScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptDeviceState> get() {
@@ -74,7 +74,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder extends BaseRequest
     /**
      * List of run states for the device health script across all devices
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptDeviceState
+     * @return a CompletableFuture of DeviceHealthScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptDeviceState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property deviceRunStates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceHealthScriptDeviceState
+     * @return a CompletableFuture of DeviceHealthScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptDeviceState> patch(@jakarta.annotation.Nonnull final DeviceHealthScriptDeviceState body) {
@@ -97,7 +97,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder extends BaseRequest
      * Update the navigation property deviceRunStates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptDeviceState
+     * @return a CompletableFuture of DeviceHealthScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptDeviceState> patch(@jakarta.annotation.Nonnull final DeviceHealthScriptDeviceState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

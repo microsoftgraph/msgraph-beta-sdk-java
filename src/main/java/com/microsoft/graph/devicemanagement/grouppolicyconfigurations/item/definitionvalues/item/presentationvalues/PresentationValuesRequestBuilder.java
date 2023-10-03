@@ -60,7 +60,7 @@ public class PresentationValuesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The associated group policy presentation values with the definition value.
-     * @return a CompletableFuture of groupPolicyPresentationValueCollectionResponse
+     * @return a CompletableFuture of GroupPolicyPresentationValueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyPresentationValueCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PresentationValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * The associated group policy presentation values with the definition value.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyPresentationValueCollectionResponse
+     * @return a CompletableFuture of GroupPolicyPresentationValueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyPresentationValueCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PresentationValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to presentationValues for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyPresentationValue
+     * @return a CompletableFuture of GroupPolicyPresentationValue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyPresentationValue> post(@jakarta.annotation.Nonnull final GroupPolicyPresentationValue body) {
@@ -92,7 +92,7 @@ public class PresentationValuesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to presentationValues for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyPresentationValue
+     * @return a CompletableFuture of GroupPolicyPresentationValue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyPresentationValue> post(@jakarta.annotation.Nonnull final GroupPolicyPresentationValue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PresentationValuesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a presentationValuesRequestBuilder
+     * @return a PresentationValuesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PresentationValuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

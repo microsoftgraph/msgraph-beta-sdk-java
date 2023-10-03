@@ -68,7 +68,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
     }
     /**
      * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
-     * @return a CompletableFuture of accessPackageAssignmentResourceRoleCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRoleCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
     /**
      * The resource roles delivered to the target user for this assignment. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentResourceRoleCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRoleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to accessPackageAssignmentResourceRoles for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentResourceRole
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> post(@jakarta.annotation.Nonnull final AccessPackageAssignmentResourceRole body) {
@@ -100,7 +100,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
      * Create new navigation property to accessPackageAssignmentResourceRoles for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentResourceRole
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> post(@jakarta.annotation.Nonnull final AccessPackageAssignmentResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentResourceRolesRequestBuilder
+     * @return a AccessPackageAssignmentResourceRolesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentResourceRolesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

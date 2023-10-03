@@ -58,8 +58,8 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/hostPairs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
-     * @return a CompletableFuture of hostPairCollectionResponse
+     * Get the list of hostPair resources associated with a specified host, where that host is *either* the *parent* or the *child*. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of HostPairCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * Get the list of hostPair resources associated with a specified host, where that host is *either* the *parent* or the *child*. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPairCollectionResponse
+     * @return a CompletableFuture of HostPairCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-hostpairs?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostPairCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * Get the list of hostPair resources associated with a specified host, where that host is *either* the *parent* or the *child*. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * Get the list of hostPair resources associated with a specified host, where that host is *either* the *parent* or the *child*. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -112,7 +112,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostPairsRequestBuilder
+     * @return a HostPairsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostPairsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -120,7 +120,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return new HostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of hostPair resources associated with a host, where that host is *either* the *parent* or the *child*.
+     * Get the list of hostPair resources associated with a specified host, where that host is *either* the *parent* or the *child*. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

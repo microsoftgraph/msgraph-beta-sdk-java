@@ -60,7 +60,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of setting categories within the intent
-     * @return a CompletableFuture of deviceManagementIntentSettingCategoryCollectionResponse
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of setting categories within the intent
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentSettingCategoryCollectionResponse
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to categories for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntentSettingCategory
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategory> post(@jakarta.annotation.Nonnull final DeviceManagementIntentSettingCategory body) {
@@ -92,7 +92,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to categories for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentSettingCategory
+     * @return a CompletableFuture of DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentSettingCategory> post(@jakarta.annotation.Nonnull final DeviceManagementIntentSettingCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a categoriesRequestBuilder
+     * @return a CategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

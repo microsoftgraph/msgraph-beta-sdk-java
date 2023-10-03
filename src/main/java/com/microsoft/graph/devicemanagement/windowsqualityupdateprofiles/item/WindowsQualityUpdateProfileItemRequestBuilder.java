@@ -73,7 +73,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder extends BaseRequestBu
     }
     /**
      * A collection of windows quality update profiles
-     * @return a CompletableFuture of windowsQualityUpdateProfile
+     * @return a CompletableFuture of WindowsQualityUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsQualityUpdateProfile> get() {
@@ -82,7 +82,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder extends BaseRequestBu
     /**
      * A collection of windows quality update profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsQualityUpdateProfile
+     * @return a CompletableFuture of WindowsQualityUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsQualityUpdateProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property windowsQualityUpdateProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsQualityUpdateProfile
+     * @return a CompletableFuture of WindowsQualityUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsQualityUpdateProfile> patch(@jakarta.annotation.Nonnull final WindowsQualityUpdateProfile body) {
@@ -105,7 +105,7 @@ public class WindowsQualityUpdateProfileItemRequestBuilder extends BaseRequestBu
      * Update the navigation property windowsQualityUpdateProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsQualityUpdateProfile
+     * @return a CompletableFuture of WindowsQualityUpdateProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsQualityUpdateProfile> patch(@jakarta.annotation.Nonnull final WindowsQualityUpdateProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -37,26 +37,26 @@ public class ValidateXmlRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action validateXml
      * @param body The request body
-     * @return a CompletableFuture of validateXmlResponse
+     * @return a CompletableFuture of ValidateXmlPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ValidateXmlResponse> post(@jakarta.annotation.Nonnull final ValidateXmlPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<ValidateXmlPostResponse> post(@jakarta.annotation.Nonnull final ValidateXmlPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action validateXml
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of validateXmlResponse
+     * @return a CompletableFuture of ValidateXmlPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ValidateXmlResponse> post(@jakarta.annotation.Nonnull final ValidateXmlPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ValidateXmlPostResponse> post(@jakarta.annotation.Nonnull final ValidateXmlPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ValidateXmlResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, ValidateXmlPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action validateXml
@@ -93,7 +93,7 @@ public class ValidateXmlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a validateXmlRequestBuilder
+     * @return a ValidateXmlRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ValidateXmlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

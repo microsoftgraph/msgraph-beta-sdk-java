@@ -57,7 +57,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder extend
     }
     /**
      * The associated group assignments.
-     * @return a CompletableFuture of mobileAppProvisioningConfigGroupAssignment
+     * @return a CompletableFuture of MobileAppProvisioningConfigGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppProvisioningConfigGroupAssignment> get() {
@@ -66,7 +66,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder extend
     /**
      * The associated group assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppProvisioningConfigGroupAssignment
+     * @return a CompletableFuture of MobileAppProvisioningConfigGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppProvisioningConfigGroupAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder extend
     /**
      * Update the navigation property groupAssignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileAppProvisioningConfigGroupAssignment
+     * @return a CompletableFuture of MobileAppProvisioningConfigGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppProvisioningConfigGroupAssignment> patch(@jakarta.annotation.Nonnull final MobileAppProvisioningConfigGroupAssignment body) {
@@ -89,7 +89,7 @@ public class MobileAppProvisioningConfigGroupAssignmentItemRequestBuilder extend
      * Update the navigation property groupAssignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppProvisioningConfigGroupAssignment
+     * @return a CompletableFuture of MobileAppProvisioningConfigGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppProvisioningConfigGroupAssignment> patch(@jakarta.annotation.Nonnull final MobileAppProvisioningConfigGroupAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

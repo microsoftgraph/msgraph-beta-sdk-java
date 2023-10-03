@@ -38,7 +38,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      */
     private String odataType;
     /**
-     * Instantiates a new teamworkFeaturesConfiguration and sets the default values.
+     * Instantiates a new TeamworkFeaturesConfiguration and sets the default values.
      */
     public TeamworkFeaturesConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkFeaturesConfiguration
+     * @return a TeamworkFeaturesConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkFeaturesConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
         return new TeamworkFeaturesConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the emailToSendLogsAndFeedback property value. Email address to send logs and feedback.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailToSendLogsAndFeedback() {
@@ -86,7 +86,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the isAutoScreenShareEnabled property value. True if auto screen shared is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAutoScreenShareEnabled() {
@@ -94,7 +94,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the isBluetoothBeaconingEnabled property value. True if Bluetooth beaconing is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBluetoothBeaconingEnabled() {
@@ -102,7 +102,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the isHideMeetingNamesEnabled property value. True if hiding meeting names is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHideMeetingNamesEnabled() {
@@ -110,7 +110,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the isSendLogsAndFeedbackEnabled property value. True if sending logs and feedback is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSendLogsAndFeedbackEnabled() {
@@ -118,7 +118,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,8 +139,8 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

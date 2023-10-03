@@ -59,8 +59,8 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/identity/authenticationEventListeners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
-     * @return a CompletableFuture of authenticationEventListenerCollectionResponse
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported: This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of AuthenticationEventListenerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported: This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationEventListenerCollectionResponse
+     * @return a CompletableFuture of AuthenticationEventListenerCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationEventListenerCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authenticationEventListener
+     * @return a CompletableFuture of AuthenticationEventListener
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return post(body, null);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationEventListener
+     * @return a CompletableFuture of AuthenticationEventListener
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-post-authenticationeventlisteners?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationEventListener::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported: This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported: This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener.
+     * Create a new authenticationEventListener object. You can create one of the following subtypes that are derived from authenticationEventListener. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationEventListenersRequestBuilder
+     * @return a AuthenticationEventListenersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationEventListenersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class AuthenticationEventListenersRequestBuilder extends BaseRequestBuild
         return new AuthenticationEventListenersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported:
+     * Get a list of the authenticationEventListener objects and their properties. The following derived types are supported: This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

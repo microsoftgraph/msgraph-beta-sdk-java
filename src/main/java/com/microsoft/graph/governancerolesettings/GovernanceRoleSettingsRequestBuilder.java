@@ -60,7 +60,7 @@ public class GovernanceRoleSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from governanceRoleSettings
-     * @return a CompletableFuture of governanceRoleSettingCollectionResponse
+     * @return a CompletableFuture of GovernanceRoleSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSettingCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GovernanceRoleSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from governanceRoleSettings
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleSettingCollectionResponse
+     * @return a CompletableFuture of GovernanceRoleSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class GovernanceRoleSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to governanceRoleSettings
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSetting> post(@jakarta.annotation.Nonnull final GovernanceRoleSetting body) {
@@ -92,7 +92,7 @@ public class GovernanceRoleSettingsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to governanceRoleSettings
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleSetting
+     * @return a CompletableFuture of GovernanceRoleSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleSetting> post(@jakarta.annotation.Nonnull final GovernanceRoleSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class GovernanceRoleSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a governanceRoleSettingsRequestBuilder
+     * @return a GovernanceRoleSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GovernanceRoleSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

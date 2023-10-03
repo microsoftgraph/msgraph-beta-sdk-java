@@ -57,7 +57,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
     }
     /**
      * Entity representing the configuration of a cached report
-     * @return a CompletableFuture of deviceManagementCachedReportConfiguration
+     * @return a CompletableFuture of DeviceManagementCachedReportConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCachedReportConfiguration> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
     /**
      * Entity representing the configuration of a cached report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCachedReportConfiguration
+     * @return a CompletableFuture of DeviceManagementCachedReportConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCachedReportConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
     /**
      * Update the navigation property cachedReportConfigurations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementCachedReportConfiguration
+     * @return a CompletableFuture of DeviceManagementCachedReportConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCachedReportConfiguration> patch(@jakarta.annotation.Nonnull final DeviceManagementCachedReportConfiguration body) {
@@ -89,7 +89,7 @@ public class DeviceManagementCachedReportConfigurationItemRequestBuilder extends
      * Update the navigation property cachedReportConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCachedReportConfiguration
+     * @return a CompletableFuture of DeviceManagementCachedReportConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCachedReportConfiguration> patch(@jakarta.annotation.Nonnull final DeviceManagementCachedReportConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

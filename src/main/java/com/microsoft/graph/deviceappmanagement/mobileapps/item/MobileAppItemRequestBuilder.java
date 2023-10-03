@@ -265,7 +265,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The mobile apps.
-     * @return a CompletableFuture of mobileApp
+     * @return a CompletableFuture of MobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get() {
@@ -274,7 +274,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The mobile apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileApp
+     * @return a CompletableFuture of MobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -287,7 +287,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property mobileApps in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileApp
+     * @return a CompletableFuture of MobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body) {
@@ -297,7 +297,7 @@ public class MobileAppItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property mobileApps in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileApp
+     * @return a CompletableFuture of MobileApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileApp> patch(@jakarta.annotation.Nonnull final MobileApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

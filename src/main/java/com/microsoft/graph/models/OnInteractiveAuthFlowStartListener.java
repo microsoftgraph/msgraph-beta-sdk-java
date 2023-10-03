@@ -13,7 +13,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
      */
     private OnInteractiveAuthFlowStartHandler handler;
     /**
-     * Instantiates a new onInteractiveAuthFlowStartListener and sets the default values.
+     * Instantiates a new OnInteractiveAuthFlowStartListener and sets the default values.
      */
     public OnInteractiveAuthFlowStartListener() {
         super();
@@ -22,7 +22,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onInteractiveAuthFlowStartListener
+     * @return a OnInteractiveAuthFlowStartListener
      */
     @jakarta.annotation.Nonnull
     public static OnInteractiveAuthFlowStartListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
     }
     /**
      * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a onInteractiveAuthFlowStartHandler
+     * @return a OnInteractiveAuthFlowStartHandler
      */
     @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getHandler() {

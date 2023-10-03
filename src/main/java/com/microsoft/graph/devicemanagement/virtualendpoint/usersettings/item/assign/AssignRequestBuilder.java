@@ -35,7 +35,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/userSettings/{cloudPcUserSetting%2Did}/assign", rawUrl);
     }
     /**
-     * Assign a cloudPcUserSetting to user groups.
+     * Assign a cloudPcUserSetting to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-assign?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Assign a cloudPcUserSetting to user groups.
+     * Assign a cloudPcUserSetting to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcusersetting-assign?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Assign a cloudPcUserSetting to user groups.
+     * Assign a cloudPcUserSetting to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Assign a cloudPcUserSetting to user groups.
+     * Assign a cloudPcUserSetting to user groups. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class AssignRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignRequestBuilder
+     * @return a AssignRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

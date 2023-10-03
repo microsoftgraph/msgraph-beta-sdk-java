@@ -37,7 +37,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onlineMeetings/{onlineMeeting%2Did}/registration/customQuestions/{meetingRegistrationQuestion%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.
+     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return delete(null);
     }
     /**
-     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.
+     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, MeetingRegistrationQuestion::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return patch(body, null);
     }
     /**
-     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrationQuestion
+     * @return a CompletableFuture of MeetingRegistrationQuestion
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistrationquestion-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, MeetingRegistrationQuestion::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.
+     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer.
+     * Delete a custom registration question from a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Update a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer.
+     * Get a custom registration question associated with a meetingRegistration object on behalf of the organizer. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,9 +36,9 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/{timeCard%2Did}/startBreak", rawUrl);
     }
     /**
-     * Start a break in a specific timeCard.
+     * Start a break in a specific timeCard. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-startbreak?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Start a break in a specific timeCard.
+     * Start a break in a specific timeCard. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-startbreak?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Start a break in a specific timeCard.
+     * Start a break in a specific timeCard. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Start a break in a specific timeCard.
+     * Start a break in a specific timeCard. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class StartBreakRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a startBreakRequestBuilder
+     * @return a StartBreakRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public StartBreakRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -121,7 +121,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
     }
     /**
      * The list of assigned devices for the profile.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> get() {
@@ -130,7 +130,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
     /**
      * The list of assigned devices for the profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,7 +143,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property assignedDevices in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final WindowsAutopilotDeviceIdentity body) {
@@ -153,7 +153,7 @@ public class WindowsAutopilotDeviceIdentityItemRequestBuilder extends BaseReques
      * Update the navigation property assignedDevices in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> patch(@jakarta.annotation.Nonnull final WindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

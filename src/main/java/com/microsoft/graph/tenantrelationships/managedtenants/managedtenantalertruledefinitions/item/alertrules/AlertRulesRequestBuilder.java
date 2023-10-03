@@ -59,7 +59,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get alertRules from tenantRelationships
-     * @return a CompletableFuture of managedTenantAlertRuleCollectionResponse
+     * @return a CompletableFuture of ManagedTenantAlertRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertRuleCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get alertRules from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertRuleCollectionResponse
+     * @return a CompletableFuture of ManagedTenantAlertRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertRuleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class AlertRulesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertRulesRequestBuilder
+     * @return a AlertRulesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertRulesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

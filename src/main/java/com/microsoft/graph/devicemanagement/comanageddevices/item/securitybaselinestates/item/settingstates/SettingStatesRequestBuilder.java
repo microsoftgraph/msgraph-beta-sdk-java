@@ -60,7 +60,7 @@ public class SettingStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The security baseline state for different settings for a device
-     * @return a CompletableFuture of securityBaselineSettingStateCollectionResponse
+     * @return a CompletableFuture of SecurityBaselineSettingStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineSettingStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SettingStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * The security baseline state for different settings for a device
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityBaselineSettingStateCollectionResponse
+     * @return a CompletableFuture of SecurityBaselineSettingStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineSettingStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SettingStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to settingStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of securityBaselineSettingState
+     * @return a CompletableFuture of SecurityBaselineSettingState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineSettingState> post(@jakarta.annotation.Nonnull final SecurityBaselineSettingState body) {
@@ -92,7 +92,7 @@ public class SettingStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to settingStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityBaselineSettingState
+     * @return a CompletableFuture of SecurityBaselineSettingState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineSettingState> post(@jakarta.annotation.Nonnull final SecurityBaselineSettingState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SettingStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a settingStatesRequestBuilder
+     * @return a SettingStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SettingStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -43,7 +43,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     private Boolean succeeded;
     /**
-     * Instantiates a new authenticationDetail and sets the default values.
+     * Instantiates a new AuthenticationDetail and sets the default values.
      */
     public AuthenticationDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -51,7 +51,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationDetail
+     * @return a AuthenticationDetail
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
         return new AuthenticationDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationMethod property value. The type of authentication method used to perform this step of authentication. Possible values: Password, SMS, Voice, Authenticator App, Software OATH token, Satisfied by token, Previously satisfied.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationMethod() {
@@ -76,7 +76,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationMethodDetail property value. Details about the authentication method used to perform this authentication step. For example, phone number (for SMS and voice), device name (for Authenticator app), and password source (e.g. cloud, AD FS, PTA, PHS).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationMethodDetail() {
@@ -92,7 +92,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationStepRequirement property value. The step of authentication that this satisfied. For example, primary authentication, or multi-factor authentication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationStepRequirement() {
@@ -100,7 +100,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authenticationStepResultDetail property value. Details about why the step succeeded or failed. For examples, user is blocked, fraud code entered, no phone input - timed out, phone unreachable, or claim in token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationStepResultDetail() {
@@ -124,7 +124,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -132,7 +132,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the succeeded property value. Indicates the status of the authentication step. Possible values: succeeded, failed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSucceeded() {
@@ -154,8 +154,8 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

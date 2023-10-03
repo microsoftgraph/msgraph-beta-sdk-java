@@ -94,7 +94,7 @@ public class RecommendationBase extends Entity implements Parsable {
      */
     private RecommendationStatus status;
     /**
-     * Instantiates a new recommendationBase and sets the default values.
+     * Instantiates a new RecommendationBase and sets the default values.
      */
     public RecommendationBase() {
         super();
@@ -102,7 +102,7 @@ public class RecommendationBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recommendationBase
+     * @return a RecommendationBase
      */
     @jakarta.annotation.Nonnull
     public static RecommendationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -118,7 +118,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the actionSteps property value. List of actions to take to complete a recommendation.
-     * @return a actionStep
+     * @return a java.util.List<ActionStep>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActionStep> getActionSteps() {
@@ -126,7 +126,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the benefits property value. An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBenefits() {
@@ -134,7 +134,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a recommendationCategory
+     * @return a RecommendationCategory
      */
     @jakarta.annotation.Nullable
     public RecommendationCategory getCategory() {
@@ -150,7 +150,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the currentScore property value. The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCurrentScore() {
@@ -158,7 +158,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The title of the recommendation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -166,7 +166,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
-     * @return a recommendationFeatureAreas
+     * @return a java.util.List<RecommendationFeatureAreas>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RecommendationFeatureAreas> getFeatureAreas() {
@@ -204,7 +204,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the impactedResources property value. The list of directory objects associated with the recommendation.
-     * @return a impactedResource
+     * @return a java.util.List<ImpactedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImpactedResource> getImpactedResources() {
@@ -220,7 +220,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the impactType property value. Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImpactType() {
@@ -228,7 +228,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the insights property value. Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInsights() {
@@ -244,7 +244,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Name of the user who last updated the status of the recommendation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
@@ -260,7 +260,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the maxScore property value. The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getMaxScore() {
@@ -276,7 +276,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a recommendationPriority
+     * @return a RecommendationPriority
      */
     @jakarta.annotation.Nullable
     public RecommendationPriority getPriority() {
@@ -284,7 +284,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the recommendationType property value. Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue.
-     * @return a recommendationType
+     * @return a RecommendationType
      */
     @jakarta.annotation.Nullable
     public RecommendationType getRecommendationType() {
@@ -292,7 +292,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the releaseType property value. The current release type of the recommendation. The possible values are: preview or generallyAvailable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReleaseType() {
@@ -300,7 +300,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationImpact() {
@@ -308,7 +308,7 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a recommendationStatus
+     * @return a RecommendationStatus
      */
     @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {

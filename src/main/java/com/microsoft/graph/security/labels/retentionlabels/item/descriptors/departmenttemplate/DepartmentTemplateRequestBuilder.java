@@ -38,7 +38,7 @@ public class DepartmentTemplateRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Specifies the  department or business unit of an organization to which a label belongs.
-     * @return a CompletableFuture of departmentTemplate
+     * @return a CompletableFuture of DepartmentTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplate> get() {
@@ -47,7 +47,7 @@ public class DepartmentTemplateRequestBuilder extends BaseRequestBuilder {
     /**
      * Specifies the  department or business unit of an organization to which a label belongs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of departmentTemplate
+     * @return a CompletableFuture of DepartmentTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepartmentTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class DepartmentTemplateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a departmentTemplateRequestBuilder
+     * @return a DepartmentTemplateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DepartmentTemplateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

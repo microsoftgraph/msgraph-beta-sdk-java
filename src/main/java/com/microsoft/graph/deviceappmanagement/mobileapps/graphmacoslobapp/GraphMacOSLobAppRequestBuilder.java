@@ -46,7 +46,7 @@ public class GraphMacOSLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.macOSLobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of macOSLobAppCollectionResponse
+     * @return a CompletableFuture of MacOSLobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSLobAppCollectionResponse> get() {
@@ -55,7 +55,7 @@ public class GraphMacOSLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.macOSLobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSLobAppCollectionResponse
+     * @return a CompletableFuture of MacOSLobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSLobAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GraphMacOSLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphMacOSLobAppRequestBuilder
+     * @return a GraphMacOSLobAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphMacOSLobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -32,7 +32,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      */
     private Boolean edgeNoFirstRun;
     /**
-     * Instantiates a new windowsKioskWin32App and sets the default values.
+     * Instantiates a new WindowsKioskWin32App and sets the default values.
      */
     public WindowsKioskWin32App() {
         super();
@@ -41,7 +41,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskWin32App
+     * @return a WindowsKioskWin32App
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskWin32App createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     }
     /**
      * Gets the classicAppPath property value. This is the classicapppath to be used by v4 Win32 app while in Kiosk Mode
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClassicAppPath() {
@@ -58,7 +58,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     }
     /**
      * Gets the edgeKiosk property value. Edge kiosk (url) for Edge kiosk mode
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEdgeKiosk() {
@@ -66,7 +66,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     }
     /**
      * Gets the edgeKioskIdleTimeoutMinutes property value. Edge kiosk idle timeout in minutes for Edge kiosk mode. Valid values 0 to 1440
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEdgeKioskIdleTimeoutMinutes() {
@@ -74,7 +74,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     }
     /**
      * Gets the edgeKioskType property value. Edge kiosk type
-     * @return a windowsEdgeKioskType
+     * @return a WindowsEdgeKioskType
      */
     @jakarta.annotation.Nullable
     public WindowsEdgeKioskType getEdgeKioskType() {
@@ -82,7 +82,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
     }
     /**
      * Gets the edgeNoFirstRun property value. Edge first run flag for Edge kiosk mode
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEdgeNoFirstRun() {

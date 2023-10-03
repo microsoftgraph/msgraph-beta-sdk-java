@@ -37,7 +37,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/websites/{personWebsite%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes a personWebsite object from a user's profile.
+     * Deletes a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/personwebsite-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Deletes a personWebsite object from a user's profile.
+     * Deletes a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/personwebsite-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a personWebsite object from a user's profile.
-     * @return a CompletableFuture of personWebsite
+     * Retrieve the properties and relationships of a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of PersonWebsite
      * @see <a href="https://learn.microsoft.com/graph/api/personwebsite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a personWebsite object from a user's profile.
+     * Retrieve the properties and relationships of a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personWebsite
+     * @return a CompletableFuture of PersonWebsite
      * @see <a href="https://learn.microsoft.com/graph/api/personwebsite-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PersonWebsite::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of personWebsite object in a user's profile.
+     * Update the properties of personWebsite object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of personWebsite
+     * @return a CompletableFuture of PersonWebsite
      * @see <a href="https://learn.microsoft.com/graph/api/personwebsite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of personWebsite object in a user's profile.
+     * Update the properties of personWebsite object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personWebsite
+     * @return a CompletableFuture of PersonWebsite
      * @see <a href="https://learn.microsoft.com/graph/api/personwebsite-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PersonWebsite::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes a personWebsite object from a user's profile.
+     * Deletes a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a personWebsite object from a user's profile.
+     * Deletes a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a personWebsite object from a user's profile.
+     * Retrieve the properties and relationships of a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a personWebsite object from a user's profile.
+     * Retrieve the properties and relationships of a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of personWebsite object in a user's profile.
+     * Update the properties of personWebsite object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of personWebsite object in a user's profile.
+     * Update the properties of personWebsite object in a user's profile. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class PersonWebsiteItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a personWebsite object from a user's profile.
+     * Retrieve the properties and relationships of a personWebsite object from a user's profile. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

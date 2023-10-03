@@ -21,7 +21,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
      */
     private String planTitle;
     /**
-     * Instantiates a new plannerPlanConfigurationLocalization and sets the default values.
+     * Instantiates a new PlannerPlanConfigurationLocalization and sets the default values.
      */
     public PlannerPlanConfigurationLocalization() {
         super();
@@ -29,7 +29,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlanConfigurationLocalization
+     * @return a PlannerPlanConfigurationLocalization
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlanConfigurationLocalization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     }
     /**
      * Gets the buckets property value. Localized names for configured buckets in the plan configuration.
-     * @return a plannerPlanConfigurationBucketLocalization
+     * @return a java.util.List<PlannerPlanConfigurationBucketLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationBucketLocalization> getBuckets() {
@@ -58,7 +58,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     }
     /**
      * Gets the languageTag property value. The language code associated with the localized names in this object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -66,7 +66,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements Pars
     }
     /**
      * Gets the planTitle property value. Localized title of the plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlanTitle() {

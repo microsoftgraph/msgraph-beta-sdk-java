@@ -73,7 +73,7 @@ public class PrivilegedApprovalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from privilegedApproval by key
-     * @return a CompletableFuture of privilegedApproval
+     * @return a CompletableFuture of PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> get() {
@@ -82,7 +82,7 @@ public class PrivilegedApprovalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from privilegedApproval by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedApproval
+     * @return a CompletableFuture of PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class PrivilegedApprovalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in privilegedApproval
      * @param body The request body
-     * @return a CompletableFuture of privilegedApproval
+     * @return a CompletableFuture of PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> patch(@jakarta.annotation.Nonnull final PrivilegedApproval body) {
@@ -105,7 +105,7 @@ public class PrivilegedApprovalItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in privilegedApproval
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedApproval
+     * @return a CompletableFuture of PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedApproval> patch(@jakarta.annotation.Nonnull final PrivilegedApproval body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

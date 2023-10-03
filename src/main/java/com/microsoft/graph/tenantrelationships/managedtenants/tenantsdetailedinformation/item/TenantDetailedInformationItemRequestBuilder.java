@@ -56,8 +56,8 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a tenantDetailedInformation object.
-     * @return a CompletableFuture of tenantDetailedInformation
+     * Read the properties and relationships of a tenantDetailedInformation object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of TenantDetailedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantdetailedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tenantDetailedInformation object.
+     * Read the properties and relationships of a tenantDetailedInformation object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantDetailedInformation
+     * @return a CompletableFuture of TenantDetailedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantdetailedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property tenantsDetailedInformation in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of tenantDetailedInformation
+     * @return a CompletableFuture of TenantDetailedInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantDetailedInformation> patch(@jakarta.annotation.Nonnull final TenantDetailedInformation body) {
@@ -91,7 +91,7 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property tenantsDetailedInformation in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantDetailedInformation
+     * @return a CompletableFuture of TenantDetailedInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantDetailedInformation> patch(@jakarta.annotation.Nonnull final TenantDetailedInformation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tenantDetailedInformation object.
+     * Read the properties and relationships of a tenantDetailedInformation object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tenantDetailedInformation object.
+     * Read the properties and relationships of a tenantDetailedInformation object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class TenantDetailedInformationItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tenantDetailedInformation object.
+     * Read the properties and relationships of a tenantDetailedInformation object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -61,7 +61,7 @@ public class TaxAreasRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get taxAreas from financials
-     * @return a CompletableFuture of taxAreaCollectionResponse
+     * @return a CompletableFuture of TaxAreaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxAreaCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class TaxAreasRequestBuilder extends BaseRequestBuilder {
     /**
      * Get taxAreas from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taxAreaCollectionResponse
+     * @return a CompletableFuture of TaxAreaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxAreaCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class TaxAreasRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to taxAreas for financials
      * @param body The request body
-     * @return a CompletableFuture of taxArea
+     * @return a CompletableFuture of TaxArea
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxArea> post(@jakarta.annotation.Nonnull final TaxArea body) {
@@ -93,7 +93,7 @@ public class TaxAreasRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to taxAreas for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taxArea
+     * @return a CompletableFuture of TaxArea
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxArea> post(@jakarta.annotation.Nonnull final TaxArea body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class TaxAreasRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taxAreasRequestBuilder
+     * @return a TaxAreasRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaxAreasRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class EvaluateLabelJobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get evaluateLabelJobs from dataClassification
-     * @return a CompletableFuture of jobResponseBaseCollectionResponse
+     * @return a CompletableFuture of JobResponseBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBaseCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EvaluateLabelJobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get evaluateLabelJobs from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of jobResponseBaseCollectionResponse
+     * @return a CompletableFuture of JobResponseBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBaseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EvaluateLabelJobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to evaluateLabelJobs for dataClassification
      * @param body The request body
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> post(@jakarta.annotation.Nonnull final JobResponseBase body) {
@@ -92,7 +92,7 @@ public class EvaluateLabelJobsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to evaluateLabelJobs for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> post(@jakarta.annotation.Nonnull final JobResponseBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EvaluateLabelJobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a evaluateLabelJobsRequestBuilder
+     * @return a EvaluateLabelJobsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EvaluateLabelJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -37,7 +37,7 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getCapabilities
-     * @return a CompletableFuture of printerCapabilities
+     * @return a CompletableFuture of PrinterCapabilities
      * @deprecated
      * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -49,7 +49,7 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke function getCapabilities
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printerCapabilities
+     * @return a CompletableFuture of PrinterCapabilities
      * @deprecated
      * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -99,7 +99,7 @@ public class GetCapabilitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCapabilitiesRequestBuilder
+     * @return a GetCapabilitiesRequestBuilder
      * @deprecated
      * The getCapabilities API is deprecated and will stop returning data on July 31, 2023. Please use the capabilities property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */

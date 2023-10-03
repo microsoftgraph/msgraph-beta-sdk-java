@@ -60,7 +60,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Managed Device Mobile Application Configurations.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Managed Device Mobile Application Configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to mobileAppConfigurations for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfiguration
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body) {
@@ -92,7 +92,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to mobileAppConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfiguration
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfiguration> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MobileAppConfigurationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mobileAppConfigurationsRequestBuilder
+     * @return a MobileAppConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MobileAppConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

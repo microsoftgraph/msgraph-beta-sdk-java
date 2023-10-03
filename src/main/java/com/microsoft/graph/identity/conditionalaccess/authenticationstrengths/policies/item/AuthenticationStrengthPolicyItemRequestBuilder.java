@@ -96,7 +96,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     }
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -108,7 +108,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     /**
      * A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -124,7 +124,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property policies in identity
      * @param body The request body
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -137,7 +137,7 @@ public class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestB
      * Update the navigation property policies in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationStrengthPolicy
+     * @return a CompletableFuture of AuthenticationStrengthPolicy
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */

@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationSettingDefinitionItemRequestBuilder ex
     }
     /**
      * List of related Setting Definitions. This property is read-only.
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinition
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinition> get() {
@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationSettingDefinitionItemRequestBuilder ex
     /**
      * List of related Setting Definitions. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinition
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

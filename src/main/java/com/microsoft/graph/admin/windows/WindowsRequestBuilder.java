@@ -65,7 +65,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A container for all Windows administrator functionalities. Read-only.
-     * @return a CompletableFuture of adminWindows
+     * @return a CompletableFuture of AdminWindows
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindows> get() {
@@ -74,7 +74,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
     /**
      * A container for all Windows administrator functionalities. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminWindows
+     * @return a CompletableFuture of AdminWindows
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindows> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property windows in admin
      * @param body The request body
-     * @return a CompletableFuture of adminWindows
+     * @return a CompletableFuture of AdminWindows
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindows> patch(@jakarta.annotation.Nonnull final AdminWindows body) {
@@ -97,7 +97,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property windows in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminWindows
+     * @return a CompletableFuture of AdminWindows
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindows> patch(@jakarta.annotation.Nonnull final AdminWindows body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsRequestBuilder
+     * @return a WindowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -1,5 +1,9 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacospkgapp;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacospkgapp.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacospkgapp.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacospkgapp.contentversions.ContentVersionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmacospkgapp.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.models.MacOSPkgApp;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +25,34 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphMacOSPkgAppRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentVersions property of the microsoft.graph.mobileLobApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ContentVersionsRequestBuilder contentVersions() {
+        return new ContentVersionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RelationshipsRequestBuilder relationships() {
+        return new RelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GraphMacOSPkgAppRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +70,7 @@ public class GraphMacOSPkgAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.macOSPkgApp
-     * @return a CompletableFuture of macOSPkgApp
+     * @return a CompletableFuture of MacOSPkgApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSPkgApp> get() {
@@ -47,7 +79,7 @@ public class GraphMacOSPkgAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.macOSPkgApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSPkgApp
+     * @return a CompletableFuture of MacOSPkgApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSPkgApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +121,7 @@ public class GraphMacOSPkgAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphMacOSPkgAppRequestBuilder
+     * @return a GraphMacOSPkgAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphMacOSPkgAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

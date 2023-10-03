@@ -65,7 +65,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of all the tabs in the channel. A navigation property.
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> get() {
@@ -74,7 +74,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of all the tabs in the channel. A navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property tabs in teamTemplateDefinition
      * @param body The request body
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> patch(@jakarta.annotation.Nonnull final TeamsTab body) {
@@ -97,7 +97,7 @@ public class TeamsTabItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property tabs in teamTemplateDefinition
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsTab
+     * @return a CompletableFuture of TeamsTab
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsTab> patch(@jakarta.annotation.Nonnull final TeamsTab body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

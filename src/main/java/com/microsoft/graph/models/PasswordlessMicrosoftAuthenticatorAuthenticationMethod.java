@@ -26,7 +26,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     private String displayName;
     /**
-     * Instantiates a new passwordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
+     * Instantiates a new PasswordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      */
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
         super();
@@ -35,7 +35,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordlessMicrosoftAuthenticatorAuthenticationMethod
+     * @return a PasswordlessMicrosoftAuthenticatorAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static PasswordlessMicrosoftAuthenticatorAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * Gets the device property value. The device property
-     * @return a device
+     * @return a Device
      */
     @jakarta.annotation.Nullable
     public Device getDevice() {
@@ -68,7 +68,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     }
     /**
      * Gets the displayName property value. The display name of the mobile device as given by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

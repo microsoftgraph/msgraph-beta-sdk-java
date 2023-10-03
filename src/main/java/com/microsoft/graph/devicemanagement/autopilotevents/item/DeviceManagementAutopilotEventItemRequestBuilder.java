@@ -65,7 +65,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder extends BaseReques
     }
     /**
      * The list of autopilot events for the tenant.
-     * @return a CompletableFuture of deviceManagementAutopilotEvent
+     * @return a CompletableFuture of DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEvent> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder extends BaseReques
     /**
      * The list of autopilot events for the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementAutopilotEvent
+     * @return a CompletableFuture of DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property autopilotEvents in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementAutopilotEvent
+     * @return a CompletableFuture of DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEvent> patch(@jakarta.annotation.Nonnull final DeviceManagementAutopilotEvent body) {
@@ -97,7 +97,7 @@ public class DeviceManagementAutopilotEventItemRequestBuilder extends BaseReques
      * Update the navigation property autopilotEvents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementAutopilotEvent
+     * @return a CompletableFuture of DeviceManagementAutopilotEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementAutopilotEvent> patch(@jakarta.annotation.Nonnull final DeviceManagementAutopilotEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

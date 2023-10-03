@@ -59,8 +59,8 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/operations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat.
-     * @return a CompletableFuture of teamsAsyncOperationCollectionResponse
+     * List all Teams async operations that ran or are running on the specified chat. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of TeamsAsyncOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat.
+     * List all Teams async operations that ran or are running on the specified chat. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAsyncOperationCollectionResponse
+     * @return a CompletableFuture of TeamsAsyncOperationCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list-operations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to operations for users
      * @param body The request body
-     * @return a CompletableFuture of teamsAsyncOperation
+     * @return a CompletableFuture of TeamsAsyncOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> post(@jakarta.annotation.Nonnull final TeamsAsyncOperation body) {
@@ -94,7 +94,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to operations for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamsAsyncOperation
+     * @return a CompletableFuture of TeamsAsyncOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamsAsyncOperation> post(@jakarta.annotation.Nonnull final TeamsAsyncOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TeamsAsyncOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat.
+     * List all Teams async operations that ran or are running on the specified chat. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat.
+     * List all Teams async operations that ran or are running on the specified chat. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a operationsRequestBuilder
+     * @return a OperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
         return new OperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List all Teams async operations that ran or are running on the specified chat.
+     * List all Teams async operations that ran or are running on the specified chat. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

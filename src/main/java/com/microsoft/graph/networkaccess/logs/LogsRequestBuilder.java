@@ -64,17 +64,17 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Represnts network connections that are routed through Global Secure Access.
-     * @return a CompletableFuture of logs
+     * Represents network connections that are routed through Global Secure Access.
+     * @return a CompletableFuture of Logs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Logs> get() {
         return get(null);
     }
     /**
-     * Represnts network connections that are routed through Global Secure Access.
+     * Represents network connections that are routed through Global Secure Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of logs
+     * @return a CompletableFuture of Logs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Logs> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property logs in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of logs
+     * @return a CompletableFuture of Logs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Logs> patch(@jakarta.annotation.Nonnull final Logs body) {
@@ -97,7 +97,7 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property logs in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of logs
+     * @return a CompletableFuture of Logs
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Logs> patch(@jakarta.annotation.Nonnull final Logs body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represnts network connections that are routed through Global Secure Access.
+     * Represents network connections that are routed through Global Secure Access.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represnts network connections that are routed through Global Secure Access.
+     * Represents network connections that are routed through Global Secure Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -199,7 +199,7 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a logsRequestBuilder
+     * @return a LogsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LogsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -213,7 +213,7 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represnts network connections that are routed through Global Secure Access.
+     * Represents network connections that are routed through Global Secure Access.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -88,7 +88,7 @@ public class GetBrowserDistributionUserCountsWithPeriodRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getBrowserDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetBrowserDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetBrowserDistributionUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

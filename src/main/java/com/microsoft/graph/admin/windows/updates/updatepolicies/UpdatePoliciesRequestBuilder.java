@@ -59,8 +59,8 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of updatePolicy objects and their properties.
-     * @return a CompletableFuture of updatePolicyCollectionResponse
+     * Get a list of updatePolicy objects and their properties. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of UpdatePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of updatePolicy objects and their properties.
+     * Get a list of updatePolicy objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatePolicyCollectionResponse
+     * @return a CompletableFuture of UpdatePolicyCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-list-updatepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UpdatePolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new updatePolicy object.
+     * Create a new updatePolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of updatePolicy
+     * @return a CompletableFuture of UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new updatePolicy object.
+     * Create a new updatePolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updatePolicy
+     * @return a CompletableFuture of UpdatePolicy
      * @see <a href="https://learn.microsoft.com/graph/api/adminwindowsupdates-post-updatepolicies?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UpdatePolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of updatePolicy objects and their properties.
+     * Get a list of updatePolicy objects and their properties. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of updatePolicy objects and their properties.
+     * Get a list of updatePolicy objects and their properties. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new updatePolicy object.
+     * Create a new updatePolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new updatePolicy object.
+     * Create a new updatePolicy object. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updatePoliciesRequestBuilder
+     * @return a UpdatePoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdatePoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class UpdatePoliciesRequestBuilder extends BaseRequestBuilder {
         return new UpdatePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of updatePolicy objects and their properties.
+     * Get a list of updatePolicy objects and their properties. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

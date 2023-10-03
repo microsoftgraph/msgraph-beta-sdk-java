@@ -90,7 +90,7 @@ public class SetScheduledRetireStateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a setScheduledRetireStateRequestBuilder
+     * @return a SetScheduledRetireStateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SetScheduledRetireStateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

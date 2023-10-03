@@ -57,7 +57,7 @@ public class DispositionReviewStageItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
-     * @return a CompletableFuture of dispositionReviewStage
+     * @return a CompletableFuture of DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStage> get() {
@@ -66,7 +66,7 @@ public class DispositionReviewStageItemRequestBuilder extends BaseRequestBuilder
     /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dispositionReviewStage
+     * @return a CompletableFuture of DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DispositionReviewStageItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property dispositionReviewStages in security
      * @param body The request body
-     * @return a CompletableFuture of dispositionReviewStage
+     * @return a CompletableFuture of DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStage> patch(@jakarta.annotation.Nonnull final DispositionReviewStage body) {
@@ -89,7 +89,7 @@ public class DispositionReviewStageItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property dispositionReviewStages in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dispositionReviewStage
+     * @return a CompletableFuture of DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStage> patch(@jakarta.annotation.Nonnull final DispositionReviewStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

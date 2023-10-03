@@ -89,7 +89,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get roleManagementAlerts from identityGovernance
-     * @return a CompletableFuture of roleManagementAlert
+     * @return a CompletableFuture of RoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagementAlert> get() {
@@ -98,7 +98,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleManagementAlerts from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleManagementAlert
+     * @return a CompletableFuture of RoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagementAlert> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleManagementAlerts in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of roleManagementAlert
+     * @return a CompletableFuture of RoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagementAlert> patch(@jakarta.annotation.Nonnull final RoleManagementAlert body) {
@@ -121,7 +121,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleManagementAlerts in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleManagementAlert
+     * @return a CompletableFuture of RoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleManagementAlert> patch(@jakarta.annotation.Nonnull final RoleManagementAlert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleManagementAlertsRequestBuilder
+     * @return a RoleManagementAlertsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleManagementAlertsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -24,7 +24,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
      */
     private String productIdentifier;
     /**
-     * Instantiates a new windowsPhoneXAP and sets the default values.
+     * Instantiates a new WindowsPhoneXAP and sets the default values.
      */
     public WindowsPhoneXAP() {
         super();
@@ -33,7 +33,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhoneXAP
+     * @return a WindowsPhoneXAP
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhoneXAP createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -62,7 +62,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The minimum operating system required for a Windows mobile app.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -70,7 +70,7 @@ public class WindowsPhoneXAP extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the productIdentifier property value. The Product Identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductIdentifier() {

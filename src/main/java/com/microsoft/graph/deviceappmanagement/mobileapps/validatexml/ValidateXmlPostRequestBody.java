@@ -16,9 +16,9 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * The officeConfigurationXml property
      */
-    private byte[] officeConfigurationXml;
+    private Base64url officeConfigurationXml;
     /**
-     * Instantiates a new validateXmlPostRequestBody and sets the default values.
+     * Instantiates a new ValidateXmlPostRequestBody and sets the default values.
      */
     public ValidateXmlPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a validateXmlPostRequestBody
+     * @return a ValidateXmlPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ValidateXmlPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
         return new ValidateXmlPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -48,15 +48,15 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("officeConfigurationXml", (n) -> { this.setOfficeConfigurationXml(n.getByteArrayValue()); });
+        deserializerMap.put("officeConfigurationXml", (n) -> { this.setOfficeConfigurationXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the officeConfigurationXml property value. The officeConfigurationXml property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getOfficeConfigurationXml() {
+    public Base64url getOfficeConfigurationXml() {
         return this.officeConfigurationXml;
     }
     /**
@@ -65,12 +65,12 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("officeConfigurationXml", this.getOfficeConfigurationXml());
+        writer.writeObjectValue("officeConfigurationXml", this.getOfficeConfigurationXml());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -79,7 +79,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
      * Sets the officeConfigurationXml property value. The officeConfigurationXml property
      * @param value Value to set for the officeConfigurationXml property.
      */
-    public void setOfficeConfigurationXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setOfficeConfigurationXml(@jakarta.annotation.Nullable final Base64url value) {
         this.officeConfigurationXml = value;
     }
 }

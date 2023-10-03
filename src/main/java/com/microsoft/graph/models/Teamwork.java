@@ -33,7 +33,7 @@ public class Teamwork extends Entity implements Parsable {
      */
     private java.util.List<WorkforceIntegration> workforceIntegrations;
     /**
-     * Instantiates a new teamwork and sets the default values.
+     * Instantiates a new Teamwork and sets the default values.
      */
     public Teamwork() {
         super();
@@ -41,7 +41,7 @@ public class Teamwork extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamwork
+     * @return a Teamwork
      */
     @jakarta.annotation.Nonnull
     public static Teamwork createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the deletedChats property value. A collection of deleted chats.
-     * @return a deletedChat
+     * @return a java.util.List<DeletedChat>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeletedChat> getDeletedChats() {
@@ -58,7 +58,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the deletedTeams property value. A collection of deleted teams.
-     * @return a deletedTeam
+     * @return a java.util.List<DeletedTeam>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeletedTeam> getDeletedTeams() {
@@ -66,7 +66,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the devices property value. The Teams devices provisioned for the tenant.
-     * @return a teamworkDevice
+     * @return a java.util.List<TeamworkDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkDevice> getDevices() {
@@ -89,7 +89,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppSettings property value. Represents tenant-wide settings for all Teams apps in the tenant.
-     * @return a teamsAppSettings
+     * @return a TeamsAppSettings
      */
     @jakarta.annotation.Nullable
     public TeamsAppSettings getTeamsAppSettings() {
@@ -97,7 +97,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the teamTemplates property value. The templates associated with a team.
-     * @return a teamTemplate
+     * @return a java.util.List<TeamTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamTemplate> getTeamTemplates() {
@@ -105,7 +105,7 @@ public class Teamwork extends Entity implements Parsable {
     }
     /**
      * Gets the workforceIntegrations property value. A workforce integration with shifts.
-     * @return a workforceIntegration
+     * @return a java.util.List<WorkforceIntegration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkforceIntegration> getWorkforceIntegrations() {

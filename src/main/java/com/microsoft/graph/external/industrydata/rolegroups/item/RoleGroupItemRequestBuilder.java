@@ -56,8 +56,8 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a roleGroup object.
-     * @return a CompletableFuture of roleGroup
+     * Read the properties and relationships of a roleGroup object. This API is supported in the following national cloud deployments.
+     * @return a CompletableFuture of RoleGroup
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-rolegroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a roleGroup object.
+     * Read the properties and relationships of a roleGroup object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleGroup
+     * @return a CompletableFuture of RoleGroup
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-rolegroup-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property roleGroups in external
      * @param body The request body
-     * @return a CompletableFuture of roleGroup
+     * @return a CompletableFuture of RoleGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleGroup> patch(@jakarta.annotation.Nonnull final RoleGroup body) {
@@ -91,7 +91,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property roleGroups in external
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleGroup
+     * @return a CompletableFuture of RoleGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleGroup> patch(@jakarta.annotation.Nonnull final RoleGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a roleGroup object.
+     * Read the properties and relationships of a roleGroup object. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a roleGroup object.
+     * Read the properties and relationships of a roleGroup object. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class RoleGroupItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a roleGroup object.
+     * Read the properties and relationships of a roleGroup object. This API is supported in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

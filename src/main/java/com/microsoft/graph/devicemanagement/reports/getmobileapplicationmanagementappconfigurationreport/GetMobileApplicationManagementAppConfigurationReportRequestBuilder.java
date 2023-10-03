@@ -93,7 +93,7 @@ public class GetMobileApplicationManagementAppConfigurationReportRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getMobileApplicationManagementAppConfigurationReportRequestBuilder
+     * @return a GetMobileApplicationManagementAppConfigurationReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMobileApplicationManagementAppConfigurationReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

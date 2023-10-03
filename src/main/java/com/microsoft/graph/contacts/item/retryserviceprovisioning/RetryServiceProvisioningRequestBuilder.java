@@ -35,15 +35,17 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/retryServiceProvisioning", rawUrl);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the orgContact service provisioning. This API is supported in the following national cloud deployments.
+     * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post() {
         return post(null);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the orgContact service provisioning. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-retryserviceprovisioning?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Void> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -54,7 +56,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the orgContact service provisioning. This API is supported in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +64,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action retryServiceProvisioning
+     * Retry the orgContact service provisioning. This API is supported in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -83,7 +85,7 @@ public class RetryServiceProvisioningRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a retryServiceProvisioningRequestBuilder
+     * @return a RetryServiceProvisioningRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RetryServiceProvisioningRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

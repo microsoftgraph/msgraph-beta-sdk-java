@@ -57,7 +57,7 @@ public class ManagedTenantTicketingEndpointItemRequestBuilder extends BaseReques
     }
     /**
      * Get managedTenantTicketingEndpoints from tenantRelationships
-     * @return a CompletableFuture of managedTenantTicketingEndpoint
+     * @return a CompletableFuture of ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpoint> get() {
@@ -66,7 +66,7 @@ public class ManagedTenantTicketingEndpointItemRequestBuilder extends BaseReques
     /**
      * Get managedTenantTicketingEndpoints from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantTicketingEndpoint
+     * @return a CompletableFuture of ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpoint> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedTenantTicketingEndpointItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property managedTenantTicketingEndpoints in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantTicketingEndpoint
+     * @return a CompletableFuture of ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpoint> patch(@jakarta.annotation.Nonnull final ManagedTenantTicketingEndpoint body) {
@@ -89,7 +89,7 @@ public class ManagedTenantTicketingEndpointItemRequestBuilder extends BaseReques
      * Update the navigation property managedTenantTicketingEndpoints in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantTicketingEndpoint
+     * @return a CompletableFuture of ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpoint> patch(@jakarta.annotation.Nonnull final ManagedTenantTicketingEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

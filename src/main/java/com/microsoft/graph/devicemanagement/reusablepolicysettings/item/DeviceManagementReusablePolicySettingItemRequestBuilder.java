@@ -73,7 +73,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder extends Bas
     }
     /**
      * List of all reusable settings that can be referred in a policy
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> get() {
@@ -82,7 +82,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder extends Bas
     /**
      * List of all reusable settings that can be referred in a policy
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder extends Bas
     /**
      * Update the navigation property reusablePolicySettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> patch(@jakarta.annotation.Nonnull final DeviceManagementReusablePolicySetting body) {
@@ -105,7 +105,7 @@ public class DeviceManagementReusablePolicySettingItemRequestBuilder extends Bas
      * Update the navigation property reusablePolicySettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> patch(@jakarta.annotation.Nonnull final DeviceManagementReusablePolicySetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

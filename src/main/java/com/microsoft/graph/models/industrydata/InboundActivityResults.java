@@ -41,7 +41,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
      */
     private Integer warnings;
     /**
-     * Instantiates a new inboundActivityResults and sets the default values.
+     * Instantiates a new InboundActivityResults and sets the default values.
      */
     public InboundActivityResults() {
         super();
@@ -50,7 +50,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a inboundActivityResults
+     * @return a InboundActivityResults
      */
     @jakarta.annotation.Nonnull
     public static InboundActivityResults createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the errors property value. Number of errors encountered while processing the inbound flow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrors() {
@@ -84,7 +84,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the groups property value. Counts of active and inactive groups processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getGroups() {
@@ -92,7 +92,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the matchedPeopleByRole property value. Number of people matched to an Azure Active Directory user, by role.
-     * @return a industryDataRunRoleCountMetric
+     * @return a java.util.List<IndustryDataRunRoleCountMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getMatchedPeopleByRole() {
@@ -100,7 +100,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the memberships property value. Counts of active and inactive memberships processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getMemberships() {
@@ -108,7 +108,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the organizations property value. Counts of active and inactive organizations processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getOrganizations() {
@@ -116,7 +116,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the people property value. Counts of active and inactive people processed by the inbound flow.
-     * @return a industryDataRunEntityCountMetric
+     * @return a IndustryDataRunEntityCountMetric
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunEntityCountMetric getPeople() {
@@ -124,7 +124,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the unmatchedPeopleByRole property value. Number of people not matched to an Azure Active Directory user, by role.
-     * @return a industryDataRunRoleCountMetric
+     * @return a java.util.List<IndustryDataRunRoleCountMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getUnmatchedPeopleByRole() {
@@ -132,7 +132,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
     }
     /**
      * Gets the warnings property value. Number of warnings encountered while processing the inbound flow.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWarnings() {

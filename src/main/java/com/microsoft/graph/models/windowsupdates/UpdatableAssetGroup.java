@@ -13,7 +13,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
      */
     private java.util.List<UpdatableAsset> members;
     /**
-     * Instantiates a new updatableAssetGroup and sets the default values.
+     * Instantiates a new UpdatableAssetGroup and sets the default values.
      */
     public UpdatableAssetGroup() {
         super();
@@ -22,7 +22,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updatableAssetGroup
+     * @return a UpdatableAssetGroup
      */
     @jakarta.annotation.Nonnull
     public static UpdatableAssetGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class UpdatableAssetGroup extends UpdatableAsset implements Parsable {
     }
     /**
      * Gets the members property value. Members of the group. Read-only.
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getMembers() {

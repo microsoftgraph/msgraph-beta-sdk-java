@@ -60,7 +60,7 @@ public class AppleUserInitiatedEnrollmentProfilesRequestBuilder extends BaseRequ
     }
     /**
      * Apple user initiated enrollment profiles
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfileCollectionResponse
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AppleUserInitiatedEnrollmentProfilesRequestBuilder extends BaseRequ
     /**
      * Apple user initiated enrollment profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfileCollectionResponse
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AppleUserInitiatedEnrollmentProfilesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to appleUserInitiatedEnrollmentProfiles for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfile
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfile> post(@jakarta.annotation.Nonnull final AppleUserInitiatedEnrollmentProfile body) {
@@ -92,7 +92,7 @@ public class AppleUserInitiatedEnrollmentProfilesRequestBuilder extends BaseRequ
      * Create new navigation property to appleUserInitiatedEnrollmentProfiles for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfile
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfile> post(@jakarta.annotation.Nonnull final AppleUserInitiatedEnrollmentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AppleUserInitiatedEnrollmentProfilesRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appleUserInitiatedEnrollmentProfilesRequestBuilder
+     * @return a AppleUserInitiatedEnrollmentProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppleUserInitiatedEnrollmentProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

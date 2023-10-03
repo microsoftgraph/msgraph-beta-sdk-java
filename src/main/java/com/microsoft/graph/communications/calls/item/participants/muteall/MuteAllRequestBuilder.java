@@ -36,9 +36,9 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants/muteAll", rawUrl);
     }
     /**
-     * Mute all participants in the call.
+     * Mute all participants in the call. This API is supported in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of muteParticipantsOperation
+     * @return a CompletableFuture of MuteParticipantsOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-muteall?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Mute all participants in the call.
+     * Mute all participants in the call. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of muteParticipantsOperation
+     * @return a CompletableFuture of MuteParticipantsOperation
      * @see <a href="https://learn.microsoft.com/graph/api/participant-muteall?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MuteParticipantsOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Mute all participants in the call.
+     * Mute all participants in the call. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Mute all participants in the call.
+     * Mute all participants in the call. This API is supported in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a muteAllRequestBuilder
+     * @return a MuteAllRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MuteAllRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

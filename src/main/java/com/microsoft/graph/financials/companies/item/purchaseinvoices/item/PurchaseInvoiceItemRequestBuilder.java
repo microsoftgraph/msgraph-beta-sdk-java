@@ -70,7 +70,7 @@ public class PurchaseInvoiceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get purchaseInvoices from financials
-     * @return a CompletableFuture of purchaseInvoice
+     * @return a CompletableFuture of PurchaseInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PurchaseInvoice> get() {
@@ -79,7 +79,7 @@ public class PurchaseInvoiceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get purchaseInvoices from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of purchaseInvoice
+     * @return a CompletableFuture of PurchaseInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PurchaseInvoice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class PurchaseInvoiceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property purchaseInvoices in financials
      * @param body The request body
-     * @return a CompletableFuture of purchaseInvoice
+     * @return a CompletableFuture of PurchaseInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PurchaseInvoice> patch(@jakarta.annotation.Nonnull final PurchaseInvoice body) {
@@ -102,7 +102,7 @@ public class PurchaseInvoiceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property purchaseInvoices in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of purchaseInvoice
+     * @return a CompletableFuture of PurchaseInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PurchaseInvoice> patch(@jakarta.annotation.Nonnull final PurchaseInvoice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

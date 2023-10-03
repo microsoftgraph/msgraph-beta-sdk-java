@@ -73,7 +73,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The remote assist partners.
-     * @return a CompletableFuture of remoteAssistancePartner
+     * @return a CompletableFuture of RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> get() {
@@ -82,7 +82,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
     /**
      * The remote assist partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteAssistancePartner
+     * @return a CompletableFuture of RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property remoteAssistancePartners in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of remoteAssistancePartner
+     * @return a CompletableFuture of RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> patch(@jakarta.annotation.Nonnull final RemoteAssistancePartner body) {
@@ -105,7 +105,7 @@ public class RemoteAssistancePartnerItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property remoteAssistancePartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteAssistancePartner
+     * @return a CompletableFuture of RemoteAssistancePartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteAssistancePartner> patch(@jakarta.annotation.Nonnull final RemoteAssistancePartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

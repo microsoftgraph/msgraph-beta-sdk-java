@@ -54,7 +54,7 @@ public class SalesCreditMemoLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesCreditMemoLines from financials
-     * @return a CompletableFuture of salesCreditMemoLine
+     * @return a CompletableFuture of SalesCreditMemoLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> get() {
@@ -63,7 +63,7 @@ public class SalesCreditMemoLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesCreditMemoLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesCreditMemoLine
+     * @return a CompletableFuture of SalesCreditMemoLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class SalesCreditMemoLineItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesCreditMemoLines in financials
      * @param body The request body
-     * @return a CompletableFuture of salesCreditMemoLine
+     * @return a CompletableFuture of SalesCreditMemoLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> patch(@jakarta.annotation.Nonnull final SalesCreditMemoLine body) {
@@ -86,7 +86,7 @@ public class SalesCreditMemoLineItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesCreditMemoLines in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesCreditMemoLine
+     * @return a CompletableFuture of SalesCreditMemoLine
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLine> patch(@jakarta.annotation.Nonnull final SalesCreditMemoLine body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

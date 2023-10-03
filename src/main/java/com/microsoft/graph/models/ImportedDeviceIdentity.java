@@ -45,7 +45,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      */
     private Platform platform;
     /**
-     * Instantiates a new importedDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedDeviceIdentity and sets the default values.
      */
     public ImportedDeviceIdentity() {
         super();
@@ -53,7 +53,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedDeviceIdentity
+     * @return a ImportedDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public static ImportedDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,7 +77,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -85,7 +85,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a enrollmentState
+     * @return a EnrollmentState
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
@@ -110,7 +110,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the importedDeviceIdentifier property value. Imported Device Identifier
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImportedDeviceIdentifier() {
@@ -118,7 +118,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
-     * @return a importedDeviceIdentityType
+     * @return a ImportedDeviceIdentityType
      */
     @jakarta.annotation.Nullable
     public ImportedDeviceIdentityType getImportedDeviceIdentityType() {
@@ -142,7 +142,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a platform
+     * @return a Platform
      */
     @jakarta.annotation.Nullable
     public Platform getPlatform() {

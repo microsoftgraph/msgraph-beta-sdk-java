@@ -50,7 +50,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     private PropertyType type;
     /**
-     * Instantiates a new property and sets the default values.
+     * Instantiates a new Property and sets the default values.
      */
     public Property() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a property
+     * @return a Property
      */
     @jakarta.annotation.Nonnull
     public static Property createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class Property implements AdditionalDataHolder, Parsable {
         return new Property();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the aliases property value. The aliases property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAliases() {
@@ -101,7 +101,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isQueryable property value. The isQueryable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsQueryable() {
@@ -109,7 +109,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRefinable property value. The isRefinable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRefinable() {
@@ -117,7 +117,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRetrievable property value. The isRetrievable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRetrievable() {
@@ -125,7 +125,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isSearchable property value. The isSearchable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
@@ -133,7 +133,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the labels property value. The labels property
-     * @return a label
+     * @return a java.util.List<Label>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Label> getLabels() {
@@ -141,7 +141,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -149,7 +149,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -157,7 +157,7 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a propertyType
+     * @return a PropertyType
      */
     @jakarta.annotation.Nullable
     public PropertyType getType() {
@@ -181,8 +181,8 @@ public class Property implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

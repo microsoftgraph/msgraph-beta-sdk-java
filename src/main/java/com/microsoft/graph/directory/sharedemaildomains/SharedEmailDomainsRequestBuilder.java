@@ -60,7 +60,7 @@ public class SharedEmailDomainsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sharedEmailDomains from directory
-     * @return a CompletableFuture of sharedEmailDomainCollectionResponse
+     * @return a CompletableFuture of SharedEmailDomainCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomainCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SharedEmailDomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sharedEmailDomains from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedEmailDomainCollectionResponse
+     * @return a CompletableFuture of SharedEmailDomainCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomainCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SharedEmailDomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sharedEmailDomains for directory
      * @param body The request body
-     * @return a CompletableFuture of sharedEmailDomain
+     * @return a CompletableFuture of SharedEmailDomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomain> post(@jakarta.annotation.Nonnull final SharedEmailDomain body) {
@@ -92,7 +92,7 @@ public class SharedEmailDomainsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedEmailDomains for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedEmailDomain
+     * @return a CompletableFuture of SharedEmailDomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomain> post(@jakarta.annotation.Nonnull final SharedEmailDomain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SharedEmailDomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharedEmailDomainsRequestBuilder
+     * @return a SharedEmailDomainsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SharedEmailDomainsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

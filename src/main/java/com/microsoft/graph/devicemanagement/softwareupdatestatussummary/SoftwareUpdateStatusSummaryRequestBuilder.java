@@ -38,7 +38,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The software update status summary.
-     * @return a CompletableFuture of softwareUpdateStatusSummary
+     * @return a CompletableFuture of SoftwareUpdateStatusSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> get() {
@@ -47,7 +47,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
     /**
      * The software update status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of softwareUpdateStatusSummary
+     * @return a CompletableFuture of SoftwareUpdateStatusSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SoftwareUpdateStatusSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class SoftwareUpdateStatusSummaryRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a softwareUpdateStatusSummaryRequestBuilder
+     * @return a SoftwareUpdateStatusSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SoftwareUpdateStatusSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

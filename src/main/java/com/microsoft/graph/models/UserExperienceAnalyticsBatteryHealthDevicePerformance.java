@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     private String model;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthDevicePerformance() {
         super();
@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a UserExperienceAnalyticsBatteryHealthDevicePerformance
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDevicePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the batteryAgeInDays property value. Estimated battery age. Unit in days. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryAgeInDays() {
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the deviceBatteryCount property value. Number of batteries in a user device. Valid values 1 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceBatteryCount() {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceBatteryHealthScore() {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the deviceName property value. Device friendly name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEstimatedRuntimeInMinutes() {
@@ -141,7 +141,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the fullBatteryDrainCount property value. Number of times the battery has been discharged an amount that equals 100% of its capacity, but not necessarily by discharging it from 100% to 0%. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFullBatteryDrainCount() {
@@ -149,7 +149,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a userExperienceAnalyticsHealthState
+     * @return a UserExperienceAnalyticsHealthState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getHealthStatus() {
@@ -157,7 +157,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the manufacturer property value. The manufacturer name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -165,7 +165,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the maxCapacityPercentage property value. Ratio of current capacity and design capacity of the battery with the lowest capacity. Unit in percentage and values range from 0-100. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxCapacityPercentage() {
@@ -173,7 +173,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     }
     /**
      * Gets the model property value. The model name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {

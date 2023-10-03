@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder e
     }
     /**
      * User Experience Analytics Battery Health Device App Impact
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder e
     /**
      * User Experience Analytics Battery Health Device App Impact
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceAppImpactCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder e
     /**
      * Create new navigation property to userExperienceAnalyticsBatteryHealthDeviceAppImpact for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceAppImpact
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceAppImpact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthDeviceAppImpact body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder e
      * Create new navigation property to userExperienceAnalyticsBatteryHealthDeviceAppImpact for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceAppImpact
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceAppImpact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthDeviceAppImpact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder e
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

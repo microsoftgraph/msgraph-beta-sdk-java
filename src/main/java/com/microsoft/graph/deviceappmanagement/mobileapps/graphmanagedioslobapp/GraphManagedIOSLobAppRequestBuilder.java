@@ -46,7 +46,7 @@ public class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.managedIOSLobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of managedIOSLobAppCollectionResponse
+     * @return a CompletableFuture of ManagedIOSLobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedIOSLobAppCollectionResponse> get() {
@@ -55,7 +55,7 @@ public class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.managedIOSLobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedIOSLobAppCollectionResponse
+     * @return a CompletableFuture of ManagedIOSLobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedIOSLobAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GraphManagedIOSLobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphManagedIOSLobAppRequestBuilder
+     * @return a GraphManagedIOSLobAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphManagedIOSLobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -32,7 +32,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      */
     private String subjectAlternativeNameFormatString;
     /**
-     * Instantiates a new androidPkcsCertificateProfile and sets the default values.
+     * Instantiates a new AndroidPkcsCertificateProfile and sets the default values.
      */
     public AndroidPkcsCertificateProfile() {
         super();
@@ -41,7 +41,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidPkcsCertificateProfile
+     * @return a AndroidPkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidPkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
@@ -58,7 +58,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
@@ -66,7 +66,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
@@ -88,7 +88,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -96,7 +96,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {

@@ -57,7 +57,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      */
     private String serialNumber;
     /**
-     * Instantiates a new importedAppleDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedAppleDeviceIdentity and sets the default values.
      */
     public ImportedAppleDeviceIdentity() {
         super();
@@ -65,7 +65,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedAppleDeviceIdentity
+     * @return a ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public static ImportedAppleDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -97,7 +97,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the discoverySource property value. The discoverySource property
-     * @return a discoverySource
+     * @return a DiscoverySource
      */
     @jakarta.annotation.Nullable
     public DiscoverySource getDiscoverySource() {
@@ -105,7 +105,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a enrollmentState
+     * @return a EnrollmentState
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
@@ -133,7 +133,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Indicates if the device is deleted from Apple Business Manager
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -141,7 +141,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the isSupervised property value. Indicates if the Apple device is supervised. More information is at: https://support.apple.com/en-us/HT202837
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSupervised() {
@@ -157,7 +157,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a platform
+     * @return a Platform
      */
     @jakarta.annotation.Nullable
     public Platform getPlatform() {
@@ -173,7 +173,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the requestedEnrollmentProfileId property value. Enrollment profile Id admin intends to apply to the device during next enrollment
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestedEnrollmentProfileId() {
@@ -181,7 +181,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the serialNumber property value. Device serial number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {

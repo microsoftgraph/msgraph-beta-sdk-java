@@ -14,7 +14,7 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
      */
     private String url;
     /**
-     * Instantiates a new knowledgeBaseArticle and sets the default values.
+     * Instantiates a new KnowledgeBaseArticle and sets the default values.
      */
     public KnowledgeBaseArticle() {
         super();
@@ -22,7 +22,7 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a knowledgeBaseArticle
+     * @return a KnowledgeBaseArticle
      */
     @jakarta.annotation.Nonnull
     public static KnowledgeBaseArticle createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
     }
     /**
      * Gets the url property value. The URL of the knowledge base article. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {

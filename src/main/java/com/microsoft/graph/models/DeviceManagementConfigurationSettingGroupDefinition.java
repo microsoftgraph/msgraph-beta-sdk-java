@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Dependent child settings to this group of settings.
+     * Dependent child settings to this group of settings
      */
     private java.util.List<String> childIds;
     /**
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
      */
     private java.util.List<DeviceManagementConfigurationDependentOn> dependentOn;
     /**
-     * Instantiates a new deviceManagementConfigurationSettingGroupDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingGroupDefinition and sets the default values.
      */
     public DeviceManagementConfigurationSettingGroupDefinition() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingGroupDefinition
+     * @return a DeviceManagementConfigurationSettingGroupDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingGroupDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,8 +44,8 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
         return new DeviceManagementConfigurationSettingGroupDefinition();
     }
     /**
-     * Gets the childIds property value. Dependent child settings to this group of settings.
-     * @return a string
+     * Gets the childIds property value. Dependent child settings to this group of settings
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getChildIds() {
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
     }
     /**
      * Gets the dependedOnBy property value. List of child settings that depend on this setting
-     * @return a deviceManagementConfigurationSettingDependedOnBy
+     * @return a java.util.List<DeviceManagementConfigurationSettingDependedOnBy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDependedOnBy> getDependedOnBy() {
@@ -61,7 +61,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
     }
     /**
      * Gets the dependentOn property value. List of Dependencies for the setting group
-     * @return a deviceManagementConfigurationDependentOn
+     * @return a java.util.List<DeviceManagementConfigurationDependentOn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationDependentOn> getDependentOn() {
@@ -91,7 +91,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
         writer.writeCollectionOfObjectValues("dependentOn", this.getDependentOn());
     }
     /**
-     * Sets the childIds property value. Dependent child settings to this group of settings.
+     * Sets the childIds property value. Dependent child settings to this group of settings
      * @param value Value to set for the childIds property.
      */
     public void setChildIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

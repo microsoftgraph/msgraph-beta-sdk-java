@@ -65,7 +65,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     }
     /**
      * Represents the role management policy assignments.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get() {
@@ -74,7 +74,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     /**
      * Represents the role management policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
     /**
      * Update the navigation property roleManagementPolicyAssignments in policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body) {
@@ -97,7 +97,7 @@ public class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder extends Bas
      * Update the navigation property roleManagementPolicyAssignments in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicyAssignment
+     * @return a CompletableFuture of UnifiedRoleManagementPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicyAssignment> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

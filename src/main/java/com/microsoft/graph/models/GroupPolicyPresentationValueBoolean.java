@@ -16,7 +16,7 @@ public class GroupPolicyPresentationValueBoolean extends GroupPolicyPresentation
      */
     private Boolean value;
     /**
-     * Instantiates a new groupPolicyPresentationValueBoolean and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValueBoolean and sets the default values.
      */
     public GroupPolicyPresentationValueBoolean() {
         super();
@@ -24,7 +24,7 @@ public class GroupPolicyPresentationValueBoolean extends GroupPolicyPresentation
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValueBoolean
+     * @return a GroupPolicyPresentationValueBoolean
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueBoolean createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class GroupPolicyPresentationValueBoolean extends GroupPolicyPresentation
     }
     /**
      * Gets the value property value. An boolean value for the associated presentation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getValue() {

@@ -73,7 +73,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder extends BaseR
     }
     /**
      * Android device owner enrollment profile entities.
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfile
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfile> get() {
@@ -82,7 +82,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder extends BaseR
     /**
      * Android device owner enrollment profile entities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfile
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder extends BaseR
     /**
      * Update the navigation property androidDeviceOwnerEnrollmentProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfile
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfile> patch(@jakarta.annotation.Nonnull final AndroidDeviceOwnerEnrollmentProfile body) {
@@ -105,7 +105,7 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder extends BaseR
      * Update the navigation property androidDeviceOwnerEnrollmentProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidDeviceOwnerEnrollmentProfile
+     * @return a CompletableFuture of AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidDeviceOwnerEnrollmentProfile> patch(@jakarta.annotation.Nonnull final AndroidDeviceOwnerEnrollmentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

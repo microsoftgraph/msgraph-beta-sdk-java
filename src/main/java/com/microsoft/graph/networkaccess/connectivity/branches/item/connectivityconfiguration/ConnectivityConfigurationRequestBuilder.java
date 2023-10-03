@@ -65,7 +65,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get connectivityConfiguration from networkAccess
-     * @return a CompletableFuture of branchConnectivityConfiguration
+     * @return a CompletableFuture of BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BranchConnectivityConfiguration> get() {
@@ -74,7 +74,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Get connectivityConfiguration from networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of branchConnectivityConfiguration
+     * @return a CompletableFuture of BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BranchConnectivityConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property connectivityConfiguration in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of branchConnectivityConfiguration
+     * @return a CompletableFuture of BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BranchConnectivityConfiguration> patch(@jakarta.annotation.Nonnull final BranchConnectivityConfiguration body) {
@@ -97,7 +97,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property connectivityConfiguration in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of branchConnectivityConfiguration
+     * @return a CompletableFuture of BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BranchConnectivityConfiguration> patch(@jakarta.annotation.Nonnull final BranchConnectivityConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectivityConfigurationRequestBuilder
+     * @return a ConnectivityConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectivityConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

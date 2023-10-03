@@ -18,7 +18,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
      */
     private RestoreTimeRange timeRange;
     /**
-     * Instantiates a new cloudPcBulkRestore and sets the default values.
+     * Instantiates a new CloudPcBulkRestore and sets the default values.
      */
     public CloudPcBulkRestore() {
         super();
@@ -27,7 +27,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcBulkRestore
+     * @return a CloudPcBulkRestore
      */
     @jakarta.annotation.Nonnull
     public static CloudPcBulkRestore createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     }
     /**
      * Gets the timeRange property value. The timeRange property
-     * @return a restoreTimeRange
+     * @return a RestoreTimeRange
      */
     @jakarta.annotation.Nullable
     public RestoreTimeRange getTimeRange() {

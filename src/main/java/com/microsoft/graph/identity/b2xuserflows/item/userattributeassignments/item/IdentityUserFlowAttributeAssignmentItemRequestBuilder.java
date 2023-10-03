@@ -65,7 +65,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     }
     /**
      * The user attribute assignments included in the user flow.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> get() {
@@ -74,7 +74,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     /**
      * The user attribute assignments included in the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
     /**
      * Update the navigation property userAttributeAssignments in identity
      * @param body The request body
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body) {
@@ -97,7 +97,7 @@ public class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseR
      * Update the navigation property userAttributeAssignments in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityUserFlowAttributeAssignment
+     * @return a CompletableFuture of IdentityUserFlowAttributeAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityUserFlowAttributeAssignment> patch(@jakarta.annotation.Nonnull final IdentityUserFlowAttributeAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

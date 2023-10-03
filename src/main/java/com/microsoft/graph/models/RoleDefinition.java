@@ -44,7 +44,7 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new roleDefinition and sets the default values.
+     * Instantiates a new RoleDefinition and sets the default values.
      */
     public RoleDefinition() {
         super();
@@ -52,7 +52,7 @@ public class RoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleDefinition
+     * @return a RoleDefinition
      */
     @jakarta.annotation.Nonnull
     public static RoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the Role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -76,7 +76,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display Name of the Role definition.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -101,7 +101,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
@@ -109,7 +109,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isBuiltInRoleDefinition property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltInRoleDefinition() {
@@ -117,7 +117,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the permissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     * @return a rolePermission
+     * @return a java.util.List<RolePermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getPermissions() {
@@ -125,7 +125,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. List of Role assignments for this role definition.
-     * @return a roleAssignment
+     * @return a java.util.List<RoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleAssignment> getRoleAssignments() {
@@ -133,7 +133,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the rolePermissions property value. List of Role Permissions this role is allowed to perform. These must match the actionName that is defined as part of the rolePermission.
-     * @return a rolePermission
+     * @return a java.util.List<RolePermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RolePermission> getRolePermissions() {
@@ -141,7 +141,7 @@ public class RoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
