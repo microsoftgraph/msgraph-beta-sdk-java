@@ -60,7 +60,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Sessions of the virtual event.
-     * @return a CompletableFuture of virtualEventSessionCollectionResponse
+     * @return a CompletableFuture of VirtualEventSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSessionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Sessions of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventSessionCollectionResponse
+     * @return a CompletableFuture of VirtualEventSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSessionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sessions for solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> post(@jakarta.annotation.Nonnull final VirtualEventSession body) {
@@ -92,7 +92,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sessions for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> post(@jakarta.annotation.Nonnull final VirtualEventSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sessionsRequestBuilder
+     * @return a SessionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

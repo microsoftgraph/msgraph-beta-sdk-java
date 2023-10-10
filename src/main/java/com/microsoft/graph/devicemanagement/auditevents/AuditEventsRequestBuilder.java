@@ -69,7 +69,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Audit Events
-     * @return a CompletableFuture of auditEventCollectionResponse
+     * @return a CompletableFuture of AuditEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEventCollectionResponse> get() {
@@ -78,7 +78,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Audit Events
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEventCollectionResponse
+     * @return a CompletableFuture of AuditEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,7 +91,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAuditActivityTypes method.
      * @param category Usage: category='{category}'
-     * @return a getAuditActivityTypesWithCategoryRequestBuilder
+     * @return a GetAuditActivityTypesWithCategoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAuditActivityTypesWithCategoryRequestBuilder getAuditActivityTypesWithCategory(@jakarta.annotation.Nonnull final String category) {
@@ -101,7 +101,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> post(@jakarta.annotation.Nonnull final AuditEvent body) {
@@ -111,7 +111,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to auditEvents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> post(@jakarta.annotation.Nonnull final AuditEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -186,7 +186,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a auditEventsRequestBuilder
+     * @return a AuditEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuditEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

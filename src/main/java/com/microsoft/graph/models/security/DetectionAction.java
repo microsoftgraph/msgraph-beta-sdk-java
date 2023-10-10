@@ -30,7 +30,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<ResponseAction> responseActions;
     /**
-     * Instantiates a new detectionAction and sets the default values.
+     * Instantiates a new DetectionAction and sets the default values.
      */
     public DetectionAction() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectionAction
+     * @return a DetectionAction
      */
     @jakarta.annotation.Nonnull
     public static DetectionAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
         return new DetectionAction();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alertTemplate property value. The alertTemplate property
-     * @return a alertTemplate
+     * @return a AlertTemplate
      */
     @jakarta.annotation.Nullable
     public AlertTemplate getAlertTemplate() {
@@ -76,7 +76,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organizationalScope property value. The organizationalScope property
-     * @return a organizationalScope
+     * @return a OrganizationalScope
      */
     @jakarta.annotation.Nullable
     public OrganizationalScope getOrganizationalScope() {
@@ -92,7 +92,7 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the responseActions property value. The responseActions property
-     * @return a responseAction
+     * @return a java.util.List<ResponseAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResponseAction> getResponseActions() {
@@ -111,8 +111,8 @@ public class DetectionAction implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

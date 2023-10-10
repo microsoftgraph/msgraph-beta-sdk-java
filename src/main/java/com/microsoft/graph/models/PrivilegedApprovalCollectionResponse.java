@@ -13,7 +13,7 @@ public class PrivilegedApprovalCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<PrivilegedApproval> value;
     /**
-     * Instantiates a new privilegedApprovalCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedApprovalCollectionResponse and sets the default values.
      */
     public PrivilegedApprovalCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PrivilegedApprovalCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedApprovalCollectionResponse
+     * @return a PrivilegedApprovalCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedApprovalCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PrivilegedApprovalCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedApproval
+     * @return a java.util.List<PrivilegedApproval>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedApproval> getValue() {

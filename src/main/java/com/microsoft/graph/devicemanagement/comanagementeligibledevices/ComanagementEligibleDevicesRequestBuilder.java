@@ -60,7 +60,7 @@ public class ComanagementEligibleDevicesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The list of co-management eligible devices report
-     * @return a CompletableFuture of comanagementEligibleDeviceCollectionResponse
+     * @return a CompletableFuture of ComanagementEligibleDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDeviceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ComanagementEligibleDevicesRequestBuilder extends BaseRequestBuilde
     /**
      * The list of co-management eligible devices report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of comanagementEligibleDeviceCollectionResponse
+     * @return a CompletableFuture of ComanagementEligibleDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ComanagementEligibleDevicesRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to comanagementEligibleDevices for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of comanagementEligibleDevice
+     * @return a CompletableFuture of ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevice> post(@jakarta.annotation.Nonnull final ComanagementEligibleDevice body) {
@@ -92,7 +92,7 @@ public class ComanagementEligibleDevicesRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to comanagementEligibleDevices for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of comanagementEligibleDevice
+     * @return a CompletableFuture of ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevice> post(@jakarta.annotation.Nonnull final ComanagementEligibleDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ComanagementEligibleDevicesRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a comanagementEligibleDevicesRequestBuilder
+     * @return a ComanagementEligibleDevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ComanagementEligibleDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

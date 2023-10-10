@@ -59,17 +59,17 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/roleDefinitions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * A collection of role defintions for the provider.
-     * @return a CompletableFuture of governanceRoleDefinitionCollectionResponse
+     * A collection of role definitions for the provider.
+     * @return a CompletableFuture of GovernanceRoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinitionCollectionResponse> get() {
         return get(null);
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleDefinitionCollectionResponse
+     * @return a CompletableFuture of GovernanceRoleDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleDefinitions for privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> post(@jakarta.annotation.Nonnull final GovernanceRoleDefinition body) {
@@ -92,7 +92,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleDefinitions for privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleDefinition
+     * @return a CompletableFuture of GovernanceRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleDefinition> post(@jakarta.annotation.Nonnull final GovernanceRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, GovernanceRoleDefinition::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleDefinitionsRequestBuilder
+     * @return a RoleDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new RoleDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

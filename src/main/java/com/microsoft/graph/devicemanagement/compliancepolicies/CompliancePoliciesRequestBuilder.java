@@ -60,7 +60,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of all compliance policies
-     * @return a CompletableFuture of deviceManagementCompliancePolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementCompliancePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of all compliance policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCompliancePolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementCompliancePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to compliancePolicies for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body) {
@@ -92,7 +92,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to compliancePolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a compliancePoliciesRequestBuilder
+     * @return a CompliancePoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CompliancePoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

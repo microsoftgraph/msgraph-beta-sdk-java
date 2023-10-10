@@ -108,7 +108,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      */
     private java.util.List<String> trustedServerCertificateNames;
     /**
-     * Instantiates a new windowsWiredNetworkConfiguration and sets the default values.
+     * Instantiates a new WindowsWiredNetworkConfiguration and sets the default values.
      */
     public WindowsWiredNetworkConfiguration() {
         super();
@@ -117,7 +117,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsWiredNetworkConfiguration
+     * @return a WindowsWiredNetworkConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsWiredNetworkConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -126,7 +126,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationBlockPeriodInMinutes property value. Specify the duration for which automatic authentication attempts will be blocked from occuring after a failed authentication attempt.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAuthenticationBlockPeriodInMinutes() {
@@ -134,7 +134,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
-     * @return a wiredNetworkAuthenticationMethod
+     * @return a WiredNetworkAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public WiredNetworkAuthenticationMethod getAuthenticationMethod() {
@@ -142,7 +142,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationPeriodInSeconds property value. Specify the number of seconds for the client to wait after an authentication attempt before failing. Valid range 1-3600.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAuthenticationPeriodInSeconds() {
@@ -150,7 +150,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationRetryDelayPeriodInSeconds property value. Specify the number of seconds between a failed authentication and the next authentication attempt. Valid range 1-3600.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAuthenticationRetryDelayPeriodInSeconds() {
@@ -158,7 +158,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
-     * @return a wiredNetworkAuthenticationType
+     * @return a WiredNetworkAuthenticationType
      */
     @jakarta.annotation.Nullable
     public WiredNetworkAuthenticationType getAuthenticationType() {
@@ -166,7 +166,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don't need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCacheCredentials() {
@@ -174,7 +174,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the disableUserPromptForServerValidation property value. When TRUE, prevents the user from being prompted to authorize new servers for trusted certification authorities when EAP type is selected as PEAP. When FALSE, does not prevent the user from being prompted. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableUserPromptForServerValidation() {
@@ -182,7 +182,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the eapolStartPeriodInSeconds property value. Specify the number of seconds to wait before sending an EAPOL (Extensible Authentication Protocol over LAN) Start message. Valid range 1-3600.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEapolStartPeriodInSeconds() {
@@ -190,7 +190,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the eapType property value. Extensible Authentication Protocol (EAP) configuration types.
-     * @return a eapType
+     * @return a EapType
      */
     @jakarta.annotation.Nullable
     public EapType getEapType() {
@@ -198,7 +198,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the enforce8021X property value. When TRUE, the automatic configuration service for wired networks requires the use of 802.1X for port authentication. When FALSE, 802.1X is not required. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforce8021X() {
@@ -239,7 +239,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the forceFIPSCompliance property value. When TRUE, forces FIPS compliance. When FALSE, does not enable FIPS compliance. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getForceFIPSCompliance() {
@@ -247,7 +247,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Specify identity certificate for client authentication.
-     * @return a windowsCertificateProfileBase
+     * @return a WindowsCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificateForClientAuthentication() {
@@ -255,7 +255,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
-     * @return a nonEapAuthenticationMethodForEapTtlsType
+     * @return a NonEapAuthenticationMethodForEapTtlsType
      */
     @jakarta.annotation.Nullable
     public NonEapAuthenticationMethodForEapTtlsType getInnerAuthenticationProtocolForEAPTTLS() {
@@ -263,7 +263,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the maximumAuthenticationFailures property value. Specify the maximum authentication failures allowed for a set of credentials. Valid range 1-100.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumAuthenticationFailures() {
@@ -271,7 +271,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the maximumEAPOLStartMessages property value. Specify the maximum number of EAPOL (Extensible Authentication Protocol over LAN) Start messages to be sent before returning failure. Valid range 1-100.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumEAPOLStartMessages() {
@@ -279,7 +279,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the outerIdentityPrivacyTemporaryValue property value. Specify the string to replace usernames for privacy when using EAP TTLS or PEAP.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuterIdentityPrivacyTemporaryValue() {
@@ -287,7 +287,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the performServerValidation property value. When TRUE, enables verification of server's identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPerformServerValidation() {
@@ -295,7 +295,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the requireCryptographicBinding property value. When TRUE, enables cryptographic binding when EAP type is selected as PEAP. When FALSE, does not enable cryptogrpahic binding. Default value is TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireCryptographicBinding() {
@@ -303,7 +303,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the rootCertificateForClientValidation property value. Specify root certificate for client validation.
-     * @return a windows81TrustedRootCertificate
+     * @return a Windows81TrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getRootCertificateForClientValidation() {
@@ -311,7 +311,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the rootCertificatesForServerValidation property value. Specify root certificates for server validation. This collection can contain a maximum of 500 elements.
-     * @return a windows81TrustedRootCertificate
+     * @return a java.util.List<Windows81TrustedRootCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Windows81TrustedRootCertificate> getRootCertificatesForServerValidation() {
@@ -319,7 +319,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
-     * @return a wiredNetworkAuthenticationMethod
+     * @return a WiredNetworkAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public WiredNetworkAuthenticationMethod getSecondaryAuthenticationMethod() {
@@ -327,7 +327,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the secondaryIdentityCertificateForClientAuthentication property value. Specify secondary identity certificate for client authentication.
-     * @return a windowsCertificateProfileBase
+     * @return a WindowsCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getSecondaryIdentityCertificateForClientAuthentication() {
@@ -335,7 +335,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the secondaryRootCertificateForClientValidation property value. Specify secondary root certificate for client validation.
-     * @return a windows81TrustedRootCertificate
+     * @return a Windows81TrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public Windows81TrustedRootCertificate getSecondaryRootCertificateForClientValidation() {
@@ -343,7 +343,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the trustedServerCertificateNames property value. Specify trusted server certificate names.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedServerCertificateNames() {

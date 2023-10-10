@@ -49,7 +49,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      */
     private String userName;
     /**
-     * Instantiates a new remoteActionAudit and sets the default values.
+     * Instantiates a new RemoteActionAudit and sets the default values.
      */
     public RemoteActionAudit() {
         super();
@@ -57,7 +57,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a remoteActionAudit
+     * @return a RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public static RemoteActionAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. Remote actions Intune supports.
-     * @return a remoteAction
+     * @return a RemoteAction
      */
     @jakarta.annotation.Nullable
     public RemoteAction getAction() {
@@ -74,7 +74,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the actionState property value. The actionState property
-     * @return a actionState
+     * @return a ActionState
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
@@ -82,7 +82,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Intune device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -90,7 +90,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the deviceIMEI property value. IMEI of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceIMEI() {
@@ -98,7 +98,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the deviceOwnerUserPrincipalName property value. Upn of the device owner.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOwnerUserPrincipalName() {
@@ -124,7 +124,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. User who initiated the device action, format is UPN.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
@@ -132,7 +132,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Action target.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -148,7 +148,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. [deprecated] Please use InitiatedByUserPrincipalName instead.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

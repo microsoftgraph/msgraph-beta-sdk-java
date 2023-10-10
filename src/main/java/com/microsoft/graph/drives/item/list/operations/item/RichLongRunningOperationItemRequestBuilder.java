@@ -56,17 +56,17 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * The collection of long running operations for the list.
-     * @return a CompletableFuture of richLongRunningOperation
+     * The collection of long-running operations on the list.
+     * @return a CompletableFuture of RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> get() {
         return get(null);
     }
     /**
-     * The collection of long running operations for the list.
+     * The collection of long-running operations on the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of richLongRunningOperation
+     * @return a CompletableFuture of RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property operations in drives
      * @param body The request body
-     * @return a CompletableFuture of richLongRunningOperation
+     * @return a CompletableFuture of RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> patch(@jakarta.annotation.Nonnull final RichLongRunningOperation body) {
@@ -89,7 +89,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property operations in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of richLongRunningOperation
+     * @return a CompletableFuture of RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RichLongRunningOperation> patch(@jakarta.annotation.Nonnull final RichLongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * The collection of long running operations for the list.
+     * The collection of long-running operations on the list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of long running operations for the list.
+     * The collection of long-running operations on the list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection of long running operations for the list.
+     * The collection of long-running operations on the list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,24 +36,24 @@ public class GenerateEncryptionPublicKeyRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Generate a public key to use to encrypt the Apple device enrollment program token
-     * @return a CompletableFuture of generateEncryptionPublicKeyResponse
+     * @return a CompletableFuture of GenerateEncryptionPublicKeyPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GenerateEncryptionPublicKeyResponse> post() {
+    public java.util.concurrent.CompletableFuture<GenerateEncryptionPublicKeyPostResponse> post() {
         return post(null);
     }
     /**
      * Generate a public key to use to encrypt the Apple device enrollment program token
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of generateEncryptionPublicKeyResponse
+     * @return a CompletableFuture of GenerateEncryptionPublicKeyPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GenerateEncryptionPublicKeyResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GenerateEncryptionPublicKeyPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GenerateEncryptionPublicKeyResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GenerateEncryptionPublicKeyPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Generate a public key to use to encrypt the Apple device enrollment program token
@@ -86,7 +86,7 @@ public class GenerateEncryptionPublicKeyRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a generateEncryptionPublicKeyRequestBuilder
+     * @return a GenerateEncryptionPublicKeyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GenerateEncryptionPublicKeyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

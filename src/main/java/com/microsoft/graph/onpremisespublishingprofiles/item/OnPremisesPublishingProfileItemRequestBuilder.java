@@ -97,7 +97,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get entity from onPremisesPublishingProfiles by key
-     * @return a CompletableFuture of onPremisesPublishingProfile
+     * @return a CompletableFuture of OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> get() {
@@ -106,7 +106,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder extends BaseRequestBu
     /**
      * Get entity from onPremisesPublishingProfiles by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesPublishingProfile
+     * @return a CompletableFuture of OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder extends BaseRequestBu
     /**
      * Update entity in onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of onPremisesPublishingProfile
+     * @return a CompletableFuture of OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> patch(@jakarta.annotation.Nonnull final OnPremisesPublishingProfile body) {
@@ -129,7 +129,7 @@ public class OnPremisesPublishingProfileItemRequestBuilder extends BaseRequestBu
      * Update entity in onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesPublishingProfile
+     * @return a CompletableFuture of OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> patch(@jakarta.annotation.Nonnull final OnPremisesPublishingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

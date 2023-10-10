@@ -74,7 +74,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
      */
     private java.util.List<UnsupportedGroupPolicyExtension> unsupportedGroupPolicyExtensions;
     /**
-     * Instantiates a new groupPolicyMigrationReport and sets the default values.
+     * Instantiates a new GroupPolicyMigrationReport and sets the default values.
      */
     public GroupPolicyMigrationReport() {
         super();
@@ -82,7 +82,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyMigrationReport
+     * @return a GroupPolicyMigrationReport
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyMigrationReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -99,7 +99,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of Group Policy Object from the GPO Xml Content
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -155,7 +155,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicySettingMappings property value. A list of group policy settings to MDM/Intune mappings.
-     * @return a groupPolicySettingMapping
+     * @return a java.util.List<GroupPolicySettingMapping>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicySettingMapping> getGroupPolicySettingMappings() {
@@ -171,7 +171,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the migrationReadiness property value. Indicates if the Group Policy Object file is covered and ready for Intune migration.
-     * @return a groupPolicyMigrationReadiness
+     * @return a GroupPolicyMigrationReadiness
      */
     @jakarta.annotation.Nullable
     public GroupPolicyMigrationReadiness getMigrationReadiness() {
@@ -179,7 +179,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
@@ -187,7 +187,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -195,7 +195,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the supportedSettingsCount property value. The number of Group Policy Settings supported by Intune.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSupportedSettingsCount() {
@@ -203,7 +203,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the supportedSettingsPercent property value. The Percentage of Group Policy Settings supported by Intune.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSupportedSettingsPercent() {
@@ -211,7 +211,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the targetedInActiveDirectory property value. The Targeted in AD property from GPO Xml Content
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTargetedInActiveDirectory() {
@@ -219,7 +219,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the totalSettingsCount property value. The total number of Group Policy Settings from GPO file.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalSettingsCount() {
@@ -227,7 +227,7 @@ public class GroupPolicyMigrationReport extends Entity implements Parsable {
     }
     /**
      * Gets the unsupportedGroupPolicyExtensions property value. A list of unsupported group policy extensions inside the Group Policy Object.
-     * @return a unsupportedGroupPolicyExtension
+     * @return a java.util.List<UnsupportedGroupPolicyExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnsupportedGroupPolicyExtension> getUnsupportedGroupPolicyExtensions() {

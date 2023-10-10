@@ -60,7 +60,7 @@ public class OnPremisesPublishingProfilesRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get entities from onPremisesPublishingProfiles
-     * @return a CompletableFuture of onPremisesPublishingProfileCollectionResponse
+     * @return a CompletableFuture of OnPremisesPublishingProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class OnPremisesPublishingProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Get entities from onPremisesPublishingProfiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesPublishingProfileCollectionResponse
+     * @return a CompletableFuture of OnPremisesPublishingProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class OnPremisesPublishingProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Add new entity to onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of onPremisesPublishingProfile
+     * @return a CompletableFuture of OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> post(@jakarta.annotation.Nonnull final OnPremisesPublishingProfile body) {
@@ -92,7 +92,7 @@ public class OnPremisesPublishingProfilesRequestBuilder extends BaseRequestBuild
      * Add new entity to onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesPublishingProfile
+     * @return a CompletableFuture of OnPremisesPublishingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesPublishingProfile> post(@jakarta.annotation.Nonnull final OnPremisesPublishingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class OnPremisesPublishingProfilesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a onPremisesPublishingProfilesRequestBuilder
+     * @return a OnPremisesPublishingProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OnPremisesPublishingProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

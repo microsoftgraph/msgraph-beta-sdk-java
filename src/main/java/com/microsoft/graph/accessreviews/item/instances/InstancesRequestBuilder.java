@@ -60,7 +60,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of access reviews instances past, present and future, if this object is a recurring access review.
-     * @return a CompletableFuture of accessReviewCollectionResponse
+     * @return a CompletableFuture of AccessReviewCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of access reviews instances past, present and future, if this object is a recurring access review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewCollectionResponse
+     * @return a CompletableFuture of AccessReviewCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to instances for accessReviews
      * @param body The request body
-     * @return a CompletableFuture of accessReview
+     * @return a CompletableFuture of AccessReview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReview> post(@jakarta.annotation.Nonnull final AccessReview body) {
@@ -92,7 +92,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to instances for accessReviews
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReview
+     * @return a CompletableFuture of AccessReview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReview> post(@jakarta.annotation.Nonnull final AccessReview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class InstancesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a instancesRequestBuilder
+     * @return a InstancesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

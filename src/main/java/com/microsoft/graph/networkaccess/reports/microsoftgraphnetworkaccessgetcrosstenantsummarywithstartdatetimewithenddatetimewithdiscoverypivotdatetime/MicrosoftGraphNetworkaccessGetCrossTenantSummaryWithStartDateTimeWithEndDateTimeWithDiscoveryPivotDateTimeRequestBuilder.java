@@ -44,7 +44,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
     }
     /**
      * Invoke function getCrossTenantSummary
-     * @return a CompletableFuture of crossTenantSummary
+     * @return a CompletableFuture of CrossTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantSummary> get() {
@@ -53,7 +53,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
     /**
      * Invoke function getCrossTenantSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of crossTenantSummary
+     * @return a CompletableFuture of CrossTenantSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CrossTenantSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder
+     * @return a MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

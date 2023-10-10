@@ -65,7 +65,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get analytics from users
-     * @return a CompletableFuture of userAnalytics
+     * @return a CompletableFuture of UserAnalytics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAnalytics> get() {
@@ -74,7 +74,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get analytics from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userAnalytics
+     * @return a CompletableFuture of UserAnalytics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAnalytics> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property analytics in users
      * @param body The request body
-     * @return a CompletableFuture of userAnalytics
+     * @return a CompletableFuture of UserAnalytics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAnalytics> patch(@jakarta.annotation.Nonnull final UserAnalytics body) {
@@ -97,7 +97,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property analytics in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userAnalytics
+     * @return a CompletableFuture of UserAnalytics
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserAnalytics> patch(@jakarta.annotation.Nonnull final UserAnalytics body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class AnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a analyticsRequestBuilder
+     * @return a AnalyticsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

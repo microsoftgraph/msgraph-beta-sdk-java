@@ -11,9 +11,9 @@ public class UserConfiguration extends Entity implements Parsable {
     /**
      * The binaryData property
      */
-    private byte[] binaryData;
+    private Base64url binaryData;
     /**
-     * Instantiates a new userConfiguration and sets the default values.
+     * Instantiates a new UserConfiguration and sets the default values.
      */
     public UserConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class UserConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userConfiguration
+     * @return a UserConfiguration
      */
     @jakarta.annotation.Nonnull
     public static UserConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,10 +30,10 @@ public class UserConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the binaryData property value. The binaryData property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getBinaryData() {
+    public Base64url getBinaryData() {
         return this.binaryData;
     }
     /**
@@ -43,7 +43,7 @@ public class UserConfiguration extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("binaryData", (n) -> { this.setBinaryData(n.getByteArrayValue()); });
+        deserializerMap.put("binaryData", (n) -> { this.setBinaryData(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,13 +53,13 @@ public class UserConfiguration extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("binaryData", this.getBinaryData());
+        writer.writeObjectValue("binaryData", this.getBinaryData());
     }
     /**
      * Sets the binaryData property value. The binaryData property
      * @param value Value to set for the binaryData property.
      */
-    public void setBinaryData(@jakarta.annotation.Nullable final byte[] value) {
+    public void setBinaryData(@jakarta.annotation.Nullable final Base64url value) {
         this.binaryData = value;
     }
 }

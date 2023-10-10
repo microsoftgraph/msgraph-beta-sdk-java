@@ -217,7 +217,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The team associated with this group.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get() {
@@ -226,7 +226,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * The team associated with this group.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property team in groups
      * @param body The request body
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> put(@jakarta.annotation.Nonnull final Team body) {
@@ -249,7 +249,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property team in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a CompletableFuture of Team
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Team> put(@jakarta.annotation.Nonnull final Team body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -351,7 +351,7 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a teamRequestBuilder
+     * @return a TeamRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TeamRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

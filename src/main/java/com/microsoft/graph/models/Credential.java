@@ -30,7 +30,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
      */
     private String value;
     /**
-     * Instantiates a new credential and sets the default values.
+     * Instantiates a new Credential and sets the default values.
      */
     public Credential() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credential
+     * @return a Credential
      */
     @jakarta.annotation.Nonnull
     public static Credential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
         return new Credential();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the fieldId property value. The name of the field for this credential. e.g, username or password or phoneNumber. This is defined by the application. Must match what is in the html field on singleSignOnSettings/password object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFieldId() {
@@ -76,7 +76,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type for this credential. Valid values: username, password, or other.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -92,7 +92,7 @@ public class Credential implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the value property value. The value for this credential. e.g, mysuperhiddenpassword. Note the value for passwords is write-only, the value can never be read back.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -111,8 +111,8 @@ public class Credential implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

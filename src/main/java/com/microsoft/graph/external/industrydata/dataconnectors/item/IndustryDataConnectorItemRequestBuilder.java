@@ -53,7 +53,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an industryDataConnector object.
+     * Delete an industryDataConnector object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return delete(null);
     }
     /**
-     * Delete an industryDataConnector object.
+     * Delete an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -74,19 +74,19 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
-     * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * Read the properties and relationships of an industryDataConnector object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of IndustryDataConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of IndustryDataConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,21 +97,21 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, IndustryDataConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of IndustryDataConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> patch(@jakarta.annotation.Nonnull final IndustryDataConnector body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataConnector
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of IndustryDataConnector
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataConnector> patch(@jakarta.annotation.Nonnull final IndustryDataConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -123,7 +123,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, IndustryDataConnector::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an industryDataConnector object.
+     * Delete an industryDataConnector object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an industryDataConnector object.
+     * Delete an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -150,7 +150,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an azureDataLakeConnector object.
+     * Update the properties of an industryDataConnector object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -227,7 +227,7 @@ public class IndustryDataConnectorItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an azureDataLakeConnector object.
+     * Read the properties and relationships of an industryDataConnector object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

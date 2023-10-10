@@ -20,7 +20,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      */
     private java.util.List<String> types;
     /**
-     * Instantiates a new deviceManagementSettingProfileConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingProfileConstraint and sets the default values.
      */
     public DeviceManagementSettingProfileConstraint() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingProfileConstraint
+     * @return a DeviceManagementSettingProfileConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingProfileConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     }
     /**
      * Gets the source property value. The source of the entity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -57,7 +57,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     }
     /**
      * Gets the types property value. A collection of types this entity carries
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTypes() {

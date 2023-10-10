@@ -36,24 +36,24 @@ public class ExportMobileConfigRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Exports the mobile configuration
-     * @return a CompletableFuture of exportMobileConfigResponse
+     * @return a CompletableFuture of ExportMobileConfigGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExportMobileConfigResponse> get() {
+    public java.util.concurrent.CompletableFuture<ExportMobileConfigGetResponse> get() {
         return get(null);
     }
     /**
      * Exports the mobile configuration
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exportMobileConfigResponse
+     * @return a CompletableFuture of ExportMobileConfigGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ExportMobileConfigResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ExportMobileConfigGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ExportMobileConfigResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, ExportMobileConfigGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Exports the mobile configuration
@@ -86,7 +86,7 @@ public class ExportMobileConfigRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exportMobileConfigRequestBuilder
+     * @return a ExportMobileConfigRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExportMobileConfigRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The mobile app categories.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> get() {
@@ -66,7 +66,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The mobile app categories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property mobileAppCategories in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> patch(@jakarta.annotation.Nonnull final MobileAppCategory body) {
@@ -89,7 +89,7 @@ public class MobileAppCategoryItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property mobileAppCategories in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppCategory
+     * @return a CompletableFuture of MobileAppCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppCategory> patch(@jakarta.annotation.Nonnull final MobileAppCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

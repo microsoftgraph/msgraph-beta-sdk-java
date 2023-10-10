@@ -65,7 +65,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A placeholder to allow for the desired URL path for SLA.
-     * @return a CompletableFuture of serviceLevelAgreementRoot
+     * @return a CompletableFuture of ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceLevelAgreementRoot> get() {
@@ -74,7 +74,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
     /**
      * A placeholder to allow for the desired URL path for SLA.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceLevelAgreementRoot
+     * @return a CompletableFuture of ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceLevelAgreementRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sla in reports
      * @param body The request body
-     * @return a CompletableFuture of serviceLevelAgreementRoot
+     * @return a CompletableFuture of ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceLevelAgreementRoot> patch(@jakarta.annotation.Nonnull final ServiceLevelAgreementRoot body) {
@@ -97,7 +97,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sla in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceLevelAgreementRoot
+     * @return a CompletableFuture of ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceLevelAgreementRoot> patch(@jakarta.annotation.Nonnull final ServiceLevelAgreementRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a slaRequestBuilder
+     * @return a SlaRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SlaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

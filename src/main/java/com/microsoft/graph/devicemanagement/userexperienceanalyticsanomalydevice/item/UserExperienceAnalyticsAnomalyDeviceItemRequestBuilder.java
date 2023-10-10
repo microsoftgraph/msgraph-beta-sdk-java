@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAnomalyDeviceItemRequestBuilder extends Base
     }
     /**
      * The user experience analytics anomaly entity contains device details.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDevice> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAnomalyDeviceItemRequestBuilder extends Base
     /**
      * The user experience analytics anomaly entity contains device details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDevice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAnomalyDeviceItemRequestBuilder extends Base
     /**
      * Update the navigation property userExperienceAnalyticsAnomalyDevice in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDevice> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyDevice body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAnomalyDeviceItemRequestBuilder extends Base
      * Update the navigation property userExperienceAnalyticsAnomalyDevice in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyDevice> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

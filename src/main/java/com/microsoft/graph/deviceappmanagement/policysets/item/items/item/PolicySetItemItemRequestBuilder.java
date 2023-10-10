@@ -57,7 +57,7 @@ public class PolicySetItemItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Items of the PolicySet with maximum count 100.
-     * @return a CompletableFuture of policySetItem
+     * @return a CompletableFuture of PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItem> get() {
@@ -66,7 +66,7 @@ public class PolicySetItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Items of the PolicySet with maximum count 100.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetItem
+     * @return a CompletableFuture of PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PolicySetItemItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property items in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of policySetItem
+     * @return a CompletableFuture of PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItem> patch(@jakarta.annotation.Nonnull final PolicySetItem body) {
@@ -89,7 +89,7 @@ public class PolicySetItemItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property items in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetItem
+     * @return a CompletableFuture of PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetItem> patch(@jakarta.annotation.Nonnull final PolicySetItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

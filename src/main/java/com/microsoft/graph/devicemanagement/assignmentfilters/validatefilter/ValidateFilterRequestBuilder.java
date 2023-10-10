@@ -38,7 +38,7 @@ public class ValidateFilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action validateFilter
      * @param body The request body
-     * @return a CompletableFuture of assignmentFilterValidationResult
+     * @return a CompletableFuture of AssignmentFilterValidationResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterValidationResult> post(@jakarta.annotation.Nonnull final ValidateFilterPostRequestBody body) {
@@ -48,7 +48,7 @@ public class ValidateFilterRequestBuilder extends BaseRequestBuilder {
      * Invoke action validateFilter
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterValidationResult
+     * @return a CompletableFuture of AssignmentFilterValidationResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterValidationResult> post(@jakarta.annotation.Nonnull final ValidateFilterPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class ValidateFilterRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a validateFilterRequestBuilder
+     * @return a ValidateFilterRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ValidateFilterRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

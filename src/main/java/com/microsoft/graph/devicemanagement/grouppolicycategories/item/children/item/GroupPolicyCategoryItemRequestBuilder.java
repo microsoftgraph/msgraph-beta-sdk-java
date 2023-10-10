@@ -38,7 +38,7 @@ public class GroupPolicyCategoryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The children categories
-     * @return a CompletableFuture of groupPolicyCategory
+     * @return a CompletableFuture of GroupPolicyCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyCategory> get() {
@@ -47,7 +47,7 @@ public class GroupPolicyCategoryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The children categories
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyCategory
+     * @return a CompletableFuture of GroupPolicyCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

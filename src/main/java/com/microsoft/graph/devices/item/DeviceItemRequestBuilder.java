@@ -133,7 +133,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/device-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -154,8 +154,8 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
-     * @return a CompletableFuture of device
+     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -163,9 +163,9 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
+     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -177,9 +177,9 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -187,10 +187,10 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      * @see <a href="https://learn.microsoft.com/graph/api/device-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -203,7 +203,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -211,7 +211,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a registered device.
+     * Delete a registered device. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -230,7 +230,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
+     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -238,7 +238,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
+     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -259,7 +259,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -268,7 +268,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps.
+     * Update the properties of a device. Only certain properties of a device can be updated through approved Mobile Device Management (MDM) apps. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -307,7 +307,7 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance.
+     * Get the properties and relationships of a device object. Since the device resource supports extensions, you can also use the GET operation to get custom properties and extension data in a device instance. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

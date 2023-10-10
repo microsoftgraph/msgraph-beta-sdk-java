@@ -105,7 +105,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder extends BaseRequ
     }
     /**
      * The list of device custom attribute shell scripts associated with the tenant.
-     * @return a CompletableFuture of deviceCustomAttributeShellScript
+     * @return a CompletableFuture of DeviceCustomAttributeShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScript> get() {
@@ -114,7 +114,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder extends BaseRequ
     /**
      * The list of device custom attribute shell scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCustomAttributeShellScript
+     * @return a CompletableFuture of DeviceCustomAttributeShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScript> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property deviceCustomAttributeShellScripts in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceCustomAttributeShellScript
+     * @return a CompletableFuture of DeviceCustomAttributeShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScript> patch(@jakarta.annotation.Nonnull final DeviceCustomAttributeShellScript body) {
@@ -137,7 +137,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder extends BaseRequ
      * Update the navigation property deviceCustomAttributeShellScripts in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCustomAttributeShellScript
+     * @return a CompletableFuture of DeviceCustomAttributeShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScript> patch(@jakarta.annotation.Nonnull final DeviceCustomAttributeShellScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

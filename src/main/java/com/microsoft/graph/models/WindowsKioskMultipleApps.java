@@ -30,9 +30,9 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     /**
      * Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      */
-    private byte[] startMenuLayoutXml;
+    private Base64url startMenuLayoutXml;
     /**
-     * Instantiates a new windowsKioskMultipleApps and sets the default values.
+     * Instantiates a new WindowsKioskMultipleApps and sets the default values.
      */
     public WindowsKioskMultipleApps() {
         super();
@@ -41,7 +41,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskMultipleApps
+     * @return a WindowsKioskMultipleApps
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskMultipleApps createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     }
     /**
      * Gets the allowAccessToDownloadsFolder property value. This setting allows access to Downloads folder in file explorer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAccessToDownloadsFolder() {
@@ -58,7 +58,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     }
     /**
      * Gets the apps property value. These are the only Windows Store Apps that will be available to launch from the Start menu. This collection can contain a maximum of 128 elements.
-     * @return a windowsKioskAppBase
+     * @return a java.util.List<WindowsKioskAppBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskAppBase> getApps() {
@@ -66,7 +66,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     }
     /**
      * Gets the disallowDesktopApps property value. This setting indicates that desktop apps are allowed. Default to true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisallowDesktopApps() {
@@ -83,12 +83,12 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
         deserializerMap.put("apps", (n) -> { this.setApps(n.getCollectionOfObjectValues(WindowsKioskAppBase::createFromDiscriminatorValue)); });
         deserializerMap.put("disallowDesktopApps", (n) -> { this.setDisallowDesktopApps(n.getBooleanValue()); });
         deserializerMap.put("showTaskBar", (n) -> { this.setShowTaskBar(n.getBooleanValue()); });
-        deserializerMap.put("startMenuLayoutXml", (n) -> { this.setStartMenuLayoutXml(n.getByteArrayValue()); });
+        deserializerMap.put("startMenuLayoutXml", (n) -> { this.setStartMenuLayoutXml(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the showTaskBar property value. This setting allows the admin to specify whether the Task Bar is shown or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowTaskBar() {
@@ -96,10 +96,10 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     }
     /**
      * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getStartMenuLayoutXml() {
+    public Base64url getStartMenuLayoutXml() {
         return this.startMenuLayoutXml;
     }
     /**
@@ -113,7 +113,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
         writer.writeCollectionOfObjectValues("apps", this.getApps());
         writer.writeBooleanValue("disallowDesktopApps", this.getDisallowDesktopApps());
         writer.writeBooleanValue("showTaskBar", this.getShowTaskBar());
-        writer.writeByteArrayValue("startMenuLayoutXml", this.getStartMenuLayoutXml());
+        writer.writeObjectValue("startMenuLayoutXml", this.getStartMenuLayoutXml());
     }
     /**
      * Sets the allowAccessToDownloadsFolder property value. This setting allows access to Downloads folder in file explorer.
@@ -147,7 +147,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      */
-    public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final byte[] value) {
+    public void setStartMenuLayoutXml(@jakarta.annotation.Nullable final Base64url value) {
         this.startMenuLayoutXml = value;
     }
 }

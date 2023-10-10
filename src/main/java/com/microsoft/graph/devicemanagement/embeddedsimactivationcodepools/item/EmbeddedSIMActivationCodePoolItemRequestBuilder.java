@@ -81,7 +81,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder extends BaseRequest
     }
     /**
      * The embedded SIM activation code pools created by this account.
-     * @return a CompletableFuture of embeddedSIMActivationCodePool
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePool> get() {
@@ -90,7 +90,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder extends BaseRequest
     /**
      * The embedded SIM activation code pools created by this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of embeddedSIMActivationCodePool
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePool> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property embeddedSIMActivationCodePools in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of embeddedSIMActivationCodePool
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePool> patch(@jakarta.annotation.Nonnull final EmbeddedSIMActivationCodePool body) {
@@ -113,7 +113,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder extends BaseRequest
      * Update the navigation property embeddedSIMActivationCodePools in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of embeddedSIMActivationCodePool
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePool> patch(@jakarta.annotation.Nonnull final EmbeddedSIMActivationCodePool body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

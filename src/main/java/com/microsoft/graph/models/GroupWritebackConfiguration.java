@@ -13,7 +13,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      */
     private String onPremisesGroupType;
     /**
-     * Instantiates a new groupWritebackConfiguration and sets the default values.
+     * Instantiates a new GroupWritebackConfiguration and sets the default values.
      */
     public GroupWritebackConfiguration() {
         super();
@@ -21,7 +21,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupWritebackConfiguration
+     * @return a GroupWritebackConfiguration
      */
     @jakarta.annotation.Nonnull
     public static GroupWritebackConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
     }
     /**
      * Gets the onPremisesGroupType property value. Indicates the target on-premises group type the cloud object is written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property isn't explicitly configured: Microsoft 365 groups are written back as universalDistributionGroup by defaultSecurity groups are written back as universalSecurityGroup by default
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesGroupType() {

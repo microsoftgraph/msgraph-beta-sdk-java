@@ -57,7 +57,7 @@ public class ShipmentMethodItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get shipmentMethods from financials
-     * @return a CompletableFuture of shipmentMethod
+     * @return a CompletableFuture of ShipmentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShipmentMethod> get() {
@@ -66,7 +66,7 @@ public class ShipmentMethodItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get shipmentMethods from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shipmentMethod
+     * @return a CompletableFuture of ShipmentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShipmentMethod> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ShipmentMethodItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property shipmentMethods in financials
      * @param body The request body
-     * @return a CompletableFuture of shipmentMethod
+     * @return a CompletableFuture of ShipmentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShipmentMethod> patch(@jakarta.annotation.Nonnull final ShipmentMethod body) {
@@ -89,7 +89,7 @@ public class ShipmentMethodItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property shipmentMethods in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shipmentMethod
+     * @return a CompletableFuture of ShipmentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ShipmentMethod> patch(@jakarta.annotation.Nonnull final ShipmentMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

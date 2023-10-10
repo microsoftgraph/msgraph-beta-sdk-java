@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosVppAppAssignedUserLicense extends IosVppAppAssignedLicense implements Parsable {
     /**
-     * Instantiates a new iosVppAppAssignedUserLicense and sets the default values.
+     * Instantiates a new IosVppAppAssignedUserLicense and sets the default values.
      */
     public IosVppAppAssignedUserLicense() {
         super();
@@ -20,7 +20,7 @@ public class IosVppAppAssignedUserLicense extends IosVppAppAssignedLicense imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppAppAssignedUserLicense
+     * @return a IosVppAppAssignedUserLicense
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppAssignedUserLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

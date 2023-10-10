@@ -97,7 +97,7 @@ public class DescriptorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
-     * @return a CompletableFuture of filePlanDescriptor
+     * @return a CompletableFuture of FilePlanDescriptor
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanDescriptor> get() {
@@ -106,7 +106,7 @@ public class DescriptorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filePlanDescriptor
+     * @return a CompletableFuture of FilePlanDescriptor
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanDescriptor> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class DescriptorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property descriptors in security
      * @param body The request body
-     * @return a CompletableFuture of filePlanDescriptor
+     * @return a CompletableFuture of FilePlanDescriptor
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanDescriptor> patch(@jakarta.annotation.Nonnull final FilePlanDescriptor body) {
@@ -129,7 +129,7 @@ public class DescriptorsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property descriptors in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of filePlanDescriptor
+     * @return a CompletableFuture of FilePlanDescriptor
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FilePlanDescriptor> patch(@jakarta.annotation.Nonnull final FilePlanDescriptor body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -231,7 +231,7 @@ public class DescriptorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a descriptorsRequestBuilder
+     * @return a DescriptorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DescriptorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

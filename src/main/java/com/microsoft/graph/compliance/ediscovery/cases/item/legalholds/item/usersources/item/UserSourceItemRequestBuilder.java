@@ -63,7 +63,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -75,7 +75,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -91,7 +91,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property userSources in compliance
      * @param body The request body
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -104,7 +104,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property userSources in compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

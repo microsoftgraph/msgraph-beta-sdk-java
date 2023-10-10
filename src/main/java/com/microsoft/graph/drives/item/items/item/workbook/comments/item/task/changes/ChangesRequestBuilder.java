@@ -61,7 +61,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of task change histories.
-     * @return a CompletableFuture of workbookDocumentTaskChangeCollectionResponse
+     * @return a CompletableFuture of WorkbookDocumentTaskChangeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChangeCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskChangeCollectionResponse
+     * @return a CompletableFuture of WorkbookDocumentTaskChangeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChangeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the itemAt method.
      * @param index Usage: index={index}
-     * @return a itemAtWithIndexRequestBuilder
+     * @return a ItemAtWithIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemAtWithIndexRequestBuilder itemAtWithIndex(@jakarta.annotation.Nonnull final Integer index) {
@@ -93,7 +93,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to changes for drives
      * @param body The request body
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a CompletableFuture of WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body) {
@@ -103,7 +103,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to changes for drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a CompletableFuture of WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> post(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class ChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a changesRequestBuilder
+     * @return a ChangesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ChangesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

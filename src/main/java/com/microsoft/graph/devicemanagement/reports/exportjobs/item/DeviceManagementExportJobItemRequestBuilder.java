@@ -57,7 +57,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * Entity representing a job to export a report
-     * @return a CompletableFuture of deviceManagementExportJob
+     * @return a CompletableFuture of DeviceManagementExportJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
     /**
      * Entity representing a job to export a report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExportJob
+     * @return a CompletableFuture of DeviceManagementExportJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementExportJob
+     * @return a CompletableFuture of DeviceManagementExportJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> patch(@jakarta.annotation.Nonnull final DeviceManagementExportJob body) {
@@ -89,7 +89,7 @@ public class DeviceManagementExportJobItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExportJob
+     * @return a CompletableFuture of DeviceManagementExportJob
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExportJob> patch(@jakarta.annotation.Nonnull final DeviceManagementExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

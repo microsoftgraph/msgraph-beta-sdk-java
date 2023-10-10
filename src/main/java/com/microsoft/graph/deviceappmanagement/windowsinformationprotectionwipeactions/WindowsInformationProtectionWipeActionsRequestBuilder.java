@@ -60,7 +60,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder extends BaseR
     }
     /**
      * Windows information protection wipe actions.
-     * @return a CompletableFuture of windowsInformationProtectionWipeActionCollectionResponse
+     * @return a CompletableFuture of WindowsInformationProtectionWipeActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeActionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder extends BaseR
     /**
      * Windows information protection wipe actions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionWipeActionCollectionResponse
+     * @return a CompletableFuture of WindowsInformationProtectionWipeActionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeActionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder extends BaseR
     /**
      * Create new navigation property to windowsInformationProtectionWipeActions for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionWipeAction
+     * @return a CompletableFuture of WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeAction> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionWipeAction body) {
@@ -92,7 +92,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder extends BaseR
      * Create new navigation property to windowsInformationProtectionWipeActions for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionWipeAction
+     * @return a CompletableFuture of WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionWipeAction> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionWipeAction body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WindowsInformationProtectionWipeActionsRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsInformationProtectionWipeActionsRequestBuilder
+     * @return a WindowsInformationProtectionWipeActionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionWipeActionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

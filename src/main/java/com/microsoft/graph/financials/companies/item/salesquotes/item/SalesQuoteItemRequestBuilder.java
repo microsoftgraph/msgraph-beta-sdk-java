@@ -94,7 +94,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesQuotes from financials
-     * @return a CompletableFuture of salesQuote
+     * @return a CompletableFuture of SalesQuote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesQuote> get() {
@@ -103,7 +103,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesQuotes from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesQuote
+     * @return a CompletableFuture of SalesQuote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesQuote> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +116,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesQuotes in financials
      * @param body The request body
-     * @return a CompletableFuture of salesQuote
+     * @return a CompletableFuture of SalesQuote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesQuote> patch(@jakarta.annotation.Nonnull final SalesQuote body) {
@@ -126,7 +126,7 @@ public class SalesQuoteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesQuotes in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesQuote
+     * @return a CompletableFuture of SalesQuote
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesQuote> patch(@jakarta.annotation.Nonnull final SalesQuote body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

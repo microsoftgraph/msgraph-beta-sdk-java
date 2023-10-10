@@ -16,7 +16,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
      */
     private java.util.List<DeviceManagementSettingInsightsDefinition> settingInsights;
     /**
-     * Instantiates a new deviceManagementTemplateInsightsDefinition and sets the default values.
+     * Instantiates a new DeviceManagementTemplateInsightsDefinition and sets the default values.
      */
     public DeviceManagementTemplateInsightsDefinition() {
         super();
@@ -24,7 +24,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTemplateInsightsDefinition
+     * @return a DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTemplateInsightsDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceManagementTemplateInsightsDefinition extends Entity implement
     }
     /**
      * Gets the settingInsights property value. Setting insights in a template
-     * @return a deviceManagementSettingInsightsDefinition
+     * @return a java.util.List<DeviceManagementSettingInsightsDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInsightsDefinition> getSettingInsights() {

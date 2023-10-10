@@ -60,7 +60,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get excludes from policies
-     * @return a CompletableFuture of servicePrincipalCreationConditionSetCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCreationConditionSetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationConditionSetCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get excludes from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCreationConditionSetCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCreationConditionSetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationConditionSetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to excludes for policies
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipalCreationConditionSet
+     * @return a CompletableFuture of ServicePrincipalCreationConditionSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationConditionSet> post(@jakarta.annotation.Nonnull final ServicePrincipalCreationConditionSet body) {
@@ -92,7 +92,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to excludes for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCreationConditionSet
+     * @return a CompletableFuture of ServicePrincipalCreationConditionSet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationConditionSet> post(@jakarta.annotation.Nonnull final ServicePrincipalCreationConditionSet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ExcludesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a excludesRequestBuilder
+     * @return a ExcludesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExcludesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

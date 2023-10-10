@@ -65,7 +65,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequest
     }
     /**
      * The list of mobile app troubleshooting events for this user.
-     * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @return a CompletableFuture of MobileAppTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> get() {
@@ -74,7 +74,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequest
     /**
      * The list of mobile app troubleshooting events for this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @return a CompletableFuture of MobileAppTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property mobileAppTroubleshootingEvents in users
      * @param body The request body
-     * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @return a CompletableFuture of MobileAppTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> patch(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body) {
@@ -97,7 +97,7 @@ public class MobileAppTroubleshootingEventItemRequestBuilder extends BaseRequest
      * Update the navigation property mobileAppTroubleshootingEvents in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppTroubleshootingEvent
+     * @return a CompletableFuture of MobileAppTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppTroubleshootingEvent> patch(@jakarta.annotation.Nonnull final MobileAppTroubleshootingEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

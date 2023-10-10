@@ -37,7 +37,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/modules/{educationModule%2Did}/resources/{educationModuleResource%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return delete(null);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
-     * @return a CompletableFuture of educationModuleResource
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, EducationModuleResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return patch(body, null);
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationModuleResource
+     * @return a CompletableFuture of EducationModuleResource
      * @see <a href="https://learn.microsoft.com/graph/api/educationmoduleresource-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, EducationModuleResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource.
+     * Delete a specific educationModuleResource attached to a module. Only teachers in the class can remove a resource. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types.
+     * Update a resource in a module. Only teachers can perform this operation. The only one property that can be updated is displayName, for all resource types. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class EducationModuleResourceItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation.
+     * Get the properties of a resource associated with a module. Only teachers, students, and applications with application permissions can perform this operation. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

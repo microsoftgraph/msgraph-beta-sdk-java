@@ -57,7 +57,7 @@ public class UnitOfMeasureItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get unitsOfMeasure from financials
-     * @return a CompletableFuture of unitOfMeasure
+     * @return a CompletableFuture of UnitOfMeasure
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnitOfMeasure> get() {
@@ -66,7 +66,7 @@ public class UnitOfMeasureItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get unitsOfMeasure from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unitOfMeasure
+     * @return a CompletableFuture of UnitOfMeasure
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnitOfMeasure> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UnitOfMeasureItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property unitsOfMeasure in financials
      * @param body The request body
-     * @return a CompletableFuture of unitOfMeasure
+     * @return a CompletableFuture of UnitOfMeasure
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnitOfMeasure> patch(@jakarta.annotation.Nonnull final UnitOfMeasure body) {
@@ -89,7 +89,7 @@ public class UnitOfMeasureItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property unitsOfMeasure in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unitOfMeasure
+     * @return a CompletableFuture of UnitOfMeasure
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnitOfMeasure> patch(@jakarta.annotation.Nonnull final UnitOfMeasure body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

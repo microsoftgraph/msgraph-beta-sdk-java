@@ -57,7 +57,7 @@ public class DeviceManagementTemplateInsightsDefinitionItemRequestBuilder extend
     }
     /**
      * List of setting insights in a template
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinition
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinition> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementTemplateInsightsDefinitionItemRequestBuilder extend
     /**
      * List of setting insights in a template
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinition
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementTemplateInsightsDefinitionItemRequestBuilder extend
     /**
      * Update the navigation property templateInsights in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinition
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinition> patch(@jakarta.annotation.Nonnull final DeviceManagementTemplateInsightsDefinition body) {
@@ -89,7 +89,7 @@ public class DeviceManagementTemplateInsightsDefinitionItemRequestBuilder extend
      * Update the navigation property templateInsights in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateInsightsDefinition
+     * @return a CompletableFuture of DeviceManagementTemplateInsightsDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateInsightsDefinition> patch(@jakarta.annotation.Nonnull final DeviceManagementTemplateInsightsDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

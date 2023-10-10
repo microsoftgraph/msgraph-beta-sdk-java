@@ -81,7 +81,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * iOS managed app policies.
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> get() {
@@ -90,7 +90,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     /**
      * iOS managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> patch(@jakarta.annotation.Nonnull final IosManagedAppProtection body) {
@@ -113,7 +113,7 @@ public class IosManagedAppProtectionItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property iosManagedAppProtections in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> patch(@jakarta.annotation.Nonnull final IosManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

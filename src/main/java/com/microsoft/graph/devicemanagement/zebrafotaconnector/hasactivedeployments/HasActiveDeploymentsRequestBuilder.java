@@ -36,24 +36,24 @@ public class HasActiveDeploymentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action hasActiveDeployments
-     * @return a CompletableFuture of hasActiveDeploymentsResponse
+     * @return a CompletableFuture of HasActiveDeploymentsPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HasActiveDeploymentsResponse> post() {
+    public java.util.concurrent.CompletableFuture<HasActiveDeploymentsPostResponse> post() {
         return post(null);
     }
     /**
      * Invoke action hasActiveDeployments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hasActiveDeploymentsResponse
+     * @return a CompletableFuture of HasActiveDeploymentsPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<HasActiveDeploymentsResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<HasActiveDeploymentsPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, HasActiveDeploymentsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, HasActiveDeploymentsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action hasActiveDeployments
@@ -86,7 +86,7 @@ public class HasActiveDeploymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hasActiveDeploymentsRequestBuilder
+     * @return a HasActiveDeploymentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HasActiveDeploymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

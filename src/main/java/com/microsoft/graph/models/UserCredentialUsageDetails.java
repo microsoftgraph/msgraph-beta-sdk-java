@@ -38,7 +38,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new userCredentialUsageDetails and sets the default values.
+     * Instantiates a new UserCredentialUsageDetails and sets the default values.
      */
     public UserCredentialUsageDetails() {
         super();
@@ -46,7 +46,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userCredentialUsageDetails
+     * @return a UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public static UserCredentialUsageDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the authMethod property value. The authMethod property
-     * @return a usageAuthMethod
+     * @return a UsageAuthMethod
      */
     @jakarta.annotation.Nullable
     public UsageAuthMethod getAuthMethod() {
@@ -71,7 +71,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the failureReason property value. Provides the failure reason for the corresponding reset or registration workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailureReason() {
@@ -79,7 +79,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a featureType
+     * @return a FeatureType
      */
     @jakarta.annotation.Nullable
     public FeatureType getFeature() {
@@ -103,7 +103,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the isSuccess property value. Indicates success or failure of the workflow.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSuccess() {
@@ -111,7 +111,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. User name of the user performing the reset or registration workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -119,7 +119,7 @@ public class UserCredentialUsageDetails extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name of the user performing the reset or registration workflow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

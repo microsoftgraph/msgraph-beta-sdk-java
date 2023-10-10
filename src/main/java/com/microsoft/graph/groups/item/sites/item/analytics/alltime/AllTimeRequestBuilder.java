@@ -38,7 +38,7 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get allTime from groups
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStat> get() {
@@ -47,7 +47,7 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get allTime from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityStat
+     * @return a CompletableFuture of ItemActivityStat
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemActivityStat> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class AllTimeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allTimeRequestBuilder
+     * @return a AllTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

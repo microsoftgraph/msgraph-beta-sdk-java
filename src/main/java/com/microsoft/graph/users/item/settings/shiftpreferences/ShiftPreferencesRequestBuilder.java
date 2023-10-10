@@ -56,8 +56,8 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a shiftPreferences object by ID.
-     * @return a CompletableFuture of shiftPreferences
+     * Retrieve the properties and relationships of a shiftPreferences object by ID. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ShiftPreferences
      * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a shiftPreferences object by ID.
+     * Retrieve the properties and relationships of a shiftPreferences object by ID. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shiftPreferences
+     * @return a CompletableFuture of ShiftPreferences
      * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties and relationships of a shiftPreferences object.
      * @param body The request body
-     * @return a CompletableFuture of shiftPreferences
+     * @return a CompletableFuture of ShiftPreferences
      * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
      * Update the properties and relationships of a shiftPreferences object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shiftPreferences
+     * @return a CompletableFuture of ShiftPreferences
      * @see <a href="https://learn.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and relationships of a shiftPreferences object by ID.
+     * Retrieve the properties and relationships of a shiftPreferences object by ID. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a shiftPreferences object by ID.
+     * Retrieve the properties and relationships of a shiftPreferences object by ID. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -195,7 +195,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a shiftPreferencesRequestBuilder
+     * @return a ShiftPreferencesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ShiftPreferencesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class ShiftPreferencesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and relationships of a shiftPreferences object by ID.
+     * Retrieve the properties and relationships of a shiftPreferences object by ID. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

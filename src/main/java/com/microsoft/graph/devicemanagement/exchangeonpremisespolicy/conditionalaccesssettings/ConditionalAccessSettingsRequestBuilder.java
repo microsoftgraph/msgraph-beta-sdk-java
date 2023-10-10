@@ -57,7 +57,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> get() {
@@ -66,7 +66,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property conditionalAccessSettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patch(@jakarta.annotation.Nonnull final OnPremisesConditionalAccessSettings body) {
@@ -89,7 +89,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property conditionalAccessSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onPremisesConditionalAccessSettings
+     * @return a CompletableFuture of OnPremisesConditionalAccessSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnPremisesConditionalAccessSettings> patch(@jakarta.annotation.Nonnull final OnPremisesConditionalAccessSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class ConditionalAccessSettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conditionalAccessSettingsRequestBuilder
+     * @return a ConditionalAccessSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

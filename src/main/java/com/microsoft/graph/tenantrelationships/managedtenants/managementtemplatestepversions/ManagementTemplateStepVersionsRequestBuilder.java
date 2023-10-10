@@ -60,7 +60,7 @@ public class ManagementTemplateStepVersionsRequestBuilder extends BaseRequestBui
     }
     /**
      * Get managementTemplateStepVersions from tenantRelationships
-     * @return a CompletableFuture of managementTemplateStepVersionCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateStepVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagementTemplateStepVersionsRequestBuilder extends BaseRequestBui
     /**
      * Get managementTemplateStepVersions from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepVersionCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateStepVersionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagementTemplateStepVersionsRequestBuilder extends BaseRequestBui
     /**
      * Create new navigation property to managementTemplateStepVersions for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateStepVersion
+     * @return a CompletableFuture of ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersion> post(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body) {
@@ -92,7 +92,7 @@ public class ManagementTemplateStepVersionsRequestBuilder extends BaseRequestBui
      * Create new navigation property to managementTemplateStepVersions for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepVersion
+     * @return a CompletableFuture of ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersion> post(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagementTemplateStepVersionsRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managementTemplateStepVersionsRequestBuilder
+     * @return a ManagementTemplateStepVersionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateStepVersionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

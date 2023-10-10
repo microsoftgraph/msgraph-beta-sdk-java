@@ -54,7 +54,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
      */
     private java.util.List<CloudPcAuditResource> resources;
     /**
-     * Instantiates a new cloudPcAuditEvent and sets the default values.
+     * Instantiates a new CloudPcAuditEvent and sets the default values.
      */
     public CloudPcAuditEvent() {
         super();
@@ -62,7 +62,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcAuditEvent
+     * @return a CloudPcAuditEvent
      */
     @jakarta.annotation.Nonnull
     public static CloudPcAuditEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Friendly name of the activity.Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
@@ -87,7 +87,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityOperationType property value. The activityOperationType property
-     * @return a cloudPcAuditActivityOperationType
+     * @return a CloudPcAuditActivityOperationType
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActivityOperationType getActivityOperationType() {
@@ -95,7 +95,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityResult property value. The activityResult property
-     * @return a cloudPcAuditActivityResult
+     * @return a CloudPcAuditActivityResult
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActivityResult getActivityResult() {
@@ -103,7 +103,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the activityType property value. The type of activity that was performed.Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityType() {
@@ -111,7 +111,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the actor property value. The actor property
-     * @return a cloudPcAuditActor
+     * @return a CloudPcAuditActor
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActor getActor() {
@@ -119,7 +119,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a cloudPcAuditCategory
+     * @return a CloudPcAuditCategory
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditCategory getCategory() {
@@ -127,7 +127,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the componentName property value. Component name. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComponentName() {
@@ -135,7 +135,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The client request identifier, used to correlate activity within the system.Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -143,7 +143,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Event display name. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -171,7 +171,7 @@ public class CloudPcAuditEvent extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. List of cloudPcAuditResource objects.Read-only.
-     * @return a cloudPcAuditResource
+     * @return a java.util.List<CloudPcAuditResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcAuditResource> getResources() {

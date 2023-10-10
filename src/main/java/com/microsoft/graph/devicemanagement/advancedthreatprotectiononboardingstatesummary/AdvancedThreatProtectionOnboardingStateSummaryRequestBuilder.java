@@ -65,7 +65,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
     }
     /**
      * The summary state of ATP onboarding state for this account.
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingStateSummary
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingStateSummary> get() {
@@ -74,7 +74,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
     /**
      * The summary state of ATP onboarding state for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingStateSummary
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingStateSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
     /**
      * Update the navigation property advancedThreatProtectionOnboardingStateSummary in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingStateSummary
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingStateSummary> patch(@jakarta.annotation.Nonnull final AdvancedThreatProtectionOnboardingStateSummary body) {
@@ -97,7 +97,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * Update the navigation property advancedThreatProtectionOnboardingStateSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of advancedThreatProtectionOnboardingStateSummary
+     * @return a CompletableFuture of AdvancedThreatProtectionOnboardingStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdvancedThreatProtectionOnboardingStateSummary> patch(@jakarta.annotation.Nonnull final AdvancedThreatProtectionOnboardingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a advancedThreatProtectionOnboardingStateSummaryRequestBuilder
+     * @return a AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

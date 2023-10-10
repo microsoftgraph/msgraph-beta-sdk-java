@@ -56,8 +56,8 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object.  This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DeviceLocalCredentialInfo
      * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
+     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a CompletableFuture of DeviceLocalCredentialInfo
      * @see <a href="https://learn.microsoft.com/graph/api/devicelocalcredentialinfo-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
     /**
      * Update entity in deviceLocalCredentials
      * @param body The request body
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a CompletableFuture of DeviceLocalCredentialInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> patch(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body) {
@@ -91,7 +91,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
      * Update entity in deviceLocalCredentials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceLocalCredentialInfo
+     * @return a CompletableFuture of DeviceLocalCredentialInfo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceLocalCredentialInfo> patch(@jakarta.annotation.Nonnull final DeviceLocalCredentialInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
+     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
+     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class DeviceLocalCredentialInfoItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object. 
+     * Retrieve the properties of a deviceLocalCredentialInfo for a specified device object.  This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

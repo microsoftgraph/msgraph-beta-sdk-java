@@ -60,7 +60,7 @@ public class ServicePrincipalCreationPoliciesRequestBuilder extends BaseRequestB
     }
     /**
      * Get servicePrincipalCreationPolicies from policies
-     * @return a CompletableFuture of servicePrincipalCreationPolicyCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCreationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ServicePrincipalCreationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Get servicePrincipalCreationPolicies from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCreationPolicyCollectionResponse
+     * @return a CompletableFuture of ServicePrincipalCreationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ServicePrincipalCreationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to servicePrincipalCreationPolicies for policies
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipalCreationPolicy
+     * @return a CompletableFuture of ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicy> post(@jakarta.annotation.Nonnull final ServicePrincipalCreationPolicy body) {
@@ -92,7 +92,7 @@ public class ServicePrincipalCreationPoliciesRequestBuilder extends BaseRequestB
      * Create new navigation property to servicePrincipalCreationPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCreationPolicy
+     * @return a CompletableFuture of ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicy> post(@jakarta.annotation.Nonnull final ServicePrincipalCreationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ServicePrincipalCreationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a servicePrincipalCreationPoliciesRequestBuilder
+     * @return a ServicePrincipalCreationPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalCreationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

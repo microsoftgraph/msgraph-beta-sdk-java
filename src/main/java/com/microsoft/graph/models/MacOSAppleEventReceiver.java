@@ -37,7 +37,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new macOSAppleEventReceiver and sets the default values.
+     * Instantiates a new MacOSAppleEventReceiver and sets the default values.
      */
     public MacOSAppleEventReceiver() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSAppleEventReceiver
+     * @return a MacOSAppleEventReceiver
      */
     @jakarta.annotation.Nonnull
     public static MacOSAppleEventReceiver createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         return new MacOSAppleEventReceiver();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowed property value. Allow or block this app from receiving Apple events.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowed() {
@@ -70,7 +70,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the codeRequirement property value. Code requirement for the app or binary that receives the Apple Event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeRequirement() {
@@ -92,7 +92,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identifier property value. Bundle ID of the app or file path of the process or executable that receives the Apple Event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
@@ -100,7 +100,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identifierType property value. Process identifier types for MacOS Privacy Preferences
-     * @return a macOSProcessIdentifierType
+     * @return a MacOSProcessIdentifierType
      */
     @jakarta.annotation.Nullable
     public MacOSProcessIdentifierType getIdentifierType() {
@@ -108,7 +108,7 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -128,8 +128,8 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

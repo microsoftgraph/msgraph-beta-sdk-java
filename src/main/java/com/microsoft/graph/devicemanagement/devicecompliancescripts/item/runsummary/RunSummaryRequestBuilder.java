@@ -57,7 +57,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * High level run summary for device compliance script.
-     * @return a CompletableFuture of deviceComplianceScriptRunSummary
+     * @return a CompletableFuture of DeviceComplianceScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptRunSummary> get() {
@@ -66,7 +66,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * High level run summary for device compliance script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScriptRunSummary
+     * @return a CompletableFuture of DeviceComplianceScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptRunSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property runSummary in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScriptRunSummary
+     * @return a CompletableFuture of DeviceComplianceScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptRunSummary> patch(@jakarta.annotation.Nonnull final DeviceComplianceScriptRunSummary body) {
@@ -89,7 +89,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property runSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScriptRunSummary
+     * @return a CompletableFuture of DeviceComplianceScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptRunSummary> patch(@jakarta.annotation.Nonnull final DeviceComplianceScriptRunSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class RunSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a runSummaryRequestBuilder
+     * @return a RunSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RunSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

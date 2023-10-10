@@ -37,7 +37,7 @@ public class CloneRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action clone
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> post() {
@@ -46,7 +46,7 @@ public class CloneRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action clone
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementReusablePolicySetting
+     * @return a CompletableFuture of DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementReusablePolicySetting> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class CloneRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cloneRequestBuilder
+     * @return a CloneRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CloneRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

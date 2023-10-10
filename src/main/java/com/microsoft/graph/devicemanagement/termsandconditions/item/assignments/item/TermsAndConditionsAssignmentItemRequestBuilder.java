@@ -57,7 +57,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     }
     /**
      * The list of assignments for this T&C policy.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> get() {
@@ -66,7 +66,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     /**
      * The list of assignments for this T&C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> patch(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body) {
@@ -89,7 +89,7 @@ public class TermsAndConditionsAssignmentItemRequestBuilder extends BaseRequestB
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of termsAndConditionsAssignment
+     * @return a CompletableFuture of TermsAndConditionsAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TermsAndConditionsAssignment> patch(@jakarta.annotation.Nonnull final TermsAndConditionsAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

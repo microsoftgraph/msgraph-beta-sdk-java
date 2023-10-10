@@ -50,7 +50,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
      */
     private String supportUrl;
     /**
-     * Instantiates a new partnerInformation and sets the default values.
+     * Instantiates a new PartnerInformation and sets the default values.
      */
     public PartnerInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a partnerInformation
+     * @return a PartnerInformation
      */
     @jakarta.annotation.Nonnull
     public static PartnerInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
         return new PartnerInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the commerceUrl property value. The commerceUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommerceUrl() {
@@ -83,7 +83,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the companyName property value. The companyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
@@ -91,7 +91,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the companyType property value. The companyType property
-     * @return a partnerTenantType
+     * @return a PartnerTenantType
      */
     @jakarta.annotation.Nullable
     public PartnerTenantType getCompanyType() {
@@ -117,7 +117,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the helpUrl property value. The helpUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpUrl() {
@@ -125,7 +125,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the partnerTenantId property value. The partnerTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPartnerTenantId() {
@@ -141,7 +141,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportEmails property value. The supportEmails property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportEmails() {
@@ -149,7 +149,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportTelephones property value. The supportTelephones property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportTelephones() {
@@ -157,7 +157,7 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportUrl property value. The supportUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportUrl() {
@@ -181,8 +181,8 @@ public class PartnerInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

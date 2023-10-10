@@ -13,7 +13,7 @@ public class ProgramControlTypeCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<ProgramControlType> value;
     /**
-     * Instantiates a new programControlTypeCollectionResponse and sets the default values.
+     * Instantiates a new ProgramControlTypeCollectionResponse and sets the default values.
      */
     public ProgramControlTypeCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ProgramControlTypeCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a programControlTypeCollectionResponse
+     * @return a ProgramControlTypeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ProgramControlTypeCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ProgramControlTypeCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a programControlType
+     * @return a java.util.List<ProgramControlType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProgramControlType> getValue() {

@@ -60,7 +60,7 @@ public class AccessReviewDecisionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from accessReviewDecisions
-     * @return a CompletableFuture of accessReviewDecisionCollectionResponse
+     * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AccessReviewDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from accessReviewDecisions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewDecisionCollectionResponse
+     * @return a CompletableFuture of AccessReviewDecisionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecisionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AccessReviewDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to accessReviewDecisions
      * @param body The request body
-     * @return a CompletableFuture of accessReviewDecision
+     * @return a CompletableFuture of AccessReviewDecision
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecision> post(@jakarta.annotation.Nonnull final AccessReviewDecision body) {
@@ -92,7 +92,7 @@ public class AccessReviewDecisionsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to accessReviewDecisions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewDecision
+     * @return a CompletableFuture of AccessReviewDecision
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewDecision> post(@jakarta.annotation.Nonnull final AccessReviewDecision body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AccessReviewDecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessReviewDecisionsRequestBuilder
+     * @return a AccessReviewDecisionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessReviewDecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

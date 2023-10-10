@@ -59,17 +59,17 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostPairs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a hostPair object.
-     * @return a CompletableFuture of hostPairCollectionResponse
+     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of HostPairCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPairCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a hostPair object.
+     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPairCollectionResponse
+     * @return a CompletableFuture of HostPairCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPairCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostPairs for security
      * @param body The request body
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> post(@jakarta.annotation.Nonnull final HostPair body) {
@@ -92,7 +92,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostPairs for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPair
+     * @return a CompletableFuture of HostPair
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPair> post(@jakarta.annotation.Nonnull final HostPair body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostPair::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a hostPair object.
+     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a hostPair object.
+     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostPairsRequestBuilder
+     * @return a HostPairsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostPairsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class HostPairsRequestBuilder extends BaseRequestBuilder {
         return new HostPairsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a hostPair object.
+     * Read the properties and relationships of a hostPair object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

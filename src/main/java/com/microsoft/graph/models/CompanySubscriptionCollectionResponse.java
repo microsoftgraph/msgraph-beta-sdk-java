@@ -13,7 +13,7 @@ public class CompanySubscriptionCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<CompanySubscription> value;
     /**
-     * Instantiates a new companySubscriptionCollectionResponse and sets the default values.
+     * Instantiates a new CompanySubscriptionCollectionResponse and sets the default values.
      */
     public CompanySubscriptionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CompanySubscriptionCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a companySubscriptionCollectionResponse
+     * @return a CompanySubscriptionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CompanySubscriptionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CompanySubscriptionCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a companySubscription
+     * @return a java.util.List<CompanySubscription>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CompanySubscription> getValue() {

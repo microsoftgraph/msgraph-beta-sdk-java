@@ -37,24 +37,24 @@ public class GetManagedDevicesWithFailedOrPendingAppsRequestBuilder extends Base
     }
     /**
      * Retrieves the list of devices with failed or pending apps
-     * @return a CompletableFuture of getManagedDevicesWithFailedOrPendingAppsResponse
+     * @return a CompletableFuture of GetManagedDevicesWithFailedOrPendingAppsGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetManagedDevicesWithFailedOrPendingAppsResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetManagedDevicesWithFailedOrPendingAppsGetResponse> get() {
         return get(null);
     }
     /**
      * Retrieves the list of devices with failed or pending apps
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getManagedDevicesWithFailedOrPendingAppsResponse
+     * @return a CompletableFuture of GetManagedDevicesWithFailedOrPendingAppsGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetManagedDevicesWithFailedOrPendingAppsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetManagedDevicesWithFailedOrPendingAppsGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetManagedDevicesWithFailedOrPendingAppsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetManagedDevicesWithFailedOrPendingAppsGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieves the list of devices with failed or pending apps
@@ -88,7 +88,7 @@ public class GetManagedDevicesWithFailedOrPendingAppsRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getManagedDevicesWithFailedOrPendingAppsRequestBuilder
+     * @return a GetManagedDevicesWithFailedOrPendingAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetManagedDevicesWithFailedOrPendingAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

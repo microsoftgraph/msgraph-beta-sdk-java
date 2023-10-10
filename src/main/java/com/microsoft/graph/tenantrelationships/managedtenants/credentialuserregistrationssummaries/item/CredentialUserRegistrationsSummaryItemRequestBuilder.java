@@ -56,8 +56,8 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         return get(null);
     }
     /**
-     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-credentialuserregistrationssummary-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property credentialUserRegistrationsSummaries in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationsSummary> patch(@jakarta.annotation.Nonnull final CredentialUserRegistrationsSummary body) {
@@ -91,7 +91,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
      * Update the navigation property credentialUserRegistrationsSummaries in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationsSummary
+     * @return a CompletableFuture of CredentialUserRegistrationsSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CredentialUserRegistrationsSummary> patch(@jakarta.annotation.Nonnull final CredentialUserRegistrationsSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class CredentialUserRegistrationsSummaryItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a credentialUserRegistrationsSummary object.
+     * Read the properties and relationships of a credentialUserRegistrationsSummary object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

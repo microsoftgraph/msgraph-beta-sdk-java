@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder ex
     }
     /**
      * User experience analytics devices not Windows Autopilot ready.
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDevice> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder ex
     /**
      * User experience analytics devices not Windows Autopilot ready.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDevice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder ex
     /**
      * Update the navigation property userExperienceAnalyticsNotAutopilotReadyDevice in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDevice> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsNotAutopilotReadyDevice body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDeviceItemRequestBuilder ex
      * Update the navigation property userExperienceAnalyticsNotAutopilotReadyDevice in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a CompletableFuture of UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsNotAutopilotReadyDevice> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsNotAutopilotReadyDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

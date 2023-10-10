@@ -60,7 +60,7 @@ public class DomainSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get domainSecurityProfiles from security
-     * @return a CompletableFuture of domainSecurityProfileCollectionResponse
+     * @return a CompletableFuture of DomainSecurityProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainSecurityProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DomainSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get domainSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainSecurityProfileCollectionResponse
+     * @return a CompletableFuture of DomainSecurityProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainSecurityProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DomainSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to domainSecurityProfiles for security
      * @param body The request body
-     * @return a CompletableFuture of domainSecurityProfile
+     * @return a CompletableFuture of DomainSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainSecurityProfile> post(@jakarta.annotation.Nonnull final DomainSecurityProfile body) {
@@ -92,7 +92,7 @@ public class DomainSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to domainSecurityProfiles for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of domainSecurityProfile
+     * @return a CompletableFuture of DomainSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DomainSecurityProfile> post(@jakarta.annotation.Nonnull final DomainSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DomainSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a domainSecurityProfilesRequestBuilder
+     * @return a DomainSecurityProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DomainSecurityProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

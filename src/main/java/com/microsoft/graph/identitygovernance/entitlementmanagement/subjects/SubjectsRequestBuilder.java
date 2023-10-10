@@ -60,7 +60,7 @@ public class SubjectsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the subjects within entitlement management.
-     * @return a CompletableFuture of accessPackageSubjectCollectionResponse
+     * @return a CompletableFuture of AccessPackageSubjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageSubjectCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SubjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the subjects within entitlement management.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageSubjectCollectionResponse
+     * @return a CompletableFuture of AccessPackageSubjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageSubjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SubjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to subjects for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageSubject> post(@jakarta.annotation.Nonnull final AccessPackageSubject body) {
@@ -92,7 +92,7 @@ public class SubjectsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to subjects for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageSubject> post(@jakarta.annotation.Nonnull final AccessPackageSubject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SubjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subjectsRequestBuilder
+     * @return a SubjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

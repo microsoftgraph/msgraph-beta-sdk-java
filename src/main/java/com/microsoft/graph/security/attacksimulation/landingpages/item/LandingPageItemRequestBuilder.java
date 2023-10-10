@@ -64,17 +64,17 @@ public class LandingPageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get landingPages from security
-     * @return a CompletableFuture of landingPage
+     * Represents an attack simulation training landing page.
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> get() {
         return get(null);
     }
     /**
-     * Get landingPages from security
+     * Represents an attack simulation training landing page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class LandingPageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property landingPages in security
      * @param body The request body
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> patch(@jakarta.annotation.Nonnull final LandingPage body) {
@@ -97,7 +97,7 @@ public class LandingPageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property landingPages in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> patch(@jakarta.annotation.Nonnull final LandingPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class LandingPageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get landingPages from security
+     * Represents an attack simulation training landing page.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class LandingPageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get landingPages from security
+     * Represents an attack simulation training landing page.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class LandingPageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get landingPages from security
+     * Represents an attack simulation training landing page.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

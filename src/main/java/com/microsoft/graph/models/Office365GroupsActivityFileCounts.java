@@ -30,7 +30,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     private Long total;
     /**
-     * Instantiates a new office365GroupsActivityFileCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityFileCounts and sets the default values.
      */
     public Office365GroupsActivityFileCounts() {
         super();
@@ -38,7 +38,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityFileCounts
+     * @return a Office365GroupsActivityFileCounts
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityFileCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the active property value. The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getActive() {
@@ -77,7 +77,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -93,7 +93,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
     }
     /**
      * Gets the total property value. The total number of files in the group's SharePoint document library.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {

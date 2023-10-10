@@ -36,24 +36,24 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action cancel
-     * @return a CompletableFuture of cancelResponse
+     * @return a CompletableFuture of CancelPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CancelResponse> post() {
+    public java.util.concurrent.CompletableFuture<CancelPostResponse> post() {
         return post(null);
     }
     /**
      * Invoke action cancel
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cancelResponse
+     * @return a CompletableFuture of CancelPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CancelResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<CancelPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CancelResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, CancelPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action cancel
@@ -86,7 +86,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cancelRequestBuilder
+     * @return a CancelRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

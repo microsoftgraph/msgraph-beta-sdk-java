@@ -60,7 +60,7 @@ public class WindowsUpdateCatalogItemsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * A collection of windows update catalog items (fetaure updates item , quality updates item)
-     * @return a CompletableFuture of windowsUpdateCatalogItemCollectionResponse
+     * @return a CompletableFuture of WindowsUpdateCatalogItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItemCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class WindowsUpdateCatalogItemsRequestBuilder extends BaseRequestBuilder 
     /**
      * A collection of windows update catalog items (fetaure updates item , quality updates item)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsUpdateCatalogItemCollectionResponse
+     * @return a CompletableFuture of WindowsUpdateCatalogItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WindowsUpdateCatalogItemsRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to windowsUpdateCatalogItems for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsUpdateCatalogItem
+     * @return a CompletableFuture of WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItem> post(@jakarta.annotation.Nonnull final WindowsUpdateCatalogItem body) {
@@ -92,7 +92,7 @@ public class WindowsUpdateCatalogItemsRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to windowsUpdateCatalogItems for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsUpdateCatalogItem
+     * @return a CompletableFuture of WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItem> post(@jakarta.annotation.Nonnull final WindowsUpdateCatalogItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WindowsUpdateCatalogItemsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsUpdateCatalogItemsRequestBuilder
+     * @return a WindowsUpdateCatalogItemsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsUpdateCatalogItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -36,7 +36,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      */
     private Long spinStep;
     /**
-     * Instantiates a new groupPolicyPresentationLongDecimalTextBox and sets the default values.
+     * Instantiates a new GroupPolicyPresentationLongDecimalTextBox and sets the default values.
      */
     public GroupPolicyPresentationLongDecimalTextBox() {
         super();
@@ -45,7 +45,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationLongDecimalTextBox
+     * @return a GroupPolicyPresentationLongDecimalTextBox
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationLongDecimalTextBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     }
     /**
      * Gets the defaultValue property value. An unsigned integer that specifies the initial value for the decimal text box. The default value is 1.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDefaultValue() {
@@ -77,7 +77,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     }
     /**
      * Gets the maxValue property value. An unsigned long that specifies the maximum allowed value. The default value is 9999.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaxValue() {
@@ -85,7 +85,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     }
     /**
      * Gets the minValue property value. An unsigned long that specifies the minimum allowed value. The default value is 0.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMinValue() {
@@ -93,7 +93,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     }
     /**
      * Gets the required property value. Requirement to enter a value in the parameter box. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
@@ -101,7 +101,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     }
     /**
      * Gets the spin property value. If true, create a spin control; otherwise, create a text box for numeric entry. The default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSpin() {
@@ -109,7 +109,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
     }
     /**
      * Gets the spinStep property value. An unsigned integer that specifies the increment of change for the spin control. The default value is 1.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSpinStep() {

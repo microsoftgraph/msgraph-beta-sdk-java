@@ -57,7 +57,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of group assignments for this mobile app.
-     * @return a CompletableFuture of mobileAppAssignment
+     * @return a CompletableFuture of MobileAppAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> get() {
@@ -66,7 +66,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of group assignments for this mobile app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppAssignment
+     * @return a CompletableFuture of MobileAppAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mobileAppAssignment
+     * @return a CompletableFuture of MobileAppAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> patch(@jakarta.annotation.Nonnull final MobileAppAssignment body) {
@@ -89,7 +89,7 @@ public class MobileAppAssignmentItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppAssignment
+     * @return a CompletableFuture of MobileAppAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppAssignment> patch(@jakarta.annotation.Nonnull final MobileAppAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -57,7 +57,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
     }
     /**
      * The list of Compliance Management Partners configured by the tenant.
-     * @return a CompletableFuture of complianceManagementPartner
+     * @return a CompletableFuture of ComplianceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> get() {
@@ -66,7 +66,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
     /**
      * The list of Compliance Management Partners configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of complianceManagementPartner
+     * @return a CompletableFuture of ComplianceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property complianceManagementPartners in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of complianceManagementPartner
+     * @return a CompletableFuture of ComplianceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> patch(@jakarta.annotation.Nonnull final ComplianceManagementPartner body) {
@@ -89,7 +89,7 @@ public class ComplianceManagementPartnerItemRequestBuilder extends BaseRequestBu
      * Update the navigation property complianceManagementPartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of complianceManagementPartner
+     * @return a CompletableFuture of ComplianceManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComplianceManagementPartner> patch(@jakarta.annotation.Nonnull final ComplianceManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

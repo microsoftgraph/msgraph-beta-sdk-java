@@ -89,7 +89,7 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get entity from governanceRoleAssignments by key
-     * @return a CompletableFuture of governanceRoleAssignment
+     * @return a CompletableFuture of GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignment> get() {
@@ -98,7 +98,7 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Get entity from governanceRoleAssignments by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignment
+     * @return a CompletableFuture of GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in governanceRoleAssignments
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleAssignment
+     * @return a CompletableFuture of GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignment> patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignment body) {
@@ -121,7 +121,7 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * Update entity in governanceRoleAssignments
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignment
+     * @return a CompletableFuture of GovernanceRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignment> patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

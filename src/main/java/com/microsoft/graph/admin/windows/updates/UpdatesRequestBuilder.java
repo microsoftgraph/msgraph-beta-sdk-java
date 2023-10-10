@@ -105,7 +105,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
-     * @return a CompletableFuture of adminWindowsUpdates
+     * @return a CompletableFuture of AdminWindowsUpdates
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindowsUpdates> get() {
@@ -114,7 +114,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Entity that acts as a container for all Windows Update for Business deployment service functionalities. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminWindowsUpdates
+     * @return a CompletableFuture of AdminWindowsUpdates
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindowsUpdates> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property updates in admin
      * @param body The request body
-     * @return a CompletableFuture of adminWindowsUpdates
+     * @return a CompletableFuture of AdminWindowsUpdates
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindowsUpdates> patch(@jakarta.annotation.Nonnull final AdminWindowsUpdates body) {
@@ -137,7 +137,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property updates in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminWindowsUpdates
+     * @return a CompletableFuture of AdminWindowsUpdates
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdminWindowsUpdates> patch(@jakarta.annotation.Nonnull final AdminWindowsUpdates body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class UpdatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updatesRequestBuilder
+     * @return a UpdatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

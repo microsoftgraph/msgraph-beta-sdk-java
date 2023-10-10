@@ -42,7 +42,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<MetaDataKeyStringPair> searchablePlainTexts;
     /**
-     * Instantiates a new serverProcessedContent and sets the default values.
+     * Instantiates a new ServerProcessedContent and sets the default values.
      */
     public ServerProcessedContent() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serverProcessedContent
+     * @return a ServerProcessedContent
      */
     @jakarta.annotation.Nonnull
     public static ServerProcessedContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
         return new ServerProcessedContent();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the componentDependencies property value. A key-value map where keys are string identifiers and values are component ids. SharePoint servers might decide to use this hint to preload the script for corresponding components for performance boost.
-     * @return a metaDataKeyStringPair
+     * @return a java.util.List<MetaDataKeyStringPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MetaDataKeyStringPair> getComponentDependencies() {
@@ -75,7 +75,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the customMetadata property value. A key-value map where keys are string identifier and values are object of custom key-value pair.
-     * @return a metaDataKeyValuePair
+     * @return a java.util.List<MetaDataKeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MetaDataKeyValuePair> getCustomMetadata() {
@@ -99,7 +99,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the htmlStrings property value. A key-value map where keys are string identifiers and values are rich text with HTML format. SharePoint servers treat the values as HTML content and run services like safety checks, search index and link fixup on them.
-     * @return a metaDataKeyStringPair
+     * @return a java.util.List<MetaDataKeyStringPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MetaDataKeyStringPair> getHtmlStrings() {
@@ -107,7 +107,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the imageSources property value. A key-value map where keys are string identifiers and values are image sources. SharePoint servers treat the values as image sources and run services like search index and link fixup on them.
-     * @return a metaDataKeyStringPair
+     * @return a java.util.List<MetaDataKeyStringPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MetaDataKeyStringPair> getImageSources() {
@@ -115,7 +115,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the links property value. A key-value map where keys are string identifiers and values are links. SharePoint servers treat the values as links and run services like link fixup on them.
-     * @return a metaDataKeyStringPair
+     * @return a java.util.List<MetaDataKeyStringPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MetaDataKeyStringPair> getLinks() {
@@ -123,7 +123,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the searchablePlainTexts property value. A key-value map where keys are string identifiers and values are strings that should be search indexed.
-     * @return a metaDataKeyStringPair
+     * @return a java.util.List<MetaDataKeyStringPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MetaDataKeyStringPair> getSearchablePlainTexts() {
@@ -153,8 +153,8 @@ public class ServerProcessedContent implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

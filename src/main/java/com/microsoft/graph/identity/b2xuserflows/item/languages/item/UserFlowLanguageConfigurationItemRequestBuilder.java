@@ -73,7 +73,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     }
     /**
      * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> get() {
@@ -82,7 +82,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     /**
      * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property languages in identity
      * @param body The request body
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> patch(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body) {
@@ -105,7 +105,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
      * Update the navigation property languages in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userFlowLanguageConfiguration
+     * @return a CompletableFuture of UserFlowLanguageConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserFlowLanguageConfiguration> patch(@jakarta.annotation.Nonnull final UserFlowLanguageConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

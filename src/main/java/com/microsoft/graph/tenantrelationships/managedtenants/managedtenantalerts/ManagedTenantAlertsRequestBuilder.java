@@ -60,7 +60,7 @@ public class ManagedTenantAlertsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get managedTenantAlerts from tenantRelationships
-     * @return a CompletableFuture of managedTenantAlertCollectionResponse
+     * @return a CompletableFuture of ManagedTenantAlertCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagedTenantAlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get managedTenantAlerts from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertCollectionResponse
+     * @return a CompletableFuture of ManagedTenantAlertCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagedTenantAlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedTenantAlerts for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantAlert
+     * @return a CompletableFuture of ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlert> post(@jakarta.annotation.Nonnull final ManagedTenantAlert body) {
@@ -92,7 +92,7 @@ public class ManagedTenantAlertsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedTenantAlerts for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlert
+     * @return a CompletableFuture of ManagedTenantAlert
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlert> post(@jakarta.annotation.Nonnull final ManagedTenantAlert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagedTenantAlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedTenantAlertsRequestBuilder
+     * @return a ManagedTenantAlertsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantAlertsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -64,7 +64,7 @@ public class LegalHold extends Entity implements Parsable {
      */
     private java.util.List<UserSource> userSources;
     /**
-     * Instantiates a new legalHold and sets the default values.
+     * Instantiates a new LegalHold and sets the default values.
      */
     public LegalHold() {
         super();
@@ -72,7 +72,7 @@ public class LegalHold extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a legalHold
+     * @return a LegalHold
      */
     @jakarta.annotation.Nonnull
     public static LegalHold createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the contentQuery property value. KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
@@ -89,7 +89,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the legal hold.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -105,7 +105,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The legal hold description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -113,7 +113,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the legal hold.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -121,7 +121,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the errors property value. Lists any errors that happened while placing the hold.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getErrors() {
@@ -151,7 +151,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -159,7 +159,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. the user who last modified the legal hold.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -175,7 +175,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the legal hold.
-     * @return a siteSource
+     * @return a java.util.List<SiteSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
@@ -183,7 +183,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
-     * @return a legalHoldStatus
+     * @return a LegalHoldStatus
      */
     @jakarta.annotation.Nullable
     public LegalHoldStatus getStatus() {
@@ -191,7 +191,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the unifiedGroupSources property value. The unifiedGroupSources property
-     * @return a unifiedGroupSource
+     * @return a java.util.List<UnifiedGroupSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
@@ -199,7 +199,7 @@ public class LegalHold extends Entity implements Parsable {
     }
     /**
      * Gets the userSources property value. Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site.
-     * @return a userSource
+     * @return a java.util.List<UserSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {

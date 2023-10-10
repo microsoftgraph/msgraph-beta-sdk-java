@@ -59,7 +59,7 @@ public class SettingDefinitionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of related Setting Definitions. This property is read-only.
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinitionCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinitionCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class SettingDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * List of related Setting Definitions. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinitionCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class SettingDefinitionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a settingDefinitionsRequestBuilder
+     * @return a SettingDefinitionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SettingDefinitionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

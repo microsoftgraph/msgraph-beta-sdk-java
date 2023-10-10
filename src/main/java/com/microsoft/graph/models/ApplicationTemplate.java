@@ -49,7 +49,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     private java.util.List<String> supportedSingleSignOnModes;
     /**
-     * Instantiates a new applicationTemplate and sets the default values.
+     * Instantiates a new ApplicationTemplate and sets the default values.
      */
     public ApplicationTemplate() {
         super();
@@ -57,7 +57,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationTemplate
+     * @return a ApplicationTemplate
      */
     @jakarta.annotation.Nonnull
     public static ApplicationTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -74,7 +74,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -82,7 +82,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -109,7 +109,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the homePageUrl property value. The home page URL of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHomePageUrl() {
@@ -117,7 +117,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the informationalUrls property value. The informationalUrls property
-     * @return a informationalUrls
+     * @return a InformationalUrls
      */
     @jakarta.annotation.Nullable
     public InformationalUrls getInformationalUrls() {
@@ -125,7 +125,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the logoUrl property value. The URL to get the logo for this application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogoUrl() {
@@ -133,7 +133,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. The name of the publisher for this application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -141,7 +141,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the supportedClaimConfiguration property value. The supportedClaimConfiguration property
-     * @return a supportedClaimConfiguration
+     * @return a SupportedClaimConfiguration
      */
     @jakarta.annotation.Nullable
     public SupportedClaimConfiguration getSupportedClaimConfiguration() {
@@ -149,7 +149,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the supportedProvisioningTypes property value. The list of provisioning modes supported by this application. The only valid value is sync.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedProvisioningTypes() {
@@ -157,7 +157,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the supportedSingleSignOnModes property value. The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedSingleSignOnModes() {

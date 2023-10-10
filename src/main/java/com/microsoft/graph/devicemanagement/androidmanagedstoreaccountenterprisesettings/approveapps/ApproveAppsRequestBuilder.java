@@ -90,7 +90,7 @@ public class ApproveAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a approveAppsRequestBuilder
+     * @return a ApproveAppsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApproveAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

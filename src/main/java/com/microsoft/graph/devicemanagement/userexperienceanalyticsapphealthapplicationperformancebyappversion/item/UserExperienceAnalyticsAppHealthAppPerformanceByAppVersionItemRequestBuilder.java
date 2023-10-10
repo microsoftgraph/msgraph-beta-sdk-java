@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemReque
     }
     /**
      * User experience analytics appHealth Application Performance by App Version
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemReque
     /**
      * User experience analytics appHealth Application Performance by App Version
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemReque
     /**
      * Update the navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionItemReque
      * Update the navigation property userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     * @return a CompletableFuture of UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

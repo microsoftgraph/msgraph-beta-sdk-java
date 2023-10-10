@@ -60,7 +60,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents operations on resources that take a long time to complete and can run in the background until completion.
-     * @return a CompletableFuture of longRunningOperationCollectionResponse
+     * @return a CompletableFuture of LongRunningOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents operations on resources that take a long time to complete and can run in the background until completion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of longRunningOperationCollectionResponse
+     * @return a CompletableFuture of LongRunningOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to operations for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> post(@jakarta.annotation.Nonnull final LongRunningOperation body) {
@@ -92,7 +92,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to operations for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of longRunningOperation
+     * @return a CompletableFuture of LongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LongRunningOperation> post(@jakarta.annotation.Nonnull final LongRunningOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a operationsRequestBuilder
+     * @return a OperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

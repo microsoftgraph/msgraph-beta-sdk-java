@@ -65,7 +65,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The task associated with the comment thread.
-     * @return a CompletableFuture of workbookDocumentTask
+     * @return a CompletableFuture of WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTask> get() {
@@ -74,7 +74,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
     /**
      * The task associated with the comment thread.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTask
+     * @return a CompletableFuture of WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTask> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property task in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookDocumentTask
+     * @return a CompletableFuture of WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTask> patch(@jakarta.annotation.Nonnull final WorkbookDocumentTask body) {
@@ -97,7 +97,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property task in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTask
+     * @return a CompletableFuture of WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTask> patch(@jakarta.annotation.Nonnull final WorkbookDocumentTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class TaskRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a taskRequestBuilder
+     * @return a TaskRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TaskRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

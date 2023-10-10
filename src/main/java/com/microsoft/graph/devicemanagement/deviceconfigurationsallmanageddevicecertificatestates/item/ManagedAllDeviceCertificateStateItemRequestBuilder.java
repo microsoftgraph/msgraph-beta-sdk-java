@@ -57,7 +57,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder extends BaseRequ
     }
     /**
      * Summary of all certificates for all devices.
-     * @return a CompletableFuture of managedAllDeviceCertificateState
+     * @return a CompletableFuture of ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateState> get() {
@@ -66,7 +66,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder extends BaseRequ
     /**
      * Summary of all certificates for all devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAllDeviceCertificateState
+     * @return a CompletableFuture of ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property deviceConfigurationsAllManagedDeviceCertificateStates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAllDeviceCertificateState
+     * @return a CompletableFuture of ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateState> patch(@jakarta.annotation.Nonnull final ManagedAllDeviceCertificateState body) {
@@ -89,7 +89,7 @@ public class ManagedAllDeviceCertificateStateItemRequestBuilder extends BaseRequ
      * Update the navigation property deviceConfigurationsAllManagedDeviceCertificateStates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAllDeviceCertificateState
+     * @return a CompletableFuture of ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateState> patch(@jakarta.annotation.Nonnull final ManagedAllDeviceCertificateState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

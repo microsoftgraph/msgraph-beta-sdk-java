@@ -57,7 +57,7 @@ public class CartToClassAssociationItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * The Cart To Class Associations.
-     * @return a CompletableFuture of cartToClassAssociation
+     * @return a CompletableFuture of CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociation> get() {
@@ -66,7 +66,7 @@ public class CartToClassAssociationItemRequestBuilder extends BaseRequestBuilder
     /**
      * The Cart To Class Associations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cartToClassAssociation
+     * @return a CompletableFuture of CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CartToClassAssociationItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property cartToClassAssociations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cartToClassAssociation
+     * @return a CompletableFuture of CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociation> patch(@jakarta.annotation.Nonnull final CartToClassAssociation body) {
@@ -89,7 +89,7 @@ public class CartToClassAssociationItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property cartToClassAssociations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cartToClassAssociation
+     * @return a CompletableFuture of CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CartToClassAssociation> patch(@jakarta.annotation.Nonnull final CartToClassAssociation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

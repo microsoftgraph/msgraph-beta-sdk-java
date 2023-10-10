@@ -69,17 +69,17 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations/{virtualEventRegistration%2Did}/sessions/{virtualEventSession%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get sessions from solutions
-     * @return a CompletableFuture of virtualEventSession
+     * Sessions of the webinar.
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> get() {
         return get(null);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventSession::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -98,7 +98,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -129,7 +129,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
         return new VirtualEventSessionItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sessions from solutions
+     * Sessions of the webinar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

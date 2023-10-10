@@ -60,7 +60,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get licenseDetails from servicePrincipals
-     * @return a CompletableFuture of licenseDetailsCollectionResponse
+     * @return a CompletableFuture of LicenseDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetailsCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get licenseDetails from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of licenseDetailsCollectionResponse
+     * @return a CompletableFuture of LicenseDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetailsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of licenseDetails
+     * @return a CompletableFuture of LicenseDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetails> post(@jakarta.annotation.Nonnull final LicenseDetails body) {
@@ -92,7 +92,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of licenseDetails
+     * @return a CompletableFuture of LicenseDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LicenseDetails> post(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a licenseDetailsRequestBuilder
+     * @return a LicenseDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LicenseDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

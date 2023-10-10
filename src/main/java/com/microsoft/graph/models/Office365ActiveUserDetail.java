@@ -14,11 +14,11 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     private java.util.List<String> assignedProducts;
     /**
-     * The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
      */
     private LocalDate deletedDate;
     /**
-     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
+     * The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
      */
     private String displayName;
     /**
@@ -106,7 +106,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      */
     private LocalDate yammerLicenseAssignDate;
     /**
-     * Instantiates a new office365ActiveUserDetail and sets the default values.
+     * Instantiates a new Office365ActiveUserDetail and sets the default values.
      */
     public Office365ActiveUserDetail() {
         super();
@@ -114,7 +114,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365ActiveUserDetail
+     * @return a Office365ActiveUserDetail
      */
     @jakarta.annotation.Nonnull
     public static Office365ActiveUserDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -123,14 +123,14 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the assignedProducts property value. All the products assigned for the user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignedProducts() {
         return this.assignedProducts;
     }
     /**
-     * Gets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * Gets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -138,8 +138,8 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         return this.deletedDate;
     }
     /**
-     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
-     * @return a string
+     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -196,7 +196,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasExchangeLicense property value. Whether the user has been assigned an Exchange license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasExchangeLicense() {
@@ -204,7 +204,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasOneDriveLicense property value. Whether the user has been assigned a OneDrive license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasOneDriveLicense() {
@@ -212,7 +212,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasSharePointLicense property value. Whether the user has been assigned a SharePoint license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasSharePointLicense() {
@@ -220,7 +220,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasSkypeForBusinessLicense property value. Whether the user has been assigned a Skype For Business license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasSkypeForBusinessLicense() {
@@ -228,7 +228,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasTeamsLicense property value. Whether the user has been assigned a Teams license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasTeamsLicense() {
@@ -236,7 +236,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the hasYammerLicense property value. Whether the user has been assigned a Yammer license.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasYammerLicense() {
@@ -244,7 +244,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Whether this user has been deleted or soft deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -324,7 +324,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -386,14 +386,14 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         this.assignedProducts = value;
     }
     /**
-     * Sets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user has not been deleted.
+     * Sets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
      * @param value Value to set for the deletedDate property.
      */
     public void setDeletedDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.deletedDate = value;
     }
     /**
-     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates.
+     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

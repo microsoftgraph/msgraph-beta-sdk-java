@@ -46,7 +46,7 @@ public class DimensionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get dimensions from financials
-     * @return a CompletableFuture of dimension
+     * @return a CompletableFuture of Dimension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Dimension> get() {
@@ -55,7 +55,7 @@ public class DimensionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get dimensions from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dimension
+     * @return a CompletableFuture of Dimension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Dimension> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

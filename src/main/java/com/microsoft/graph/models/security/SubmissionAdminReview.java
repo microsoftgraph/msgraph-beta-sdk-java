@@ -31,7 +31,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      */
     private SubmissionResultCategory reviewResult;
     /**
-     * Instantiates a new submissionAdminReview and sets the default values.
+     * Instantiates a new SubmissionAdminReview and sets the default values.
      */
     public SubmissionAdminReview() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a submissionAdminReview
+     * @return a SubmissionAdminReview
      */
     @jakarta.annotation.Nonnull
     public static SubmissionAdminReview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         return new SubmissionAdminReview();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -77,7 +77,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the reviewBy property value. Specifies who reviewed the email. The identification is an email ID or other identity strings.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewBy() {
@@ -93,7 +93,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the reviewResult property value. Specifies what the review result was. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable, and unknownFutureValue.
-     * @return a submissionResultCategory
+     * @return a SubmissionResultCategory
      */
     @jakarta.annotation.Nullable
     public SubmissionResultCategory getReviewResult() {
@@ -112,8 +112,8 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

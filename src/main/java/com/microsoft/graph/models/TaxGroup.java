@@ -26,7 +26,7 @@ public class TaxGroup extends Entity implements Parsable {
      */
     private String taxType;
     /**
-     * Instantiates a new taxGroup and sets the default values.
+     * Instantiates a new TaxGroup and sets the default values.
      */
     public TaxGroup() {
         super();
@@ -34,7 +34,7 @@ public class TaxGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a taxGroup
+     * @return a TaxGroup
      */
     @jakarta.annotation.Nonnull
     public static TaxGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class TaxGroup extends Entity implements Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -51,7 +51,7 @@ public class TaxGroup extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -80,7 +80,7 @@ public class TaxGroup extends Entity implements Parsable {
     }
     /**
      * Gets the taxType property value. The taxType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxType() {

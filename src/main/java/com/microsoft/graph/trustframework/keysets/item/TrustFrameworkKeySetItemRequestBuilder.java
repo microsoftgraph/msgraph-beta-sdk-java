@@ -77,7 +77,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/keySets/{trustFrameworkKeySet%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a trustFrameworkKeySet.
+     * Delete a trustFrameworkKeySet. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a trustFrameworkKeySet.
+     * Delete a trustFrameworkKeySet. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -98,8 +98,8 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve the properties and associations for a Trustframeworkkeyset.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * Retrieve the properties and associations for a Trustframeworkkeyset. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,9 +107,9 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and associations for a Trustframeworkkeyset.
+     * Retrieve the properties and associations for a Trustframeworkkeyset. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a trustFrameworkKeyset. This operation will replace the content of an existing keyset. Specifying the ID in the request payload is optional.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkKeySet
+     * @return a CompletableFuture of TrustFrameworkKeySet
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkkeyset-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -147,7 +147,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TrustFrameworkKeySet::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a trustFrameworkKeySet.
+     * Delete a trustFrameworkKeySet. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -155,7 +155,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a trustFrameworkKeySet.
+     * Delete a trustFrameworkKeySet. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -174,7 +174,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties and associations for a Trustframeworkkeyset.
+     * Retrieve the properties and associations for a Trustframeworkkeyset. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -182,7 +182,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and associations for a Trustframeworkkeyset.
+     * Retrieve the properties and associations for a Trustframeworkkeyset. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -251,7 +251,7 @@ public class TrustFrameworkKeySetItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties and associations for a Trustframeworkkeyset.
+     * Retrieve the properties and associations for a Trustframeworkkeyset. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

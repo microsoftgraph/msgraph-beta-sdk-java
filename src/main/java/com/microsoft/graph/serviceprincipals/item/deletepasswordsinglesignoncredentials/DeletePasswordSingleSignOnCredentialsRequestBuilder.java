@@ -35,7 +35,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/deletePasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Delete single sign-on credentials using a password for a user or group.
+     * Delete single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-deletepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Delete single sign-on credentials using a password for a user or group.
+     * Delete single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-deletepasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Delete single sign-on credentials using a password for a user or group.
+     * Delete single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Delete single sign-on credentials using a password for a user or group.
+     * Delete single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deletePasswordSingleSignOnCredentialsRequestBuilder
+     * @return a DeletePasswordSingleSignOnCredentialsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeletePasswordSingleSignOnCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

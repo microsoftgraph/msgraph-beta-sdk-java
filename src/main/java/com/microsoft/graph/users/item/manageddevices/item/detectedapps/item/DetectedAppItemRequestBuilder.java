@@ -38,7 +38,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * All applications currently installed on the device
-     * @return a CompletableFuture of detectedApp
+     * @return a CompletableFuture of DetectedApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> get() {
@@ -47,7 +47,7 @@ public class DetectedAppItemRequestBuilder extends BaseRequestBuilder {
     /**
      * All applications currently installed on the device
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of detectedApp
+     * @return a CompletableFuture of DetectedApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DetectedApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

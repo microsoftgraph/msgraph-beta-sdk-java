@@ -119,7 +119,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new networkAccessTraffic and sets the default values.
+     * Instantiates a new NetworkAccessTraffic and sets the default values.
      */
     public NetworkAccessTraffic() {
         this.setAdditionalData(new HashMap<>());
@@ -127,7 +127,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkAccessTraffic
+     * @return a NetworkAccessTraffic
      */
     @jakarta.annotation.Nonnull
     public static NetworkAccessTraffic createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -135,7 +135,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
         return new NetworkAccessTraffic();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the agentVersion property value. Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAgentVersion() {
@@ -152,7 +152,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectionId property value. Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionId() {
@@ -168,7 +168,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationFQDN property value. Represents the Fully Qualified Domain Name (FQDN) of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationFQDN() {
@@ -176,7 +176,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationIp property value. Represents the IP address of the destination host or server in a network communication. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationIp() {
@@ -184,7 +184,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationPort property value. Represents the network port number on the destination host or server in a network communication. Supports $filter (eq) and $orderby.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDestinationPort() {
@@ -192,7 +192,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
-     * @return a deviceCategory
+     * @return a DeviceCategory
      */
     @jakarta.annotation.Nullable
     public DeviceCategory getDeviceCategory() {
@@ -200,7 +200,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceId property value. Represents a unique identifier assigned to a device within a network infrastructure. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -208,7 +208,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceOperatingSystem property value. Represents the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOperatingSystem() {
@@ -216,7 +216,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceOperatingSystemVersion property value. Represents the version or release number of the operating system installed on a device within a network infrastructure. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOperatingSystemVersion() {
@@ -259,7 +259,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the headers property value. Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
-     * @return a headers
+     * @return a Headers
      */
     @jakarta.annotation.Nullable
     public Headers getHeaders() {
@@ -267,7 +267,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
-     * @return a networkingProtocol
+     * @return a NetworkingProtocol
      */
     @jakarta.annotation.Nullable
     public NetworkingProtocol getNetworkProtocol() {
@@ -275,7 +275,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -283,7 +283,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the policyId property value. Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
@@ -291,7 +291,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the policyRuleId property value. Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyRuleId() {
@@ -299,7 +299,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the receivedBytes property value. Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getReceivedBytes() {
@@ -307,7 +307,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sentBytes property value. Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSentBytes() {
@@ -315,7 +315,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sessionId property value. Represents a unique identifier assigned to a session or connection within a network infrastructure. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
@@ -323,7 +323,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceIp property value. Represents the source IP address in a network communication. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceIp() {
@@ -331,7 +331,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourcePort property value. Represents the network port number on the source host or device in a network communication. Supports $filter (eq) and $orderby.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSourcePort() {
@@ -339,7 +339,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tenantId property value. Represents a unique identifier assigned to a tenant within a network infrastructure. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -347,7 +347,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trafficType property value. The trafficType property
-     * @return a trafficType
+     * @return a TrafficType
      */
     @jakarta.annotation.Nullable
     public TrafficType getTrafficType() {
@@ -355,7 +355,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the transactionId property value. Represents a unique identifier assigned to a specific transaction or operation. Key. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTransactionId() {
@@ -363,7 +363,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
-     * @return a networkingProtocol
+     * @return a NetworkingProtocol
      */
     @jakarta.annotation.Nullable
     public NetworkingProtocol getTransportProtocol() {
@@ -371,7 +371,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userId property value. Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -379,7 +379,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. Represents the user principal name (UPN) associated with a user. Supports $filter (eq) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -420,8 +420,8 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

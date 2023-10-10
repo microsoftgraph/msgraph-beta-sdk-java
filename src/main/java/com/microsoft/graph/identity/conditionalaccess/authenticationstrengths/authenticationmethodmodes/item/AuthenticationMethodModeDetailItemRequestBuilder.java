@@ -63,7 +63,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     }
     /**
      * Names and descriptions of all valid authentication method modes in the system.
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -75,7 +75,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     /**
      * Names and descriptions of all valid authentication method modes in the system.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -91,7 +91,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property authenticationMethodModes in identity
      * @param body The request body
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
@@ -104,7 +104,7 @@ public class AuthenticationMethodModeDetailItemRequestBuilder extends BaseReques
      * Update the navigation property authenticationMethodModes in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationMethodModeDetail
+     * @return a CompletableFuture of AuthenticationMethodModeDetail
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */

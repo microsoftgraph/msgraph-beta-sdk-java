@@ -65,7 +65,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get security from users
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> get() {
@@ -74,7 +74,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Get security from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property security in users
      * @param body The request body
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> patch(@jakarta.annotation.Nonnull final Security body) {
@@ -97,7 +97,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property security in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of security
+     * @return a CompletableFuture of Security
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Security> patch(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a securityRequestBuilder
+     * @return a SecurityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SecurityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

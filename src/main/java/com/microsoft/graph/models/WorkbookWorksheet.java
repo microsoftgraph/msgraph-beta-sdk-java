@@ -45,7 +45,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
      */
     private String visibility;
     /**
-     * Instantiates a new workbookWorksheet and sets the default values.
+     * Instantiates a new WorkbookWorksheet and sets the default values.
      */
     public WorkbookWorksheet() {
         super();
@@ -53,7 +53,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookWorksheet
+     * @return a WorkbookWorksheet
      */
     @jakarta.annotation.Nonnull
     public static WorkbookWorksheet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
-     * @return a workbookChart
+     * @return a java.util.List<WorkbookChart>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookChart> getCharts() {
@@ -88,7 +88,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The display name of the worksheet.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -96,7 +96,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
-     * @return a workbookNamedItem
+     * @return a java.util.List<WorkbookNamedItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookNamedItem> getNames() {
@@ -104,7 +104,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
-     * @return a workbookPivotTable
+     * @return a java.util.List<WorkbookPivotTable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookPivotTable> getPivotTables() {
@@ -112,7 +112,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the position property value. The zero-based position of the worksheet within the workbook.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPosition() {
@@ -120,7 +120,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the protection property value. Returns sheet protection object for a worksheet. Read-only.
-     * @return a workbookWorksheetProtection
+     * @return a WorkbookWorksheetProtection
      */
     @jakarta.annotation.Nullable
     public WorkbookWorksheetProtection getProtection() {
@@ -128,7 +128,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the tables property value. Collection of tables that are part of the worksheet. Read-only.
-     * @return a workbookTable
+     * @return a java.util.List<WorkbookTable>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookTable> getTables() {
@@ -136,7 +136,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Collection of document tasks on this worksheet. Read-only.
-     * @return a workbookDocumentTask
+     * @return a java.util.List<WorkbookDocumentTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookDocumentTask> getTasks() {
@@ -144,7 +144,7 @@ public class WorkbookWorksheet extends Entity implements Parsable {
     }
     /**
      * Gets the visibility property value. The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVisibility() {

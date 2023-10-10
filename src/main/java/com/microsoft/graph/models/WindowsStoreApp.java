@@ -16,7 +16,7 @@ public class WindowsStoreApp extends MobileApp implements Parsable {
      */
     private String appStoreUrl;
     /**
-     * Instantiates a new windowsStoreApp and sets the default values.
+     * Instantiates a new WindowsStoreApp and sets the default values.
      */
     public WindowsStoreApp() {
         super();
@@ -25,7 +25,7 @@ public class WindowsStoreApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsStoreApp
+     * @return a WindowsStoreApp
      */
     @jakarta.annotation.Nonnull
     public static WindowsStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class WindowsStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appStoreUrl property value. The Windows app store URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {

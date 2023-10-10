@@ -60,7 +60,7 @@ public class CloudPCConnectivityIssuesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The list of CloudPC Connectivity Issue.
-     * @return a CompletableFuture of cloudPCConnectivityIssueCollectionResponse
+     * @return a CompletableFuture of CloudPCConnectivityIssueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssueCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CloudPCConnectivityIssuesRequestBuilder extends BaseRequestBuilder 
     /**
      * The list of CloudPC Connectivity Issue.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPCConnectivityIssueCollectionResponse
+     * @return a CompletableFuture of CloudPCConnectivityIssueCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssueCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CloudPCConnectivityIssuesRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to cloudPCConnectivityIssues for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPCConnectivityIssue
+     * @return a CompletableFuture of CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssue> post(@jakarta.annotation.Nonnull final CloudPCConnectivityIssue body) {
@@ -92,7 +92,7 @@ public class CloudPCConnectivityIssuesRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to cloudPCConnectivityIssues for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPCConnectivityIssue
+     * @return a CompletableFuture of CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPCConnectivityIssue> post(@jakarta.annotation.Nonnull final CloudPCConnectivityIssue body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CloudPCConnectivityIssuesRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cloudPCConnectivityIssuesRequestBuilder
+     * @return a CloudPCConnectivityIssuesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CloudPCConnectivityIssuesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

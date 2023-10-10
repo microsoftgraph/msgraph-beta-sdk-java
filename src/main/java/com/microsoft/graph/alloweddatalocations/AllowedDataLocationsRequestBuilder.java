@@ -60,7 +60,7 @@ public class AllowedDataLocationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from allowedDataLocations
-     * @return a CompletableFuture of allowedDataLocationCollectionResponse
+     * @return a CompletableFuture of AllowedDataLocationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedDataLocationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AllowedDataLocationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from allowedDataLocations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allowedDataLocationCollectionResponse
+     * @return a CompletableFuture of AllowedDataLocationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedDataLocationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AllowedDataLocationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to allowedDataLocations
      * @param body The request body
-     * @return a CompletableFuture of allowedDataLocation
+     * @return a CompletableFuture of AllowedDataLocation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedDataLocation> post(@jakarta.annotation.Nonnull final AllowedDataLocation body) {
@@ -92,7 +92,7 @@ public class AllowedDataLocationsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to allowedDataLocations
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allowedDataLocation
+     * @return a CompletableFuture of AllowedDataLocation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AllowedDataLocation> post(@jakarta.annotation.Nonnull final AllowedDataLocation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AllowedDataLocationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allowedDataLocationsRequestBuilder
+     * @return a AllowedDataLocationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllowedDataLocationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

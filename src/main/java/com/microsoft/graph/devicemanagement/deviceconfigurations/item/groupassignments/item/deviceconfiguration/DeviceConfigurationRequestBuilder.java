@@ -38,7 +38,7 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The navigation link to the Device Configuration being targeted.
-     * @return a CompletableFuture of deviceConfiguration
+     * @return a CompletableFuture of DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get() {
@@ -47,7 +47,7 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * The navigation link to the Device Configuration being targeted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfiguration
+     * @return a CompletableFuture of DeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class DeviceConfigurationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceConfigurationRequestBuilder
+     * @return a DeviceConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

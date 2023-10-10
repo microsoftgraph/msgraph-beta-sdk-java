@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequest
     }
     /**
      * User Experience Analytics Battery Health Device Runtime History
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequest
     /**
      * User Experience Analytics Battery Health Device Runtime History
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequest
     /**
      * Update the navigation property userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryItemRequest
      * Update the navigation property userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

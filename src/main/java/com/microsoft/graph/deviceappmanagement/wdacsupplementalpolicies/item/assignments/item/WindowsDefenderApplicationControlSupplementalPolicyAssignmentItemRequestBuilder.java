@@ -57,7 +57,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRe
     }
     /**
      * The associated group assignments for the Windows Defender Application Control Supplemental Policy.
-     * @return a CompletableFuture of windowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @return a CompletableFuture of WindowsDefenderApplicationControlSupplementalPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDefenderApplicationControlSupplementalPolicyAssignment> get() {
@@ -66,7 +66,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRe
     /**
      * The associated group assignments for the Windows Defender Application Control Supplemental Policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @return a CompletableFuture of WindowsDefenderApplicationControlSupplementalPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDefenderApplicationControlSupplementalPolicyAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRe
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @return a CompletableFuture of WindowsDefenderApplicationControlSupplementalPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDefenderApplicationControlSupplementalPolicyAssignment> patch(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment body) {
@@ -89,7 +89,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRe
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDefenderApplicationControlSupplementalPolicyAssignment
+     * @return a CompletableFuture of WindowsDefenderApplicationControlSupplementalPolicyAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDefenderApplicationControlSupplementalPolicyAssignment> patch(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

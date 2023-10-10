@@ -97,7 +97,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     private String wifiSsid;
     /**
-     * Instantiates a new androidDeviceOwnerEnrollmentProfile and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerEnrollmentProfile and sets the default values.
      */
     public AndroidDeviceOwnerEnrollmentProfile() {
         super();
@@ -105,7 +105,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerEnrollmentProfile
+     * @return a AndroidDeviceOwnerEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,7 +114,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the accountId property value. Tenant GUID the enrollment profile belongs to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountId() {
@@ -122,7 +122,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the configureWifi property value. Boolean that indicates that the Wi-Fi network should be configured during device provisioning. When set to TRUE, device provisioning will use Wi-Fi related properties to automatically connect to Wi-Fi networks. When set to FALSE or undefined, other Wi-Fi related properties will be ignored. Default value is TRUE. Returned by default.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigureWifi() {
@@ -138,7 +138,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the description property value. Description for the enrollment profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -146,7 +146,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. Display name for the enrollment profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -154,7 +154,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
@@ -162,7 +162,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the enrollmentMode property value. The enrollment mode for an enrollment profile.
-     * @return a androidDeviceOwnerEnrollmentMode
+     * @return a AndroidDeviceOwnerEnrollmentMode
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentMode getEnrollmentMode() {
@@ -170,7 +170,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the enrollmentTokenType property value. The enrollment token type for an enrollment profile.
-     * @return a androidDeviceOwnerEnrollmentTokenType
+     * @return a AndroidDeviceOwnerEnrollmentTokenType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentTokenType getEnrollmentTokenType() {
@@ -178,7 +178,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnrollmentTokenUsageCount() {
@@ -216,7 +216,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the isTeamsDeviceProfile property value. Boolean indicating if this profile is an Android AOSP for Teams device profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTeamsDeviceProfile() {
@@ -232,7 +232,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the qrCodeContent property value. String used to generate a QR code for the token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQrCodeContent() {
@@ -240,7 +240,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the qrCodeImage property value. String used to generate a QR code for the token.
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getQrCodeImage() {
@@ -248,7 +248,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -272,7 +272,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the tokenValue property value. Value of the most recently created token for this enrollment profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTokenValue() {
@@ -280,7 +280,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the wifiHidden property value. Boolean that indicates if hidden wifi networks are enabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiHidden() {
@@ -288,7 +288,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the wifiPassword property value. String that contains the wi-fi login password
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiPassword() {
@@ -296,7 +296,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the wifiSecurityType property value. This enum represents Wi-Fi Security Types for Android Device Owner AOSP Scenarios.
-     * @return a aospWifiSecurityType
+     * @return a AospWifiSecurityType
      */
     @jakarta.annotation.Nullable
     public AospWifiSecurityType getWifiSecurityType() {
@@ -304,7 +304,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the wifiSsid property value. String that contains the wi-fi login ssid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWifiSsid() {

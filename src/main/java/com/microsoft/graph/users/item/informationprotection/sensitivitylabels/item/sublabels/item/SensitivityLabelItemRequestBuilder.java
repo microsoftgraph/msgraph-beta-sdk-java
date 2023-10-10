@@ -57,7 +57,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sublabels from users
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> get() {
@@ -66,7 +66,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sublabels from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sublabels in users
      * @param body The request body
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> patch(@jakarta.annotation.Nonnull final SensitivityLabel body) {
@@ -89,7 +89,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sublabels in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> patch(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomExtensionHandler extends Entity implements Parsable {
     /**
-     * Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand.
+     * Indicates which custom workflow extension is executed at this stage. Nullable. Supports $expand.
      */
     private CustomAccessPackageWorkflowExtension customExtension;
     /**
@@ -17,7 +17,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      */
     private AccessPackageCustomExtensionStage stage;
     /**
-     * Instantiates a new customExtensionHandler and sets the default values.
+     * Instantiates a new CustomExtensionHandler and sets the default values.
      */
     public CustomExtensionHandler() {
         super();
@@ -25,7 +25,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionHandler
+     * @return a CustomExtensionHandler
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionHandler createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,8 +33,8 @@ public class CustomExtensionHandler extends Entity implements Parsable {
         return new CustomExtensionHandler();
     }
     /**
-     * Gets the customExtension property value. Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand.
-     * @return a customAccessPackageWorkflowExtension
+     * Gets the customExtension property value. Indicates which custom workflow extension is executed at this stage. Nullable. Supports $expand.
+     * @return a CustomAccessPackageWorkflowExtension
      */
     @jakarta.annotation.Nullable
     public CustomAccessPackageWorkflowExtension getCustomExtension() {
@@ -53,7 +53,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
     }
     /**
      * Gets the stage property value. Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a accessPackageCustomExtensionStage
+     * @return a AccessPackageCustomExtensionStage
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
@@ -70,7 +70,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
         writer.writeEnumValue("stage", this.getStage());
     }
     /**
-     * Sets the customExtension property value. Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand.
+     * Sets the customExtension property value. Indicates which custom workflow extension is executed at this stage. Nullable. Supports $expand.
      * @param value Value to set for the customExtension property.
      */
     public void setCustomExtension(@jakarta.annotation.Nullable final CustomAccessPackageWorkflowExtension value) {

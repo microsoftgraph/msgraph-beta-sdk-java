@@ -57,7 +57,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * The list of assignments for this eBook.
-     * @return a CompletableFuture of managedEBookAssignment
+     * @return a CompletableFuture of ManagedEBookAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> get() {
@@ -66,7 +66,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * The list of assignments for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBookAssignment
+     * @return a CompletableFuture of ManagedEBookAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedEBookAssignment
+     * @return a CompletableFuture of ManagedEBookAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> patch(@jakarta.annotation.Nonnull final ManagedEBookAssignment body) {
@@ -89,7 +89,7 @@ public class ManagedEBookAssignmentItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property assignments in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedEBookAssignment
+     * @return a CompletableFuture of ManagedEBookAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedEBookAssignment> patch(@jakarta.annotation.Nonnull final ManagedEBookAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

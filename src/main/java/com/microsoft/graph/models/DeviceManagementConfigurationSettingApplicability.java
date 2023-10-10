@@ -35,7 +35,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
     /**
-     * Instantiates a new deviceManagementConfigurationSettingApplicability and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingApplicability and sets the default values.
      */
     public DeviceManagementConfigurationSettingApplicability() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingApplicability
+     * @return a DeviceManagementConfigurationSettingApplicability
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingApplicability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         return new DeviceManagementConfigurationSettingApplicability();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Gets the description property value. description of the setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -77,7 +77,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Gets the deviceMode property value. Describes applicability for the mode the device is in
-     * @return a deviceManagementConfigurationDeviceMode
+     * @return a DeviceManagementConfigurationDeviceMode
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationDeviceMode getDeviceMode() {
@@ -99,7 +99,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -107,7 +107,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatform() {
@@ -115,7 +115,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
@@ -135,8 +135,8 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

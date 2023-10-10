@@ -22,9 +22,9 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
     /**
      * Trusted Root Certificate
      */
-    private byte[] trustedRootCertificate;
+    private Base64url trustedRootCertificate;
     /**
-     * Instantiates a new windows81TrustedRootCertificate and sets the default values.
+     * Instantiates a new Windows81TrustedRootCertificate and sets the default values.
      */
     public Windows81TrustedRootCertificate() {
         super();
@@ -33,7 +33,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81TrustedRootCertificate
+     * @return a Windows81TrustedRootCertificate
      */
     @jakarta.annotation.Nonnull
     public static Windows81TrustedRootCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
     }
     /**
      * Gets the certFileName property value. File name to display in UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertFileName() {
@@ -50,7 +50,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
     }
     /**
      * Gets the destinationStore property value. Possible values for the Certificate Destination Store.
-     * @return a certificateDestinationStore
+     * @return a CertificateDestinationStore
      */
     @jakarta.annotation.Nullable
     public CertificateDestinationStore getDestinationStore() {
@@ -65,15 +65,15 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
         deserializerMap.put("destinationStore", (n) -> { this.setDestinationStore(n.getEnumValue(CertificateDestinationStore.class)); });
-        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getTrustedRootCertificate() {
+    public Base64url getTrustedRootCertificate() {
         return this.trustedRootCertificate;
     }
     /**
@@ -85,7 +85,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
         super.serialize(writer);
         writer.writeStringValue("certFileName", this.getCertFileName());
         writer.writeEnumValue("destinationStore", this.getDestinationStore());
-        writer.writeByteArrayValue("trustedRootCertificate", this.getTrustedRootCertificate());
+        writer.writeObjectValue("trustedRootCertificate", this.getTrustedRootCertificate());
     }
     /**
      * Sets the certFileName property value. File name to display in UI.
@@ -105,7 +105,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * Sets the trustedRootCertificate property value. Trusted Root Certificate
      * @param value Value to set for the trustedRootCertificate property.
      */
-    public void setTrustedRootCertificate(@jakarta.annotation.Nullable final byte[] value) {
+    public void setTrustedRootCertificate(@jakarta.annotation.Nullable final Base64url value) {
         this.trustedRootCertificate = value;
     }
 }

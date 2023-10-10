@@ -60,7 +60,7 @@ public class MessageRecipientsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from messageRecipients
-     * @return a CompletableFuture of messageRecipientCollectionResponse
+     * @return a CompletableFuture of MessageRecipientCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipientCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MessageRecipientsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from messageRecipients
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageRecipientCollectionResponse
+     * @return a CompletableFuture of MessageRecipientCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipientCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MessageRecipientsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to messageRecipients
      * @param body The request body
-     * @return a CompletableFuture of messageRecipient
+     * @return a CompletableFuture of MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipient> post(@jakarta.annotation.Nonnull final MessageRecipient body) {
@@ -92,7 +92,7 @@ public class MessageRecipientsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to messageRecipients
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageRecipient
+     * @return a CompletableFuture of MessageRecipient
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageRecipient> post(@jakarta.annotation.Nonnull final MessageRecipient body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MessageRecipientsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a messageRecipientsRequestBuilder
+     * @return a MessageRecipientsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MessageRecipientsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

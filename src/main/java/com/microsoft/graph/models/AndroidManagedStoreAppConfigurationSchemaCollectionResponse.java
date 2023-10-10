@@ -13,7 +13,7 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionResponse extends
      */
     private java.util.List<AndroidManagedStoreAppConfigurationSchema> value;
     /**
-     * Instantiates a new androidManagedStoreAppConfigurationSchemaCollectionResponse and sets the default values.
+     * Instantiates a new AndroidManagedStoreAppConfigurationSchemaCollectionResponse and sets the default values.
      */
     public AndroidManagedStoreAppConfigurationSchemaCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionResponse extends
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAppConfigurationSchemaCollectionResponse
+     * @return a AndroidManagedStoreAppConfigurationSchemaCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreAppConfigurationSchemaCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AndroidManagedStoreAppConfigurationSchemaCollectionResponse extends
     }
     /**
      * Gets the value property value. The value property
-     * @return a androidManagedStoreAppConfigurationSchema
+     * @return a java.util.List<AndroidManagedStoreAppConfigurationSchema>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppConfigurationSchema> getValue() {

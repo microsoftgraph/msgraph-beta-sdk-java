@@ -60,7 +60,7 @@ public class DeviceComplianceScriptsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device compliance scripts associated with the tenant.
-     * @return a CompletableFuture of deviceComplianceScriptCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceComplianceScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device compliance scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScriptCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScriptCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceComplianceScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceComplianceScripts for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScript
+     * @return a CompletableFuture of DeviceComplianceScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScript> post(@jakarta.annotation.Nonnull final DeviceComplianceScript body) {
@@ -92,7 +92,7 @@ public class DeviceComplianceScriptsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceComplianceScripts for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScript
+     * @return a CompletableFuture of DeviceComplianceScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScript> post(@jakarta.annotation.Nonnull final DeviceComplianceScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceComplianceScriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceComplianceScriptsRequestBuilder
+     * @return a DeviceComplianceScriptsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceComplianceScriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

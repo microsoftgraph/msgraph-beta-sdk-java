@@ -17,7 +17,7 @@ public class DeltaParticipants extends Entity implements Parsable {
      */
     private Long sequenceNumber;
     /**
-     * Instantiates a new deltaParticipants and sets the default values.
+     * Instantiates a new DeltaParticipants and sets the default values.
      */
     public DeltaParticipants() {
         super();
@@ -25,7 +25,7 @@ public class DeltaParticipants extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deltaParticipants
+     * @return a DeltaParticipants
      */
     @jakarta.annotation.Nonnull
     public static DeltaParticipants createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DeltaParticipants extends Entity implements Parsable {
     }
     /**
      * Gets the participants property value. The participants property
-     * @return a participant
+     * @return a java.util.List<Participant>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Participant> getParticipants() {
@@ -53,7 +53,7 @@ public class DeltaParticipants extends Entity implements Parsable {
     }
     /**
      * Gets the sequenceNumber property value. The sequence number for the roster update that is used to identify the notification order.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSequenceNumber() {

@@ -29,7 +29,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
      */
     private OnPremisesPublishingType publishingType;
     /**
-     * Instantiates a new onPremisesAgentGroup and sets the default values.
+     * Instantiates a new OnPremisesAgentGroup and sets the default values.
      */
     public OnPremisesAgentGroup() {
         super();
@@ -37,7 +37,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesAgentGroup
+     * @return a OnPremisesAgentGroup
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesAgentGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     }
     /**
      * Gets the agents property value. List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a onPremisesAgent
+     * @return a java.util.List<OnPremisesAgent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getAgents() {
@@ -54,7 +54,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the onPremisesAgentGroup.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -84,7 +84,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     }
     /**
      * Gets the publishedResources property value. List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a publishedResource
+     * @return a java.util.List<PublishedResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PublishedResource> getPublishedResources() {
@@ -92,7 +92,7 @@ public class OnPremisesAgentGroup extends Entity implements Parsable {
     }
     /**
      * Gets the publishingType property value. The publishingType property
-     * @return a onPremisesPublishingType
+     * @return a OnPremisesPublishingType
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishingType getPublishingType() {

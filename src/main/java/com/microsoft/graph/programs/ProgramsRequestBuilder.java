@@ -59,8 +59,8 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Azure AD access reviews feature, list all the program objects.
-     * @return a CompletableFuture of programCollectionResponse
+     * In the Azure AD access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ProgramCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * In the Azure AD access reviews feature, list all the program objects.
+     * In the Azure AD access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programCollectionResponse
+     * @return a CompletableFuture of ProgramCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/program-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProgramCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In the Azure AD access reviews feature, create a new program object.
+     * In the Azure AD access reviews feature, create a new program object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * In the Azure AD access reviews feature, create a new program object.
+     * In the Azure AD access reviews feature, create a new program object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      * @see <a href="https://learn.microsoft.com/graph/api/program-create?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Program::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In the Azure AD access reviews feature, list all the program objects.
+     * In the Azure AD access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * In the Azure AD access reviews feature, list all the program objects.
+     * In the Azure AD access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * In the Azure AD access reviews feature, create a new program object.
+     * In the Azure AD access reviews feature, create a new program object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * In the Azure AD access reviews feature, create a new program object.
+     * In the Azure AD access reviews feature, create a new program object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a programsRequestBuilder
+     * @return a ProgramsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProgramsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class ProgramsRequestBuilder extends BaseRequestBuilder {
         return new ProgramsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * In the Azure AD access reviews feature, list all the program objects.
+     * In the Azure AD access reviews feature, list all the program objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

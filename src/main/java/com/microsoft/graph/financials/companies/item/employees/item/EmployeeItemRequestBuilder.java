@@ -65,7 +65,7 @@ public class EmployeeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get employees from financials
-     * @return a CompletableFuture of employee
+     * @return a CompletableFuture of Employee
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Employee> get() {
@@ -74,7 +74,7 @@ public class EmployeeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get employees from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of employee
+     * @return a CompletableFuture of Employee
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Employee> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class EmployeeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property employees in financials
      * @param body The request body
-     * @return a CompletableFuture of employee
+     * @return a CompletableFuture of Employee
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Employee> patch(@jakarta.annotation.Nonnull final Employee body) {
@@ -97,7 +97,7 @@ public class EmployeeItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property employees in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of employee
+     * @return a CompletableFuture of Employee
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Employee> patch(@jakarta.annotation.Nonnull final Employee body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

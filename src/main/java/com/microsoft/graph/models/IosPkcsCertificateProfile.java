@@ -44,7 +44,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
      */
     private String subjectNameFormatString;
     /**
-     * Instantiates a new iosPkcsCertificateProfile and sets the default values.
+     * Instantiates a new IosPkcsCertificateProfile and sets the default values.
      */
     public IosPkcsCertificateProfile() {
         super();
@@ -53,7 +53,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosPkcsCertificateProfile
+     * @return a IosPkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static IosPkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -70,7 +70,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
@@ -78,7 +78,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
@@ -86,7 +86,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
@@ -94,7 +94,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
@@ -119,7 +119,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -127,7 +127,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -135,7 +135,7 @@ public class IosPkcsCertificateProfile extends IosCertificateProfileBase impleme
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

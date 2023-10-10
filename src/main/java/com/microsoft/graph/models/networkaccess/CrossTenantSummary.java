@@ -38,7 +38,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
      */
     private Integer userCount;
     /**
-     * Instantiates a new crossTenantSummary and sets the default values.
+     * Instantiates a new CrossTenantSummary and sets the default values.
      */
     public CrossTenantSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantSummary
+     * @return a CrossTenantSummary
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
         return new CrossTenantSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the authTransactionCount property value. Total numbers of authentication sessions in the time frame between startDateTime and endDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAuthTransactionCount() {
@@ -71,7 +71,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceCount property value. Count of unique devices that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -94,7 +94,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the newTenantCount property value. Count of unique tenants that were accessed in the time frame between endDateTime to discoveryPivotDateTime, but haven't been accessed in the time frame between discoveryPivotDateTime to startDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNewTenantCount() {
@@ -102,7 +102,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tenantCount property value. Count of unique tenants that were accessed, that are different from the device's home tenant, in the time frame between startDateTime and endDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTenantCount() {
@@ -118,7 +118,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userCount property value. Count of unique users that performed cross-tenant access, in the time frame between startDateTime and endDateTime.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUserCount() {
@@ -139,8 +139,8 @@ public class CrossTenantSummary implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

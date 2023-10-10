@@ -49,7 +49,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      */
     private String odataType;
     /**
-     * Instantiates a new windowsEnrollmentStatusScreenSettings and sets the default values.
+     * Instantiates a new WindowsEnrollmentStatusScreenSettings and sets the default values.
      */
     public WindowsEnrollmentStatusScreenSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -57,7 +57,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsEnrollmentStatusScreenSettings
+     * @return a WindowsEnrollmentStatusScreenSettings
      */
     @jakarta.annotation.Nonnull
     public static WindowsEnrollmentStatusScreenSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
         return new WindowsEnrollmentStatusScreenSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the allowDeviceUseBeforeProfileAndAppInstallComplete property value. Allow or block user to use device before profile and app installation complete
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeviceUseBeforeProfileAndAppInstallComplete() {
@@ -82,7 +82,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the allowDeviceUseOnInstallFailure property value. Allow the user to continue using the device on installation failure
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeviceUseOnInstallFailure() {
@@ -90,7 +90,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the allowLogCollectionOnInstallFailure property value. Allow or block log collection on installation failure
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowLogCollectionOnInstallFailure() {
@@ -98,7 +98,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the blockDeviceSetupRetryByUser property value. Allow the user to retry the setup on installation failure
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockDeviceSetupRetryByUser() {
@@ -106,7 +106,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the customErrorMessage property value. Set custom error message to show upon installation failure
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomErrorMessage() {
@@ -131,7 +131,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the hideInstallationProgress property value. Show or hide installation progress to user
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHideInstallationProgress() {
@@ -139,7 +139,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the installProgressTimeoutInMinutes property value. Set installation progress timeout in minutes
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstallProgressTimeoutInMinutes() {
@@ -147,7 +147,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -170,8 +170,8 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

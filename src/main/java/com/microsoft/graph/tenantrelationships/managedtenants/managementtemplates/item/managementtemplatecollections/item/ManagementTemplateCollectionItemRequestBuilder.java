@@ -38,7 +38,7 @@ public class ManagementTemplateCollectionItemRequestBuilder extends BaseRequestB
     }
     /**
      * Get managementTemplateCollections from tenantRelationships
-     * @return a CompletableFuture of managementTemplateCollection
+     * @return a CompletableFuture of ManagementTemplateCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollection> get() {
@@ -47,7 +47,7 @@ public class ManagementTemplateCollectionItemRequestBuilder extends BaseRequestB
     /**
      * Get managementTemplateCollections from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollection
+     * @return a CompletableFuture of ManagementTemplateCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

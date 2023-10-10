@@ -13,7 +13,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      */
     private java.util.List<EducationIdentityDomain> userDomains;
     /**
-     * Instantiates a new educationIdentityCreationConfiguration and sets the default values.
+     * Instantiates a new EducationIdentityCreationConfiguration and sets the default values.
      */
     public EducationIdentityCreationConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationIdentityCreationConfiguration
+     * @return a EducationIdentityCreationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static EducationIdentityCreationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
     }
     /**
      * Gets the userDomains property value. The userDomains property
-     * @return a educationIdentityDomain
+     * @return a java.util.List<EducationIdentityDomain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationIdentityDomain> getUserDomains() {

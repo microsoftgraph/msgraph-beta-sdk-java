@@ -41,7 +41,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
      */
     private ServiceNowConnectionStatus serviceNowConnectionStatus;
     /**
-     * Instantiates a new serviceNowConnection and sets the default values.
+     * Instantiates a new ServiceNowConnection and sets the default values.
      */
     public ServiceNowConnection() {
         super();
@@ -49,7 +49,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceNowConnection
+     * @return a ServiceNowConnection
      */
     @jakarta.annotation.Nonnull
     public static ServiceNowConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethod property value. Indicates the method used by Intune to authenticate with ServiceNow. Currently supports only web authentication with ServiceNow using the specified app id.
-     * @return a serviceNowAuthenticationMethod
+     * @return a ServiceNowAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public ServiceNowAuthenticationMethod getAuthenticationMethod() {
@@ -90,7 +90,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
     }
     /**
      * Gets the incidentApiUrl property value. Indicates the ServiceNow incident API URL that Intune will use the fetch incidents. Saved in the format of /api/now/table/incident
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIncidentApiUrl() {
@@ -98,7 +98,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
     }
     /**
      * Gets the instanceUrl property value. Indicates the ServiceNow instance URL that Intune will connect to. Saved in the format of https://<instance>.service-now.com
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstanceUrl() {
@@ -122,7 +122,7 @@ public class ServiceNowConnection extends Entity implements Parsable {
     }
     /**
      * Gets the serviceNowConnectionStatus property value. Status of ServiceNow Connection
-     * @return a serviceNowConnectionStatus
+     * @return a ServiceNowConnectionStatus
      */
     @jakarta.annotation.Nullable
     public ServiceNowConnectionStatus getServiceNowConnectionStatus() {

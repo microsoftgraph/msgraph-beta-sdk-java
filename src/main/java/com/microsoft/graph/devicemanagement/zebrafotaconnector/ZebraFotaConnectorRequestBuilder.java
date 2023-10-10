@@ -89,7 +89,7 @@ public class ZebraFotaConnectorRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The singleton ZebraFotaConnector associated with account.
-     * @return a CompletableFuture of zebraFotaConnector
+     * @return a CompletableFuture of ZebraFotaConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaConnector> get() {
@@ -98,7 +98,7 @@ public class ZebraFotaConnectorRequestBuilder extends BaseRequestBuilder {
     /**
      * The singleton ZebraFotaConnector associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of zebraFotaConnector
+     * @return a CompletableFuture of ZebraFotaConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class ZebraFotaConnectorRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property zebraFotaConnector in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of zebraFotaConnector
+     * @return a CompletableFuture of ZebraFotaConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaConnector> patch(@jakarta.annotation.Nonnull final ZebraFotaConnector body) {
@@ -121,7 +121,7 @@ public class ZebraFotaConnectorRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property zebraFotaConnector in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of zebraFotaConnector
+     * @return a CompletableFuture of ZebraFotaConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ZebraFotaConnector> patch(@jakarta.annotation.Nonnull final ZebraFotaConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class ZebraFotaConnectorRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a zebraFotaConnectorRequestBuilder
+     * @return a ZebraFotaConnectorRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ZebraFotaConnectorRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

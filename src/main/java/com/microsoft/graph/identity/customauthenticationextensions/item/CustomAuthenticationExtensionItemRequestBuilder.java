@@ -45,7 +45,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions/{customAuthenticationExtension%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return delete(null);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -66,19 +66,19 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
-     * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CustomAuthenticationExtension
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAuthenticationExtension
-     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of CustomAuthenticationExtension
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -91,7 +91,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property customAuthenticationExtensions in identity
      * @param body The request body
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
@@ -101,7 +101,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
      * Update the navigation property customAuthenticationExtensions in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAuthenticationExtension
+     * @return a CompletableFuture of CustomAuthenticationExtension
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomAuthenticationExtension> patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return this.requestAdapter.sendAsync(requestInfo, CustomAuthenticationExtension::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -140,7 +140,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -217,7 +217,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

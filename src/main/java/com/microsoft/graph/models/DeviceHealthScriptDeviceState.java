@@ -61,7 +61,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
      */
     private RemediationState remediationState;
     /**
-     * Instantiates a new deviceHealthScriptDeviceState and sets the default values.
+     * Instantiates a new DeviceHealthScriptDeviceState and sets the default values.
      */
     public DeviceHealthScriptDeviceState() {
         super();
@@ -69,7 +69,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptDeviceState
+     * @return a DeviceHealthScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
@@ -86,7 +86,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
@@ -139,7 +139,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the managedDevice property value. The managed device on which the device health script executed
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
@@ -147,7 +147,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
@@ -155,7 +155,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
@@ -163,7 +163,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
@@ -171,7 +171,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
@@ -179,7 +179,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the remediationScriptError property value. Error output of the remediation script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationScriptError() {
@@ -187,7 +187,7 @@ public class DeviceHealthScriptDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
-     * @return a remediationState
+     * @return a RemediationState
      */
     @jakarta.annotation.Nullable
     public RemediationState getRemediationState() {

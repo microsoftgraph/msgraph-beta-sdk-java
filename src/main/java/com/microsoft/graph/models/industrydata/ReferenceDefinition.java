@@ -39,7 +39,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
      */
     private String source;
     /**
-     * Instantiates a new referenceDefinition and sets the default values.
+     * Instantiates a new ReferenceDefinition and sets the default values.
      */
     public ReferenceDefinition() {
         super();
@@ -47,7 +47,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a referenceDefinition
+     * @return a ReferenceDefinition
      */
     @jakarta.annotation.Nonnull
     public static ReferenceDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the code property value. The code value for the definition that must be unique within the referenceType.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -88,7 +88,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the isDisabled property value. Indicates whether the definition has been disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDisabled() {
@@ -104,7 +104,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the referenceType property value. The categorical type for a collection of enumerated values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceType() {
@@ -112,7 +112,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSortIndex() {
@@ -120,7 +120,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. The standards body or organization source which defined the code.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {

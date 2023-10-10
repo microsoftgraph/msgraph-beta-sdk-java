@@ -60,7 +60,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationPolicy
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicy> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body) {
@@ -92,7 +92,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicy
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicy> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a referencingConfigurationPoliciesRequestBuilder
+     * @return a ReferencingConfigurationPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReferencingConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -81,7 +81,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder extends BaseReq
     }
     /**
      * Windows auto pilot deployment profiles
-     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
+     * @return a CompletableFuture of WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get() {
@@ -90,7 +90,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder extends BaseReq
     /**
      * Windows auto pilot deployment profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
+     * @return a CompletableFuture of WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property windowsAutopilotDeploymentProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
+     * @return a CompletableFuture of WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> patch(@jakarta.annotation.Nonnull final WindowsAutopilotDeploymentProfile body) {
@@ -113,7 +113,7 @@ public class WindowsAutopilotDeploymentProfileItemRequestBuilder extends BaseReq
      * Update the navigation property windowsAutopilotDeploymentProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeploymentProfile
+     * @return a CompletableFuture of WindowsAutopilotDeploymentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeploymentProfile> patch(@jakarta.annotation.Nonnull final WindowsAutopilotDeploymentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

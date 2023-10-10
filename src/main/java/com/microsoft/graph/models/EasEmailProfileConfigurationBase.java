@@ -28,7 +28,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
      */
     private UserEmailSource usernameSource;
     /**
-     * Instantiates a new easEmailProfileConfigurationBase and sets the default values.
+     * Instantiates a new EasEmailProfileConfigurationBase and sets the default values.
      */
     public EasEmailProfileConfigurationBase() {
         super();
@@ -37,7 +37,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a easEmailProfileConfigurationBase
+     * @return a EasEmailProfileConfigurationBase
      */
     @jakarta.annotation.Nonnull
     public static EasEmailProfileConfigurationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the customDomainName property value. Custom domain name value used while generating an email profile before installing on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomDomainName() {
@@ -76,7 +76,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
-     * @return a domainNameSource
+     * @return a DomainNameSource
      */
     @jakarta.annotation.Nullable
     public DomainNameSource getUserDomainNameSource() {
@@ -84,7 +84,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
-     * @return a usernameSource
+     * @return a UsernameSource
      */
     @jakarta.annotation.Nullable
     public UsernameSource getUsernameAADSource() {
@@ -92,7 +92,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
     }
     /**
      * Gets the usernameSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getUsernameSource() {

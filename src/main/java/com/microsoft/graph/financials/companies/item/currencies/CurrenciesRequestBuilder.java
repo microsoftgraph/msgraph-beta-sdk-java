@@ -61,7 +61,7 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get currencies from financials
-     * @return a CompletableFuture of currencyCollectionResponse
+     * @return a CompletableFuture of CurrencyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CurrencyCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get currencies from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of currencyCollectionResponse
+     * @return a CompletableFuture of CurrencyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CurrencyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to currencies for financials
      * @param body The request body
-     * @return a CompletableFuture of currency
+     * @return a CompletableFuture of Currency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Currency> post(@jakarta.annotation.Nonnull final Currency body) {
@@ -93,7 +93,7 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to currencies for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of currency
+     * @return a CompletableFuture of Currency
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Currency> post(@jakarta.annotation.Nonnull final Currency body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class CurrenciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a currenciesRequestBuilder
+     * @return a CurrenciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CurrenciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

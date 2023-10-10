@@ -57,7 +57,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder extends BaseRequestB
     }
     /**
      * Encryption report for devices in this account
-     * @return a CompletableFuture of managedDeviceEncryptionState
+     * @return a CompletableFuture of ManagedDeviceEncryptionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionState> get() {
@@ -66,7 +66,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder extends BaseRequestB
     /**
      * Encryption report for devices in this account
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceEncryptionState
+     * @return a CompletableFuture of ManagedDeviceEncryptionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property managedDeviceEncryptionStates in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceEncryptionState
+     * @return a CompletableFuture of ManagedDeviceEncryptionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionState> patch(@jakarta.annotation.Nonnull final ManagedDeviceEncryptionState body) {
@@ -89,7 +89,7 @@ public class ManagedDeviceEncryptionStateItemRequestBuilder extends BaseRequestB
      * Update the navigation property managedDeviceEncryptionStates in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceEncryptionState
+     * @return a CompletableFuture of ManagedDeviceEncryptionState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceEncryptionState> patch(@jakarta.annotation.Nonnull final ManagedDeviceEncryptionState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

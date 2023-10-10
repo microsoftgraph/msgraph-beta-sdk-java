@@ -105,7 +105,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get labels from security
-     * @return a CompletableFuture of labelsRoot
+     * @return a CompletableFuture of LabelsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LabelsRoot> get() {
@@ -114,7 +114,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get labels from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of labelsRoot
+     * @return a CompletableFuture of LabelsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LabelsRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property labels in security
      * @param body The request body
-     * @return a CompletableFuture of labelsRoot
+     * @return a CompletableFuture of LabelsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LabelsRoot> patch(@jakarta.annotation.Nonnull final LabelsRoot body) {
@@ -137,7 +137,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property labels in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of labelsRoot
+     * @return a CompletableFuture of LabelsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LabelsRoot> patch(@jakarta.annotation.Nonnull final LabelsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a labelsRequestBuilder
+     * @return a LabelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -88,7 +88,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     private String userName;
     /**
-     * Instantiates a new comanagementEligibleDevice and sets the default values.
+     * Instantiates a new ComanagementEligibleDevice and sets the default values.
      */
     public ComanagementEligibleDevice() {
         super();
@@ -96,7 +96,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a comanagementEligibleDevice
+     * @return a ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public static ComanagementEligibleDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -105,7 +105,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the clientRegistrationStatus property value. Device registration status.
-     * @return a deviceRegistrationState
+     * @return a DeviceRegistrationState
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationState getClientRegistrationStatus() {
@@ -113,7 +113,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. DeviceName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -121,7 +121,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceType property value. Device type.
-     * @return a deviceType
+     * @return a DeviceType
      */
     @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
@@ -129,7 +129,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the entitySource property value. EntitySource
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEntitySource() {
@@ -165,7 +165,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementAgents property value. Management agent type.
-     * @return a managementAgentType
+     * @return a ManagementAgentType
      */
     @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgents() {
@@ -173,7 +173,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managementState property value. Management state of device in Microsoft Intune.
-     * @return a managementState
+     * @return a ManagementState
      */
     @jakarta.annotation.Nullable
     public ManagementState getManagementState() {
@@ -181,7 +181,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the manufacturer property value. Manufacturer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -189,7 +189,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the mdmStatus property value. MDMStatus
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMdmStatus() {
@@ -197,7 +197,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the model property value. Model
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -205,7 +205,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the osDescription property value. OSDescription
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
@@ -213,7 +213,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. OSVersion
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -221,7 +221,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the ownerType property value. Owner type of device.
-     * @return a ownerType
+     * @return a OwnerType
      */
     @jakarta.annotation.Nullable
     public OwnerType getOwnerType() {
@@ -229,7 +229,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the referenceId property value. ReferenceId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceId() {
@@ -237,7 +237,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the serialNumber property value. SerialNumber
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -245,7 +245,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a comanagementEligibleType
+     * @return a ComanagementEligibleType
      */
     @jakarta.annotation.Nullable
     public ComanagementEligibleType getStatus() {
@@ -253,7 +253,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the upn property value. UPN
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUpn() {
@@ -261,7 +261,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userEmail property value. UserEmail
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
@@ -269,7 +269,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. UserId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -277,7 +277,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. UserName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

@@ -21,11 +21,11 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * The amountExcludingTax property
      */
-    private BigDecimal amountExcludingTax;
+    private Decimal amountExcludingTax;
     /**
      * The amountIncludingTax property
      */
-    private BigDecimal amountIncludingTax;
+    private Decimal amountIncludingTax;
     /**
      * The description property
      */
@@ -33,7 +33,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * The discountAmount property
      */
-    private BigDecimal discountAmount;
+    private Decimal discountAmount;
     /**
      * The discountAppliedBeforeTax property
      */
@@ -41,7 +41,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * The discountPercent property
      */
-    private BigDecimal discountPercent;
+    private Decimal discountPercent;
     /**
      * The documentId property
      */
@@ -61,19 +61,19 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * The netAmount property
      */
-    private BigDecimal netAmount;
+    private Decimal netAmount;
     /**
      * The netAmountIncludingTax property
      */
-    private BigDecimal netAmountIncludingTax;
+    private Decimal netAmountIncludingTax;
     /**
      * The netTaxAmount property
      */
-    private BigDecimal netTaxAmount;
+    private Decimal netTaxAmount;
     /**
      * The quantity property
      */
-    private BigDecimal quantity;
+    private Decimal quantity;
     /**
      * The sequence property
      */
@@ -85,11 +85,11 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * The taxPercent property
      */
-    private BigDecimal taxPercent;
+    private Decimal taxPercent;
     /**
      * The totalTaxAmount property
      */
-    private BigDecimal totalTaxAmount;
+    private Decimal totalTaxAmount;
     /**
      * The unitOfMeasureId property
      */
@@ -97,9 +97,9 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * The unitPrice property
      */
-    private BigDecimal unitPrice;
+    private Decimal unitPrice;
     /**
-     * Instantiates a new salesQuoteLine and sets the default values.
+     * Instantiates a new SalesQuoteLine and sets the default values.
      */
     public SalesQuoteLine() {
         super();
@@ -107,7 +107,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a salesQuoteLine
+     * @return a SalesQuoteLine
      */
     @jakarta.annotation.Nonnull
     public static SalesQuoteLine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -116,7 +116,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
@@ -132,23 +132,23 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the amountExcludingTax property value. The amountExcludingTax property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getAmountExcludingTax() {
+    public Decimal getAmountExcludingTax() {
         return this.amountExcludingTax;
     }
     /**
      * Gets the amountIncludingTax property value. The amountIncludingTax property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getAmountIncludingTax() {
+    public Decimal getAmountIncludingTax() {
         return this.amountIncludingTax;
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -156,15 +156,15 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getDiscountAmount() {
+    public Decimal getDiscountAmount() {
         return this.discountAmount;
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
@@ -172,10 +172,10 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the discountPercent property value. The discountPercent property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getDiscountPercent() {
+    public Decimal getDiscountPercent() {
         return this.discountPercent;
     }
     /**
@@ -195,31 +195,31 @@ public class SalesQuoteLine extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("account", (n) -> { this.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
         deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getUUIDValue()); });
-        deserializerMap.put("amountExcludingTax", (n) -> { this.setAmountExcludingTax(n.getBigDecimalValue()); });
-        deserializerMap.put("amountIncludingTax", (n) -> { this.setAmountIncludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("amountExcludingTax", (n) -> { this.setAmountExcludingTax(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("amountIncludingTax", (n) -> { this.setAmountIncludingTax(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("discountAppliedBeforeTax", (n) -> { this.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
-        deserializerMap.put("discountPercent", (n) -> { this.setDiscountPercent(n.getBigDecimalValue()); });
+        deserializerMap.put("discountPercent", (n) -> { this.setDiscountPercent(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("documentId", (n) -> { this.setDocumentId(n.getUUIDValue()); });
         deserializerMap.put("item", (n) -> { this.setItem(n.getObjectValue(Item::createFromDiscriminatorValue)); });
         deserializerMap.put("itemId", (n) -> { this.setItemId(n.getUUIDValue()); });
         deserializerMap.put("lineType", (n) -> { this.setLineType(n.getStringValue()); });
-        deserializerMap.put("netAmount", (n) -> { this.setNetAmount(n.getBigDecimalValue()); });
-        deserializerMap.put("netAmountIncludingTax", (n) -> { this.setNetAmountIncludingTax(n.getBigDecimalValue()); });
-        deserializerMap.put("netTaxAmount", (n) -> { this.setNetTaxAmount(n.getBigDecimalValue()); });
-        deserializerMap.put("quantity", (n) -> { this.setQuantity(n.getBigDecimalValue()); });
+        deserializerMap.put("netAmount", (n) -> { this.setNetAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("netAmountIncludingTax", (n) -> { this.setNetAmountIncludingTax(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("netTaxAmount", (n) -> { this.setNetTaxAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("quantity", (n) -> { this.setQuantity(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("sequence", (n) -> { this.setSequence(n.getIntegerValue()); });
         deserializerMap.put("taxCode", (n) -> { this.setTaxCode(n.getStringValue()); });
-        deserializerMap.put("taxPercent", (n) -> { this.setTaxPercent(n.getBigDecimalValue()); });
-        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("taxPercent", (n) -> { this.setTaxPercent(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("unitOfMeasureId", (n) -> { this.setUnitOfMeasureId(n.getUUIDValue()); });
-        deserializerMap.put("unitPrice", (n) -> { this.setUnitPrice(n.getBigDecimalValue()); });
+        deserializerMap.put("unitPrice", (n) -> { this.setUnitPrice(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the item property value. The item property
-     * @return a item
+     * @return a Item
      */
     @jakarta.annotation.Nullable
     public Item getItem() {
@@ -235,7 +235,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the lineType property value. The lineType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLineType() {
@@ -243,39 +243,39 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the netAmount property value. The netAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getNetAmount() {
+    public Decimal getNetAmount() {
         return this.netAmount;
     }
     /**
      * Gets the netAmountIncludingTax property value. The netAmountIncludingTax property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getNetAmountIncludingTax() {
+    public Decimal getNetAmountIncludingTax() {
         return this.netAmountIncludingTax;
     }
     /**
      * Gets the netTaxAmount property value. The netTaxAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getNetTaxAmount() {
+    public Decimal getNetTaxAmount() {
         return this.netTaxAmount;
     }
     /**
      * Gets the quantity property value. The quantity property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getQuantity() {
+    public Decimal getQuantity() {
         return this.quantity;
     }
     /**
      * Gets the sequence property value. The sequence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
@@ -283,7 +283,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the taxCode property value. The taxCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxCode() {
@@ -291,18 +291,18 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the taxPercent property value. The taxPercent property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getTaxPercent() {
+    public Decimal getTaxPercent() {
         return this.taxPercent;
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getTotalTaxAmount() {
+    public Decimal getTotalTaxAmount() {
         return this.totalTaxAmount;
     }
     /**
@@ -315,10 +315,10 @@ public class SalesQuoteLine extends Entity implements Parsable {
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getUnitPrice() {
+    public Decimal getUnitPrice() {
         return this.unitPrice;
     }
     /**
@@ -330,26 +330,26 @@ public class SalesQuoteLine extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("account", this.getAccount());
         writer.writeUUIDValue("accountId", this.getAccountId());
-        writer.writeBigDecimalValue("amountExcludingTax", this.getAmountExcludingTax());
-        writer.writeBigDecimalValue("amountIncludingTax", this.getAmountIncludingTax());
+        writer.writeObjectValue("amountExcludingTax", this.getAmountExcludingTax());
+        writer.writeObjectValue("amountIncludingTax", this.getAmountIncludingTax());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeBigDecimalValue("discountAmount", this.getDiscountAmount());
+        writer.writeObjectValue("discountAmount", this.getDiscountAmount());
         writer.writeBooleanValue("discountAppliedBeforeTax", this.getDiscountAppliedBeforeTax());
-        writer.writeBigDecimalValue("discountPercent", this.getDiscountPercent());
+        writer.writeObjectValue("discountPercent", this.getDiscountPercent());
         writer.writeUUIDValue("documentId", this.getDocumentId());
         writer.writeObjectValue("item", this.getItem());
         writer.writeUUIDValue("itemId", this.getItemId());
         writer.writeStringValue("lineType", this.getLineType());
-        writer.writeBigDecimalValue("netAmount", this.getNetAmount());
-        writer.writeBigDecimalValue("netAmountIncludingTax", this.getNetAmountIncludingTax());
-        writer.writeBigDecimalValue("netTaxAmount", this.getNetTaxAmount());
-        writer.writeBigDecimalValue("quantity", this.getQuantity());
+        writer.writeObjectValue("netAmount", this.getNetAmount());
+        writer.writeObjectValue("netAmountIncludingTax", this.getNetAmountIncludingTax());
+        writer.writeObjectValue("netTaxAmount", this.getNetTaxAmount());
+        writer.writeObjectValue("quantity", this.getQuantity());
         writer.writeIntegerValue("sequence", this.getSequence());
         writer.writeStringValue("taxCode", this.getTaxCode());
-        writer.writeBigDecimalValue("taxPercent", this.getTaxPercent());
-        writer.writeBigDecimalValue("totalTaxAmount", this.getTotalTaxAmount());
+        writer.writeObjectValue("taxPercent", this.getTaxPercent());
+        writer.writeObjectValue("totalTaxAmount", this.getTotalTaxAmount());
         writer.writeUUIDValue("unitOfMeasureId", this.getUnitOfMeasureId());
-        writer.writeBigDecimalValue("unitPrice", this.getUnitPrice());
+        writer.writeObjectValue("unitPrice", this.getUnitPrice());
     }
     /**
      * Sets the account property value. The account property
@@ -369,14 +369,14 @@ public class SalesQuoteLine extends Entity implements Parsable {
      * Sets the amountExcludingTax property value. The amountExcludingTax property
      * @param value Value to set for the amountExcludingTax property.
      */
-    public void setAmountExcludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setAmountExcludingTax(@jakarta.annotation.Nullable final Decimal value) {
         this.amountExcludingTax = value;
     }
     /**
      * Sets the amountIncludingTax property value. The amountIncludingTax property
      * @param value Value to set for the amountIncludingTax property.
      */
-    public void setAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setAmountIncludingTax(@jakarta.annotation.Nullable final Decimal value) {
         this.amountIncludingTax = value;
     }
     /**
@@ -390,7 +390,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
      */
-    public void setDiscountAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setDiscountAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.discountAmount = value;
     }
     /**
@@ -404,7 +404,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
      * Sets the discountPercent property value. The discountPercent property
      * @param value Value to set for the discountPercent property.
      */
-    public void setDiscountPercent(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setDiscountPercent(@jakarta.annotation.Nullable final Decimal value) {
         this.discountPercent = value;
     }
     /**
@@ -439,28 +439,28 @@ public class SalesQuoteLine extends Entity implements Parsable {
      * Sets the netAmount property value. The netAmount property
      * @param value Value to set for the netAmount property.
      */
-    public void setNetAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setNetAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.netAmount = value;
     }
     /**
      * Sets the netAmountIncludingTax property value. The netAmountIncludingTax property
      * @param value Value to set for the netAmountIncludingTax property.
      */
-    public void setNetAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setNetAmountIncludingTax(@jakarta.annotation.Nullable final Decimal value) {
         this.netAmountIncludingTax = value;
     }
     /**
      * Sets the netTaxAmount property value. The netTaxAmount property
      * @param value Value to set for the netTaxAmount property.
      */
-    public void setNetTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setNetTaxAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.netTaxAmount = value;
     }
     /**
      * Sets the quantity property value. The quantity property
      * @param value Value to set for the quantity property.
      */
-    public void setQuantity(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setQuantity(@jakarta.annotation.Nullable final Decimal value) {
         this.quantity = value;
     }
     /**
@@ -481,14 +481,14 @@ public class SalesQuoteLine extends Entity implements Parsable {
      * Sets the taxPercent property value. The taxPercent property
      * @param value Value to set for the taxPercent property.
      */
-    public void setTaxPercent(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setTaxPercent(@jakarta.annotation.Nullable final Decimal value) {
         this.taxPercent = value;
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
      */
-    public void setTotalTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setTotalTaxAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.totalTaxAmount = value;
     }
     /**
@@ -502,7 +502,7 @@ public class SalesQuoteLine extends Entity implements Parsable {
      * Sets the unitPrice property value. The unitPrice property
      * @param value Value to set for the unitPrice property.
      */
-    public void setUnitPrice(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setUnitPrice(@jakarta.annotation.Nullable final Decimal value) {
         this.unitPrice = value;
     }
 }

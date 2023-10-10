@@ -61,7 +61,7 @@ public class ItemCategoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get itemCategories from financials
-     * @return a CompletableFuture of itemCategoryCollectionResponse
+     * @return a CompletableFuture of ItemCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemCategoryCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class ItemCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get itemCategories from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemCategoryCollectionResponse
+     * @return a CompletableFuture of ItemCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemCategoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class ItemCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to itemCategories for financials
      * @param body The request body
-     * @return a CompletableFuture of itemCategory
+     * @return a CompletableFuture of ItemCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemCategory> post(@jakarta.annotation.Nonnull final ItemCategory body) {
@@ -93,7 +93,7 @@ public class ItemCategoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to itemCategories for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemCategory
+     * @return a CompletableFuture of ItemCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ItemCategory> post(@jakarta.annotation.Nonnull final ItemCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class ItemCategoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a itemCategoriesRequestBuilder
+     * @return a ItemCategoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ItemCategoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

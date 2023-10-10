@@ -83,7 +83,7 @@ public class CreateSnapshotRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createSnapshotRequestBuilder
+     * @return a CreateSnapshotRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreateSnapshotRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

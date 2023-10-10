@@ -73,7 +73,7 @@ public class HostPortItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get hostPorts from security
-     * @return a CompletableFuture of hostPort
+     * @return a CompletableFuture of HostPort
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPort> get() {
@@ -82,7 +82,7 @@ public class HostPortItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get hostPorts from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPort
+     * @return a CompletableFuture of HostPort
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPort> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class HostPortItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hostPorts in security
      * @param body The request body
-     * @return a CompletableFuture of hostPort
+     * @return a CompletableFuture of HostPort
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPort> patch(@jakarta.annotation.Nonnull final HostPort body) {
@@ -105,7 +105,7 @@ public class HostPortItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hostPorts in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPort
+     * @return a CompletableFuture of HostPort
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPort> patch(@jakarta.annotation.Nonnull final HostPort body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

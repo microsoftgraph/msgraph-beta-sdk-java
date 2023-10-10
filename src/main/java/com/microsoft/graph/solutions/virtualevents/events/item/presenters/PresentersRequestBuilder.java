@@ -60,7 +60,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Presenters' information of the virtual event.
-     * @return a CompletableFuture of virtualEventPresenterCollectionResponse
+     * @return a CompletableFuture of VirtualEventPresenterCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenterCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
     /**
      * Presenters' information of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventPresenterCollectionResponse
+     * @return a CompletableFuture of VirtualEventPresenterCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenterCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to presenters for solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a CompletableFuture of VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenter> post(@jakarta.annotation.Nonnull final VirtualEventPresenter body) {
@@ -92,7 +92,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to presenters for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a CompletableFuture of VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenter> post(@jakarta.annotation.Nonnull final VirtualEventPresenter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PresentersRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a presentersRequestBuilder
+     * @return a PresentersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PresentersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

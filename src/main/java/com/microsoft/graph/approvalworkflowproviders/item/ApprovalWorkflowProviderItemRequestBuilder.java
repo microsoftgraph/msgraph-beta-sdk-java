@@ -81,7 +81,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get entity from approvalWorkflowProviders by key
-     * @return a CompletableFuture of approvalWorkflowProvider
+     * @return a CompletableFuture of ApprovalWorkflowProvider
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> get() {
@@ -90,7 +90,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder extends BaseRequestBuild
     /**
      * Get entity from approvalWorkflowProviders by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalWorkflowProvider
+     * @return a CompletableFuture of ApprovalWorkflowProvider
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in approvalWorkflowProviders
      * @param body The request body
-     * @return a CompletableFuture of approvalWorkflowProvider
+     * @return a CompletableFuture of ApprovalWorkflowProvider
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> patch(@jakarta.annotation.Nonnull final ApprovalWorkflowProvider body) {
@@ -113,7 +113,7 @@ public class ApprovalWorkflowProviderItemRequestBuilder extends BaseRequestBuild
      * Update entity in approvalWorkflowProviders
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of approvalWorkflowProvider
+     * @return a CompletableFuture of ApprovalWorkflowProvider
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ApprovalWorkflowProvider> patch(@jakarta.annotation.Nonnull final ApprovalWorkflowProvider body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

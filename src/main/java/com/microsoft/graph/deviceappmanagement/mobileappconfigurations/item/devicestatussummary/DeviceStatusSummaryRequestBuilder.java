@@ -57,7 +57,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * App configuration device status summary.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> get() {
@@ -66,7 +66,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * App configuration device status summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceStatusSummary in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary body) {
@@ -89,7 +89,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceStatusSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceSummary> patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DeviceStatusSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatusSummaryRequestBuilder
+     * @return a DeviceStatusSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatusSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

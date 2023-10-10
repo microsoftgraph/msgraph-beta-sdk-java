@@ -59,8 +59,8 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
-     * @return a CompletableFuture of educationSynchronizationProfileCollectionResponse
+     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationSynchronizationProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationProfileCollectionResponse
+     * @return a CompletableFuture of EducationSynchronizationProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to synchronizationProfiles for education
      * @param body The request body
-     * @return a CompletableFuture of educationSynchronizationProfile
+     * @return a CompletableFuture of EducationSynchronizationProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationProfile> post(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body) {
@@ -94,7 +94,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to synchronizationProfiles for education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationProfile
+     * @return a CompletableFuture of EducationSynchronizationProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationProfile> post(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, EducationSynchronizationProfile::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a synchronizationProfilesRequestBuilder
+     * @return a SynchronizationProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SynchronizationProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return new SynchronizationProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Retrieve the collection of school data synchronization profiles in the tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

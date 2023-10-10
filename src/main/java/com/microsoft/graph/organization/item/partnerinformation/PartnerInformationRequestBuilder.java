@@ -57,7 +57,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get partnerInformation from organization
-     * @return a CompletableFuture of partnerInformation
+     * @return a CompletableFuture of PartnerInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PartnerInformation> get() {
@@ -66,7 +66,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get partnerInformation from organization
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of partnerInformation
+     * @return a CompletableFuture of PartnerInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PartnerInformation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property partnerInformation in organization
      * @param body The request body
-     * @return a CompletableFuture of partnerInformation
+     * @return a CompletableFuture of PartnerInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PartnerInformation> patch(@jakarta.annotation.Nonnull final PartnerInformation body) {
@@ -89,7 +89,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property partnerInformation in organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of partnerInformation
+     * @return a CompletableFuture of PartnerInformation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PartnerInformation> patch(@jakarta.annotation.Nonnull final PartnerInformation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a partnerInformationRequestBuilder
+     * @return a PartnerInformationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PartnerInformationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

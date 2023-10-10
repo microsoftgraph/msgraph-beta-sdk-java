@@ -54,7 +54,7 @@ public class MonitoringRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get monitoring
-     * @return a CompletableFuture of monitoring
+     * @return a CompletableFuture of Monitoring
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Monitoring> get() {
@@ -63,7 +63,7 @@ public class MonitoringRequestBuilder extends BaseRequestBuilder {
     /**
      * Get monitoring
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of monitoring
+     * @return a CompletableFuture of Monitoring
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Monitoring> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -76,7 +76,7 @@ public class MonitoringRequestBuilder extends BaseRequestBuilder {
     /**
      * Update monitoring
      * @param body The request body
-     * @return a CompletableFuture of monitoring
+     * @return a CompletableFuture of Monitoring
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Monitoring> patch(@jakarta.annotation.Nonnull final Monitoring body) {
@@ -86,7 +86,7 @@ public class MonitoringRequestBuilder extends BaseRequestBuilder {
      * Update monitoring
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of monitoring
+     * @return a CompletableFuture of Monitoring
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Monitoring> patch(@jakarta.annotation.Nonnull final Monitoring body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -161,7 +161,7 @@ public class MonitoringRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a monitoringRequestBuilder
+     * @return a MonitoringRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MonitoringRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

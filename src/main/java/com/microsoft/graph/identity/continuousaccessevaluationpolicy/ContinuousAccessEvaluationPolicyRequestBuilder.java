@@ -56,8 +56,8 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * @return a CompletableFuture of ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return this.requestAdapter.sendAsync(requestInfo, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * @return a CompletableFuture of ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return patch(body, null);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * @return a CompletableFuture of ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a continuousAccessEvaluationPolicyRequestBuilder
+     * @return a ContinuousAccessEvaluationPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContinuousAccessEvaluationPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

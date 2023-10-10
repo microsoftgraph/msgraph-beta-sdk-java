@@ -32,11 +32,11 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     /**
      * The creditAmount property
      */
-    private BigDecimal creditAmount;
+    private Decimal creditAmount;
     /**
      * The debitAmount property
      */
-    private BigDecimal debitAmount;
+    private Decimal debitAmount;
     /**
      * The description property
      */
@@ -66,7 +66,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      */
     private LocalDate postingDate;
     /**
-     * Instantiates a new generalLedgerEntry and sets the default values.
+     * Instantiates a new GeneralLedgerEntry and sets the default values.
      */
     public GeneralLedgerEntry() {
         this.setAdditionalData(new HashMap<>());
@@ -74,7 +74,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a generalLedgerEntry
+     * @return a GeneralLedgerEntry
      */
     @jakarta.annotation.Nonnull
     public static GeneralLedgerEntry createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
@@ -99,14 +99,14 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountNumber property value. The accountNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountNumber() {
         return this.accountNumber;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -115,23 +115,23 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the creditAmount property value. The creditAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getCreditAmount() {
+    public Decimal getCreditAmount() {
         return this.creditAmount;
     }
     /**
      * Gets the debitAmount property value. The debitAmount property
-     * @return a decimal
+     * @return a Decimal
      */
     @jakarta.annotation.Nullable
-    public BigDecimal getDebitAmount() {
+    public Decimal getDebitAmount() {
         return this.debitAmount;
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -139,7 +139,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the documentNumber property value. The documentNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDocumentNumber() {
@@ -147,7 +147,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the documentType property value. The documentType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDocumentType() {
@@ -163,8 +163,8 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
         deserializerMap.put("account", (n) -> { this.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
         deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getUUIDValue()); });
         deserializerMap.put("accountNumber", (n) -> { this.setAccountNumber(n.getStringValue()); });
-        deserializerMap.put("creditAmount", (n) -> { this.setCreditAmount(n.getBigDecimalValue()); });
-        deserializerMap.put("debitAmount", (n) -> { this.setDebitAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("creditAmount", (n) -> { this.setCreditAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
+        deserializerMap.put("debitAmount", (n) -> { this.setDebitAmount(n.getObjectValue(Decimal::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("documentNumber", (n) -> { this.setDocumentNumber(n.getStringValue()); });
         deserializerMap.put("documentType", (n) -> { this.setDocumentType(n.getStringValue()); });
@@ -192,7 +192,7 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -215,8 +215,8 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
         writer.writeObjectValue("account", this.getAccount());
         writer.writeUUIDValue("accountId", this.getAccountId());
         writer.writeStringValue("accountNumber", this.getAccountNumber());
-        writer.writeBigDecimalValue("creditAmount", this.getCreditAmount());
-        writer.writeBigDecimalValue("debitAmount", this.getDebitAmount());
+        writer.writeObjectValue("creditAmount", this.getCreditAmount());
+        writer.writeObjectValue("debitAmount", this.getDebitAmount());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("documentNumber", this.getDocumentNumber());
         writer.writeStringValue("documentType", this.getDocumentType());
@@ -248,8 +248,8 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
         this.accountNumber = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -258,14 +258,14 @@ public class GeneralLedgerEntry implements AdditionalDataHolder, Parsable {
      * Sets the creditAmount property value. The creditAmount property
      * @param value Value to set for the creditAmount property.
      */
-    public void setCreditAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setCreditAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.creditAmount = value;
     }
     /**
      * Sets the debitAmount property value. The debitAmount property
      * @param value Value to set for the debitAmount property.
      */
-    public void setDebitAmount(@jakarta.annotation.Nullable final BigDecimal value) {
+    public void setDebitAmount(@jakarta.annotation.Nullable final Decimal value) {
         this.debitAmount = value;
     }
     /**

@@ -34,7 +34,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private Double zoom;
     /**
-     * Instantiates a new previewPostRequestBody and sets the default values.
+     * Instantiates a new PreviewPostRequestBody and sets the default values.
      */
     public PreviewPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a previewPostRequestBody
+     * @return a PreviewPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static PreviewPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
         return new PreviewPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowEdit property value. The allowEdit property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEdit() {
@@ -67,7 +67,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the chromeless property value. The chromeless property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getChromeless() {
@@ -89,7 +89,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the page property value. The page property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPage() {
@@ -97,7 +97,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the viewer property value. The viewer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getViewer() {
@@ -105,7 +105,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the zoom property value. The zoom property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getZoom() {
@@ -125,8 +125,8 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -18,7 +18,7 @@ public class IndustryDataConnector extends Entity implements Parsable {
      */
     private SourceSystemDefinition sourceSystem;
     /**
-     * Instantiates a new industryDataConnector and sets the default values.
+     * Instantiates a new IndustryDataConnector and sets the default values.
      */
     public IndustryDataConnector() {
         super();
@@ -26,7 +26,7 @@ public class IndustryDataConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a industryDataConnector
+     * @return a IndustryDataConnector
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class IndustryDataConnector extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the data connector. Maximum supported length is 100 characters.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -62,7 +62,7 @@ public class IndustryDataConnector extends Entity implements Parsable {
     }
     /**
      * Gets the sourceSystem property value. The sourceSystem property
-     * @return a sourceSystemDefinition
+     * @return a SourceSystemDefinition
      */
     @jakarta.annotation.Nullable
     public SourceSystemDefinition getSourceSystem() {

@@ -57,7 +57,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
     }
     /**
      * All errors associated with this synchronization profile.
-     * @return a CompletableFuture of educationSynchronizationError
+     * @return a CompletableFuture of EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationError> get() {
@@ -66,7 +66,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
     /**
      * All errors associated with this synchronization profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationError
+     * @return a CompletableFuture of EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationError> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property errors in education
      * @param body The request body
-     * @return a CompletableFuture of educationSynchronizationError
+     * @return a CompletableFuture of EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationError> patch(@jakarta.annotation.Nonnull final EducationSynchronizationError body) {
@@ -89,7 +89,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
      * Update the navigation property errors in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationError
+     * @return a CompletableFuture of EducationSynchronizationError
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationError> patch(@jakarta.annotation.Nonnull final EducationSynchronizationError body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

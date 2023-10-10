@@ -59,8 +59,8 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/anniversaries{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
-     * @return a CompletableFuture of personAnnualEventCollectionResponse
+     * Retrieve a list of personAnniversary objects for the given user from their profile. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PersonAnnualEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Retrieve a list of personAnniversary objects for the given user from their profile. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personAnnualEventCollectionResponse
+     * @return a CompletableFuture of PersonAnnualEventCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/profile-list-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -82,9 +82,9 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PersonAnnualEventCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Use this API to create a new personAnniversary object in a user's profile. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of personAnnualEvent
+     * @return a CompletableFuture of PersonAnnualEvent
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Use this API to create a new personAnniversary object in a user's profile. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of personAnnualEvent
+     * @return a CompletableFuture of PersonAnnualEvent
      * @see <a href="https://learn.microsoft.com/graph/api/profile-post-anniversaries?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, PersonAnnualEvent::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Retrieve a list of personAnniversary objects for the given user from their profile. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Retrieve a list of personAnniversary objects for the given user from their profile. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Use this API to create a new personAnniversary object in a user's profile. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new personAnniversary object in a user's profile.
+     * Use this API to create a new personAnniversary object in a user's profile. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a anniversariesRequestBuilder
+     * @return a AnniversariesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AnniversariesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class AnniversariesRequestBuilder extends BaseRequestBuilder {
         return new AnniversariesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of personAnniversary objects for the given user from their profile.
+     * Retrieve a list of personAnniversary objects for the given user from their profile. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

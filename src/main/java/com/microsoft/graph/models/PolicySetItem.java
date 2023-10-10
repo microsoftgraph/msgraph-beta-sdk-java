@@ -45,7 +45,7 @@ public class PolicySetItem extends Entity implements Parsable {
      */
     private PolicySetStatus status;
     /**
-     * Instantiates a new policySetItem and sets the default values.
+     * Instantiates a new PolicySetItem and sets the default values.
      */
     public PolicySetItem() {
         super();
@@ -53,7 +53,7 @@ public class PolicySetItem extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policySetItem
+     * @return a PolicySetItem
      */
     @jakarta.annotation.Nonnull
     public static PolicySetItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. DisplayName of the PolicySetItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -97,7 +97,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The errorCode property
-     * @return a errorCode
+     * @return a ErrorCode
      */
     @jakarta.annotation.Nullable
     public ErrorCode getErrorCode() {
@@ -122,7 +122,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
@@ -130,7 +130,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the itemType property value. policySetType of the PolicySetItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemType() {
@@ -146,7 +146,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the payloadId property value. PayloadId of the PolicySetItem.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
@@ -154,7 +154,7 @@ public class PolicySetItem extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The enum to specify the status of PolicySet.
-     * @return a policySetStatus
+     * @return a PolicySetStatus
      */
     @jakarta.annotation.Nullable
     public PolicySetStatus getStatus() {

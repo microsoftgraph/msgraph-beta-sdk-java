@@ -61,7 +61,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      */
     private String subjectNameFormatString;
     /**
-     * Instantiates a new macOSScepCertificateProfile and sets the default values.
+     * Instantiates a new MacOSScepCertificateProfile and sets the default values.
      */
     public MacOSScepCertificateProfile() {
         super();
@@ -70,7 +70,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSScepCertificateProfile
+     * @return a MacOSScepCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static MacOSScepCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,7 +79,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the allowAllAppsAccess property value. AllowAllAppsAccess setting
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAllAppsAccess() {
@@ -87,7 +87,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -95,7 +95,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
@@ -103,7 +103,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a java.util.List<ExtendedKeyUsage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
@@ -132,7 +132,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
-     * @return a hashAlgorithms
+     * @return a EnumSet<HashAlgorithms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
@@ -140,7 +140,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
@@ -148,7 +148,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
@@ -156,7 +156,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -164,7 +164,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
-     * @return a macOSTrustedRootCertificate
+     * @return a MacOSTrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public MacOSTrustedRootCertificate getRootCertificate() {
@@ -172,7 +172,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
@@ -180,7 +180,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -188,7 +188,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

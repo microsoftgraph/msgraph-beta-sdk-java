@@ -118,7 +118,7 @@ public class SalesInvoiceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesInvoices from financials
-     * @return a CompletableFuture of salesInvoice
+     * @return a CompletableFuture of SalesInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesInvoice> get() {
@@ -127,7 +127,7 @@ public class SalesInvoiceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesInvoices from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesInvoice
+     * @return a CompletableFuture of SalesInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesInvoice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -140,7 +140,7 @@ public class SalesInvoiceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesInvoices in financials
      * @param body The request body
-     * @return a CompletableFuture of salesInvoice
+     * @return a CompletableFuture of SalesInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesInvoice> patch(@jakarta.annotation.Nonnull final SalesInvoice body) {
@@ -150,7 +150,7 @@ public class SalesInvoiceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesInvoices in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesInvoice
+     * @return a CompletableFuture of SalesInvoice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesInvoice> patch(@jakarta.annotation.Nonnull final SalesInvoice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -17,7 +17,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
      */
     private String homeTenantName;
     /**
-     * Instantiates a new auditUserIdentity and sets the default values.
+     * Instantiates a new AuditUserIdentity and sets the default values.
      */
     public AuditUserIdentity() {
         super();
@@ -26,7 +26,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditUserIdentity
+     * @return a AuditUserIdentity
      */
     @jakarta.annotation.Nonnull
     public static AuditUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     }
     /**
      * Gets the homeTenantId property value. For user sign ins, the identifier of the tenant that the user is a member of.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHomeTenantId() {
@@ -54,7 +54,7 @@ public class AuditUserIdentity extends UserIdentity implements Parsable {
     }
     /**
      * Gets the homeTenantName property value. For user sign ins, the name of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHomeTenantName() {

@@ -65,7 +65,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder ex
     }
     /**
      * Windows information protection device registrations that are not MDM enrolled.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistration
+     * @return a CompletableFuture of WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistration> get() {
@@ -74,7 +74,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder ex
     /**
      * Windows information protection device registrations that are not MDM enrolled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistration
+     * @return a CompletableFuture of WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder ex
     /**
      * Update the navigation property windowsInformationProtectionDeviceRegistrations in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistration
+     * @return a CompletableFuture of WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistration> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionDeviceRegistration body) {
@@ -97,7 +97,7 @@ public class WindowsInformationProtectionDeviceRegistrationItemRequestBuilder ex
      * Update the navigation property windowsInformationProtectionDeviceRegistrations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistration
+     * @return a CompletableFuture of WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistration> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionDeviceRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -60,7 +60,7 @@ public class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequ
     }
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
-     * @return a CompletableFuture of windowsInformationProtectionPolicyCollectionResponse
+     * @return a CompletableFuture of WindowsInformationProtectionPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequ
     /**
      * Windows information protection for apps running on devices which are not MDM enrolled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionPolicyCollectionResponse
+     * @return a CompletableFuture of WindowsInformationProtectionPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @return a CompletableFuture of WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body) {
@@ -92,7 +92,7 @@ public class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequ
      * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionPolicy
+     * @return a CompletableFuture of WindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionPolicy> post(@jakarta.annotation.Nonnull final WindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequ
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsInformationProtectionPoliciesRequestBuilder
+     * @return a WindowsInformationProtectionPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

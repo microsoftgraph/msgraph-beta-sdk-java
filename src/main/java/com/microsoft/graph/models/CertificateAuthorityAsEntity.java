@@ -11,7 +11,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     /**
      * The trusted certificate.
      */
-    private byte[] certificate;
+    private Base64url certificate;
     /**
      * Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
      */
@@ -25,7 +25,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
      */
     private String issuerSubjectKeyIdentifier;
     /**
-     * Instantiates a new certificateAuthorityAsEntity and sets the default values.
+     * Instantiates a new CertificateAuthorityAsEntity and sets the default values.
      */
     public CertificateAuthorityAsEntity() {
         super();
@@ -33,7 +33,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateAuthorityAsEntity
+     * @return a CertificateAuthorityAsEntity
      */
     @jakarta.annotation.Nonnull
     public static CertificateAuthorityAsEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,10 +42,10 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     }
     /**
      * Gets the certificate property value. The trusted certificate.
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getCertificate() {
+    public Base64url getCertificate() {
         return this.certificate;
     }
     /**
@@ -55,7 +55,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("certificate", (n) -> { this.setCertificate(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         deserializerMap.put("isRootAuthority", (n) -> { this.setIsRootAuthority(n.getBooleanValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
         deserializerMap.put("issuerSubjectKeyIdentifier", (n) -> { this.setIssuerSubjectKeyIdentifier(n.getStringValue()); });
@@ -63,7 +63,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     }
     /**
      * Gets the isRootAuthority property value. Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRootAuthority() {
@@ -71,7 +71,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     }
     /**
      * Gets the issuer property value. The issuer of the trusted certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuer() {
@@ -79,7 +79,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     }
     /**
      * Gets the issuerSubjectKeyIdentifier property value. The subject key identifier of the trusted certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssuerSubjectKeyIdentifier() {
@@ -92,7 +92,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeByteArrayValue("certificate", this.getCertificate());
+        writer.writeObjectValue("certificate", this.getCertificate());
         writer.writeBooleanValue("isRootAuthority", this.getIsRootAuthority());
         writer.writeStringValue("issuer", this.getIssuer());
         writer.writeStringValue("issuerSubjectKeyIdentifier", this.getIssuerSubjectKeyIdentifier());
@@ -101,7 +101,7 @@ public class CertificateAuthorityAsEntity extends Entity implements Parsable {
      * Sets the certificate property value. The trusted certificate.
      * @param value Value to set for the certificate property.
      */
-    public void setCertificate(@jakarta.annotation.Nullable final byte[] value) {
+    public void setCertificate(@jakarta.annotation.Nullable final Base64url value) {
         this.certificate = value;
     }
     /**

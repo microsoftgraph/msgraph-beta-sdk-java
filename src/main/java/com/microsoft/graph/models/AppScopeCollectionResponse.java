@@ -13,7 +13,7 @@ public class AppScopeCollectionResponse extends BaseCollectionPaginationCountRes
      */
     private java.util.List<AppScope> value;
     /**
-     * Instantiates a new appScopeCollectionResponse and sets the default values.
+     * Instantiates a new AppScopeCollectionResponse and sets the default values.
      */
     public AppScopeCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AppScopeCollectionResponse extends BaseCollectionPaginationCountRes
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appScopeCollectionResponse
+     * @return a AppScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AppScopeCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AppScopeCollectionResponse extends BaseCollectionPaginationCountRes
     }
     /**
      * Gets the value property value. The value property
-     * @return a appScope
+     * @return a java.util.List<AppScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppScope> getValue() {

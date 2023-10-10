@@ -34,7 +34,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      */
     private String publishingTeamName;
     /**
-     * Instantiates a new plannerTeamsPublicationInfo and sets the default values.
+     * Instantiates a new PlannerTeamsPublicationInfo and sets the default values.
      */
     public PlannerTeamsPublicationInfo() {
         super();
@@ -43,7 +43,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTeamsPublicationInfo
+     * @return a PlannerTeamsPublicationInfo
      */
     @jakarta.annotation.Nonnull
     public static PlannerTeamsPublicationInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -83,7 +83,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publicationId property value. The identifier of the publication. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublicationId() {
@@ -91,7 +91,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublishedToPlanId() {
@@ -99,7 +99,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publishingTeamId property value. The identifier of the team that initiated the publication process. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublishingTeamId() {
@@ -107,7 +107,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     }
     /**
      * Gets the publishingTeamName property value. The display name of the team that initiated the publication process. This display name is for reference only, and might not represent the most up-to-date name of the team. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublishingTeamName() {

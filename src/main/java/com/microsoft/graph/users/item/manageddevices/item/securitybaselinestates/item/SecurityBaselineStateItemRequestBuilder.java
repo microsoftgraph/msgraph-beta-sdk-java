@@ -65,7 +65,7 @@ public class SecurityBaselineStateItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Security baseline states for this device.
-     * @return a CompletableFuture of securityBaselineState
+     * @return a CompletableFuture of SecurityBaselineState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineState> get() {
@@ -74,7 +74,7 @@ public class SecurityBaselineStateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Security baseline states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityBaselineState
+     * @return a CompletableFuture of SecurityBaselineState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SecurityBaselineStateItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property securityBaselineStates in users
      * @param body The request body
-     * @return a CompletableFuture of securityBaselineState
+     * @return a CompletableFuture of SecurityBaselineState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineState> patch(@jakarta.annotation.Nonnull final SecurityBaselineState body) {
@@ -97,7 +97,7 @@ public class SecurityBaselineStateItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property securityBaselineStates in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of securityBaselineState
+     * @return a CompletableFuture of SecurityBaselineState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SecurityBaselineState> patch(@jakarta.annotation.Nonnull final SecurityBaselineState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

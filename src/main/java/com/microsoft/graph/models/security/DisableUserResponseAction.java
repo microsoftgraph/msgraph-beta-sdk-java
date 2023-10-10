@@ -14,7 +14,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
      */
     private EnumSet<DisableUserEntityIdentifier> identifier;
     /**
-     * Instantiates a new disableUserResponseAction and sets the default values.
+     * Instantiates a new DisableUserResponseAction and sets the default values.
      */
     public DisableUserResponseAction() {
         super();
@@ -23,7 +23,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a disableUserResponseAction
+     * @return a DisableUserResponseAction
      */
     @jakarta.annotation.Nonnull
     public static DisableUserResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class DisableUserResponseAction extends ResponseAction implements Parsabl
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a disableUserEntityIdentifier
+     * @return a EnumSet<DisableUserEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DisableUserEntityIdentifier> getIdentifier() {

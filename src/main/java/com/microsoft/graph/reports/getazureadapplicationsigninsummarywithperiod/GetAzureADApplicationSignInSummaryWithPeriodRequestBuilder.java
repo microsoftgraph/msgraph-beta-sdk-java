@@ -39,24 +39,24 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
     }
     /**
      * Invoke function getAzureADApplicationSignInSummary
-     * @return a CompletableFuture of getAzureADApplicationSignInSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetAzureADApplicationSignInSummaryWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAzureADApplicationSignInSummaryWithPeriodResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetAzureADApplicationSignInSummaryWithPeriodGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getAzureADApplicationSignInSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAzureADApplicationSignInSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetAzureADApplicationSignInSummaryWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAzureADApplicationSignInSummaryWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetAzureADApplicationSignInSummaryWithPeriodGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetAzureADApplicationSignInSummaryWithPeriodResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetAzureADApplicationSignInSummaryWithPeriodGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getAzureADApplicationSignInSummary
@@ -90,7 +90,7 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAzureADApplicationSignInSummaryWithPeriodRequestBuilder
+     * @return a GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

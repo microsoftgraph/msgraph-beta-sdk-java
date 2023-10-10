@@ -137,7 +137,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Sessions of the virtual event.
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> get() {
@@ -146,7 +146,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Sessions of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sessions in solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> patch(@jakarta.annotation.Nonnull final VirtualEventSession body) {
@@ -169,7 +169,7 @@ public class VirtualEventSessionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sessions in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventSession
+     * @return a CompletableFuture of VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventSession> patch(@jakarta.annotation.Nonnull final VirtualEventSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -21,7 +21,7 @@ public class UsageRight extends Entity implements Parsable {
      */
     private UsageRightState state;
     /**
-     * Instantiates a new usageRight and sets the default values.
+     * Instantiates a new UsageRight and sets the default values.
      */
     public UsageRight() {
         super();
@@ -29,7 +29,7 @@ public class UsageRight extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a usageRight
+     * @return a UsageRight
      */
     @jakarta.annotation.Nonnull
     public static UsageRight createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class UsageRight extends Entity implements Parsable {
     }
     /**
      * Gets the catalogId property value. Product id corresponding to the usage right.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
@@ -58,7 +58,7 @@ public class UsageRight extends Entity implements Parsable {
     }
     /**
      * Gets the serviceIdentifier property value. Identifier of the service corresponding to the usage right.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceIdentifier() {
@@ -66,7 +66,7 @@ public class UsageRight extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a usageRightState
+     * @return a UsageRightState
      */
     @jakarta.annotation.Nullable
     public UsageRightState getState() {

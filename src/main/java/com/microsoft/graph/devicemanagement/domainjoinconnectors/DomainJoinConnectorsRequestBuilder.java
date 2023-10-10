@@ -60,7 +60,7 @@ public class DomainJoinConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A list of connector objects.
-     * @return a CompletableFuture of deviceManagementDomainJoinConnectorCollectionResponse
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnectorCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DomainJoinConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * A list of connector objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDomainJoinConnectorCollectionResponse
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnectorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DomainJoinConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to domainJoinConnectors for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementDomainJoinConnector
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnector> post(@jakarta.annotation.Nonnull final DeviceManagementDomainJoinConnector body) {
@@ -92,7 +92,7 @@ public class DomainJoinConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to domainJoinConnectors for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDomainJoinConnector
+     * @return a CompletableFuture of DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDomainJoinConnector> post(@jakarta.annotation.Nonnull final DeviceManagementDomainJoinConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DomainJoinConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a domainJoinConnectorsRequestBuilder
+     * @return a DomainJoinConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DomainJoinConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

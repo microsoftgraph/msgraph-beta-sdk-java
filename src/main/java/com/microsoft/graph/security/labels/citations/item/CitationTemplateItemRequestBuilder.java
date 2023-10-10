@@ -37,7 +37,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/citations/{citationTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a citationTemplate object.
+     * Delete a citationTemplate object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a citationTemplate object.
+     * Delete a citationTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-citations?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a citationTemplate object.
-     * @return a CompletableFuture of citationTemplate
+     * Read the properties and relationships of a citationTemplate object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CitationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a citationTemplate object.
+     * Read the properties and relationships of a citationTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-citationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property citations in security
      * @param body The request body
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> patch(@jakarta.annotation.Nonnull final CitationTemplate body) {
@@ -93,7 +93,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property citations in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of citationTemplate
+     * @return a CompletableFuture of CitationTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CitationTemplate> patch(@jakarta.annotation.Nonnull final CitationTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CitationTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a citationTemplate object.
+     * Delete a citationTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a citationTemplate object.
+     * Delete a citationTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a citationTemplate object.
+     * Read the properties and relationships of a citationTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a citationTemplate object.
+     * Read the properties and relationships of a citationTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class CitationTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a citationTemplate object.
+     * Read the properties and relationships of a citationTemplate object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -59,7 +59,7 @@ public class SalesCreditMemoLinesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesCreditMemoLines from financials
-     * @return a CompletableFuture of salesCreditMemoLineCollectionResponse
+     * @return a CompletableFuture of SalesCreditMemoLineCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLineCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class SalesCreditMemoLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesCreditMemoLines from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesCreditMemoLineCollectionResponse
+     * @return a CompletableFuture of SalesCreditMemoLineCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemoLineCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class SalesCreditMemoLinesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a salesCreditMemoLinesRequestBuilder
+     * @return a SalesCreditMemoLinesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SalesCreditMemoLinesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

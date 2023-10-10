@@ -38,7 +38,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hosts related with this sslCertificate.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get() {
@@ -47,7 +47,7 @@ public class HostItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The hosts related with this sslCertificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

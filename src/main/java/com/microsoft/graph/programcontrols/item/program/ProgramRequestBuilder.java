@@ -65,7 +65,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The program this control is part of.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> get() {
@@ -74,7 +74,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
     /**
      * The program this control is part of.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property program in programControls
      * @param body The request body
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> patch(@jakarta.annotation.Nonnull final Program body) {
@@ -97,7 +97,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property program in programControls
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of program
+     * @return a CompletableFuture of Program
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Program> patch(@jakarta.annotation.Nonnull final Program body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a programRequestBuilder
+     * @return a ProgramRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProgramRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

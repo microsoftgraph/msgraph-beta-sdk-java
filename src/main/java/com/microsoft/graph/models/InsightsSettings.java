@@ -17,7 +17,7 @@ public class InsightsSettings extends Entity implements Parsable {
      */
     private Boolean isEnabledInOrganization;
     /**
-     * Instantiates a new insightsSettings and sets the default values.
+     * Instantiates a new InsightsSettings and sets the default values.
      */
     public InsightsSettings() {
         super();
@@ -25,7 +25,7 @@ public class InsightsSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a insightsSettings
+     * @return a InsightsSettings
      */
     @jakarta.annotation.Nonnull
     public static InsightsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class InsightsSettings extends Entity implements Parsable {
     }
     /**
      * Gets the disabledForGroup property value. The ID of an Azure Active Directory group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisabledForGroup() {
@@ -53,7 +53,7 @@ public class InsightsSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabledInOrganization property value. true if the specified type of insights are enabled for the organization; false if the specified type of insights are disabled for all users without exceptions. Default is true. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledInOrganization() {

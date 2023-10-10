@@ -39,24 +39,24 @@ public class GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder exten
     }
     /**
      * Invoke function getOffice365GroupsActivityGroupCounts
-     * @return a CompletableFuture of getOffice365GroupsActivityGroupCountsWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityGroupCountsWithPeriodResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getOffice365GroupsActivityGroupCounts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getOffice365GroupsActivityGroupCountsWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityGroupCountsWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityGroupCountsWithPeriodResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetOffice365GroupsActivityGroupCountsWithPeriodGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getOffice365GroupsActivityGroupCounts
@@ -90,7 +90,7 @@ public class GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder exten
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

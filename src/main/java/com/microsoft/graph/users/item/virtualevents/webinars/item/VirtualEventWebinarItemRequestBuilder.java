@@ -38,7 +38,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get webinars from users
-     * @return a CompletableFuture of virtualEventWebinar
+     * @return a CompletableFuture of VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinar> get() {
@@ -47,7 +47,7 @@ public class VirtualEventWebinarItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get webinars from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventWebinar
+     * @return a CompletableFuture of VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinar> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

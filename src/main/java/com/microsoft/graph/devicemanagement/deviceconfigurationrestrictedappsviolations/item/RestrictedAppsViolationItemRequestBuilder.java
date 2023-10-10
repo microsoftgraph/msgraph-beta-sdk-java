@@ -57,7 +57,7 @@ public class RestrictedAppsViolationItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Restricted apps violations for this account.
-     * @return a CompletableFuture of restrictedAppsViolation
+     * @return a CompletableFuture of RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolation> get() {
@@ -66,7 +66,7 @@ public class RestrictedAppsViolationItemRequestBuilder extends BaseRequestBuilde
     /**
      * Restricted apps violations for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of restrictedAppsViolation
+     * @return a CompletableFuture of RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RestrictedAppsViolationItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property deviceConfigurationRestrictedAppsViolations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of restrictedAppsViolation
+     * @return a CompletableFuture of RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolation> patch(@jakarta.annotation.Nonnull final RestrictedAppsViolation body) {
@@ -89,7 +89,7 @@ public class RestrictedAppsViolationItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property deviceConfigurationRestrictedAppsViolations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of restrictedAppsViolation
+     * @return a CompletableFuture of RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RestrictedAppsViolation> patch(@jakarta.annotation.Nonnull final RestrictedAppsViolation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

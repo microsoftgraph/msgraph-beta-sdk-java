@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder extends BaseRe
     }
     /**
      * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> get() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder extends BaseRe
     /**
      * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property userExperienceAnalyticsDeviceScopes in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body) {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsDeviceScopeItemRequestBuilder extends BaseRe
      * Update the navigation property userExperienceAnalyticsDeviceScopes in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

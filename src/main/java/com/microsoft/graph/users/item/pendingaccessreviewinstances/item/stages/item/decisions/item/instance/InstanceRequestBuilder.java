@@ -137,7 +137,7 @@ public class InstanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstance> get() {
@@ -146,7 +146,7 @@ public class InstanceRequestBuilder extends BaseRequestBuilder {
     /**
      * There is exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class InstanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property instance in users
      * @param body The request body
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstance> patch(@jakarta.annotation.Nonnull final AccessReviewInstance body) {
@@ -169,7 +169,7 @@ public class InstanceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property instance in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstance
+     * @return a CompletableFuture of AccessReviewInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstance> patch(@jakarta.annotation.Nonnull final AccessReviewInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -271,7 +271,7 @@ public class InstanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a instanceRequestBuilder
+     * @return a InstanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InstanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

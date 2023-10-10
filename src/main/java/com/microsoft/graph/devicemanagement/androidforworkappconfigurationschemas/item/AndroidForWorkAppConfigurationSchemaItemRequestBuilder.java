@@ -57,7 +57,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder extends Base
     }
     /**
      * Android for Work app configuration schema entities.
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchema
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchema> get() {
@@ -66,7 +66,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder extends Base
     /**
      * Android for Work app configuration schema entities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchema
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchema> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder extends Base
     /**
      * Update the navigation property androidForWorkAppConfigurationSchemas in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchema
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchema> patch(@jakarta.annotation.Nonnull final AndroidForWorkAppConfigurationSchema body) {
@@ -89,7 +89,7 @@ public class AndroidForWorkAppConfigurationSchemaItemRequestBuilder extends Base
      * Update the navigation property androidForWorkAppConfigurationSchemas in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkAppConfigurationSchema
+     * @return a CompletableFuture of AndroidForWorkAppConfigurationSchema
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkAppConfigurationSchema> patch(@jakarta.annotation.Nonnull final AndroidForWorkAppConfigurationSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

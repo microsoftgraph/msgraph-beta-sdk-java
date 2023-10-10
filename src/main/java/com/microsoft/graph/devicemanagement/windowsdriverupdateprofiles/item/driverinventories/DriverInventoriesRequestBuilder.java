@@ -60,7 +60,7 @@ public class DriverInventoriesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Driver inventories for this profile.
-     * @return a CompletableFuture of windowsDriverUpdateInventoryCollectionResponse
+     * @return a CompletableFuture of WindowsDriverUpdateInventoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DriverInventoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Driver inventories for this profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateInventoryCollectionResponse
+     * @return a CompletableFuture of WindowsDriverUpdateInventoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DriverInventoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to driverInventories for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsDriverUpdateInventory
+     * @return a CompletableFuture of WindowsDriverUpdateInventory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventory> post(@jakarta.annotation.Nonnull final WindowsDriverUpdateInventory body) {
@@ -92,7 +92,7 @@ public class DriverInventoriesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to driverInventories for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateInventory
+     * @return a CompletableFuture of WindowsDriverUpdateInventory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventory> post(@jakarta.annotation.Nonnull final WindowsDriverUpdateInventory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DriverInventoriesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a driverInventoriesRequestBuilder
+     * @return a DriverInventoriesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DriverInventoriesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

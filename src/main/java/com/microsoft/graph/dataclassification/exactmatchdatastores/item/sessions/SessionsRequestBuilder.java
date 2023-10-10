@@ -60,7 +60,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sessions from dataClassification
-     * @return a CompletableFuture of exactMatchSessionCollectionResponse
+     * @return a CompletableFuture of ExactMatchSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSessionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sessions from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchSessionCollectionResponse
+     * @return a CompletableFuture of ExactMatchSessionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSessionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sessions for dataClassification
      * @param body The request body
-     * @return a CompletableFuture of exactMatchSession
+     * @return a CompletableFuture of ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSession> post(@jakarta.annotation.Nonnull final ExactMatchSession body) {
@@ -92,7 +92,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sessions for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchSession
+     * @return a CompletableFuture of ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchSession> post(@jakarta.annotation.Nonnull final ExactMatchSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sessionsRequestBuilder
+     * @return a SessionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

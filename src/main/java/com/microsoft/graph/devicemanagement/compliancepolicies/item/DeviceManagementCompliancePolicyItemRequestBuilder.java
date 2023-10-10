@@ -97,7 +97,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
     }
     /**
      * List of all compliance policies
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> get() {
@@ -106,7 +106,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
     /**
      * List of all compliance policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property compliancePolicies in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> patch(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body) {
@@ -129,7 +129,7 @@ public class DeviceManagementCompliancePolicyItemRequestBuilder extends BaseRequ
      * Update the navigation property compliancePolicies in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> patch(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -38,24 +38,24 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
     }
     /**
      * Invoke function getExpiringVppTokenCount
-     * @return a CompletableFuture of getExpiringVppTokenCountWithExpiringBeforeDateTimeResponse
+     * @return a CompletableFuture of GetExpiringVppTokenCountWithExpiringBeforeDateTimeGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getExpiringVppTokenCount
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getExpiringVppTokenCountWithExpiringBeforeDateTimeResponse
+     * @return a CompletableFuture of GetExpiringVppTokenCountWithExpiringBeforeDateTimeGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetExpiringVppTokenCountWithExpiringBeforeDateTimeGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetExpiringVppTokenCountWithExpiringBeforeDateTimeGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getExpiringVppTokenCount
@@ -88,7 +88,7 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder
+     * @return a GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

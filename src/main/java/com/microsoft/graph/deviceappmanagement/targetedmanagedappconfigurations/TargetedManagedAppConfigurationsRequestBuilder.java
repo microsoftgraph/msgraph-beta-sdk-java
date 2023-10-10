@@ -68,7 +68,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
     }
     /**
      * Targeted managed app configurations.
-     * @return a CompletableFuture of targetedManagedAppConfigurationCollectionResponse
+     * @return a CompletableFuture of TargetedManagedAppConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfigurationCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
     /**
      * Targeted managed app configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppConfigurationCollectionResponse
+     * @return a CompletableFuture of TargetedManagedAppConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> post(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body) {
@@ -100,7 +100,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
      * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> post(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class TargetedManagedAppConfigurationsRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a targetedManagedAppConfigurationsRequestBuilder
+     * @return a TargetedManagedAppConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TargetedManagedAppConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

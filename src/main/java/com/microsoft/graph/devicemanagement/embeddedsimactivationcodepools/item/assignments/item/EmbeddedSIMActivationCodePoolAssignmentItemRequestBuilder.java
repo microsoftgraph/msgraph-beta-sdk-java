@@ -57,7 +57,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder extends B
     }
     /**
      * Navigational property to a list of targets to which this pool is assigned.
-     * @return a CompletableFuture of embeddedSIMActivationCodePoolAssignment
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePoolAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePoolAssignment> get() {
@@ -66,7 +66,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder extends B
     /**
      * Navigational property to a list of targets to which this pool is assigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of embeddedSIMActivationCodePoolAssignment
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePoolAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePoolAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder extends B
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of embeddedSIMActivationCodePoolAssignment
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePoolAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePoolAssignment> patch(@jakarta.annotation.Nonnull final EmbeddedSIMActivationCodePoolAssignment body) {
@@ -89,7 +89,7 @@ public class EmbeddedSIMActivationCodePoolAssignmentItemRequestBuilder extends B
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of embeddedSIMActivationCodePoolAssignment
+     * @return a CompletableFuture of EmbeddedSIMActivationCodePoolAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EmbeddedSIMActivationCodePoolAssignment> patch(@jakarta.annotation.Nonnull final EmbeddedSIMActivationCodePoolAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

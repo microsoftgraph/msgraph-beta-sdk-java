@@ -60,7 +60,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Data sources that represent Exchange mailboxes.
-     * @return a CompletableFuture of userSourceCollectionResponse
+     * @return a CompletableFuture of UserSourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSourceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSourceCollectionResponse
+     * @return a CompletableFuture of UserSourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,9 +80,9 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UserSourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new userSource object.
+     * Create a new userSource object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,10 +90,10 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new userSource object.
+     * Create a new userSource object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-post-usersources?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new userSource object.
+     * Create a new userSource object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -144,7 +144,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new userSource object.
+     * Create a new userSource object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -169,7 +169,7 @@ public class UserSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userSourcesRequestBuilder
+     * @return a UserSourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserSourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

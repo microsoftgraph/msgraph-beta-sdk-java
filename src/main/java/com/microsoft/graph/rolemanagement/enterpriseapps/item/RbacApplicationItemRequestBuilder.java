@@ -161,7 +161,7 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get enterpriseApps from roleManagement
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get() {
@@ -170,7 +170,7 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get enterpriseApps from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -183,7 +183,7 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property enterpriseApps in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body) {
@@ -193,7 +193,7 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property enterpriseApps in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplication
+     * @return a CompletableFuture of RbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplication> patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

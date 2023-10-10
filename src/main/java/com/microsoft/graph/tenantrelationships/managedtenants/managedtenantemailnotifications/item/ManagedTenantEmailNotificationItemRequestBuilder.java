@@ -65,7 +65,7 @@ public class ManagedTenantEmailNotificationItemRequestBuilder extends BaseReques
     }
     /**
      * Get managedTenantEmailNotifications from tenantRelationships
-     * @return a CompletableFuture of managedTenantEmailNotification
+     * @return a CompletableFuture of ManagedTenantEmailNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantEmailNotification> get() {
@@ -74,7 +74,7 @@ public class ManagedTenantEmailNotificationItemRequestBuilder extends BaseReques
     /**
      * Get managedTenantEmailNotifications from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantEmailNotification
+     * @return a CompletableFuture of ManagedTenantEmailNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantEmailNotification> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ManagedTenantEmailNotificationItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property managedTenantEmailNotifications in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantEmailNotification
+     * @return a CompletableFuture of ManagedTenantEmailNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantEmailNotification> patch(@jakarta.annotation.Nonnull final ManagedTenantEmailNotification body) {
@@ -97,7 +97,7 @@ public class ManagedTenantEmailNotificationItemRequestBuilder extends BaseReques
      * Update the navigation property managedTenantEmailNotifications in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantEmailNotification
+     * @return a CompletableFuture of ManagedTenantEmailNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantEmailNotification> patch(@jakarta.annotation.Nonnull final ManagedTenantEmailNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

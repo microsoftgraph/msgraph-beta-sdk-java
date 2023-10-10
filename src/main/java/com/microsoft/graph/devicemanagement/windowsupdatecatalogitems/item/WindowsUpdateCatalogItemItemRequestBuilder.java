@@ -57,7 +57,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * A collection of windows update catalog items (fetaure updates item , quality updates item)
-     * @return a CompletableFuture of windowsUpdateCatalogItem
+     * @return a CompletableFuture of WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItem> get() {
@@ -66,7 +66,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder extends BaseRequestBuild
     /**
      * A collection of windows update catalog items (fetaure updates item , quality updates item)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsUpdateCatalogItem
+     * @return a CompletableFuture of WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property windowsUpdateCatalogItems in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsUpdateCatalogItem
+     * @return a CompletableFuture of WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItem> patch(@jakarta.annotation.Nonnull final WindowsUpdateCatalogItem body) {
@@ -89,7 +89,7 @@ public class WindowsUpdateCatalogItemItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property windowsUpdateCatalogItems in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsUpdateCatalogItem
+     * @return a CompletableFuture of WindowsUpdateCatalogItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsUpdateCatalogItem> patch(@jakarta.annotation.Nonnull final WindowsUpdateCatalogItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

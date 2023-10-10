@@ -97,7 +97,7 @@ public class GovernanceResourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A collection of resources for the provider.
-     * @return a CompletableFuture of governanceResource
+     * @return a CompletableFuture of GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResource> get() {
@@ -106,7 +106,7 @@ public class GovernanceResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of resources for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceResource
+     * @return a CompletableFuture of GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class GovernanceResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property resources in privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceResource
+     * @return a CompletableFuture of GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResource> patch(@jakarta.annotation.Nonnull final GovernanceResource body) {
@@ -129,7 +129,7 @@ public class GovernanceResourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property resources in privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceResource
+     * @return a CompletableFuture of GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResource> patch(@jakarta.annotation.Nonnull final GovernanceResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

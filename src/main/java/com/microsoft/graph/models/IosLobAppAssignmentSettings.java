@@ -28,7 +28,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     private String vpnConfigurationId;
     /**
-     * Instantiates a new iosLobAppAssignmentSettings and sets the default values.
+     * Instantiates a new IosLobAppAssignmentSettings and sets the default values.
      */
     public IosLobAppAssignmentSettings() {
         super();
@@ -37,7 +37,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosLobAppAssignmentSettings
+     * @return a IosLobAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static IosLobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the isRemovable property value. When TRUE, indicates that the app can be uninstalled by the user. When FALSE, indicates that the app cannot be uninstalled by the user. By default, this property is set to null which internally is treated as TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemovable() {
@@ -67,7 +67,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the preventManagedAppBackup property value. When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreventManagedAppBackup() {
@@ -75,7 +75,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
@@ -83,7 +83,7 @@ public class IosLobAppAssignmentSettings extends MobileAppAssignmentSettings imp
     }
     /**
      * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVpnConfigurationId() {

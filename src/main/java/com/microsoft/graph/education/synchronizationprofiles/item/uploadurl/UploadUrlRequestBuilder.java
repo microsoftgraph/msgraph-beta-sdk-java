@@ -36,24 +36,24 @@ public class UploadUrlRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function uploadUrl
-     * @return a CompletableFuture of uploadUrlResponse
+     * @return a CompletableFuture of UploadUrlGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UploadUrlResponse> get() {
+    public java.util.concurrent.CompletableFuture<UploadUrlGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function uploadUrl
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of uploadUrlResponse
+     * @return a CompletableFuture of UploadUrlGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UploadUrlResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UploadUrlGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UploadUrlResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, UploadUrlGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function uploadUrl
@@ -86,7 +86,7 @@ public class UploadUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a uploadUrlRequestBuilder
+     * @return a UploadUrlRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UploadUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -73,7 +73,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of previous versions of the list item.
-     * @return a CompletableFuture of listItemVersion
+     * @return a CompletableFuture of ListItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemVersion> get() {
@@ -82,7 +82,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of previous versions of the list item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listItemVersion
+     * @return a CompletableFuture of ListItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemVersion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property versions in sites
      * @param body The request body
-     * @return a CompletableFuture of listItemVersion
+     * @return a CompletableFuture of ListItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemVersion> patch(@jakarta.annotation.Nonnull final ListItemVersion body) {
@@ -105,7 +105,7 @@ public class ListItemVersionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property versions in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of listItemVersion
+     * @return a CompletableFuture of ListItemVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ListItemVersion> patch(@jakarta.annotation.Nonnull final ListItemVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -37,7 +37,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new cloudPCConnectivityIssue and sets the default values.
+     * Instantiates a new CloudPCConnectivityIssue and sets the default values.
      */
     public CloudPCConnectivityIssue() {
         super();
@@ -45,7 +45,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPCConnectivityIssue
+     * @return a CloudPCConnectivityIssue
      */
     @jakarta.annotation.Nonnull
     public static CloudPCConnectivityIssue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The Intune DeviceId of the device the connection is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -62,7 +62,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The error code of the connectivity issue.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -78,7 +78,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the errorDescription property value. The detailed description of what went wrong.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
@@ -101,7 +101,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedAction() {
@@ -109,7 +109,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The unique id of user who initialize the connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

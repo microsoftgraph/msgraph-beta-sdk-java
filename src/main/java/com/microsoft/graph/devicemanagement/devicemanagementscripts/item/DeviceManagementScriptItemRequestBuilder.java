@@ -105,7 +105,7 @@ public class DeviceManagementScriptItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * The list of device management scripts associated with the tenant.
-     * @return a CompletableFuture of deviceManagementScript
+     * @return a CompletableFuture of DeviceManagementScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScript> get() {
@@ -114,7 +114,7 @@ public class DeviceManagementScriptItemRequestBuilder extends BaseRequestBuilder
     /**
      * The list of device management scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScript
+     * @return a CompletableFuture of DeviceManagementScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScript> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class DeviceManagementScriptItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property deviceManagementScripts in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementScript
+     * @return a CompletableFuture of DeviceManagementScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScript> patch(@jakarta.annotation.Nonnull final DeviceManagementScript body) {
@@ -137,7 +137,7 @@ public class DeviceManagementScriptItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property deviceManagementScripts in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementScript
+     * @return a CompletableFuture of DeviceManagementScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementScript> patch(@jakarta.annotation.Nonnull final DeviceManagementScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

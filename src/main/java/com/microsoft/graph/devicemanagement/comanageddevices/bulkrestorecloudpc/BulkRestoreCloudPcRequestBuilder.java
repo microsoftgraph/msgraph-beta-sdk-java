@@ -36,9 +36,9 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/bulkRestoreCloudPc", rawUrl);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc on 2023-05-24 and will be removed 2023-09-24
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
@@ -49,10 +49,10 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CompletableFuture of CloudPcBulkRemoteActionResult
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc on 2023-05-24 and will be removed 2023-09-24
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-1.0">Find more info here</a>
@@ -68,7 +68,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -80,7 +80,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time.
+     * Restore multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices and a restore point date and time. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -108,7 +108,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bulkRestoreCloudPcRequestBuilder
+     * @return a BulkRestoreCloudPcRequestBuilder
      * @deprecated
      * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc on 2023-05-24 and will be removed 2023-09-24
      */

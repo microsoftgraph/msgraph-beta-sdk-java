@@ -37,7 +37,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/exchange/customAppScopes/{customAppScope%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
-     * @return a CompletableFuture of customAppScope
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CustomAppScope::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,10 +91,10 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAppScope
+     * @return a CompletableFuture of CustomAppScope
      * @see <a href="https://learn.microsoft.com/graph/api/customappscope-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CustomAppScope::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Delete a customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -134,7 +134,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -142,7 +142,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -163,7 +163,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -172,7 +172,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Update an existing customAppScope object of an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -211,7 +211,7 @@ public class CustomAppScopeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported.
+     * Get the properties of a customAppScope object for an RBAC provider. Currently only the Exchange Online RBAC provider is supported. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

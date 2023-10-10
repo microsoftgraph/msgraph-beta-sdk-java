@@ -60,7 +60,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get groups from connections
-     * @return a CompletableFuture of externalGroupCollectionResponse
+     * @return a CompletableFuture of ExternalGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroupCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get groups from connections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalGroupCollectionResponse
+     * @return a CompletableFuture of ExternalGroupCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExternalGroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,9 +80,9 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ExternalGroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new externalGroup object.
+     * Create a new externalGroup object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,10 +90,10 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new externalGroup object.
+     * Create a new externalGroup object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of externalGroup
+     * @return a CompletableFuture of ExternalGroup
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalGroup object.
+     * Create a new externalGroup object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -144,7 +144,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new externalGroup object.
+     * Create a new externalGroup object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -169,7 +169,7 @@ public class GroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupsRequestBuilder
+     * @return a GroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

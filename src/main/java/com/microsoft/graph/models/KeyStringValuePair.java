@@ -16,7 +16,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new keyStringValuePair and sets the default values.
+     * Instantiates a new KeyStringValuePair and sets the default values.
      */
     public KeyStringValuePair() {
         super();
@@ -25,7 +25,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a keyStringValuePair
+     * @return a KeyStringValuePair
      */
     @jakarta.annotation.Nonnull
     public static KeyStringValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class KeyStringValuePair extends KeyTypedValuePair implements Parsable {
     }
     /**
      * Gets the value property value. The string value of the key-value pair.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

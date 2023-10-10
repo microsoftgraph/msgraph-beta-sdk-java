@@ -38,7 +38,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The hostSslCertificates that are associated with this host.
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificate> get() {
@@ -47,7 +47,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The hostSslCertificates that are associated with this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

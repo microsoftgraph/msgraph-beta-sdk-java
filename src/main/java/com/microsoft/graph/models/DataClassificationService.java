@@ -45,7 +45,7 @@ public class DataClassificationService extends Entity implements Parsable {
      */
     private java.util.List<SensitivityLabel> sensitivityLabels;
     /**
-     * Instantiates a new dataClassificationService and sets the default values.
+     * Instantiates a new DataClassificationService and sets the default values.
      */
     public DataClassificationService() {
         super();
@@ -53,7 +53,7 @@ public class DataClassificationService extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataClassificationService
+     * @return a DataClassificationService
      */
     @jakarta.annotation.Nonnull
     public static DataClassificationService createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the classifyFileJobs property value. The classifyFileJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getClassifyFileJobs() {
@@ -70,7 +70,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the classifyTextJobs property value. The classifyTextJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getClassifyTextJobs() {
@@ -78,7 +78,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the evaluateDlpPoliciesJobs property value. The evaluateDlpPoliciesJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getEvaluateDlpPoliciesJobs() {
@@ -86,7 +86,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the evaluateLabelJobs property value. The evaluateLabelJobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getEvaluateLabelJobs() {
@@ -94,7 +94,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the exactMatchDataStores property value. The exactMatchDataStores property
-     * @return a exactMatchDataStore
+     * @return a java.util.List<ExactMatchDataStore>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactMatchDataStore> getExactMatchDataStores() {
@@ -102,7 +102,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the exactMatchUploadAgents property value. The exactMatchUploadAgents property
-     * @return a exactMatchUploadAgent
+     * @return a java.util.List<ExactMatchUploadAgent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactMatchUploadAgent> getExactMatchUploadAgents() {
@@ -128,7 +128,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the jobs property value. The jobs property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getJobs() {
@@ -136,7 +136,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the sensitiveTypes property value. The sensitiveTypes property
-     * @return a sensitiveType
+     * @return a java.util.List<SensitiveType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveType> getSensitiveTypes() {
@@ -144,7 +144,7 @@ public class DataClassificationService extends Entity implements Parsable {
     }
     /**
      * Gets the sensitivityLabels property value. The sensitivityLabels property
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {

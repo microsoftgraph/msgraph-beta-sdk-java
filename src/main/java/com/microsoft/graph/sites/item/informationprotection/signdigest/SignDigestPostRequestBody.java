@@ -16,9 +16,9 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * The digest property
      */
-    private byte[] digest;
+    private Base64url digest;
     /**
-     * Instantiates a new signDigestPostRequestBody and sets the default values.
+     * Instantiates a new SignDigestPostRequestBody and sets the default values.
      */
     public SignDigestPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -26,7 +26,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a signDigestPostRequestBody
+     * @return a SignDigestPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SignDigestPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
         return new SignDigestPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -43,10 +43,10 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the digest property value. The digest property
-     * @return a base64url
+     * @return a Base64url
      */
     @jakarta.annotation.Nullable
-    public byte[] getDigest() {
+    public Base64url getDigest() {
         return this.digest;
     }
     /**
@@ -56,7 +56,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("digest", (n) -> { this.setDigest(n.getByteArrayValue()); });
+        deserializerMap.put("digest", (n) -> { this.setDigest(n.getObjectValue(Base64url::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -65,12 +65,12 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeByteArrayValue("digest", this.getDigest());
+        writer.writeObjectValue("digest", this.getDigest());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -79,7 +79,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
      * Sets the digest property value. The digest property
      * @param value Value to set for the digest property.
      */
-    public void setDigest(@jakarta.annotation.Nullable final byte[] value) {
+    public void setDigest(@jakarta.annotation.Nullable final Base64url value) {
         this.digest = value;
     }
 }

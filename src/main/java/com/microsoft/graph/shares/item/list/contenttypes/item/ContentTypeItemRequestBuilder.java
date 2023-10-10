@@ -136,17 +136,17 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get contentTypes from shares
-     * @return a CompletableFuture of contentType
+     * The collection of content types present in this list.
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get() {
         return get(null);
     }
     /**
-     * Get contentTypes from shares
+     * The collection of content types present in this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -159,7 +159,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property contentTypes in shares
      * @param body The request body
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@jakarta.annotation.Nonnull final ContentType body) {
@@ -169,7 +169,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property contentTypes in shares
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of contentType
+     * @return a CompletableFuture of ContentType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ContentType> patch(@jakarta.annotation.Nonnull final ContentType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -208,7 +208,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get contentTypes from shares
+     * The collection of content types present in this list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -216,7 +216,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get contentTypes from shares
+     * The collection of content types present in this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -285,7 +285,7 @@ public class ContentTypeItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get contentTypes from shares
+     * The collection of content types present in this list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

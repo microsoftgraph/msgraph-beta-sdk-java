@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
      */
     private java.util.List<DeviceManagementConfigurationSettingInstance> children;
     /**
-     * Instantiates a new deviceManagementConfigurationGroupSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationGroupSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingValue() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationGroupSettingValue
+     * @return a DeviceManagementConfigurationGroupSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
     }
     /**
      * Gets the children property value. Collection of child setting instances contained within this GroupSetting
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a java.util.List<DeviceManagementConfigurationSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingInstance> getChildren() {

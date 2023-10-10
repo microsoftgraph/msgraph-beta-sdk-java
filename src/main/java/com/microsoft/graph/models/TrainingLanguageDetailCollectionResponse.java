@@ -13,7 +13,7 @@ public class TrainingLanguageDetailCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<TrainingLanguageDetail> value;
     /**
-     * Instantiates a new trainingLanguageDetailCollectionResponse and sets the default values.
+     * Instantiates a new TrainingLanguageDetailCollectionResponse and sets the default values.
      */
     public TrainingLanguageDetailCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class TrainingLanguageDetailCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trainingLanguageDetailCollectionResponse
+     * @return a TrainingLanguageDetailCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TrainingLanguageDetailCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class TrainingLanguageDetailCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a trainingLanguageDetail
+     * @return a java.util.List<TrainingLanguageDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TrainingLanguageDetail> getValue() {

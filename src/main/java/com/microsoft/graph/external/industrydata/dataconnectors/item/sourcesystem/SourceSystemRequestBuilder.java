@@ -38,7 +38,7 @@ public class SourceSystemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The sourceSystemDefinition this connector is connected to.
-     * @return a CompletableFuture of sourceSystemDefinition
+     * @return a CompletableFuture of SourceSystemDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SourceSystemDefinition> get() {
@@ -47,7 +47,7 @@ public class SourceSystemRequestBuilder extends BaseRequestBuilder {
     /**
      * The sourceSystemDefinition this connector is connected to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sourceSystemDefinition
+     * @return a CompletableFuture of SourceSystemDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SourceSystemDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class SourceSystemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sourceSystemRequestBuilder
+     * @return a SourceSystemRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SourceSystemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

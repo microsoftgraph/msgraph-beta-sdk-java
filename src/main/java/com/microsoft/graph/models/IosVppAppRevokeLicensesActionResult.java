@@ -58,7 +58,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
      */
     private String userId;
     /**
-     * Instantiates a new iosVppAppRevokeLicensesActionResult and sets the default values.
+     * Instantiates a new IosVppAppRevokeLicensesActionResult and sets the default values.
      */
     public IosVppAppRevokeLicensesActionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppAppRevokeLicensesActionResult
+     * @return a IosVppAppRevokeLicensesActionResult
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppRevokeLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a vppTokenActionFailureReason
+     * @return a VppTokenActionFailureReason
      */
     @jakarta.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
@@ -83,7 +83,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionName property value. Action name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
@@ -91,14 +91,14 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the actionState property value. The actionState property
-     * @return a actionState
+     * @return a ActionState
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
         return this.actionState;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +107,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses for which revoke failed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
@@ -142,7 +142,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the managedDeviceId property value. DeviceId associated with the action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -150,7 +150,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -166,7 +166,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses for which revoke was attempted.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {
@@ -174,7 +174,7 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
     }
     /**
      * Gets the userId property value. UserId associated with the action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -220,8 +220,8 @@ public class IosVppAppRevokeLicensesActionResult implements AdditionalDataHolder
         this.actionState = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

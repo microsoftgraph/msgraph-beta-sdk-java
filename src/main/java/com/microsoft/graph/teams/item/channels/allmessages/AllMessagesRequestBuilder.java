@@ -37,24 +37,24 @@ public class AllMessagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function allMessages
-     * @return a CompletableFuture of allMessagesResponse
+     * @return a CompletableFuture of AllMessagesGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllMessagesResponse> get() {
+    public java.util.concurrent.CompletableFuture<AllMessagesGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function allMessages
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of allMessagesResponse
+     * @return a CompletableFuture of AllMessagesGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AllMessagesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<AllMessagesGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AllMessagesResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, AllMessagesGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function allMessages
@@ -88,7 +88,7 @@ public class AllMessagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a allMessagesRequestBuilder
+     * @return a AllMessagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AllMessagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

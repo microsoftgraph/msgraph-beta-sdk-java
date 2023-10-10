@@ -65,7 +65,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> get() {
@@ -74,7 +74,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property publishedResources in onPremisesPublishingProfiles
      * @param body The request body
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> patch(@jakarta.annotation.Nonnull final PublishedResource body) {
@@ -97,7 +97,7 @@ public class PublishedResourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property publishedResources in onPremisesPublishingProfiles
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of publishedResource
+     * @return a CompletableFuture of PublishedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PublishedResource> patch(@jakarta.annotation.Nonnull final PublishedResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

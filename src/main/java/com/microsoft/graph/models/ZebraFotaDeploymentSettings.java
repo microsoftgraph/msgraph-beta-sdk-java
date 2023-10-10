@@ -87,7 +87,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      */
     private ZebraFotaUpdateType updateType;
     /**
-     * Instantiates a new zebraFotaDeploymentSettings and sets the default values.
+     * Instantiates a new ZebraFotaDeploymentSettings and sets the default values.
      */
     public ZebraFotaDeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -95,7 +95,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaDeploymentSettings
+     * @return a ZebraFotaDeploymentSettings
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaDeploymentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,7 +103,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         return new ZebraFotaDeploymentSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the batteryRuleMinimumBatteryLevelPercentage property value. Minimum battery level (%) required for both download and installation. Default: -1 (System defaults). Maximum is 100.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBatteryRuleMinimumBatteryLevelPercentage() {
@@ -120,7 +120,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the batteryRuleRequireCharger property value. Flag indicating if charger is required. When set to false, the client can install updates whether the device is in or out of the charger. Applied only for installation. Defaults to false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBatteryRuleRequireCharger() {
@@ -128,7 +128,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the deviceModel property value. Deploy update for devices with this model only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -136,7 +136,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the downloadRuleNetworkType property value. Represents various network types for Zebra FOTA deployment.
-     * @return a zebraFotaNetworkType
+     * @return a ZebraFotaNetworkType
      */
     @jakarta.annotation.Nullable
     public ZebraFotaNetworkType getDownloadRuleNetworkType() {
@@ -178,7 +178,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the firmwareTargetArtifactDescription property value. A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetArtifactDescription() {
@@ -186,7 +186,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetBoardSupportPackageVersion() {
@@ -194,7 +194,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the firmwareTargetOsVersion property value. Target OS Version (e.g.: '8.1.0'). Required only for custom update type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetOsVersion() {
@@ -202,7 +202,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the firmwareTargetPatch property value. Target patch name (e.g.: 'U06'). Required only for custom update type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirmwareTargetPatch() {
@@ -234,7 +234,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -242,7 +242,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the scheduleDurationInDays property value. Maximum 28 days. Default is 28 days. Sequence of dates are: 1) Download start date. 2) Install start date. 3) Schedule end date. If any of the values are not provided, the date provided in the preceding step of the sequence is used. If no values are provided, the string value of the current UTC is used.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getScheduleDurationInDays() {
@@ -250,7 +250,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the scheduleMode property value. Represents various schedule modes for Zebra FOTA deployment.
-     * @return a zebraFotaScheduleMode
+     * @return a ZebraFotaScheduleMode
      */
     @jakarta.annotation.Nullable
     public ZebraFotaScheduleMode getScheduleMode() {
@@ -258,7 +258,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the timeZoneOffsetInMinutes property value. This attribute indicates the deployment time offset (e.g.180 represents an offset of +03:00, and -270 represents an offset of -04:30). The time offset is the time timezone where the devices are located. The deployment start and end data uses this timezone
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimeZoneOffsetInMinutes() {
@@ -266,7 +266,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the updateType property value. Represents various update types for Zebra FOTA deployment.
-     * @return a zebraFotaUpdateType
+     * @return a ZebraFotaUpdateType
      */
     @jakarta.annotation.Nullable
     public ZebraFotaUpdateType getUpdateType() {
@@ -298,8 +298,8 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -92,7 +92,7 @@ public class PrivilegedSignupStatusRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from privilegedSignupStatus
-     * @return a CompletableFuture of privilegedSignupStatusCollectionResponse
+     * @return a CompletableFuture of PrivilegedSignupStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatusCollectionResponse> get() {
@@ -101,7 +101,7 @@ public class PrivilegedSignupStatusRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from privilegedSignupStatus
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedSignupStatusCollectionResponse
+     * @return a CompletableFuture of PrivilegedSignupStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class PrivilegedSignupStatusRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to privilegedSignupStatus
      * @param body The request body
-     * @return a CompletableFuture of privilegedSignupStatus
+     * @return a CompletableFuture of PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> post(@jakarta.annotation.Nonnull final PrivilegedSignupStatus body) {
@@ -124,7 +124,7 @@ public class PrivilegedSignupStatusRequestBuilder extends BaseRequestBuilder {
      * Add new entity to privilegedSignupStatus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedSignupStatus
+     * @return a CompletableFuture of PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> post(@jakarta.annotation.Nonnull final PrivilegedSignupStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class PrivilegedSignupStatusRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegedSignupStatusRequestBuilder
+     * @return a PrivilegedSignupStatusRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegedSignupStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

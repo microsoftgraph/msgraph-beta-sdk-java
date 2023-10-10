@@ -37,7 +37,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/resourceConnections/{resourceConnection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,19 +58,19 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
-     * @return a CompletableFuture of resourceConnection
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-1.0">Find more info here</a>
+     * Read the properties and relationships of an operationalInsightsConnection object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ResourceConnection
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceConnection> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceConnection
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of ResourceConnection
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceConnection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property resourceConnections in admin
      * @param body The request body
-     * @return a CompletableFuture of resourceConnection
+     * @return a CompletableFuture of ResourceConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceConnection> patch(@jakarta.annotation.Nonnull final ResourceConnection body) {
@@ -93,7 +93,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property resourceConnections in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceConnection
+     * @return a CompletableFuture of ResourceConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceConnection> patch(@jakarta.annotation.Nonnull final ResourceConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ResourceConnection::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an operationalInsightsConnection object.
+     * Delete an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -34,7 +34,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
      */
     private AuthenticationAttributeCollectionInputType inputType;
     /**
-     * The label of the attribute field that will be displayed to end user, unless overridden.
+     * The label of the attribute field that is displayed to end user, unless overridden.
      */
     private String label;
     /**
@@ -54,11 +54,11 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
      */
     private String validationRegEx;
     /**
-     * Whether the value collected will be stored.
+     * Whether the value collected is stored.
      */
     private Boolean writeToDirectory;
     /**
-     * Instantiates a new authenticationAttributeCollectionInputConfiguration and sets the default values.
+     * Instantiates a new AuthenticationAttributeCollectionInputConfiguration and sets the default values.
      */
     public AuthenticationAttributeCollectionInputConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationAttributeCollectionInputConfiguration
+     * @return a AuthenticationAttributeCollectionInputConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAttributeCollectionInputConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         return new AuthenticationAttributeCollectionInputConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the attribute property value. The built-in or custom attribute for which a value is being collected.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAttribute() {
@@ -91,7 +91,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the defaultValue property value. The default value of the attribute displayed to the end user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
@@ -99,7 +99,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the editable property value. Whether the attribute is editable by the end user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEditable() {
@@ -127,7 +127,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the hidden property value. Whether the attribute is displayed to the end user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {
@@ -135,15 +135,15 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the inputType property value. The inputType property
-     * @return a authenticationAttributeCollectionInputType
+     * @return a AuthenticationAttributeCollectionInputType
      */
     @jakarta.annotation.Nullable
     public AuthenticationAttributeCollectionInputType getInputType() {
         return this.inputType;
     }
     /**
-     * Gets the label property value. The label of the attribute field that will be displayed to end user, unless overridden.
-     * @return a string
+     * Gets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
@@ -151,7 +151,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -159,7 +159,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the options property value. The option values for certain multiple-option input types.
-     * @return a authenticationAttributeCollectionOptionConfiguration
+     * @return a java.util.List<AuthenticationAttributeCollectionOptionConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAttributeCollectionOptionConfiguration> getOptions() {
@@ -167,7 +167,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the required property value. Whether the field is required.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {
@@ -175,15 +175,15 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
     }
     /**
      * Gets the validationRegEx property value. The regex for the value of the field.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValidationRegEx() {
         return this.validationRegEx;
     }
     /**
-     * Gets the writeToDirectory property value. Whether the value collected will be stored.
-     * @return a boolean
+     * Gets the writeToDirectory property value. Whether the value collected is stored.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWriteToDirectory() {
@@ -209,8 +209,8 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -251,7 +251,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.inputType = value;
     }
     /**
-     * Sets the label property value. The label of the attribute field that will be displayed to end user, unless overridden.
+     * Sets the label property value. The label of the attribute field that is displayed to end user, unless overridden.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
@@ -286,7 +286,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements Addi
         this.validationRegEx = value;
     }
     /**
-     * Sets the writeToDirectory property value. Whether the value collected will be stored.
+     * Sets the writeToDirectory property value. Whether the value collected is stored.
      * @param value Value to set for the writeToDirectory property.
      */
     public void setWriteToDirectory(@jakarta.annotation.Nullable final Boolean value) {

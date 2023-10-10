@@ -57,7 +57,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get cloudAppSecurityProfiles from security
-     * @return a CompletableFuture of cloudAppSecurityProfile
+     * @return a CompletableFuture of CloudAppSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudAppSecurityProfile> get() {
@@ -66,7 +66,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
     /**
      * Get cloudAppSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudAppSecurityProfile
+     * @return a CompletableFuture of CloudAppSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudAppSecurityProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property cloudAppSecurityProfiles in security
      * @param body The request body
-     * @return a CompletableFuture of cloudAppSecurityProfile
+     * @return a CompletableFuture of CloudAppSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudAppSecurityProfile> patch(@jakarta.annotation.Nonnull final CloudAppSecurityProfile body) {
@@ -89,7 +89,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property cloudAppSecurityProfiles in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudAppSecurityProfile
+     * @return a CompletableFuture of CloudAppSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudAppSecurityProfile> patch(@jakarta.annotation.Nonnull final CloudAppSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

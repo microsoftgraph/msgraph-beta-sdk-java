@@ -65,7 +65,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     private java.util.List<KeyValuePair> selections;
     /**
-     * Instantiates a new androidManagedStoreAppConfigurationSchemaItem and sets the default values.
+     * Instantiates a new AndroidManagedStoreAppConfigurationSchemaItem and sets the default values.
      */
     public AndroidManagedStoreAppConfigurationSchemaItem() {
         this.setAdditionalData(new HashMap<>());
@@ -73,7 +73,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAppConfigurationSchemaItem
+     * @return a AndroidManagedStoreAppConfigurationSchemaItem
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreAppConfigurationSchemaItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
         return new AndroidManagedStoreAppConfigurationSchemaItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the dataType property value. Data type for a configuration item inside an Android application's custom configuration schema
-     * @return a androidManagedStoreAppConfigurationSchemaItemDataType
+     * @return a AndroidManagedStoreAppConfigurationSchemaItemDataType
      */
     @jakarta.annotation.Nullable
     public AndroidManagedStoreAppConfigurationSchemaItemDataType getDataType() {
@@ -98,7 +98,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the defaultBoolValue property value. Default value for boolean type items, if specified by the app developer
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefaultBoolValue() {
@@ -106,7 +106,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the defaultIntValue property value. Default value for integer type items, if specified by the app developer
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDefaultIntValue() {
@@ -114,7 +114,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the defaultStringArrayValue property value. Default value for string array type items, if specified by the app developer
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDefaultStringArrayValue() {
@@ -122,7 +122,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the defaultStringValue property value. Default value for string type items, if specified by the app developer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultStringValue() {
@@ -130,7 +130,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the description property value. Description of what the item controls within the application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -138,7 +138,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the displayName property value. Human readable name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -167,7 +167,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the index property value. Unique index the application uses to maintain nested schema items
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIndex() {
@@ -175,7 +175,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -183,7 +183,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the parentIndex property value. Index of parent schema item to track nested schema items
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getParentIndex() {
@@ -191,7 +191,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the schemaItemKey property value. Unique key the application uses to identify the item
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSchemaItemKey() {
@@ -199,7 +199,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
     }
     /**
      * Gets the selections property value. List of human readable name/value pairs for the valid values that can be set for this item (Choice and Multiselect items only)
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getSelections() {
@@ -226,8 +226,8 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

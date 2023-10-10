@@ -57,7 +57,7 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
     }
     /**
      * The WinPhone Symantec Code Signing Certificate.
-     * @return a CompletableFuture of symantecCodeSigningCertificate
+     * @return a CompletableFuture of SymantecCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SymantecCodeSigningCertificate> get() {
@@ -66,7 +66,7 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
     /**
      * The WinPhone Symantec Code Signing Certificate.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of symantecCodeSigningCertificate
+     * @return a CompletableFuture of SymantecCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SymantecCodeSigningCertificate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property symantecCodeSigningCertificate in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of symantecCodeSigningCertificate
+     * @return a CompletableFuture of SymantecCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SymantecCodeSigningCertificate> patch(@jakarta.annotation.Nonnull final SymantecCodeSigningCertificate body) {
@@ -89,7 +89,7 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
      * Update the navigation property symantecCodeSigningCertificate in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of symantecCodeSigningCertificate
+     * @return a CompletableFuture of SymantecCodeSigningCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SymantecCodeSigningCertificate> patch(@jakarta.annotation.Nonnull final SymantecCodeSigningCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class SymantecCodeSigningCertificateRequestBuilder extends BaseRequestBui
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a symantecCodeSigningCertificateRequestBuilder
+     * @return a SymantecCodeSigningCertificateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SymantecCodeSigningCertificateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

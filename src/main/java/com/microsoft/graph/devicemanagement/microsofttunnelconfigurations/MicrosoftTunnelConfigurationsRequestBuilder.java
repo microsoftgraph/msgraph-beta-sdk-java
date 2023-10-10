@@ -60,7 +60,7 @@ public class MicrosoftTunnelConfigurationsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Collection of MicrosoftTunnelConfiguration settings associated with account.
-     * @return a CompletableFuture of microsoftTunnelConfigurationCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfigurationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MicrosoftTunnelConfigurationsRequestBuilder extends BaseRequestBuil
     /**
      * Collection of MicrosoftTunnelConfiguration settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelConfigurationCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MicrosoftTunnelConfigurationsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to microsoftTunnelConfigurations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of microsoftTunnelConfiguration
+     * @return a CompletableFuture of MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfiguration> post(@jakarta.annotation.Nonnull final MicrosoftTunnelConfiguration body) {
@@ -92,7 +92,7 @@ public class MicrosoftTunnelConfigurationsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to microsoftTunnelConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelConfiguration
+     * @return a CompletableFuture of MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfiguration> post(@jakarta.annotation.Nonnull final MicrosoftTunnelConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MicrosoftTunnelConfigurationsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftTunnelConfigurationsRequestBuilder
+     * @return a MicrosoftTunnelConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftTunnelConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

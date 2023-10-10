@@ -18,7 +18,7 @@ public class Monitoring extends Entity implements Parsable {
      */
     private java.util.List<AlertRule> alertRules;
     /**
-     * Instantiates a new monitoring and sets the default values.
+     * Instantiates a new Monitoring and sets the default values.
      */
     public Monitoring() {
         super();
@@ -26,7 +26,7 @@ public class Monitoring extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a monitoring
+     * @return a Monitoring
      */
     @jakarta.annotation.Nonnull
     public static Monitoring createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class Monitoring extends Entity implements Parsable {
     }
     /**
      * Gets the alertRecords property value. The collection of records of alert events.
-     * @return a alertRecord
+     * @return a java.util.List<AlertRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertRecord> getAlertRecords() {
@@ -43,7 +43,7 @@ public class Monitoring extends Entity implements Parsable {
     }
     /**
      * Gets the alertRules property value. The collection of alert rules.
-     * @return a alertRule
+     * @return a java.util.List<AlertRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlertRule> getAlertRules() {

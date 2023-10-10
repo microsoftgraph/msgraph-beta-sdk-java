@@ -209,7 +209,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get calls from app
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> get() {
@@ -218,7 +218,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get calls from app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -231,7 +231,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property calls in app
      * @param body The request body
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> patch(@jakarta.annotation.Nonnull final Call body) {
@@ -241,7 +241,7 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calls in app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of call
+     * @return a CompletableFuture of Call
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Call> patch(@jakarta.annotation.Nonnull final Call body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

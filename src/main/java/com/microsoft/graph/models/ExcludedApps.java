@@ -81,7 +81,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      */
     private Boolean word;
     /**
-     * Instantiates a new excludedApps and sets the default values.
+     * Instantiates a new ExcludedApps and sets the default values.
      */
     public ExcludedApps() {
         this.setAdditionalData(new HashMap<>());
@@ -89,7 +89,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a excludedApps
+     * @return a ExcludedApps
      */
     @jakarta.annotation.Nonnull
     public static ExcludedApps createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,14 +98,14 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the access property value. The value for if MS Office Access should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccess() {
         return this.access;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bing property value. The value for if Microsoft Search as default should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBing() {
@@ -122,7 +122,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the excel property value. The value for if MS Office Excel should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExcel() {
@@ -155,7 +155,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the groove property value. The value for if MS Office OneDrive for Business - Groove should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getGroove() {
@@ -163,7 +163,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the infoPath property value. The value for if MS Office InfoPath should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInfoPath() {
@@ -171,7 +171,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lync property value. The value for if MS Office Skype for Business - Lync should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLync() {
@@ -179,7 +179,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -187,7 +187,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oneDrive property value. The value for if MS Office OneDrive should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOneDrive() {
@@ -195,7 +195,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the oneNote property value. The value for if MS Office OneNote should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOneNote() {
@@ -203,7 +203,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the outlook property value. The value for if MS Office Outlook should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOutlook() {
@@ -211,7 +211,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the powerPoint property value. The value for if MS Office PowerPoint should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPowerPoint() {
@@ -219,7 +219,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the publisher property value. The value for if MS Office Publisher should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPublisher() {
@@ -227,7 +227,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharePointDesigner property value. The value for if MS Office SharePointDesigner should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSharePointDesigner() {
@@ -235,7 +235,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the teams property value. The value for if MS Office Teams should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTeams() {
@@ -243,7 +243,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the visio property value. The value for if MS Office Visio should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVisio() {
@@ -251,7 +251,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the word property value. The value for if MS Office Word should be excluded or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWord() {
@@ -289,8 +289,8 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
         this.access = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

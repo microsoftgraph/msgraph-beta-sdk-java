@@ -60,7 +60,7 @@ public class BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder extends B
     }
     /**
      * Get businessFlowsWithRequestsAwaitingMyDecision from approvalWorkflowProviders
-     * @return a CompletableFuture of businessFlowCollectionResponse
+     * @return a CompletableFuture of BusinessFlowCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlowCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder extends B
     /**
      * Get businessFlowsWithRequestsAwaitingMyDecision from approvalWorkflowProviders
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of businessFlowCollectionResponse
+     * @return a CompletableFuture of BusinessFlowCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlowCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder extends B
     /**
      * Create new navigation property to businessFlowsWithRequestsAwaitingMyDecision for approvalWorkflowProviders
      * @param body The request body
-     * @return a CompletableFuture of businessFlow
+     * @return a CompletableFuture of BusinessFlow
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlow> post(@jakarta.annotation.Nonnull final BusinessFlow body) {
@@ -92,7 +92,7 @@ public class BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder extends B
      * Create new navigation property to businessFlowsWithRequestsAwaitingMyDecision for approvalWorkflowProviders
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of businessFlow
+     * @return a CompletableFuture of BusinessFlow
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlow> post(@jakarta.annotation.Nonnull final BusinessFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a businessFlowsWithRequestsAwaitingMyDecisionRequestBuilder
+     * @return a BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BusinessFlowsWithRequestsAwaitingMyDecisionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -61,7 +61,7 @@ public class VendorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get vendors from financials
-     * @return a CompletableFuture of vendorCollectionResponse
+     * @return a CompletableFuture of VendorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VendorCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class VendorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get vendors from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vendorCollectionResponse
+     * @return a CompletableFuture of VendorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VendorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class VendorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to vendors for financials
      * @param body The request body
-     * @return a CompletableFuture of vendor
+     * @return a CompletableFuture of Vendor
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Vendor> post(@jakarta.annotation.Nonnull final Vendor body) {
@@ -93,7 +93,7 @@ public class VendorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to vendors for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vendor
+     * @return a CompletableFuture of Vendor
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Vendor> post(@jakarta.annotation.Nonnull final Vendor body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class VendorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a vendorsRequestBuilder
+     * @return a VendorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VendorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

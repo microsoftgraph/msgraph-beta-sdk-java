@@ -76,7 +76,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      */
     private java.util.List<WorkloadAction> workloadActions;
     /**
-     * Instantiates a new managementTemplate and sets the default values.
+     * Instantiates a new ManagementTemplate and sets the default values.
      */
     public ManagementTemplate() {
         super();
@@ -84,7 +84,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplate
+     * @return a ManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -93,7 +93,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
@@ -101,7 +101,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -117,7 +117,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description for the management template. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -125,7 +125,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the management template. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -158,7 +158,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the informationLinks property value. The informationLinks property
-     * @return a actionUrl
+     * @return a java.util.List<ActionUrl>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActionUrl> getInformationLinks() {
@@ -166,7 +166,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -182,7 +182,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the managementTemplateCollections property value. The managementTemplateCollections property
-     * @return a managementTemplateCollection
+     * @return a java.util.List<ManagementTemplateCollection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateCollection> getManagementTemplateCollections() {
@@ -190,7 +190,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the managementTemplateSteps property value. The managementTemplateSteps property
-     * @return a managementTemplateStep
+     * @return a java.util.List<ManagementTemplateStep>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStep> getManagementTemplateSteps() {
@@ -198,7 +198,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the parameters property value. The collection of parameters used by the management template. Optional. Read-only.
-     * @return a templateParameter
+     * @return a java.util.List<TemplateParameter>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TemplateParameter> getParameters() {
@@ -206,7 +206,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -214,7 +214,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the provider property value. The provider property
-     * @return a managementProvider
+     * @return a ManagementProvider
      */
     @jakarta.annotation.Nullable
     public ManagementProvider getProvider() {
@@ -222,7 +222,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the userImpact property value. The userImpact property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserImpact() {
@@ -230,7 +230,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
@@ -238,7 +238,7 @@ public class ManagementTemplate extends Entity implements Parsable {
     }
     /**
      * Gets the workloadActions property value. The collection of workload actions associated with the management template. Optional. Read-only.
-     * @return a workloadAction
+     * @return a java.util.List<WorkloadAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {

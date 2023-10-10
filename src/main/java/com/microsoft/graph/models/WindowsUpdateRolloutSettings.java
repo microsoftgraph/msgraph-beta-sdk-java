@@ -34,7 +34,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
      */
     private OffsetDateTime offerStartDateTimeInUTC;
     /**
-     * Instantiates a new windowsUpdateRolloutSettings and sets the default values.
+     * Instantiates a new WindowsUpdateRolloutSettings and sets the default values.
      */
     public WindowsUpdateRolloutSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateRolloutSettings
+     * @return a WindowsUpdateRolloutSettings
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateRolloutSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
         return new WindowsUpdateRolloutSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -88,7 +88,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the offerIntervalInDays property value. The number of day(s) between each set of offers to be set, updated, and displayed for a feature update profile, for example: if OfferStartDateTimeInUTC is 2020-06-09T10:00:00Z, and OfferIntervalInDays is 1, then the next two sets of offers will be made consecutively on 2020-06-10T10:00:00Z (next day at the same specified time) and 2020-06-11T10:00:00Z (next next day at the same specified time) with 1 day in between each set of offers.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOfferIntervalInDays() {
@@ -115,8 +115,8 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

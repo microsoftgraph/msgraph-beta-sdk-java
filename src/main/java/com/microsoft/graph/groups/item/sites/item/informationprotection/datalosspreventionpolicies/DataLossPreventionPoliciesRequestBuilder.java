@@ -68,7 +68,7 @@ public class DataLossPreventionPoliciesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get dataLossPreventionPolicies from groups
-     * @return a CompletableFuture of dataLossPreventionPolicyCollectionResponse
+     * @return a CompletableFuture of DataLossPreventionPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicyCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class DataLossPreventionPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Get dataLossPreventionPolicies from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataLossPreventionPolicyCollectionResponse
+     * @return a CompletableFuture of DataLossPreventionPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class DataLossPreventionPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to dataLossPreventionPolicies for groups
      * @param body The request body
-     * @return a CompletableFuture of dataLossPreventionPolicy
+     * @return a CompletableFuture of DataLossPreventionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicy> post(@jakarta.annotation.Nonnull final DataLossPreventionPolicy body) {
@@ -100,7 +100,7 @@ public class DataLossPreventionPoliciesRequestBuilder extends BaseRequestBuilder
      * Create new navigation property to dataLossPreventionPolicies for groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dataLossPreventionPolicy
+     * @return a CompletableFuture of DataLossPreventionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DataLossPreventionPolicy> post(@jakarta.annotation.Nonnull final DataLossPreventionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class DataLossPreventionPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dataLossPreventionPoliciesRequestBuilder
+     * @return a DataLossPreventionPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DataLossPreventionPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

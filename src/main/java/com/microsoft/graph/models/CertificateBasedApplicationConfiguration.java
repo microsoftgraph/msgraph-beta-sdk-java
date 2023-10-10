@@ -17,7 +17,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
      */
     private String displayName;
     /**
-     * Instantiates a new certificateBasedApplicationConfiguration and sets the default values.
+     * Instantiates a new CertificateBasedApplicationConfiguration and sets the default values.
      */
     public CertificateBasedApplicationConfiguration() {
         super();
@@ -26,7 +26,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certificateBasedApplicationConfiguration
+     * @return a CertificateBasedApplicationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static CertificateBasedApplicationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
     }
     /**
      * Gets the description property value. The description of the trusted certificate authorities.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -43,7 +43,7 @@ public class CertificateBasedApplicationConfiguration extends TrustedCertificate
     }
     /**
      * Gets the displayName property value. The display name of the trusted certificate authorities.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

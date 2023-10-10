@@ -22,7 +22,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     private Boolean allowEmailVerifiedUsersToJoinOrganization;
     /**
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
      */
     private AllowInvitesFrom allowInvitesFrom;
     /**
@@ -46,7 +46,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     private java.util.List<String> enabledPreviewFeatures;
     /**
-     * Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Represents role templateId for the role that should be granted to guests. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      */
     private UUID guestUserRoleId;
     /**
@@ -54,7 +54,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      */
     private java.util.List<String> permissionGrantPolicyIdsAssignedToDefaultUserRole;
     /**
-     * Instantiates a new authorizationPolicy and sets the default values.
+     * Instantiates a new AuthorizationPolicy and sets the default values.
      */
     public AuthorizationPolicy() {
         super();
@@ -63,7 +63,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authorizationPolicy
+     * @return a AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +72,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToSignUpEmailBasedSubscriptions property value. Indicates whether users can sign up for email based subscriptions.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToSignUpEmailBasedSubscriptions() {
@@ -80,7 +80,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToUseSSPR property value. Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToUseSSPR() {
@@ -88,15 +88,15 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEmailVerifiedUsersToJoinOrganization() {
         return this.allowEmailVerifiedUsersToJoinOrganization;
     }
     /**
-     * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
-     * @return a allowInvitesFrom
+     * Gets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * @return a AllowInvitesFrom
      */
     @jakarta.annotation.Nullable
     public AllowInvitesFrom getAllowInvitesFrom() {
@@ -104,7 +104,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserConsentForRiskyApps() {
@@ -112,7 +112,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Azure AD Connect or Microsoft Graph.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMsolPowerShell() {
@@ -120,7 +120,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the defaultUserRoleOverrides property value. The defaultUserRoleOverrides property
-     * @return a defaultUserRoleOverride
+     * @return a java.util.List<DefaultUserRoleOverride>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DefaultUserRoleOverride> getDefaultUserRoleOverrides() {
@@ -128,7 +128,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
-     * @return a defaultUserRolePermissions
+     * @return a DefaultUserRolePermissions
      */
     @jakarta.annotation.Nullable
     public DefaultUserRolePermissions getDefaultUserRolePermissions() {
@@ -136,7 +136,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the enabledPreviewFeatures property value. List of features enabled for private preview on the tenant.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledPreviewFeatures() {
@@ -163,7 +163,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guests. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      * @return a UUID
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPermissionGrantPolicyIdsAssignedToDefaultUserRole() {
@@ -219,7 +219,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.allowEmailVerifiedUsersToJoinOrganization = value;
     }
     /**
-     * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Sets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
      * @param value Value to set for the allowInvitesFrom property.
      */
     public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {
@@ -261,7 +261,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         this.enabledPreviewFeatures = value;
     }
     /**
-     * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guests. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      * @param value Value to set for the guestUserRoleId property.
      */
     public void setGuestUserRoleId(@jakarta.annotation.Nullable final UUID value) {

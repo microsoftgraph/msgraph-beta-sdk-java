@@ -37,7 +37,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
      */
     private AndroidFotaDeploymentAssignmentTarget target;
     /**
-     * Instantiates a new androidFotaDeploymentAssignment and sets the default values.
+     * Instantiates a new AndroidFotaDeploymentAssignment and sets the default values.
      */
     public AndroidFotaDeploymentAssignment() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidFotaDeploymentAssignment
+     * @return a AndroidFotaDeploymentAssignment
      */
     @jakarta.annotation.Nonnull
     public static AndroidFotaDeploymentAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
         return new AndroidFotaDeploymentAssignment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the assignmentTarget property value. The Azure Active Directory (Azure AD) we are deploying firmware updates to (e.g.: d93c8f48-bd42-4514-ba40-bc6b84780930). NOTE: Use this property moving forward because the existing property, target, is deprecated.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getAssignmentTarget() {
@@ -70,7 +70,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the displayName property value. The display name of the Azure AD security group used for the assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -92,7 +92,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the id property value. A unique identifier assigned to each Android FOTA Assignment entity
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -100,7 +100,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -108,7 +108,7 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the target property value. The AAD Group we are deploying firmware updates to
-     * @return a androidFotaDeploymentAssignmentTarget
+     * @return a AndroidFotaDeploymentAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public AndroidFotaDeploymentAssignmentTarget getTarget() {
@@ -128,8 +128,8 @@ public class AndroidFotaDeploymentAssignment implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

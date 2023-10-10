@@ -29,7 +29,7 @@ public class CalendarPermission extends Entity implements Parsable {
      */
     private CalendarRoleType role;
     /**
-     * Instantiates a new calendarPermission and sets the default values.
+     * Instantiates a new CalendarPermission and sets the default values.
      */
     public CalendarPermission() {
         super();
@@ -37,7 +37,7 @@ public class CalendarPermission extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a calendarPermission
+     * @return a CalendarPermission
      */
     @jakarta.annotation.Nonnull
     public static CalendarPermission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRoles property value. List of allowed sharing or delegating permission levels for the calendar. Possible values are: none, freeBusyRead, limitedRead, read, write, delegateWithoutPrivateEventAccess, delegateWithPrivateEventAccess, custom.
-     * @return a calendarRoleType
+     * @return a java.util.List<CalendarRoleType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CalendarRoleType> getAllowedRoles() {
@@ -54,7 +54,7 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the emailAddress property value. Represents a share recipient or delegate who has access to the calendar. For the 'My Organization' share recipient, the address property is null. Read-only.
-     * @return a emailAddress
+     * @return a EmailAddress
      */
     @jakarta.annotation.Nullable
     public EmailAddress getEmailAddress() {
@@ -76,7 +76,7 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the isInsideOrganization property value. True if the user in context (share recipient or delegate) is inside the same organization as the calendar owner.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInsideOrganization() {
@@ -84,7 +84,7 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the isRemovable property value. True if the user can be removed from the list of recipients or delegates for the specified calendar, false otherwise. The 'My organization' user determines the permissions other people within your organization have to the given calendar. You can't remove 'My organization' as a recipient to a calendar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemovable() {
@@ -92,7 +92,7 @@ public class CalendarPermission extends Entity implements Parsable {
     }
     /**
      * Gets the role property value. Current permission level of the calendar share recipient or delegate.
-     * @return a calendarRoleType
+     * @return a CalendarRoleType
      */
     @jakarta.annotation.Nullable
     public CalendarRoleType getRole() {

@@ -57,7 +57,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder extends BaseRe
     }
     /**
      * Summary of policies in conflict state for this account.
-     * @return a CompletableFuture of deviceConfigurationConflictSummary
+     * @return a CompletableFuture of DeviceConfigurationConflictSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationConflictSummary> get() {
@@ -66,7 +66,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder extends BaseRe
     /**
      * Summary of policies in conflict state for this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationConflictSummary
+     * @return a CompletableFuture of DeviceConfigurationConflictSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationConflictSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property deviceConfigurationConflictSummary in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceConfigurationConflictSummary
+     * @return a CompletableFuture of DeviceConfigurationConflictSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationConflictSummary> patch(@jakarta.annotation.Nonnull final DeviceConfigurationConflictSummary body) {
@@ -89,7 +89,7 @@ public class DeviceConfigurationConflictSummaryItemRequestBuilder extends BaseRe
      * Update the navigation property deviceConfigurationConflictSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationConflictSummary
+     * @return a CompletableFuture of DeviceConfigurationConflictSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationConflictSummary> patch(@jakarta.annotation.Nonnull final DeviceConfigurationConflictSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

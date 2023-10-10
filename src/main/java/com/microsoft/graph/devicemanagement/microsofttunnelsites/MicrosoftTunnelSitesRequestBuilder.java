@@ -60,7 +60,7 @@ public class MicrosoftTunnelSitesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of MicrosoftTunnelSite settings associated with account.
-     * @return a CompletableFuture of microsoftTunnelSiteCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelSiteCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelSiteCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MicrosoftTunnelSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of MicrosoftTunnelSite settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelSiteCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelSiteCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelSiteCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MicrosoftTunnelSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to microsoftTunnelSites for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of microsoftTunnelSite
+     * @return a CompletableFuture of MicrosoftTunnelSite
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelSite> post(@jakarta.annotation.Nonnull final MicrosoftTunnelSite body) {
@@ -92,7 +92,7 @@ public class MicrosoftTunnelSitesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to microsoftTunnelSites for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelSite
+     * @return a CompletableFuture of MicrosoftTunnelSite
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelSite> post(@jakarta.annotation.Nonnull final MicrosoftTunnelSite body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MicrosoftTunnelSitesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftTunnelSitesRequestBuilder
+     * @return a MicrosoftTunnelSitesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftTunnelSitesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

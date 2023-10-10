@@ -88,8 +88,8 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,9 +97,9 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property roleEligibilitySchedules in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body) {
@@ -123,7 +123,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Update the navigation property roleEligibilitySchedules in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleEligibilitySchedule
+     * @return a CompletableFuture of UnifiedRoleEligibilitySchedule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleEligibilitySchedule> patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +162,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +170,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -239,7 +239,7 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
+     * Read the properties and relationships of an unifiedRoleEligibilitySchedule object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

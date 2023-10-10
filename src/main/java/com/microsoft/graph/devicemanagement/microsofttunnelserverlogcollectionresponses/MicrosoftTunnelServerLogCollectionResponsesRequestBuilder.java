@@ -60,7 +60,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     }
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponseCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponseCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponseCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Create new navigation property to microsoftTunnelServerLogCollectionResponses for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponse> post(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body) {
@@ -92,7 +92,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
      * Create new navigation property to microsoftTunnelServerLogCollectionResponses for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelServerLogCollectionResponse
+     * @return a CompletableFuture of MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelServerLogCollectionResponse> post(@jakarta.annotation.Nonnull final MicrosoftTunnelServerLogCollectionResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MicrosoftTunnelServerLogCollectionResponsesRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftTunnelServerLogCollectionResponsesRequestBuilder
+     * @return a MicrosoftTunnelServerLogCollectionResponsesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftTunnelServerLogCollectionResponsesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

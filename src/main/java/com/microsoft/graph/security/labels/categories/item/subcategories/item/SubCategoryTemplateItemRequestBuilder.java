@@ -59,7 +59,7 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read the properties and relationships of a subCategoryTemplate object.
-     * @return a CompletableFuture of subCategoryTemplate
+     * @return a CompletableFuture of SubCategoryTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-subcategorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a subCategoryTemplate object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subCategoryTemplate
+     * @return a CompletableFuture of SubCategoryTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-subcategorytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property subCategories in security
      * @param body The request body
-     * @return a CompletableFuture of subCategoryTemplate
+     * @return a CompletableFuture of SubCategoryTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubCategoryTemplate> patch(@jakarta.annotation.Nonnull final SubCategoryTemplate body) {
@@ -93,7 +93,7 @@ public class SubCategoryTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property subCategories in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subCategoryTemplate
+     * @return a CompletableFuture of SubCategoryTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubCategoryTemplate> patch(@jakarta.annotation.Nonnull final SubCategoryTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

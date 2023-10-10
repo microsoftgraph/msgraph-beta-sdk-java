@@ -65,7 +65,7 @@ public class PictureItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get picture from financials
-     * @return a CompletableFuture of picture
+     * @return a CompletableFuture of Picture
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Picture> get() {
@@ -74,7 +74,7 @@ public class PictureItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get picture from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of picture
+     * @return a CompletableFuture of Picture
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Picture> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PictureItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property picture in financials
      * @param body The request body
-     * @return a CompletableFuture of picture
+     * @return a CompletableFuture of Picture
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Picture> patch(@jakarta.annotation.Nonnull final Picture body) {
@@ -97,7 +97,7 @@ public class PictureItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property picture in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of picture
+     * @return a CompletableFuture of Picture
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Picture> patch(@jakarta.annotation.Nonnull final Picture body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

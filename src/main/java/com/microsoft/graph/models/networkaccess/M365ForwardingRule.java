@@ -21,7 +21,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
      */
     private NetworkingProtocol protocol;
     /**
-     * Instantiates a new m365ForwardingRule and sets the default values.
+     * Instantiates a new M365ForwardingRule and sets the default values.
      */
     public M365ForwardingRule() {
         super();
@@ -30,7 +30,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a m365ForwardingRule
+     * @return a M365ForwardingRule
      */
     @jakarta.annotation.Nonnull
     public static M365ForwardingRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a forwardingCategory
+     * @return a ForwardingCategory
      */
     @jakarta.annotation.Nullable
     public ForwardingCategory getCategory() {
@@ -59,7 +59,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * Gets the ports property value. The port(s) used by a forwarding rule for Microsoft 365 traffic are specified to determine the specific network port(s) through which the Microsoft 365 traffic is directed and forwarded.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPorts() {
@@ -67,7 +67,7 @@ public class M365ForwardingRule extends ForwardingRule implements Parsable {
     }
     /**
      * Gets the protocol property value. The protocol property
-     * @return a networkingProtocol
+     * @return a NetworkingProtocol
      */
     @jakarta.annotation.Nullable
     public NetworkingProtocol getProtocol() {

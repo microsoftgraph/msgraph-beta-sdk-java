@@ -90,7 +90,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> transitiveReports;
     /**
-     * Instantiates a new orgContact and sets the default values.
+     * Instantiates a new OrgContact and sets the default values.
      */
     public OrgContact() {
         super();
@@ -99,7 +99,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a orgContact
+     * @return a OrgContact
      */
     @jakarta.annotation.Nonnull
     public static OrgContact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -108,7 +108,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the addresses property value. Postal addresses for this organizational contact. For now a contact can only have one physical address.
-     * @return a physicalOfficeAddress
+     * @return a java.util.List<PhysicalOfficeAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalOfficeAddress> getAddresses() {
@@ -116,7 +116,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the companyName property value. Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyName() {
@@ -124,7 +124,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the department property value. The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
@@ -132,7 +132,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the directReports property value. The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getDirectReports() {
@@ -140,7 +140,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -177,7 +177,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the givenName property value. First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -185,7 +185,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the jobTitle property value. Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -193,7 +193,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mail property value. The SMTP address for the contact, for example, 'jeff@contoso.onmicrosoft.com'. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMail() {
@@ -201,7 +201,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mailNickname property value. Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
@@ -209,7 +209,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the manager property value. The user or contact that is this contact's manager. Read-only. Supports $expand and $filter (eq) by id.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getManager() {
@@ -217,7 +217,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the memberOf property value. Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
@@ -233,7 +233,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesProvisioningErrors property value. List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.
-     * @return a onPremisesProvisioningError
+     * @return a java.util.List<OnPremisesProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
@@ -241,7 +241,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
@@ -249,7 +249,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the phones property value. List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).
-     * @return a phone
+     * @return a java.util.List<Phone>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {
@@ -257,7 +257,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the proxyAddresses property value. For example: 'SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com'. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyAddresses() {
@@ -265,7 +265,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the serviceProvisioningErrors property value. Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from an orgContact object .  Supports $filter (eq, not, for isResolved and serviceInstance).
-     * @return a serviceProvisioningError
+     * @return a java.util.List<ServiceProvisioningError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceProvisioningError> getServiceProvisioningErrors() {
@@ -273,7 +273,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the surname property value. Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -281,7 +281,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveMemberOf property value. The transitiveMemberOf property
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
@@ -289,7 +289,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveReports property value. The transitive reports for a contact. Read-only.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveReports() {

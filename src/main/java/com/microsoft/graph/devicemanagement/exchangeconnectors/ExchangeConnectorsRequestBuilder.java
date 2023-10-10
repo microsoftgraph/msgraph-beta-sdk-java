@@ -60,7 +60,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of Exchange Connectors configured by the tenant.
-     * @return a CompletableFuture of deviceManagementExchangeConnectorCollectionResponse
+     * @return a CompletableFuture of DeviceManagementExchangeConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnectorCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of Exchange Connectors configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeConnectorCollectionResponse
+     * @return a CompletableFuture of DeviceManagementExchangeConnectorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnectorCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to exchangeConnectors for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> post(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body) {
@@ -92,7 +92,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to exchangeConnectors for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeConnector
+     * @return a CompletableFuture of DeviceManagementExchangeConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeConnector> post(@jakarta.annotation.Nonnull final DeviceManagementExchangeConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ExchangeConnectorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exchangeConnectorsRequestBuilder
+     * @return a ExchangeConnectorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExchangeConnectorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

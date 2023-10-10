@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder ex
     }
     /**
      * User Experience Analytics Battery Health Runtime Details
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthRuntimeDetails> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder ex
     /**
      * User Experience Analytics Battery Health Runtime Details
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthRuntimeDetails> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder ex
     /**
      * Update the navigation property userExperienceAnalyticsBatteryHealthRuntimeDetails in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthRuntimeDetails> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthRuntimeDetails body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder ex
      * Update the navigation property userExperienceAnalyticsBatteryHealthRuntimeDetails in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthRuntimeDetails> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthRuntimeDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder
+     * @return a UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

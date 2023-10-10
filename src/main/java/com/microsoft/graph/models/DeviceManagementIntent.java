@@ -73,7 +73,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      */
     private DeviceManagementIntentUserStateSummary userStateSummary;
     /**
-     * Instantiates a new deviceManagementIntent and sets the default values.
+     * Instantiates a new DeviceManagementIntent and sets the default values.
      */
     public DeviceManagementIntent() {
         super();
@@ -81,7 +81,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntent
+     * @return a DeviceManagementIntent
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +90,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. Collection of assignments
-     * @return a deviceManagementIntentAssignment
+     * @return a java.util.List<DeviceManagementIntentAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentAssignment> getAssignments() {
@@ -98,7 +98,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. Collection of setting categories within the intent
-     * @return a deviceManagementIntentSettingCategory
+     * @return a java.util.List<DeviceManagementIntentSettingCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentSettingCategory> getCategories() {
@@ -106,7 +106,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The user given description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -114,7 +114,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceSettingStateSummaries property value. Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
-     * @return a deviceManagementIntentDeviceSettingStateSummary
+     * @return a java.util.List<DeviceManagementIntentDeviceSettingStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentDeviceSettingStateSummary> getDeviceSettingStateSummaries() {
@@ -122,7 +122,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStates property value. Collection of states of all devices that the intent is applied to
-     * @return a deviceManagementIntentDeviceState
+     * @return a java.util.List<DeviceManagementIntentDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentDeviceState> getDeviceStates() {
@@ -130,7 +130,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStateSummary property value. A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
-     * @return a deviceManagementIntentDeviceStateSummary
+     * @return a DeviceManagementIntentDeviceStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntentDeviceStateSummary getDeviceStateSummary() {
@@ -138,7 +138,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The user given display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -170,7 +170,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the isAssigned property value. Signifies whether or not the intent is assigned to users
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -178,7 +178,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the isMigratingToConfigurationPolicy property value. Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMigratingToConfigurationPolicy() {
@@ -194,7 +194,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -202,7 +202,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. Collection of all settings to be applied
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {
@@ -210,7 +210,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the templateId property value. The ID of the template this intent was created from (if any)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
@@ -218,7 +218,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the userStates property value. Collection of states of all users that the intent is applied to
-     * @return a deviceManagementIntentUserState
+     * @return a java.util.List<DeviceManagementIntentUserState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentUserState> getUserStates() {
@@ -226,7 +226,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the userStateSummary property value. A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to
-     * @return a deviceManagementIntentUserStateSummary
+     * @return a DeviceManagementIntentUserStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementIntentUserStateSummary getUserStateSummary() {

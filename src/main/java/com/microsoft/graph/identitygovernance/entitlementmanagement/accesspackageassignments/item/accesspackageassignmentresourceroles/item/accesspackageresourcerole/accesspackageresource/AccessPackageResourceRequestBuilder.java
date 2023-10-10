@@ -81,7 +81,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get accessPackageResource from identityGovernance
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResource> get() {
@@ -90,7 +90,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get accessPackageResource from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property accessPackageResource in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResource> patch(@jakarta.annotation.Nonnull final AccessPackageResource body) {
@@ -113,7 +113,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property accessPackageResource in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResource
+     * @return a CompletableFuture of AccessPackageResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResource> patch(@jakarta.annotation.Nonnull final AccessPackageResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +215,7 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageResourceRequestBuilder
+     * @return a AccessPackageResourceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageResourceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

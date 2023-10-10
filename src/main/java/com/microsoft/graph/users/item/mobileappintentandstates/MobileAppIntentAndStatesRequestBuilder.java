@@ -60,7 +60,7 @@ public class MobileAppIntentAndStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of troubleshooting events for this user.
-     * @return a CompletableFuture of mobileAppIntentAndStateCollectionResponse
+     * @return a CompletableFuture of MobileAppIntentAndStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppIntentAndStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MobileAppIntentAndStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of troubleshooting events for this user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppIntentAndStateCollectionResponse
+     * @return a CompletableFuture of MobileAppIntentAndStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppIntentAndStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MobileAppIntentAndStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to mobileAppIntentAndStates for users
      * @param body The request body
-     * @return a CompletableFuture of mobileAppIntentAndState
+     * @return a CompletableFuture of MobileAppIntentAndState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppIntentAndState> post(@jakarta.annotation.Nonnull final MobileAppIntentAndState body) {
@@ -92,7 +92,7 @@ public class MobileAppIntentAndStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to mobileAppIntentAndStates for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobileAppIntentAndState
+     * @return a CompletableFuture of MobileAppIntentAndState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobileAppIntentAndState> post(@jakarta.annotation.Nonnull final MobileAppIntentAndState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MobileAppIntentAndStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mobileAppIntentAndStatesRequestBuilder
+     * @return a MobileAppIntentAndStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MobileAppIntentAndStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

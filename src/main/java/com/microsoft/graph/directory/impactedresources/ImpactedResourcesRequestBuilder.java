@@ -60,7 +60,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get impactedResources from directory
-     * @return a CompletableFuture of impactedResourceCollectionResponse
+     * @return a CompletableFuture of ImpactedResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResourceCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get impactedResources from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of impactedResourceCollectionResponse
+     * @return a CompletableFuture of ImpactedResourceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResourceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to impactedResources for directory
      * @param body The request body
-     * @return a CompletableFuture of impactedResource
+     * @return a CompletableFuture of ImpactedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResource> post(@jakarta.annotation.Nonnull final ImpactedResource body) {
@@ -92,7 +92,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to impactedResources for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of impactedResource
+     * @return a CompletableFuture of ImpactedResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImpactedResource> post(@jakarta.annotation.Nonnull final ImpactedResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a impactedResourcesRequestBuilder
+     * @return a ImpactedResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImpactedResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

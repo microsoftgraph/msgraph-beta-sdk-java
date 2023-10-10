@@ -59,17 +59,17 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/subdomains{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a subdomain object.
-     * @return a CompletableFuture of subdomainCollectionResponse
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SubdomainCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubdomainCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subdomainCollectionResponse
+     * @return a CompletableFuture of SubdomainCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SubdomainCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to subdomains for security
      * @param body The request body
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> post(@jakarta.annotation.Nonnull final Subdomain body) {
@@ -92,7 +92,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to subdomains for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of subdomain
+     * @return a CompletableFuture of Subdomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Subdomain> post(@jakarta.annotation.Nonnull final Subdomain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Subdomain::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +167,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subdomainsRequestBuilder
+     * @return a SubdomainsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubdomainsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class SubdomainsRequestBuilder extends BaseRequestBuilder {
         return new SubdomainsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a subdomain object.
+     * Read the properties and relationships of a subdomain object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

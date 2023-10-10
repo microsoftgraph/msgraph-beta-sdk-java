@@ -65,7 +65,7 @@ public class ManagedTenantAlertRuleDefinitionItemRequestBuilder extends BaseRequ
     }
     /**
      * Get managedTenantAlertRuleDefinitions from tenantRelationships
-     * @return a CompletableFuture of managedTenantAlertRuleDefinition
+     * @return a CompletableFuture of ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertRuleDefinition> get() {
@@ -74,7 +74,7 @@ public class ManagedTenantAlertRuleDefinitionItemRequestBuilder extends BaseRequ
     /**
      * Get managedTenantAlertRuleDefinitions from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertRuleDefinition
+     * @return a CompletableFuture of ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertRuleDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ManagedTenantAlertRuleDefinitionItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property managedTenantAlertRuleDefinitions in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantAlertRuleDefinition
+     * @return a CompletableFuture of ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertRuleDefinition> patch(@jakarta.annotation.Nonnull final ManagedTenantAlertRuleDefinition body) {
@@ -97,7 +97,7 @@ public class ManagedTenantAlertRuleDefinitionItemRequestBuilder extends BaseRequ
      * Update the navigation property managedTenantAlertRuleDefinitions in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantAlertRuleDefinition
+     * @return a CompletableFuture of ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantAlertRuleDefinition> patch(@jakarta.annotation.Nonnull final ManagedTenantAlertRuleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

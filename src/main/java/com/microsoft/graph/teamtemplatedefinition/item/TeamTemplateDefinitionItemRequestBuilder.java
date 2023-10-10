@@ -65,7 +65,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get entity from teamTemplateDefinition by key
-     * @return a CompletableFuture of teamTemplateDefinition
+     * @return a CompletableFuture of TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinition> get() {
@@ -74,7 +74,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get entity from teamTemplateDefinition by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplateDefinition
+     * @return a CompletableFuture of TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update entity in teamTemplateDefinition
      * @param body The request body
-     * @return a CompletableFuture of teamTemplateDefinition
+     * @return a CompletableFuture of TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinition> patch(@jakarta.annotation.Nonnull final TeamTemplateDefinition body) {
@@ -97,7 +97,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
      * Update entity in teamTemplateDefinition
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamTemplateDefinition
+     * @return a CompletableFuture of TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamTemplateDefinition> patch(@jakarta.annotation.Nonnull final TeamTemplateDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

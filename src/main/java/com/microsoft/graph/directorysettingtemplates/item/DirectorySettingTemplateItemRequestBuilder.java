@@ -96,8 +96,8 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
-     * @return a CompletableFuture of directorySettingTemplate
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of DirectorySettingTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/directorysettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/directorysettingtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in directorySettingTemplates
      * @param body The request body
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> patch(@jakarta.annotation.Nonnull final DirectorySettingTemplate body) {
@@ -131,7 +131,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
      * Update entity in directorySettingTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySettingTemplate
+     * @return a CompletableFuture of DirectorySettingTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySettingTemplate> patch(@jakarta.annotation.Nonnull final DirectorySettingTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -170,7 +170,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -178,7 +178,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -247,7 +247,7 @@ public class DirectorySettingTemplateItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults.
+     * A directory setting template represents a template of settings from which settings may be created within a tenant. This operation allows retrieval of the properties of the directorySettingTemplate object, including the available settings and their defaults. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

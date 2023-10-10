@@ -42,7 +42,7 @@ public class JobResponseBase extends Entity implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new jobResponseBase and sets the default values.
+     * Instantiates a new JobResponseBase and sets the default values.
      */
     public JobResponseBase() {
         super();
@@ -50,7 +50,7 @@ public class JobResponseBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a jobResponseBase
+     * @return a JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public static JobResponseBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -84,7 +84,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. The error property
-     * @return a classificationError
+     * @return a ClassificationError
      */
     @jakarta.annotation.Nullable
     public ClassificationError getError() {
@@ -117,7 +117,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -125,7 +125,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -133,7 +133,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -141,7 +141,7 @@ public class JobResponseBase extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

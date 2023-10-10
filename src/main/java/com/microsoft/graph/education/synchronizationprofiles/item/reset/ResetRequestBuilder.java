@@ -35,7 +35,7 @@ public class ResetRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/reset", rawUrl);
     }
     /**
-     * Reset the sync of a specific school data synchronization profile in the tenant.
+     * Reset the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-reset?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ResetRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Reset the sync of a specific school data synchronization profile in the tenant.
+     * Reset the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-reset?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ResetRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Reset the sync of a specific school data synchronization profile in the tenant.
+     * Reset the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ResetRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reset the sync of a specific school data synchronization profile in the tenant.
+     * Reset the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ResetRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resetRequestBuilder
+     * @return a ResetRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResetRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

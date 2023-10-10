@@ -21,7 +21,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      */
     private Boolean isBuiltIn;
     /**
-     * Instantiates a new servicePrincipalCreationPolicy and sets the default values.
+     * Instantiates a new ServicePrincipalCreationPolicy and sets the default values.
      */
     public ServicePrincipalCreationPolicy() {
         super();
@@ -30,7 +30,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalCreationPolicy
+     * @return a ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalCreationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * Gets the excludes property value. The excludes property
-     * @return a servicePrincipalCreationConditionSet
+     * @return a java.util.List<ServicePrincipalCreationConditionSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getExcludes() {
@@ -59,7 +59,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * Gets the includes property value. The includes property
-     * @return a servicePrincipalCreationConditionSet
+     * @return a java.util.List<ServicePrincipalCreationConditionSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getIncludes() {
@@ -67,7 +67,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
     }
     /**
      * Gets the isBuiltIn property value. The isBuiltIn property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {

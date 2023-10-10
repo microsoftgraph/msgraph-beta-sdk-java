@@ -57,7 +57,7 @@ public class SharedEmailDomainInvitationItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get sharedEmailDomainInvitations from domains
-     * @return a CompletableFuture of sharedEmailDomainInvitation
+     * @return a CompletableFuture of SharedEmailDomainInvitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomainInvitation> get() {
@@ -66,7 +66,7 @@ public class SharedEmailDomainInvitationItemRequestBuilder extends BaseRequestBu
     /**
      * Get sharedEmailDomainInvitations from domains
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedEmailDomainInvitation
+     * @return a CompletableFuture of SharedEmailDomainInvitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomainInvitation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SharedEmailDomainInvitationItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property sharedEmailDomainInvitations in domains
      * @param body The request body
-     * @return a CompletableFuture of sharedEmailDomainInvitation
+     * @return a CompletableFuture of SharedEmailDomainInvitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomainInvitation> patch(@jakarta.annotation.Nonnull final SharedEmailDomainInvitation body) {
@@ -89,7 +89,7 @@ public class SharedEmailDomainInvitationItemRequestBuilder extends BaseRequestBu
      * Update the navigation property sharedEmailDomainInvitations in domains
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedEmailDomainInvitation
+     * @return a CompletableFuture of SharedEmailDomainInvitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomainInvitation> patch(@jakarta.annotation.Nonnull final SharedEmailDomainInvitation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -71,7 +71,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
      */
     private Integer notCompliantTenantsCount;
     /**
-     * Instantiates a new managementTemplateStepTenantSummary and sets the default values.
+     * Instantiates a new ManagementTemplateStepTenantSummary and sets the default values.
      */
     public ManagementTemplateStepTenantSummary() {
         super();
@@ -79,7 +79,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStepTenantSummary
+     * @return a ManagementTemplateStepTenantSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStepTenantSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +88,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the assignedTenantsCount property value. The assignedTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAssignedTenantsCount() {
@@ -96,7 +96,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the compliantTenantsCount property value. The compliantTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantTenantsCount() {
@@ -104,7 +104,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -120,7 +120,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the dismissedTenantsCount property value. The dismissedTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDismissedTenantsCount() {
@@ -152,7 +152,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the ineligibleTenantsCount property value. The ineligibleTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIneligibleTenantsCount() {
@@ -160,7 +160,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -176,7 +176,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the managementTemplateCollectionDisplayName property value. The managementTemplateCollectionDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionDisplayName() {
@@ -184,7 +184,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the managementTemplateCollectionId property value. The managementTemplateCollectionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateCollectionId() {
@@ -192,7 +192,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the managementTemplateDisplayName property value. The managementTemplateDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateDisplayName() {
@@ -200,7 +200,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the managementTemplateId property value. The managementTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
@@ -208,7 +208,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the managementTemplateStepDisplayName property value. The managementTemplateStepDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateStepDisplayName() {
@@ -216,7 +216,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the managementTemplateStepId property value. The managementTemplateStepId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateStepId() {
@@ -224,7 +224,7 @@ public class ManagementTemplateStepTenantSummary extends Entity implements Parsa
     }
     /**
      * Gets the notCompliantTenantsCount property value. The notCompliantTenantsCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotCompliantTenantsCount() {

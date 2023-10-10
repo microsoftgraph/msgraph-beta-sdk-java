@@ -57,7 +57,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder extends BaseRequestB
     }
     /**
      * Driver inventories for this profile.
-     * @return a CompletableFuture of windowsDriverUpdateInventory
+     * @return a CompletableFuture of WindowsDriverUpdateInventory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventory> get() {
@@ -66,7 +66,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder extends BaseRequestB
     /**
      * Driver inventories for this profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateInventory
+     * @return a CompletableFuture of WindowsDriverUpdateInventory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property driverInventories in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsDriverUpdateInventory
+     * @return a CompletableFuture of WindowsDriverUpdateInventory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventory> patch(@jakarta.annotation.Nonnull final WindowsDriverUpdateInventory body) {
@@ -89,7 +89,7 @@ public class WindowsDriverUpdateInventoryItemRequestBuilder extends BaseRequestB
      * Update the navigation property driverInventories in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateInventory
+     * @return a CompletableFuture of WindowsDriverUpdateInventory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateInventory> patch(@jakarta.annotation.Nonnull final WindowsDriverUpdateInventory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

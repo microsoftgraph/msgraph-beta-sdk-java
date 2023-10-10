@@ -13,7 +13,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      */
     private String templateId;
     /**
-     * Instantiates a new protectByTemplateAction and sets the default values.
+     * Instantiates a new ProtectByTemplateAction and sets the default values.
      */
     public ProtectByTemplateAction() {
         super();
@@ -22,7 +22,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a protectByTemplateAction
+     * @return a ProtectByTemplateAction
      */
     @jakarta.annotation.Nonnull
     public static ProtectByTemplateAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
     }
     /**
      * Gets the templateId property value. The GUID of the Azure Information Protection template to apply to the information.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {

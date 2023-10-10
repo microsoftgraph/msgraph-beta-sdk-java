@@ -57,7 +57,7 @@ public class DeviceManagementIntentAssignmentItemRequestBuilder extends BaseRequ
     }
     /**
      * Collection of assignments
-     * @return a CompletableFuture of deviceManagementIntentAssignment
+     * @return a CompletableFuture of DeviceManagementIntentAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentAssignment> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementIntentAssignmentItemRequestBuilder extends BaseRequ
     /**
      * Collection of assignments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentAssignment
+     * @return a CompletableFuture of DeviceManagementIntentAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementIntentAssignmentItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntentAssignment
+     * @return a CompletableFuture of DeviceManagementIntentAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentAssignment> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentAssignment body) {
@@ -89,7 +89,7 @@ public class DeviceManagementIntentAssignmentItemRequestBuilder extends BaseRequ
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentAssignment
+     * @return a CompletableFuture of DeviceManagementIntentAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentAssignment> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

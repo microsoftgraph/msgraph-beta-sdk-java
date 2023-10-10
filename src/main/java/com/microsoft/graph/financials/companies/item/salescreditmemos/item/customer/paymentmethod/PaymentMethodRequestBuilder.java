@@ -57,7 +57,7 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get paymentMethod from financials
-     * @return a CompletableFuture of paymentMethod
+     * @return a CompletableFuture of PaymentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentMethod> get() {
@@ -66,7 +66,7 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder {
     /**
      * Get paymentMethod from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of paymentMethod
+     * @return a CompletableFuture of PaymentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentMethod> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property paymentMethod in financials
      * @param body The request body
-     * @return a CompletableFuture of paymentMethod
+     * @return a CompletableFuture of PaymentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentMethod> patch(@jakarta.annotation.Nonnull final PaymentMethod body) {
@@ -89,7 +89,7 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property paymentMethod in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of paymentMethod
+     * @return a CompletableFuture of PaymentMethod
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentMethod> patch(@jakarta.annotation.Nonnull final PaymentMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class PaymentMethodRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a paymentMethodRequestBuilder
+     * @return a PaymentMethodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PaymentMethodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

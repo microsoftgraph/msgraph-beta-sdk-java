@@ -65,7 +65,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Connectivity represents all the connectivity components in Global Secure Access.
-     * @return a CompletableFuture of connectivity
+     * @return a CompletableFuture of Connectivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Connectivity> get() {
@@ -74,7 +74,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Connectivity represents all the connectivity components in Global Secure Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectivity
+     * @return a CompletableFuture of Connectivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Connectivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property connectivity in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of connectivity
+     * @return a CompletableFuture of Connectivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Connectivity> patch(@jakarta.annotation.Nonnull final Connectivity body) {
@@ -97,7 +97,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property connectivity in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectivity
+     * @return a CompletableFuture of Connectivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Connectivity> patch(@jakarta.annotation.Nonnull final Connectivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a connectivityRequestBuilder
+     * @return a ConnectivityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConnectivityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

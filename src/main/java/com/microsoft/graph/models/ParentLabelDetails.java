@@ -50,7 +50,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
      */
     private String tooltip;
     /**
-     * Instantiates a new parentLabelDetails and sets the default values.
+     * Instantiates a new ParentLabelDetails and sets the default values.
      */
     public ParentLabelDetails() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a parentLabelDetails
+     * @return a ParentLabelDetails
      */
     @jakarta.annotation.Nonnull
     public static ParentLabelDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         return new ParentLabelDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -82,7 +82,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the color property value. The color that the user interface should display for the label, if configured.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getColor() {
@@ -90,7 +90,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The admin-defined description for the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -116,7 +116,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The label ID is a globally unique identifier (GUID).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -124,7 +124,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in user interfaces.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -132,7 +132,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The plaintext name of the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -140,7 +140,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -148,7 +148,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the parent property value. The parent property
-     * @return a parentLabelDetails
+     * @return a ParentLabelDetails
      */
     @jakarta.annotation.Nullable
     public ParentLabelDetails getParent() {
@@ -156,7 +156,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sensitivity property value. The sensitivity value of the label, where lower is less sensitive.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSensitivity() {
@@ -164,7 +164,7 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tooltip property value. The tooltip that should be displayed for the label in a user interface.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTooltip() {
@@ -188,8 +188,8 @@ public class ParentLabelDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

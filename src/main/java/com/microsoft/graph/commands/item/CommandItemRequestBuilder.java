@@ -65,7 +65,7 @@ public class CommandItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from commands by key
-     * @return a CompletableFuture of command
+     * @return a CompletableFuture of Command
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Command> get() {
@@ -74,7 +74,7 @@ public class CommandItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from commands by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of command
+     * @return a CompletableFuture of Command
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Command> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class CommandItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in commands
      * @param body The request body
-     * @return a CompletableFuture of command
+     * @return a CompletableFuture of Command
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Command> patch(@jakarta.annotation.Nonnull final Command body) {
@@ -97,7 +97,7 @@ public class CommandItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in commands
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of command
+     * @return a CompletableFuture of Command
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Command> patch(@jakarta.annotation.Nonnull final Command body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

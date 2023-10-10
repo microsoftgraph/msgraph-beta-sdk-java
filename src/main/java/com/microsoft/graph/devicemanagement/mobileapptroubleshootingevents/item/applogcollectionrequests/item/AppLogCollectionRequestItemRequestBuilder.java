@@ -65,7 +65,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The collection property of AppLogUploadRequest.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> get() {
@@ -74,7 +74,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * The collection property of AppLogUploadRequest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property appLogCollectionRequests in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> patch(@jakarta.annotation.Nonnull final AppLogCollectionRequest body) {
@@ -97,7 +97,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property appLogCollectionRequests in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> patch(@jakarta.annotation.Nonnull final AppLogCollectionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -14,7 +14,7 @@ public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<YearTimePeriodDefinition> value;
     /**
-     * Instantiates a new yearTimePeriodDefinitionCollectionResponse and sets the default values.
+     * Instantiates a new YearTimePeriodDefinitionCollectionResponse and sets the default values.
      */
     public YearTimePeriodDefinitionCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a yearTimePeriodDefinitionCollectionResponse
+     * @return a YearTimePeriodDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static YearTimePeriodDefinitionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class YearTimePeriodDefinitionCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a yearTimePeriodDefinition
+     * @return a java.util.List<YearTimePeriodDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<YearTimePeriodDefinition> getValue() {

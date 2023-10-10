@@ -36,9 +36,9 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/evaluateDynamicMembership", rawUrl);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      * @see <a href="https://learn.microsoft.com/graph/api/group-evaluatedynamicmembership?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
         return post(body, null);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a CompletableFuture of EvaluateDynamicMembershipResult
      * @see <a href="https://learn.microsoft.com/graph/api/group-evaluatedynamicmembership?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a evaluateDynamicMembershipRequestBuilder
+     * @return a EvaluateDynamicMembershipRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EvaluateDynamicMembershipRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

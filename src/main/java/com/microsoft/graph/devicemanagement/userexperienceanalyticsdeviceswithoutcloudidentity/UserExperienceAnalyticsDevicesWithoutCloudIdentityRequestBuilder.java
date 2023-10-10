@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
     }
     /**
      * User experience analytics devices without cloud identity.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
     /**
      * User experience analytics devices without cloud identity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
     /**
      * Create new navigation property to userExperienceAnalyticsDevicesWithoutCloudIdentity for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentity> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceWithoutCloudIdentity body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
      * Create new navigation property to userExperienceAnalyticsDevicesWithoutCloudIdentity for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceWithoutCloudIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceWithoutCloudIdentity> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceWithoutCloudIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder
+     * @return a UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

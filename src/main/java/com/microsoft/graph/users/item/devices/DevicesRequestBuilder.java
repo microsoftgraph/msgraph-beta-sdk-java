@@ -5,10 +5,7 @@ import com.microsoft.graph.models.DeviceCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.devices.count.CountRequestBuilder;
 import com.microsoft.graph.users.item.devices.delta.DeltaRequestBuilder;
-import com.microsoft.graph.users.item.devices.getbyids.GetByIdsRequestBuilder;
-import com.microsoft.graph.users.item.devices.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.DeviceItemRequestBuilder;
-import com.microsoft.graph.users.item.devices.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -42,27 +39,6 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getByIds method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetByIdsRequestBuilder getByIds() {
-        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getUserOwnedObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
-        return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the validateProperties method.
-     */
-    @jakarta.annotation.Nonnull
-    public ValidatePropertiesRequestBuilder validateProperties() {
-        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the devices property of the microsoft.graph.user entity.
      * @param deviceId The unique identifier of device
      * @return a DeviceItemRequestBuilder
@@ -92,7 +68,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get devices from users
-     * @return a CompletableFuture of deviceCollectionResponse
+     * @return a CompletableFuture of DeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get() {
@@ -101,7 +77,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get devices from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCollectionResponse
+     * @return a CompletableFuture of DeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -114,7 +90,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to devices for users
      * @param body The request body
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> post(@jakarta.annotation.Nonnull final Device body) {
@@ -124,7 +100,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to devices for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a CompletableFuture of Device
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Device> post(@jakarta.annotation.Nonnull final Device body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -199,7 +175,7 @@ public class DevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a devicesRequestBuilder
+     * @return a DevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

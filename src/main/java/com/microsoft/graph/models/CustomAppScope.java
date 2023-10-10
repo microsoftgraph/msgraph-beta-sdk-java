@@ -13,7 +13,7 @@ public class CustomAppScope extends AppScope implements Parsable {
      */
     private CustomAppScopeAttributesDictionary customAttributes;
     /**
-     * Instantiates a new customAppScope and sets the default values.
+     * Instantiates a new CustomAppScope and sets the default values.
      */
     public CustomAppScope() {
         super();
@@ -22,7 +22,7 @@ public class CustomAppScope extends AppScope implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customAppScope
+     * @return a CustomAppScope
      */
     @jakarta.annotation.Nonnull
     public static CustomAppScope createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class CustomAppScope extends AppScope implements Parsable {
     }
     /**
      * Gets the customAttributes property value. The customAttributes property
-     * @return a customAppScopeAttributesDictionary
+     * @return a CustomAppScopeAttributesDictionary
      */
     @jakarta.annotation.Nullable
     public CustomAppScopeAttributesDictionary getCustomAttributes() {

@@ -57,7 +57,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Data sources that represent Exchange mailboxes.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSource> get() {
@@ -66,7 +66,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Data sources that represent Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSource> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property userSources in security
      * @param body The request body
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSource> patch(@jakarta.annotation.Nonnull final UserSource body) {
@@ -89,7 +89,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property userSources in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userSource
+     * @return a CompletableFuture of UserSource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserSource> patch(@jakarta.annotation.Nonnull final UserSource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

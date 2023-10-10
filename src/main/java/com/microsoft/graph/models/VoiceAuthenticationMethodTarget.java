@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VoiceAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /**
-     * Instantiates a new voiceAuthenticationMethodTarget and sets the default values.
+     * Instantiates a new VoiceAuthenticationMethodTarget and sets the default values.
      */
     public VoiceAuthenticationMethodTarget() {
         super();
@@ -17,7 +17,7 @@ public class VoiceAuthenticationMethodTarget extends AuthenticationMethodTarget 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a voiceAuthenticationMethodTarget
+     * @return a VoiceAuthenticationMethodTarget
      */
     @jakarta.annotation.Nonnull
     public static VoiceAuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

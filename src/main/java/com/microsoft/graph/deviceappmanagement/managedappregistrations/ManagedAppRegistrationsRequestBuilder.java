@@ -68,7 +68,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The managed app registrations.
-     * @return a CompletableFuture of managedAppRegistrationCollectionResponse
+     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed app registrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistrationCollectionResponse
+     * @return a CompletableFuture of ManagedAppRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistrationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedAppRegistrations for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> post(@jakarta.annotation.Nonnull final ManagedAppRegistration body) {
@@ -100,7 +100,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedAppRegistrations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppRegistration
+     * @return a CompletableFuture of ManagedAppRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppRegistration> post(@jakarta.annotation.Nonnull final ManagedAppRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class ManagedAppRegistrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedAppRegistrationsRequestBuilder
+     * @return a ManagedAppRegistrationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedAppRegistrationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

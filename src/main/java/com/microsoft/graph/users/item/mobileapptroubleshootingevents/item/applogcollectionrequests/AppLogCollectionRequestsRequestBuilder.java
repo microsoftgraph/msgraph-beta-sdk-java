@@ -60,7 +60,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection property of AppLogUploadRequest.
-     * @return a CompletableFuture of appLogCollectionRequestCollectionResponse
+     * @return a CompletableFuture of AppLogCollectionRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequestCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection property of AppLogUploadRequest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequestCollectionResponse
+     * @return a CompletableFuture of AppLogCollectionRequestCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequestCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to appLogCollectionRequests for users
      * @param body The request body
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> post(@jakarta.annotation.Nonnull final AppLogCollectionRequest body) {
@@ -92,7 +92,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to appLogCollectionRequests for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appLogCollectionRequest
+     * @return a CompletableFuture of AppLogCollectionRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppLogCollectionRequest> post(@jakarta.annotation.Nonnull final AppLogCollectionRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appLogCollectionRequestsRequestBuilder
+     * @return a AppLogCollectionRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppLogCollectionRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

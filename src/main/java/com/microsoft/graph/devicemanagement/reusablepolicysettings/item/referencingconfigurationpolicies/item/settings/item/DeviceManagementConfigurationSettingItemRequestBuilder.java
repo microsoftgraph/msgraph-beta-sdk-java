@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder extends Base
     }
     /**
      * Policy settings
-     * @return a CompletableFuture of deviceManagementConfigurationSetting
+     * @return a CompletableFuture of DeviceManagementConfigurationSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSetting> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder extends Base
     /**
      * Policy settings
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationSetting
+     * @return a CompletableFuture of DeviceManagementConfigurationSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSetting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder extends Base
     /**
      * Update the navigation property settings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationSetting
+     * @return a CompletableFuture of DeviceManagementConfigurationSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSetting> patch(@jakarta.annotation.Nonnull final DeviceManagementConfigurationSetting body) {
@@ -97,7 +97,7 @@ public class DeviceManagementConfigurationSettingItemRequestBuilder extends Base
      * Update the navigation property settings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationSetting
+     * @return a CompletableFuture of DeviceManagementConfigurationSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSetting> patch(@jakarta.annotation.Nonnull final DeviceManagementConfigurationSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -64,17 +64,17 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get endUserNotifications from security
-     * @return a CompletableFuture of endUserNotification
+     * Represents an end user's notification for an attack simulation training.
+     * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotification> get() {
         return get(null);
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endUserNotification
+     * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotification> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property endUserNotifications in security
      * @param body The request body
-     * @return a CompletableFuture of endUserNotification
+     * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotification> patch(@jakarta.annotation.Nonnull final EndUserNotification body) {
@@ -97,7 +97,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property endUserNotifications in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of endUserNotification
+     * @return a CompletableFuture of EndUserNotification
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EndUserNotification> patch(@jakarta.annotation.Nonnull final EndUserNotification body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class EndUserNotificationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get endUserNotifications from security
+     * Represents an end user's notification for an attack simulation training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

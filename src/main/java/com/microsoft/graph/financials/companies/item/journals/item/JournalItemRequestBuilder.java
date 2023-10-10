@@ -81,7 +81,7 @@ public class JournalItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get journals from financials
-     * @return a CompletableFuture of journal
+     * @return a CompletableFuture of Journal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Journal> get() {
@@ -90,7 +90,7 @@ public class JournalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get journals from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of journal
+     * @return a CompletableFuture of Journal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Journal> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class JournalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property journals in financials
      * @param body The request body
-     * @return a CompletableFuture of journal
+     * @return a CompletableFuture of Journal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Journal> patch(@jakarta.annotation.Nonnull final Journal body) {
@@ -113,7 +113,7 @@ public class JournalItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property journals in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of journal
+     * @return a CompletableFuture of Journal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Journal> patch(@jakarta.annotation.Nonnull final Journal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

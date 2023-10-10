@@ -68,7 +68,7 @@ public class MigratableToRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Collection of templates this template can migrate to
-     * @return a CompletableFuture of deviceManagementTemplateCollectionResponse
+     * @return a CompletableFuture of DeviceManagementTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class MigratableToRequestBuilder extends BaseRequestBuilder {
     /**
      * Collection of templates this template can migrate to
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplateCollectionResponse
+     * @return a CompletableFuture of DeviceManagementTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class MigratableToRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to migratableTo for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementTemplate
+     * @return a CompletableFuture of DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplate> post(@jakarta.annotation.Nonnull final DeviceManagementTemplate body) {
@@ -100,7 +100,7 @@ public class MigratableToRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to migratableTo for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementTemplate
+     * @return a CompletableFuture of DeviceManagementTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementTemplate> post(@jakarta.annotation.Nonnull final DeviceManagementTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class MigratableToRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a migratableToRequestBuilder
+     * @return a MigratableToRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MigratableToRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

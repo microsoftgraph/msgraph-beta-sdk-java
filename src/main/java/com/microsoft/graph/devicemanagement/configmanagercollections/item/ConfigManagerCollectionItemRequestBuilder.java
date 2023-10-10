@@ -57,7 +57,7 @@ public class ConfigManagerCollectionItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * A list of ConfigManagerCollection
-     * @return a CompletableFuture of configManagerCollection
+     * @return a CompletableFuture of ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollection> get() {
@@ -66,7 +66,7 @@ public class ConfigManagerCollectionItemRequestBuilder extends BaseRequestBuilde
     /**
      * A list of ConfigManagerCollection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of configManagerCollection
+     * @return a CompletableFuture of ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ConfigManagerCollectionItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property configManagerCollections in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of configManagerCollection
+     * @return a CompletableFuture of ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollection> patch(@jakarta.annotation.Nonnull final ConfigManagerCollection body) {
@@ -89,7 +89,7 @@ public class ConfigManagerCollectionItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property configManagerCollections in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of configManagerCollection
+     * @return a CompletableFuture of ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConfigManagerCollection> patch(@jakarta.annotation.Nonnull final ConfigManagerCollection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -13,7 +13,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      */
     private PrivilegedAccessGroupRelationships accessId;
     /**
-     * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
+     * When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
      */
     private PrivilegedAccessGroupEligibilitySchedule activatedUsing;
     /**
@@ -41,7 +41,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
      */
     private String principalId;
     /**
-     * Instantiates a new privilegedAccessGroupAssignmentSchedule and sets the default values.
+     * Instantiates a new PrivilegedAccessGroupAssignmentSchedule and sets the default values.
      */
     public PrivilegedAccessGroupAssignmentSchedule() {
         super();
@@ -50,7 +50,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessGroupAssignmentSchedule
+     * @return a PrivilegedAccessGroupAssignmentSchedule
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroupAssignmentSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,15 +59,15 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the accessId property value. The identifier of the membership or ownership assignment to the group that is governed by PIM. Required. The possible values are: owner, member, unknownFutureValue.
-     * @return a privilegedAccessGroupRelationships
+     * @return a PrivilegedAccessGroupRelationships
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupRelationships getAccessId() {
         return this.accessId;
     }
     /**
-     * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
-     * @return a privilegedAccessGroupEligibilitySchedule
+     * Gets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
+     * @return a PrivilegedAccessGroupEligibilitySchedule
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupEligibilitySchedule getActivatedUsing() {
@@ -75,7 +75,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the assignmentType property value. Indicates whether the membership or ownership assignment for the principal is granted through activation or direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue.
-     * @return a privilegedAccessGroupAssignmentType
+     * @return a PrivilegedAccessGroupAssignmentType
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupAssignmentType getAssignmentType() {
@@ -100,7 +100,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the group property value. References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
-     * @return a group
+     * @return a Group
      */
     @jakarta.annotation.Nullable
     public Group getGroup() {
@@ -108,7 +108,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the groupId property value. The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
@@ -116,7 +116,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the memberType property value. Indicates whether the assignment is derived from a direct group assignment or through a transitive assignment. The possible values are: direct, group, unknownFutureValue.
-     * @return a privilegedAccessGroupMemberType
+     * @return a PrivilegedAccessGroupMemberType
      */
     @jakarta.annotation.Nullable
     public PrivilegedAccessGroupMemberType getMemberType() {
@@ -124,7 +124,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the principal property value. References the principal that's in the scope of this membership or ownership assignment request to the group that's governed by PIM. Supports $expand.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getPrincipal() {
@@ -132,7 +132,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
     }
     /**
      * Gets the principalId property value. The identifier of the principal whose membership or ownership assignment is granted through PIM for groups. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrincipalId() {
@@ -162,7 +162,7 @@ public class PrivilegedAccessGroupAssignmentSchedule extends PrivilegedAccessSch
         this.accessId = value;
     }
     /**
-     * Sets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it is null. Supports $expand.
+     * Sets the activatedUsing property value. When the request activates an ownership or membership assignment in PIM for groups, this object represents the eligibility relationship. Otherwise, it's null. Supports $expand.
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilitySchedule value) {

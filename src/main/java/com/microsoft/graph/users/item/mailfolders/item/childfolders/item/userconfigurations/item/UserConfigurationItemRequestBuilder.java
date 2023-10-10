@@ -38,7 +38,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get userConfigurations from users
-     * @return a CompletableFuture of userConfiguration
+     * @return a CompletableFuture of UserConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserConfiguration> get() {
@@ -47,7 +47,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get userConfigurations from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userConfiguration
+     * @return a CompletableFuture of UserConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -50,7 +50,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
      */
     private String scopeType;
     /**
-     * Instantiates a new unifiedRoleManagementAlert and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlert and sets the default values.
      */
     public UnifiedRoleManagementAlert() {
         super();
@@ -58,7 +58,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlert
+     * @return a UnifiedRoleManagementAlert
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlert createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertConfiguration property value. The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $filter for the isEnabled property and $expand.
-     * @return a unifiedRoleManagementAlertConfiguration
+     * @return a UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertConfiguration getAlertConfiguration() {
@@ -75,7 +75,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertDefinition property value. Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
-     * @return a unifiedRoleManagementAlertDefinition
+     * @return a UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertDefinition getAlertDefinition() {
@@ -83,7 +83,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertDefinitionId property value. The identifier of an alert definition. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertDefinitionId() {
@@ -91,7 +91,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the alertIncidents property value. Represents the incidents of this type of alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
-     * @return a unifiedRoleManagementAlertIncident
+     * @return a java.util.List<UnifiedRoleManagementAlertIncident>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementAlertIncident> getAlertIncidents() {
@@ -118,7 +118,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the incidentCount property value. The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIncidentCount() {
@@ -126,7 +126,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the isActive property value. false by default. true if the alert is active.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
@@ -150,7 +150,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
@@ -158,7 +158,7 @@ public class UnifiedRoleManagementAlert extends Entity implements Parsable {
     }
     /**
      * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {

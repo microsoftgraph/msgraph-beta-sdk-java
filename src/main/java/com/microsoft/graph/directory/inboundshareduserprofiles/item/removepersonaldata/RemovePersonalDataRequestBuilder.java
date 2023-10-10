@@ -35,7 +35,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles/{inboundSharedUserProfile%2DuserId}/removePersonalData", rawUrl);
     }
     /**
-     * Create a request to remove the personal data for an inboundSharedUserProfile. 
+     * Create a request to remove the personal data for an inboundSharedUserProfile.  This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-removepersonaldata?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Create a request to remove the personal data for an inboundSharedUserProfile. 
+     * Create a request to remove the personal data for an inboundSharedUserProfile.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/inboundshareduserprofile-removepersonaldata?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Create a request to remove the personal data for an inboundSharedUserProfile. 
+     * Create a request to remove the personal data for an inboundSharedUserProfile.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Create a request to remove the personal data for an inboundSharedUserProfile. 
+     * Create a request to remove the personal data for an inboundSharedUserProfile.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class RemovePersonalDataRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a removePersonalDataRequestBuilder
+     * @return a RemovePersonalDataRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RemovePersonalDataRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

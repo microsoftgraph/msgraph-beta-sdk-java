@@ -57,7 +57,7 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the definition of the policy ruleset that makes up the core definition of a policy.
-     * @return a CompletableFuture of policyRule
+     * @return a CompletableFuture of PolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRule> get() {
@@ -66,7 +66,7 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the definition of the policy ruleset that makes up the core definition of a policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policyRule
+     * @return a CompletableFuture of PolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRule> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property policyRules in networkAccess
      * @param body The request body
-     * @return a CompletableFuture of policyRule
+     * @return a CompletableFuture of PolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRule> patch(@jakarta.annotation.Nonnull final PolicyRule body) {
@@ -89,7 +89,7 @@ public class PolicyRuleItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property policyRules in networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policyRule
+     * @return a CompletableFuture of PolicyRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicyRule> patch(@jakarta.annotation.Nonnull final PolicyRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

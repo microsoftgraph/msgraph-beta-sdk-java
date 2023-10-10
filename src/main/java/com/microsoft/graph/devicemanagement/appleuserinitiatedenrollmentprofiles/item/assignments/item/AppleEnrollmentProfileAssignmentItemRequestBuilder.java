@@ -57,7 +57,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder extends BaseRequ
     }
     /**
      * The list of assignments for this profile.
-     * @return a CompletableFuture of appleEnrollmentProfileAssignment
+     * @return a CompletableFuture of AppleEnrollmentProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleEnrollmentProfileAssignment> get() {
@@ -66,7 +66,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder extends BaseRequ
     /**
      * The list of assignments for this profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appleEnrollmentProfileAssignment
+     * @return a CompletableFuture of AppleEnrollmentProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleEnrollmentProfileAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of appleEnrollmentProfileAssignment
+     * @return a CompletableFuture of AppleEnrollmentProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleEnrollmentProfileAssignment> patch(@jakarta.annotation.Nonnull final AppleEnrollmentProfileAssignment body) {
@@ -89,7 +89,7 @@ public class AppleEnrollmentProfileAssignmentItemRequestBuilder extends BaseRequ
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appleEnrollmentProfileAssignment
+     * @return a CompletableFuture of AppleEnrollmentProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleEnrollmentProfileAssignment> patch(@jakarta.annotation.Nonnull final AppleEnrollmentProfileAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

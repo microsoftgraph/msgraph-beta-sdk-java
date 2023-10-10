@@ -39,24 +39,24 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends Base
     }
     /**
      * Invoke function getRelyingPartyDetailedSummary
-     * @return a CompletableFuture of getRelyingPartyDetailedSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetRelyingPartyDetailedSummaryWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getRelyingPartyDetailedSummary
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRelyingPartyDetailedSummaryWithPeriodResponse
+     * @return a CompletableFuture of GetRelyingPartyDetailedSummaryWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetRelyingPartyDetailedSummaryWithPeriodGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetRelyingPartyDetailedSummaryWithPeriodResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetRelyingPartyDetailedSummaryWithPeriodGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getRelyingPartyDetailedSummary
@@ -90,7 +90,7 @@ public class GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRelyingPartyDetailedSummaryWithPeriodRequestBuilder
+     * @return a GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ManagedTenantTicketingEndpointsRequestBuilder extends BaseRequestBu
     }
     /**
      * Get managedTenantTicketingEndpoints from tenantRelationships
-     * @return a CompletableFuture of managedTenantTicketingEndpointCollectionResponse
+     * @return a CompletableFuture of ManagedTenantTicketingEndpointCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpointCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagedTenantTicketingEndpointsRequestBuilder extends BaseRequestBu
     /**
      * Get managedTenantTicketingEndpoints from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantTicketingEndpointCollectionResponse
+     * @return a CompletableFuture of ManagedTenantTicketingEndpointCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpointCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagedTenantTicketingEndpointsRequestBuilder extends BaseRequestBu
     /**
      * Create new navigation property to managedTenantTicketingEndpoints for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managedTenantTicketingEndpoint
+     * @return a CompletableFuture of ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpoint> post(@jakarta.annotation.Nonnull final ManagedTenantTicketingEndpoint body) {
@@ -92,7 +92,7 @@ public class ManagedTenantTicketingEndpointsRequestBuilder extends BaseRequestBu
      * Create new navigation property to managedTenantTicketingEndpoints for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedTenantTicketingEndpoint
+     * @return a CompletableFuture of ManagedTenantTicketingEndpoint
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedTenantTicketingEndpoint> post(@jakarta.annotation.Nonnull final ManagedTenantTicketingEndpoint body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagedTenantTicketingEndpointsRequestBuilder extends BaseRequestBu
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedTenantTicketingEndpointsRequestBuilder
+     * @return a ManagedTenantTicketingEndpointsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedTenantTicketingEndpointsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

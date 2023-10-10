@@ -46,7 +46,7 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the allowedHeaders property value. The request headers that the origin domain may specify on the CORS request. The wildcard character * indicates that any header beginning with the specified prefix is allowed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedHeaders() {
@@ -54,7 +54,7 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the allowedMethods property value. The HTTP request methods that the origin domain may use for a CORS request.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedMethods() {
@@ -62,7 +62,7 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the allowedOrigins property value. The origin domains that are permitted to make a request against the service via CORS. The origin domain is the domain from which the request originates. The origin must be an exact case-sensitive match with the origin that the user agent sends to the service.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedOrigins() {
@@ -84,7 +84,7 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxAgeInSeconds() {
@@ -92,7 +92,7 @@ public class CorsConfigurationV2 extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource within the application segment for which CORS permissions are granted. / grants permission for the whole app segment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResource() {

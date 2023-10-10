@@ -58,7 +58,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
      */
     private String userId;
     /**
-     * Instantiates a new privilegedRoleAssignmentRequest and sets the default values.
+     * Instantiates a new PrivilegedRoleAssignmentRequest and sets the default values.
      */
     public PrivilegedRoleAssignmentRequest() {
         super();
@@ -66,7 +66,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleAssignmentRequest
+     * @return a PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleAssignmentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the assignmentState property value. The assignmentState property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
@@ -83,7 +83,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the duration property value. The duration property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDuration() {
@@ -112,7 +112,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the reason property value. The reason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReason() {
@@ -128,7 +128,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
@@ -136,7 +136,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
-     * @return a privilegedRole
+     * @return a PrivilegedRole
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
@@ -144,7 +144,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the schedule property value. The schedule property
-     * @return a governanceSchedule
+     * @return a GovernanceSchedule
      */
     @jakarta.annotation.Nullable
     public GovernanceSchedule getSchedule() {
@@ -152,7 +152,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -160,7 +160,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the ticketNumber property value. The ticketNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTicketNumber() {
@@ -168,7 +168,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the ticketSystem property value. The ticketSystem property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTicketSystem() {
@@ -176,7 +176,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -184,7 +184,7 @@ public class PrivilegedRoleAssignmentRequest extends Entity implements Parsable 
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

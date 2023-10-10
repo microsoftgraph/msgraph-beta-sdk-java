@@ -65,7 +65,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get entity from mobilityManagementPolicies by key
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> get() {
@@ -74,7 +74,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Get entity from mobilityManagementPolicies by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in mobilityManagementPolicies
      * @param body The request body
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
@@ -97,7 +97,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
      * Update entity in mobilityManagementPolicies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -39,24 +39,24 @@ public class GetOffice365ServicesUserCountsWithPeriodRequestBuilder extends Base
     }
     /**
      * Invoke function getOffice365ServicesUserCounts
-     * @return a CompletableFuture of getOffice365ServicesUserCountsWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365ServicesUserCountsWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOffice365ServicesUserCountsWithPeriodResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetOffice365ServicesUserCountsWithPeriodGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getOffice365ServicesUserCounts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getOffice365ServicesUserCountsWithPeriodResponse
+     * @return a CompletableFuture of GetOffice365ServicesUserCountsWithPeriodGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetOffice365ServicesUserCountsWithPeriodResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetOffice365ServicesUserCountsWithPeriodGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetOffice365ServicesUserCountsWithPeriodResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetOffice365ServicesUserCountsWithPeriodGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getOffice365ServicesUserCounts
@@ -90,7 +90,7 @@ public class GetOffice365ServicesUserCountsWithPeriodRequestBuilder extends Base
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getOffice365ServicesUserCountsWithPeriodRequestBuilder
+     * @return a GetOffice365ServicesUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ServicesUserCountsWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

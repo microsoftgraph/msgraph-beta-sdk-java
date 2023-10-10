@@ -45,7 +45,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/policies/{trustFrameworkPolicy%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get policies from trustFramework
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> get() {
@@ -76,7 +76,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get policies from trustFramework
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property policies in trustFramework
      * @param body The request body
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> patch(@jakarta.annotation.Nonnull final TrustFrameworkPolicy body) {
@@ -99,7 +99,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property policies in trustFramework
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trustFrameworkPolicy
+     * @return a CompletableFuture of TrustFrameworkPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrustFrameworkPolicy> patch(@jakarta.annotation.Nonnull final TrustFrameworkPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TrustFrameworkPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class TrustFrameworkPolicyItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

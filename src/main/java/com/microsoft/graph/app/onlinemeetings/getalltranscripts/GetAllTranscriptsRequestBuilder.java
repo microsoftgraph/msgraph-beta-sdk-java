@@ -37,24 +37,24 @@ public class GetAllTranscriptsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getAllTranscripts
-     * @return a CompletableFuture of getAllTranscriptsResponse
+     * @return a CompletableFuture of GetAllTranscriptsGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAllTranscriptsResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetAllTranscriptsGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getAllTranscripts
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getAllTranscriptsResponse
+     * @return a CompletableFuture of GetAllTranscriptsGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetAllTranscriptsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetAllTranscriptsGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetAllTranscriptsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetAllTranscriptsGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getAllTranscripts
@@ -88,7 +88,7 @@ public class GetAllTranscriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAllTranscriptsRequestBuilder
+     * @return a GetAllTranscriptsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAllTranscriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -35,7 +35,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/{cloudPC%2Did}/restore", rawUrl);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-restore?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-restore?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state.
+     * Restore a specific Cloud PC. Use this API to trigger a remote action that restores a Cloud PC device to a previous state. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a restoreRequestBuilder
+     * @return a RestoreRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

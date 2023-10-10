@@ -20,7 +20,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      */
     private String managedDeviceId;
     /**
-     * Instantiates a new iosVppAppAssignedDeviceLicense and sets the default values.
+     * Instantiates a new IosVppAppAssignedDeviceLicense and sets the default values.
      */
     public IosVppAppAssignedDeviceLicense() {
         super();
@@ -28,7 +28,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppAppAssignedDeviceLicense
+     * @return a IosVppAppAssignedDeviceLicense
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppAssignedDeviceLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     }
     /**
      * Gets the deviceName property value. The device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -56,7 +56,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     }
     /**
      * Gets the managedDeviceId property value. The managed device ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {

@@ -66,8 +66,8 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/runs{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the industryDataRun objects and their properties.
-     * @return a CompletableFuture of industryDataRunCollectionResponse
+     * Get a list of the industryDataRun objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of IndustryDataRunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -75,9 +75,9 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the industryDataRun objects and their properties.
+     * Get a list of the industryDataRun objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataRunCollectionResponse
+     * @return a CompletableFuture of IndustryDataRunCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydatarun-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, IndustryDataRunCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the industryDataRun objects and their properties.
+     * Get a list of the industryDataRun objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the industryDataRun objects and their properties.
+     * Get a list of the industryDataRun objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -120,7 +120,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a runsRequestBuilder
+     * @return a RunsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -128,7 +128,7 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
         return new RunsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the industryDataRun objects and their properties.
+     * Get a list of the industryDataRun objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

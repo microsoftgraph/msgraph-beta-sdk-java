@@ -64,17 +64,17 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get trainings from security
-     * @return a CompletableFuture of training
+     * Represents details about attack simulation trainings.
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> get() {
         return get(null);
     }
     /**
-     * Get trainings from security
+     * Represents details about attack simulation trainings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property trainings in security
      * @param body The request body
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> patch(@jakarta.annotation.Nonnull final Training body) {
@@ -97,7 +97,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property trainings in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of training
+     * @return a CompletableFuture of Training
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Training> patch(@jakarta.annotation.Nonnull final Training body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get trainings from security
+     * Represents details about attack simulation trainings.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get trainings from security
+     * Represents details about attack simulation trainings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class TrainingItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get trainings from security
+     * Represents details about attack simulation trainings.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

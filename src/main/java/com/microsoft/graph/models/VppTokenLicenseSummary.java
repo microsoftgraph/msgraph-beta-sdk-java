@@ -41,7 +41,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
      */
     private String vppTokenId;
     /**
-     * Instantiates a new vppTokenLicenseSummary and sets the default values.
+     * Instantiates a new VppTokenLicenseSummary and sets the default values.
      */
     public VppTokenLicenseSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -49,7 +49,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vppTokenLicenseSummary
+     * @return a VppTokenLicenseSummary
      */
     @jakarta.annotation.Nonnull
     public static VppTokenLicenseSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
         return new VppTokenLicenseSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appleId property value. The Apple Id associated with the given Apple Volume Purchase Program Token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppleId() {
@@ -74,7 +74,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the availableLicenseCount property value. The number of VPP licenses available.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAvailableLicenseCount() {
@@ -97,7 +97,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganizationName() {
@@ -113,7 +113,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
@@ -121,7 +121,7 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vppTokenId property value. Identifier of the VPP token.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVppTokenId() {
@@ -142,8 +142,8 @@ public class VppTokenLicenseSummary implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

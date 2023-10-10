@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder extends
     }
     /**
      * Invoke function userExperienceAnalyticsSummarizedDeviceScopes
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScopeSummary
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScopeSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScopeSummary> get() {
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder extends
     /**
      * Invoke function userExperienceAnalyticsSummarizedDeviceScopes
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScopeSummary
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScopeSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScopeSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder extends
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsSummarizedDeviceScopesRequestBuilder
+     * @return a UserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

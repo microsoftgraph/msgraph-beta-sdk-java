@@ -65,7 +65,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get accessPackageResourceRole from identityGovernance
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> get() {
@@ -74,7 +74,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Get accessPackageResourceRole from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property accessPackageResourceRole in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRole body) {
@@ -97,7 +97,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property accessPackageResourceRole in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceRole
+     * @return a CompletableFuture of AccessPackageResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageResourceRole> patch(@jakarta.annotation.Nonnull final AccessPackageResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageResourceRoleRequestBuilder
+     * @return a AccessPackageResourceRoleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageResourceRoleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

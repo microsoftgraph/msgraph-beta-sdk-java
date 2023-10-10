@@ -57,7 +57,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Zero or more long running operations triggered on the app registration.
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppOperation> get() {
@@ -66,7 +66,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Zero or more long running operations triggered on the app registration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppOperation> patch(@jakarta.annotation.Nonnull final ManagedAppOperation body) {
@@ -89,7 +89,7 @@ public class ManagedAppOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppOperation
+     * @return a CompletableFuture of ManagedAppOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppOperation> patch(@jakarta.annotation.Nonnull final ManagedAppOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
