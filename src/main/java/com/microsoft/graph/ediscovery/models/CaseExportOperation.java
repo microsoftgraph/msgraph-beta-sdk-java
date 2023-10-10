@@ -57,7 +57,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Export Options.
-     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
+     * The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      */
     @SerializedName(value = "exportOptions", alternate = {"ExportOptions"})
     @Expose
@@ -66,7 +66,7 @@ public class CaseExportOperation extends CaseOperation implements IJsonBackedObj
 
     /**
      * The Export Structure.
-     * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+     * The options provided specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
      */
     @SerializedName(value = "exportStructure", alternate = {"ExportStructure"})
     @Expose

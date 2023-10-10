@@ -104,7 +104,7 @@ public class ParticipantInfo implements IJsonBackedObject {
 
     /**
      * The Region.
-     * The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant's current physical location, unlike countryCode. Read-only.
+     * The home region of the participant, and can be a country, a continent, or a larger geographic region. The region doesn't change based on the participant's current physical location, unlike countryCode. Read-only.
      */
     @SerializedName(value = "region", alternate = {"Region"})
     @Expose

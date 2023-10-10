@@ -39,7 +39,7 @@ public class CloudPcSupportedRegion extends Entity implements IJsonBackedObject 
 
     /**
      * The Region Group.
-     * The geographic group this region belongs to. Multiple regions can belong to one region group. For example, the europeUnion region group contains the Northern Europe and Western Europe regions. A customer can select a region group when provisioning a Cloud PC; however, the Cloud PC will be put under one of the regions under the group based on resource capacity. The region with more quota will be chosen. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland，southKorea. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: norway, switzerland，southKorea. Read-only.
+     * The geographic group this region belongs to. Multiple regions can belong to one region group. For example, the europeUnion region group contains the Northern Europe and Western Europe regions. A customer can select a region group when provisioning a Cloud PC; however, the Cloud PC is put under one of the regions under the group based on resource capacity. The region with more quota will be chosen. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland，southKorea. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: norway, switzerland，southKorea. Read-only.
      */
     @SerializedName(value = "regionGroup", alternate = {"RegionGroup"})
     @Expose
@@ -57,7 +57,7 @@ public class CloudPcSupportedRegion extends Entity implements IJsonBackedObject 
 
     /**
      * The Supported Solution.
-     * The supported service or solution for the region. The possible values are: windows365, devBox, unknownFutureValue, rpaBox. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
+     * The supported service or solution for the region. The possible values are: windows365, devBox, unknownFutureValue, rpaBox. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
      */
     @SerializedName(value = "supportedSolution", alternate = {"SupportedSolution"})
     @Expose

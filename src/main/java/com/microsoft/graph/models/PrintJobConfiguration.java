@@ -50,7 +50,7 @@ public class PrintJobConfiguration implements IJsonBackedObject {
 
     /**
      * The Collate.
-     * Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
+     * Whether the printer should collate pages when printing multiple copies of a multi-page document.
      */
     @SerializedName(value = "collate", alternate = {"Collate"})
     @Expose

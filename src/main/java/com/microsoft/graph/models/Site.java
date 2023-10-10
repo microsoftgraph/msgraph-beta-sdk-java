@@ -17,6 +17,7 @@ import com.microsoft.graph.models.SiteCollection;
 import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.ItemAnalytics;
 import com.microsoft.graph.models.Drive;
+import com.microsoft.graph.models.RecycleBin;
 import com.microsoft.graph.termstore.models.Store;
 import com.microsoft.graph.models.Onenote;
 import com.microsoft.graph.models.BaseItem;
@@ -60,6 +61,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Is Personal Site.
+     * 
+     */
+    @SerializedName(value = "isPersonalSite", alternate = {"IsPersonalSite"})
+    @Expose
+	@Nullable
+    public Boolean isPersonalSite;
 
     /**
      * The Root.
@@ -202,6 +212,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.PermissionCollectionPage permissions;
+
+    /**
+     * The Recycle Bin.
+     * The collection of recycleBinItems under this site.
+     */
+    @SerializedName(value = "recycleBin", alternate = {"RecycleBin"})
+    @Expose
+	@Nullable
+    public RecycleBin recycleBin;
 
     /**
      * The Sites.

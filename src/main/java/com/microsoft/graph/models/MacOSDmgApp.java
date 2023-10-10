@@ -30,7 +30,7 @@ public class MacOSDmgApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Ignore Version Detection.
-     * A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device.
+     * When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. The default value is FALSE.
      */
     @SerializedName(value = "ignoreVersionDetection", alternate = {"IgnoreVersionDetection"})
     @Expose
@@ -39,7 +39,7 @@ public class MacOSDmgApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Included Apps.
-     * The list of apps expected to be installed by the DMG.
+     * The list of .apps expected to be installed by the DMG (Apple Disk Image)
      */
     @SerializedName(value = "includedApps", alternate = {"IncludedApps"})
     @Expose
@@ -48,7 +48,7 @@ public class MacOSDmgApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
+     * ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      */
     @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
@@ -57,7 +57,7 @@ public class MacOSDmgApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Primary Bundle Id.
-     * The primary CFBundleIdentifier of the DMG.
+     * The bundleId of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleIdentifier in the app's bundle configuration.
      */
     @SerializedName(value = "primaryBundleId", alternate = {"PrimaryBundleId"})
     @Expose
@@ -66,7 +66,7 @@ public class MacOSDmgApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Primary Bundle Version.
-     * The primary CFBundleVersion of the DMG.
+     * The version of the primary .app in the DMG (Apple Disk Image). This maps to the CFBundleShortVersion in the app's bundle configuration.
      */
     @SerializedName(value = "primaryBundleVersion", alternate = {"PrimaryBundleVersion"})
     @Expose

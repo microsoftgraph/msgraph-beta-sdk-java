@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.security.models.Dictionary;
 import com.microsoft.graph.security.models.AlertClassification;
 import com.microsoft.graph.security.models.AlertComment;
 import com.microsoft.graph.security.models.DetectionSource;
@@ -44,6 +45,24 @@ public class Alert extends Entity implements IJsonBackedObject {
     public String actorDisplayName;
 
     /**
+     * The Additional Data.
+     * 
+     */
+    @SerializedName(value = "additionalData", alternate = {"AdditionalData"})
+    @Expose
+	@Nullable
+    public Dictionary additionalData;
+
+    /**
+     * The Alert Policy Id.
+     * 
+     */
+    @SerializedName(value = "alertPolicyId", alternate = {"AlertPolicyId"})
+    @Expose
+	@Nullable
+    public String alertPolicyId;
+
+    /**
      * The Alert Web Url.
      * URL for the alert page in the Microsoft 365 Defender portal.
      */
@@ -72,7 +91,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The Classification.
-     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, benignPositive, unknownFutureValue.
+     * Specifies whether the alert represents a true threat. Possible values are: unknown, falsePositive, truePositive, informationalExpectedActivity, unknownFutureValue.
      */
     @SerializedName(value = "classification", alternate = {"Classification"})
     @Expose
@@ -108,7 +127,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The Detection Source.
-     * Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
+     * Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
      */
     @SerializedName(value = "detectionSource", alternate = {"DetectionSource"})
     @Expose
@@ -225,7 +244,7 @@ public class Alert extends Entity implements IJsonBackedObject {
 
     /**
      * The Service Source.
-     * The service or product that created this alert. Possible values are: unknown, microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftDefenderForCloudApps, microsoftDefenderForOffice365, microsoft365Defender, azureAdIdentityProtection, microsoftAppGovernance, dataLossPrevention, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
+     * The service or product that created this alert. Possible values are: unknown, microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftDefenderForCloudApps, microsoftDefenderForOffice365, microsoft365Defender, azureAdIdentityProtection, microsoftAppGovernance, dataLossPrevention, unknownFutureValue, microsoftDefenderForCloud. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
      */
     @SerializedName(value = "serviceSource", alternate = {"ServiceSource"})
     @Expose

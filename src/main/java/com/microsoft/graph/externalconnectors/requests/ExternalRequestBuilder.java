@@ -67,6 +67,26 @@ public class ExternalRequestBuilder extends BaseRequestBuilder<External> {
         return new com.microsoft.graph.industrydata.requests.IndustryDataRootRequestBuilder(getRequestUrlWithAdditionalSegment("industryData"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the AuthorizationSystem collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthorizationSystemCollectionRequestBuilder authorizationSystems() {
+        return new com.microsoft.graph.requests.AuthorizationSystemCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationSystems"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AuthorizationSystem item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AuthorizationSystemRequestBuilder authorizationSystems(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AuthorizationSystemRequestBuilder(getRequestUrlWithAdditionalSegment("authorizationSystems") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ExternalConnection collection
      *
      * @return the collection request builder

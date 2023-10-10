@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Cloud Pc Reports Get Shared Use License Usage Report Request Builder.
+ * @deprecated The getSharedUseLicenseUsageReport API is deprecated and will stop returning on Oct 17, 2023. Please use getFrontlineReport instead.
  */
+@Deprecated
 public class CloudPcReportsGetSharedUseLicenseUsageReportRequestBuilder extends BaseActionRequestBuilder<java.io.InputStream> {
 
     /**

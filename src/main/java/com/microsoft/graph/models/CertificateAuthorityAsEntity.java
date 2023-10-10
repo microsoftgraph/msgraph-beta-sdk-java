@@ -27,7 +27,7 @@ public class CertificateAuthorityAsEntity extends Entity implements IJsonBackedO
 
     /**
      * The Certificate.
-     * 
+     * The trusted certificate.
      */
     @SerializedName(value = "certificate", alternate = {"Certificate"})
     @Expose
@@ -36,7 +36,7 @@ public class CertificateAuthorityAsEntity extends Entity implements IJsonBackedO
 
     /**
      * The Is Root Authority.
-     * 
+     * Indicates if the certificate is a root authority. In a certificateBasedApplicationConfiguration object, at least one object in the trustedCertificateAuthorities collection must be a root authority.
      */
     @SerializedName(value = "isRootAuthority", alternate = {"IsRootAuthority"})
     @Expose
@@ -45,7 +45,7 @@ public class CertificateAuthorityAsEntity extends Entity implements IJsonBackedO
 
     /**
      * The Issuer.
-     * 
+     * The issuer of the trusted certificate.
      */
     @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
@@ -54,7 +54,7 @@ public class CertificateAuthorityAsEntity extends Entity implements IJsonBackedO
 
     /**
      * The Issuer Subject Key Identifier.
-     * 
+     * The subject key identifier of the trusted certificate.
      */
     @SerializedName(value = "issuerSubjectKeyIdentifier", alternate = {"IssuerSubjectKeyIdentifier"})
     @Expose

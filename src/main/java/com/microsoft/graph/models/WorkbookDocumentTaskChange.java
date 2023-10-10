@@ -28,7 +28,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Assignee.
-     * 
+     * The user identity the task is assigned to. Only present when the type property is assign. Nullable.
      */
     @SerializedName(value = "assignee", alternate = {"Assignee"})
     @Expose
@@ -37,7 +37,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Changed By.
-     * 
+     * The identity of the user who performs the change.
      */
     @SerializedName(value = "changedBy", alternate = {"ChangedBy"})
     @Expose
@@ -46,7 +46,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Comment Id.
-     * 
+     * The identifier of the associated comment.
      */
     @SerializedName(value = "commentId", alternate = {"CommentId"})
     @Expose
@@ -55,7 +55,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the task was changed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -64,7 +64,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Due Date Time.
-     * 
+     * The due date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "dueDateTime", alternate = {"DueDateTime"})
     @Expose
@@ -73,7 +73,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Percent Complete.
-     * 
+     * An integer value from 0 to 100 that represents the percentage of the completion of the task and associated comment. 100 means that the task and associated comment are completed. If you change the completion from 100 to a lower value, the associated task and comment are reactivated. Only present when the type property is setPercentComplete. Nullable.
      */
     @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose
@@ -82,7 +82,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Priority.
-     * 
+     * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. 5 indicates the default priority if not set. Only present when the type property is setPriority. Nullable.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -91,7 +91,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Start Date Time.
-     * 
+     * The start date and time for the task. Only present when the type property is setSchedule. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
     @Expose
@@ -100,7 +100,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Title.
-     * 
+     * The title of the task. Only present when the type property is setTitle. Nullable.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -109,7 +109,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Type.
-     * 
+     * The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose
@@ -118,7 +118,7 @@ public class WorkbookDocumentTaskChange extends Entity implements IJsonBackedObj
 
     /**
      * The Undo Change Id.
-     * 
+     * The ID of the workbookDocumentTaskChange that was undone for the undo change action. Only exists on an undo change history. Nullable.
      */
     @SerializedName(value = "undoChangeId", alternate = {"UndoChangeId"})
     @Expose

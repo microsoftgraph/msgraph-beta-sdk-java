@@ -97,8 +97,6 @@ public class Directory extends Entity implements IJsonBackedObject {
      * The Deleted Items.
      * 
      */
-    @SerializedName(value = "deletedItems", alternate = {"DeletedItems"})
-    @Expose
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage deletedItems;
 

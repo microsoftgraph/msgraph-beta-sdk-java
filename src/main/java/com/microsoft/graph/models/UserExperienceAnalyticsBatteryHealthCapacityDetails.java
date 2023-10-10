@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
 
     /**
      * The Active Devices.
-     * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+     * Number of active devices within the tenant. Valid values 0 to 2147483647
      */
     @SerializedName(value = "activeDevices", alternate = {"ActiveDevices"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
 
     /**
      * The Battery Capacity Fair.
-     * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values -2147483648 to 2147483647
+     * Number of devices whose battery maximum capacity is greater than 50% but lesser than 80%. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryCapacityFair", alternate = {"BatteryCapacityFair"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
 
     /**
      * The Battery Capacity Good.
-     * Number of devices whose battery maximum capacity is greater than 80%. Valid values -2147483648 to 2147483647
+     * Number of devices whose battery maximum capacity is greater than 80%. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryCapacityGood", alternate = {"BatteryCapacityGood"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
 
     /**
      * The Battery Capacity Poor.
-     * Number of devices whose battery maximum capacity is lesser than 50%. Valid values -2147483648 to 2147483647
+     * Number of devices whose battery maximum capacity is lesser than 50%. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryCapacityPoor", alternate = {"BatteryCapacityPoor"})
     @Expose

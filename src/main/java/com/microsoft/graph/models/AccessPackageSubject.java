@@ -37,6 +37,15 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
     public String altSecId;
 
     /**
+     * The Cleanup Scheduled Date Time.
+     * The date and time the subject is marked to be blocked from sign in or deleted. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time.
+     */
+    @SerializedName(value = "cleanupScheduledDateTime", alternate = {"CleanupScheduledDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime cleanupScheduledDateTime;
+
+    /**
      * The Connected Organization Id.
      * The identifier of the connected organization of the subject.
      */
@@ -65,7 +74,7 @@ public class AccessPackageSubject extends Entity implements IJsonBackedObject {
 
     /**
      * The Object Id.
-     * The object identifier of the subject. null if the subject is not yet a user in the tenant. Alternate key.
+     * The object identifier of the subject. null if the subject isn't yet a user in the tenant. Alternate key.
      */
     @SerializedName(value = "objectId", alternate = {"ObjectId"})
     @Expose
