@@ -60,6 +60,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     AD_JOIN_CHECK_ACCOUNT_QUOTA_EXCEEDED,
     /**
+    * ad Join Check Server Not Operational
+    */
+    AD_JOIN_CHECK_SERVER_NOT_OPERATIONAL,
+    /**
     * ad Join Check Unknown Error
     */
     AD_JOIN_CHECK_UNKNOWN_ERROR,

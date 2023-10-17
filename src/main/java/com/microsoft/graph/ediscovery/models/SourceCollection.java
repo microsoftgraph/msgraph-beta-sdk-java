@@ -60,7 +60,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
 
     /**
      * The Data Source Scopes.
-     * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      */
     @SerializedName(value = "dataSourceScopes", alternate = {"DataSourceScopes"})
     @Expose

@@ -57,7 +57,7 @@ public class ServiceProvisioningError implements IJsonBackedObject {
 
     /**
      * The Service Instance.
-     * Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
+     * Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
      */
     @SerializedName(value = "serviceInstance", alternate = {"ServiceInstance"})
     @Expose

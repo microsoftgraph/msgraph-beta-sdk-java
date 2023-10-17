@@ -40,7 +40,7 @@ public class EvaluateDynamicMembershipResult implements IJsonBackedObject {
 
     /**
      * The Membership Rule.
-     * If a group ID is provided, the value is the membership rule for the group. If a group ID is not provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Azure Active Directory.
+     * If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Azure Active Directory.
      */
     @SerializedName(value = "membershipRule", alternate = {"MembershipRule"})
     @Expose
@@ -49,7 +49,7 @@ public class EvaluateDynamicMembershipResult implements IJsonBackedObject {
 
     /**
      * The Membership Rule Evaluation Details.
-     * Provides a detailed anaylsis of the membership evaluation result.
+     * Provides a detailed analysis of the membership evaluation result.
      */
     @SerializedName(value = "membershipRuleEvaluationDetails", alternate = {"MembershipRuleEvaluationDetails"})
     @Expose

@@ -41,7 +41,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Address.
-     * 
+     * A physical address of the entity.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -50,7 +50,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Alternate Names.
-     * 
+     * Alternate names for this entity that are part of the certificate.
      */
     @SerializedName(value = "alternateNames", alternate = {"AlternateNames"})
     @Expose
@@ -59,7 +59,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Common Name.
-     * 
+     * A common name for this entity.
      */
     @SerializedName(value = "commonName", alternate = {"CommonName"})
     @Expose
@@ -68,7 +68,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * An email for this entity.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -77,7 +77,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Given Name.
-     * 
+     * If the entity is a person, this is the person's given name (first name).
      */
     @SerializedName(value = "givenName", alternate = {"GivenName"})
     @Expose
@@ -86,7 +86,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Organization Name.
-     * 
+     * If the entity is an organization, this is the name of the organization.
      */
     @SerializedName(value = "organizationName", alternate = {"OrganizationName"})
     @Expose
@@ -95,7 +95,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Organization Unit Name.
-     * 
+     * If the entity is an organization, this communicates if a unit in the organization is named on the entity.
      */
     @SerializedName(value = "organizationUnitName", alternate = {"OrganizationUnitName"})
     @Expose
@@ -104,7 +104,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Serial Number.
-     * 
+     * A serial number assigned to the entity; usually only available if the entity is the issuer.
      */
     @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
@@ -113,7 +113,7 @@ public class SslCertificateEntity implements IJsonBackedObject {
 
     /**
      * The Surname.
-     * 
+     * If the entity is a person, this is the person's surname (last name).
      */
     @SerializedName(value = "surname", alternate = {"Surname"})
     @Expose

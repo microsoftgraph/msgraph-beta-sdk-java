@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.X509CertificateAuthenticationModeConfiguration;
 import com.microsoft.graph.models.X509CertificateUserBinding;
+import com.microsoft.graph.models.X509CertificateIssuerHintsConfiguration;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage;
 
@@ -46,6 +47,15 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     @Expose
 	@Nullable
     public java.util.List<X509CertificateUserBinding> certificateUserBindings;
+
+    /**
+     * The Issuer Hints Configuration.
+     * Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
+     */
+    @SerializedName(value = "issuerHintsConfiguration", alternate = {"IssuerHintsConfiguration"})
+    @Expose
+	@Nullable
+    public X509CertificateIssuerHintsConfiguration issuerHintsConfiguration;
 
     /**
      * The Include Targets.

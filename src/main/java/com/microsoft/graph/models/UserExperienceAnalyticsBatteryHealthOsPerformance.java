@@ -28,7 +28,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
 
     /**
      * The Active Devices.
-     * Number of active devices for that os version. Valid values -2147483648 to 2147483647
+     * Number of active devices for that os version. Valid values 0 to 2147483647
      */
     @SerializedName(value = "activeDevices", alternate = {"ActiveDevices"})
     @Expose
@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
 
     /**
      * The Average Battery Age In Days.
-     * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values -2147483648 to 2147483647
+     * The mean of the battery age for all devices running a particular operating system version in a tenant. Unit in days. Valid values 0 to 2147483647
      */
     @SerializedName(value = "averageBatteryAgeInDays", alternate = {"AverageBatteryAgeInDays"})
     @Expose
@@ -46,7 +46,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
 
     /**
      * The Average Estimated Runtime In Minutes.
-     * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647
+     * The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values 0 to 2147483647
      */
     @SerializedName(value = "averageEstimatedRuntimeInMinutes", alternate = {"AverageEstimatedRuntimeInMinutes"})
     @Expose
@@ -55,7 +55,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
 
     /**
      * The Average Max Capacity Percentage.
-     * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values 0 to 2147483647
      */
     @SerializedName(value = "averageMaxCapacityPercentage", alternate = {"AverageMaxCapacityPercentage"})
     @Expose
@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
 
     /**
      * The Os Health Status.
-     * The overall battery health status of a given os version in a tenant.
+     * The overall battery health status of a given os version in a tenant. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
      */
     @SerializedName(value = "osHealthStatus", alternate = {"OsHealthStatus"})
     @Expose

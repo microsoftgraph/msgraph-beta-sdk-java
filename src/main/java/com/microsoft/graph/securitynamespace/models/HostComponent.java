@@ -64,7 +64,7 @@ public class HostComponent extends Artifact implements IJsonBackedObject {
 
     /**
      * The Version.
-     * The component version running on the artifact, for example, v8.5. This should not be assumed to be strictly numerical.
+     * The component version running on the artifact, for example, v8.5. This shouldn't be assumed to be strictly numerical.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
@@ -73,7 +73,7 @@ public class HostComponent extends Artifact implements IJsonBackedObject {
 
     /**
      * The Host.
-     * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+     * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
      */
     @SerializedName(value = "host", alternate = {"Host"})
     @Expose

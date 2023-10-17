@@ -19,7 +19,9 @@ import com.microsoft.graph.models.ManagedDeviceResizeCloudPcParameterSet;
 
 /**
  * The class for the Managed Device Resize Cloud Pc Request.
+ * @deprecated The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead
  */
+@Deprecated
 public class ManagedDeviceResizeCloudPcRequest extends BaseRequest<Void> {
     /**
      * The request for this ManagedDeviceResizeCloudPc

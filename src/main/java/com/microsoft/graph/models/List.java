@@ -47,7 +47,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The List.
-     * Provides additional details about the list.
+     * Contains more details about the list.
      */
     @SerializedName(value = "list", alternate = {"List"})
     @Expose
@@ -56,7 +56,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Sharepoint Ids.
-     * 
+     * Returns identifiers useful for SharePoint REST compatibility. Read-only.
      */
     @SerializedName(value = "sharepointIds", alternate = {"SharepointIds"})
     @Expose
@@ -65,7 +65,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The System.
-     * If present, indicates that this is a system-managed list. Read-only.
+     * If present, indicates that the list is system-managed. Read-only.
      */
     @SerializedName(value = "system", alternate = {"System"})
     @Expose
@@ -83,7 +83,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Columns.
-     * 
+     * The collection of field definitions for this list.
      */
     @SerializedName(value = "columns", alternate = {"Columns"})
     @Expose
@@ -92,7 +92,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Types.
-     * 
+     * The collection of content types present in this list.
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
@@ -101,7 +101,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive.
-     * Only present on document libraries. Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+     * Allows access to the list as a drive resource with driveItems. Only present on document libraries.
      */
     @SerializedName(value = "drive", alternate = {"Drive"})
     @Expose
@@ -119,7 +119,7 @@ public class List extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Operations.
-     * The collection of long running operations for the list.
+     * The collection of long-running operations on the list.
      */
     @SerializedName(value = "operations", alternate = {"Operations"})
     @Expose

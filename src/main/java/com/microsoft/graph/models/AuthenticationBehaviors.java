@@ -39,7 +39,7 @@ public class AuthenticationBehaviors implements IJsonBackedObject {
 
     /**
      * The Remove Unverified Email Claim.
-     * Removes the email claim from tokens sent to an application when the email address's domain cannot be verified.
+     * Removes the email claim from tokens sent to an application when the email address's domain can't be verified.
      */
     @SerializedName(value = "removeUnverifiedEmailClaim", alternate = {"RemoveUnverifiedEmailClaim"})
     @Expose
@@ -48,7 +48,7 @@ public class AuthenticationBehaviors implements IJsonBackedObject {
 
     /**
      * The Require Client Service Principal.
-     * 
+     * Requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multi-tenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
      */
     @SerializedName(value = "requireClientServicePrincipal", alternate = {"RequireClientServicePrincipal"})
     @Expose

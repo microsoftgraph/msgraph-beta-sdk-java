@@ -27,7 +27,7 @@ public class FileUrlThreatSubmission extends FileThreatSubmission implements IJs
 
     /**
      * The File Url.
-     * It specifies the URL of the file which needs to be submitted.
+     * It specifies the URL of the file that needs to be submitted.
      */
     @SerializedName(value = "fileUrl", alternate = {"FileUrl"})
     @Expose

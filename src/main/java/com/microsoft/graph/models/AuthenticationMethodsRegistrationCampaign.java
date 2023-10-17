@@ -61,7 +61,7 @@ public class AuthenticationMethodsRegistrationCampaign implements IJsonBackedObj
 
     /**
      * The Snooze Duration In Days.
-     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0 – The user is prompted during every MFA attempt.
      */
     @SerializedName(value = "snoozeDurationInDays", alternate = {"SnoozeDurationInDays"})
     @Expose

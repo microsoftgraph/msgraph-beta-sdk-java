@@ -40,7 +40,7 @@ public class EducationResource implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * Who created the resource.
+     * Who created the resource?
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -67,7 +67,7 @@ public class EducationResource implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * Who was the last user to modify the resource.
+     * Who was the last user to modify the resource?
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose

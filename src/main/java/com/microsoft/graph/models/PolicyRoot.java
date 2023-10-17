@@ -66,7 +66,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Methods Policy.
-     * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+     * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
      */
     @SerializedName(value = "authenticationMethodsPolicy", alternate = {"AuthenticationMethodsPolicy"})
     @Expose
@@ -84,7 +84,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Authentication Flows Policy.
-     * The policy configuration of the self-service sign-up experience of external users.
+     * The policy configuration of the self-service sign-up experience of guests.
      */
     @SerializedName(value = "authenticationFlowsPolicy", alternate = {"AuthenticationFlowsPolicy"})
     @Expose
@@ -111,7 +111,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Activity Based Timeout Policies.
-     * The policy that controls the idle time out for web sessions for applications.
+     * The policy that controls the idle time-out for web sessions for applications.
      */
     @SerializedName(value = "activityBasedTimeoutPolicies", alternate = {"ActivityBasedTimeoutPolicies"})
     @Expose
@@ -165,7 +165,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The External Identities Policy.
-     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
+     * Represents the tenant-wide policy that controls whether guests can leave an Azure AD tenant via self-service controls.
      */
     @SerializedName(value = "externalIdentitiesPolicy", alternate = {"ExternalIdentitiesPolicy"})
     @Expose
@@ -282,7 +282,7 @@ public class PolicyRoot implements IJsonBackedObject {
 
     /**
      * The Mobile App Management Policies.
-     * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
+     * The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
      */
     @SerializedName(value = "mobileAppManagementPolicies", alternate = {"MobileAppManagementPolicies"})
     @Expose

@@ -40,6 +40,10 @@ public enum DeviceManagementConfigurationTechnologies
     */
     EXCHANGE_ONLINE,
     /**
+    * mobile Application Management
+    */
+    MOBILE_APPLICATION_MANAGEMENT,
+    /**
     * linux Mdm
     */
     LINUX_MDM,

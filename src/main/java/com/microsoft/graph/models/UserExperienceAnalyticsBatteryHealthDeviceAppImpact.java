@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
 
     /**
      * The Battery Usage Percentage.
-     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days. Unit in percentage. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     * The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days. Unit in percentage. Valid values 0 to 1.79769313486232E+308
      */
     @SerializedName(value = "batteryUsagePercentage", alternate = {"BatteryUsagePercentage"})
     @Expose

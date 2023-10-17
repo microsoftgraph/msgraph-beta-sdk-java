@@ -41,7 +41,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Approval Stage Time Out In Days.
-     * The number of days that a request can be pending a response before it is automatically denied.
+     * The number of days that a request can be pending a response before it's automatically denied.
      */
     @SerializedName(value = "approvalStageTimeOutInDays", alternate = {"ApprovalStageTimeOutInDays"})
     @Expose
@@ -50,7 +50,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Escalation Approvers.
-     * If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers are not required for the stage, the value of this property should be an empty collection.
+     * If escalation is enabled and the primary approvers don't respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests. This can be a collection of singleUser, groupMembers, requestorManager, internalSponsors and externalSponsors.  When creating or updating a policy, if there are no escalation approvers, or escalation approvers aren't required for the stage, the value of this property should be an empty collection.
      */
     @SerializedName(value = "escalationApprovers", alternate = {"EscalationApprovers"})
     @Expose
@@ -86,7 +86,7 @@ public class ApprovalStage implements IJsonBackedObject {
 
     /**
      * The Primary Approvers.
-     * The users who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
+     * The users who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors and targetUserSponsors. When creating or updating a policy, include at least one userSet in this collection.
      */
     @SerializedName(value = "primaryApprovers", alternate = {"PrimaryApprovers"})
     @Expose

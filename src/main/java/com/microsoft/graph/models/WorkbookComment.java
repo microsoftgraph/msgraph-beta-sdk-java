@@ -57,7 +57,7 @@ public class WorkbookComment extends Entity implements IJsonBackedObject {
 
     /**
      * The Task.
-     * 
+     * The task associated with the comment. Read-only. Nullable.
      */
     @SerializedName(value = "task", alternate = {"Task"})
     @Expose

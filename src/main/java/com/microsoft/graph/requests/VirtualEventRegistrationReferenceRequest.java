@@ -61,4 +61,30 @@ public class VirtualEventRegistrationReferenceRequest extends BaseReferenceReque
         addExpandOption(value);
         return this;
     }
+    /**
+     * Puts the VirtualEventRegistration
+     *
+     * @param srcVirtualEventRegistration the VirtualEventRegistration reference to PUT
+     * @return a future with the result
+     */
+    @Nonnull
+    public java.util.concurrent.CompletableFuture<VirtualEventRegistration> putAsync(@Nonnull final VirtualEventRegistration srcVirtualEventRegistration) {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/virtualEvents/{id}/webinars/{id}/registrations/" + srcVirtualEventRegistration.id));
+        return sendAsync(HttpMethod.PUT, payload);
+    }
+
+    /**
+     * Puts the VirtualEventRegistration
+     *
+     * @param srcVirtualEventRegistration the VirtualEventRegistration reference to PUT
+     * @return the VirtualEventRegistration
+     * @throws ClientException an exception occurs if there was an error while the request was sent
+     */
+    @Nullable
+    public VirtualEventRegistration put(@Nonnull final VirtualEventRegistration srcVirtualEventRegistration) throws ClientException {
+        final JsonObject payload = new JsonObject();
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/virtualEvents/{id}/webinars/{id}/registrations/" + srcVirtualEventRegistration.id));
+        return send(HttpMethod.PUT, payload);
+    }
 }

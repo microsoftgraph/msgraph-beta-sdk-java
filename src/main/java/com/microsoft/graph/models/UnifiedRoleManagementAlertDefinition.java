@@ -37,7 +37,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Display Name.
-     * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
+     * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -55,7 +55,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements IJso
 
     /**
      * The Is Configurable.
-     * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
+     * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
      */
     @SerializedName(value = "isConfigurable", alternate = {"IsConfigurable"})
     @Expose

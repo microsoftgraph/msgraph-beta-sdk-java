@@ -40,7 +40,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -49,7 +49,7 @@ public class AdministrativeUnit extends DirectoryObject implements IJsonBackedOb
 
     /**
      * The Is Member Management Restricted.
-     * true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so cannot be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Azure Active Directory.
+     * true if members of this administrative unit should be treated as sensitive, which requires specific permissions to manage. Default value is false. Use this property to define administrative units whose roles don't inherit from tenant-level administrators, and management of individual member objects is limited to administrators scoped to a restricted management administrative unit. Immutable, so can't be changed later.  For more information about working with restricted management administrative units, see Restricted management administrative units in Azure Active Directory.
      */
     @SerializedName(value = "isMemberManagementRestricted", alternate = {"IsMemberManagementRestricted"})
     @Expose

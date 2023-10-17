@@ -19,6 +19,7 @@ import com.microsoft.graph.models.PasswordCredential;
 import com.microsoft.graph.models.PermissionScope;
 import com.microsoft.graph.models.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.VerifiedPublisher;
+import com.microsoft.graph.models.RemoteDesktopSecurityConfiguration;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
@@ -102,7 +103,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The App Id.
-     * The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).
+     * The unique identifier for the associated application (its appId property). Alternate key. Supports $filter (eq, ne, not, in, startsWith).
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -174,7 +175,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Display Name.
-     * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -486,17 +487,26 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand, $select nested in $expand, and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
 
     /**
      * The Owners.
-     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
+
+    /**
+     * The Remote Desktop Security Configuration.
+     * 
+     */
+    @SerializedName(value = "remoteDesktopSecurityConfiguration", alternate = {"RemoteDesktopSecurityConfiguration"})
+    @Expose
+	@Nullable
+    public RemoteDesktopSecurityConfiguration remoteDesktopSecurityConfiguration;
 
     /**
      * The Token Issuance Policies.
