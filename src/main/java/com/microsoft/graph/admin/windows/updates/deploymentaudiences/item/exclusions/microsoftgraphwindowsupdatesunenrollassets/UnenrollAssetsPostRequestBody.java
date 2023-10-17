@@ -24,7 +24,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
      */
     private UpdateCategory updateCategory;
     /**
-     * Instantiates a new unenrollAssetsPostRequestBody and sets the default values.
+     * Instantiates a new UnenrollAssetsPostRequestBody and sets the default values.
      */
     public UnenrollAssetsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -32,7 +32,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unenrollAssetsPostRequestBody
+     * @return a UnenrollAssetsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UnenrollAssetsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
         return new UnenrollAssetsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the assets property value. The assets property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getAssets() {
@@ -68,7 +68,7 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the updateCategory property value. The updateCategory property
-     * @return a updateCategory
+     * @return a UpdateCategory
      */
     @jakarta.annotation.Nullable
     public UpdateCategory getUpdateCategory() {
@@ -85,8 +85,8 @@ public class UnenrollAssetsPostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

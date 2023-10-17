@@ -37,7 +37,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identity/authenticationEventListeners/{authenticationEventListener%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Deletes an authenticationEventListener object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return delete(null);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Deletes an authenticationEventListener object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -59,7 +59,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get authenticationEventListeners from identity
-     * @return a CompletableFuture of authenticationEventListener
+     * @return a CompletableFuture of AuthenticationEventListener
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventListener> get() {
@@ -68,7 +68,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
     /**
      * Get authenticationEventListeners from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationEventListener
+     * @return a CompletableFuture of AuthenticationEventListener
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationEventListener> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,9 +79,9 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationEventListener::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of authenticationEventListener
+     * @return a CompletableFuture of AuthenticationEventListener
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return patch(body, null);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationEventListener
+     * @return a CompletableFuture of AuthenticationEventListener
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,7 +105,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, AuthenticationEventListener::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Deletes an authenticationEventListener object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an authenticationEventListener object.
+     * Deletes an authenticationEventListener object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class AuthenticationEventListenerItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update.
+     * Update the properties of an authenticationEventListener object. You must specify the @odata.type property and the value of the authenticationEventListener object type to update. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation

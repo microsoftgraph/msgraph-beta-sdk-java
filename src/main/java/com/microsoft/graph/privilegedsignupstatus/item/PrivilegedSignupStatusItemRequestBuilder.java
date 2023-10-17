@@ -57,7 +57,7 @@ public class PrivilegedSignupStatusItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get entity from privilegedSignupStatus by key
-     * @return a CompletableFuture of privilegedSignupStatus
+     * @return a CompletableFuture of PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> get() {
@@ -66,7 +66,7 @@ public class PrivilegedSignupStatusItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get entity from privilegedSignupStatus by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedSignupStatus
+     * @return a CompletableFuture of PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PrivilegedSignupStatusItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update entity in privilegedSignupStatus
      * @param body The request body
-     * @return a CompletableFuture of privilegedSignupStatus
+     * @return a CompletableFuture of PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> patch(@jakarta.annotation.Nonnull final PrivilegedSignupStatus body) {
@@ -89,7 +89,7 @@ public class PrivilegedSignupStatusItemRequestBuilder extends BaseRequestBuilder
      * Update entity in privilegedSignupStatus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedSignupStatus
+     * @return a CompletableFuture of PrivilegedSignupStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedSignupStatus> patch(@jakarta.annotation.Nonnull final PrivilegedSignupStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

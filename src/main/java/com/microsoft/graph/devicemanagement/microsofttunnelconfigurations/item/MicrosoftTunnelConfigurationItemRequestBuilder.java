@@ -57,7 +57,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder extends BaseRequestB
     }
     /**
      * Collection of MicrosoftTunnelConfiguration settings associated with account.
-     * @return a CompletableFuture of microsoftTunnelConfiguration
+     * @return a CompletableFuture of MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfiguration> get() {
@@ -66,7 +66,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder extends BaseRequestB
     /**
      * Collection of MicrosoftTunnelConfiguration settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelConfiguration
+     * @return a CompletableFuture of MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property microsoftTunnelConfigurations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of microsoftTunnelConfiguration
+     * @return a CompletableFuture of MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfiguration> patch(@jakarta.annotation.Nonnull final MicrosoftTunnelConfiguration body) {
@@ -89,7 +89,7 @@ public class MicrosoftTunnelConfigurationItemRequestBuilder extends BaseRequestB
      * Update the navigation property microsoftTunnelConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftTunnelConfiguration
+     * @return a CompletableFuture of MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftTunnelConfiguration> patch(@jakarta.annotation.Nonnull final MicrosoftTunnelConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

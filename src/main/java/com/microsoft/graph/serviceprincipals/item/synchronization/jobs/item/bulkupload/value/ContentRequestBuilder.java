@@ -38,11 +38,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get media content for the navigation property bulkUpload from servicePrincipals
      * @return a CompletableFuture of InputStream
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public java.util.concurrent.CompletableFuture<InputStream> get() {
         return get(null);
     }
@@ -50,11 +47,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Get media content for the navigation property bulkUpload from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public java.util.concurrent.CompletableFuture<InputStream> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -66,11 +60,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Update media content for the navigation property bulkUpload in servicePrincipals
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body) {
         return put(body, null);
     }
@@ -79,11 +70,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
@@ -95,11 +83,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
     /**
      * Get media content for the navigation property bulkUpload from servicePrincipals
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -107,11 +92,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Get media content for the navigation property bulkUpload from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
         requestInfo.httpMethod = HttpMethod.GET;
@@ -129,11 +111,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Update media content for the navigation property bulkUpload in servicePrincipals
      * @param body Binary request body
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body) {
         return toPutRequestInformation(body, null);
     }
@@ -142,11 +121,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
@@ -166,11 +142,8 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a ContentRequestBuilder
-     * @deprecated
-     *  as of 2022-10/PrivatePreview:HRInboundPushApi on 2022-10-04 and will be removed 2023-06-14
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ContentRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ContentRequestBuilder(rawUrl, requestAdapter);

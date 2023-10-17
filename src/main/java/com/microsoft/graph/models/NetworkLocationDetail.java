@@ -26,7 +26,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new networkLocationDetail and sets the default values.
+     * Instantiates a new NetworkLocationDetail and sets the default values.
      */
     public NetworkLocationDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkLocationDetail
+     * @return a NetworkLocationDetail
      */
     @jakarta.annotation.Nonnull
     public static NetworkLocationDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
         return new NetworkLocationDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the networkNames property value. Provides the name of the network used when signing in.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNetworkNames() {
@@ -71,7 +71,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the networkType property value. Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
-     * @return a networkType
+     * @return a NetworkType
      */
     @jakarta.annotation.Nullable
     public NetworkType getNetworkType() {
@@ -79,7 +79,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class NetworkLocationDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

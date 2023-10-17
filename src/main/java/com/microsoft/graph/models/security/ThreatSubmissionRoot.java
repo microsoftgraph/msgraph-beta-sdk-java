@@ -26,7 +26,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      */
     private java.util.List<UrlThreatSubmission> urlThreats;
     /**
-     * Instantiates a new threatSubmissionRoot and sets the default values.
+     * Instantiates a new ThreatSubmissionRoot and sets the default values.
      */
     public ThreatSubmissionRoot() {
         super();
@@ -34,7 +34,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a threatSubmissionRoot
+     * @return a ThreatSubmissionRoot
      */
     @jakarta.annotation.Nonnull
     public static ThreatSubmissionRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the emailThreats property value. The emailThreats property
-     * @return a emailThreatSubmission
+     * @return a java.util.List<EmailThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmission> getEmailThreats() {
@@ -51,7 +51,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the emailThreatSubmissionPolicies property value. The emailThreatSubmissionPolicies property
-     * @return a emailThreatSubmissionPolicy
+     * @return a java.util.List<EmailThreatSubmissionPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmailThreatSubmissionPolicy> getEmailThreatSubmissionPolicies() {
@@ -72,7 +72,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the fileThreats property value. The fileThreats property
-     * @return a fileThreatSubmission
+     * @return a java.util.List<FileThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FileThreatSubmission> getFileThreats() {
@@ -80,7 +80,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
     }
     /**
      * Gets the urlThreats property value. The urlThreats property
-     * @return a urlThreatSubmission
+     * @return a java.util.List<UrlThreatSubmission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UrlThreatSubmission> getUrlThreats() {

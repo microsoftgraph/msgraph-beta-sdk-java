@@ -38,7 +38,7 @@ public class AccountItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get accounts from financials
-     * @return a CompletableFuture of account
+     * @return a CompletableFuture of Account
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Account> get() {
@@ -47,7 +47,7 @@ public class AccountItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get accounts from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of account
+     * @return a CompletableFuture of Account
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Account> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

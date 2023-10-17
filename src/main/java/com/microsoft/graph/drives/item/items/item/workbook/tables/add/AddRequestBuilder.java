@@ -36,9 +36,9 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/add", rawUrl);
     }
     /**
-     * Use this API to create a new Table.
+     * Use this API to create a new Table. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/workbook-post-tables?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Use this API to create a new Table.
+     * Use this API to create a new Table. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookTable
+     * @return a CompletableFuture of WorkbookTable
      * @see <a href="https://learn.microsoft.com/graph/api/workbook-post-tables?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, WorkbookTable::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Use this API to create a new Table.
+     * Use this API to create a new Table. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Use this API to create a new Table.
+     * Use this API to create a new Table. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class AddRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a addRequestBuilder
+     * @return a AddRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AddRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

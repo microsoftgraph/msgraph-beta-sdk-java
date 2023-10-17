@@ -2,10 +2,7 @@ package com.microsoft.graph.directory.administrativeunits;
 
 import com.microsoft.graph.directory.administrativeunits.count.CountRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.delta.DeltaRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.getbyids.GetByIdsRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.item.AdministrativeUnitItemRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.AdministrativeUnitCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -42,27 +39,6 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getByIds method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetByIdsRequestBuilder getByIds() {
-        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getUserOwnedObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
-        return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the validateProperties method.
-     */
-    @jakarta.annotation.Nonnull
-    public ValidatePropertiesRequestBuilder validateProperties() {
-        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
      * @param administrativeUnitId The unique identifier of administrativeUnit
      * @return a AdministrativeUnitItemRequestBuilder
@@ -92,7 +68,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Conceptual container for user and group directory objects.
-     * @return a CompletableFuture of administrativeUnitCollectionResponse
+     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get() {
@@ -101,7 +77,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Conceptual container for user and group directory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnitCollectionResponse
+     * @return a CompletableFuture of AdministrativeUnitCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnitCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -114,7 +90,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to administrativeUnits for directory
      * @param body The request body
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> post(@jakarta.annotation.Nonnull final AdministrativeUnit body) {
@@ -124,7 +100,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to administrativeUnits for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> post(@jakarta.annotation.Nonnull final AdministrativeUnit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -199,7 +175,7 @@ public class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a administrativeUnitsRequestBuilder
+     * @return a AdministrativeUnitsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

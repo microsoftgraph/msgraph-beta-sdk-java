@@ -38,7 +38,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The access package assignments resulting in this role assignment. Read-only. Nullable.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get() {
@@ -47,7 +47,7 @@ public class AccessPackageAssignmentItemRequestBuilder extends BaseRequestBuilde
     /**
      * The access package assignments resulting in this role assignment. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignment
+     * @return a CompletableFuture of AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

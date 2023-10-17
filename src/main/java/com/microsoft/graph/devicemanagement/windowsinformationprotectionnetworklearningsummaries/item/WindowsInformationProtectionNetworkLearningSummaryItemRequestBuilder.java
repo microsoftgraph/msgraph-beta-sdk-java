@@ -57,7 +57,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
     }
     /**
      * The windows information protection network learning summaries.
-     * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionNetworkLearningSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> get() {
@@ -66,7 +66,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
     /**
      * The windows information protection network learning summaries.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionNetworkLearningSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
     /**
      * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionNetworkLearningSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body) {
@@ -89,7 +89,7 @@ public class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilde
      * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionNetworkLearningSummary
+     * @return a CompletableFuture of WindowsInformationProtectionNetworkLearningSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsInformationProtectionNetworkLearningSummary> patch(@jakarta.annotation.Nonnull final WindowsInformationProtectionNetworkLearningSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

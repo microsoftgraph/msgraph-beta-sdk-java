@@ -60,7 +60,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The managed app statuses.
-     * @return a CompletableFuture of managedAppStatusCollectionResponse
+     * @return a CompletableFuture of ManagedAppStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatusCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed app statuses.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatusCollectionResponse
+     * @return a CompletableFuture of ManagedAppStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to managedAppStatuses for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> post(@jakarta.annotation.Nonnull final ManagedAppStatus body) {
@@ -92,7 +92,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedAppStatuses for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAppStatus
+     * @return a CompletableFuture of ManagedAppStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAppStatus> post(@jakarta.annotation.Nonnull final ManagedAppStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagedAppStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedAppStatusesRequestBuilder
+     * @return a ManagedAppStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedAppStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

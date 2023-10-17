@@ -57,7 +57,7 @@ public class GroupPolicySettingMappingItemRequestBuilder extends BaseRequestBuil
     }
     /**
      * A list of group policy settings to MDM/Intune mappings.
-     * @return a CompletableFuture of groupPolicySettingMapping
+     * @return a CompletableFuture of GroupPolicySettingMapping
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicySettingMapping> get() {
@@ -66,7 +66,7 @@ public class GroupPolicySettingMappingItemRequestBuilder extends BaseRequestBuil
     /**
      * A list of group policy settings to MDM/Intune mappings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicySettingMapping
+     * @return a CompletableFuture of GroupPolicySettingMapping
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicySettingMapping> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class GroupPolicySettingMappingItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property groupPolicySettingMappings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicySettingMapping
+     * @return a CompletableFuture of GroupPolicySettingMapping
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicySettingMapping> patch(@jakarta.annotation.Nonnull final GroupPolicySettingMapping body) {
@@ -89,7 +89,7 @@ public class GroupPolicySettingMappingItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property groupPolicySettingMappings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicySettingMapping
+     * @return a CompletableFuture of GroupPolicySettingMapping
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicySettingMapping> patch(@jakarta.annotation.Nonnull final GroupPolicySettingMapping body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

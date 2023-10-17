@@ -65,8 +65,8 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/customAccessPackageWorkflowExtensions{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
-     * @return a CompletableFuture of customAccessPackageWorkflowExtensionCollectionResponse
+     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CustomAccessPackageWorkflowExtensionCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -77,9 +77,9 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
+     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAccessPackageWorkflowExtensionCollectionResponse
+     * @return a CompletableFuture of CustomAccessPackageWorkflowExtensionCollectionResponse
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -94,9 +94,9 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return this.requestAdapter.sendAsync(requestInfo, CustomAccessPackageWorkflowExtensionCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.   This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of customAccessPackageWorkflowExtension
+     * @return a CompletableFuture of CustomAccessPackageWorkflowExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-post-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -107,10 +107,10 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.   This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customAccessPackageWorkflowExtension
+     * @return a CompletableFuture of CustomAccessPackageWorkflowExtension
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-post-customaccesspackageworkflowextensions?view=graph-rest-1.0">Find more info here</a>
@@ -126,7 +126,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return this.requestAdapter.sendAsync(requestInfo, CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
+     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -137,7 +137,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
+     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -161,7 +161,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.   This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -173,7 +173,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.  
+     * Create a new customAccessPackageWorkflowExtension object and add it to an existing accessPackageCatalog object.   This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customAccessPackageWorkflowExtensionsRequestBuilder
+     * @return a CustomAccessPackageWorkflowExtensionsRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -212,7 +212,7 @@ public class CustomAccessPackageWorkflowExtensionsRequestBuilder extends BaseReq
         return new CustomAccessPackageWorkflowExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read.
+     * Get a list of the customAccessPackageWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

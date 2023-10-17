@@ -67,8 +67,8 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/privilegedAccess/{privilegedAccess%2Did}/resources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
-     * @return a CompletableFuture of governanceResourceCollectionResponse
+     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of GovernanceResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceResourceCollectionResponse
+     * @return a CompletableFuture of GovernanceResourceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/governanceresource-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resources for privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceResource
+     * @return a CompletableFuture of GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResource> post(@jakarta.annotation.Nonnull final GovernanceResource body) {
@@ -102,7 +102,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resources for privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceResource
+     * @return a CompletableFuture of GovernanceResource
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceResource> post(@jakarta.annotation.Nonnull final GovernanceResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, GovernanceResource::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourcesRequestBuilder
+     * @return a ResourcesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -185,7 +185,7 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
         return new ResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a collection of governanceResource that the requestor has access to.
+     * Retrieve a collection of governanceResource that the requestor has access to. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

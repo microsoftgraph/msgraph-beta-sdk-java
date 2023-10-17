@@ -58,7 +58,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
      */
     private TitleAreaTextAlignmentType textAlignment;
     /**
-     * Instantiates a new titleArea and sets the default values.
+     * Instantiates a new TitleArea and sets the default values.
      */
     public TitleArea() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a titleArea
+     * @return a TitleArea
      */
     @jakarta.annotation.Nonnull
     public static TitleArea createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
         return new TitleArea();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alternativeText property value. Alternative text on the title area.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternativeText() {
@@ -91,7 +91,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enableGradientEffect property value. Indicates whether the title area has a gradient effect enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableGradientEffect() {
@@ -119,7 +119,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the imageWebUrl property value. URL of the image in the title area.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImageWebUrl() {
@@ -127,7 +127,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the layout property value. Enumeration value that indicates the layout of the title area. The possible values are: imageAndTitle, plain, colorBlock, overlap, unknownFutureValue.
-     * @return a titleAreaLayoutType
+     * @return a TitleAreaLayoutType
      */
     @jakarta.annotation.Nullable
     public TitleAreaLayoutType getLayout() {
@@ -135,7 +135,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -143,7 +143,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
-     * @return a serverProcessedContent
+     * @return a ServerProcessedContent
      */
     @jakarta.annotation.Nullable
     public ServerProcessedContent getServerProcessedContent() {
@@ -151,7 +151,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the showAuthor property value. Indicates whether the author should be shown in title area.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowAuthor() {
@@ -159,7 +159,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the showPublishedDate property value. Indicates whether the published date should be shown in title area.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowPublishedDate() {
@@ -167,7 +167,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the showTextBlockAboveTitle property value. Indicates whether the text block above title should be shown in title area.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowTextBlockAboveTitle() {
@@ -175,7 +175,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the textAboveTitle property value. The text above title line.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTextAboveTitle() {
@@ -183,7 +183,7 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the textAlignment property value. Enumeration value that indicates the text alignment of the title area. The possible values are: left, center, unknownFutureValue.
-     * @return a titleAreaTextAlignmentType
+     * @return a TitleAreaTextAlignmentType
      */
     @jakarta.annotation.Nullable
     public TitleAreaTextAlignmentType getTextAlignment() {
@@ -209,8 +209,8 @@ public class TitleArea implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

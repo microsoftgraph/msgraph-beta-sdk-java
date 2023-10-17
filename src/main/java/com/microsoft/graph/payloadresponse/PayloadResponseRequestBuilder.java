@@ -60,7 +60,7 @@ public class PayloadResponseRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from payloadResponse
-     * @return a CompletableFuture of payloadResponseCollectionResponse
+     * @return a CompletableFuture of PayloadResponseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponseCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PayloadResponseRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from payloadResponse
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of payloadResponseCollectionResponse
+     * @return a CompletableFuture of PayloadResponseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PayloadResponseRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to payloadResponse
      * @param body The request body
-     * @return a CompletableFuture of payloadResponse
+     * @return a CompletableFuture of PayloadResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponse> post(@jakarta.annotation.Nonnull final PayloadResponse body) {
@@ -92,7 +92,7 @@ public class PayloadResponseRequestBuilder extends BaseRequestBuilder {
      * Add new entity to payloadResponse
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of payloadResponse
+     * @return a CompletableFuture of PayloadResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PayloadResponse> post(@jakarta.annotation.Nonnull final PayloadResponse body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PayloadResponseRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a payloadResponseRequestBuilder
+     * @return a PayloadResponseRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PayloadResponseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -73,7 +73,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     }
     /**
      * Get resourceNamespaces from roleManagement
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> get() {
@@ -82,7 +82,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     /**
      * Get resourceNamespaces from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property resourceNamespaces in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body) {
@@ -105,7 +105,7 @@ public class UnifiedRbacResourceNamespaceItemRequestBuilder extends BaseRequestB
      * Update the navigation property resourceNamespaces in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacResourceNamespace
+     * @return a CompletableFuture of UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacResourceNamespace> patch(@jakarta.annotation.Nonnull final UnifiedRbacResourceNamespace body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

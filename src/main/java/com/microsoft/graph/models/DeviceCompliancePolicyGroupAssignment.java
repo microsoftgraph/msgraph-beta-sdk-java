@@ -24,7 +24,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
      */
     private String targetGroupId;
     /**
-     * Instantiates a new deviceCompliancePolicyGroupAssignment and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyGroupAssignment and sets the default values.
      */
     public DeviceCompliancePolicyGroupAssignment() {
         super();
@@ -32,7 +32,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyGroupAssignment
+     * @return a DeviceCompliancePolicyGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     }
     /**
      * Gets the deviceCompliancePolicy property value. The navigation link to the  device compliance polic targeted.
-     * @return a deviceCompliancePolicy
+     * @return a DeviceCompliancePolicy
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicy getDeviceCompliancePolicy() {
@@ -49,7 +49,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     }
     /**
      * Gets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExcludeGroup() {
@@ -69,7 +69,7 @@ public class DeviceCompliancePolicyGroupAssignment extends Entity implements Par
     }
     /**
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device compliance policy to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {

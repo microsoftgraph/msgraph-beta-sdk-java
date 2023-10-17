@@ -45,7 +45,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      */
     private Integer top;
     /**
-     * Instantiates a new assignmentFilterEvaluateRequest and sets the default values.
+     * Instantiates a new AssignmentFilterEvaluateRequest and sets the default values.
      */
     public AssignmentFilterEvaluateRequest() {
         this.setAdditionalData(new HashMap<>());
@@ -53,7 +53,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a assignmentFilterEvaluateRequest
+     * @return a AssignmentFilterEvaluateRequest
      */
     @jakarta.annotation.Nonnull
     public static AssignmentFilterEvaluateRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         return new AssignmentFilterEvaluateRequest();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -94,7 +94,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the orderBy property value. Order the devices should be sorted in. Default is ascending on device name.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -102,7 +102,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a devicePlatformType
+     * @return a DevicePlatformType
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
@@ -110,7 +110,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the rule property value. Rule definition of the Assignment Filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRule() {
@@ -118,7 +118,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the search property value. Search keyword applied to scope found devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
@@ -126,7 +126,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the skip property value. Number of records to skip. Default value is 0
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
@@ -134,7 +134,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the top property value. Limit of records per request. Default value is 100, if provided less than 0 or greater than 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
@@ -156,8 +156,8 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

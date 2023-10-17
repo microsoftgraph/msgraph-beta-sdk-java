@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewItemRequestBu
     }
     /**
      * The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewItemRequestBu
     /**
      * The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewItemRequestBu
     /**
      * Update the navigation property userExperienceAnalyticsAnomalyCorrelationGroupOverview in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyCorrelationGroupOverview body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupOverviewItemRequestBu
      * Update the navigation property userExperienceAnalyticsAnomalyCorrelationGroupOverview in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a CompletableFuture of UserExperienceAnalyticsAnomalyCorrelationGroupOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsAnomalyCorrelationGroupOverview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -73,7 +73,7 @@ public class ExactMatchDataStoreItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get exactMatchDataStores from dataClassification
-     * @return a CompletableFuture of exactMatchDataStore
+     * @return a CompletableFuture of ExactMatchDataStore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStore> get() {
@@ -82,7 +82,7 @@ public class ExactMatchDataStoreItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get exactMatchDataStores from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchDataStore
+     * @return a CompletableFuture of ExactMatchDataStore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStore> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class ExactMatchDataStoreItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property exactMatchDataStores in dataClassification
      * @param body The request body
-     * @return a CompletableFuture of exactMatchDataStore
+     * @return a CompletableFuture of ExactMatchDataStore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStore> patch(@jakarta.annotation.Nonnull final ExactMatchDataStore body) {
@@ -105,7 +105,7 @@ public class ExactMatchDataStoreItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property exactMatchDataStores in dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchDataStore
+     * @return a CompletableFuture of ExactMatchDataStore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStore> patch(@jakarta.annotation.Nonnull final ExactMatchDataStore body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

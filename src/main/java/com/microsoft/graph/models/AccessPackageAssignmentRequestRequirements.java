@@ -62,7 +62,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      */
     private VerifiableCredentialRequirementStatus verifiableCredentialRequirementStatus;
     /**
-     * Instantiates a new accessPackageAssignmentRequestRequirements and sets the default values.
+     * Instantiates a new AccessPackageAssignmentRequestRequirements and sets the default values.
      */
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
@@ -70,7 +70,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentRequestRequirements
+     * @return a AccessPackageAssignmentRequestRequirements
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentRequestRequirements createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
         return new AccessPackageAssignmentRequestRequirements();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the existingAnswers property value. Answers that have already been provided.
-     * @return a accessPackageAnswer
+     * @return a java.util.List<AccessPackageAnswer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswer> getExistingAnswers() {
@@ -116,7 +116,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the isApprovalRequired property value. Indicates whether a request must be approved by an approver.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequired() {
@@ -124,7 +124,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the isApprovalRequiredForExtension property value. Indicates whether approval is required when a user tries to extend their access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsApprovalRequiredForExtension() {
@@ -132,7 +132,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the isCustomAssignmentScheduleAllowed property value. Indicates whether the requestor is allowed to set a custom schedule.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCustomAssignmentScheduleAllowed() {
@@ -140,7 +140,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the isRequestorJustificationRequired property value. Indicates whether a requestor must supply justification when submitting an assignment request.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequestorJustificationRequired() {
@@ -148,7 +148,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -156,7 +156,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the policyDescription property value. The description of the policy that the user is trying to request access using.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyDescription() {
@@ -164,7 +164,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the policyDisplayName property value. The display name of the policy that the user is trying to request access using.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyDisplayName() {
@@ -172,7 +172,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the policyId property value. The identifier of the policy that these requirements are associated with. This identifier can be used when creating a new assignment request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
@@ -180,7 +180,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the questions property value. Questions that are configured on the policy. The questions can be required or optional; callers can determine whether a question is required or optional based on the isRequired property on accessPackageQuestion.
-     * @return a accessPackageQuestion
+     * @return a java.util.List<AccessPackageQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
@@ -188,7 +188,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the schedule property value. Schedule restrictions enforced, if any.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getSchedule() {
@@ -196,7 +196,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
     }
     /**
      * Gets the verifiableCredentialRequirementStatus property value. The status of the process to process the verifiable credential, if any.
-     * @return a verifiableCredentialRequirementStatus
+     * @return a VerifiableCredentialRequirementStatus
      */
     @jakarta.annotation.Nullable
     public VerifiableCredentialRequirementStatus getVerifiableCredentialRequirementStatus() {
@@ -223,8 +223,8 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

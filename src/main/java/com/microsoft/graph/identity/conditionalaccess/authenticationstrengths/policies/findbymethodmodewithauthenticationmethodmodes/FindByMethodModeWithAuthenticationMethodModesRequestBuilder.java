@@ -39,30 +39,30 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
     }
     /**
      * Invoke function findByMethodMode
-     * @return a CompletableFuture of findByMethodModeWithAuthenticationMethodModesResponse
+     * @return a CompletableFuture of FindByMethodModeWithAuthenticationMethodModesGetResponse
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<FindByMethodModeWithAuthenticationMethodModesResponse> get() {
+    public java.util.concurrent.CompletableFuture<FindByMethodModeWithAuthenticationMethodModesGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function findByMethodMode
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of findByMethodModeWithAuthenticationMethodModesResponse
+     * @return a CompletableFuture of FindByMethodModeWithAuthenticationMethodModesGetResponse
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public java.util.concurrent.CompletableFuture<FindByMethodModeWithAuthenticationMethodModesResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<FindByMethodModeWithAuthenticationMethodModesGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, FindByMethodModeWithAuthenticationMethodModesResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, FindByMethodModeWithAuthenticationMethodModesGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function findByMethodMode
@@ -102,7 +102,7 @@ public class FindByMethodModeWithAuthenticationMethodModesRequestBuilder extends
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a findByMethodModeWithAuthenticationMethodModesRequestBuilder
+     * @return a FindByMethodModeWithAuthenticationMethodModesRequestBuilder
      * @deprecated
      * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */

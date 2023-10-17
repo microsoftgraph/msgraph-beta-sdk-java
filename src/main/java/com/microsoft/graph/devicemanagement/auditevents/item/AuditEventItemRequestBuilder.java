@@ -57,7 +57,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Audit Events
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> get() {
@@ -66,7 +66,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The Audit Events
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property auditEvents in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> patch(@jakarta.annotation.Nonnull final AuditEvent body) {
@@ -89,7 +89,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property auditEvents in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> patch(@jakarta.annotation.Nonnull final AuditEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

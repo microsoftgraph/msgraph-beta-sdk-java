@@ -41,7 +41,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      */
     private String termsOfUseUrl;
     /**
-     * Instantiates a new mobilityManagementPolicy and sets the default values.
+     * Instantiates a new MobilityManagementPolicy and sets the default values.
      */
     public MobilityManagementPolicy() {
         super();
@@ -49,7 +49,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobilityManagementPolicy
+     * @return a MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public static MobilityManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
-     * @return a policyScope
+     * @return a PolicyScope
      */
     @jakarta.annotation.Nullable
     public PolicyScope getAppliesTo() {
@@ -66,7 +66,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the complianceUrl property value. Compliance URL of the mobility management application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComplianceUrl() {
@@ -74,7 +74,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the mobility management application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -82,7 +82,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the discoveryUrl property value. Discovery URL of the mobility management application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDiscoveryUrl() {
@@ -90,7 +90,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the mobility management application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -115,7 +115,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the includedGroups property value. Azure AD groups under the scope of the mobility management application if appliesTo is selected
-     * @return a group
+     * @return a java.util.List<Group>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Group> getIncludedGroups() {
@@ -123,7 +123,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the isValid property value. Whether policy is valid. Invalid policies may not be updated and should be deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValid() {
@@ -131,7 +131,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the termsOfUseUrl property value. Terms of Use URL of the mobility management application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTermsOfUseUrl() {

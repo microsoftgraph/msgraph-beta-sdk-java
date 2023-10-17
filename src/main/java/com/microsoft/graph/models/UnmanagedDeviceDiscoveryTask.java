@@ -16,7 +16,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
      */
     private java.util.List<UnmanagedDevice> unmanagedDevices;
     /**
-     * Instantiates a new unmanagedDeviceDiscoveryTask and sets the default values.
+     * Instantiates a new UnmanagedDeviceDiscoveryTask and sets the default values.
      */
     public UnmanagedDeviceDiscoveryTask() {
         super();
@@ -25,7 +25,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unmanagedDeviceDiscoveryTask
+     * @return a UnmanagedDeviceDiscoveryTask
      */
     @jakarta.annotation.Nonnull
     public static UnmanagedDeviceDiscoveryTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class UnmanagedDeviceDiscoveryTask extends DeviceAppManagementTask implem
     }
     /**
      * Gets the unmanagedDevices property value. Unmanaged devices discovered in the network.
-     * @return a unmanagedDevice
+     * @return a java.util.List<UnmanagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnmanagedDevice> getUnmanagedDevices() {

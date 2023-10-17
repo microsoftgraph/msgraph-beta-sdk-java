@@ -27,7 +27,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private String onBehalfOfUserId;
     /**
-     * Instantiates a new clockInPostRequestBody and sets the default values.
+     * Instantiates a new ClockInPostRequestBody and sets the default values.
      */
     public ClockInPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -35,7 +35,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a clockInPostRequestBody
+     * @return a ClockInPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ClockInPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
         return new ClockInPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the atApprovedLocation property value. The atApprovedLocation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAtApprovedLocation() {
@@ -72,7 +72,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the notes property value. The notes property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {
@@ -80,7 +80,7 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnBehalfOfUserId() {
@@ -98,8 +98,8 @@ public class ClockInPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

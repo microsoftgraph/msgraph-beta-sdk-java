@@ -30,7 +30,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      */
     private String use;
     /**
-     * Instantiates a new uploadSecretPostRequestBody and sets the default values.
+     * Instantiates a new UploadSecretPostRequestBody and sets the default values.
      */
     public UploadSecretPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uploadSecretPostRequestBody
+     * @return a UploadSecretPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UploadSecretPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
         return new UploadSecretPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the exp property value. The exp property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExp() {
@@ -76,7 +76,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the k property value. The k property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getK() {
@@ -84,7 +84,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the nbf property value. The nbf property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNbf() {
@@ -92,7 +92,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the use property value. The use property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUse() {
@@ -111,8 +111,8 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

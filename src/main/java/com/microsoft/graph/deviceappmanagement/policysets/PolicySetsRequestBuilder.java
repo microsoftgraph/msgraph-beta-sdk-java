@@ -68,7 +68,7 @@ public class PolicySetsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The PolicySet of Policies and Applications
-     * @return a CompletableFuture of policySetCollectionResponse
+     * @return a CompletableFuture of PolicySetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class PolicySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * The PolicySet of Policies and Applications
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySetCollectionResponse
+     * @return a CompletableFuture of PolicySetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySetCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class PolicySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to policySets for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of policySet
+     * @return a CompletableFuture of PolicySet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySet> post(@jakarta.annotation.Nonnull final PolicySet body) {
@@ -100,7 +100,7 @@ public class PolicySetsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to policySets for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of policySet
+     * @return a CompletableFuture of PolicySet
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PolicySet> post(@jakarta.annotation.Nonnull final PolicySet body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class PolicySetsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a policySetsRequestBuilder
+     * @return a PolicySetsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PolicySetsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -50,7 +50,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
      */
     private Integer totalConnectorSpaceObjects;
     /**
-     * Instantiates a new onPremisesCurrentExportData and sets the default values.
+     * Instantiates a new OnPremisesCurrentExportData and sets the default values.
      */
     public OnPremisesCurrentExportData() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesCurrentExportData
+     * @return a OnPremisesCurrentExportData
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesCurrentExportData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         return new OnPremisesCurrentExportData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the clientMachineName property value. The name of the onPremises client machine that ran the last export.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientMachineName() {
@@ -101,7 +101,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -109,7 +109,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the pendingObjectsAddition property value. The count of pending adds from on-premises directory.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingObjectsAddition() {
@@ -117,7 +117,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the pendingObjectsDeletion property value. The count of pending deletes from on-premises directory.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingObjectsDeletion() {
@@ -125,7 +125,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the pendingObjectsUpdate property value. The count of pending updates from on-premises directory.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingObjectsUpdate() {
@@ -133,7 +133,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the serviceAccount property value. The name of the dirsync service account that is configured to connect to the directory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceAccount() {
@@ -141,7 +141,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the successfulLinksProvisioningCount property value. The count of updated links during the current directory sync export run.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSuccessfulLinksProvisioningCount() {
@@ -149,7 +149,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the successfulObjectsProvisioningCount property value. The count of objects that were successfully provisioned during the current directory sync export run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulObjectsProvisioningCount() {
@@ -157,7 +157,7 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the totalConnectorSpaceObjects property value. The total number of objects in the AAD Connector Space.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalConnectorSpaceObjects() {
@@ -181,8 +181,8 @@ public class OnPremisesCurrentExportData implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -53,7 +53,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return delete(null);
     }
     /**
-     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -74,8 +74,8 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,9 +83,9 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,9 +97,9 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, CloudPcOnPremisesConnection::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a cloudPcOnPremisesConnection object.
+     * Update the properties of a cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,10 +107,10 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return patch(body, null);
     }
     /**
-     * Update the properties of a cloudPcOnPremisesConnection object.
+     * Update the properties of a cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcOnPremisesConnection
+     * @return a CompletableFuture of CloudPcOnPremisesConnection
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, CloudPcOnPremisesConnection::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property.
+     * Delete a specific cloudPcOnPremisesConnection object. When you delete an Azure network connection, permissions to the service are removed from the specified Azure resources. You cannot delete an Azure network connection when it's in use, as indicated by the inUse property. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -150,7 +150,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of a cloudPcOnPremisesConnection object.
+     * Update the properties of a cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a cloudPcOnPremisesConnection object.
+     * Update the properties of a cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -227,7 +227,7 @@ public class CloudPcOnPremisesConnectionItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of the cloudPcOnPremisesConnection object.
+     * Read the properties and relationships of the cloudPcOnPremisesConnection object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

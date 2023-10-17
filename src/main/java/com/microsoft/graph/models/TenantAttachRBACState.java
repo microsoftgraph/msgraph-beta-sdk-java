@@ -25,7 +25,7 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new tenantAttachRBACState and sets the default values.
+     * Instantiates a new TenantAttachRBACState and sets the default values.
      */
     public TenantAttachRBACState() {
         this.setAdditionalData(new HashMap<>());
@@ -33,7 +33,7 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantAttachRBACState
+     * @return a TenantAttachRBACState
      */
     @jakarta.annotation.Nonnull
     public static TenantAttachRBACState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
         return new TenantAttachRBACState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -50,7 +50,7 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enabled property value. Indicates whether the tenant is enabled for Tenant Attach with role management.  TRUE if enabled, FALSE if the Tenant Attach with rolemanagement is disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -69,7 +69,7 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,8 +86,8 @@ public class TenantAttachRBACState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

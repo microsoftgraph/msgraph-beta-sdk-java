@@ -73,7 +73,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder extends BaseReques
     }
     /**
      * Get servicePrincipalCreationPolicies from policies
-     * @return a CompletableFuture of servicePrincipalCreationPolicy
+     * @return a CompletableFuture of ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicy> get() {
@@ -82,7 +82,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder extends BaseReques
     /**
      * Get servicePrincipalCreationPolicies from policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCreationPolicy
+     * @return a CompletableFuture of ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder extends BaseReques
     /**
      * Update the navigation property servicePrincipalCreationPolicies in policies
      * @param body The request body
-     * @return a CompletableFuture of servicePrincipalCreationPolicy
+     * @return a CompletableFuture of ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicy> patch(@jakarta.annotation.Nonnull final ServicePrincipalCreationPolicy body) {
@@ -105,7 +105,7 @@ public class ServicePrincipalCreationPolicyItemRequestBuilder extends BaseReques
      * Update the navigation property servicePrincipalCreationPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of servicePrincipalCreationPolicy
+     * @return a CompletableFuture of ServicePrincipalCreationPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServicePrincipalCreationPolicy> patch(@jakarta.annotation.Nonnull final ServicePrincipalCreationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

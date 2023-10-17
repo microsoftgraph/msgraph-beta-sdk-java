@@ -57,7 +57,7 @@ public class SharedEmailDomainItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sharedEmailDomains from directory
-     * @return a CompletableFuture of sharedEmailDomain
+     * @return a CompletableFuture of SharedEmailDomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomain> get() {
@@ -66,7 +66,7 @@ public class SharedEmailDomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sharedEmailDomains from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedEmailDomain
+     * @return a CompletableFuture of SharedEmailDomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomain> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SharedEmailDomainItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sharedEmailDomains in directory
      * @param body The request body
-     * @return a CompletableFuture of sharedEmailDomain
+     * @return a CompletableFuture of SharedEmailDomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomain> patch(@jakarta.annotation.Nonnull final SharedEmailDomain body) {
@@ -89,7 +89,7 @@ public class SharedEmailDomainItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sharedEmailDomains in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sharedEmailDomain
+     * @return a CompletableFuture of SharedEmailDomain
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SharedEmailDomain> patch(@jakarta.annotation.Nonnull final SharedEmailDomain body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

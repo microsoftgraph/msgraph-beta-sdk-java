@@ -57,7 +57,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Presenters' information of the virtual event.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a CompletableFuture of VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenter> get() {
@@ -66,7 +66,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Presenters' information of the virtual event.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a CompletableFuture of VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenter> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property presenters in solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a CompletableFuture of VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenter> patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body) {
@@ -89,7 +89,7 @@ public class VirtualEventPresenterItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property presenters in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventPresenter
+     * @return a CompletableFuture of VirtualEventPresenter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventPresenter> patch(@jakarta.annotation.Nonnull final VirtualEventPresenter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

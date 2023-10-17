@@ -56,8 +56,8 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
-     * @return a CompletableFuture of managementActionTenantDeploymentStatus
+     * Read the properties and relationships of a managementActionTenantDeploymentStatus object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ManagementActionTenantDeploymentStatus
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementactiontenantdeploymentstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * Read the properties and relationships of a managementActionTenantDeploymentStatus object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementActionTenantDeploymentStatus
+     * @return a CompletableFuture of ManagementActionTenantDeploymentStatus
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementactiontenantdeploymentstatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
     /**
      * Update the navigation property managementActionTenantDeploymentStatuses in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementActionTenantDeploymentStatus
+     * @return a CompletableFuture of ManagementActionTenantDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementActionTenantDeploymentStatus> patch(@jakarta.annotation.Nonnull final ManagementActionTenantDeploymentStatus body) {
@@ -91,7 +91,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
      * Update the navigation property managementActionTenantDeploymentStatuses in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementActionTenantDeploymentStatus
+     * @return a CompletableFuture of ManagementActionTenantDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementActionTenantDeploymentStatus> patch(@jakarta.annotation.Nonnull final ManagementActionTenantDeploymentStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * Read the properties and relationships of a managementActionTenantDeploymentStatus object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * Read the properties and relationships of a managementActionTenantDeploymentStatus object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class ManagementActionTenantDeploymentStatusItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a managementActionTenantDeploymentStatus object.
+     * Read the properties and relationships of a managementActionTenantDeploymentStatus object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

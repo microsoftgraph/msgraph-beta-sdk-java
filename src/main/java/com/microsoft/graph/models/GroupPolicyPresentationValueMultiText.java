@@ -16,7 +16,7 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
      */
     private java.util.List<String> values;
     /**
-     * Instantiates a new groupPolicyPresentationValueMultiText and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValueMultiText and sets the default values.
      */
     public GroupPolicyPresentationValueMultiText() {
         super();
@@ -24,7 +24,7 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValueMultiText
+     * @return a GroupPolicyPresentationValueMultiText
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueMultiText createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
     }
     /**
      * Gets the values property value. A collection of non-empty strings for the associated presentation.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getValues() {

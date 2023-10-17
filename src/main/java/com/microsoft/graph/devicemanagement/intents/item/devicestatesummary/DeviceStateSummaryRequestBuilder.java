@@ -57,7 +57,7 @@ public class DeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
-     * @return a CompletableFuture of deviceManagementIntentDeviceStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceStateSummary> get() {
@@ -66,7 +66,7 @@ public class DeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * A summary of device states and counts of devices that belong to corresponding state for all devices that the intent is applied to
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentDeviceStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceStateSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceStateSummary in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntentDeviceStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceStateSummary> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceStateSummary body) {
@@ -89,7 +89,7 @@ public class DeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceStateSummary in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentDeviceStateSummary
+     * @return a CompletableFuture of DeviceManagementIntentDeviceStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentDeviceStateSummary> patch(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class DeviceStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStateSummaryRequestBuilder
+     * @return a DeviceStateSummaryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStateSummaryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

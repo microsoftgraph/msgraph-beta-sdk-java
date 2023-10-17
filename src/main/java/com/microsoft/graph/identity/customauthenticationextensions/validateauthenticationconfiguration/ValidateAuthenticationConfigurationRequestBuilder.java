@@ -38,7 +38,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     /**
      * Invoke action validateAuthenticationConfiguration
      * @param body The request body
-     * @return a CompletableFuture of authenticationConfigurationValidation
+     * @return a CompletableFuture of AuthenticationConfigurationValidation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationConfigurationValidation> post(@jakarta.annotation.Nonnull final ValidateAuthenticationConfigurationPostRequestBody body) {
@@ -48,7 +48,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
      * Invoke action validateAuthenticationConfiguration
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authenticationConfigurationValidation
+     * @return a CompletableFuture of AuthenticationConfigurationValidation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthenticationConfigurationValidation> post(@jakarta.annotation.Nonnull final ValidateAuthenticationConfigurationPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class ValidateAuthenticationConfigurationRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a validateAuthenticationConfigurationRequestBuilder
+     * @return a ValidateAuthenticationConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ValidateAuthenticationConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

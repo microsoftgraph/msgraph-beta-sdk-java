@@ -13,7 +13,7 @@ public class HardwareOathAuthenticationMethodConfiguration extends Authenticatio
      */
     private java.util.List<AuthenticationMethodTarget> includeTargets;
     /**
-     * Instantiates a new hardwareOathAuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new HardwareOathAuthenticationMethodConfiguration and sets the default values.
      */
     public HardwareOathAuthenticationMethodConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class HardwareOathAuthenticationMethodConfiguration extends Authenticatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hardwareOathAuthenticationMethodConfiguration
+     * @return a HardwareOathAuthenticationMethodConfiguration
      */
     @jakarta.annotation.Nonnull
     public static HardwareOathAuthenticationMethodConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class HardwareOathAuthenticationMethodConfiguration extends Authenticatio
     }
     /**
      * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.
-     * @return a authenticationMethodTarget
+     * @return a java.util.List<AuthenticationMethodTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {

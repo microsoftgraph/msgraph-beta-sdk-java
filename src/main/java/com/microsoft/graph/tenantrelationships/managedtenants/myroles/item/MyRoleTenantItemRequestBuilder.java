@@ -57,7 +57,7 @@ public class MyRoleTenantItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The collection of role assignments to a signed-in user for a managed tenant.
-     * @return a CompletableFuture of myRole
+     * @return a CompletableFuture of MyRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MyRole> get() {
@@ -66,7 +66,7 @@ public class MyRoleTenantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of role assignments to a signed-in user for a managed tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of myRole
+     * @return a CompletableFuture of MyRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MyRole> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MyRoleTenantItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property myRoles in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of myRole
+     * @return a CompletableFuture of MyRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MyRole> patch(@jakarta.annotation.Nonnull final MyRole body) {
@@ -89,7 +89,7 @@ public class MyRoleTenantItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property myRoles in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of myRole
+     * @return a CompletableFuture of MyRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MyRole> patch(@jakarta.annotation.Nonnull final MyRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

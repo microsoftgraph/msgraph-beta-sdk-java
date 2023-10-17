@@ -38,7 +38,7 @@ public class DefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The associated group policy definition with the value.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get() {
@@ -47,7 +47,7 @@ public class DefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * The associated group policy definition with the value.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class DefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a definitionRequestBuilder
+     * @return a DefinitionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

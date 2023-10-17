@@ -82,7 +82,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the appDiagnostics method.
      * @param upn Usage: upn='{upn}'
-     * @return a appDiagnosticsWithUpnRequestBuilder
+     * @return a AppDiagnosticsWithUpnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppDiagnosticsWithUpnRequestBuilder appDiagnosticsWithUpn(@jakarta.annotation.Nonnull final String upn) {
@@ -119,7 +119,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of co-managed devices report
-     * @return a CompletableFuture of managedDeviceCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get() {
@@ -128,7 +128,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of co-managed devices report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -141,7 +141,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to comanagedDevices for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDevice
+     * @return a CompletableFuture of ManagedDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> post(@jakarta.annotation.Nonnull final ManagedDevice body) {
@@ -151,7 +151,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to comanagedDevices for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDevice
+     * @return a CompletableFuture of ManagedDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDevice> post(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -226,7 +226,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a comanagedDevicesRequestBuilder
+     * @return a ComanagedDevicesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ComanagedDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -13,7 +13,7 @@ public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
      */
     private UserAssetIdentifier identifier;
     /**
-     * Instantiates a new impactedUserAsset and sets the default values.
+     * Instantiates a new ImpactedUserAsset and sets the default values.
      */
     public ImpactedUserAsset() {
         super();
@@ -22,7 +22,7 @@ public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a impactedUserAsset
+     * @return a ImpactedUserAsset
      */
     @jakarta.annotation.Nonnull
     public static ImpactedUserAsset createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ImpactedUserAsset extends ImpactedAsset implements Parsable {
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a userAssetIdentifier
+     * @return a UserAssetIdentifier
      */
     @jakarta.annotation.Nullable
     public UserAssetIdentifier getIdentifier() {

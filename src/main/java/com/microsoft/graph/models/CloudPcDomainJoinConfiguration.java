@@ -34,7 +34,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
      */
     private CloudPcDomainJoinType type;
     /**
-     * Instantiates a new cloudPcDomainJoinConfiguration and sets the default values.
+     * Instantiates a new CloudPcDomainJoinConfiguration and sets the default values.
      */
     public CloudPcDomainJoinConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDomainJoinConfiguration
+     * @return a CloudPcDomainJoinConfiguration
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDomainJoinConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
         return new CloudPcDomainJoinConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -81,7 +81,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     }
     /**
      * Gets the onPremisesConnectionId property value. The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesConnectionId() {
@@ -89,7 +89,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     }
     /**
      * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
-     * @return a cloudPcRegionGroup
+     * @return a CloudPcRegionGroup
      */
     @jakarta.annotation.Nullable
     public CloudPcRegionGroup getRegionGroup() {
@@ -97,7 +97,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     }
     /**
      * Gets the regionName property value. The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Azure AD joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegionName() {
@@ -105,7 +105,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
     }
     /**
      * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure AD. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
-     * @return a cloudPcDomainJoinType
+     * @return a CloudPcDomainJoinType
      */
     @jakarta.annotation.Nullable
     public CloudPcDomainJoinType getType() {
@@ -125,8 +125,8 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

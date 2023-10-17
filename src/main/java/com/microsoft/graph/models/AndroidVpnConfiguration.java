@@ -52,7 +52,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
      */
     private java.util.List<VpnServer> servers;
     /**
-     * Instantiates a new androidVpnConfiguration and sets the default values.
+     * Instantiates a new AndroidVpnConfiguration and sets the default values.
      */
     public AndroidVpnConfiguration() {
         super();
@@ -61,7 +61,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidVpnConfiguration
+     * @return a AndroidVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
@@ -78,7 +78,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -86,7 +86,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the connectionType property value. Android VPN connection type.
-     * @return a androidVpnConnectionType
+     * @return a AndroidVpnConnectionType
      */
     @jakarta.annotation.Nullable
     public AndroidVpnConnectionType getConnectionType() {
@@ -94,7 +94,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the customData property value. Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
@@ -102,7 +102,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the customKeyValueData property value. Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
@@ -129,7 +129,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the fingerprint property value. Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFingerprint() {
@@ -137,7 +137,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a androidCertificateProfileBase
+     * @return a AndroidCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public AndroidCertificateProfileBase getIdentityCertificate() {
@@ -145,7 +145,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -153,7 +153,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -161,7 +161,7 @@ public class AndroidVpnConfiguration extends DeviceConfiguration implements Pars
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a vpnServer
+     * @return a java.util.List<VpnServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {

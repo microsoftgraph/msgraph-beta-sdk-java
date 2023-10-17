@@ -40,7 +40,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      */
     private java.util.List<VulnerableManagedDevice> managedDevices;
     /**
-     * Instantiates a new securityConfigurationTask and sets the default values.
+     * Instantiates a new SecurityConfigurationTask and sets the default values.
      */
     public SecurityConfigurationTask() {
         super();
@@ -49,7 +49,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityConfigurationTask
+     * @return a SecurityConfigurationTask
      */
     @jakarta.annotation.Nonnull
     public static SecurityConfigurationTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the applicablePlatform property value. The endpoint security configuration applicable platform.
-     * @return a endpointSecurityConfigurationApplicablePlatform
+     * @return a EndpointSecurityConfigurationApplicablePlatform
      */
     @jakarta.annotation.Nullable
     public EndpointSecurityConfigurationApplicablePlatform getApplicablePlatform() {
@@ -66,7 +66,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the endpointSecurityPolicy property value. The endpoint security policy type.
-     * @return a endpointSecurityConfigurationType
+     * @return a EndpointSecurityConfigurationType
      */
     @jakarta.annotation.Nullable
     public EndpointSecurityConfigurationType getEndpointSecurityPolicy() {
@@ -74,7 +74,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the endpointSecurityPolicyProfile property value. The endpoint security policy profile type.
-     * @return a endpointSecurityConfigurationProfileType
+     * @return a EndpointSecurityConfigurationProfileType
      */
     @jakarta.annotation.Nullable
     public EndpointSecurityConfigurationProfileType getEndpointSecurityPolicyProfile() {
@@ -98,7 +98,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the insights property value. Information about the mitigation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInsights() {
@@ -106,7 +106,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the intendedSettings property value. The intended settings and their values.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getIntendedSettings() {
@@ -114,7 +114,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the managedDeviceCount property value. The number of vulnerable devices. Valid values 0 to 65536
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getManagedDeviceCount() {
@@ -122,7 +122,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     }
     /**
      * Gets the managedDevices property value. The vulnerable managed devices.
-     * @return a vulnerableManagedDevice
+     * @return a java.util.List<VulnerableManagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VulnerableManagedDevice> getManagedDevices() {

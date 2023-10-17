@@ -21,7 +21,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
      */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new groupPolicyConfigurationAssignment and sets the default values.
+     * Instantiates a new GroupPolicyConfigurationAssignment and sets the default values.
      */
     public GroupPolicyConfigurationAssignment() {
         super();
@@ -29,7 +29,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyConfigurationAssignment
+     * @return a GroupPolicyConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyConfigurationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class GroupPolicyConfigurationAssignment extends Entity implements Parsab
     }
     /**
      * Gets the target property value. The type of groups targeted the group policy configuration.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

@@ -54,7 +54,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      */
     private Boolean remindersEnabled;
     /**
-     * Instantiates a new accessReviewSettings and sets the default values.
+     * Instantiates a new AccessReviewSettings and sets the default values.
      */
     public AccessReviewSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -62,7 +62,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewSettings
+     * @return a AccessReviewSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessRecommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessRecommendationsEnabled() {
@@ -86,14 +86,14 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the activityDurationInDays property value. The number of days of user activities to show to reviewers.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActivityDurationInDays() {
         return this.activityDurationInDays;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the autoApplyReviewResultsEnabled property value. Indicates whether the auto-apply capability, to automatically change the target object access resource, is enabled.  If not enabled, a user must, after the review completes, apply the access review.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoApplyReviewResultsEnabled() {
@@ -110,7 +110,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoReviewEnabled() {
@@ -118,7 +118,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the autoReviewSettings property value. Detailed settings for how the feature should set the review decision. For use when, auto-apply is enabled.
-     * @return a autoReviewSettings
+     * @return a AutoReviewSettings
      */
     @jakarta.annotation.Nullable
     public AutoReviewSettings getAutoReviewSettings() {
@@ -145,7 +145,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide a justification when reviewing access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getJustificationRequiredOnApproval() {
@@ -153,7 +153,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mailNotificationsEnabled property value. Indicates whether sending mails to reviewers and the review creator is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMailNotificationsEnabled() {
@@ -161,7 +161,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -169,7 +169,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the recurrenceSettings property value. Detailed settings for recurrence.
-     * @return a accessReviewRecurrenceSettings
+     * @return a AccessReviewRecurrenceSettings
      */
     @jakarta.annotation.Nullable
     public AccessReviewRecurrenceSettings getRecurrenceSettings() {
@@ -177,7 +177,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remindersEnabled property value. Indicates whether sending reminder emails to reviewers is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRemindersEnabled() {
@@ -216,8 +216,8 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
         this.activityDurationInDays = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

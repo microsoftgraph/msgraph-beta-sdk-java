@@ -57,7 +57,7 @@ public class DirectorySettingItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
-     * @return a CompletableFuture of directorySetting
+     * @return a CompletableFuture of DirectorySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySetting> get() {
@@ -66,7 +66,7 @@ public class DirectorySettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySetting
+     * @return a CompletableFuture of DirectorySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySetting> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DirectorySettingItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property settings in groups
      * @param body The request body
-     * @return a CompletableFuture of directorySetting
+     * @return a CompletableFuture of DirectorySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySetting> patch(@jakarta.annotation.Nonnull final DirectorySetting body) {
@@ -89,7 +89,7 @@ public class DirectorySettingItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property settings in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directorySetting
+     * @return a CompletableFuture of DirectorySetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DirectorySetting> patch(@jakarta.annotation.Nonnull final DirectorySetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

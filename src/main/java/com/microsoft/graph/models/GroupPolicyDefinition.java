@@ -82,7 +82,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new groupPolicyDefinition and sets the default values.
+     * Instantiates a new GroupPolicyDefinition and sets the default values.
      */
     public GroupPolicyDefinition() {
         super();
@@ -90,7 +90,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyDefinition
+     * @return a GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -99,7 +99,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The group policy category associated with the definition.
-     * @return a groupPolicyCategory
+     * @return a GroupPolicyCategory
      */
     @jakarta.annotation.Nullable
     public GroupPolicyCategory getCategory() {
@@ -107,7 +107,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the categoryPath property value. The localized full category path for the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategoryPath() {
@@ -115,7 +115,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the classType property value. Group Policy Definition Class Type.
-     * @return a groupPolicyDefinitionClassType
+     * @return a GroupPolicyDefinitionClassType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinitionClassType getClassType() {
@@ -123,7 +123,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the definitionFile property value. The group policy file associated with the definition.
-     * @return a groupPolicyDefinitionFile
+     * @return a GroupPolicyDefinitionFile
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinitionFile getDefinitionFile() {
@@ -131,7 +131,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The localized policy name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -139,7 +139,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the explainText property value. The localized explanation or help text associated with the policy. The default value is empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExplainText() {
@@ -181,7 +181,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the hasRelatedDefinitions property value. Signifies whether or not there are related definitions to this definition
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasRelatedDefinitions() {
@@ -197,7 +197,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the minDeviceCspVersion property value. Minimum required CSP version for device configuration in this definition
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinDeviceCspVersion() {
@@ -205,7 +205,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the minUserCspVersion property value. Minimum required CSP version for user configuration in this definition
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinUserCspVersion() {
@@ -213,7 +213,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the nextVersionDefinition property value. Definition of the next version of this definition
-     * @return a groupPolicyDefinition
+     * @return a GroupPolicyDefinition
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinition getNextVersionDefinition() {
@@ -221,7 +221,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the policyType property value. Type of Group Policy File or Definition.
-     * @return a groupPolicyType
+     * @return a GroupPolicyType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyType getPolicyType() {
@@ -229,7 +229,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the presentations property value. The group policy presentations associated with the definition.
-     * @return a groupPolicyPresentation
+     * @return a java.util.List<GroupPolicyPresentation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyPresentation> getPresentations() {
@@ -237,7 +237,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the previousVersionDefinition property value. Definition of the previous version of this definition
-     * @return a groupPolicyDefinition
+     * @return a GroupPolicyDefinition
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinition getPreviousVersionDefinition() {
@@ -245,7 +245,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the supportedOn property value. Localized string used to specify what operating system or application version is affected by the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportedOn() {
@@ -253,7 +253,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Setting definition version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

@@ -26,7 +26,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
      */
     private java.util.List<GenericError> warnings;
     /**
-     * Instantiates a new authenticationConfigurationValidation and sets the default values.
+     * Instantiates a new AuthenticationConfigurationValidation and sets the default values.
      */
     public AuthenticationConfigurationValidation() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationConfigurationValidation
+     * @return a AuthenticationConfigurationValidation
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationConfigurationValidation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
         return new AuthenticationConfigurationValidation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the errors property value. Errors in the validation result of a customAuthenticationExtension.
-     * @return a genericError
+     * @return a java.util.List<GenericError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GenericError> getErrors() {
@@ -71,7 +71,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
     }
     /**
      * Gets the warnings property value. Warnings in the validation result of a customAuthenticationExtension.
-     * @return a genericError
+     * @return a java.util.List<GenericError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GenericError> getWarnings() {
@@ -97,8 +97,8 @@ public class AuthenticationConfigurationValidation implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

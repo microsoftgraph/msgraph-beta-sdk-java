@@ -36,7 +36,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/recording", rawUrl);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property sessions from solutions
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
@@ -44,7 +44,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property sessions from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
@@ -57,7 +57,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property sessions in solutions
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -66,7 +66,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property sessions in solutions
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -81,7 +81,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property sessions from solutions
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property sessions from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -108,7 +108,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property sessions in solutions
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -117,7 +117,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property sessions in solutions
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -141,7 +141,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a recordingRequestBuilder
+     * @return a RecordingRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RecordingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

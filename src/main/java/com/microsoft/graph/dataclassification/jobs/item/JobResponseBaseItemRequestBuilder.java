@@ -57,7 +57,7 @@ public class JobResponseBaseItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get jobs from dataClassification
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> get() {
@@ -66,7 +66,7 @@ public class JobResponseBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get jobs from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class JobResponseBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property jobs in dataClassification
      * @param body The request body
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> patch(@jakarta.annotation.Nonnull final JobResponseBase body) {
@@ -89,7 +89,7 @@ public class JobResponseBaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property jobs in dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> patch(@jakarta.annotation.Nonnull final JobResponseBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -13,7 +13,7 @@ public class DeviceManagementIntentDeviceStateCollectionResponse extends BaseCol
      */
     private java.util.List<DeviceManagementIntentDeviceState> value;
     /**
-     * Instantiates a new deviceManagementIntentDeviceStateCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementIntentDeviceStateCollectionResponse and sets the default values.
      */
     public DeviceManagementIntentDeviceStateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementIntentDeviceStateCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentDeviceStateCollectionResponse
+     * @return a DeviceManagementIntentDeviceStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentDeviceStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementIntentDeviceStateCollectionResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementIntentDeviceState
+     * @return a java.util.List<DeviceManagementIntentDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntentDeviceState> getValue() {

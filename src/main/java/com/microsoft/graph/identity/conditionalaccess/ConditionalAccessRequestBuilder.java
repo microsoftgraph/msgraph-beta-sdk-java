@@ -105,7 +105,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * the entry point for the Conditional Access (CA) object model.
-     * @return a CompletableFuture of conditionalAccessRoot
+     * @return a CompletableFuture of ConditionalAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> get() {
@@ -114,7 +114,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * the entry point for the Conditional Access (CA) object model.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessRoot
+     * @return a CompletableFuture of ConditionalAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -127,7 +127,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property conditionalAccess in identity
      * @param body The request body
-     * @return a CompletableFuture of conditionalAccessRoot
+     * @return a CompletableFuture of ConditionalAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> patch(@jakarta.annotation.Nonnull final ConditionalAccessRoot body) {
@@ -137,7 +137,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property conditionalAccess in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of conditionalAccessRoot
+     * @return a CompletableFuture of ConditionalAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConditionalAccessRoot> patch(@jakarta.annotation.Nonnull final ConditionalAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -239,7 +239,7 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a conditionalAccessRequestBuilder
+     * @return a ConditionalAccessRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConditionalAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

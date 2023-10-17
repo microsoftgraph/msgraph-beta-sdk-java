@@ -35,33 +35,33 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/tiIndicators/updateTiIndicators", rawUrl);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of updateTiIndicatorsResponse
+     * @return a CompletableFuture of UpdateTiIndicatorsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-updatetiindicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateTiIndicatorsResponse> post(@jakarta.annotation.Nonnull final UpdateTiIndicatorsPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<UpdateTiIndicatorsPostResponse> post(@jakarta.annotation.Nonnull final UpdateTiIndicatorsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of updateTiIndicatorsResponse
+     * @return a CompletableFuture of UpdateTiIndicatorsPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-updatetiindicators?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<UpdateTiIndicatorsResponse> post(@jakarta.annotation.Nonnull final UpdateTiIndicatorsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<UpdateTiIndicatorsPostResponse> post(@jakarta.annotation.Nonnull final UpdateTiIndicatorsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, UpdateTiIndicatorsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, UpdateTiIndicatorsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests.
+     * Update multiple threat intelligence (TI) indicators in one request instead of multiple requests. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -95,7 +95,7 @@ public class UpdateTiIndicatorsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a updateTiIndicatorsRequestBuilder
+     * @return a UpdateTiIndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UpdateTiIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

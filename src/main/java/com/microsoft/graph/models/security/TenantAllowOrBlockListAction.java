@@ -11,7 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsable {
     /**
-     * Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
+     * Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      */
     private TenantAllowBlockListAction action;
     /**
@@ -23,7 +23,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      */
     private OffsetDateTime expirationDateTime;
     /**
-     * Specifies the note added to the tenant allow block list entry in the format of string.
+     * Specifies the note added to the tenant allow-or-block list entry in the format of string.
      */
     private String note;
     /**
@@ -35,7 +35,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
      */
     private java.util.List<TenantAllowBlockListEntryResult> results;
     /**
-     * Instantiates a new tenantAllowOrBlockListAction and sets the default values.
+     * Instantiates a new TenantAllowOrBlockListAction and sets the default values.
      */
     public TenantAllowOrBlockListAction() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantAllowOrBlockListAction
+     * @return a TenantAllowOrBlockListAction
      */
     @jakarta.annotation.Nonnull
     public static TenantAllowOrBlockListAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,15 +51,15 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         return new TenantAllowOrBlockListAction();
     }
     /**
-     * Gets the action property value. Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
-     * @return a tenantAllowBlockListAction
+     * Gets the action property value. Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
+     * @return a TenantAllowBlockListAction
      */
     @jakarta.annotation.Nullable
     public TenantAllowBlockListAction getAction() {
         return this.action;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -89,8 +89,8 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the note property value. Specifies the note added to the tenant allow block list entry in the format of string.
-     * @return a string
+     * Gets the note property value. Specifies the note added to the tenant allow-or-block list entry in the format of string.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNote() {
@@ -98,7 +98,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,7 +106,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the results property value. Contains the result of the submission that lead to the tenant allow-block-list entry creation.
-     * @return a tenantAllowBlockListEntryResult
+     * @return a java.util.List<TenantAllowBlockListEntryResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantAllowBlockListEntryResult> getResults() {
@@ -126,15 +126,15 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
+     * Sets the action property value. Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final TenantAllowBlockListAction value) {
         this.action = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -147,7 +147,7 @@ public class TenantAllowOrBlockListAction implements AdditionalDataHolder, Parsa
         this.expirationDateTime = value;
     }
     /**
-     * Sets the note property value. Specifies the note added to the tenant allow block list entry in the format of string.
+     * Sets the note property value. Specifies the note added to the tenant allow-or-block list entry in the format of string.
      * @param value Value to set for the note property.
      */
     public void setNote(@jakarta.annotation.Nullable final String value) {

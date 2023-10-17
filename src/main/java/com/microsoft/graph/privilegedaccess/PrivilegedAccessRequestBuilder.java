@@ -60,7 +60,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from privilegedAccess
-     * @return a CompletableFuture of privilegedAccessCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from privilegedAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccess
+     * @return a CompletableFuture of PrivilegedAccess
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccess> post(@jakarta.annotation.Nonnull final PrivilegedAccess body) {
@@ -92,7 +92,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
      * Add new entity to privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccess
+     * @return a CompletableFuture of PrivilegedAccess
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccess> post(@jakarta.annotation.Nonnull final PrivilegedAccess body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PrivilegedAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegedAccessRequestBuilder
+     * @return a PrivilegedAccessRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegedAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -61,7 +61,7 @@ public class CustomerPaymentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get customerPayments from financials
-     * @return a CompletableFuture of customerPaymentCollectionResponse
+     * @return a CompletableFuture of CustomerPaymentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPaymentCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class CustomerPaymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get customerPayments from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customerPaymentCollectionResponse
+     * @return a CompletableFuture of CustomerPaymentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPaymentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class CustomerPaymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to customerPayments for financials
      * @param body The request body
-     * @return a CompletableFuture of customerPayment
+     * @return a CompletableFuture of CustomerPayment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPayment> post(@jakarta.annotation.Nonnull final CustomerPayment body) {
@@ -93,7 +93,7 @@ public class CustomerPaymentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to customerPayments for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customerPayment
+     * @return a CompletableFuture of CustomerPayment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPayment> post(@jakarta.annotation.Nonnull final CustomerPayment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -168,7 +168,7 @@ public class CustomerPaymentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customerPaymentsRequestBuilder
+     * @return a CustomerPaymentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomerPaymentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

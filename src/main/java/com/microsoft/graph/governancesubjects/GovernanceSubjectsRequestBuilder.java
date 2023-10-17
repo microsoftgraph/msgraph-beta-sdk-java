@@ -60,7 +60,7 @@ public class GovernanceSubjectsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entities from governanceSubjects
-     * @return a CompletableFuture of governanceSubjectCollectionResponse
+     * @return a CompletableFuture of GovernanceSubjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubjectCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class GovernanceSubjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entities from governanceSubjects
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceSubjectCollectionResponse
+     * @return a CompletableFuture of GovernanceSubjectCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubjectCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class GovernanceSubjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Add new entity to governanceSubjects
      * @param body The request body
-     * @return a CompletableFuture of governanceSubject
+     * @return a CompletableFuture of GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubject> post(@jakarta.annotation.Nonnull final GovernanceSubject body) {
@@ -92,7 +92,7 @@ public class GovernanceSubjectsRequestBuilder extends BaseRequestBuilder {
      * Add new entity to governanceSubjects
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceSubject
+     * @return a CompletableFuture of GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubject> post(@jakarta.annotation.Nonnull final GovernanceSubject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class GovernanceSubjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a governanceSubjectsRequestBuilder
+     * @return a GovernanceSubjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GovernanceSubjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

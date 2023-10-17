@@ -53,7 +53,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      */
     private Long uniqueUserCount;
     /**
-     * Instantiates a new relyingPartyDetailedSummary and sets the default values.
+     * Instantiates a new RelyingPartyDetailedSummary and sets the default values.
      */
     public RelyingPartyDetailedSummary() {
         super();
@@ -61,7 +61,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relyingPartyDetailedSummary
+     * @return a RelyingPartyDetailedSummary
      */
     @jakarta.annotation.Nonnull
     public static RelyingPartyDetailedSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedSignInCount property value. Number of failed sign in on Active Directory Federation Service in the period specified.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFailedSignInCount() {
@@ -98,7 +98,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the migrationStatus property value. The migrationStatus property
-     * @return a migrationStatus
+     * @return a MigrationStatus
      */
     @jakarta.annotation.Nullable
     public MigrationStatus getMigrationStatus() {
@@ -106,7 +106,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the migrationValidationDetails property value. Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getMigrationValidationDetails() {
@@ -114,7 +114,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRelyingPartyId() {
@@ -122,7 +122,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the relyingPartyName property value. Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRelyingPartyName() {
@@ -130,7 +130,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the replyUrls property value. Specifies where the relying party expects to receive the token.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReplyUrls() {
@@ -138,7 +138,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the serviceId property value. Uniquely identifies the Active Directory forest.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
@@ -146,7 +146,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the signInSuccessRate property value. Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSignInSuccessRate() {
@@ -154,7 +154,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the successfulSignInCount property value. Number of successful sign ins on Active Directory Federation Service.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSuccessfulSignInCount() {
@@ -162,7 +162,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the totalSignInCount property value. Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotalSignInCount() {
@@ -170,7 +170,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the uniqueUserCount property value. Number of unique users that have signed into the application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUniqueUserCount() {

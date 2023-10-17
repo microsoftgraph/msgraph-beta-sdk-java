@@ -48,7 +48,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
      */
     private String subjectNameFormatString;
     /**
-     * Instantiates a new windows10PkcsCertificateProfile and sets the default values.
+     * Instantiates a new Windows10PkcsCertificateProfile and sets the default values.
      */
     public Windows10PkcsCertificateProfile() {
         super();
@@ -57,7 +57,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10PkcsCertificateProfile
+     * @return a Windows10PkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static Windows10PkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -74,7 +74,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
@@ -82,7 +82,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
@@ -90,7 +90,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
@@ -98,7 +98,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
@@ -106,7 +106,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a java.util.List<ExtendedKeyUsage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
@@ -132,7 +132,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -140,7 +140,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -148,7 +148,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

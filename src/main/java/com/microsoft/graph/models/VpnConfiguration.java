@@ -32,7 +32,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
      */
     private java.util.List<VpnServer> servers;
     /**
-     * Instantiates a new vpnConfiguration and sets the default values.
+     * Instantiates a new VpnConfiguration and sets the default values.
      */
     public VpnConfiguration() {
         super();
@@ -41,7 +41,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnConfiguration
+     * @return a VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
@@ -65,7 +65,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -87,7 +87,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -95,7 +95,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -103,7 +103,7 @@ public class VpnConfiguration extends DeviceConfiguration implements Parsable {
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a vpnServer
+     * @return a java.util.List<VpnServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {

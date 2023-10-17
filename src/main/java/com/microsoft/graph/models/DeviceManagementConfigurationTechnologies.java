@@ -22,6 +22,8 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     MicrosoftSense("microsoftSense"),
     /** Setting can be deployed through the Exchange Online agent channel. */
     ExchangeOnline("exchangeOnline"),
+    /** Setting can be deployed through the Mobile Application Management (MAM) channel */
+    MobileApplicationManagement("mobileApplicationManagement"),
     /** Setting can be deployed through the Linux Mdm channel. */
     LinuxMdm("linuxMdm"),
     /** Setting can be deployed through device enrollment. */
@@ -47,6 +49,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "appleRemoteManagement": return AppleRemoteManagement;
             case "microsoftSense": return MicrosoftSense;
             case "exchangeOnline": return ExchangeOnline;
+            case "mobileApplicationManagement": return MobileApplicationManagement;
             case "linuxMdm": return LinuxMdm;
             case "enrollment": return Enrollment;
             case "endpointPrivilegeManagement": return EndpointPrivilegeManagement;

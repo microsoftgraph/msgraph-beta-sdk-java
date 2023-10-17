@@ -13,7 +13,7 @@ public class CustomExtensionHandlerCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<CustomExtensionHandler> value;
     /**
-     * Instantiates a new customExtensionHandlerCollectionResponse and sets the default values.
+     * Instantiates a new CustomExtensionHandlerCollectionResponse and sets the default values.
      */
     public CustomExtensionHandlerCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CustomExtensionHandlerCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionHandlerCollectionResponse
+     * @return a CustomExtensionHandlerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionHandlerCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CustomExtensionHandlerCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a customExtensionHandler
+     * @return a java.util.List<CustomExtensionHandler>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionHandler> getValue() {

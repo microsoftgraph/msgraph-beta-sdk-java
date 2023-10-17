@@ -107,7 +107,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -119,7 +119,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -135,7 +135,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property accessPackageAssignmentPolicies in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -148,7 +148,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Update the navigation property accessPackageAssignmentPolicies in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentPolicy
+     * @return a CompletableFuture of AccessPackageAssignmentPolicy
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

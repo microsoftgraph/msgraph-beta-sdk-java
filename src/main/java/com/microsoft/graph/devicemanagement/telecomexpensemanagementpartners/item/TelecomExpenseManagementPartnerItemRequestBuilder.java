@@ -57,7 +57,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     }
     /**
      * The telecom expense management partners.
-     * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @return a CompletableFuture of TelecomExpenseManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> get() {
@@ -66,7 +66,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     /**
      * The telecom expense management partners.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @return a CompletableFuture of TelecomExpenseManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property telecomExpenseManagementPartners in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @return a CompletableFuture of TelecomExpenseManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> patch(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body) {
@@ -89,7 +89,7 @@ public class TelecomExpenseManagementPartnerItemRequestBuilder extends BaseReque
      * Update the navigation property telecomExpenseManagementPartners in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of telecomExpenseManagementPartner
+     * @return a CompletableFuture of TelecomExpenseManagementPartner
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TelecomExpenseManagementPartner> patch(@jakarta.annotation.Nonnull final TelecomExpenseManagementPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

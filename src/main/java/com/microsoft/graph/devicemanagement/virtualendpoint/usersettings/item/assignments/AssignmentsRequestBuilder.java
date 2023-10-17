@@ -60,7 +60,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
-     * @return a CompletableFuture of cloudPcUserSettingAssignmentCollectionResponse
+     * @return a CompletableFuture of CloudPcUserSettingAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcUserSettingAssignmentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcUserSettingAssignmentCollectionResponse
+     * @return a CompletableFuture of CloudPcUserSettingAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcUserSettingAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to assignments for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcUserSettingAssignment
+     * @return a CompletableFuture of CloudPcUserSettingAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcUserSettingAssignment> post(@jakarta.annotation.Nonnull final CloudPcUserSettingAssignment body) {
@@ -92,7 +92,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcUserSettingAssignment
+     * @return a CompletableFuture of CloudPcUserSettingAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcUserSettingAssignment> post(@jakarta.annotation.Nonnull final CloudPcUserSettingAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentsRequestBuilder
+     * @return a AssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
     }
     /**
      * Summary of all certificates for all devices.
-     * @return a CompletableFuture of managedAllDeviceCertificateStateCollectionResponse
+     * @return a CompletableFuture of ManagedAllDeviceCertificateStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateStateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
     /**
      * Summary of all certificates for all devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAllDeviceCertificateStateCollectionResponse
+     * @return a CompletableFuture of ManagedAllDeviceCertificateStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
     /**
      * Create new navigation property to deviceConfigurationsAllManagedDeviceCertificateStates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of managedAllDeviceCertificateState
+     * @return a CompletableFuture of ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateState> post(@jakarta.annotation.Nonnull final ManagedAllDeviceCertificateState body) {
@@ -92,7 +92,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
      * Create new navigation property to deviceConfigurationsAllManagedDeviceCertificateStates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedAllDeviceCertificateState
+     * @return a CompletableFuture of ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedAllDeviceCertificateState> post(@jakarta.annotation.Nonnull final ManagedAllDeviceCertificateState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
+     * @return a DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationCategoryItemRequestBuilder extends Bas
     }
     /**
      * List of all compliance categories
-     * @return a CompletableFuture of deviceManagementConfigurationCategory
+     * @return a CompletableFuture of DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategory> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementConfigurationCategoryItemRequestBuilder extends Bas
     /**
      * List of all compliance categories
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationCategory
+     * @return a CompletableFuture of DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationCategoryItemRequestBuilder extends Bas
     /**
      * Update the navigation property complianceCategories in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationCategory
+     * @return a CompletableFuture of DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategory> patch(@jakarta.annotation.Nonnull final DeviceManagementConfigurationCategory body) {
@@ -89,7 +89,7 @@ public class DeviceManagementConfigurationCategoryItemRequestBuilder extends Bas
      * Update the navigation property complianceCategories in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationCategory
+     * @return a CompletableFuture of DeviceManagementConfigurationCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationCategory> patch(@jakarta.annotation.Nonnull final DeviceManagementConfigurationCategory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

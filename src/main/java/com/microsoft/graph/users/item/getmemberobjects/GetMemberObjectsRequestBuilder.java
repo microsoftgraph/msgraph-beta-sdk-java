@@ -37,26 +37,26 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action getMemberObjects
      * @param body The request body
-     * @return a CompletableFuture of getMemberObjectsResponse
+     * @return a CompletableFuture of GetMemberObjectsPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetMemberObjectsResponse> post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<GetMemberObjectsPostResponse> post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action getMemberObjects
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getMemberObjectsResponse
+     * @return a CompletableFuture of GetMemberObjectsPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetMemberObjectsResponse> post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetMemberObjectsPostResponse> post(@jakarta.annotation.Nonnull final GetMemberObjectsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetMemberObjectsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetMemberObjectsPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action getMemberObjects
@@ -93,7 +93,7 @@ public class GetMemberObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getMemberObjectsRequestBuilder
+     * @return a GetMemberObjectsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

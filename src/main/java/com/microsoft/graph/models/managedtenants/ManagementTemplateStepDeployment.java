@@ -43,7 +43,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
      */
     private String tenantId;
     /**
-     * Instantiates a new managementTemplateStepDeployment and sets the default values.
+     * Instantiates a new ManagementTemplateStepDeployment and sets the default values.
      */
     public ManagementTemplateStepDeployment() {
         super();
@@ -51,7 +51,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStepDeployment
+     * @return a ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStepDeployment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -76,7 +76,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the error property value. The error property
-     * @return a graphAPIErrorDetails
+     * @return a GraphAPIErrorDetails
      */
     @jakarta.annotation.Nullable
     public GraphAPIErrorDetails getError() {
@@ -101,7 +101,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -117,7 +117,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the status property value. The status property
-     * @return a managementTemplateDeploymentStatus
+     * @return a ManagementTemplateDeploymentStatus
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateDeploymentStatus getStatus() {
@@ -125,7 +125,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the templateStepVersion property value. The templateStepVersion property
-     * @return a managementTemplateStepVersion
+     * @return a ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion getTemplateStepVersion() {
@@ -133,7 +133,7 @@ public class ManagementTemplateStepDeployment extends Entity implements Parsable
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

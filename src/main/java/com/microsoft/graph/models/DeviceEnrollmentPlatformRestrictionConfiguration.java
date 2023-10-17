@@ -20,7 +20,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      */
     private EnrollmentRestrictionPlatformType platformType;
     /**
-     * Instantiates a new deviceEnrollmentPlatformRestrictionConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentPlatformRestrictionConfiguration and sets the default values.
      */
     public DeviceEnrollmentPlatformRestrictionConfiguration() {
         super();
@@ -29,7 +29,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentPlatformRestrictionConfiguration
+     * @return a DeviceEnrollmentPlatformRestrictionConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentPlatformRestrictionConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
     }
     /**
      * Gets the platformRestriction property value. Restrictions based on platform, platform operating system version, and device ownership
-     * @return a deviceEnrollmentPlatformRestriction
+     * @return a DeviceEnrollmentPlatformRestriction
      */
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getPlatformRestriction() {
@@ -57,7 +57,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
     }
     /**
      * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
-     * @return a enrollmentRestrictionPlatformType
+     * @return a EnrollmentRestrictionPlatformType
      */
     @jakarta.annotation.Nullable
     public EnrollmentRestrictionPlatformType getPlatformType() {

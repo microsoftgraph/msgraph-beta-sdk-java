@@ -73,7 +73,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder extends BaseReque
     }
     /**
      * Android for Work enrollment profile entities.
-     * @return a CompletableFuture of androidForWorkEnrollmentProfile
+     * @return a CompletableFuture of AndroidForWorkEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkEnrollmentProfile> get() {
@@ -82,7 +82,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder extends BaseReque
     /**
      * Android for Work enrollment profile entities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkEnrollmentProfile
+     * @return a CompletableFuture of AndroidForWorkEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkEnrollmentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property androidForWorkEnrollmentProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidForWorkEnrollmentProfile
+     * @return a CompletableFuture of AndroidForWorkEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkEnrollmentProfile> patch(@jakarta.annotation.Nonnull final AndroidForWorkEnrollmentProfile body) {
@@ -105,7 +105,7 @@ public class AndroidForWorkEnrollmentProfileItemRequestBuilder extends BaseReque
      * Update the navigation property androidForWorkEnrollmentProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkEnrollmentProfile
+     * @return a CompletableFuture of AndroidForWorkEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkEnrollmentProfile> patch(@jakarta.annotation.Nonnull final AndroidForWorkEnrollmentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

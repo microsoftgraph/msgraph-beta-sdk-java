@@ -21,7 +21,7 @@ public class HorizontalSection extends Entity implements Parsable {
      */
     private HorizontalSectionLayoutType layout;
     /**
-     * Instantiates a new horizontalSection and sets the default values.
+     * Instantiates a new HorizontalSection and sets the default values.
      */
     public HorizontalSection() {
         super();
@@ -29,7 +29,7 @@ public class HorizontalSection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a horizontalSection
+     * @return a HorizontalSection
      */
     @jakarta.annotation.Nonnull
     public static HorizontalSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the columns property value. The set of vertical columns in this section.
-     * @return a horizontalSectionColumn
+     * @return a java.util.List<HorizontalSectionColumn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HorizontalSectionColumn> getColumns() {
@@ -46,7 +46,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a sectionEmphasisType
+     * @return a SectionEmphasisType
      */
     @jakarta.annotation.Nullable
     public SectionEmphasisType getEmphasis() {
@@ -66,7 +66,7 @@ public class HorizontalSection extends Entity implements Parsable {
     }
     /**
      * Gets the layout property value. Layout type of the section. The possible values are: none, oneColumn, twoColumns, threeColumns, oneThirdLeftColumn, oneThirdRightColumn, fullWidth, unknownFutureValue.
-     * @return a horizontalSectionLayoutType
+     * @return a HorizontalSectionLayoutType
      */
     @jakarta.annotation.Nullable
     public HorizontalSectionLayoutType getLayout() {

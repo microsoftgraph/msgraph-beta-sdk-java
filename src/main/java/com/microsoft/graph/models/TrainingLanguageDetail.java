@@ -10,43 +10,43 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TrainingLanguageDetail extends Entity implements Parsable {
     /**
-     * The content property
+     * Language specific content for the training.
      */
     private String content;
     /**
-     * The createdBy property
+     * Identity of the user who created the language details.
      */
     private EmailIdentity createdBy;
     /**
-     * The createdDateTime property
+     * Date and time when the language details were created.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * The description property
+     * Description as defined by the user.
      */
     private String description;
     /**
-     * The displayName property
+     * Display name as defined by the user.
      */
     private String displayName;
     /**
-     * The isDefaultLangauge property
+     * Indicates whether the training has a default language.
      */
     private Boolean isDefaultLangauge;
     /**
-     * The lastModifiedBy property
+     * Identity of the user who last modified the details.
      */
     private EmailIdentity lastModifiedBy;
     /**
-     * The lastModifiedDateTime property
+     * Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The locale property
+     * Content locale for the training detail.
      */
     private String locale;
     /**
-     * Instantiates a new trainingLanguageDetail and sets the default values.
+     * Instantiates a new TrainingLanguageDetail and sets the default values.
      */
     public TrainingLanguageDetail() {
         super();
@@ -54,7 +54,7 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a trainingLanguageDetail
+     * @return a TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public static TrainingLanguageDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,23 +62,23 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
         return new TrainingLanguageDetail();
     }
     /**
-     * Gets the content property value. The content property
-     * @return a string
+     * Gets the content property value. Language specific content for the training.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
         return this.content;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
-     * @return a emailIdentity
+     * Gets the createdBy property value. Identity of the user who created the language details.
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getCreatedBy() {
         return this.createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the language details were created.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -86,16 +86,16 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. The description property
-     * @return a string
+     * Gets the description property value. Description as defined by the user.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
+     * Gets the displayName property value. Display name as defined by the user.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -120,23 +120,23 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultLangauge property value. The isDefaultLangauge property
-     * @return a boolean
+     * Gets the isDefaultLangauge property value. Indicates whether the training has a default language.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultLangauge() {
         return this.isDefaultLangauge;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a emailIdentity
+     * Gets the lastModifiedBy property value. Identity of the user who last modified the details.
+     * @return a EmailIdentity
      */
     @jakarta.annotation.Nullable
     public EmailIdentity getLastModifiedBy() {
         return this.lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -144,8 +144,8 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the locale property value. The locale property
-     * @return a string
+     * Gets the locale property value. Content locale for the training detail.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
@@ -169,63 +169,63 @@ public class TrainingLanguageDetail extends Entity implements Parsable {
         writer.writeStringValue("locale", this.getLocale());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Language specific content for the training.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.content = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Identity of the user who created the language details.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the language details were created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description as defined by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name as defined by the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the isDefaultLangauge property value. The isDefaultLangauge property
+     * Sets the isDefaultLangauge property value. Indicates whether the training has a default language.
      * @param value Value to set for the isDefaultLangauge property.
      */
     public void setIsDefaultLangauge(@jakarta.annotation.Nullable final Boolean value) {
         this.isDefaultLangauge = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Identity of the user who last modified the details.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final EmailIdentity value) {
         this.lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the trainingLanguageDetail was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the locale property value. The locale property
+     * Sets the locale property value. Content locale for the training detail.
      * @param value Value to set for the locale property.
      */
     public void setLocale(@jakarta.annotation.Nullable final String value) {

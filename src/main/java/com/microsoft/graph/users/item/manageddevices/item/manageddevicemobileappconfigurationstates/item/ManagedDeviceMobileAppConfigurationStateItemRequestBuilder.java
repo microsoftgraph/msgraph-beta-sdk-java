@@ -57,7 +57,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder extends 
     }
     /**
      * Managed device mobile app configuration states for this device.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationState
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationState> get() {
@@ -66,7 +66,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder extends 
     /**
      * Managed device mobile app configuration states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationState
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder extends 
     /**
      * Update the navigation property managedDeviceMobileAppConfigurationStates in users
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationState
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationState> patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationState body) {
@@ -89,7 +89,7 @@ public class ManagedDeviceMobileAppConfigurationStateItemRequestBuilder extends 
      * Update the navigation property managedDeviceMobileAppConfigurationStates in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationState
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationState> patch(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

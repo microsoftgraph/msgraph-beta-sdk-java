@@ -60,7 +60,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get events from solutions
-     * @return a CompletableFuture of virtualEventCollectionResponse
+     * @return a CompletableFuture of VirtualEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get events from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventCollectionResponse
+     * @return a CompletableFuture of VirtualEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to events for solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEvent
+     * @return a CompletableFuture of VirtualEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEvent> post(@jakarta.annotation.Nonnull final VirtualEvent body) {
@@ -92,7 +92,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to events for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEvent
+     * @return a CompletableFuture of VirtualEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEvent> post(@jakarta.annotation.Nonnull final VirtualEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a eventsRequestBuilder
+     * @return a EventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

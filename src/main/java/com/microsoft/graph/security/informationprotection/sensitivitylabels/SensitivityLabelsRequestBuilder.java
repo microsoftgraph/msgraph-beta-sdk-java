@@ -91,8 +91,8 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
-     * @return a CompletableFuture of sensitivityLabelCollectionResponse
+     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of SensitivityLabelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotection-list-sensitivitylabels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,9 +100,9 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityLabelCollectionResponse
+     * @return a CompletableFuture of SensitivityLabelCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/security-informationprotection-list-sensitivitylabels?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sensitivityLabels for security
      * @param body The request body
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> post(@jakarta.annotation.Nonnull final SensitivityLabel body) {
@@ -126,7 +126,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sensitivityLabels for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityLabel
+     * @return a CompletableFuture of SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityLabel> post(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, SensitivityLabel::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -201,7 +201,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sensitivityLabelsRequestBuilder
+     * @return a SensitivityLabelsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SensitivityLabelsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of sensitivityLabel objects associated with a user or organization.
+     * Get a list of sensitivityLabel objects associated with a user or organization. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

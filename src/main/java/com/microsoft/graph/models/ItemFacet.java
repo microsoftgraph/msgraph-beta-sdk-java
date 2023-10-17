@@ -43,7 +43,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     private PersonDataSources source;
     /**
-     * Instantiates a new itemFacet and sets the default values.
+     * Instantiates a new ItemFacet and sets the default values.
      */
     public ItemFacet() {
         super();
@@ -51,7 +51,7 @@ public class ItemFacet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemFacet
+     * @return a ItemFacet
      */
     @jakarta.annotation.Nonnull
     public static ItemFacet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +86,7 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
-     * @return a allowedAudiences
+     * @return a EnumSet<AllowedAudiences>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AllowedAudiences> getAllowedAudiences() {
@@ -94,7 +94,7 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -127,7 +127,7 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the inference property value. Contains inference detail if the entity is inferred by the creating or modifying application.
-     * @return a inferenceData
+     * @return a InferenceData
      */
     @jakarta.annotation.Nullable
     public InferenceData getInference() {
@@ -135,7 +135,7 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the isSearchable property value. The isSearchable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSearchable() {
@@ -143,7 +143,7 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -159,7 +159,7 @@ public class ItemFacet extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Where the values within an entity originated if synced from another service.
-     * @return a personDataSources
+     * @return a PersonDataSources
      */
     @jakarta.annotation.Nullable
     public PersonDataSources getSource() {

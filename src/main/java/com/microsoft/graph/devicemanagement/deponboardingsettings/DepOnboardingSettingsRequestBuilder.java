@@ -61,7 +61,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * This collections of multiple DEP tokens per-tenant.
-     * @return a CompletableFuture of depOnboardingSettingCollectionResponse
+     * @return a CompletableFuture of DepOnboardingSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSettingCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * This collections of multiple DEP tokens per-tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of depOnboardingSettingCollectionResponse
+     * @return a CompletableFuture of DepOnboardingSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getExpiringVppTokenCount method.
      * @param expiringBeforeDateTime Usage: expiringBeforeDateTime='{expiringBeforeDateTime}'
-     * @return a getExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder
+     * @return a GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder getExpiringVppTokenCountWithExpiringBeforeDateTime(@jakarta.annotation.Nonnull final String expiringBeforeDateTime) {
@@ -93,7 +93,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to depOnboardingSettings for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of depOnboardingSetting
+     * @return a CompletableFuture of DepOnboardingSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> post(@jakarta.annotation.Nonnull final DepOnboardingSetting body) {
@@ -103,7 +103,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to depOnboardingSettings for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of depOnboardingSetting
+     * @return a CompletableFuture of DepOnboardingSetting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DepOnboardingSetting> post(@jakarta.annotation.Nonnull final DepOnboardingSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -178,7 +178,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a depOnboardingSettingsRequestBuilder
+     * @return a DepOnboardingSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DepOnboardingSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

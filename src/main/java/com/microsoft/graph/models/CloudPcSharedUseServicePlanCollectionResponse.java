@@ -13,7 +13,7 @@ public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectio
      */
     private java.util.List<CloudPcSharedUseServicePlan> value;
     /**
-     * Instantiates a new cloudPcSharedUseServicePlanCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcSharedUseServicePlanCollectionResponse and sets the default values.
      */
     public CloudPcSharedUseServicePlanCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcSharedUseServicePlanCollectionResponse
+     * @return a CloudPcSharedUseServicePlanCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcSharedUseServicePlanCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CloudPcSharedUseServicePlanCollectionResponse extends BaseCollectio
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcSharedUseServicePlan
+     * @return a java.util.List<CloudPcSharedUseServicePlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcSharedUseServicePlan> getValue() {

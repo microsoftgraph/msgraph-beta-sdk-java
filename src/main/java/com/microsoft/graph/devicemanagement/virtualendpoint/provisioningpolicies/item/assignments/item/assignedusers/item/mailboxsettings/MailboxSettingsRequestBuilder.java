@@ -38,7 +38,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */
@@ -50,7 +50,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */
@@ -66,7 +66,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update property mailboxSettings value.
      * @param body The request body
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */
@@ -79,7 +79,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
      * Update property mailboxSettings value.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mailboxSettings
+     * @return a CompletableFuture of MailboxSettings
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */
@@ -169,7 +169,7 @@ public class MailboxSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mailboxSettingsRequestBuilder
+     * @return a MailboxSettingsRequestBuilder
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */

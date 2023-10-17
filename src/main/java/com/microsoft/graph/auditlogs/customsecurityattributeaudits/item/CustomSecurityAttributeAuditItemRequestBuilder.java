@@ -57,7 +57,7 @@ public class CustomSecurityAttributeAuditItemRequestBuilder extends BaseRequestB
     }
     /**
      * Get customSecurityAttributeAudits from auditLogs
-     * @return a CompletableFuture of customSecurityAttributeAudit
+     * @return a CompletableFuture of CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAudit> get() {
@@ -66,7 +66,7 @@ public class CustomSecurityAttributeAuditItemRequestBuilder extends BaseRequestB
     /**
      * Get customSecurityAttributeAudits from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customSecurityAttributeAudit
+     * @return a CompletableFuture of CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAudit> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CustomSecurityAttributeAuditItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property customSecurityAttributeAudits in auditLogs
      * @param body The request body
-     * @return a CompletableFuture of customSecurityAttributeAudit
+     * @return a CompletableFuture of CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAudit> patch(@jakarta.annotation.Nonnull final CustomSecurityAttributeAudit body) {
@@ -89,7 +89,7 @@ public class CustomSecurityAttributeAuditItemRequestBuilder extends BaseRequestB
      * Update the navigation property customSecurityAttributeAudits in auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customSecurityAttributeAudit
+     * @return a CompletableFuture of CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAudit> patch(@jakarta.annotation.Nonnull final CustomSecurityAttributeAudit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

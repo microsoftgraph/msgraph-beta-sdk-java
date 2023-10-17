@@ -60,7 +60,7 @@ public class DeviceCustomAttributeShellScriptsRequestBuilder extends BaseRequest
     }
     /**
      * The list of device custom attribute shell scripts associated with the tenant.
-     * @return a CompletableFuture of deviceCustomAttributeShellScriptCollectionResponse
+     * @return a CompletableFuture of DeviceCustomAttributeShellScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScriptCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceCustomAttributeShellScriptsRequestBuilder extends BaseRequest
     /**
      * The list of device custom attribute shell scripts associated with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCustomAttributeShellScriptCollectionResponse
+     * @return a CompletableFuture of DeviceCustomAttributeShellScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScriptCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceCustomAttributeShellScriptsRequestBuilder extends BaseRequest
     /**
      * Create new navigation property to deviceCustomAttributeShellScripts for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceCustomAttributeShellScript
+     * @return a CompletableFuture of DeviceCustomAttributeShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScript> post(@jakarta.annotation.Nonnull final DeviceCustomAttributeShellScript body) {
@@ -92,7 +92,7 @@ public class DeviceCustomAttributeShellScriptsRequestBuilder extends BaseRequest
      * Create new navigation property to deviceCustomAttributeShellScripts for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceCustomAttributeShellScript
+     * @return a CompletableFuture of DeviceCustomAttributeShellScript
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceCustomAttributeShellScript> post(@jakarta.annotation.Nonnull final DeviceCustomAttributeShellScript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceCustomAttributeShellScriptsRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceCustomAttributeShellScriptsRequestBuilder
+     * @return a DeviceCustomAttributeShellScriptsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceCustomAttributeShellScriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

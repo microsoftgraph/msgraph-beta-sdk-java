@@ -13,7 +13,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionResponse ex
      */
     private java.util.List<WindowsInformationProtectionDeviceRegistration> value;
     /**
-     * Instantiates a new windowsInformationProtectionDeviceRegistrationCollectionResponse and sets the default values.
+     * Instantiates a new WindowsInformationProtectionDeviceRegistrationCollectionResponse and sets the default values.
      */
     public WindowsInformationProtectionDeviceRegistrationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionResponse ex
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionDeviceRegistrationCollectionResponse
+     * @return a WindowsInformationProtectionDeviceRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionDeviceRegistrationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsInformationProtectionDeviceRegistrationCollectionResponse ex
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsInformationProtectionDeviceRegistration
+     * @return a java.util.List<WindowsInformationProtectionDeviceRegistration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionDeviceRegistration> getValue() {

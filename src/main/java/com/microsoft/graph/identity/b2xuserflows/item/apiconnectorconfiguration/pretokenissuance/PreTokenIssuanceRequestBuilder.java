@@ -65,7 +65,7 @@ public class PreTokenIssuanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get preTokenIssuance from identity
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> get() {
@@ -74,7 +74,7 @@ public class PreTokenIssuanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get preTokenIssuance from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class PreTokenIssuanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property preTokenIssuance in identity
      * @param body The request body
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> patch(@jakarta.annotation.Nonnull final IdentityApiConnector body) {
@@ -97,7 +97,7 @@ public class PreTokenIssuanceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property preTokenIssuance in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityApiConnector
+     * @return a CompletableFuture of IdentityApiConnector
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityApiConnector> patch(@jakarta.annotation.Nonnull final IdentityApiConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class PreTokenIssuanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a preTokenIssuanceRequestBuilder
+     * @return a PreTokenIssuanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PreTokenIssuanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -56,17 +56,19 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcfrontlineserviceplan-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> get() {
         return get(null);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcfrontlineserviceplan-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property frontLineServicePlans in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> patch(@jakarta.annotation.Nonnull final CloudPcFrontLineServicePlan body) {
@@ -89,7 +91,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
      * Update the navigation property frontLineServicePlans in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> patch(@jakarta.annotation.Nonnull final CloudPcFrontLineServicePlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +130,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +138,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +207,7 @@ public class CloudPcFrontLineServicePlanItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get the properties and relationships of a cloudPcFrontLineServicePlan object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

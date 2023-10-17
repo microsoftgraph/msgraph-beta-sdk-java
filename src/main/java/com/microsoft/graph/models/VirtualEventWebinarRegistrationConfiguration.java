@@ -17,7 +17,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
      */
     private Boolean isWaitlistEnabled;
     /**
-     * Instantiates a new virtualEventWebinarRegistrationConfiguration and sets the default values.
+     * Instantiates a new VirtualEventWebinarRegistrationConfiguration and sets the default values.
      */
     public VirtualEventWebinarRegistrationConfiguration() {
         super();
@@ -26,7 +26,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventWebinarRegistrationConfiguration
+     * @return a VirtualEventWebinarRegistrationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventWebinarRegistrationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     }
     /**
      * Gets the isManualApprovalEnabled property value. The isManualApprovalEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManualApprovalEnabled() {
@@ -54,7 +54,7 @@ public class VirtualEventWebinarRegistrationConfiguration extends VirtualEventRe
     }
     /**
      * Gets the isWaitlistEnabled property value. The isWaitlistEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsWaitlistEnabled() {

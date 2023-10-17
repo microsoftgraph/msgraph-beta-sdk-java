@@ -59,17 +59,19 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/landingPages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get landingPages from security
-     * @return a CompletableFuture of landingPageCollectionResponse
+     * Get a list of the landingPage objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of LandingPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-landingpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get landingPages from security
+     * Get a list of the landingPage objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPageCollectionResponse
+     * @return a CompletableFuture of LandingPageCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationroot-list-landingpage?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +84,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to landingPages for security
      * @param body The request body
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> post(@jakarta.annotation.Nonnull final LandingPage body) {
@@ -92,7 +94,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to landingPages for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of landingPage
+     * @return a CompletableFuture of LandingPage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LandingPage> post(@jakarta.annotation.Nonnull final LandingPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +106,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, LandingPage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get landingPages from security
+     * Get a list of the landingPage objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get landingPages from security
+     * Get a list of the landingPage objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a landingPagesRequestBuilder
+     * @return a LandingPagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LandingPagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +177,7 @@ public class LandingPagesRequestBuilder extends BaseRequestBuilder {
         return new LandingPagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get landingPages from security
+     * Get a list of the landingPage objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

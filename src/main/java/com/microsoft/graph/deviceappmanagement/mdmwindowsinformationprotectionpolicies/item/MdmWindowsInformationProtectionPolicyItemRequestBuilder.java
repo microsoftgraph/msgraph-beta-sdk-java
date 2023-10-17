@@ -81,7 +81,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
     }
     /**
      * Windows information protection for apps running on devices which are MDM enrolled.
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get() {
@@ -90,7 +90,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
     /**
      * Windows information protection for apps running on devices which are MDM enrolled.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
     /**
      * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body) {
@@ -113,7 +113,7 @@ public class MdmWindowsInformationProtectionPolicyItemRequestBuilder extends Bas
      * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mdmWindowsInformationProtectionPolicy
+     * @return a CompletableFuture of MdmWindowsInformationProtectionPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MdmWindowsInformationProtectionPolicy> patch(@jakarta.annotation.Nonnull final MdmWindowsInformationProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

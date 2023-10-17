@@ -73,7 +73,7 @@ public class PrivilegedRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * Get entity from privilegedRoleAssignmentRequests by key
-     * @return a CompletableFuture of privilegedRoleAssignmentRequest
+     * @return a CompletableFuture of PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentRequest> get() {
@@ -82,7 +82,7 @@ public class PrivilegedRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Get entity from privilegedRoleAssignmentRequests by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignmentRequest
+     * @return a CompletableFuture of PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class PrivilegedRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Update entity in privilegedRoleAssignmentRequests
      * @param body The request body
-     * @return a CompletableFuture of privilegedRoleAssignmentRequest
+     * @return a CompletableFuture of PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentRequest> patch(@jakarta.annotation.Nonnull final PrivilegedRoleAssignmentRequest body) {
@@ -105,7 +105,7 @@ public class PrivilegedRoleAssignmentRequestItemRequestBuilder extends BaseReque
      * Update entity in privilegedRoleAssignmentRequests
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignmentRequest
+     * @return a CompletableFuture of PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignmentRequest> patch(@jakarta.annotation.Nonnull final PrivilegedRoleAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

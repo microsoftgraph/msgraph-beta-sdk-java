@@ -73,7 +73,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     }
     /**
      * Collection of resource access settings associated with account.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> get() {
@@ -82,7 +82,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     /**
      * Collection of resource access settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     /**
      * Update the navigation property resourceAccessProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> patch(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body) {
@@ -105,7 +105,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
      * Update the navigation property resourceAccessProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> patch(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,7 +65,7 @@ public class MacOSSoftwareUpdateCategorySummaryItemRequestBuilder extends BaseRe
     }
     /**
      * Summary of the updates by category.
-     * @return a CompletableFuture of macOSSoftwareUpdateCategorySummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateCategorySummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateCategorySummary> get() {
@@ -74,7 +74,7 @@ public class MacOSSoftwareUpdateCategorySummaryItemRequestBuilder extends BaseRe
     /**
      * Summary of the updates by category.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSSoftwareUpdateCategorySummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateCategorySummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateCategorySummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class MacOSSoftwareUpdateCategorySummaryItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property categorySummaries in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of macOSSoftwareUpdateCategorySummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateCategorySummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateCategorySummary> patch(@jakarta.annotation.Nonnull final MacOSSoftwareUpdateCategorySummary body) {
@@ -97,7 +97,7 @@ public class MacOSSoftwareUpdateCategorySummaryItemRequestBuilder extends BaseRe
      * Update the navigation property categorySummaries in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of macOSSoftwareUpdateCategorySummary
+     * @return a CompletableFuture of MacOSSoftwareUpdateCategorySummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MacOSSoftwareUpdateCategorySummary> patch(@jakarta.annotation.Nonnull final MacOSSoftwareUpdateCategorySummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -73,7 +73,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
     }
     /**
      * Represents an Azure AD access review decision on an instance of a review.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> get() {
@@ -82,7 +82,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
     /**
      * Represents an Azure AD access review decision on an instance of a review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property decisions in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> patch(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body) {
@@ -105,7 +105,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
      * Update the navigation property decisions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> patch(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

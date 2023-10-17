@@ -30,7 +30,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
      */
     private String sensitiveTypeId;
     /**
-     * Instantiates a new classificationResult and sets the default values.
+     * Instantiates a new ClassificationResult and sets the default values.
      */
     public ClassificationResult() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a classificationResult
+     * @return a ClassificationResult
      */
     @jakarta.annotation.Nonnull
     public static ClassificationResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         return new ClassificationResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the confidenceLevel property value. The confidence level, 0 to 100, of the result.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfidenceLevel() {
@@ -63,7 +63,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the count property value. The number of instances of the specific information type in the input.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCount() {
@@ -84,7 +84,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sensitiveTypeId property value. The GUID of the discovered sensitive information type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSensitiveTypeId() {
@@ -111,8 +111,8 @@ public class ClassificationResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

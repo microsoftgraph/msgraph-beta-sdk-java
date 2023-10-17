@@ -57,7 +57,7 @@ public class PrivilegedOperationEventItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get entity from privilegedOperationEvents by key
-     * @return a CompletableFuture of privilegedOperationEvent
+     * @return a CompletableFuture of PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEvent> get() {
@@ -66,7 +66,7 @@ public class PrivilegedOperationEventItemRequestBuilder extends BaseRequestBuild
     /**
      * Get entity from privilegedOperationEvents by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedOperationEvent
+     * @return a CompletableFuture of PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PrivilegedOperationEventItemRequestBuilder extends BaseRequestBuild
     /**
      * Update entity in privilegedOperationEvents
      * @param body The request body
-     * @return a CompletableFuture of privilegedOperationEvent
+     * @return a CompletableFuture of PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEvent> patch(@jakarta.annotation.Nonnull final PrivilegedOperationEvent body) {
@@ -89,7 +89,7 @@ public class PrivilegedOperationEventItemRequestBuilder extends BaseRequestBuild
      * Update entity in privilegedOperationEvents
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedOperationEvent
+     * @return a CompletableFuture of PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedOperationEvent> patch(@jakarta.annotation.Nonnull final PrivilegedOperationEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

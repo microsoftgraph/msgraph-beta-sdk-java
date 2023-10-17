@@ -60,7 +60,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     }
     /**
      * The Windows autopilot device identities contained collection.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentityCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     /**
      * The Windows autopilot device identities contained collection.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     /**
      * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> post(@jakarta.annotation.Nonnull final WindowsAutopilotDeviceIdentity body) {
@@ -92,7 +92,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
      * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsAutopilotDeviceIdentity
+     * @return a CompletableFuture of WindowsAutopilotDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsAutopilotDeviceIdentity> post(@jakarta.annotation.Nonnull final WindowsAutopilotDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class WindowsAutopilotDeviceIdentitiesRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsAutopilotDeviceIdentitiesRequestBuilder
+     * @return a WindowsAutopilotDeviceIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsAutopilotDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

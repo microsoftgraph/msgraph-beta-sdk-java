@@ -25,7 +25,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * Instantiates a new managedDeviceCleanupSettings and sets the default values.
+     * Instantiates a new ManagedDeviceCleanupSettings and sets the default values.
      */
     public ManagedDeviceCleanupSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -33,7 +33,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceCleanupSettings
+     * @return a ManagedDeviceCleanupSettings
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceCleanupSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
         return new ManagedDeviceCleanupSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -50,7 +50,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceInactivityBeforeRetirementInDays property value. Number of days when the device has not contacted Intune.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceInactivityBeforeRetirementInDays() {
@@ -69,7 +69,7 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -86,8 +86,8 @@ public class ManagedDeviceCleanupSettings implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

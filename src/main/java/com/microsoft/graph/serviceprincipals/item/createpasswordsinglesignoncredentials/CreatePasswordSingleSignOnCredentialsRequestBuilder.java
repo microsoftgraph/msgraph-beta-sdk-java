@@ -36,9 +36,9 @@ public class CreatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/createPasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Create single sign-on credentials using a password for a user or group.
+     * Create single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of passwordSingleSignOnCredentialSet
+     * @return a CompletableFuture of PasswordSingleSignOnCredentialSet
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-createpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class CreatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return post(body, null);
     }
     /**
-     * Create single sign-on credentials using a password for a user or group.
+     * Create single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passwordSingleSignOnCredentialSet
+     * @return a CompletableFuture of PasswordSingleSignOnCredentialSet
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-createpasswordsinglesignoncredentials?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class CreatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return this.requestAdapter.sendAsync(requestInfo, PasswordSingleSignOnCredentialSet::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create single sign-on credentials using a password for a user or group.
+     * Create single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class CreatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create single sign-on credentials using a password for a user or group.
+     * Create single sign-on credentials using a password for a user or group. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class CreatePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createPasswordSingleSignOnCredentialsRequestBuilder
+     * @return a CreatePasswordSingleSignOnCredentialsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreatePasswordSingleSignOnCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

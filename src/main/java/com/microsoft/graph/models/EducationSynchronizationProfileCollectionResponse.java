@@ -13,7 +13,7 @@ public class EducationSynchronizationProfileCollectionResponse extends BaseColle
      */
     private java.util.List<EducationSynchronizationProfile> value;
     /**
-     * Instantiates a new educationSynchronizationProfileCollectionResponse and sets the default values.
+     * Instantiates a new EducationSynchronizationProfileCollectionResponse and sets the default values.
      */
     public EducationSynchronizationProfileCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class EducationSynchronizationProfileCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationProfileCollectionResponse
+     * @return a EducationSynchronizationProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EducationSynchronizationProfileCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a educationSynchronizationProfile
+     * @return a java.util.List<EducationSynchronizationProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationProfile> getValue() {

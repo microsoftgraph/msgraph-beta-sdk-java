@@ -20,7 +20,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      */
     private java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate> choiceSettingCollectionValueTemplate;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
     }
     /**
      * Gets the allowUnmanagedValues property value. Linked policy may append values which are not present in the template.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedValues() {
@@ -46,7 +46,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
     }
     /**
      * Gets the choiceSettingCollectionValueTemplate property value. Choice Setting Collection Value Template
-     * @return a deviceManagementConfigurationChoiceSettingValueTemplate
+     * @return a java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate> getChoiceSettingCollectionValueTemplate() {

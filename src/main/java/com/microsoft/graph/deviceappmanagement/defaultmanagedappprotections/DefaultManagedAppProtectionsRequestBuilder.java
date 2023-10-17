@@ -60,7 +60,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     }
     /**
      * Default managed app policies.
-     * @return a CompletableFuture of defaultManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of DefaultManagedAppProtectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtectionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Default managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of DefaultManagedAppProtectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> post(@jakarta.annotation.Nonnull final DefaultManagedAppProtection body) {
@@ -92,7 +92,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
      * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of defaultManagedAppProtection
+     * @return a CompletableFuture of DefaultManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DefaultManagedAppProtection> post(@jakarta.annotation.Nonnull final DefaultManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DefaultManagedAppProtectionsRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a defaultManagedAppProtectionsRequestBuilder
+     * @return a DefaultManagedAppProtectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DefaultManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

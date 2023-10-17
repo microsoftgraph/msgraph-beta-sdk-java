@@ -84,7 +84,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get onlineMeetings from app
-     * @return a CompletableFuture of onlineMeetingCollectionResponse
+     * @return a CompletableFuture of OnlineMeetingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get() {
@@ -93,7 +93,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get onlineMeetings from app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeetingCollectionResponse
+     * @return a CompletableFuture of OnlineMeetingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeetingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to onlineMeetings for app
      * @param body The request body
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@jakarta.annotation.Nonnull final OnlineMeeting body) {
@@ -116,7 +116,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to onlineMeetings for app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onlineMeeting
+     * @return a CompletableFuture of OnlineMeeting
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnlineMeeting> post(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class OnlineMeetingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a onlineMeetingsRequestBuilder
+     * @return a OnlineMeetingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public OnlineMeetingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

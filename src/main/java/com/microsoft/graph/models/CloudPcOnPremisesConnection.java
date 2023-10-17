@@ -38,7 +38,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     private CloudPcOnPremisesConnectionStatusDetails healthCheckStatusDetails;
     /**
-     * When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      */
     private Boolean inUse;
     /**
@@ -66,7 +66,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     private String subscriptionName;
     /**
-     * Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      */
     private CloudPcOnPremisesConnectionType type;
     /**
@@ -78,7 +78,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     private String virtualNetworkLocation;
     /**
-     * Instantiates a new cloudPcOnPremisesConnection and sets the default values.
+     * Instantiates a new CloudPcOnPremisesConnection and sets the default values.
      */
     public CloudPcOnPremisesConnection() {
         super();
@@ -86,7 +86,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcOnPremisesConnection
+     * @return a CloudPcOnPremisesConnection
      */
     @jakarta.annotation.Nonnull
     public static CloudPcOnPremisesConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -95,7 +95,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the adDomainName property value. The fully qualified domain name (FQDN) of the Active Directory domain you want to join. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdDomainName() {
@@ -103,7 +103,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the adDomainPassword property value. The password associated with adDomainUsername.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdDomainPassword() {
@@ -111,7 +111,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the adDomainUsername property value. The username of an Active Directory account (user or service account) that has permissions to create computer objects in Active Directory. Required format: admin@contoso.com. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdDomainUsername() {
@@ -119,7 +119,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateResourceUrl() {
@@ -127,7 +127,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the Azure network connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -161,7 +161,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the healthCheckStatus property value. The healthCheckStatus property
-     * @return a cloudPcOnPremisesConnectionStatus
+     * @return a CloudPcOnPremisesConnectionStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatus getHealthCheckStatus() {
@@ -169,15 +169,15 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
-     * @return a cloudPcOnPremisesConnectionStatusDetails
+     * @return a CloudPcOnPremisesConnectionStatusDetails
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionStatusDetails getHealthCheckStatusDetails() {
         return this.healthCheckStatusDetails;
     }
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
-     * @return a boolean
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInUse() {
@@ -185,7 +185,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the managedBy property value. The managedBy property
-     * @return a cloudPcManagementService
+     * @return a EnumSet<CloudPcManagementService>
      */
     @jakarta.annotation.Nullable
     public EnumSet<CloudPcManagementService> getManagedBy() {
@@ -193,7 +193,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganizationalUnit() {
@@ -201,7 +201,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the resourceGroupId property value. The ID of the target resource group. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceGroupId() {
@@ -209,7 +209,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the subnetId property value. The ID of the target subnet. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubnetId() {
@@ -217,7 +217,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionId property value. The ID of the target Azure subscription thats associated with your tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
@@ -225,15 +225,15 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionName property value. The name of the target Azure subscription. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionName() {
         return this.subscriptionName;
     }
     /**
-     * Gets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
-     * @return a cloudPcOnPremisesConnectionType
+     * Gets the type property value. Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * @return a CloudPcOnPremisesConnectionType
      */
     @jakarta.annotation.Nullable
     public CloudPcOnPremisesConnectionType getType() {
@@ -241,7 +241,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the virtualNetworkId property value. The ID of the target virtual network. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVirtualNetworkId() {
@@ -249,7 +249,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     }
     /**
      * Gets the virtualNetworkLocation property value. Indicates resource location of the virtual target network. Read-only, computed value.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVirtualNetworkLocation() {
@@ -330,7 +330,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.healthCheckStatusDetails = value;
     }
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @param value Value to set for the inUse property.
      */
     public void setInUse(@jakarta.annotation.Nullable final Boolean value) {
@@ -379,7 +379,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.subscriptionName = value;
     }
     /**
-     * Sets the type property value. Specifies how the provisioned Cloud PC will be joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Sets the type property value. Specifies how the provisioned Cloud PC is joined to Azure Active Directory. Default value is hybridAzureADJoin. Possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {

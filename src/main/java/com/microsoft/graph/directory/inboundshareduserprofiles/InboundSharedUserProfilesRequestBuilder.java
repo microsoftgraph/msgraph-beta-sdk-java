@@ -59,8 +59,8 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/directory/inboundSharedUserProfiles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles.
-     * @return a CompletableFuture of inboundSharedUserProfileCollectionResponse
+     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of InboundSharedUserProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-inboundshareduserprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles.
+     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundSharedUserProfileCollectionResponse
+     * @return a CompletableFuture of InboundSharedUserProfileCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/directory-list-inboundshareduserprofiles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
     /**
      * Create new navigation property to inboundSharedUserProfiles for directory
      * @param body The request body
-     * @return a CompletableFuture of inboundSharedUserProfile
+     * @return a CompletableFuture of InboundSharedUserProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundSharedUserProfile> post(@jakarta.annotation.Nonnull final InboundSharedUserProfile body) {
@@ -94,7 +94,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
      * Create new navigation property to inboundSharedUserProfiles for directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundSharedUserProfile
+     * @return a CompletableFuture of InboundSharedUserProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundSharedUserProfile> post(@jakarta.annotation.Nonnull final InboundSharedUserProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, InboundSharedUserProfile::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles.
+     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles.
+     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a inboundSharedUserProfilesRequestBuilder
+     * @return a InboundSharedUserProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InboundSharedUserProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class InboundSharedUserProfilesRequestBuilder extends BaseRequestBuilder 
         return new InboundSharedUserProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of all inboundSharedUserProfiles.
+     * Retrieve the properties of all inboundSharedUserProfiles. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -57,7 +57,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     }
     /**
      * The list of localized messages for this Notification Message Template.
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> get() {
@@ -66,7 +66,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     /**
      * The list of localized messages for this Notification Message Template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> patch(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body) {
@@ -89,7 +89,7 @@ public class LocalizedNotificationMessageItemRequestBuilder extends BaseRequestB
      * Update the navigation property localizedNotificationMessages in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of localizedNotificationMessage
+     * @return a CompletableFuture of LocalizedNotificationMessage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<LocalizedNotificationMessage> patch(@jakarta.annotation.Nonnull final LocalizedNotificationMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

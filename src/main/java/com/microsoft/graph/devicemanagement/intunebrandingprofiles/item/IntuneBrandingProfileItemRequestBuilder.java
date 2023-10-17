@@ -73,7 +73,7 @@ public class IntuneBrandingProfileItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Intune branding profiles targeted to AAD groups
-     * @return a CompletableFuture of intuneBrandingProfile
+     * @return a CompletableFuture of IntuneBrandingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfile> get() {
@@ -82,7 +82,7 @@ public class IntuneBrandingProfileItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Intune branding profiles targeted to AAD groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intuneBrandingProfile
+     * @return a CompletableFuture of IntuneBrandingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class IntuneBrandingProfileItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property intuneBrandingProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of intuneBrandingProfile
+     * @return a CompletableFuture of IntuneBrandingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfile> patch(@jakarta.annotation.Nonnull final IntuneBrandingProfile body) {
@@ -105,7 +105,7 @@ public class IntuneBrandingProfileItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property intuneBrandingProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intuneBrandingProfile
+     * @return a CompletableFuture of IntuneBrandingProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IntuneBrandingProfile> patch(@jakarta.annotation.Nonnull final IntuneBrandingProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

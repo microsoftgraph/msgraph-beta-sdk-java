@@ -30,7 +30,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
      */
     private Boolean validationPassed;
     /**
-     * Instantiates a new validationResult and sets the default values.
+     * Instantiates a new ValidationResult and sets the default values.
      */
     public ValidationResult() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a validationResult
+     * @return a ValidationResult
      */
     @jakarta.annotation.Nonnull
     public static ValidationResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
         return new ValidationResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the message property value. The string containing the reason for why the rule passed or not. Read-only. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessage() {
@@ -76,7 +76,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleName property value. The string containing the name of the password validation rule that the action was validated against. Read-only. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
@@ -92,7 +92,7 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the validationPassed property value. Whether the password passed or failed the validation rule. Read-only. Not nullable.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getValidationPassed() {
@@ -111,8 +111,8 @@ public class ValidationResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

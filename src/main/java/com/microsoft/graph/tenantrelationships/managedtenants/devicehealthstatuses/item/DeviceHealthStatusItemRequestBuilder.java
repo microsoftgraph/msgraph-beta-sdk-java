@@ -57,7 +57,7 @@ public class DeviceHealthStatusItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get deviceHealthStatuses from tenantRelationships
-     * @return a CompletableFuture of deviceHealthStatus
+     * @return a CompletableFuture of DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatus> get() {
@@ -66,7 +66,7 @@ public class DeviceHealthStatusItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get deviceHealthStatuses from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthStatus
+     * @return a CompletableFuture of DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatus> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceHealthStatusItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property deviceHealthStatuses in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of deviceHealthStatus
+     * @return a CompletableFuture of DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatus> patch(@jakarta.annotation.Nonnull final DeviceHealthStatus body) {
@@ -89,7 +89,7 @@ public class DeviceHealthStatusItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property deviceHealthStatuses in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthStatus
+     * @return a CompletableFuture of DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatus> patch(@jakarta.annotation.Nonnull final DeviceHealthStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

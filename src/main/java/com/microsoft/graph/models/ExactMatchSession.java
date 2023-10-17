@@ -41,7 +41,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
      */
     private String uploadAgentId;
     /**
-     * Instantiates a new exactMatchSession and sets the default values.
+     * Instantiates a new ExactMatchSession and sets the default values.
      */
     public ExactMatchSession() {
         super();
@@ -49,7 +49,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchSession
+     * @return a ExactMatchSession
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the checksum property value. The checksum property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChecksum() {
@@ -66,7 +66,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the dataUploadURI property value. The dataUploadURI property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataUploadURI() {
@@ -91,7 +91,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the fields property value. The fields property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFields() {
@@ -99,7 +99,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the fileName property value. The fileName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -107,7 +107,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the rowsPerBlock property value. The rowsPerBlock property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRowsPerBlock() {
@@ -115,7 +115,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the salt property value. The salt property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSalt() {
@@ -123,7 +123,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the uploadAgent property value. The uploadAgent property
-     * @return a exactMatchUploadAgent
+     * @return a ExactMatchUploadAgent
      */
     @jakarta.annotation.Nullable
     public ExactMatchUploadAgent getUploadAgent() {
@@ -131,7 +131,7 @@ public class ExactMatchSession extends ExactMatchSessionBase implements Parsable
     }
     /**
      * Gets the uploadAgentId property value. The uploadAgentId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUploadAgentId() {

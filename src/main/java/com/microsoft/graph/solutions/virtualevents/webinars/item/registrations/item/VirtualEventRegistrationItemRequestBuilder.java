@@ -64,17 +64,19 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get registrations from solutions
-     * @return a CompletableFuture of virtualEventRegistration
+     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of VirtualEventRegistration
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistration> get() {
         return get(null);
     }
     /**
-     * Get registrations from solutions
+     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventRegistration
+     * @return a CompletableFuture of VirtualEventRegistration
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +89,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
     /**
      * Update the navigation property registrations in solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventRegistration
+     * @return a CompletableFuture of VirtualEventRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistration> patch(@jakarta.annotation.Nonnull final VirtualEventRegistration body) {
@@ -97,7 +99,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property registrations in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventRegistration
+     * @return a CompletableFuture of VirtualEventRegistration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistration> patch(@jakarta.annotation.Nonnull final VirtualEventRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +138,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get registrations from solutions
+     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +146,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get registrations from solutions
+     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +215,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get registrations from solutions
+     * Get the properties and relationships of a virtualEventRegistration object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

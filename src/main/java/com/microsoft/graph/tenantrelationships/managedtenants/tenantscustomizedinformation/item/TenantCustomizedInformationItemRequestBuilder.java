@@ -56,8 +56,8 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * Read the properties and relationships of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * Read the properties and relationships of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, TenantCustomizedInformation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the properties of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return patch(body, null);
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the properties of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantCustomizedInformation
+     * @return a CompletableFuture of TenantCustomizedInformation
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenantcustomizedinformation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * Read the properties and relationships of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * Read the properties and relationships of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the properties of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a tenantCustomizedInformation object.
+     * Update the properties of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -209,7 +209,7 @@ public class TenantCustomizedInformationItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a tenantCustomizedInformation object.
+     * Read the properties and relationships of a tenantCustomizedInformation object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

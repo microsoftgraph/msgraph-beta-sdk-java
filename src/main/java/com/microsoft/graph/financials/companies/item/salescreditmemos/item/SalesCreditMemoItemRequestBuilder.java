@@ -70,7 +70,7 @@ public class SalesCreditMemoItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get salesCreditMemos from financials
-     * @return a CompletableFuture of salesCreditMemo
+     * @return a CompletableFuture of SalesCreditMemo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemo> get() {
@@ -79,7 +79,7 @@ public class SalesCreditMemoItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get salesCreditMemos from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesCreditMemo
+     * @return a CompletableFuture of SalesCreditMemo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -92,7 +92,7 @@ public class SalesCreditMemoItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property salesCreditMemos in financials
      * @param body The request body
-     * @return a CompletableFuture of salesCreditMemo
+     * @return a CompletableFuture of SalesCreditMemo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemo> patch(@jakarta.annotation.Nonnull final SalesCreditMemo body) {
@@ -102,7 +102,7 @@ public class SalesCreditMemoItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property salesCreditMemos in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of salesCreditMemo
+     * @return a CompletableFuture of SalesCreditMemo
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SalesCreditMemo> patch(@jakarta.annotation.Nonnull final SalesCreditMemo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

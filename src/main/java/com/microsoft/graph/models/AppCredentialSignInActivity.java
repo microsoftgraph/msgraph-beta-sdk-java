@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppCredentialSignInActivity extends Entity implements Parsable {
     /**
-     * The globally unique appId (also called client ID on the Azure portal) of the credential application.
+     * The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
      */
     private String appId;
     /**
@@ -54,7 +54,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
      */
     private SignInActivity signInActivity;
     /**
-     * Instantiates a new appCredentialSignInActivity and sets the default values.
+     * Instantiates a new AppCredentialSignInActivity and sets the default values.
      */
     public AppCredentialSignInActivity() {
         super();
@@ -62,7 +62,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appCredentialSignInActivity
+     * @return a AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public static AppCredentialSignInActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,8 +70,8 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
         return new AppCredentialSignInActivity();
     }
     /**
-     * Gets the appId property value. The globally unique appId (also called client ID on the Azure portal) of the credential application.
-     * @return a string
+     * Gets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -79,7 +79,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the appObjectId property value. The ID of the credential application instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppObjectId() {
@@ -95,7 +95,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the credentialOrigin property value. The credentialOrigin property
-     * @return a applicationKeyOrigin
+     * @return a ApplicationKeyOrigin
      */
     @jakarta.annotation.Nullable
     public ApplicationKeyOrigin getCredentialOrigin() {
@@ -131,7 +131,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the keyId property value. The key ID of the credential.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKeyId() {
@@ -139,7 +139,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the keyType property value. Specifies the key type. The possible values are: clientSecret, certificate, unknownFutureValue.
-     * @return a applicationKeyType
+     * @return a ApplicationKeyType
      */
     @jakarta.annotation.Nullable
     public ApplicationKeyType getKeyType() {
@@ -147,7 +147,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the keyUsage property value. Specifies what the key was used for. The possible values are: sign, verify, unknownFutureValue.
-     * @return a applicationKeyUsage
+     * @return a ApplicationKeyUsage
      */
     @jakarta.annotation.Nullable
     public ApplicationKeyUsage getKeyUsage() {
@@ -155,7 +155,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the resourceId property value. The ID of the accessed resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -163,7 +163,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalObjectId property value. The ID of the service principal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalObjectId() {
@@ -171,7 +171,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
     }
     /**
      * Gets the signInActivity property value. The signInActivity property
-     * @return a signInActivity
+     * @return a SignInActivity
      */
     @jakarta.annotation.Nullable
     public SignInActivity getSignInActivity() {
@@ -197,7 +197,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
         writer.writeObjectValue("signInActivity", this.getSignInActivity());
     }
     /**
-     * Sets the appId property value. The globally unique appId (also called client ID on the Azure portal) of the credential application.
+     * Sets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {

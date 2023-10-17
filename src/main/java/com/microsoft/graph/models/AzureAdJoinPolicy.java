@@ -34,7 +34,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new azureAdJoinPolicy and sets the default values.
+     * Instantiates a new AzureAdJoinPolicy and sets the default values.
      */
     public AzureAdJoinPolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureAdJoinPolicy
+     * @return a AzureAdJoinPolicy
      */
     @jakarta.annotation.Nonnull
     public static AzureAdJoinPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
         return new AzureAdJoinPolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowedGroups property value. The identifiers of the groups that are in the scope of the policy. Required when the appliesTo property is set to selected.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedGroups() {
@@ -67,7 +67,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the allowedUsers property value. The identifiers of users that are in the scope of the policy. Required when the appliesTo property is set to selected.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedUsers() {
@@ -75,7 +75,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appliesTo property value. Specifies whether to block or allow fine-grained control of the policy scope. The possible values are: 0 (meaning none), 1 (meaning all), 2 (meaning selected), 3 (meaning unknownFutureValue). The default value is 1. When set to 2, at least one user or group identifier must be specified in either allowedUsers or allowedGroups.  Setting this property to 0 or 1 removes all identifiers in both allowedUsers and allowedGroups.
-     * @return a policyScope
+     * @return a PolicyScope
      */
     @jakarta.annotation.Nullable
     public PolicyScope getAppliesTo() {
@@ -97,7 +97,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAdminConfigurable property value. Specifies whether this policy scope is configurable by the admin. The default value is false. When an admin has enabled Intune (MEM) to manage devices, this property is set to false and appliesTo defaults to 1 (meaning all).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAdminConfigurable() {
@@ -105,7 +105,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,8 +125,8 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

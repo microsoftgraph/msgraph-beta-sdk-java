@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsDeviceScopeRequestBuilder extends BaseReques
     }
     /**
      * The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> get() {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsDeviceScopeRequestBuilder extends BaseReques
     /**
      * The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserExperienceAnalyticsDeviceScopeRequestBuilder extends BaseReques
     /**
      * Update the navigation property userExperienceAnalyticsDeviceScope in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body) {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsDeviceScopeRequestBuilder extends BaseReques
      * Update the navigation property userExperienceAnalyticsDeviceScope in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsDeviceScope
+     * @return a CompletableFuture of UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsDeviceScope> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsDeviceScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class UserExperienceAnalyticsDeviceScopeRequestBuilder extends BaseReques
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDeviceScopeRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceScopeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

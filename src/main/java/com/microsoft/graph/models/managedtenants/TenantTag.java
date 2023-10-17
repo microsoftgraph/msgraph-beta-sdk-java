@@ -43,7 +43,7 @@ public class TenantTag extends Entity implements Parsable {
      */
     private java.util.List<TenantInfo> tenants;
     /**
-     * Instantiates a new tenantTag and sets the default values.
+     * Instantiates a new TenantTag and sets the default values.
      */
     public TenantTag() {
         super();
@@ -51,7 +51,7 @@ public class TenantTag extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantTag
+     * @return a TenantTag
      */
     @jakarta.annotation.Nonnull
     public static TenantTag createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The identifier for the account that created the tenant tag. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -84,7 +84,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description for the tenant tag. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -92,7 +92,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the tenant tag. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -117,7 +117,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The identifier for the account that lasted on the tenant tag. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -133,7 +133,7 @@ public class TenantTag extends Entity implements Parsable {
     }
     /**
      * Gets the tenants property value. The collection of managed tenants associated with the tenant tag. Optional.
-     * @return a tenantInfo
+     * @return a java.util.List<TenantInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantInfo> getTenants() {

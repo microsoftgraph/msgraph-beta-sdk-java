@@ -37,7 +37,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action start
-     * @return a CompletableFuture of printJobStatus
+     * @return a CompletableFuture of PrintJobStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJobStatus> post() {
@@ -46,7 +46,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action start
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printJobStatus
+     * @return a CompletableFuture of PrintJobStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrintJobStatus> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class StartRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a startRequestBuilder
+     * @return a StartRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public StartRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

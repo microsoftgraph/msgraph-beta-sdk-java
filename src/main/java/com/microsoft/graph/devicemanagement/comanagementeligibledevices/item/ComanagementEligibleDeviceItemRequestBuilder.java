@@ -57,7 +57,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder extends BaseRequestBui
     }
     /**
      * The list of co-management eligible devices report
-     * @return a CompletableFuture of comanagementEligibleDevice
+     * @return a CompletableFuture of ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevice> get() {
@@ -66,7 +66,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder extends BaseRequestBui
     /**
      * The list of co-management eligible devices report
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of comanagementEligibleDevice
+     * @return a CompletableFuture of ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevice> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property comanagementEligibleDevices in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of comanagementEligibleDevice
+     * @return a CompletableFuture of ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevice> patch(@jakarta.annotation.Nonnull final ComanagementEligibleDevice body) {
@@ -89,7 +89,7 @@ public class ComanagementEligibleDeviceItemRequestBuilder extends BaseRequestBui
      * Update the navigation property comanagementEligibleDevices in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of comanagementEligibleDevice
+     * @return a CompletableFuture of ComanagementEligibleDevice
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ComanagementEligibleDevice> patch(@jakarta.annotation.Nonnull final ComanagementEligibleDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

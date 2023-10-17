@@ -46,7 +46,7 @@ public class GeneralLedgerEntryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get generalLedgerEntries from financials
-     * @return a CompletableFuture of generalLedgerEntry
+     * @return a CompletableFuture of GeneralLedgerEntry
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GeneralLedgerEntry> get() {
@@ -55,7 +55,7 @@ public class GeneralLedgerEntryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get generalLedgerEntries from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of generalLedgerEntry
+     * @return a CompletableFuture of GeneralLedgerEntry
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GeneralLedgerEntry> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

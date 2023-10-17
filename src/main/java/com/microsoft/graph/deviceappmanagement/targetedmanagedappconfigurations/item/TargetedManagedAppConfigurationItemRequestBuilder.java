@@ -113,7 +113,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     }
     /**
      * Targeted managed app configurations.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> get() {
@@ -122,7 +122,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Targeted managed app configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -135,7 +135,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> patch(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body) {
@@ -145,7 +145,7 @@ public class TargetedManagedAppConfigurationItemRequestBuilder extends BaseReque
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of targetedManagedAppConfiguration
+     * @return a CompletableFuture of TargetedManagedAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TargetedManagedAppConfiguration> patch(@jakarta.annotation.Nonnull final TargetedManagedAppConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

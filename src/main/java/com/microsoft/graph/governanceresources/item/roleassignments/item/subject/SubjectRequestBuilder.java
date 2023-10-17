@@ -57,7 +57,7 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. The subject associated with the role assignment.
-     * @return a CompletableFuture of governanceSubject
+     * @return a CompletableFuture of GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubject> get() {
@@ -66,7 +66,7 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. The subject associated with the role assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceSubject
+     * @return a CompletableFuture of GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubject> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property subject in governanceResources
      * @param body The request body
-     * @return a CompletableFuture of governanceSubject
+     * @return a CompletableFuture of GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubject> patch(@jakarta.annotation.Nonnull final GovernanceSubject body) {
@@ -89,7 +89,7 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property subject in governanceResources
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceSubject
+     * @return a CompletableFuture of GovernanceSubject
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceSubject> patch(@jakarta.annotation.Nonnull final GovernanceSubject body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subjectRequestBuilder
+     * @return a SubjectRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubjectRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

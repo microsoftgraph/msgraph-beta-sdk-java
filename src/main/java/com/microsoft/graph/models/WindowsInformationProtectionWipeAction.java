@@ -37,7 +37,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
      */
     private String targetedUserId;
     /**
-     * Instantiates a new windowsInformationProtectionWipeAction and sets the default values.
+     * Instantiates a new WindowsInformationProtectionWipeAction and sets the default values.
      */
     public WindowsInformationProtectionWipeAction() {
         super();
@@ -45,7 +45,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionWipeAction
+     * @return a WindowsInformationProtectionWipeAction
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionWipeAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,7 +77,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the status property value. The status property
-     * @return a actionState
+     * @return a ActionState
      */
     @jakarta.annotation.Nullable
     public ActionState getStatus() {
@@ -85,7 +85,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedDeviceMacAddress property value. Targeted device Mac address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceMacAddress() {
@@ -93,7 +93,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedDeviceName property value. Targeted device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceName() {
@@ -101,7 +101,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedDeviceRegistrationId property value. The DeviceRegistrationId being targeted by this wipe action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedDeviceRegistrationId() {
@@ -109,7 +109,7 @@ public class WindowsInformationProtectionWipeAction extends Entity implements Pa
     }
     /**
      * Gets the targetedUserId property value. The UserId being targeted by this wipe action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetedUserId() {

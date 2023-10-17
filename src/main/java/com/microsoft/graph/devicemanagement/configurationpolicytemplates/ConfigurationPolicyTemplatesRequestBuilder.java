@@ -60,7 +60,7 @@ public class ConfigurationPolicyTemplatesRequestBuilder extends BaseRequestBuild
     }
     /**
      * List of all templates
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplateCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplateCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ConfigurationPolicyTemplatesRequestBuilder extends BaseRequestBuild
     /**
      * List of all templates
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplateCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ConfigurationPolicyTemplatesRequestBuilder extends BaseRequestBuild
     /**
      * Create new navigation property to configurationPolicyTemplates for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplate
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplate> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicyTemplate body) {
@@ -92,7 +92,7 @@ public class ConfigurationPolicyTemplatesRequestBuilder extends BaseRequestBuild
      * Create new navigation property to configurationPolicyTemplates for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyTemplate
+     * @return a CompletableFuture of DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyTemplate> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ConfigurationPolicyTemplatesRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a configurationPolicyTemplatesRequestBuilder
+     * @return a ConfigurationPolicyTemplatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConfigurationPolicyTemplatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

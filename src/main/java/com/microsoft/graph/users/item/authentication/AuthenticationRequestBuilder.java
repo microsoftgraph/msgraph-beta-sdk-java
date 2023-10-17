@@ -145,7 +145,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The authentication methods that are supported for the user.
-     * @return a CompletableFuture of authentication
+     * @return a CompletableFuture of Authentication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Authentication> get() {
@@ -154,7 +154,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * The authentication methods that are supported for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authentication
+     * @return a CompletableFuture of Authentication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Authentication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property authentication in users
      * @param body The request body
-     * @return a CompletableFuture of authentication
+     * @return a CompletableFuture of Authentication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Authentication> patch(@jakarta.annotation.Nonnull final Authentication body) {
@@ -177,7 +177,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authentication in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authentication
+     * @return a CompletableFuture of Authentication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Authentication> patch(@jakarta.annotation.Nonnull final Authentication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -279,7 +279,7 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a authenticationRequestBuilder
+     * @return a AuthenticationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AuthenticationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

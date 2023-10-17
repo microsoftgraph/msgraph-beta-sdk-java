@@ -57,7 +57,7 @@ public class SensitiveTypeItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get sensitiveTypes from dataClassification
-     * @return a CompletableFuture of sensitiveType
+     * @return a CompletableFuture of SensitiveType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveType> get() {
@@ -66,7 +66,7 @@ public class SensitiveTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get sensitiveTypes from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitiveType
+     * @return a CompletableFuture of SensitiveType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveType> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SensitiveTypeItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sensitiveTypes in dataClassification
      * @param body The request body
-     * @return a CompletableFuture of sensitiveType
+     * @return a CompletableFuture of SensitiveType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveType> patch(@jakarta.annotation.Nonnull final SensitiveType body) {
@@ -89,7 +89,7 @@ public class SensitiveTypeItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sensitiveTypes in dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitiveType
+     * @return a CompletableFuture of SensitiveType
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitiveType> patch(@jakarta.annotation.Nonnull final SensitiveType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

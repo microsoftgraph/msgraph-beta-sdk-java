@@ -49,7 +49,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      */
     private Integer priority;
     /**
-     * Instantiates a new appleUserInitiatedEnrollmentProfile and sets the default values.
+     * Instantiates a new AppleUserInitiatedEnrollmentProfile and sets the default values.
      */
     public AppleUserInitiatedEnrollmentProfile() {
         super();
@@ -57,7 +57,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleUserInitiatedEnrollmentProfile
+     * @return a AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static AppleUserInitiatedEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. The list of assignments for this profile.
-     * @return a appleEnrollmentProfileAssignment
+     * @return a java.util.List<AppleEnrollmentProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleEnrollmentProfileAssignment> getAssignments() {
@@ -74,7 +74,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the availableEnrollmentTypeOptions property value. List of available enrollment type options
-     * @return a appleOwnerTypeEnrollmentType
+     * @return a java.util.List<AppleOwnerTypeEnrollmentType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleOwnerTypeEnrollmentType> getAvailableEnrollmentTypeOptions() {
@@ -90,7 +90,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the defaultEnrollmentType property value. The defaultEnrollmentType property
-     * @return a appleUserInitiatedEnrollmentType
+     * @return a AppleUserInitiatedEnrollmentType
      */
     @jakarta.annotation.Nullable
     public AppleUserInitiatedEnrollmentType getDefaultEnrollmentType() {
@@ -98,7 +98,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the description property value. Description of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -106,7 +106,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. Name of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -140,7 +140,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a devicePlatformType
+     * @return a DevicePlatformType
      */
     @jakarta.annotation.Nullable
     public DevicePlatformType getPlatform() {
@@ -148,7 +148,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     }
     /**
      * Gets the priority property value. Priority, 0 is highest
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {

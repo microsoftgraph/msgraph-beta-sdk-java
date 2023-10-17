@@ -63,7 +63,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     }
     /**
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -75,7 +75,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -91,7 +91,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
     /**
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
@@ -104,7 +104,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Update the navigation property credentialUserRegistrationDetails in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of credentialUserRegistrationDetails
+     * @return a CompletableFuture of CredentialUserRegistrationDetails
      * @deprecated
      * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */

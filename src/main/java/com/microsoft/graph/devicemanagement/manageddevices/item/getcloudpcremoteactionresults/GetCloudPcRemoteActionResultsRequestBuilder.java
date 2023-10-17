@@ -37,24 +37,24 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Invoke function getCloudPcRemoteActionResults
-     * @return a CompletableFuture of getCloudPcRemoteActionResultsResponse
+     * @return a CompletableFuture of GetCloudPcRemoteActionResultsGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetCloudPcRemoteActionResultsResponse> get() {
+    public java.util.concurrent.CompletableFuture<GetCloudPcRemoteActionResultsGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function getCloudPcRemoteActionResults
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getCloudPcRemoteActionResultsResponse
+     * @return a CompletableFuture of GetCloudPcRemoteActionResultsGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetCloudPcRemoteActionResultsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<GetCloudPcRemoteActionResultsGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetCloudPcRemoteActionResultsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, GetCloudPcRemoteActionResultsGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getCloudPcRemoteActionResults
@@ -88,7 +88,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCloudPcRemoteActionResultsRequestBuilder
+     * @return a GetCloudPcRemoteActionResultsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCloudPcRemoteActionResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

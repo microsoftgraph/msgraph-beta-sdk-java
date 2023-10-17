@@ -57,7 +57,7 @@ public class TaxAreaItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get taxAreas from financials
-     * @return a CompletableFuture of taxArea
+     * @return a CompletableFuture of TaxArea
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxArea> get() {
@@ -66,7 +66,7 @@ public class TaxAreaItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get taxAreas from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taxArea
+     * @return a CompletableFuture of TaxArea
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxArea> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TaxAreaItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property taxAreas in financials
      * @param body The request body
-     * @return a CompletableFuture of taxArea
+     * @return a CompletableFuture of TaxArea
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxArea> patch(@jakarta.annotation.Nonnull final TaxArea body) {
@@ -89,7 +89,7 @@ public class TaxAreaItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property taxAreas in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taxArea
+     * @return a CompletableFuture of TaxArea
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxArea> patch(@jakarta.annotation.Nonnull final TaxArea body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

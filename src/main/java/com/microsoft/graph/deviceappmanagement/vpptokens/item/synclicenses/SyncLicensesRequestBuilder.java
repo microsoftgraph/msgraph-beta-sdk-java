@@ -37,7 +37,7 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
-     * @return a CompletableFuture of vppToken
+     * @return a CompletableFuture of VppToken
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> post() {
@@ -46,7 +46,7 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
     /**
      * Syncs licenses associated with a specific appleVolumePurchaseProgramToken
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of vppToken
+     * @return a CompletableFuture of VppToken
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VppToken> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class SyncLicensesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a syncLicensesRequestBuilder
+     * @return a SyncLicensesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SyncLicensesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -33,7 +33,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      */
     private java.util.List<String> users;
     /**
-     * Instantiates a new continuousAccessEvaluationPolicy and sets the default values.
+     * Instantiates a new ContinuousAccessEvaluationPolicy and sets the default values.
      */
     public ContinuousAccessEvaluationPolicy() {
         super();
@@ -41,7 +41,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      */
     @jakarta.annotation.Nonnull
     public static ContinuousAccessEvaluationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the description property value. Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -58,7 +58,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the displayName property value. The value is always Continuous Access Evaluation. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -81,7 +81,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the groups property value. The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroups() {
@@ -89,7 +89,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the isEnabled property value. true to indicate whether continuous access evaluation should be performed; otherwise false. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
@@ -97,7 +97,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the migrate property value. true to indicate that the continuous access evaluation policy settings should be or has been migrated to the conditional access policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMigrate() {
@@ -105,7 +105,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     }
     /**
      * Gets the users property value. The collection of user identifiers in scope for evaluation. All users are in scope when the collection is empty. Read-only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUsers() {

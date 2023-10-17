@@ -17,7 +17,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      */
     private Boolean submissionAnimationDisabled;
     /**
-     * Instantiates a new educationAssignmentSettings and sets the default values.
+     * Instantiates a new EducationAssignmentSettings and sets the default values.
      */
     public EducationAssignmentSettings() {
         super();
@@ -25,7 +25,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationAssignmentSettings
+     * @return a EducationAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static EducationAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     }
     /**
      * Gets the gradingCategories property value. The gradingCategories property
-     * @return a educationGradingCategory
+     * @return a java.util.List<EducationGradingCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationGradingCategory> getGradingCategories() {
@@ -53,7 +53,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     }
     /**
      * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. If true, the animation won't be shown. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSubmissionAnimationDisabled() {

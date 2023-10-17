@@ -81,7 +81,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     }
     /**
      * The list of device enrollment configurations
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> get() {
@@ -90,7 +90,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     /**
      * The list of device enrollment configurations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
@@ -113,7 +113,7 @@ public class DeviceEnrollmentConfigurationItemRequestBuilder extends BaseRequest
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceEnrollmentConfiguration
+     * @return a CompletableFuture of DeviceEnrollmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceEnrollmentConfiguration> patch(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

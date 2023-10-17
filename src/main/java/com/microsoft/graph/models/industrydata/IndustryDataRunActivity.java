@@ -27,7 +27,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
      */
     private IndustryDataActivityStatus status;
     /**
-     * Instantiates a new industryDataRunActivity and sets the default values.
+     * Instantiates a new IndustryDataRunActivity and sets the default values.
      */
     public IndustryDataRunActivity() {
         super();
@@ -35,7 +35,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a industryDataRunActivity
+     * @return a IndustryDataRunActivity
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRunActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The flow that was run by this activity.
-     * @return a industryDataActivity
+     * @return a IndustryDataActivity
      */
     @jakarta.annotation.Nullable
     public IndustryDataActivity getActivity() {
@@ -60,7 +60,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
     }
     /**
      * Gets the blockingError property value. An error object to diagnose critical failures in an activity.
-     * @return a publicError
+     * @return a PublicError
      */
     @jakarta.annotation.Nullable
     public PublicError getBlockingError() {
@@ -68,7 +68,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the running flow.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -89,7 +89,7 @@ public class IndustryDataRunActivity extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a industryDataActivityStatus
+     * @return a IndustryDataActivityStatus
      */
     @jakarta.annotation.Nullable
     public IndustryDataActivityStatus getStatus() {

@@ -90,7 +90,7 @@ public class EnableRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a enableRequestBuilder
+     * @return a EnableRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EnableRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

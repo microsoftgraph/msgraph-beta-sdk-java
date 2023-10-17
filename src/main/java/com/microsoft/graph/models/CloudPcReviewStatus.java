@@ -55,7 +55,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      */
     private CloudPcUserAccessLevel userAccessLevel;
     /**
-     * Instantiates a new cloudPcReviewStatus and sets the default values.
+     * Instantiates a new CloudPcReviewStatus and sets the default values.
      */
     public CloudPcReviewStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -63,7 +63,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcReviewStatus
+     * @return a CloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
     public static CloudPcReviewStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return new CloudPcReviewStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageAccountId() {
@@ -88,7 +88,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageAccountName() {
@@ -96,7 +96,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageContainerName() {
@@ -123,7 +123,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inReview property value. True if the Cloud PC is set to in review by the administrator.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInReview() {
@@ -131,7 +131,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -155,7 +155,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
@@ -163,7 +163,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionName() {
@@ -171,7 +171,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userAccessLevel property value. The userAccessLevel property
-     * @return a cloudPcUserAccessLevel
+     * @return a CloudPcUserAccessLevel
      */
     @jakarta.annotation.Nullable
     public CloudPcUserAccessLevel getUserAccessLevel() {
@@ -196,8 +196,8 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

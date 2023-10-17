@@ -56,8 +56,8 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TeamworkDeviceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      * @see <a href="https://learn.microsoft.com/graph/api/teamworkdeviceoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property operations in teamwork
      * @param body The request body
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceOperation> patch(@jakarta.annotation.Nonnull final TeamworkDeviceOperation body) {
@@ -91,7 +91,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property operations in teamwork
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of teamworkDeviceOperation
+     * @return a CompletableFuture of TeamworkDeviceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TeamworkDeviceOperation> patch(@jakarta.annotation.Nonnull final TeamworkDeviceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class TeamworkDeviceOperationItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device.
+     * Get the details of an async, long-running operation on a Microsoft Teams-enabled device. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -57,7 +57,7 @@ public class PaymentTermItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get paymentTerms from financials
-     * @return a CompletableFuture of paymentTerm
+     * @return a CompletableFuture of PaymentTerm
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTerm> get() {
@@ -66,7 +66,7 @@ public class PaymentTermItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get paymentTerms from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of paymentTerm
+     * @return a CompletableFuture of PaymentTerm
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTerm> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PaymentTermItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property paymentTerms in financials
      * @param body The request body
-     * @return a CompletableFuture of paymentTerm
+     * @return a CompletableFuture of PaymentTerm
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTerm> patch(@jakarta.annotation.Nonnull final PaymentTerm body) {
@@ -89,7 +89,7 @@ public class PaymentTermItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property paymentTerms in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of paymentTerm
+     * @return a CompletableFuture of PaymentTerm
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PaymentTerm> patch(@jakarta.annotation.Nonnull final PaymentTerm body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

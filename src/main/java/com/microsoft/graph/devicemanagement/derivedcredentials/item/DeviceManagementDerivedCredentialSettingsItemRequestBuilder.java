@@ -57,7 +57,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder extends
     }
     /**
      * Collection of Derived credential settings associated with account.
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettings
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettings> get() {
@@ -66,7 +66,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder extends
     /**
      * Collection of Derived credential settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettings
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder extends
     /**
      * Update the navigation property derivedCredentials in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettings
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettings> patch(@jakarta.annotation.Nonnull final DeviceManagementDerivedCredentialSettings body) {
@@ -89,7 +89,7 @@ public class DeviceManagementDerivedCredentialSettingsItemRequestBuilder extends
      * Update the navigation property derivedCredentials in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementDerivedCredentialSettings
+     * @return a CompletableFuture of DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementDerivedCredentialSettings> patch(@jakarta.annotation.Nonnull final DeviceManagementDerivedCredentialSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

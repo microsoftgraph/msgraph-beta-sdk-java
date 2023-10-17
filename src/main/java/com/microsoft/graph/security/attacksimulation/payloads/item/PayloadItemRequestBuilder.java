@@ -57,7 +57,7 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Represents an attack simulation training campaign payload in a tenant.
-     * @return a CompletableFuture of payload
+     * @return a CompletableFuture of Payload
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Payload> get() {
@@ -66,7 +66,7 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents an attack simulation training campaign payload in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of payload
+     * @return a CompletableFuture of Payload
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Payload> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property payloads in security
      * @param body The request body
-     * @return a CompletableFuture of payload
+     * @return a CompletableFuture of Payload
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Payload> patch(@jakarta.annotation.Nonnull final Payload body) {
@@ -89,7 +89,7 @@ public class PayloadItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property payloads in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of payload
+     * @return a CompletableFuture of Payload
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Payload> patch(@jakarta.annotation.Nonnull final Payload body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

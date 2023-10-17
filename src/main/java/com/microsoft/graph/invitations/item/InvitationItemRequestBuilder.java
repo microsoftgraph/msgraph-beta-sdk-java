@@ -73,7 +73,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from invitations by key
-     * @return a CompletableFuture of invitation
+     * @return a CompletableFuture of Invitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Invitation> get() {
@@ -82,7 +82,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from invitations by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of invitation
+     * @return a CompletableFuture of Invitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Invitation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in invitations
      * @param body The request body
-     * @return a CompletableFuture of invitation
+     * @return a CompletableFuture of Invitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Invitation> patch(@jakarta.annotation.Nonnull final Invitation body) {
@@ -105,7 +105,7 @@ public class InvitationItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in invitations
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of invitation
+     * @return a CompletableFuture of Invitation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Invitation> patch(@jakarta.annotation.Nonnull final Invitation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

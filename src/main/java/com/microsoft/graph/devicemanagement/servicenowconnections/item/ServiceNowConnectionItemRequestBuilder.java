@@ -57,7 +57,7 @@ public class ServiceNowConnectionItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * A list of ServiceNowConnections
-     * @return a CompletableFuture of serviceNowConnection
+     * @return a CompletableFuture of ServiceNowConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceNowConnection> get() {
@@ -66,7 +66,7 @@ public class ServiceNowConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A list of ServiceNowConnections
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceNowConnection
+     * @return a CompletableFuture of ServiceNowConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceNowConnection> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ServiceNowConnectionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property serviceNowConnections in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of serviceNowConnection
+     * @return a CompletableFuture of ServiceNowConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceNowConnection> patch(@jakarta.annotation.Nonnull final ServiceNowConnection body) {
@@ -89,7 +89,7 @@ public class ServiceNowConnectionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property serviceNowConnections in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of serviceNowConnection
+     * @return a CompletableFuture of ServiceNowConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ServiceNowConnection> patch(@jakarta.annotation.Nonnull final ServiceNowConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

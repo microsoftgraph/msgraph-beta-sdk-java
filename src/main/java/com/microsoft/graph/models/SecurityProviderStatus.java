@@ -38,7 +38,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
      */
     private String vendor;
     /**
-     * Instantiates a new securityProviderStatus and sets the default values.
+     * Instantiates a new SecurityProviderStatus and sets the default values.
      */
     public SecurityProviderStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityProviderStatus
+     * @return a SecurityProviderStatus
      */
     @jakarta.annotation.Nonnull
     public static SecurityProviderStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
         return new SecurityProviderStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enabled property value. The enabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -71,7 +71,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the endpoint property value. The endpoint property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEndpoint() {
@@ -94,7 +94,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the provider property value. The provider property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
@@ -110,7 +110,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the region property value. The region property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegion() {
@@ -118,7 +118,7 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
@@ -139,8 +139,8 @@ public class SecurityProviderStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

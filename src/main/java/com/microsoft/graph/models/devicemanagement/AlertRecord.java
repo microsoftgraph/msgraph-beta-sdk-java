@@ -47,7 +47,7 @@ public class AlertRecord extends Entity implements Parsable {
      */
     private AlertStatusType status;
     /**
-     * Instantiates a new alertRecord and sets the default values.
+     * Instantiates a new AlertRecord and sets the default values.
      */
     public AlertRecord() {
         super();
@@ -55,7 +55,7 @@ public class AlertRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertRecord
+     * @return a AlertRecord
      */
     @jakarta.annotation.Nonnull
     public static AlertRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the alertImpact property value. The impact of the alert event. Consists of a list of key-value pair and a number followed by the aggregation type. For example, 6 affectedCloudPcCount means that 6 Cloud PCs are affected. 12 affectedCloudPcPercentage means 12% of Cloud PCs are affected. The list of key-value pair indicates the details of the alert impact.
-     * @return a alertImpact
+     * @return a AlertImpact
      */
     @jakarta.annotation.Nullable
     public AlertImpact getAlertImpact() {
@@ -72,7 +72,7 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the alertRuleId property value. The corresponding ID of the alert rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleId() {
@@ -80,7 +80,7 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a alertRuleTemplate
+     * @return a AlertRuleTemplate
      */
     @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
@@ -96,7 +96,7 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the alert record.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -138,7 +138,7 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity of the alert event. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a ruleSeverityType
+     * @return a RuleSeverityType
      */
     @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {
@@ -146,7 +146,7 @@ public class AlertRecord extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the alert record. The possible values are: active, resolved, unknownFutureValue.
-     * @return a alertStatusType
+     * @return a AlertStatusType
      */
     @jakarta.annotation.Nullable
     public AlertStatusType getStatus() {

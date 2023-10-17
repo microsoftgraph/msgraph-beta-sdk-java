@@ -13,7 +13,7 @@ public class VirtualEventPresenterInfo extends MeetingParticipantInfo implements
      */
     private VirtualEventPresenterDetails presenterDetails;
     /**
-     * Instantiates a new virtualEventPresenterInfo and sets the default values.
+     * Instantiates a new VirtualEventPresenterInfo and sets the default values.
      */
     public VirtualEventPresenterInfo() {
         super();
@@ -22,7 +22,7 @@ public class VirtualEventPresenterInfo extends MeetingParticipantInfo implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventPresenterInfo
+     * @return a VirtualEventPresenterInfo
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventPresenterInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class VirtualEventPresenterInfo extends MeetingParticipantInfo implements
     }
     /**
      * Gets the presenterDetails property value. The presenterDetails property
-     * @return a virtualEventPresenterDetails
+     * @return a VirtualEventPresenterDetails
      */
     @jakarta.annotation.Nullable
     public VirtualEventPresenterDetails getPresenterDetails() {

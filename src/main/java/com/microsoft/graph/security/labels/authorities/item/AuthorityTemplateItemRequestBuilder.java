@@ -37,7 +37,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/labels/authorities/{authorityTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a authorityTemplate object.
+     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-authorities?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,7 +45,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a authorityTemplate object.
+     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-labelsroot-delete-authorities?view=graph-rest-1.0">Find more info here</a>
      */
@@ -58,8 +58,8 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object.
-     * @return a CompletableFuture of authorityTemplate
+     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AuthorityTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -67,9 +67,9 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object.
+     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authorityTemplate
+     * @return a CompletableFuture of AuthorityTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/security-authoritytemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property authorities in security
      * @param body The request body
-     * @return a CompletableFuture of authorityTemplate
+     * @return a CompletableFuture of AuthorityTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorityTemplate> patch(@jakarta.annotation.Nonnull final AuthorityTemplate body) {
@@ -93,7 +93,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authorities in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of authorityTemplate
+     * @return a CompletableFuture of AuthorityTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuthorityTemplate> patch(@jakarta.annotation.Nonnull final AuthorityTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -105,7 +105,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AuthorityTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a authorityTemplate object.
+     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a authorityTemplate object.
+     * Delete a authorityTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -132,7 +132,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object.
+     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object.
+     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -209,7 +209,7 @@ public class AuthorityTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a authorityTemplate object.
+     * Read the properties and relationships of a authorityTemplate object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

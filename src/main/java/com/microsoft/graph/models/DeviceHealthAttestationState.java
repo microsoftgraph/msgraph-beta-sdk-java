@@ -171,7 +171,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      */
     private String windowsPE;
     /**
-     * Instantiates a new deviceHealthAttestationState and sets the default values.
+     * Instantiates a new DeviceHealthAttestationState and sets the default values.
      */
     public DeviceHealthAttestationState() {
         this.setAdditionalData(new HashMap<>());
@@ -179,7 +179,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthAttestationState
+     * @return a DeviceHealthAttestationState
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthAttestationState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -187,7 +187,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         return new DeviceHealthAttestationState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -196,7 +196,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the attestationIdentityKey property value. TWhen an Attestation Identity Key (AIK) is present on a device, it indicates that the device has an endorsement key (EK) certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAttestationIdentityKey() {
@@ -204,7 +204,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bitLockerStatus property value. On or Off of BitLocker Drive Encryption
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBitLockerStatus() {
@@ -212,7 +212,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bootAppSecurityVersion property value. The security version number of the Boot Application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootAppSecurityVersion() {
@@ -220,7 +220,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bootDebugging property value. When bootDebugging is enabled, the device is used in development and testing
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootDebugging() {
@@ -228,7 +228,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bootManagerSecurityVersion property value. The security version number of the Boot Application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootManagerSecurityVersion() {
@@ -236,7 +236,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bootManagerVersion property value. The version of the Boot Manager
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootManagerVersion() {
@@ -244,7 +244,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bootRevisionListInfo property value. The Boot Revision List that was loaded during initial boot on the attested device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBootRevisionListInfo() {
@@ -252,7 +252,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the codeIntegrity property value. When code integrity is enabled, code execution is restricted to integrity verified code
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrity() {
@@ -260,7 +260,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the codeIntegrityCheckVersion property value. The version of the Boot Manager
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrityCheckVersion() {
@@ -268,7 +268,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the codeIntegrityPolicy property value. The Code Integrity policy that is controlling the security of the boot environment
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeIntegrityPolicy() {
@@ -276,7 +276,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the contentNamespaceUrl property value. The DHA report version. (Namespace version)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentNamespaceUrl() {
@@ -284,7 +284,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the contentVersion property value. The HealthAttestation state schema version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentVersion() {
@@ -292,7 +292,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the dataExcutionPolicy property value. DEP Policy defines a set of hardware and software technologies that perform additional checks on memory
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataExcutionPolicy() {
@@ -300,7 +300,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceHealthAttestationStatus property value. The DHA report version. (Namespace version)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceHealthAttestationStatus() {
@@ -308,7 +308,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverProtection property value. ELAM provides protection for the computers in your network when they start up
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEarlyLaunchAntiMalwareDriverProtection() {
@@ -364,7 +364,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a firmwareProtectionType
+     * @return a FirmwareProtectionType
      */
     @jakarta.annotation.Nullable
     public FirmwareProtectionType getFirmwareProtection() {
@@ -372,7 +372,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthAttestationSupportedStatus() {
@@ -380,7 +380,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the healthStatusMismatchInfo property value. This attribute appears if DHA-Service detects an integrity issue
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthStatusMismatchInfo() {
@@ -396,7 +396,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the lastUpdateDateTime property value. The Timestamp of the last update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastUpdateDateTime() {
@@ -404,7 +404,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getMemoryAccessProtection() {
@@ -412,7 +412,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getMemoryIntegrityProtection() {
@@ -420,7 +420,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -428,7 +428,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the operatingSystemKernelDebugging property value. When operatingSystemKernelDebugging is enabled, the device is used in development and testing
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemKernelDebugging() {
@@ -436,7 +436,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the operatingSystemRevListInfo property value. The Operating System Revision List that was loaded during initial boot on the attested device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemRevListInfo() {
@@ -444,7 +444,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the pcr0 property value. The measurement that is captured in PCR[0]
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPcr0() {
@@ -452,7 +452,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the pcrHashAlgorithm property value. Informational attribute that identifies the HASH algorithm that was used by TPM
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPcrHashAlgorithm() {
@@ -460,7 +460,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the resetCount property value. The number of times a PC device has hibernated or resumed
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getResetCount() {
@@ -468,7 +468,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the restartCount property value. The number of times a PC device has rebooted
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getRestartCount() {
@@ -476,7 +476,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the safeMode property value. Safe mode is a troubleshooting option for Windows that starts your computer in a limited state
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSafeMode() {
@@ -484,7 +484,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the secureBoot property value. When Secure Boot is enabled, the core components must have the correct cryptographic signatures
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecureBoot() {
@@ -492,7 +492,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the secureBootConfigurationPolicyFingerPrint property value. Fingerprint of the Custom Secure Boot Configuration Policy
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecureBootConfigurationPolicyFingerPrint() {
@@ -500,7 +500,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getSecuredCorePC() {
@@ -508,7 +508,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
-     * @return a systemManagementModeLevel
+     * @return a SystemManagementModeLevel
      */
     @jakarta.annotation.Nullable
     public SystemManagementModeLevel getSystemManagementMode() {
@@ -516,7 +516,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the testSigning property value. When test signing is allowed, the device does not enforce signature validation during boot
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTestSigning() {
@@ -524,7 +524,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the tpmVersion property value. The security version number of the Boot Application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTpmVersion() {
@@ -532,7 +532,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
-     * @return a azureAttestationSettingStatus
+     * @return a AzureAttestationSettingStatus
      */
     @jakarta.annotation.Nullable
     public AzureAttestationSettingStatus getVirtualizationBasedSecurity() {
@@ -540,7 +540,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the virtualSecureMode property value. VSM is a container that protects high value assets from a compromised kernel
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVirtualSecureMode() {
@@ -548,7 +548,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the windowsPE property value. Operating system running with limited services that is used to prepare a computer for Windows
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindowsPE() {
@@ -602,8 +602,8 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

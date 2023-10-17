@@ -60,7 +60,7 @@ public class CustomSecurityAttributeAuditsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get customSecurityAttributeAudits from auditLogs
-     * @return a CompletableFuture of customSecurityAttributeAuditCollectionResponse
+     * @return a CompletableFuture of CustomSecurityAttributeAuditCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAuditCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CustomSecurityAttributeAuditsRequestBuilder extends BaseRequestBuil
     /**
      * Get customSecurityAttributeAudits from auditLogs
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customSecurityAttributeAuditCollectionResponse
+     * @return a CompletableFuture of CustomSecurityAttributeAuditCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAuditCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CustomSecurityAttributeAuditsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to customSecurityAttributeAudits for auditLogs
      * @param body The request body
-     * @return a CompletableFuture of customSecurityAttributeAudit
+     * @return a CompletableFuture of CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAudit> post(@jakarta.annotation.Nonnull final CustomSecurityAttributeAudit body) {
@@ -92,7 +92,7 @@ public class CustomSecurityAttributeAuditsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to customSecurityAttributeAudits for auditLogs
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customSecurityAttributeAudit
+     * @return a CompletableFuture of CustomSecurityAttributeAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomSecurityAttributeAudit> post(@jakarta.annotation.Nonnull final CustomSecurityAttributeAudit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class CustomSecurityAttributeAuditsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customSecurityAttributeAuditsRequestBuilder
+     * @return a CustomSecurityAttributeAuditsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomSecurityAttributeAuditsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

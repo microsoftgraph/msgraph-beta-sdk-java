@@ -56,8 +56,8 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an auditEvent object.
-     * @return a CompletableFuture of auditEvent
+     * Read the properties and relationships of an auditEvent object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-auditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an auditEvent object.
+     * Read the properties and relationships of an auditEvent object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-auditevent-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property auditEvents in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> patch(@jakarta.annotation.Nonnull final AuditEvent body) {
@@ -91,7 +91,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property auditEvents in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of auditEvent
+     * @return a CompletableFuture of AuditEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AuditEvent> patch(@jakarta.annotation.Nonnull final AuditEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an auditEvent object.
+     * Read the properties and relationships of an auditEvent object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an auditEvent object.
+     * Read the properties and relationships of an auditEvent object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class AuditEventItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an auditEvent object.
+     * Read the properties and relationships of an auditEvent object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

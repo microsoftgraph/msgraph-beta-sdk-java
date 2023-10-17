@@ -20,7 +20,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
      */
     private DeviceManagementConfigurationSecretSettingValueState valueState;
     /**
-     * Instantiates a new deviceManagementConfigurationSecretSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSecretSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationSecretSettingValue() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSecretSettingValue
+     * @return a DeviceManagementConfigurationSecretSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSecretSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
     }
     /**
      * Gets the value property value. Value of the secret setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationSecretSettingValue extends DeviceManag
     }
     /**
      * Gets the valueState property value. type tracking the encryption state of a secret setting value
-     * @return a deviceManagementConfigurationSecretSettingValueState
+     * @return a DeviceManagementConfigurationSecretSettingValueState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSecretSettingValueState getValueState() {

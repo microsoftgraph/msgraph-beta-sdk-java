@@ -38,7 +38,7 @@ public class AlertDefinitionRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
-     * @return a CompletableFuture of unifiedRoleManagementAlertDefinition
+     * @return a CompletableFuture of UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertDefinition> get() {
@@ -47,7 +47,7 @@ public class AlertDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertDefinition
+     * @return a CompletableFuture of UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class AlertDefinitionRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alertDefinitionRequestBuilder
+     * @return a AlertDefinitionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlertDefinitionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

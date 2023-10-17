@@ -56,8 +56,8 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * Get an appCredentialSignInActivity object that contains recent activity of an application credential. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AppCredentialSignInActivity
      * @see <a href="https://learn.microsoft.com/graph/api/appcredentialsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
+     * Get an appCredentialSignInActivity object that contains recent activity of an application credential. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      * @see <a href="https://learn.microsoft.com/graph/api/appcredentialsigninactivity-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property appCredentialSignInActivities in reports
      * @param body The request body
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivity> patch(@jakarta.annotation.Nonnull final AppCredentialSignInActivity body) {
@@ -91,7 +91,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
      * Update the navigation property appCredentialSignInActivities in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appCredentialSignInActivity
+     * @return a CompletableFuture of AppCredentialSignInActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppCredentialSignInActivity> patch(@jakarta.annotation.Nonnull final AppCredentialSignInActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
+     * Get an appCredentialSignInActivity object that contains recent activity of an application credential. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
+     * Get an appCredentialSignInActivity object that contains recent activity of an application credential. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class AppCredentialSignInActivityItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an appCredentialSignInActivity object that contains recent activity of an application credential.
+     * Get an appCredentialSignInActivity object that contains recent activity of an application credential. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

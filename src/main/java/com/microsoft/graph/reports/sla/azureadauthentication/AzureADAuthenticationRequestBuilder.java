@@ -56,8 +56,8 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment.
-     * @return a CompletableFuture of azureADAuthentication
+     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AzureADAuthentication
      * @see <a href="https://learn.microsoft.com/graph/api/azureadauthentication-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment.
+     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of azureADAuthentication
+     * @return a CompletableFuture of AzureADAuthentication
      * @see <a href="https://learn.microsoft.com/graph/api/azureadauthentication-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property azureADAuthentication in reports
      * @param body The request body
-     * @return a CompletableFuture of azureADAuthentication
+     * @return a CompletableFuture of AzureADAuthentication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AzureADAuthentication> patch(@jakarta.annotation.Nonnull final AzureADAuthentication body) {
@@ -91,7 +91,7 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property azureADAuthentication in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of azureADAuthentication
+     * @return a CompletableFuture of AzureADAuthentication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AzureADAuthentication> patch(@jakarta.annotation.Nonnull final AzureADAuthentication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment.
+     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment.
+     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a azureADAuthenticationRequestBuilder
+     * @return a AzureADAuthenticationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AzureADAuthenticationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -207,7 +207,7 @@ public class AzureADAuthenticationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment.
+     * Read the properties and relationships of an azureADAuthentication object to find the level of Azure AD authentication availability for your tenant. The Azure AD Service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in Azure Active Directory SLA performance. This object provides you with your tenants actual performance against this commitment. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

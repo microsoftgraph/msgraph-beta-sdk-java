@@ -56,8 +56,8 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
-     * @return a CompletableFuture of attackSimulationOperation
+     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AttackSimulationOperation
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
+     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attackSimulationOperation
+     * @return a CompletableFuture of AttackSimulationOperation
      * @see <a href="https://learn.microsoft.com/graph/api/attacksimulationoperation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
     /**
      * Update the navigation property operations in security
      * @param body The request body
-     * @return a CompletableFuture of attackSimulationOperation
+     * @return a CompletableFuture of AttackSimulationOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperation> patch(@jakarta.annotation.Nonnull final AttackSimulationOperation body) {
@@ -91,7 +91,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
      * Update the navigation property operations in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of attackSimulationOperation
+     * @return a CompletableFuture of AttackSimulationOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AttackSimulationOperation> patch(@jakarta.annotation.Nonnull final AttackSimulationOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
+     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
+     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -207,7 +207,7 @@ public class AttackSimulationOperationItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an attack simulation operation to track a long-running operation request for a tenant.
+     * Get an attack simulation operation to track a long-running operation request for a tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

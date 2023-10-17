@@ -65,7 +65,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get replies from drives
-     * @return a CompletableFuture of workbookCommentReply
+     * @return a CompletableFuture of WorkbookCommentReply
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentReply> get() {
@@ -74,7 +74,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get replies from drives
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookCommentReply
+     * @return a CompletableFuture of WorkbookCommentReply
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentReply> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property replies in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookCommentReply
+     * @return a CompletableFuture of WorkbookCommentReply
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentReply> patch(@jakarta.annotation.Nonnull final WorkbookCommentReply body) {
@@ -97,7 +97,7 @@ public class WorkbookCommentReplyItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property replies in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookCommentReply
+     * @return a CompletableFuture of WorkbookCommentReply
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookCommentReply> patch(@jakarta.annotation.Nonnull final WorkbookCommentReply body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

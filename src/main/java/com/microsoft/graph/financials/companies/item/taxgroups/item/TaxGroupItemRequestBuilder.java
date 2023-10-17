@@ -57,7 +57,7 @@ public class TaxGroupItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get taxGroups from financials
-     * @return a CompletableFuture of taxGroup
+     * @return a CompletableFuture of TaxGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxGroup> get() {
@@ -66,7 +66,7 @@ public class TaxGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get taxGroups from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taxGroup
+     * @return a CompletableFuture of TaxGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxGroup> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TaxGroupItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property taxGroups in financials
      * @param body The request body
-     * @return a CompletableFuture of taxGroup
+     * @return a CompletableFuture of TaxGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxGroup> patch(@jakarta.annotation.Nonnull final TaxGroup body) {
@@ -89,7 +89,7 @@ public class TaxGroupItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property taxGroups in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of taxGroup
+     * @return a CompletableFuture of TaxGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TaxGroup> patch(@jakarta.annotation.Nonnull final TaxGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

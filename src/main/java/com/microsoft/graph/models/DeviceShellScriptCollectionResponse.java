@@ -13,7 +13,7 @@ public class DeviceShellScriptCollectionResponse extends BaseCollectionPaginatio
      */
     private java.util.List<DeviceShellScript> value;
     /**
-     * Instantiates a new deviceShellScriptCollectionResponse and sets the default values.
+     * Instantiates a new DeviceShellScriptCollectionResponse and sets the default values.
      */
     public DeviceShellScriptCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceShellScriptCollectionResponse extends BaseCollectionPaginatio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceShellScriptCollectionResponse
+     * @return a DeviceShellScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceShellScriptCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceShellScriptCollectionResponse extends BaseCollectionPaginatio
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceShellScript
+     * @return a java.util.List<DeviceShellScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceShellScript> getValue() {

@@ -65,8 +65,8 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/sharedUseServicePlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
-     * @return a CompletableFuture of cloudPcSharedUseServicePlanCollectionResponse
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcSharedUseServicePlanCollectionResponse
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
@@ -77,9 +77,9 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSharedUseServicePlanCollectionResponse
+     * @return a CompletableFuture of CloudPcSharedUseServicePlanCollectionResponse
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-shareduseserviceplans?view=graph-rest-1.0">Find more info here</a>
@@ -96,7 +96,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcSharedUseServicePlan
+     * @return a CompletableFuture of CloudPcSharedUseServicePlan
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
@@ -109,7 +109,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to sharedUseServicePlans for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcSharedUseServicePlan
+     * @return a CompletableFuture of CloudPcSharedUseServicePlan
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
@@ -124,7 +124,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcSharedUseServicePlan::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
@@ -135,7 +135,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -199,7 +199,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sharedUseServicePlansRequestBuilder
+     * @return a SharedUseServicePlansRequestBuilder
      * @deprecated
      * The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response. as of 2023-03/sharedUseServicePlans on 2023-06-08 and will be removed 2023-10-08
      */
@@ -210,7 +210,7 @@ public class SharedUseServicePlansRequestBuilder extends BaseRequestBuilder {
         return new SharedUseServicePlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the cloudPcSharedUseServicePlan objects and their properties.
+     * Get a list of the cloudPcSharedUseServicePlan objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

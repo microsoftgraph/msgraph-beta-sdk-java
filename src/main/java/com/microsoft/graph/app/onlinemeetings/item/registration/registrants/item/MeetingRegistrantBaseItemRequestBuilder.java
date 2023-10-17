@@ -57,7 +57,7 @@ public class MeetingRegistrantBaseItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Registrants of the online meeting.
-     * @return a CompletableFuture of meetingRegistrantBase
+     * @return a CompletableFuture of MeetingRegistrantBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBase> get() {
@@ -66,7 +66,7 @@ public class MeetingRegistrantBaseItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Registrants of the online meeting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrantBase
+     * @return a CompletableFuture of MeetingRegistrantBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MeetingRegistrantBaseItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property registrants in app
      * @param body The request body
-     * @return a CompletableFuture of meetingRegistrantBase
+     * @return a CompletableFuture of MeetingRegistrantBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBase> patch(@jakarta.annotation.Nonnull final MeetingRegistrantBase body) {
@@ -89,7 +89,7 @@ public class MeetingRegistrantBaseItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property registrants in app
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistrantBase
+     * @return a CompletableFuture of MeetingRegistrantBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MeetingRegistrantBase> patch(@jakarta.annotation.Nonnull final MeetingRegistrantBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

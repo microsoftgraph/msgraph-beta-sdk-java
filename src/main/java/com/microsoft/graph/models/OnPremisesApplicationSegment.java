@@ -34,7 +34,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
      */
     private String odataType;
     /**
-     * Instantiates a new onPremisesApplicationSegment and sets the default values.
+     * Instantiates a new OnPremisesApplicationSegment and sets the default values.
      */
     public OnPremisesApplicationSegment() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesApplicationSegment
+     * @return a OnPremisesApplicationSegment
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         return new OnPremisesApplicationSegment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, contains the user-friendly URL that will point to the traffic manager.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateUrl() {
@@ -67,7 +67,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the corsConfigurations property value. CORS Rule definition for a particular application segment.
-     * @return a corsConfiguration
+     * @return a java.util.List<CorsConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CorsConfiguration> getCorsConfigurations() {
@@ -75,7 +75,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com./
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalUrl() {
@@ -97,7 +97,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalUrl() {
@@ -105,7 +105,7 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -125,8 +125,8 @@ public class OnPremisesApplicationSegment implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

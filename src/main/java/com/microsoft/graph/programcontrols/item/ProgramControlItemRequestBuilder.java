@@ -45,7 +45,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from programControls by key
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> get() {
@@ -76,7 +76,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from programControls by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in programControls
      * @param body The request body
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> patch(@jakarta.annotation.Nonnull final ProgramControl body) {
@@ -99,7 +99,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in programControls
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> patch(@jakarta.annotation.Nonnull final ProgramControl body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProgramControl::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

@@ -57,7 +57,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Aggregate view of device compliance policies across managed tenants.
-     * @return a CompletableFuture of aggregatedPolicyCompliance
+     * @return a CompletableFuture of AggregatedPolicyCompliance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AggregatedPolicyCompliance> get() {
@@ -66,7 +66,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder extends BaseRequestBui
     /**
      * Aggregate view of device compliance policies across managed tenants.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of aggregatedPolicyCompliance
+     * @return a CompletableFuture of AggregatedPolicyCompliance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AggregatedPolicyCompliance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property aggregatedPolicyCompliances in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of aggregatedPolicyCompliance
+     * @return a CompletableFuture of AggregatedPolicyCompliance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AggregatedPolicyCompliance> patch(@jakarta.annotation.Nonnull final AggregatedPolicyCompliance body) {
@@ -89,7 +89,7 @@ public class AggregatedPolicyComplianceItemRequestBuilder extends BaseRequestBui
      * Update the navigation property aggregatedPolicyCompliances in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of aggregatedPolicyCompliance
+     * @return a CompletableFuture of AggregatedPolicyCompliance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AggregatedPolicyCompliance> patch(@jakarta.annotation.Nonnull final AggregatedPolicyCompliance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

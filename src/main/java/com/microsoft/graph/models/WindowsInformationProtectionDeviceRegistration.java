@@ -37,7 +37,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
      */
     private String userId;
     /**
-     * Instantiates a new windowsInformationProtectionDeviceRegistration and sets the default values.
+     * Instantiates a new WindowsInformationProtectionDeviceRegistration and sets the default values.
      */
     public WindowsInformationProtectionDeviceRegistration() {
         super();
@@ -45,7 +45,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionDeviceRegistration
+     * @return a WindowsInformationProtectionDeviceRegistration
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionDeviceRegistration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceMacAddress property value. Device Mac address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceMacAddress() {
@@ -62,7 +62,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -70,7 +70,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceRegistrationId property value. Device identifier for this device registration record.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceRegistrationId() {
@@ -78,7 +78,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the deviceType property value. Device type, for example, Windows laptop VS Windows phone.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceType() {
@@ -109,7 +109,7 @@ public class WindowsInformationProtectionDeviceRegistration extends Entity imple
     }
     /**
      * Gets the userId property value. UserId associated with this device registration record.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

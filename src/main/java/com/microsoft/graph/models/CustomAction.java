@@ -17,7 +17,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
      */
     private java.util.List<KeyValuePair> properties;
     /**
-     * Instantiates a new customAction and sets the default values.
+     * Instantiates a new CustomAction and sets the default values.
      */
     public CustomAction() {
         super();
@@ -26,7 +26,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customAction
+     * @return a CustomAction
      */
     @jakarta.annotation.Nonnull
     public static CustomAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     }
     /**
      * Gets the name property value. Name of the custom action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -54,7 +54,7 @@ public class CustomAction extends InformationProtectionAction implements Parsabl
     }
     /**
      * Gets the properties property value. Properties, in key value pair format, of the action.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getProperties() {

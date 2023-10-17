@@ -56,8 +56,8 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
-     * @return a CompletableFuture of educationSynchronizationProfileStatus
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EducationSynchronizationProfileStatus
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofilestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationProfileStatus
+     * @return a CompletableFuture of EducationSynchronizationProfileStatus
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofilestatus-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property profileStatus in education
      * @param body The request body
-     * @return a CompletableFuture of educationSynchronizationProfileStatus
+     * @return a CompletableFuture of EducationSynchronizationProfileStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationProfileStatus> patch(@jakarta.annotation.Nonnull final EducationSynchronizationProfileStatus body) {
@@ -91,7 +91,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property profileStatus in education
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of educationSynchronizationProfileStatus
+     * @return a CompletableFuture of EducationSynchronizationProfileStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<EducationSynchronizationProfileStatus> patch(@jakarta.annotation.Nonnull final EducationSynchronizationProfileStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -130,7 +130,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -193,7 +193,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a profileStatusRequestBuilder
+     * @return a ProfileStatusRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProfileStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -207,7 +207,7 @@ public class ProfileStatusRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync.
+     * Get the status of a specific school data synchronization profile in the tenant. The response will indicate the status of the sync. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -36,9 +36,9 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/schedule/timeCards/clockIn", rawUrl);
     }
     /**
-     * Clock in to start a timeCard.
+     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-clockin?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Clock in to start a timeCard.
+     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-clockin?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Clock in to start a timeCard.
+     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Clock in to start a timeCard.
+     * Clock in to start a timeCard. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -96,7 +96,7 @@ public class ClockInRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a clockInRequestBuilder
+     * @return a ClockInRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClockInRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

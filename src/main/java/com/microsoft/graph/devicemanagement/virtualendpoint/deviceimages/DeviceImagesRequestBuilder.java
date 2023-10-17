@@ -67,8 +67,8 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/deviceImages{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
-     * @return a CompletableFuture of cloudPcDeviceImageCollectionResponse
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcDeviceImageCollectionResponse
+     * @return a CompletableFuture of CloudPcDeviceImageCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -90,9 +90,9 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcDeviceImageCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,10 +100,10 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcDeviceImage
+     * @return a CompletableFuture of CloudPcDeviceImage
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-deviceimages?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcDeviceImage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -145,7 +145,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -154,7 +154,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs.
+     * Create a new cloudPcDeviceImage object. Upload a custom OS image that you can later provision on Cloud PCs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -179,7 +179,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceImagesRequestBuilder
+     * @return a DeviceImagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceImagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -187,7 +187,7 @@ public class DeviceImagesRequestBuilder extends BaseRequestBuilder {
         return new DeviceImagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC.
+     * List the properties and relationships of the cloudPcDeviceImage objects (OS images) uploaded to Cloud PC. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

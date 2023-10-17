@@ -38,7 +38,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     }
     /**
      * Get assignments from privilegedRoleAssignments
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a CompletableFuture of PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> get() {
@@ -47,7 +47,7 @@ public class PrivilegedRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Get assignments from privilegedRoleAssignments
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a CompletableFuture of PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

@@ -57,7 +57,7 @@ public class BusinessFlowTemplateItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from businessFlowTemplates by key
-     * @return a CompletableFuture of businessFlowTemplate
+     * @return a CompletableFuture of BusinessFlowTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlowTemplate> get() {
@@ -66,7 +66,7 @@ public class BusinessFlowTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from businessFlowTemplates by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of businessFlowTemplate
+     * @return a CompletableFuture of BusinessFlowTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlowTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class BusinessFlowTemplateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in businessFlowTemplates
      * @param body The request body
-     * @return a CompletableFuture of businessFlowTemplate
+     * @return a CompletableFuture of BusinessFlowTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlowTemplate> patch(@jakarta.annotation.Nonnull final BusinessFlowTemplate body) {
@@ -89,7 +89,7 @@ public class BusinessFlowTemplateItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in businessFlowTemplates
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of businessFlowTemplate
+     * @return a CompletableFuture of BusinessFlowTemplate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BusinessFlowTemplate> patch(@jakarta.annotation.Nonnull final BusinessFlowTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

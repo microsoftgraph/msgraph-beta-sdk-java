@@ -60,7 +60,7 @@ public class PrivilegeManagementElevationsRequestBuilder extends BaseRequestBuil
     }
     /**
      * The endpoint privilege management elevation event entity contains elevation details.
-     * @return a CompletableFuture of privilegeManagementElevationCollectionResponse
+     * @return a CompletableFuture of PrivilegeManagementElevationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class PrivilegeManagementElevationsRequestBuilder extends BaseRequestBuil
     /**
      * The endpoint privilege management elevation event entity contains elevation details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegeManagementElevationCollectionResponse
+     * @return a CompletableFuture of PrivilegeManagementElevationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class PrivilegeManagementElevationsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to privilegeManagementElevations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of privilegeManagementElevation
+     * @return a CompletableFuture of PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevation> post(@jakarta.annotation.Nonnull final PrivilegeManagementElevation body) {
@@ -92,7 +92,7 @@ public class PrivilegeManagementElevationsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to privilegeManagementElevations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegeManagementElevation
+     * @return a CompletableFuture of PrivilegeManagementElevation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegeManagementElevation> post(@jakarta.annotation.Nonnull final PrivilegeManagementElevation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class PrivilegeManagementElevationsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a privilegeManagementElevationsRequestBuilder
+     * @return a PrivilegeManagementElevationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PrivilegeManagementElevationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

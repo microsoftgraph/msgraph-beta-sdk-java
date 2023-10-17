@@ -13,7 +13,7 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
      */
     private AzureADAuthentication azureADAuthentication;
     /**
-     * Instantiates a new serviceLevelAgreementRoot and sets the default values.
+     * Instantiates a new ServiceLevelAgreementRoot and sets the default values.
      */
     public ServiceLevelAgreementRoot() {
         super();
@@ -21,7 +21,7 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceLevelAgreementRoot
+     * @return a ServiceLevelAgreementRoot
      */
     @jakarta.annotation.Nonnull
     public static ServiceLevelAgreementRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
     }
     /**
      * Gets the azureADAuthentication property value. Collects the Azure AD SLA attainment for each month for an Azure AD tenant.
-     * @return a azureADAuthentication
+     * @return a AzureADAuthentication
      */
     @jakarta.annotation.Nullable
     public AzureADAuthentication getAzureADAuthentication() {

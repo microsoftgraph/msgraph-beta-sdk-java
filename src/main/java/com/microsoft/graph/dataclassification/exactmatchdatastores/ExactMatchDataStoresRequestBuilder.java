@@ -60,7 +60,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get exactMatchDataStores from dataClassification
-     * @return a CompletableFuture of exactMatchDataStoreCollectionResponse
+     * @return a CompletableFuture of ExactMatchDataStoreCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStoreCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Get exactMatchDataStores from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchDataStoreCollectionResponse
+     * @return a CompletableFuture of ExactMatchDataStoreCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStoreCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to exactMatchDataStores for dataClassification
      * @param body The request body
-     * @return a CompletableFuture of exactMatchDataStore
+     * @return a CompletableFuture of ExactMatchDataStore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStore> post(@jakarta.annotation.Nonnull final ExactMatchDataStore body) {
@@ -92,7 +92,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to exactMatchDataStores for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchDataStore
+     * @return a CompletableFuture of ExactMatchDataStore
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchDataStore> post(@jakarta.annotation.Nonnull final ExactMatchDataStore body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ExactMatchDataStoresRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exactMatchDataStoresRequestBuilder
+     * @return a ExactMatchDataStoresRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExactMatchDataStoresRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

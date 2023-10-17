@@ -74,7 +74,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -86,7 +86,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     /**
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -102,7 +102,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property accessPackageResourceScopes in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -115,7 +115,7 @@ public class AccessPackageResourceScopeItemRequestBuilder extends BaseRequestBui
      * Update the navigation property accessPackageResourceScopes in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceScope
+     * @return a CompletableFuture of AccessPackageResourceScope
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

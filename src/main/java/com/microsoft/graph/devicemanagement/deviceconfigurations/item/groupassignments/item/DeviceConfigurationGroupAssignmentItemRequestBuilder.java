@@ -65,7 +65,7 @@ public class DeviceConfigurationGroupAssignmentItemRequestBuilder extends BaseRe
     }
     /**
      * The list of group assignments for the device configuration profile.
-     * @return a CompletableFuture of deviceConfigurationGroupAssignment
+     * @return a CompletableFuture of DeviceConfigurationGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationGroupAssignment> get() {
@@ -74,7 +74,7 @@ public class DeviceConfigurationGroupAssignmentItemRequestBuilder extends BaseRe
     /**
      * The list of group assignments for the device configuration profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationGroupAssignment
+     * @return a CompletableFuture of DeviceConfigurationGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationGroupAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceConfigurationGroupAssignmentItemRequestBuilder extends BaseRe
     /**
      * Update the navigation property groupAssignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceConfigurationGroupAssignment
+     * @return a CompletableFuture of DeviceConfigurationGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationGroupAssignment> patch(@jakarta.annotation.Nonnull final DeviceConfigurationGroupAssignment body) {
@@ -97,7 +97,7 @@ public class DeviceConfigurationGroupAssignmentItemRequestBuilder extends BaseRe
      * Update the navigation property groupAssignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceConfigurationGroupAssignment
+     * @return a CompletableFuture of DeviceConfigurationGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceConfigurationGroupAssignment> patch(@jakarta.annotation.Nonnull final DeviceConfigurationGroupAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

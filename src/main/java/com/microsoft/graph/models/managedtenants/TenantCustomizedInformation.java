@@ -26,7 +26,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
      */
     private String website;
     /**
-     * Instantiates a new tenantCustomizedInformation and sets the default values.
+     * Instantiates a new TenantCustomizedInformation and sets the default values.
      */
     public TenantCustomizedInformation() {
         super();
@@ -34,7 +34,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantCustomizedInformation
+     * @return a TenantCustomizedInformation
      */
     @jakarta.annotation.Nonnull
     public static TenantCustomizedInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the contacts property value. The collection of contacts for the managed tenant. Optional.
-     * @return a tenantContactInformation
+     * @return a java.util.List<TenantContactInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantContactInformation> getContacts() {
@@ -51,7 +51,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -72,7 +72,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -80,7 +80,7 @@ public class TenantCustomizedInformation extends Entity implements Parsable {
     }
     /**
      * Gets the website property value. The website for the managed tenant. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {

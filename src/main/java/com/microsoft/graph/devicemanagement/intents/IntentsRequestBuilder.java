@@ -60,7 +60,7 @@ public class IntentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The device management intents
-     * @return a CompletableFuture of deviceManagementIntentCollectionResponse
+     * @return a CompletableFuture of DeviceManagementIntentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class IntentsRequestBuilder extends BaseRequestBuilder {
     /**
      * The device management intents
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntentCollectionResponse
+     * @return a CompletableFuture of DeviceManagementIntentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class IntentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to intents for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementIntent
+     * @return a CompletableFuture of DeviceManagementIntent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntent> post(@jakarta.annotation.Nonnull final DeviceManagementIntent body) {
@@ -92,7 +92,7 @@ public class IntentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to intents for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementIntent
+     * @return a CompletableFuture of DeviceManagementIntent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementIntent> post(@jakarta.annotation.Nonnull final DeviceManagementIntent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class IntentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a intentsRequestBuilder
+     * @return a IntentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IntentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

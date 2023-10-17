@@ -64,8 +64,8 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Retrieve information about a specific forwarding profile.
-     * @return a CompletableFuture of forwardingProfile
+     * Retrieve information about a specific forwarding profile. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -73,9 +73,9 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve information about a specific forwarding profile.
+     * Retrieve information about a specific forwarding profile. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -87,9 +87,9 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ForwardingProfile::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update an existing forwarding profile.
+     * Update an existing forwarding profile. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,10 +97,10 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an existing forwarding profile.
+     * Update an existing forwarding profile. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of forwardingProfile
+     * @return a CompletableFuture of ForwardingProfile
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-forwardingprofile-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve information about a specific forwarding profile.
+     * Retrieve information about a specific forwarding profile. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve information about a specific forwarding profile.
+     * Retrieve information about a specific forwarding profile. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an existing forwarding profile.
+     * Update an existing forwarding profile. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an existing forwarding profile.
+     * Update an existing forwarding profile. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -217,7 +217,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve information about a specific forwarding profile.
+     * Retrieve information about a specific forwarding profile. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

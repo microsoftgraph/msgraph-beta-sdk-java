@@ -13,7 +13,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
      */
     private EvaluateLabelJobResultGroup result;
     /**
-     * Instantiates a new evaluateLabelJobResponse and sets the default values.
+     * Instantiates a new EvaluateLabelJobResponse and sets the default values.
      */
     public EvaluateLabelJobResponse() {
         super();
@@ -21,7 +21,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateLabelJobResponse
+     * @return a EvaluateLabelJobResponse
      */
     @jakarta.annotation.Nonnull
     public static EvaluateLabelJobResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
     }
     /**
      * Gets the result property value. The result property
-     * @return a evaluateLabelJobResultGroup
+     * @return a EvaluateLabelJobResultGroup
      */
     @jakarta.annotation.Nullable
     public EvaluateLabelJobResultGroup getResult() {

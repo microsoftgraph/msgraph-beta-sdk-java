@@ -60,7 +60,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Role Assignments.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignmentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Role Assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignmentCollectionResponse
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to roleAssignments for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> post(@jakarta.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body) {
@@ -92,7 +92,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to roleAssignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementRoleAssignment
+     * @return a CompletableFuture of DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementRoleAssignment> post(@jakarta.annotation.Nonnull final DeviceAndAppManagementRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class RoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a roleAssignmentsRequestBuilder
+     * @return a RoleAssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

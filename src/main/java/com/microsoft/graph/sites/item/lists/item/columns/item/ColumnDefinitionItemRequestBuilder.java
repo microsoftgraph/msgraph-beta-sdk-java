@@ -64,17 +64,17 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get columns from sites
-     * @return a CompletableFuture of columnDefinition
+     * The collection of field definitions for this list.
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get() {
         return get(null);
     }
     /**
-     * Get columns from sites
+     * The collection of field definitions for this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property columns in sites
      * @param body The request body
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> patch(@jakarta.annotation.Nonnull final ColumnDefinition body) {
@@ -97,7 +97,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property columns in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of columnDefinition
+     * @return a CompletableFuture of ColumnDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ColumnDefinition> patch(@jakarta.annotation.Nonnull final ColumnDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get columns from sites
+     * The collection of field definitions for this list.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get columns from sites
+     * The collection of field definitions for this list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -213,7 +213,7 @@ public class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get columns from sites
+     * The collection of field definitions for this list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

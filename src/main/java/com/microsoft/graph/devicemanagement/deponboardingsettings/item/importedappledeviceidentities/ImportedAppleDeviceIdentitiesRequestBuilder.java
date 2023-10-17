@@ -68,7 +68,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     }
     /**
      * The imported Apple device identities.
-     * @return a CompletableFuture of importedAppleDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of ImportedAppleDeviceIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentityCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * The imported Apple device identities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedAppleDeviceIdentityCollectionResponse
+     * @return a CompletableFuture of ImportedAppleDeviceIdentityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to importedAppleDeviceIdentities for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of importedAppleDeviceIdentity
+     * @return a CompletableFuture of ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body) {
@@ -100,7 +100,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
      * Create new navigation property to importedAppleDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedAppleDeviceIdentity
+     * @return a CompletableFuture of ImportedAppleDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ImportedAppleDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedAppleDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class ImportedAppleDeviceIdentitiesRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importedAppleDeviceIdentitiesRequestBuilder
+     * @return a ImportedAppleDeviceIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportedAppleDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

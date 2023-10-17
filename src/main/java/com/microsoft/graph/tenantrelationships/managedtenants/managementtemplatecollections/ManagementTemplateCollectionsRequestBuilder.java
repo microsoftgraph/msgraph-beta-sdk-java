@@ -60,7 +60,7 @@ public class ManagementTemplateCollectionsRequestBuilder extends BaseRequestBuil
     }
     /**
      * Get managementTemplateCollections from tenantRelationships
-     * @return a CompletableFuture of managementTemplateCollectionCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateCollectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ManagementTemplateCollectionsRequestBuilder extends BaseRequestBuil
     /**
      * Get managementTemplateCollections from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollectionCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateCollectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ManagementTemplateCollectionsRequestBuilder extends BaseRequestBuil
     /**
      * Create new navigation property to managementTemplateCollections for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateCollection
+     * @return a CompletableFuture of ManagementTemplateCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollection> post(@jakarta.annotation.Nonnull final ManagementTemplateCollection body) {
@@ -92,7 +92,7 @@ public class ManagementTemplateCollectionsRequestBuilder extends BaseRequestBuil
      * Create new navigation property to managementTemplateCollections for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateCollection
+     * @return a CompletableFuture of ManagementTemplateCollection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateCollection> post(@jakarta.annotation.Nonnull final ManagementTemplateCollection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ManagementTemplateCollectionsRequestBuilder extends BaseRequestBuil
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managementTemplateCollectionsRequestBuilder
+     * @return a ManagementTemplateCollectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateCollectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      */
     private java.util.List<ManagementTemplateStepVersion> versions;
     /**
-     * Instantiates a new managementTemplateStep and sets the default values.
+     * Instantiates a new ManagementTemplateStep and sets the default values.
      */
     public ManagementTemplateStep() {
         super();
@@ -68,7 +68,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStep
+     * @return a ManagementTemplateStep
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStep createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,7 +77,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the acceptedVersion property value. The acceptedVersion property
-     * @return a managementTemplateStepVersion
+     * @return a ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nullable
     public ManagementTemplateStepVersion getAcceptedVersion() {
@@ -85,7 +85,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. The category property
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
@@ -93,7 +93,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -109,7 +109,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -117,7 +117,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -146,7 +146,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -162,7 +162,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the managementTemplate property value. The managementTemplate property
-     * @return a managementTemplate
+     * @return a ManagementTemplate
      */
     @jakarta.annotation.Nullable
     public ManagementTemplate getManagementTemplate() {
@@ -170,7 +170,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the portalLink property value. The portalLink property
-     * @return a actionUrl
+     * @return a ActionUrl
      */
     @jakarta.annotation.Nullable
     public ActionUrl getPortalLink() {
@@ -178,7 +178,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -186,7 +186,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     }
     /**
      * Gets the versions property value. The versions property
-     * @return a managementTemplateStepVersion
+     * @return a java.util.List<ManagementTemplateStepVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepVersion> getVersions() {

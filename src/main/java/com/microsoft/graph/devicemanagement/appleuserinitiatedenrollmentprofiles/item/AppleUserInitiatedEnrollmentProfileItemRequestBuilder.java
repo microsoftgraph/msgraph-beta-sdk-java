@@ -73,7 +73,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder extends BaseR
     }
     /**
      * Apple user initiated enrollment profiles
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfile
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfile> get() {
@@ -82,7 +82,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder extends BaseR
     /**
      * Apple user initiated enrollment profiles
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfile
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfile> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder extends BaseR
     /**
      * Update the navigation property appleUserInitiatedEnrollmentProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfile
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfile> patch(@jakarta.annotation.Nonnull final AppleUserInitiatedEnrollmentProfile body) {
@@ -105,7 +105,7 @@ public class AppleUserInitiatedEnrollmentProfileItemRequestBuilder extends BaseR
      * Update the navigation property appleUserInitiatedEnrollmentProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appleUserInitiatedEnrollmentProfile
+     * @return a CompletableFuture of AppleUserInitiatedEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppleUserInitiatedEnrollmentProfile> patch(@jakarta.annotation.Nonnull final AppleUserInitiatedEnrollmentProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

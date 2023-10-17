@@ -46,7 +46,7 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.win32LobApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of win32LobAppCollectionResponse
+     * @return a CompletableFuture of Win32LobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Win32LobAppCollectionResponse> get() {
@@ -55,7 +55,7 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.win32LobApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of win32LobAppCollectionResponse
+     * @return a CompletableFuture of Win32LobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Win32LobAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GraphWin32LobAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphWin32LobAppRequestBuilder
+     * @return a GraphWin32LobAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphWin32LobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

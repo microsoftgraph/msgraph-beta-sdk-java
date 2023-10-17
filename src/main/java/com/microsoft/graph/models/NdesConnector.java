@@ -41,7 +41,7 @@ public class NdesConnector extends Entity implements Parsable {
      */
     private NdesConnectorState state;
     /**
-     * Instantiates a new ndesConnector and sets the default values.
+     * Instantiates a new NdesConnector and sets the default values.
      */
     public NdesConnector() {
         super();
@@ -49,7 +49,7 @@ public class NdesConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ndesConnector
+     * @return a NdesConnector
      */
     @jakarta.annotation.Nonnull
     public static NdesConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the connectorVersion property value. The build version of the Ndes Connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorVersion() {
@@ -66,7 +66,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The friendly name of the Ndes Connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -106,7 +106,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. Name of the machine running on-prem certificate connector service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
@@ -114,7 +114,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -122,7 +122,7 @@ public class NdesConnector extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The current status of the Ndes Connector.
-     * @return a ndesConnectorState
+     * @return a NdesConnectorState
      */
     @jakarta.annotation.Nullable
     public NdesConnectorState getState() {

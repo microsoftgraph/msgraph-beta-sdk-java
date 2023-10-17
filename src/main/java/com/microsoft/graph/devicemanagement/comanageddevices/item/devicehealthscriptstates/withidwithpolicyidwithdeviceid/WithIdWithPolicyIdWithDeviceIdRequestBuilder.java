@@ -63,7 +63,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
     }
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
-     * @return a CompletableFuture of deviceHealthScriptPolicyState
+     * @return a CompletableFuture of DeviceHealthScriptPolicyState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> get() {
@@ -72,7 +72,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptPolicyState
+     * @return a CompletableFuture of DeviceHealthScriptPolicyState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -85,7 +85,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property deviceHealthScriptStates in deviceManagement
      * @param body Contains properties for policy run state of the device health script.
-     * @return a CompletableFuture of deviceHealthScriptPolicyState
+     * @return a CompletableFuture of DeviceHealthScriptPolicyState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> patch(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
@@ -95,7 +95,7 @@ public class WithIdWithPolicyIdWithDeviceIdRequestBuilder extends BaseRequestBui
      * Update the navigation property deviceHealthScriptStates in deviceManagement
      * @param body Contains properties for policy run state of the device health script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptPolicyState
+     * @return a CompletableFuture of DeviceHealthScriptPolicyState
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> patch(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

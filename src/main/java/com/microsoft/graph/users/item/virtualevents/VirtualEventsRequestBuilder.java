@@ -65,7 +65,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get virtualEvents from users
-     * @return a CompletableFuture of userVirtualEventsRoot
+     * @return a CompletableFuture of UserVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> get() {
@@ -74,7 +74,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get virtualEvents from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userVirtualEventsRoot
+     * @return a CompletableFuture of UserVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property virtualEvents in users
      * @param body The request body
-     * @return a CompletableFuture of userVirtualEventsRoot
+     * @return a CompletableFuture of UserVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> patch(@jakarta.annotation.Nonnull final UserVirtualEventsRoot body) {
@@ -97,7 +97,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property virtualEvents in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userVirtualEventsRoot
+     * @return a CompletableFuture of UserVirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserVirtualEventsRoot> patch(@jakarta.annotation.Nonnull final UserVirtualEventsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -199,7 +199,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a virtualEventsRequestBuilder
+     * @return a VirtualEventsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VirtualEventsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

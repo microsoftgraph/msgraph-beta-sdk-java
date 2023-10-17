@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceHealthScriptHourlySchedule extends DeviceHealthScriptRunSchedule implements Parsable {
     /**
-     * Instantiates a new deviceHealthScriptHourlySchedule and sets the default values.
+     * Instantiates a new DeviceHealthScriptHourlySchedule and sets the default values.
      */
     public DeviceHealthScriptHourlySchedule() {
         super();
@@ -21,7 +21,7 @@ public class DeviceHealthScriptHourlySchedule extends DeviceHealthScriptRunSched
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptHourlySchedule
+     * @return a DeviceHealthScriptHourlySchedule
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptHourlySchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

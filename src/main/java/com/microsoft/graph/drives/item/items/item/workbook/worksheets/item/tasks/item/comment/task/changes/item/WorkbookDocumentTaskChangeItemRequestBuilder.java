@@ -57,7 +57,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
     }
     /**
      * A collection of task change histories.
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a CompletableFuture of WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> get() {
@@ -66,7 +66,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
     /**
      * A collection of task change histories.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a CompletableFuture of WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property changes in drives
      * @param body The request body
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a CompletableFuture of WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> patch(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body) {
@@ -89,7 +89,7 @@ public class WorkbookDocumentTaskChangeItemRequestBuilder extends BaseRequestBui
      * Update the navigation property changes in drives
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of workbookDocumentTaskChange
+     * @return a CompletableFuture of WorkbookDocumentTaskChange
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WorkbookDocumentTaskChange> patch(@jakarta.annotation.Nonnull final WorkbookDocumentTaskChange body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

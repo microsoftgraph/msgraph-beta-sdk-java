@@ -89,7 +89,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve the properties and relationships of organizationSettings object. Nullable.
-     * @return a CompletableFuture of organizationSettings
+     * @return a CompletableFuture of OrganizationSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationSettings> get() {
@@ -98,7 +98,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of organizationSettings object. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationSettings
+     * @return a CompletableFuture of OrganizationSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property settings in organization
      * @param body The request body
-     * @return a CompletableFuture of organizationSettings
+     * @return a CompletableFuture of OrganizationSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationSettings> patch(@jakarta.annotation.Nonnull final OrganizationSettings body) {
@@ -121,7 +121,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property settings in organization
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of organizationSettings
+     * @return a CompletableFuture of OrganizationSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OrganizationSettings> patch(@jakarta.annotation.Nonnull final OrganizationSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a settingsRequestBuilder
+     * @return a SettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

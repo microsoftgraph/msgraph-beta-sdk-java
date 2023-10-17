@@ -57,7 +57,7 @@ public class MessageEventItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get events from messageRecipients
-     * @return a CompletableFuture of messageEvent
+     * @return a CompletableFuture of MessageEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEvent> get() {
@@ -66,7 +66,7 @@ public class MessageEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get events from messageRecipients
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageEvent
+     * @return a CompletableFuture of MessageEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEvent> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class MessageEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property events in messageRecipients
      * @param body The request body
-     * @return a CompletableFuture of messageEvent
+     * @return a CompletableFuture of MessageEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEvent> patch(@jakarta.annotation.Nonnull final MessageEvent body) {
@@ -89,7 +89,7 @@ public class MessageEventItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property events in messageRecipients
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of messageEvent
+     * @return a CompletableFuture of MessageEvent
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MessageEvent> patch(@jakarta.annotation.Nonnull final MessageEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

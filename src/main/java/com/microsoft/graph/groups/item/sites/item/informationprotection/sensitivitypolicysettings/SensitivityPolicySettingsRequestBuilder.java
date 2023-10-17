@@ -57,7 +57,7 @@ public class SensitivityPolicySettingsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get sensitivityPolicySettings from groups
-     * @return a CompletableFuture of sensitivityPolicySettings
+     * @return a CompletableFuture of SensitivityPolicySettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityPolicySettings> get() {
@@ -66,7 +66,7 @@ public class SensitivityPolicySettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Get sensitivityPolicySettings from groups
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityPolicySettings
+     * @return a CompletableFuture of SensitivityPolicySettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityPolicySettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class SensitivityPolicySettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Update the navigation property sensitivityPolicySettings in groups
      * @param body The request body
-     * @return a CompletableFuture of sensitivityPolicySettings
+     * @return a CompletableFuture of SensitivityPolicySettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityPolicySettings> patch(@jakarta.annotation.Nonnull final SensitivityPolicySettings body) {
@@ -89,7 +89,7 @@ public class SensitivityPolicySettingsRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property sensitivityPolicySettings in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of sensitivityPolicySettings
+     * @return a CompletableFuture of SensitivityPolicySettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<SensitivityPolicySettings> patch(@jakarta.annotation.Nonnull final SensitivityPolicySettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -191,7 +191,7 @@ public class SensitivityPolicySettingsRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a sensitivityPolicySettingsRequestBuilder
+     * @return a SensitivityPolicySettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SensitivityPolicySettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -60,7 +60,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of scheduled action for this rule
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of scheduled action for this rule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRuleCollectionResponse
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRuleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRuleCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> post(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body) {
@@ -92,7 +92,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to scheduledActionsForRule for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceScheduledActionForRule
+     * @return a CompletableFuture of DeviceComplianceScheduledActionForRule
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceScheduledActionForRule> post(@jakarta.annotation.Nonnull final DeviceComplianceScheduledActionForRule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a scheduledActionsForRuleRequestBuilder
+     * @return a ScheduledActionsForRuleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScheduledActionsForRuleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

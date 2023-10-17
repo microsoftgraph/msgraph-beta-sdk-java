@@ -65,7 +65,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder extends 
     }
     /**
      * The list of Exchange On Premisis policies configured by the tenant.
-     * @return a CompletableFuture of deviceManagementExchangeOnPremisesPolicy
+     * @return a CompletableFuture of DeviceManagementExchangeOnPremisesPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeOnPremisesPolicy> get() {
@@ -74,7 +74,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder extends 
     /**
      * The list of Exchange On Premisis policies configured by the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeOnPremisesPolicy
+     * @return a CompletableFuture of DeviceManagementExchangeOnPremisesPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeOnPremisesPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder extends 
     /**
      * Update the navigation property exchangeOnPremisesPolicies in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementExchangeOnPremisesPolicy
+     * @return a CompletableFuture of DeviceManagementExchangeOnPremisesPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeOnPremisesPolicy> patch(@jakarta.annotation.Nonnull final DeviceManagementExchangeOnPremisesPolicy body) {
@@ -97,7 +97,7 @@ public class DeviceManagementExchangeOnPremisesPolicyItemRequestBuilder extends 
      * Update the navigation property exchangeOnPremisesPolicies in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementExchangeOnPremisesPolicy
+     * @return a CompletableFuture of DeviceManagementExchangeOnPremisesPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementExchangeOnPremisesPolicy> patch(@jakarta.annotation.Nonnull final DeviceManagementExchangeOnPremisesPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

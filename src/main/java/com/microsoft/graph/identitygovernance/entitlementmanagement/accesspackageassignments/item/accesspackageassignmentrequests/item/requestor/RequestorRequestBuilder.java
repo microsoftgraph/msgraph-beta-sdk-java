@@ -74,7 +74,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -86,7 +86,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     /**
      * The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -102,7 +102,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property requestor in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -115,7 +115,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property requestor in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageSubject
+     * @return a CompletableFuture of AccessPackageSubject
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -238,7 +238,7 @@ public class RequestorRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a requestorRequestBuilder
+     * @return a RequestorRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

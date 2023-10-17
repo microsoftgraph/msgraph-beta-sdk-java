@@ -109,8 +109,8 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/informationProtection/policy/labels{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
-     * @return a CompletableFuture of informationProtectionLabelCollectionResponse
+     * Get a collection of information protection labels available to the user or to the organization. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionpolicy-list-labels?view=graph-rest-1.0">Find more info here</a>
@@ -121,9 +121,9 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get a collection of information protection labels available to the user or to the organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionLabelCollectionResponse
+     * @return a CompletableFuture of InformationProtectionLabelCollectionResponse
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionpolicy-list-labels?view=graph-rest-1.0">Find more info here</a>
@@ -140,7 +140,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to labels for informationProtection
      * @param body The request body
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -153,7 +153,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to labels for informationProtection
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of informationProtectionLabel
+     * @return a CompletableFuture of InformationProtectionLabel
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -168,7 +168,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InformationProtectionLabel::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get a collection of information protection labels available to the user or to the organization. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
@@ -179,7 +179,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get a collection of information protection labels available to the user or to the organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -243,7 +243,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a labelsRequestBuilder
+     * @return a LabelsRequestBuilder
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
      */
@@ -254,7 +254,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
         return new LabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of information protection labels available to the user or to the organization.
+     * Get a collection of information protection labels available to the user or to the organization. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

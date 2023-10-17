@@ -57,7 +57,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Get federatedIdentityCredentials from servicePrincipals
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get() {
@@ -66,7 +66,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
     /**
      * Get federatedIdentityCredentials from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property federatedIdentityCredentials in servicePrincipals
      * @param body The request body
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> patch(@jakarta.annotation.Nonnull final FederatedIdentityCredential body) {
@@ -89,7 +89,7 @@ public class FederatedIdentityCredentialItemRequestBuilder extends BaseRequestBu
      * Update the navigation property federatedIdentityCredentials in servicePrincipals
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of federatedIdentityCredential
+     * @return a CompletableFuture of FederatedIdentityCredential
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FederatedIdentityCredential> patch(@jakarta.annotation.Nonnull final FederatedIdentityCredential body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

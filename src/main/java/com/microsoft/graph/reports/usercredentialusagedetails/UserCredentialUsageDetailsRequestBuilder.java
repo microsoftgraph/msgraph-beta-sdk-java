@@ -59,8 +59,8 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/reports/userCredentialUsageDetails{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
-     * @return a CompletableFuture of userCredentialUsageDetailsCollectionResponse
+     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UserCredentialUsageDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-usercredentialusagedetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -68,9 +68,9 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
+     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCredentialUsageDetailsCollectionResponse
+     * @return a CompletableFuture of UserCredentialUsageDetailsCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-usercredentialusagedetails?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
     /**
      * Create new navigation property to userCredentialUsageDetails for reports
      * @param body The request body
-     * @return a CompletableFuture of userCredentialUsageDetails
+     * @return a CompletableFuture of UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCredentialUsageDetails> post(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body) {
@@ -94,7 +94,7 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * Create new navigation property to userCredentialUsageDetails for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCredentialUsageDetails
+     * @return a CompletableFuture of UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCredentialUsageDetails> post(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendAsync(requestInfo, UserCredentialUsageDetails::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
+     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
+     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -169,7 +169,7 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userCredentialUsageDetailsRequestBuilder
+     * @return a UserCredentialUsageDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserCredentialUsageDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -177,7 +177,7 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
         return new UserCredentialUsageDetailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
+     * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

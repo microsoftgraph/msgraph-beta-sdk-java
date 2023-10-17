@@ -38,7 +38,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The group policy definitions associated with the file.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get() {
@@ -47,7 +47,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * The group policy definitions associated with the file.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

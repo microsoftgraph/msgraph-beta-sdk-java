@@ -22,7 +22,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
      */
     private String tenantId;
     /**
-     * Instantiates a new managementActionTenantDeploymentStatus and sets the default values.
+     * Instantiates a new ManagementActionTenantDeploymentStatus and sets the default values.
      */
     public ManagementActionTenantDeploymentStatus() {
         super();
@@ -30,7 +30,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementActionTenantDeploymentStatus
+     * @return a ManagementActionTenantDeploymentStatus
      */
     @jakarta.annotation.Nonnull
     public static ManagementActionTenantDeploymentStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     }
     /**
      * Gets the statuses property value. The collection of deployment status for each instance of a management action. Optional.
-     * @return a managementActionDeploymentStatus
+     * @return a java.util.List<ManagementActionDeploymentStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementActionDeploymentStatus> getStatuses() {
@@ -59,7 +59,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     }
     /**
      * Gets the tenantGroupId property value. The identifier for the tenant group that is associated with the management action. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantGroupId() {
@@ -67,7 +67,7 @@ public class ManagementActionTenantDeploymentStatus extends Entity implements Pa
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {

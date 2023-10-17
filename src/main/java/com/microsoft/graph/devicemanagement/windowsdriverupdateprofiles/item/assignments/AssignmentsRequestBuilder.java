@@ -60,7 +60,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of group assignments of the profile.
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignmentCollectionResponse
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignmentCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of group assignments of the profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignmentCollectionResponse
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignmentCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to assignments for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignment
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignment> post(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfileAssignment body) {
@@ -92,7 +92,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to assignments for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsDriverUpdateProfileAssignment
+     * @return a CompletableFuture of WindowsDriverUpdateProfileAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<WindowsDriverUpdateProfileAssignment> post(@jakarta.annotation.Nonnull final WindowsDriverUpdateProfileAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentsRequestBuilder
+     * @return a AssignmentsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

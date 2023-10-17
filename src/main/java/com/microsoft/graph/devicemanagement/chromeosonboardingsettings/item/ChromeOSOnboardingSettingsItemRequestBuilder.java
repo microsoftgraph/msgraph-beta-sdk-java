@@ -57,7 +57,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Collection of ChromeOSOnboardingSettings settings associated with account.
-     * @return a CompletableFuture of chromeOSOnboardingSettings
+     * @return a CompletableFuture of ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettings> get() {
@@ -66,7 +66,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder extends BaseRequestBui
     /**
      * Collection of ChromeOSOnboardingSettings settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chromeOSOnboardingSettings
+     * @return a CompletableFuture of ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property chromeOSOnboardingSettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of chromeOSOnboardingSettings
+     * @return a CompletableFuture of ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettings> patch(@jakarta.annotation.Nonnull final ChromeOSOnboardingSettings body) {
@@ -89,7 +89,7 @@ public class ChromeOSOnboardingSettingsItemRequestBuilder extends BaseRequestBui
      * Update the navigation property chromeOSOnboardingSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of chromeOSOnboardingSettings
+     * @return a CompletableFuture of ChromeOSOnboardingSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ChromeOSOnboardingSettings> patch(@jakarta.annotation.Nonnull final ChromeOSOnboardingSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -97,7 +97,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get exchange from roleManagement
-     * @return a CompletableFuture of unifiedRbacApplication
+     * @return a CompletableFuture of UnifiedRbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacApplication> get() {
@@ -106,7 +106,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Get exchange from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacApplication
+     * @return a CompletableFuture of UnifiedRbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacApplication> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property exchange in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of unifiedRbacApplication
+     * @return a CompletableFuture of UnifiedRbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacApplication> patch(@jakarta.annotation.Nonnull final UnifiedRbacApplication body) {
@@ -129,7 +129,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property exchange in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRbacApplication
+     * @return a CompletableFuture of UnifiedRbacApplication
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRbacApplication> patch(@jakarta.annotation.Nonnull final UnifiedRbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -231,7 +231,7 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a exchangeRequestBuilder
+     * @return a ExchangeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ExchangeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -49,7 +49,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
      */
     private Integer version;
     /**
-     * Instantiates a new deviceManagementReusablePolicySetting and sets the default values.
+     * Instantiates a new DeviceManagementReusablePolicySetting and sets the default values.
      */
     public DeviceManagementReusablePolicySetting() {
         super();
@@ -57,7 +57,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementReusablePolicySetting
+     * @return a DeviceManagementReusablePolicySetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementReusablePolicySetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the description property value. reusable setting description supplied by user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -82,7 +82,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the displayName property value. reusable setting display name supplied by user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -116,7 +116,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the referencingConfigurationPolicies property value. configuration policies referencing the current reusable setting. This property is read-only.
-     * @return a deviceManagementConfigurationPolicy
+     * @return a java.util.List<DeviceManagementConfigurationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicy> getReferencingConfigurationPolicies() {
@@ -124,7 +124,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the referencingConfigurationPolicyCount property value. count of configuration policies referencing the current reusable setting. Valid values 0 to 2147483647. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReferencingConfigurationPolicyCount() {
@@ -132,7 +132,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the settingDefinitionId property value. setting definition id associated with this reusable setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
@@ -140,7 +140,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the settingInstance property value. reusable setting configuration instance
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a DeviceManagementConfigurationSettingInstance
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstance getSettingInstance() {
@@ -148,7 +148,7 @@ public class DeviceManagementReusablePolicySetting extends Entity implements Par
     }
     /**
      * Gets the version property value. version number for reusable setting. Valid values 0 to 2147483647. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

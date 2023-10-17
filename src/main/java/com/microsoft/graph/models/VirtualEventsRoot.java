@@ -17,7 +17,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
      */
     private java.util.List<VirtualEventWebinar> webinars;
     /**
-     * Instantiates a new virtualEventsRoot and sets the default values.
+     * Instantiates a new VirtualEventsRoot and sets the default values.
      */
     public VirtualEventsRoot() {
         super();
@@ -25,7 +25,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventsRoot
+     * @return a VirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventsRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the events property value. The events property
-     * @return a virtualEvent
+     * @return a java.util.List<VirtualEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEvent> getEvents() {
@@ -53,7 +53,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the webinars property value. The webinars property
-     * @return a virtualEventWebinar
+     * @return a java.util.List<VirtualEventWebinar>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventWebinar> getWebinars() {

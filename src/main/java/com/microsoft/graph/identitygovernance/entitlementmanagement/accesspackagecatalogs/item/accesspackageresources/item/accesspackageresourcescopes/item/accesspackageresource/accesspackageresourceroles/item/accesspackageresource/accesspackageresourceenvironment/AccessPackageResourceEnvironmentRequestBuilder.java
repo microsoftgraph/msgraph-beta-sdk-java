@@ -38,7 +38,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
     }
     /**
      * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -50,7 +50,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
     /**
      * Contains the environment information for the resource. This can be set using either the @odata.bind annotation or the environment's originId.Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageResourceEnvironment
+     * @return a CompletableFuture of AccessPackageResourceEnvironment
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
@@ -101,7 +101,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageResourceEnvironmentRequestBuilder
+     * @return a AccessPackageResourceEnvironmentRequestBuilder
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */

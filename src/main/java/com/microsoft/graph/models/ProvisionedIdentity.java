@@ -13,11 +13,11 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      */
     private DetailsInfo details;
     /**
-     * Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
+     * Type of identity that has been provisioned, such as 'user' or 'group.' Supports $filter (eq, contains).
      */
     private String identityType;
     /**
-     * Instantiates a new provisionedIdentity and sets the default values.
+     * Instantiates a new ProvisionedIdentity and sets the default values.
      */
     public ProvisionedIdentity() {
         super();
@@ -26,7 +26,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisionedIdentity
+     * @return a ProvisionedIdentity
      */
     @jakarta.annotation.Nonnull
     public static ProvisionedIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the details property value. Details of the identity.
-     * @return a detailsInfo
+     * @return a DetailsInfo
      */
     @jakarta.annotation.Nullable
     public DetailsInfo getDetails() {
@@ -53,8 +53,8 @@ public class ProvisionedIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
-     * @return a string
+     * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group.' Supports $filter (eq, contains).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityType() {
@@ -78,7 +78,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
         this.details = value;
     }
     /**
-     * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'. Supports $filter (eq, contains).
+     * Sets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group.' Supports $filter (eq, contains).
      * @param value Value to set for the identityType property.
      */
     public void setIdentityType(@jakarta.annotation.Nullable final String value) {

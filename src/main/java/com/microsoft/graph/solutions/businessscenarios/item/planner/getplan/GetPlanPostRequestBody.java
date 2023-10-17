@@ -19,7 +19,7 @@ public class GetPlanPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private BusinessScenarioTaskTargetBase target;
     /**
-     * Instantiates a new getPlanPostRequestBody and sets the default values.
+     * Instantiates a new GetPlanPostRequestBody and sets the default values.
      */
     public GetPlanPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -27,7 +27,7 @@ public class GetPlanPostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getPlanPostRequestBody
+     * @return a GetPlanPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetPlanPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class GetPlanPostRequestBody implements AdditionalDataHolder, Parsable {
         return new GetPlanPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class GetPlanPostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the target property value. The target property
-     * @return a businessScenarioTaskTargetBase
+     * @return a BusinessScenarioTaskTargetBase
      */
     @jakarta.annotation.Nullable
     public BusinessScenarioTaskTargetBase getTarget() {
@@ -70,8 +70,8 @@ public class GetPlanPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/microsoft.graph.security.updateIndex", rawUrl);
     }
     /**
-     * Trigger an indexOperation
+     * Trigger an indexOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         return post(body, null);
     }
     /**
-     * Trigger an indexOperation
+     * Trigger an indexOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoverycustodian-updateindex?view=graph-rest-1.0">Find more info here</a>
@@ -59,7 +59,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Trigger an indexOperation
+     * Trigger an indexOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -68,7 +68,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
         return toPostRequestInformation(body, null);
     }
     /**
-     * Trigger an indexOperation
+     * Trigger an indexOperation This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,7 +92,7 @@ public class MicrosoftGraphSecurityUpdateIndexRequestBuilder extends BaseRequest
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphSecurityUpdateIndexRequestBuilder
+     * @return a MicrosoftGraphSecurityUpdateIndexRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphSecurityUpdateIndexRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -68,7 +68,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     }
     /**
      * The IOS Lob App Provisioning Configurations.
-     * @return a CompletableFuture of iosLobAppProvisioningConfigurationCollectionResponse
+     * @return a CompletableFuture of IosLobAppProvisioningConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosLobAppProvisioningConfigurationCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * The IOS Lob App Provisioning Configurations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosLobAppProvisioningConfigurationCollectionResponse
+     * @return a CompletableFuture of IosLobAppProvisioningConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosLobAppProvisioningConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * Create new navigation property to iosLobAppProvisioningConfigurations for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of iosLobAppProvisioningConfiguration
+     * @return a CompletableFuture of IosLobAppProvisioningConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosLobAppProvisioningConfiguration> post(@jakarta.annotation.Nonnull final IosLobAppProvisioningConfiguration body) {
@@ -100,7 +100,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
      * Create new navigation property to iosLobAppProvisioningConfigurations for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosLobAppProvisioningConfiguration
+     * @return a CompletableFuture of IosLobAppProvisioningConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosLobAppProvisioningConfiguration> post(@jakarta.annotation.Nonnull final IosLobAppProvisioningConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class IosLobAppProvisioningConfigurationsRequestBuilder extends BaseReque
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a iosLobAppProvisioningConfigurationsRequestBuilder
+     * @return a IosLobAppProvisioningConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IosLobAppProvisioningConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -36,24 +36,24 @@ public class DisconnectRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action disconnect
-     * @return a CompletableFuture of disconnectResponse
+     * @return a CompletableFuture of DisconnectPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DisconnectResponse> post() {
+    public java.util.concurrent.CompletableFuture<DisconnectPostResponse> post() {
         return post(null);
     }
     /**
      * Invoke action disconnect
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of disconnectResponse
+     * @return a CompletableFuture of DisconnectPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DisconnectResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<DisconnectPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DisconnectResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, DisconnectPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action disconnect
@@ -86,7 +86,7 @@ public class DisconnectRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a disconnectRequestBuilder
+     * @return a DisconnectRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DisconnectRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -72,8 +72,8 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
-     * @return a CompletableFuture of hostSslCertificate
+     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of HostSslCertificate
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostsslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      * @see <a href="https://learn.microsoft.com/graph/api/security-hostsslcertificate-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property hostSslCertificates in security
      * @param body The request body
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificate> patch(@jakarta.annotation.Nonnull final HostSslCertificate body) {
@@ -107,7 +107,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property hostSslCertificates in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSslCertificate
+     * @return a CompletableFuture of HostSslCertificate
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSslCertificate> patch(@jakarta.annotation.Nonnull final HostSslCertificate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class HostSslCertificateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of a hostSslCertificate object.
+     * Get the properties and relationships of a hostSslCertificate object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

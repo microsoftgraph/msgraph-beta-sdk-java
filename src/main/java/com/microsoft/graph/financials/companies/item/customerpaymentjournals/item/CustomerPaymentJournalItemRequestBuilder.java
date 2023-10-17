@@ -73,7 +73,7 @@ public class CustomerPaymentJournalItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get customerPaymentJournals from financials
-     * @return a CompletableFuture of customerPaymentJournal
+     * @return a CompletableFuture of CustomerPaymentJournal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPaymentJournal> get() {
@@ -82,7 +82,7 @@ public class CustomerPaymentJournalItemRequestBuilder extends BaseRequestBuilder
     /**
      * Get customerPaymentJournals from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customerPaymentJournal
+     * @return a CompletableFuture of CustomerPaymentJournal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPaymentJournal> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class CustomerPaymentJournalItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property customerPaymentJournals in financials
      * @param body The request body
-     * @return a CompletableFuture of customerPaymentJournal
+     * @return a CompletableFuture of CustomerPaymentJournal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPaymentJournal> patch(@jakarta.annotation.Nonnull final CustomerPaymentJournal body) {
@@ -105,7 +105,7 @@ public class CustomerPaymentJournalItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property customerPaymentJournals in financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customerPaymentJournal
+     * @return a CompletableFuture of CustomerPaymentJournal
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerPaymentJournal> patch(@jakarta.annotation.Nonnull final CustomerPaymentJournal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -68,7 +68,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * iOS managed app policies.
-     * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of IosManagedAppProtectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * iOS managed app policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosManagedAppProtectionCollectionResponse
+     * @return a CompletableFuture of IosManagedAppProtectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to iosManagedAppProtections for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@jakarta.annotation.Nonnull final IosManagedAppProtection body) {
@@ -100,7 +100,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to iosManagedAppProtections for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosManagedAppProtection
+     * @return a CompletableFuture of IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosManagedAppProtection> post(@jakarta.annotation.Nonnull final IosManagedAppProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -175,7 +175,7 @@ public class IosManagedAppProtectionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a iosManagedAppProtectionsRequestBuilder
+     * @return a IosManagedAppProtectionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IosManagedAppProtectionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -57,7 +57,7 @@ public class CatalogEntryItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Lists the content that you can approve for deployment. Read-only.
-     * @return a CompletableFuture of catalogEntry
+     * @return a CompletableFuture of CatalogEntry
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CatalogEntry> get() {
@@ -66,7 +66,7 @@ public class CatalogEntryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Lists the content that you can approve for deployment. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of catalogEntry
+     * @return a CompletableFuture of CatalogEntry
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CatalogEntry> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class CatalogEntryItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property entries in admin
      * @param body The request body
-     * @return a CompletableFuture of catalogEntry
+     * @return a CompletableFuture of CatalogEntry
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CatalogEntry> patch(@jakarta.annotation.Nonnull final CatalogEntry body) {
@@ -89,7 +89,7 @@ public class CatalogEntryItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entries in admin
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of catalogEntry
+     * @return a CompletableFuture of CatalogEntry
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CatalogEntry> patch(@jakarta.annotation.Nonnull final CatalogEntry body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

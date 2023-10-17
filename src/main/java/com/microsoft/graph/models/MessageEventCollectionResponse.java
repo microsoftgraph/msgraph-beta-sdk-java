@@ -13,7 +13,7 @@ public class MessageEventCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<MessageEvent> value;
     /**
-     * Instantiates a new messageEventCollectionResponse and sets the default values.
+     * Instantiates a new MessageEventCollectionResponse and sets the default values.
      */
     public MessageEventCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MessageEventCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageEventCollectionResponse
+     * @return a MessageEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MessageEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MessageEventCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a messageEvent
+     * @return a java.util.List<MessageEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageEvent> getValue() {

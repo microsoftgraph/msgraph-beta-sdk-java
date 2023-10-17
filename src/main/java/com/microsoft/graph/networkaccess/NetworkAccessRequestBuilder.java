@@ -102,7 +102,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get networkAccess
-     * @return a CompletableFuture of networkAccessRoot
+     * @return a CompletableFuture of NetworkAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessRoot> get() {
@@ -111,7 +111,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Get networkAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of networkAccessRoot
+     * @return a CompletableFuture of NetworkAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Update networkAccess
      * @param body The request body
-     * @return a CompletableFuture of networkAccessRoot
+     * @return a CompletableFuture of NetworkAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessRoot> patch(@jakarta.annotation.Nonnull final NetworkAccessRoot body) {
@@ -134,7 +134,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
      * Update networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of networkAccessRoot
+     * @return a CompletableFuture of NetworkAccessRoot
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<NetworkAccessRoot> patch(@jakarta.annotation.Nonnull final NetworkAccessRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -209,7 +209,7 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a networkAccessRequestBuilder
+     * @return a NetworkAccessRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public NetworkAccessRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

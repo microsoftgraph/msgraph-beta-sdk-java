@@ -59,19 +59,19 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
-     * @return a CompletableFuture of inboundFlowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-list?view=graph-rest-1.0">Find more info here</a>
+     * Get a list of the inboundFlow objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of InboundFlowCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlowCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundFlowCollectionResponse
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-list?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of InboundFlowCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlowCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,9 +82,9 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InboundFlowCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow: This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of inboundFlow
+     * @return a CompletableFuture of InboundFlow
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,10 +92,10 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundFlow
+     * @return a CompletableFuture of InboundFlow
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -108,7 +108,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InboundFlow::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -137,7 +137,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow: This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +146,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow:
+     * Create a new inboundFlow object. The following prerequisite resources are required when you create an inboundFlow: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -171,7 +171,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a inboundFlowsRequestBuilder
+     * @return a InboundFlowsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public InboundFlowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +179,7 @@ public class InboundFlowsRequestBuilder extends BaseRequestBuilder {
         return new InboundFlowsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the inboundFileFlow objects and their properties.
+     * Get a list of the inboundFlow objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

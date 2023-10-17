@@ -93,7 +93,7 @@ public class GetAppStatusOverviewReportRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAppStatusOverviewReportRequestBuilder
+     * @return a GetAppStatusOverviewReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAppStatusOverviewReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

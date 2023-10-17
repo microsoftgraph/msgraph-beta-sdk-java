@@ -26,7 +26,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      */
     private java.util.List<String> recipients;
     /**
-     * Instantiates a new notifyUserAction and sets the default values.
+     * Instantiates a new NotifyUserAction and sets the default values.
      */
     public NotifyUserAction() {
         super();
@@ -34,7 +34,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a notifyUserAction
+     * @return a NotifyUserAction
      */
     @jakarta.annotation.Nonnull
     public static NotifyUserAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     }
     /**
      * Gets the emailText property value. The emailText property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailText() {
@@ -72,7 +72,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     }
     /**
      * Gets the policyTip property value. The policyTip property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyTip() {
@@ -80,7 +80,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRecipients() {

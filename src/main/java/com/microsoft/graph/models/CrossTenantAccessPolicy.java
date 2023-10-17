@@ -21,7 +21,11 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      */
     private java.util.List<CrossTenantAccessPolicyConfigurationPartner> partners;
     /**
-     * Instantiates a new crossTenantAccessPolicy and sets the default values.
+     * Represents the base policy in the directory for multi-tenant organization settings.
+     */
+    private PolicyTemplate templates;
+    /**
+     * Instantiates a new CrossTenantAccessPolicy and sets the default values.
      */
     public CrossTenantAccessPolicy() {
         super();
@@ -30,7 +34,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantAccessPolicy
+     * @return a CrossTenantAccessPolicy
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +43,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     }
     /**
      * Gets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedCloudEndpoints() {
@@ -47,7 +51,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     }
     /**
      * Gets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
-     * @return a crossTenantAccessPolicyConfigurationDefault
+     * @return a CrossTenantAccessPolicyConfigurationDefault
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyConfigurationDefault getDefault() {
@@ -63,15 +67,24 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
         deserializerMap.put("allowedCloudEndpoints", (n) -> { this.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("default", (n) -> { this.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
         deserializerMap.put("partners", (n) -> { this.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("templates", (n) -> { this.setTemplates(n.getObjectValue(PolicyTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
-     * @return a crossTenantAccessPolicyConfigurationPartner
+     * @return a java.util.List<CrossTenantAccessPolicyConfigurationPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CrossTenantAccessPolicyConfigurationPartner> getPartners() {
         return this.partners;
+    }
+    /**
+     * Gets the templates property value. Represents the base policy in the directory for multi-tenant organization settings.
+     * @return a PolicyTemplate
+     */
+    @jakarta.annotation.Nullable
+    public PolicyTemplate getTemplates() {
+        return this.templates;
     }
     /**
      * Serializes information the current object
@@ -83,6 +96,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
         writer.writeCollectionOfPrimitiveValues("allowedCloudEndpoints", this.getAllowedCloudEndpoints());
         writer.writeObjectValue("default", this.getDefault());
         writer.writeCollectionOfObjectValues("partners", this.getPartners());
+        writer.writeObjectValue("templates", this.getTemplates());
     }
     /**
      * Sets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
@@ -104,5 +118,12 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      */
     public void setPartners(@jakarta.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
         this.partners = value;
+    }
+    /**
+     * Sets the templates property value. Represents the base policy in the directory for multi-tenant organization settings.
+     * @param value Value to set for the templates property.
+     */
+    public void setTemplates(@jakarta.annotation.Nullable final PolicyTemplate value) {
+        this.templates = value;
     }
 }

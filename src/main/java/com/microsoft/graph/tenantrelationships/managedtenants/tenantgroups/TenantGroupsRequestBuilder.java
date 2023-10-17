@@ -67,8 +67,8 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantGroups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
-     * @return a CompletableFuture of tenantGroupCollectionResponse
+     * Get a list of the tenantGroup objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TenantGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * Get a list of the tenantGroup objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantGroupCollectionResponse
+     * @return a CompletableFuture of TenantGroupCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managedtenant-list-tenantgroups?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to tenantGroups for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of tenantGroup
+     * @return a CompletableFuture of TenantGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantGroup> post(@jakarta.annotation.Nonnull final TenantGroup body) {
@@ -102,7 +102,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to tenantGroups for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantGroup
+     * @return a CompletableFuture of TenantGroup
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TenantGroup> post(@jakarta.annotation.Nonnull final TenantGroup body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TenantGroup::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * Get a list of the tenantGroup objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,7 +122,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * Get a list of the tenantGroup objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -177,7 +177,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tenantGroupsRequestBuilder
+     * @return a TenantGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TenantGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -185,7 +185,7 @@ public class TenantGroupsRequestBuilder extends BaseRequestBuilder {
         return new TenantGroupsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the tenantGroup objects and their properties.
+     * Get a list of the tenantGroup objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

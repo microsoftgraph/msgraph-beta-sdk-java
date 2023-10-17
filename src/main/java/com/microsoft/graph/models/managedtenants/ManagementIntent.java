@@ -22,7 +22,7 @@ public class ManagementIntent extends Entity implements Parsable {
      */
     private java.util.List<ManagementTemplateDetailedInfo> managementTemplates;
     /**
-     * Instantiates a new managementIntent and sets the default values.
+     * Instantiates a new ManagementIntent and sets the default values.
      */
     public ManagementIntent() {
         super();
@@ -30,7 +30,7 @@ public class ManagementIntent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementIntent
+     * @return a ManagementIntent
      */
     @jakarta.annotation.Nonnull
     public static ManagementIntent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the management intent. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the isGlobal property value. A flag indicating whether the management intent is global. Required. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsGlobal() {
@@ -67,7 +67,7 @@ public class ManagementIntent extends Entity implements Parsable {
     }
     /**
      * Gets the managementTemplates property value. The collection of management templates associated with the management intent. Optional. Read-only.
-     * @return a managementTemplateDetailedInfo
+     * @return a java.util.List<ManagementTemplateDetailedInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateDetailedInfo> getManagementTemplates() {

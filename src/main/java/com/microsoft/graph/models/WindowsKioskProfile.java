@@ -34,7 +34,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<WindowsKioskUser> userAccountsConfiguration;
     /**
-     * Instantiates a new windowsKioskProfile and sets the default values.
+     * Instantiates a new WindowsKioskProfile and sets the default values.
      */
     public WindowsKioskProfile() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskProfile
+     * @return a WindowsKioskProfile
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
         return new WindowsKioskProfile();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appConfiguration property value. The app base class used to identify the application info for the kiosk configuration
-     * @return a windowsKioskAppConfiguration
+     * @return a WindowsKioskAppConfiguration
      */
     @jakarta.annotation.Nullable
     public WindowsKioskAppConfiguration getAppConfiguration() {
@@ -81,7 +81,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the profileId property value. Key of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileId() {
@@ -97,7 +97,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {
@@ -105,7 +105,7 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userAccountsConfiguration property value. The user accounts that will be locked to this kiosk configuration. This collection can contain a maximum of 100 elements.
-     * @return a windowsKioskUser
+     * @return a java.util.List<WindowsKioskUser>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsKioskUser> getUserAccountsConfiguration() {
@@ -125,8 +125,8 @@ public class WindowsKioskProfile implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

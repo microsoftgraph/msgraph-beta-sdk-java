@@ -37,26 +37,26 @@ public class RequestSignupUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action requestSignupUrl
      * @param body The request body
-     * @return a CompletableFuture of requestSignupUrlResponse
+     * @return a CompletableFuture of RequestSignupUrlPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RequestSignupUrlResponse> post(@jakarta.annotation.Nonnull final RequestSignupUrlPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<RequestSignupUrlPostResponse> post(@jakarta.annotation.Nonnull final RequestSignupUrlPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action requestSignupUrl
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of requestSignupUrlResponse
+     * @return a CompletableFuture of RequestSignupUrlPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RequestSignupUrlResponse> post(@jakarta.annotation.Nonnull final RequestSignupUrlPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<RequestSignupUrlPostResponse> post(@jakarta.annotation.Nonnull final RequestSignupUrlPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RequestSignupUrlResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, RequestSignupUrlPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action requestSignupUrl
@@ -93,7 +93,7 @@ public class RequestSignupUrlRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a requestSignupUrlRequestBuilder
+     * @return a RequestSignupUrlRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RequestSignupUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

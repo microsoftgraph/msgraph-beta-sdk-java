@@ -13,7 +13,7 @@ public class CloudPcDeviceImageCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<CloudPcDeviceImage> value;
     /**
-     * Instantiates a new cloudPcDeviceImageCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcDeviceImageCollectionResponse and sets the default values.
      */
     public CloudPcDeviceImageCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CloudPcDeviceImageCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDeviceImageCollectionResponse
+     * @return a CloudPcDeviceImageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDeviceImageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CloudPcDeviceImageCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcDeviceImage
+     * @return a java.util.List<CloudPcDeviceImage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcDeviceImage> getValue() {

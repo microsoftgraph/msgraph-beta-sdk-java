@@ -14,7 +14,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The defaultLanguage property
+     * The default language for the end user notification.
      */
     private String defaultLanguage;
     /**
@@ -26,7 +26,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new baseEndUserNotification and sets the default values.
+     * Instantiates a new BaseEndUserNotification and sets the default values.
      */
     public BaseEndUserNotification() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a baseEndUserNotification
+     * @return a BaseEndUserNotification
      */
     @jakarta.annotation.Nonnull
     public static BaseEndUserNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         return new BaseEndUserNotification();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,8 +59,8 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the defaultLanguage property value. The defaultLanguage property
-     * @return a string
+     * Gets the defaultLanguage property value. The default language for the end user notification.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
@@ -68,7 +68,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the endUserNotification property value. The endUserNotification property
-     * @return a endUserNotification
+     * @return a EndUserNotification
      */
     @jakarta.annotation.Nullable
     public EndUserNotification getEndUserNotification() {
@@ -88,7 +88,7 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -106,14 +106,14 @@ public class BaseEndUserNotification implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the defaultLanguage property value. The defaultLanguage property
+     * Sets the defaultLanguage property value. The default language for the end user notification.
      * @param value Value to set for the defaultLanguage property.
      */
     public void setDefaultLanguage(@jakarta.annotation.Nullable final String value) {

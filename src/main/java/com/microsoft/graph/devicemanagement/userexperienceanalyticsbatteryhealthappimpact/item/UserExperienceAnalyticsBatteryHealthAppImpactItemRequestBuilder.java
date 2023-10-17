@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder ext
     }
     /**
      * User Experience Analytics Battery Health App Impact
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthAppImpact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthAppImpact> get() {
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder ext
     /**
      * User Experience Analytics Battery Health App Impact
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthAppImpact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthAppImpact> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder ext
     /**
      * Update the navigation property userExperienceAnalyticsBatteryHealthAppImpact in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthAppImpact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthAppImpact> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthAppImpact body) {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpactItemRequestBuilder ext
      * Update the navigation property userExperienceAnalyticsBatteryHealthAppImpact in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a CompletableFuture of UserExperienceAnalyticsBatteryHealthAppImpact
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsBatteryHealthAppImpact> patch(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthAppImpact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

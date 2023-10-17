@@ -13,7 +13,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      */
     private String description;
     /**
-     * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
+     * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
      */
     private String displayName;
     /**
@@ -21,7 +21,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      */
     private String howToPrevent;
     /**
-     * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
+     * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
      */
     private Boolean isConfigurable;
     /**
@@ -49,7 +49,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
      */
     private AlertSeverity severityLevel;
     /**
-     * Instantiates a new unifiedRoleManagementAlertDefinition and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlertDefinition and sets the default values.
      */
     public UnifiedRoleManagementAlertDefinition() {
         super();
@@ -57,7 +57,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlertDefinition
+     * @return a UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,15 +66,15 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the description property value. The description of the alert.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
     /**
-     * Gets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
-     * @return a string
+     * Gets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -101,15 +101,15 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the howToPrevent property value. Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHowToPrevent() {
         return this.howToPrevent;
     }
     /**
-     * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
-     * @return a boolean
+     * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsConfigurable() {
@@ -117,7 +117,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the isRemediatable property value. true if the alert can be remediated, and false otherwise.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemediatable() {
@@ -125,7 +125,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMitigationSteps() {
@@ -133,7 +133,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the scopeId property value. The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
@@ -141,7 +141,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
@@ -149,7 +149,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the securityImpact property value. Security impact of the alert. For example, it could be information leaks or unauthorized access.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityImpact() {
@@ -157,7 +157,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
     }
     /**
      * Gets the severityLevel property value. Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
-     * @return a alertSeverity
+     * @return a AlertSeverity
      */
     @jakarta.annotation.Nullable
     public AlertSeverity getSeverityLevel() {
@@ -189,7 +189,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         this.description = value;
     }
     /**
-     * Sets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
+     * Sets the displayName property value. The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Microsoft Entra admin center.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -203,7 +203,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         this.howToPrevent = value;
     }
     /**
-     * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
+     * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Azure AD Premium P2' can't be configured, because the criteria are restricted.
      * @param value Value to set for the isConfigurable property.
      */
     public void setIsConfigurable(@jakarta.annotation.Nullable final Boolean value) {

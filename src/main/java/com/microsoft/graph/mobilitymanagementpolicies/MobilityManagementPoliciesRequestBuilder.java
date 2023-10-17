@@ -60,7 +60,7 @@ public class MobilityManagementPoliciesRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Get entities from mobilityManagementPolicies
-     * @return a CompletableFuture of mobilityManagementPolicyCollectionResponse
+     * @return a CompletableFuture of MobilityManagementPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class MobilityManagementPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Get entities from mobilityManagementPolicies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicyCollectionResponse
+     * @return a CompletableFuture of MobilityManagementPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class MobilityManagementPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Add new entity to mobilityManagementPolicies
      * @param body The request body
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> post(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
@@ -92,7 +92,7 @@ public class MobilityManagementPoliciesRequestBuilder extends BaseRequestBuilder
      * Add new entity to mobilityManagementPolicies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of mobilityManagementPolicy
+     * @return a CompletableFuture of MobilityManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MobilityManagementPolicy> post(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class MobilityManagementPoliciesRequestBuilder extends BaseRequestBuilder
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a mobilityManagementPoliciesRequestBuilder
+     * @return a MobilityManagementPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MobilityManagementPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

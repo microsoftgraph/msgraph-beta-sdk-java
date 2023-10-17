@@ -73,7 +73,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder extends BaseRequ
     }
     /**
      * Get deployments from tenantRelationships
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a CompletableFuture of ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> get() {
@@ -82,7 +82,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder extends BaseRequ
     /**
      * Get deployments from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a CompletableFuture of ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder extends BaseRequ
     /**
      * Update the navigation property deployments in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a CompletableFuture of ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> patch(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body) {
@@ -105,7 +105,7 @@ public class ManagementTemplateStepDeploymentItemRequestBuilder extends BaseRequ
      * Update the navigation property deployments in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepDeployment
+     * @return a CompletableFuture of ManagementTemplateStepDeployment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepDeployment> patch(@jakarta.annotation.Nonnull final ManagementTemplateStepDeployment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

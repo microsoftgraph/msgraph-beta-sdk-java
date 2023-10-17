@@ -46,7 +46,7 @@ public class GraphIosVppAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the items of type microsoft.graph.iosVppApp in the microsoft.graph.mobileApp collection
-     * @return a CompletableFuture of iosVppAppCollectionResponse
+     * @return a CompletableFuture of IosVppAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosVppAppCollectionResponse> get() {
@@ -55,7 +55,7 @@ public class GraphIosVppAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.iosVppApp in the microsoft.graph.mobileApp collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosVppAppCollectionResponse
+     * @return a CompletableFuture of IosVppAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IosVppAppCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -97,7 +97,7 @@ public class GraphIosVppAppRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphIosVppAppRequestBuilder
+     * @return a GraphIosVppAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphIosVppAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

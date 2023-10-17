@@ -53,7 +53,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/registration{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -74,8 +74,8 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting.
-     * @return a CompletableFuture of meetingRegistration
+     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,9 +83,9 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistration
+     * @return a CompletableFuture of MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/externalmeetingregistration-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,9 +97,9 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MeetingRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of meetingRegistration
+     * @return a CompletableFuture of MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -107,10 +107,10 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of meetingRegistration
+     * @return a CompletableFuture of MeetingRegistration
      * @see <a href="https://learn.microsoft.com/graph/api/meetingregistration-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, MeetingRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+     * Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -150,7 +150,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer.
+     * Update the details of a meetingRegistration object assciated with an onlineMeeting on behalf of the organizer. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -213,7 +213,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a registrationRequestBuilder
+     * @return a RegistrationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegistrationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -227,7 +227,7 @@ public class RegistrationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the externalMeetingRegistration details associated with an onlineMeeting.
+     * Get the externalMeetingRegistration details associated with an onlineMeeting. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

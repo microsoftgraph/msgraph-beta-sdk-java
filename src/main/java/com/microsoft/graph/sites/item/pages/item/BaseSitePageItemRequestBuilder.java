@@ -72,8 +72,8 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
-     * @return a CompletableFuture of baseSitePage
+     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
+     * @return a CompletableFuture of BaseSitePage
      * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,9 +81,9 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
+     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of baseSitePage
+     * @return a CompletableFuture of BaseSitePage
      * @see <a href="https://learn.microsoft.com/graph/api/basesitepage-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property pages in sites
      * @param body The request body
-     * @return a CompletableFuture of baseSitePage
+     * @return a CompletableFuture of BaseSitePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseSitePage> patch(@jakarta.annotation.Nonnull final BaseSitePage body) {
@@ -107,7 +107,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property pages in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of baseSitePage
+     * @return a CompletableFuture of BaseSitePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<BaseSitePage> patch(@jakarta.annotation.Nonnull final BaseSitePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
+     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
+     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -223,7 +223,7 @@ public class BaseSitePageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the metadata for a [baseSitePage][] in the site pages [list][] in a [site][].
+     * Get the metadata for a baseSitePage][] in the site pages [list][] in a [site][]. This API is available in the following [national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -60,7 +60,7 @@ public class AppScopesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
-     * @return a CompletableFuture of appScopeCollectionResponse
+     * @return a CompletableFuture of AppScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScopeCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only collection with details of the app specific scopes when the assignment scopes are app specific. Containment entity. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appScopeCollectionResponse
+     * @return a CompletableFuture of AppScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScopeCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to appScopes for roleManagement
      * @param body The request body
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> post(@jakarta.annotation.Nonnull final AppScope body) {
@@ -92,7 +92,7 @@ public class AppScopesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to appScopes for roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of appScope
+     * @return a CompletableFuture of AppScope
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppScope> post(@jakarta.annotation.Nonnull final AppScope body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AppScopesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a appScopesRequestBuilder
+     * @return a AppScopesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AppScopesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

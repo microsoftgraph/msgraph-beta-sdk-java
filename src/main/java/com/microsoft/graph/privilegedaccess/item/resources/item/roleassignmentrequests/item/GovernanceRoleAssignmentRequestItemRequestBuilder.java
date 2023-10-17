@@ -97,7 +97,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     }
     /**
      * The collection of role assignment requests for the resource.
-     * @return a CompletableFuture of governanceRoleAssignmentRequest
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> get() {
@@ -106,7 +106,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * The collection of role assignment requests for the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignmentRequest
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -119,7 +119,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
     /**
      * Update the navigation property roleAssignmentRequests in privilegedAccess
      * @param body The request body
-     * @return a CompletableFuture of governanceRoleAssignmentRequest
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body) {
@@ -129,7 +129,7 @@ public class GovernanceRoleAssignmentRequestItemRequestBuilder extends BaseReque
      * Update the navigation property roleAssignmentRequests in privilegedAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of governanceRoleAssignmentRequest
+     * @return a CompletableFuture of GovernanceRoleAssignmentRequest
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GovernanceRoleAssignmentRequest> patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignmentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

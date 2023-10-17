@@ -35,7 +35,7 @@ public class ResumeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/resume", rawUrl);
     }
     /**
-     * Resume the sync of a specific school data synchronization profile in the tenant.
+     * Resume the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-resume?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class ResumeRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Resume the sync of a specific school data synchronization profile in the tenant.
+     * Resume the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-resume?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class ResumeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Resume the sync of a specific school data synchronization profile in the tenant.
+     * Resume the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class ResumeRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Resume the sync of a specific school data synchronization profile in the tenant.
+     * Resume the sync of a specific school data synchronization profile in the tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -85,7 +85,7 @@ public class ResumeRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resumeRequestBuilder
+     * @return a ResumeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResumeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

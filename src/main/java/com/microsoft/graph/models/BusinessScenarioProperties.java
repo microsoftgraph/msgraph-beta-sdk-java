@@ -38,7 +38,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
      */
     private String webUrl;
     /**
-     * Instantiates a new businessScenarioProperties and sets the default values.
+     * Instantiates a new BusinessScenarioProperties and sets the default values.
      */
     public BusinessScenarioProperties() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessScenarioProperties
+     * @return a BusinessScenarioProperties
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenarioProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
         return new BusinessScenarioProperties();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the externalBucketId property value. The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalBucketId() {
@@ -71,7 +71,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the externalContextId property value. The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
@@ -79,7 +79,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the externalObjectId property value. Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {
@@ -87,7 +87,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the externalObjectVersion property value. Application-specific version of the task. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectVersion() {
@@ -110,7 +110,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the webUrl property value. The URL to the application-specific experience for this task. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
@@ -139,8 +139,8 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

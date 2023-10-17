@@ -56,8 +56,8 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get the tenant-level settings for Microsoft 365 reports.
-     * @return a CompletableFuture of adminReportSettings
+     * Get the tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the tenant-level settings for Microsoft 365 reports.
+     * Get the tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AdminReportSettings::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update tenant-level settings for Microsoft 365 reports.
+     * Update tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -89,10 +89,10 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update tenant-level settings for Microsoft 365 reports.
+     * Update tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of adminReportSettings
+     * @return a CompletableFuture of AdminReportSettings
      * @see <a href="https://learn.microsoft.com/graph/api/adminreportsettings-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the tenant-level settings for Microsoft 365 reports.
+     * Get the tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the tenant-level settings for Microsoft 365 reports.
+     * Get the tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -161,7 +161,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update tenant-level settings for Microsoft 365 reports.
+     * Update tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +170,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update tenant-level settings for Microsoft 365 reports.
+     * Update tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -195,7 +195,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportSettingsRequestBuilder
+     * @return a ReportSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +209,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the tenant-level settings for Microsoft 365 reports.
+     * Get the tenant-level settings for Microsoft 365 reports. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

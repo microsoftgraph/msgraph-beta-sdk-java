@@ -81,7 +81,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     }
     /**
      * Get managementTemplateStepVersions from tenantRelationships
-     * @return a CompletableFuture of managementTemplateStepVersion
+     * @return a CompletableFuture of ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersion> get() {
@@ -90,7 +90,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Get managementTemplateStepVersions from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepVersion
+     * @return a CompletableFuture of ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersion> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
     /**
      * Update the navigation property managementTemplateStepVersions in tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of managementTemplateStepVersion
+     * @return a CompletableFuture of ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersion> patch(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body) {
@@ -113,7 +113,7 @@ public class ManagementTemplateStepVersionItemRequestBuilder extends BaseRequest
      * Update the navigation property managementTemplateStepVersions in tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepVersion
+     * @return a CompletableFuture of ManagementTemplateStepVersion
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepVersion> patch(@jakarta.annotation.Nonnull final ManagementTemplateStepVersion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

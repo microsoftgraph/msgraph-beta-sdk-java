@@ -38,7 +38,7 @@ public class SelfActivateRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action selfActivate
      * @param body The request body
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a CompletableFuture of PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nonnull final SelfActivatePostRequestBody body) {
@@ -48,7 +48,7 @@ public class SelfActivateRequestBuilder extends BaseRequestBuilder {
      * Invoke action selfActivate
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a CompletableFuture of PrivilegedRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nonnull final SelfActivatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -94,7 +94,7 @@ public class SelfActivateRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a selfActivateRequestBuilder
+     * @return a SelfActivateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SelfActivateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

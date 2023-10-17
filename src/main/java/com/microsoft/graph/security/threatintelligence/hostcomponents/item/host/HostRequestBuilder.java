@@ -37,17 +37,17 @@ public class HostRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hostComponents/{hostComponent%2Did}/host{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
-     * @return a CompletableFuture of host
+     * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get() {
         return get(null);
     }
     /**
-     * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+     * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of host
+     * @return a CompletableFuture of Host
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Host> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +58,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Host::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+     * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+     * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -89,7 +89,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostRequestBuilder
+     * @return a HostRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -97,7 +97,7 @@ public class HostRequestBuilder extends BaseRequestBuilder {
         return new HostRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The host related to this component. This is a reverse navigation property. When navigating to components from a host, this should be assumed to be a return reference.
+     * The host related to this component. This is a reverse navigation property. When you navigate to components from a host, this should be assumed to be a return reference.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

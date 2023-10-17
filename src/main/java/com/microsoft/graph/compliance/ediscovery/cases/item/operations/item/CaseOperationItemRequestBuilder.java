@@ -74,7 +74,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Returns a list of case operation objects for this case. Nullable.
-     * @return a CompletableFuture of caseOperation
+     * @return a CompletableFuture of CaseOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -86,7 +86,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a list of case operation objects for this case. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of caseOperation
+     * @return a CompletableFuture of CaseOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -102,7 +102,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property operations in compliance
      * @param body The request body
-     * @return a CompletableFuture of caseOperation
+     * @return a CompletableFuture of CaseOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -115,7 +115,7 @@ public class CaseOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property operations in compliance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of caseOperation
+     * @return a CompletableFuture of CaseOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

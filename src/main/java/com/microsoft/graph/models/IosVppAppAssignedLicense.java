@@ -28,7 +28,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new iosVppAppAssignedLicense and sets the default values.
+     * Instantiates a new IosVppAppAssignedLicense and sets the default values.
      */
     public IosVppAppAssignedLicense() {
         super();
@@ -36,7 +36,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosVppAppAssignedLicense
+     * @return a IosVppAppAssignedLicense
      */
     @jakarta.annotation.Nonnull
     public static IosVppAppAssignedLicense createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userEmailAddress property value. The user email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmailAddress() {
@@ -74,7 +74,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The user ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -82,7 +82,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The user name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -90,7 +90,7 @@ public class IosVppAppAssignedLicense extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

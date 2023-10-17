@@ -60,7 +60,7 @@ public class HostSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get hostSecurityProfiles from security
-     * @return a CompletableFuture of hostSecurityProfileCollectionResponse
+     * @return a CompletableFuture of HostSecurityProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class HostSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get hostSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSecurityProfileCollectionResponse
+     * @return a CompletableFuture of HostSecurityProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class HostSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to hostSecurityProfiles for security
      * @param body The request body
-     * @return a CompletableFuture of hostSecurityProfile
+     * @return a CompletableFuture of HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfile> post(@jakarta.annotation.Nonnull final HostSecurityProfile body) {
@@ -92,7 +92,7 @@ public class HostSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to hostSecurityProfiles for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostSecurityProfile
+     * @return a CompletableFuture of HostSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostSecurityProfile> post(@jakarta.annotation.Nonnull final HostSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class HostSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a hostSecurityProfilesRequestBuilder
+     * @return a HostSecurityProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public HostSecurityProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

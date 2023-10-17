@@ -60,7 +60,7 @@ public class RemoteActionAuditsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device remote action audits with the tenant.
-     * @return a CompletableFuture of remoteActionAuditCollectionResponse
+     * @return a CompletableFuture of RemoteActionAuditCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAuditCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class RemoteActionAuditsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device remote action audits with the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteActionAuditCollectionResponse
+     * @return a CompletableFuture of RemoteActionAuditCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAuditCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class RemoteActionAuditsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to remoteActionAudits for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of remoteActionAudit
+     * @return a CompletableFuture of RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAudit> post(@jakarta.annotation.Nonnull final RemoteActionAudit body) {
@@ -92,7 +92,7 @@ public class RemoteActionAuditsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to remoteActionAudits for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of remoteActionAudit
+     * @return a CompletableFuture of RemoteActionAudit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RemoteActionAudit> post(@jakarta.annotation.Nonnull final RemoteActionAudit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class RemoteActionAuditsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a remoteActionAuditsRequestBuilder
+     * @return a RemoteActionAuditsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RemoteActionAuditsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

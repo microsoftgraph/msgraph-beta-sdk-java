@@ -53,7 +53,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -74,8 +74,8 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
-     * @return a CompletableFuture of inboundFlow
+     * Read the properties and relationships of an inboundFileFlow object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of InboundFlow
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -83,9 +83,9 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundFlow
+     * @return a CompletableFuture of InboundFlow
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -97,21 +97,21 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InboundFlow::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of InboundFlow
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> patch(@jakarta.annotation.Nonnull final InboundFlow body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of inboundFlow
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundflow-update?view=graph-rest-1.0">Find more info here</a>
+     * @return a CompletableFuture of InboundFlow
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-inboundfileflow-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InboundFlow> patch(@jakarta.annotation.Nonnull final InboundFlow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -123,7 +123,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, InboundFlow::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an inboundFileFlow object.
+     * Delete an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -150,7 +150,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -158,7 +158,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -179,7 +179,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -188,7 +188,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an inboundFlow object.
+     * Update the properties of an inboundFileFlow object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -227,7 +227,7 @@ public class InboundFlowItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of an inboundFileFlow object.
+     * Read the properties and relationships of an inboundFileFlow object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

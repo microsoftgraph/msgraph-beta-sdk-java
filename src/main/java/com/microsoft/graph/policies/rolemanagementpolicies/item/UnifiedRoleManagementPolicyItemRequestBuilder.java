@@ -73,7 +73,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Represents the role management policies.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> get() {
@@ -82,7 +82,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     /**
      * Represents the role management policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
     /**
      * Update the navigation property roleManagementPolicies in policies
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicy body) {
@@ -105,7 +105,7 @@ public class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBu
      * Update the navigation property roleManagementPolicies in policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementPolicy
+     * @return a CompletableFuture of UnifiedRoleManagementPolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementPolicy> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

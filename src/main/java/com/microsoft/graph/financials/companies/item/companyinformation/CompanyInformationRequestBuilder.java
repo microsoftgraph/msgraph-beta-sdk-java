@@ -60,7 +60,7 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get companyInformation from financials
-     * @return a CompletableFuture of companyInformationCollectionResponse
+     * @return a CompletableFuture of CompanyInformationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanyInformationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder {
     /**
      * Get companyInformation from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companyInformationCollectionResponse
+     * @return a CompletableFuture of CompanyInformationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanyInformationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class CompanyInformationRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a companyInformationRequestBuilder
+     * @return a CompanyInformationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CompanyInformationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

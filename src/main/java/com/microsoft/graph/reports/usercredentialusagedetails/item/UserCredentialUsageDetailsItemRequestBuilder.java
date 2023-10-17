@@ -57,7 +57,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder extends BaseRequestBui
     }
     /**
      * Represents the self-service password reset (SSPR) usage for a given tenant.
-     * @return a CompletableFuture of userCredentialUsageDetails
+     * @return a CompletableFuture of UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCredentialUsageDetails> get() {
@@ -66,7 +66,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder extends BaseRequestBui
     /**
      * Represents the self-service password reset (SSPR) usage for a given tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCredentialUsageDetails
+     * @return a CompletableFuture of UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCredentialUsageDetails> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property userCredentialUsageDetails in reports
      * @param body The request body
-     * @return a CompletableFuture of userCredentialUsageDetails
+     * @return a CompletableFuture of UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCredentialUsageDetails> patch(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body) {
@@ -89,7 +89,7 @@ public class UserCredentialUsageDetailsItemRequestBuilder extends BaseRequestBui
      * Update the navigation property userCredentialUsageDetails in reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userCredentialUsageDetails
+     * @return a CompletableFuture of UserCredentialUsageDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserCredentialUsageDetails> patch(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

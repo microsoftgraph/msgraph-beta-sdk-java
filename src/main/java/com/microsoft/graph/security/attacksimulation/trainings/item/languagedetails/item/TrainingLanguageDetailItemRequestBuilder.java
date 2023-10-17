@@ -56,17 +56,17 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get languageDetails from security
-     * @return a CompletableFuture of trainingLanguageDetail
+     * Language specific details on a training.
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> get() {
         return get(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     /**
      * Update the navigation property languageDetails in security
      * @param body The request body
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> patch(@jakarta.annotation.Nonnull final TrainingLanguageDetail body) {
@@ -89,7 +89,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property languageDetails in security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of trainingLanguageDetail
+     * @return a CompletableFuture of TrainingLanguageDetail
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<TrainingLanguageDetail> patch(@jakarta.annotation.Nonnull final TrainingLanguageDetail body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -128,7 +128,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -205,7 +205,7 @@ public class TrainingLanguageDetailItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get languageDetails from security
+     * Language specific details on a training.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

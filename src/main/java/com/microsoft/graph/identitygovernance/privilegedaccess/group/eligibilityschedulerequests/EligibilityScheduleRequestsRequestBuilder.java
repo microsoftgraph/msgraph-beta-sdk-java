@@ -62,7 +62,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -70,8 +70,8 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequestCollectionResponse
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequestCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,9 +93,9 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupEligibilityScheduleRequestCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
+     * Create a new privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -103,10 +103,10 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return post(body, null);
     }
     /**
-     * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
+     * Create a new privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupEligibilityScheduleRequest
+     * @return a CompletableFuture of PrivilegedAccessGroupEligibilityScheduleRequest
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-post-eligibilityschedulerequests?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupEligibilityScheduleRequest::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -127,7 +127,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -148,7 +148,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
+     * Create a new privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -157,7 +157,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new privilegedAccessGroupEligibilityScheduleRequest object.
+     * Create a new privilegedAccessGroupEligibilityScheduleRequest object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -182,7 +182,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a eligibilityScheduleRequestsRequestBuilder
+     * @return a EligibilityScheduleRequestsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EligibilityScheduleRequestsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -190,7 +190,7 @@ public class EligibilityScheduleRequestsRequestBuilder extends BaseRequestBuilde
         return new EligibilityScheduleRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties.
+     * Get a list of the privilegedAccessGroupEligibilityScheduleRequest objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

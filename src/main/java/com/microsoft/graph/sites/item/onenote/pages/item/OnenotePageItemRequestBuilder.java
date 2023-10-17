@@ -85,7 +85,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete a OneNote page.
+     * Delete a OneNote page. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/page-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete a OneNote page.
+     * Delete a OneNote page. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/page-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -107,7 +107,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> get() {
@@ -116,7 +116,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -129,7 +129,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property pages in sites
      * @param body The request body
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> patch(@jakarta.annotation.Nonnull final OnenotePage body) {
@@ -139,7 +139,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property pages in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of onenotePage
+     * @return a CompletableFuture of OnenotePage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<OnenotePage> patch(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -151,7 +151,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, OnenotePage::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete a OneNote page.
+     * Delete a OneNote page. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +159,7 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a OneNote page.
+     * Delete a OneNote page. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */

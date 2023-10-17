@@ -17,7 +17,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
      */
     private Integer width;
     /**
-     * Instantiates a new horizontalSectionColumn and sets the default values.
+     * Instantiates a new HorizontalSectionColumn and sets the default values.
      */
     public HorizontalSectionColumn() {
         super();
@@ -25,7 +25,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a horizontalSectionColumn
+     * @return a HorizontalSectionColumn
      */
     @jakarta.annotation.Nonnull
     public static HorizontalSectionColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
     }
     /**
      * Gets the webparts property value. The collection of WebParts in this column.
-     * @return a webPart
+     * @return a java.util.List<WebPart>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebparts() {
@@ -53,7 +53,7 @@ public class HorizontalSectionColumn extends Entity implements Parsable {
     }
     /**
      * Gets the width property value. Width of the column. A horizontal section is divided into 12 grids. A column should have a value of 1-12 to represent its range spans. For example, there can be two columns both have a width of 6 in a section.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWidth() {

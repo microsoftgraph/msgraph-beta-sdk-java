@@ -80,7 +80,7 @@ public class RetentionLabel extends Entity implements Parsable {
      */
     private RetentionTrigger retentionTrigger;
     /**
-     * Instantiates a new retentionLabel and sets the default values.
+     * Instantiates a new RetentionLabel and sets the default values.
      */
     public RetentionLabel() {
         super();
@@ -88,7 +88,7 @@ public class RetentionLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a retentionLabel
+     * @return a RetentionLabel
      */
     @jakarta.annotation.Nonnull
     public static RetentionLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -97,7 +97,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the actionAfterRetentionPeriod property value. Specifies the action to take on a document with this label applied during the retention period. The possible values are: none, delete, startDispositionReview, unknownFutureValue.
-     * @return a actionAfterRetentionPeriod
+     * @return a ActionAfterRetentionPeriod
      */
     @jakarta.annotation.Nullable
     public ActionAfterRetentionPeriod getActionAfterRetentionPeriod() {
@@ -105,7 +105,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the behaviorDuringRetentionPeriod property value. Specifies how the behavior of a document with this label should be during the retention period. The possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue.
-     * @return a behaviorDuringRetentionPeriod
+     * @return a BehaviorDuringRetentionPeriod
      */
     @jakarta.annotation.Nullable
     public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
@@ -113,7 +113,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Represents the user who created the retentionLabel.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -129,7 +129,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the defaultRecordBehavior property value. Specifies the locked or unlocked state of a record label when it is created.The possible values are: startLocked, startUnlocked, unknownFutureValue.
-     * @return a defaultRecordBehavior
+     * @return a DefaultRecordBehavior
      */
     @jakarta.annotation.Nullable
     public DefaultRecordBehavior getDefaultRecordBehavior() {
@@ -137,7 +137,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the descriptionForAdmins property value. Provides label information for the admin. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescriptionForAdmins() {
@@ -145,7 +145,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the descriptionForUsers property value. Provides the label information for the user. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescriptionForUsers() {
@@ -153,7 +153,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the descriptors property value. Represents out-of-the-box values that provide more options to improve the manageability and organization of the content you need to label.
-     * @return a filePlanDescriptor
+     * @return a FilePlanDescriptor
      */
     @jakarta.annotation.Nullable
     public FilePlanDescriptor getDescriptors() {
@@ -161,7 +161,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Unique string that defines a label name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -169,7 +169,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the dispositionReviewStages property value. When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
-     * @return a dispositionReviewStage
+     * @return a java.util.List<DispositionReviewStage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DispositionReviewStage> getDispositionReviewStages() {
@@ -203,7 +203,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isInUse property value. Specifies whether the label is currently being used.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInUse() {
@@ -211,7 +211,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the labelToBeApplied property value. Specifies the replacement label to be applied automatically after the retention period of the current label ends.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabelToBeApplied() {
@@ -219,7 +219,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the retentionLabel.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -235,7 +235,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the retentionDuration property value. Specifies the number of days to retain the content.
-     * @return a retentionDuration
+     * @return a RetentionDuration
      */
     @jakarta.annotation.Nullable
     public RetentionDuration getRetentionDuration() {
@@ -243,7 +243,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the retentionEventType property value. Represents the type associated with a retention event.
-     * @return a retentionEventType
+     * @return a RetentionEventType
      */
     @jakarta.annotation.Nullable
     public RetentionEventType getRetentionEventType() {
@@ -251,7 +251,7 @@ public class RetentionLabel extends Entity implements Parsable {
     }
     /**
      * Gets the retentionTrigger property value. Specifies whether the retention duration is calculated from the content creation date, labeled date, or last modification date. The possible values are: dateLabeled, dateCreated, dateModified, dateOfEvent, unknownFutureValue.
-     * @return a retentionTrigger
+     * @return a RetentionTrigger
      */
     @jakarta.annotation.Nullable
     public RetentionTrigger getRetentionTrigger() {

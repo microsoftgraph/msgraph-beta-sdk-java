@@ -13,7 +13,7 @@ public class DeviceCustomAttributeShellScriptCollectionResponse extends BaseColl
      */
     private java.util.List<DeviceCustomAttributeShellScript> value;
     /**
-     * Instantiates a new deviceCustomAttributeShellScriptCollectionResponse and sets the default values.
+     * Instantiates a new DeviceCustomAttributeShellScriptCollectionResponse and sets the default values.
      */
     public DeviceCustomAttributeShellScriptCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceCustomAttributeShellScriptCollectionResponse extends BaseColl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCustomAttributeShellScriptCollectionResponse
+     * @return a DeviceCustomAttributeShellScriptCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceCustomAttributeShellScriptCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceCustomAttributeShellScriptCollectionResponse extends BaseColl
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceCustomAttributeShellScript
+     * @return a java.util.List<DeviceCustomAttributeShellScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCustomAttributeShellScript> getValue() {

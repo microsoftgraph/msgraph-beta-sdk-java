@@ -89,7 +89,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The singleton Android for Work settings entity.
-     * @return a CompletableFuture of androidForWorkSettings
+     * @return a CompletableFuture of AndroidForWorkSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkSettings> get() {
@@ -98,7 +98,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * The singleton Android for Work settings entity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkSettings
+     * @return a CompletableFuture of AndroidForWorkSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkSettings> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property androidForWorkSettings in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of androidForWorkSettings
+     * @return a CompletableFuture of AndroidForWorkSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkSettings> patch(@jakarta.annotation.Nonnull final AndroidForWorkSettings body) {
@@ -121,7 +121,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property androidForWorkSettings in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of androidForWorkSettings
+     * @return a CompletableFuture of AndroidForWorkSettings
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AndroidForWorkSettings> patch(@jakarta.annotation.Nonnull final AndroidForWorkSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -223,7 +223,7 @@ public class AndroidForWorkSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a androidForWorkSettingsRequestBuilder
+     * @return a AndroidForWorkSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AndroidForWorkSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

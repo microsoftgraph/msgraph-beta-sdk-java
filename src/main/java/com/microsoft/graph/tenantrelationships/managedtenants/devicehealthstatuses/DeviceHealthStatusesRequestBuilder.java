@@ -60,7 +60,7 @@ public class DeviceHealthStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get deviceHealthStatuses from tenantRelationships
-     * @return a CompletableFuture of deviceHealthStatusCollectionResponse
+     * @return a CompletableFuture of DeviceHealthStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatusCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceHealthStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get deviceHealthStatuses from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthStatusCollectionResponse
+     * @return a CompletableFuture of DeviceHealthStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceHealthStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceHealthStatuses for tenantRelationships
      * @param body The request body
-     * @return a CompletableFuture of deviceHealthStatus
+     * @return a CompletableFuture of DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatus> post(@jakarta.annotation.Nonnull final DeviceHealthStatus body) {
@@ -92,7 +92,7 @@ public class DeviceHealthStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceHealthStatuses for tenantRelationships
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthStatus
+     * @return a CompletableFuture of DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceHealthStatus> post(@jakarta.annotation.Nonnull final DeviceHealthStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class DeviceHealthStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceHealthStatusesRequestBuilder
+     * @return a DeviceHealthStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceHealthStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

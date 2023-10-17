@@ -29,7 +29,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      */
     private Boolean certifiedApplicationsOnly;
     /**
-     * Instantiates a new servicePrincipalCreationConditionSet and sets the default values.
+     * Instantiates a new ServicePrincipalCreationConditionSet and sets the default values.
      */
     public ServicePrincipalCreationConditionSet() {
         super();
@@ -37,7 +37,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalCreationConditionSet
+     * @return a ServicePrincipalCreationConditionSet
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalCreationConditionSet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     }
     /**
      * Gets the applicationIds property value. The applicationIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationIds() {
@@ -54,7 +54,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     }
     /**
      * Gets the applicationPublisherIds property value. The applicationPublisherIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationPublisherIds() {
@@ -62,7 +62,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     }
     /**
      * Gets the applicationsFromVerifiedPublisherOnly property value. The applicationsFromVerifiedPublisherOnly property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplicationsFromVerifiedPublisherOnly() {
@@ -70,7 +70,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     }
     /**
      * Gets the applicationTenantIds property value. The applicationTenantIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApplicationTenantIds() {
@@ -78,7 +78,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
     }
     /**
      * Gets the certifiedApplicationsOnly property value. The certifiedApplicationsOnly property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCertifiedApplicationsOnly() {

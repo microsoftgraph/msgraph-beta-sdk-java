@@ -44,7 +44,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
      */
     private String type;
     /**
-     * Instantiates a new createLinkPostRequestBody and sets the default values.
+     * Instantiates a new CreateLinkPostRequestBody and sets the default values.
      */
     public CreateLinkPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -52,7 +52,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a createLinkPostRequestBody
+     * @return a CreateLinkPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static CreateLinkPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
         return new CreateLinkPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the password property value. The password property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPassword() {
@@ -101,7 +101,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a driveRecipient
+     * @return a java.util.List<DriveRecipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DriveRecipient> getRecipients() {
@@ -109,7 +109,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRetainInheritedPermissions() {
@@ -117,7 +117,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the scope property value. The scope property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScope() {
@@ -125,7 +125,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the sendNotification property value. The sendNotification property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSendNotification() {
@@ -133,7 +133,7 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -155,8 +155,8 @@ public class CreateLinkPostRequestBody implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

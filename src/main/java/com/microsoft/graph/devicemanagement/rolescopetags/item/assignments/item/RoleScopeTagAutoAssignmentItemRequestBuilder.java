@@ -57,7 +57,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder extends BaseRequestBui
     }
     /**
      * The list of assignments for this Role Scope Tag.
-     * @return a CompletableFuture of roleScopeTagAutoAssignment
+     * @return a CompletableFuture of RoleScopeTagAutoAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTagAutoAssignment> get() {
@@ -66,7 +66,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder extends BaseRequestBui
     /**
      * The list of assignments for this Role Scope Tag.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleScopeTagAutoAssignment
+     * @return a CompletableFuture of RoleScopeTagAutoAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTagAutoAssignment> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder extends BaseRequestBui
     /**
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of roleScopeTagAutoAssignment
+     * @return a CompletableFuture of RoleScopeTagAutoAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTagAutoAssignment> patch(@jakarta.annotation.Nonnull final RoleScopeTagAutoAssignment body) {
@@ -89,7 +89,7 @@ public class RoleScopeTagAutoAssignmentItemRequestBuilder extends BaseRequestBui
      * Update the navigation property assignments in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleScopeTagAutoAssignment
+     * @return a CompletableFuture of RoleScopeTagAutoAssignment
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTagAutoAssignment> patch(@jakarta.annotation.Nonnull final RoleScopeTagAutoAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

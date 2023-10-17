@@ -81,7 +81,7 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get cloudPC from roleManagement
-     * @return a CompletableFuture of rbacApplicationMultiple
+     * @return a CompletableFuture of RbacApplicationMultiple
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> get() {
@@ -90,7 +90,7 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder {
     /**
      * Get cloudPC from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplicationMultiple
+     * @return a CompletableFuture of RbacApplicationMultiple
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +103,7 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property cloudPC in roleManagement
      * @param body The request body
-     * @return a CompletableFuture of rbacApplicationMultiple
+     * @return a CompletableFuture of RbacApplicationMultiple
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> patch(@jakarta.annotation.Nonnull final RbacApplicationMultiple body) {
@@ -113,7 +113,7 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cloudPC in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of rbacApplicationMultiple
+     * @return a CompletableFuture of RbacApplicationMultiple
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RbacApplicationMultiple> patch(@jakarta.annotation.Nonnull final RbacApplicationMultiple body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -215,7 +215,7 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a cloudPCRequestBuilder
+     * @return a CloudPCRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CloudPCRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

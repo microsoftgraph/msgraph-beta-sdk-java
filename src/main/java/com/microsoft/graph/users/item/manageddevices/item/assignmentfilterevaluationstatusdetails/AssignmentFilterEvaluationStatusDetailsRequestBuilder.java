@@ -60,7 +60,7 @@ public class AssignmentFilterEvaluationStatusDetailsRequestBuilder extends BaseR
     }
     /**
      * Managed device mobile app configuration states for this device.
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetailsCollectionResponse
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetailsCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class AssignmentFilterEvaluationStatusDetailsRequestBuilder extends BaseR
     /**
      * Managed device mobile app configuration states for this device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetailsCollectionResponse
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetailsCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetailsCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class AssignmentFilterEvaluationStatusDetailsRequestBuilder extends BaseR
     /**
      * Create new navigation property to assignmentFilterEvaluationStatusDetails for users
      * @param body The request body
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetails
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetails> post(@jakarta.annotation.Nonnull final AssignmentFilterEvaluationStatusDetails body) {
@@ -92,7 +92,7 @@ public class AssignmentFilterEvaluationStatusDetailsRequestBuilder extends BaseR
      * Create new navigation property to assignmentFilterEvaluationStatusDetails for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterEvaluationStatusDetails
+     * @return a CompletableFuture of AssignmentFilterEvaluationStatusDetails
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AssignmentFilterEvaluationStatusDetails> post(@jakarta.annotation.Nonnull final AssignmentFilterEvaluationStatusDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class AssignmentFilterEvaluationStatusDetailsRequestBuilder extends BaseR
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentFilterEvaluationStatusDetailsRequestBuilder
+     * @return a AssignmentFilterEvaluationStatusDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentFilterEvaluationStatusDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

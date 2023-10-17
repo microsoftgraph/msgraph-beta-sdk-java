@@ -14,7 +14,7 @@ public class TenantTagCollectionResponse extends BaseCollectionPaginationCountRe
      */
     private java.util.List<TenantTag> value;
     /**
-     * Instantiates a new tenantTagCollectionResponse and sets the default values.
+     * Instantiates a new TenantTagCollectionResponse and sets the default values.
      */
     public TenantTagCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class TenantTagCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantTagCollectionResponse
+     * @return a TenantTagCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TenantTagCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TenantTagCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a tenantTag
+     * @return a java.util.List<TenantTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TenantTag> getValue() {

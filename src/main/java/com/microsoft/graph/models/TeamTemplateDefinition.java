@@ -58,7 +58,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      */
     private Team teamDefinition;
     /**
-     * Instantiates a new teamTemplateDefinition and sets the default values.
+     * Instantiates a new TeamTemplateDefinition and sets the default values.
      */
     public TeamTemplateDefinition() {
         super();
@@ -66,7 +66,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamTemplateDefinition
+     * @return a TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public static TeamTemplateDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
-     * @return a teamTemplateAudience
+     * @return a TeamTemplateAudience
      */
     @jakarta.annotation.Nullable
     public TeamTemplateAudience getAudience() {
@@ -83,7 +83,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The assigned categories for the team template.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -91,7 +91,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A brief description of the team template as it will appear to the users in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -99,7 +99,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The user defined name of the team template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -128,7 +128,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the iconUrl property value. The icon url for the team template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIconUrl() {
@@ -136,7 +136,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the languageTag property value. Language the template is available in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -144,7 +144,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the user who last modified the team template.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -160,7 +160,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the parentTemplateId property value. The templateId for the team template
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentTemplateId() {
@@ -168,7 +168,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the publisherName property value. The organization which published the team template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
@@ -176,7 +176,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the shortDescription property value. A short-description of the team template as it will appear to the users in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortDescription() {
@@ -184,7 +184,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the teamDefinition property value. Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
-     * @return a team
+     * @return a Team
      */
     @jakarta.annotation.Nullable
     public Team getTeamDefinition() {

@@ -38,7 +38,7 @@ public class CategoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The group policy category associated with the definition.
-     * @return a CompletableFuture of groupPolicyCategory
+     * @return a CompletableFuture of GroupPolicyCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyCategory> get() {
@@ -47,7 +47,7 @@ public class CategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * The group policy category associated with the definition.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyCategory
+     * @return a CompletableFuture of GroupPolicyCategory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyCategory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class CategoryRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a categoryRequestBuilder
+     * @return a CategoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CategoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

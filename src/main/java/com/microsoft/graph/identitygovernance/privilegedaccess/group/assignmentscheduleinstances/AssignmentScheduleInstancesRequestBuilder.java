@@ -62,7 +62,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -70,8 +70,8 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleInstanceCollectionResponse
+     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -79,9 +79,9 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleInstanceCollectionResponse
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleInstanceCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroup-list-assignmentscheduleinstances?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
     /**
      * Create new navigation property to assignmentScheduleInstances for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleInstance
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleInstance> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleInstance body) {
@@ -105,7 +105,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
      * Create new navigation property to assignmentScheduleInstances for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedAccessGroupAssignmentScheduleInstance
+     * @return a CompletableFuture of PrivilegedAccessGroupAssignmentScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PrivilegedAccessGroupAssignmentScheduleInstance> post(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -117,7 +117,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.sendAsync(requestInfo, PrivilegedAccessGroupAssignmentScheduleInstance::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -180,7 +180,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentScheduleInstancesRequestBuilder
+     * @return a AssignmentScheduleInstancesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentScheduleInstancesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -188,7 +188,7 @@ public class AssignmentScheduleInstancesRequestBuilder extends BaseRequestBuilde
         return new AssignmentScheduleInstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties.
+     * Get a list of the privilegedAccessGroupAssignmentScheduleInstance objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

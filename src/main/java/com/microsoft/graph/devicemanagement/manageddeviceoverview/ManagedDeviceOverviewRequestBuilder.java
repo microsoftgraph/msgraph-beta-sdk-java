@@ -38,7 +38,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Device overview
-     * @return a CompletableFuture of managedDeviceOverview
+     * @return a CompletableFuture of ManagedDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> get() {
@@ -47,7 +47,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Device overview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceOverview
+     * @return a CompletableFuture of ManagedDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceOverview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ManagedDeviceOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managedDeviceOverviewRequestBuilder
+     * @return a ManagedDeviceOverviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

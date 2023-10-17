@@ -59,17 +59,19 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/frontLineServicePlans{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
-     * @return a CompletableFuture of cloudPcFrontLineServicePlanCollectionResponse
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
+     * @return a CompletableFuture of CloudPcFrontLineServicePlanCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-frontlineserviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlanCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcFrontLineServicePlanCollectionResponse
+     * @return a CompletableFuture of CloudPcFrontLineServicePlanCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-frontlineserviceplans?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlanCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +84,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to frontLineServicePlans for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> post(@jakarta.annotation.Nonnull final CloudPcFrontLineServicePlan body) {
@@ -92,7 +94,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to frontLineServicePlans for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcFrontLineServicePlan
+     * @return a CompletableFuture of CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcFrontLineServicePlan> post(@jakarta.annotation.Nonnull final CloudPcFrontLineServicePlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +106,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, CloudPcFrontLineServicePlan::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +114,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
@@ -167,7 +169,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a frontLineServicePlansRequestBuilder
+     * @return a FrontLineServicePlansRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FrontLineServicePlansRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +177,7 @@ public class FrontLineServicePlansRequestBuilder extends BaseRequestBuilder {
         return new FrontLineServicePlansRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get frontLineServicePlans from deviceManagement
+     * Get a list of the cloudPcFrontLineServicePlan objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

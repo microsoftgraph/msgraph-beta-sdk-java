@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
      */
     private DeviceManagementConfigurationChoiceSettingValue choiceSettingValue;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingInstance and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingInstance() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingInstance
+     * @return a DeviceManagementConfigurationChoiceSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class DeviceManagementConfigurationChoiceSettingInstance extends DeviceMa
     }
     /**
      * Gets the choiceSettingValue property value. The choiceSettingValue property
-     * @return a deviceManagementConfigurationChoiceSettingValue
+     * @return a DeviceManagementConfigurationChoiceSettingValue
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValue getChoiceSettingValue() {

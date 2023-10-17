@@ -60,7 +60,7 @@ public class ReusableSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of all reusable settings
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinitionCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinitionCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ReusableSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * List of all reusable settings
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinitionCollectionResponse
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinitionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinitionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ReusableSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to reusableSettings for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinition
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinition> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationSettingDefinition body) {
@@ -92,7 +92,7 @@ public class ReusableSettingsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to reusableSettings for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationSettingDefinition
+     * @return a CompletableFuture of DeviceManagementConfigurationSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationSettingDefinition> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationSettingDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ReusableSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reusableSettingsRequestBuilder
+     * @return a ReusableSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReusableSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

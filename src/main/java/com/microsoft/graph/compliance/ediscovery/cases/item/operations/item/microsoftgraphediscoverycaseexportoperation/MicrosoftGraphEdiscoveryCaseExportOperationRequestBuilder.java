@@ -1,5 +1,6 @@
 package com.microsoft.graph.compliance.ediscovery.cases.item.operations.item.microsoftgraphediscoverycaseexportoperation;
 
+import com.microsoft.graph.compliance.ediscovery.cases.item.operations.item.microsoftgraphediscoverycaseexportoperation.reviewset.ReviewSetRequestBuilder;
 import com.microsoft.graph.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +22,16 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the reviewSet property of the microsoft.graph.ediscovery.caseExportOperation entity.
+     * @deprecated
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ReviewSetRequestBuilder reviewSet() {
+        return new ReviewSetRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +49,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     }
     /**
      * Get the item of type microsoft.graph.ediscovery.caseOperation as microsoft.graph.ediscovery.caseExportOperation
-     * @return a CompletableFuture of caseExportOperation
+     * @return a CompletableFuture of CaseExportOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -50,7 +61,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     /**
      * Get the item of type microsoft.graph.ediscovery.caseOperation as microsoft.graph.ediscovery.caseExportOperation
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of caseExportOperation
+     * @return a CompletableFuture of CaseExportOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -101,7 +112,7 @@ public class MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder extends B
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphEdiscoveryCaseExportOperationRequestBuilder
+     * @return a MicrosoftGraphEdiscoveryCaseExportOperationRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */

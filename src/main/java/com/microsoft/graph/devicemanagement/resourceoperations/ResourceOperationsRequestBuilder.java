@@ -60,7 +60,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Resource Operations.
-     * @return a CompletableFuture of resourceOperationCollectionResponse
+     * @return a CompletableFuture of ResourceOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperationCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperationCollectionResponse
+     * @return a CompletableFuture of ResourceOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> post(@jakarta.annotation.Nonnull final ResourceOperation body) {
@@ -92,7 +92,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resourceOperations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> post(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class ResourceOperationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a resourceOperationsRequestBuilder
+     * @return a ResourceOperationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ResourceOperationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

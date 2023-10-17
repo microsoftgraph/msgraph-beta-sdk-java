@@ -65,7 +65,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The list of installation states for this eBook.
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> get() {
@@ -74,7 +74,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
     /**
      * The list of installation states for this eBook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -87,7 +87,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
     /**
      * Update the navigation property userStateSummary in deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> patch(@jakarta.annotation.Nonnull final UserInstallStateSummary body) {
@@ -97,7 +97,7 @@ public class UserInstallStateSummaryItemRequestBuilder extends BaseRequestBuilde
      * Update the navigation property userStateSummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userInstallStateSummary
+     * @return a CompletableFuture of UserInstallStateSummary
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserInstallStateSummary> patch(@jakarta.annotation.Nonnull final UserInstallStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -65,8 +65,8 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/custodians/{custodian%2Did}/unifiedGroupSources{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of the unifiedGroupSource objects and their properties.
-     * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
+     * Get a list of the unifiedGroupSource objects and their properties. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
@@ -77,9 +77,9 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of the unifiedGroupSource objects and their properties.
+     * Get a list of the unifiedGroupSource objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSourceCollectionResponse
+     * @return a CompletableFuture of UnifiedGroupSourceCollectionResponse
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-list-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
@@ -94,9 +94,9 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UnifiedGroupSourceCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new unifiedGroupSource object.
+     * Create a new unifiedGroupSource object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
@@ -107,10 +107,10 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new unifiedGroupSource object.
+     * Create a new unifiedGroupSource object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedGroupSource
+     * @return a CompletableFuture of UnifiedGroupSource
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-post-unifiedgroupsources?view=graph-rest-1.0">Find more info here</a>
@@ -126,7 +126,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, UnifiedGroupSource::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of the unifiedGroupSource objects and their properties.
+     * Get a list of the unifiedGroupSource objects and their properties. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -137,7 +137,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the unifiedGroupSource objects and their properties.
+     * Get a list of the unifiedGroupSource objects and their properties. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -161,7 +161,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new unifiedGroupSource object.
+     * Create a new unifiedGroupSource object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -173,7 +173,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new unifiedGroupSource object.
+     * Create a new unifiedGroupSource object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -201,7 +201,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a unifiedGroupSourcesRequestBuilder
+     * @return a UnifiedGroupSourcesRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -212,7 +212,7 @@ public class UnifiedGroupSourcesRequestBuilder extends BaseRequestBuilder {
         return new UnifiedGroupSourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the unifiedGroupSource objects and their properties.
+     * Get a list of the unifiedGroupSource objects and their properties. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

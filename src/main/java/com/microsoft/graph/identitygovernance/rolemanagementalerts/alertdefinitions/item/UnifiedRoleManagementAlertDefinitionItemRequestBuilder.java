@@ -57,7 +57,7 @@ public class UnifiedRoleManagementAlertDefinitionItemRequestBuilder extends Base
     }
     /**
      * Defines an alert, its impact, and measures to mitigate or prevent it.
-     * @return a CompletableFuture of unifiedRoleManagementAlertDefinition
+     * @return a CompletableFuture of UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertDefinition> get() {
@@ -66,7 +66,7 @@ public class UnifiedRoleManagementAlertDefinitionItemRequestBuilder extends Base
     /**
      * Defines an alert, its impact, and measures to mitigate or prevent it.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertDefinition
+     * @return a CompletableFuture of UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UnifiedRoleManagementAlertDefinitionItemRequestBuilder extends Base
     /**
      * Update the navigation property alertDefinitions in identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of unifiedRoleManagementAlertDefinition
+     * @return a CompletableFuture of UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertDefinition> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlertDefinition body) {
@@ -89,7 +89,7 @@ public class UnifiedRoleManagementAlertDefinitionItemRequestBuilder extends Base
      * Update the navigation property alertDefinitions in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of unifiedRoleManagementAlertDefinition
+     * @return a CompletableFuture of UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UnifiedRoleManagementAlertDefinition> patch(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlertDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {

@@ -59,7 +59,7 @@ public class ManagementTemplateStepsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get managementTemplateSteps from tenantRelationships
-     * @return a CompletableFuture of managementTemplateStepCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateStepCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class ManagementTemplateStepsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get managementTemplateSteps from tenantRelationships
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managementTemplateStepCollectionResponse
+     * @return a CompletableFuture of ManagementTemplateStepCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagementTemplateStepCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -110,7 +110,7 @@ public class ManagementTemplateStepsRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a managementTemplateStepsRequestBuilder
+     * @return a ManagementTemplateStepsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagementTemplateStepsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

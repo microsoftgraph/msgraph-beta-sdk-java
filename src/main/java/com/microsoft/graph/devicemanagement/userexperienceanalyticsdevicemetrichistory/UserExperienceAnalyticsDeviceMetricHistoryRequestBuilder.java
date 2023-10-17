@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
     }
     /**
      * User experience analytics device metric history
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistoryCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistoryCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
     /**
      * User experience analytics device metric history
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistoryCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistoryCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
     /**
      * Create new navigation property to userExperienceAnalyticsDeviceMetricHistory for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body) {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
      * Create new navigation property to userExperienceAnalyticsDeviceMetricHistory for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsMetricHistory
+     * @return a CompletableFuture of UserExperienceAnalyticsMetricHistory
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsMetricHistory> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsMetricHistory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsDeviceMetricHistoryRequestBuilder
+     * @return a UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
