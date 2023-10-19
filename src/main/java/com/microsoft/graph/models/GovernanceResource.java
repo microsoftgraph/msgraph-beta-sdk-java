@@ -114,7 +114,7 @@ public class GovernanceResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definitions.
-     * The collection of role defintions for the resource.
+     * The collection of role definitions for the resource.
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose

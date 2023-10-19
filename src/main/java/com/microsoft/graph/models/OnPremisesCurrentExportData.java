@@ -39,7 +39,7 @@ public class OnPremisesCurrentExportData implements IJsonBackedObject {
 
     /**
      * The Client Machine Name.
-     * The name of the onPremises client machine which ran the last export.
+     * The name of the onPremises client machine that ran the last export.
      */
     @SerializedName(value = "clientMachineName", alternate = {"ClientMachineName"})
     @Expose
@@ -75,7 +75,7 @@ public class OnPremisesCurrentExportData implements IJsonBackedObject {
 
     /**
      * The Service Account.
-     * The name of the dirsync service account which is configured to connect to the directory.
+     * The name of the dirsync service account that is configured to connect to the directory.
      */
     @SerializedName(value = "serviceAccount", alternate = {"ServiceAccount"})
     @Expose
@@ -93,7 +93,7 @@ public class OnPremisesCurrentExportData implements IJsonBackedObject {
 
     /**
      * The Successful Objects Provisioning Count.
-     * The count of objects which were successfully provisioned during the current directory sync export run.
+     * The count of objects that were successfully provisioned during the current directory sync export run.
      */
     @SerializedName(value = "successfulObjectsProvisioningCount", alternate = {"SuccessfulObjectsProvisioningCount"})
     @Expose

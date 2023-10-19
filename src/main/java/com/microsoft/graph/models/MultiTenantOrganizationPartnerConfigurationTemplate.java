@@ -31,7 +31,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The Automatic User Consent Settings.
-     * 
+     * Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      */
     @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
     @Expose
@@ -40,7 +40,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The B2b Collaboration Inbound.
-     * 
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationInbound", alternate = {"B2bCollaborationInbound"})
     @Expose
@@ -49,7 +49,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The B2b Collaboration Outbound.
-     * 
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationOutbound", alternate = {"B2bCollaborationOutbound"})
     @Expose
@@ -58,7 +58,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The B2b Direct Connect Inbound.
-     * 
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectInbound", alternate = {"B2bDirectConnectInbound"})
     @Expose
@@ -67,7 +67,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The B2b Direct Connect Outbound.
-     * 
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectOutbound", alternate = {"B2bDirectConnectOutbound"})
     @Expose
@@ -76,7 +76,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The Inbound Trust.
-     * 
+     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      */
     @SerializedName(value = "inboundTrust", alternate = {"InboundTrust"})
     @Expose
@@ -85,7 +85,7 @@ public class MultiTenantOrganizationPartnerConfigurationTemplate extends Entity 
 
     /**
      * The Template Application Level.
-     * 
+     * Specifies whether the template will be applied to partner configuration settings of certain tenants. The possible values are: none, newPartners, existingPartners, unknownFutureValue. You can also specify multiple values like newPartners,existingPartners (default). none indicates the template isn't applied to any new or existing partner tenants. newPartners indicates the template is applied to new partner tenants. existingPartners indicates the template is applied to existing partner tenants, those who already had partner-specific partner configurations in place.
      */
     @SerializedName(value = "templateApplicationLevel", alternate = {"TemplateApplicationLevel"})
     @Expose

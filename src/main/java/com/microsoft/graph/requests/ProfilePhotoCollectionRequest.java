@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.ProfilePhoto;
 import java.util.Arrays;
 import java.util.EnumSet;

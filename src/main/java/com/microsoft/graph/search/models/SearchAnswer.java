@@ -64,7 +64,7 @@ public class SearchAnswer extends Entity implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * Search answer URL link. When users click this search answer in search results, they will go to this URL.
+     * Search answer URL link. When users click this search answer in search results, they'll go to this URL.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

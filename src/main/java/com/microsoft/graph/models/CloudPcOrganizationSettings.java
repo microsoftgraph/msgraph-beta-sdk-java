@@ -39,7 +39,7 @@ public class CloudPcOrganizationSettings extends Entity implements IJsonBackedOb
 
     /**
      * The Enable Single Sign On.
-     * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      */
     @SerializedName(value = "enableSingleSignOn", alternate = {"EnableSingleSignOn"})
     @Expose

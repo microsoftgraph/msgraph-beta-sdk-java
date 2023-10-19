@@ -89,7 +89,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
 
     /**
      * The Proxy Exclusion List.
-     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
      */
     @SerializedName(value = "proxyExclusionList", alternate = {"ProxyExclusionList"})
     @Expose

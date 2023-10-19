@@ -132,6 +132,24 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
     public String deviceOperatingSystemVersion;
 
     /**
+     * The Filtering Profile Id.
+     * 
+     */
+    @SerializedName(value = "filteringProfileId", alternate = {"FilteringProfileId"})
+    @Expose
+	@Nullable
+    public String filteringProfileId;
+
+    /**
+     * The Filtering Profile Name.
+     * 
+     */
+    @SerializedName(value = "filteringProfileName", alternate = {"FilteringProfileName"})
+    @Expose
+	@Nullable
+    public String filteringProfileName;
+
+    /**
      * The Headers.
      * Represents the headers included in a network request or response. Supports $filter (eq) and $orderby.
      */
@@ -139,6 +157,15 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Headers headers;
+
+    /**
+     * The Initiating Process Name.
+     * 
+     */
+    @SerializedName(value = "initiatingProcessName", alternate = {"InitiatingProcessName"})
+    @Expose
+	@Nullable
+    public String initiatingProcessName;
 
     /**
      * The Network Protocol.
@@ -159,6 +186,15 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
     public String policyId;
 
     /**
+     * The Policy Name.
+     * 
+     */
+    @SerializedName(value = "policyName", alternate = {"PolicyName"})
+    @Expose
+	@Nullable
+    public String policyName;
+
+    /**
      * The Policy Rule Id.
      * Represents a unique identifier assigned to a policy rule. Supports $filter (eq) and $orderby.
      */
@@ -168,6 +204,15 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
     public String policyRuleId;
 
     /**
+     * The Policy Rule Name.
+     * 
+     */
+    @SerializedName(value = "policyRuleName", alternate = {"PolicyRuleName"})
+    @Expose
+	@Nullable
+    public String policyRuleName;
+
+    /**
      * The Received Bytes.
      * Represents the total number of bytes received in a network communication or data transfer. Supports $filter (eq) and $orderby.
      */
@@ -175,6 +220,15 @@ public class NetworkAccessTraffic implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Long receivedBytes;
+
+    /**
+     * The Resource Tenant Id.
+     * 
+     */
+    @SerializedName(value = "resourceTenantId", alternate = {"ResourceTenantId"})
+    @Expose
+	@Nullable
+    public String resourceTenantId;
 
     /**
      * The Sent Bytes.

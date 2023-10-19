@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Managed Device Resize Cloud Pc Parameter Set.
+ * @deprecated The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead
  */
+@Deprecated
 public class ManagedDeviceResizeCloudPcParameterSet {
     /**
      * The target Service Plan Id.

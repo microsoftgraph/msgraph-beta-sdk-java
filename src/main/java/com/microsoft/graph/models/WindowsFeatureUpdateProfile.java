@@ -83,6 +83,15 @@ public class WindowsFeatureUpdateProfile extends Entity implements IJsonBackedOb
     public String featureUpdateVersion;
 
     /**
+     * The Install Latest Windows10On Windows11Ineligible Device.
+     * If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11
+     */
+    @SerializedName(value = "installLatestWindows10OnWindows11IneligibleDevice", alternate = {"InstallLatestWindows10OnWindows11IneligibleDevice"})
+    @Expose
+	@Nullable
+    public Boolean installLatestWindows10OnWindows11IneligibleDevice;
+
+    /**
      * The Last Modified Date Time.
      * The date time that the profile was last modified.
      */

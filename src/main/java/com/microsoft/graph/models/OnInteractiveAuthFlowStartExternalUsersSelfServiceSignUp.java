@@ -27,7 +27,7 @@ public class OnInteractiveAuthFlowStartExternalUsersSelfServiceSignUp extends On
 
     /**
      * The Is Sign Up Allowed.
-     * Optional. Specifes whether the authentication flow includes an option to sign up (create account) as well as sign in. Default value is false meaning only sign in is enabled.
+     * Optional. Specifies whether the authentication flow includes an option to sign up (create account) and sign in. Default value is false meaning only sign in is enabled.
      */
     @SerializedName(value = "isSignUpAllowed", alternate = {"IsSignUpAllowed"})
     @Expose

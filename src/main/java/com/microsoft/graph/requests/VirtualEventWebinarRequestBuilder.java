@@ -98,12 +98,32 @@ public class VirtualEventWebinarRequestBuilder extends BaseRequestBuilder<Virtua
     }
 
     /**
-     * Gets the request builder for VirtualEventRegistration
+     * Gets the request builder for VirtualEventRegistrationConfiguration
      *
-     * @return the VirtualEventRegistrationWithReferenceRequestBuilder instance
+     * @return the VirtualEventRegistrationConfigurationWithReferenceRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.requests.VirtualEventRegistrationWithReferenceRequestBuilder registration() {
-        return new com.microsoft.graph.requests.VirtualEventRegistrationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registration"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrationConfigurationWithReferenceRequestBuilder registrationConfiguration() {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registrationConfiguration"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the VirtualEventRegistration collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventRegistrationCollectionRequestBuilder registrations() {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("registrations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the VirtualEventRegistration item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventRegistrationRequestBuilder registrations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("registrations") + "/" + id, getClient(), null);
     }
 }

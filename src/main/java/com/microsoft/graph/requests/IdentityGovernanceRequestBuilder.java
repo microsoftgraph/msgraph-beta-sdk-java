@@ -108,6 +108,26 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     }
 
     /**
+     * Gets the request builder for PermissionsAnalyticsAggregation
+     *
+     * @return the PermissionsAnalyticsAggregationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PermissionsAnalyticsAggregationRequestBuilder permissionsAnalytics() {
+        return new com.microsoft.graph.requests.PermissionsAnalyticsAggregationRequestBuilder(getRequestUrlWithAdditionalSegment("permissionsAnalytics"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for PermissionsManagement
+     *
+     * @return the PermissionsManagementRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PermissionsManagementRequestBuilder permissionsManagement() {
+        return new com.microsoft.graph.requests.PermissionsManagementRequestBuilder(getRequestUrlWithAdditionalSegment("permissionsManagement"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for PrivilegedAccessRoot
      *
      * @return the PrivilegedAccessRootRequestBuilder instance

@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccountsWithAccess;
+import com.microsoft.graph.requests.AuthorizationSystemCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -24,6 +26,13 @@ import javax.annotation.Nonnull;
  */
 public class EnumeratedAccountsWithAccess extends AccountsWithAccess implements IJsonBackedObject {
 
+
+    /**
+     * The Accounts.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.AuthorizationSystemCollectionPage accounts;
 
 
     /**

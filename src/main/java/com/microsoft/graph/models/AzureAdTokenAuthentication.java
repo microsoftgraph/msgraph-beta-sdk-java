@@ -27,7 +27,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
 
     /**
      * The Resource Id.
-     * The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
+     * The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
      */
     @SerializedName(value = "resourceId", alternate = {"ResourceId"})
     @Expose

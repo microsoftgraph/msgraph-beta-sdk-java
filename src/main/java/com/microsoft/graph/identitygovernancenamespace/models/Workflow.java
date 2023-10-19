@@ -49,7 +49,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Next Schedule Run Date Time.
-     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
+     * The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderby.
      */
     @SerializedName(value = "nextScheduleRunDateTime", alternate = {"NextScheduleRunDateTime"})
     @Expose
@@ -67,7 +67,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Execution Scope.
-     * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * The unique identifier of the Microsoft Entra identity that last modified the workflow object.
      */
 	@Nullable
     public com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionPage executionScope;

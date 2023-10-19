@@ -187,6 +187,15 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
     public RecommendationType recommendationType;
 
     /**
+     * The Release Type.
+     * The current release type of the recommendation. The possible values are: preview, generallyAvailable, unknownFutureValue.
+     */
+    @SerializedName(value = "releaseType", alternate = {"ReleaseType"})
+    @Expose
+	@Nullable
+    public String releaseType;
+
+    /**
      * The Remediation Impact.
      * Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      */

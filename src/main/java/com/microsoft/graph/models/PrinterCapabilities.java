@@ -63,7 +63,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Collation.
-     * True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+     * True if the printer supports collating when printing multiple copies of a multi-page document; false otherwise.
      */
     @SerializedName(value = "collation", alternate = {"Collation"})
     @Expose
@@ -81,7 +81,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Content Types.
-     * A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+     * A list of supported content (MIME) types that the printer supports. It isn't guaranteed that the Universal Print service supports printing all of these MIME types.
      */
     @SerializedName(value = "contentTypes", alternate = {"ContentTypes"})
     @Expose
@@ -182,7 +182,7 @@ public class PrinterCapabilities implements IJsonBackedObject {
 
     /**
      * The Media Colors.
-     * The media (i.e., paper) colors supported by the printer.
+     * The media (that is, paper) colors supported by the printer.
      */
     @SerializedName(value = "mediaColors", alternate = {"MediaColors"})
     @Expose

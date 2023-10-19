@@ -41,7 +41,7 @@ public class KeyCredentialConfiguration implements IJsonBackedObject {
 
     /**
      * The Certificate Based Application Configuration Ids.
-     * 
+     * Collection of GUIDs that point to the certificateBasedApplicationConfiguration that contains the collection of allowed root and intermediate certificate authorities.
      */
     @SerializedName(value = "certificateBasedApplicationConfigurationIds", alternate = {"CertificateBasedApplicationConfigurationIds"})
     @Expose

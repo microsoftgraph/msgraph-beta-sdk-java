@@ -85,7 +85,9 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
     /**
      * The Self Service Enabled.
      * Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
+     * @deprecated The selfServiceEnabled property is deprecated and will not be supported starting Dec 1, 2023. This property will not be included as part of the API response.
      */
+    @Deprecated
     @SerializedName(value = "selfServiceEnabled", alternate = {"SelfServiceEnabled"})
     @Expose
 	@Nullable
@@ -93,7 +95,7 @@ public class CloudPcUserSetting extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignments.
-     * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

@@ -30,7 +30,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
 
     /**
      * The Claims Mapping.
-     * After the OIDC provider sends an ID token back to Azure AD, Azure AD needs to be able to map the claims from the received token to the claims that Azure AD recognizes and uses. This complex type captures that mapping. Required.
+     * After the OIDC provider sends an ID token back to Microsoft Entra ID, Microsoft Entra ID needs to be able to map the claims from the received token to the claims that Microsoft Entra ID recognizes and uses. This complex type captures that mapping. Required.
      */
     @SerializedName(value = "claimsMapping", alternate = {"ClaimsMapping"})
     @Expose
@@ -93,7 +93,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
 
     /**
      * The Scope.
-     * Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations see RFC6749 Section 3.3. Required.
+     * Scope defines the information and permissions you are looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users are not able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more details about the scope limitations, see RFC6749 Section 3.3. Required.
      */
     @SerializedName(value = "scope", alternate = {"Scope"})
     @Expose

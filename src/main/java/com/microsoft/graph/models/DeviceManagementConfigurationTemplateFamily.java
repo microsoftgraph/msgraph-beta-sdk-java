@@ -72,6 +72,10 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     DEVICE_CONFIGURATION_POLICIES,
     /**
+    * company Portal
+    */
+    COMPANY_PORTAL,
+    /**
     * For DeviceManagementConfigurationTemplateFamily values that were not expected from the service
     */
     UNEXPECTED_VALUE

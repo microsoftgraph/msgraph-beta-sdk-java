@@ -28,12 +28,23 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
 
     /**
      * The Upns.
-     * Collection of mailboxes that should be included in the search. Includes the UPN (user principal name) of each mailbox, for example, Monica.Thompson@contoso.com.
+     * 
+     * @deprecated upns property is deprecated and will stop working on  Dec 23, 2023. Please use the new property caller userPrincipalNames.
      */
+    @Deprecated
     @SerializedName(value = "upns", alternate = {"Upns"})
     @Expose
 	@Nullable
     public java.util.List<String> upns;
+
+    /**
+     * The User Principal Names.
+     * Collection of mailboxes that should be included in the search. Includes the user principal name (UPN) of each mailbox, for example, Monica.Thompson@contoso.com.
+     */
+    @SerializedName(value = "userPrincipalNames", alternate = {"UserPrincipalNames"})
+    @Expose
+	@Nullable
+    public java.util.List<String> userPrincipalNames;
 
 
     /**
