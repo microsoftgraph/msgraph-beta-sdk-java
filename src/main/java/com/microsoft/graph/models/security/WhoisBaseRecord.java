@@ -83,7 +83,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
      */
     private WhoisContact zone;
     /**
-     * Instantiates a new whoisBaseRecord and sets the default values.
+     * Instantiates a new WhoisBaseRecord and sets the default values.
      */
     public WhoisBaseRecord() {
         super();
@@ -91,7 +91,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a whoisBaseRecord
+     * @return a WhoisBaseRecord
      */
     @jakarta.annotation.Nonnull
     public static WhoisBaseRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -108,7 +108,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the abuse property value. The contact information for the abuse contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getAbuse() {
@@ -116,7 +116,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the admin property value. The contact information for the admin contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getAdmin() {
@@ -124,7 +124,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the billing property value. The contact information for the billing contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getBilling() {
@@ -132,7 +132,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the domainStatus property value. The domain status for this WHOIS object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainStatus() {
@@ -183,7 +183,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {
@@ -207,7 +207,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the nameservers property value. The nameservers for this WHOIS object.
-     * @return a whoisNameserver
+     * @return a java.util.List<WhoisNameserver>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisNameserver> getNameservers() {
@@ -215,7 +215,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the noc property value. The contact information for the noc contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getNoc() {
@@ -223,7 +223,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the rawWhoisText property value. The raw WHOIS details for this WHOIS object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRawWhoisText() {
@@ -231,7 +231,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the registrant property value. The contact information for the registrant contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getRegistrant() {
@@ -239,7 +239,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the registrar property value. The contact information for the registrar contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getRegistrar() {
@@ -255,7 +255,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the technical property value. The contact information for the technical contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getTechnical() {
@@ -263,7 +263,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the whoisServer property value. The WHOIS server that provides the details.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWhoisServer() {
@@ -271,7 +271,7 @@ public class WhoisBaseRecord extends Entity implements Parsable {
     }
     /**
      * Gets the zone property value. The contact information for the zone contact.
-     * @return a whoisContact
+     * @return a WhoisContact
      */
     @jakarta.annotation.Nullable
     public WhoisContact getZone() {

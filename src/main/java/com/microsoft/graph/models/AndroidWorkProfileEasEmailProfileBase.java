@@ -40,7 +40,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      */
     private AndroidUsernameSource usernameSource;
     /**
-     * Instantiates a new androidWorkProfileEasEmailProfileBase and sets the default values.
+     * Instantiates a new AndroidWorkProfileEasEmailProfileBase and sets the default values.
      */
     public AndroidWorkProfileEasEmailProfileBase() {
         super();
@@ -49,7 +49,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWorkProfileEasEmailProfileBase
+     * @return a AndroidWorkProfileEasEmailProfileBase
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileEasEmailProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
-     * @return a easAuthenticationMethod
+     * @return a EasAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
@@ -74,7 +74,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
@@ -82,7 +82,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
@@ -106,7 +106,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the hostName property value. Exchange location (URL) that the mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
@@ -114,7 +114,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the identityCertificate property value. Identity certificate.
-     * @return a androidWorkProfileCertificateProfileBase
+     * @return a AndroidWorkProfileCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileCertificateProfileBase getIdentityCertificate() {
@@ -122,7 +122,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
@@ -130,7 +130,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the usernameSource property value. Android username source.
-     * @return a androidUsernameSource
+     * @return a AndroidUsernameSource
      */
     @jakarta.annotation.Nullable
     public AndroidUsernameSource getUsernameSource() {

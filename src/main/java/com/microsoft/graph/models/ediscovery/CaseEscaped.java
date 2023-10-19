@@ -80,7 +80,7 @@ public class CaseEscaped extends Entity implements Parsable {
      */
     private java.util.List<Tag> tags;
     /**
-     * Instantiates a new caseEscaped and sets the default values.
+     * Instantiates a new CaseEscaped and sets the default values.
      */
     public CaseEscaped() {
         super();
@@ -88,7 +88,7 @@ public class CaseEscaped extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a caseEscaped
+     * @return a CaseEscaped
      */
     @jakarta.annotation.Nonnull
     public static CaseEscaped createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -97,7 +97,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the closedBy property value. The user who closed the case.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getClosedBy() {
@@ -121,7 +121,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the custodians property value. Returns a list of case custodian objects for this case.  Nullable.
-     * @return a custodian
+     * @return a java.util.List<Custodian>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Custodian> getCustodians() {
@@ -129,7 +129,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The case description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -137,7 +137,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The case name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -145,7 +145,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the externalId property value. The external case number for customer reference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalId() {
@@ -179,7 +179,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the entity.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -195,7 +195,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the legalHolds property value. Returns a list of case legalHold objects for this case.  Nullable.
-     * @return a legalHold
+     * @return a java.util.List<LegalHold>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LegalHold> getLegalHolds() {
@@ -203,7 +203,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the noncustodialDataSources property value. Returns a list of case noncustodialDataSource objects for this case.  Nullable.
-     * @return a noncustodialDataSource
+     * @return a java.util.List<NoncustodialDataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialDataSources() {
@@ -211,7 +211,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Returns a list of case operation objects for this case. Nullable.
-     * @return a caseOperation
+     * @return a java.util.List<CaseOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CaseOperation> getOperations() {
@@ -219,7 +219,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the reviewSets property value. Returns a list of reviewSet objects in the case. Read-only. Nullable.
-     * @return a reviewSet
+     * @return a java.util.List<ReviewSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReviewSet> getReviewSets() {
@@ -227,7 +227,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a caseSettings
+     * @return a CaseSettings
      */
     @jakarta.annotation.Nullable
     public CaseSettings getSettings() {
@@ -235,7 +235,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the sourceCollections property value. Returns a list of sourceCollection objects associated with this case.
-     * @return a sourceCollection
+     * @return a java.util.List<SourceCollection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceCollection> getSourceCollections() {
@@ -243,7 +243,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The case status. Possible values are unknown, active, pendingDelete, closing, closed, and closedWithError. For details, see the following table.
-     * @return a caseStatus
+     * @return a CaseStatus
      */
     @jakarta.annotation.Nullable
     public CaseStatus getStatus() {
@@ -251,7 +251,7 @@ public class CaseEscaped extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. Returns a list of tag objects associated to this case.
-     * @return a tag
+     * @return a java.util.List<Tag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Tag> getTags() {

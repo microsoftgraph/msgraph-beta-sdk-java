@@ -42,7 +42,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
      */
     private String roleTemplateId;
     /**
-     * Instantiates a new staleSignInAlertIncident and sets the default values.
+     * Instantiates a new StaleSignInAlertIncident and sets the default values.
      */
     public StaleSignInAlertIncident() {
         super();
@@ -51,7 +51,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a staleSignInAlertIncident
+     * @return a StaleSignInAlertIncident
      */
     @jakarta.annotation.Nonnull
     public static StaleSignInAlertIncident createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     }
     /**
      * Gets the assigneeDisplayName property value. Display name of the subject that the incident applies to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeDisplayName() {
@@ -68,7 +68,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     }
     /**
      * Gets the assigneeId property value. The identifier of the subject that the incident applies to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeId() {
@@ -76,7 +76,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     }
     /**
      * Gets the assigneeUserPrincipalName property value. User principal name of the subject that the incident applies to. Applies to user principals.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneeUserPrincipalName() {
@@ -117,7 +117,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     }
     /**
      * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDefinitionId() {
@@ -125,7 +125,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     }
     /**
      * Gets the roleDisplayName property value. The display name for the directory role.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleDisplayName() {
@@ -133,7 +133,7 @@ public class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
     }
     /**
      * Gets the roleTemplateId property value. The globally unique identifier for the directory role.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleTemplateId() {

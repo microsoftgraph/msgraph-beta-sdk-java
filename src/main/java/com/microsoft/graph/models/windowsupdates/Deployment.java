@@ -35,7 +35,7 @@ public class Deployment extends Entity implements Parsable {
      */
     private DeploymentState state;
     /**
-     * Instantiates a new deployment and sets the default values.
+     * Instantiates a new Deployment and sets the default values.
      */
     public Deployment() {
         super();
@@ -43,7 +43,7 @@ public class Deployment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deployment
+     * @return a Deployment
      */
     @jakarta.annotation.Nonnull
     public static Deployment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Specifies the audience to which content is deployed.
-     * @return a deploymentAudience
+     * @return a DeploymentAudience
      */
     @jakarta.annotation.Nullable
     public DeploymentAudience getAudience() {
@@ -60,7 +60,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. Specifies what content to deploy. Cannot be changed. Returned by default.
-     * @return a deployableContent
+     * @return a DeployableContent
      */
     @jakarta.annotation.Nullable
     public DeployableContent getContent() {
@@ -99,7 +99,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. Settings specified on the specific deployment governing how to deploy content. Returned by default.
-     * @return a deploymentSettings
+     * @return a DeploymentSettings
      */
     @jakarta.annotation.Nullable
     public DeploymentSettings getSettings() {
@@ -107,7 +107,7 @@ public class Deployment extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Execution status of the deployment. Returned by default.
-     * @return a deploymentState
+     * @return a DeploymentState
      */
     @jakarta.annotation.Nullable
     public DeploymentState getState() {

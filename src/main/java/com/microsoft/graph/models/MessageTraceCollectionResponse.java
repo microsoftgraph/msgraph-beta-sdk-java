@@ -13,7 +13,7 @@ public class MessageTraceCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<MessageTrace> value;
     /**
-     * Instantiates a new messageTraceCollectionResponse and sets the default values.
+     * Instantiates a new MessageTraceCollectionResponse and sets the default values.
      */
     public MessageTraceCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MessageTraceCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageTraceCollectionResponse
+     * @return a MessageTraceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MessageTraceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MessageTraceCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a messageTrace
+     * @return a java.util.List<MessageTrace>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageTrace> getValue() {

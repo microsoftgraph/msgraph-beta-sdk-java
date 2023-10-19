@@ -37,7 +37,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
      */
     private Long saLifeTimeSeconds;
     /**
-     * Instantiates a new tunnelConfigurationIKEv2Custom and sets the default values.
+     * Instantiates a new TunnelConfigurationIKEv2Custom and sets the default values.
      */
     public TunnelConfigurationIKEv2Custom() {
         super();
@@ -46,7 +46,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tunnelConfigurationIKEv2Custom
+     * @return a TunnelConfigurationIKEv2Custom
      */
     @jakarta.annotation.Nonnull
     public static TunnelConfigurationIKEv2Custom createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the dhGroup property value. The dhGroup property
-     * @return a dhGroup
+     * @return a DhGroup
      */
     @jakarta.annotation.Nullable
     public DhGroup getDhGroup() {
@@ -79,7 +79,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the ikeEncryption property value. The ikeEncryption property
-     * @return a ikeEncryption
+     * @return a IkeEncryption
      */
     @jakarta.annotation.Nullable
     public IkeEncryption getIkeEncryption() {
@@ -87,7 +87,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the ikeIntegrity property value. The ikeIntegrity property
-     * @return a ikeIntegrity
+     * @return a IkeIntegrity
      */
     @jakarta.annotation.Nullable
     public IkeIntegrity getIkeIntegrity() {
@@ -95,7 +95,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the ipSecEncryption property value. The ipSecEncryption property
-     * @return a ipSecEncryption
+     * @return a IpSecEncryption
      */
     @jakarta.annotation.Nullable
     public IpSecEncryption getIpSecEncryption() {
@@ -103,7 +103,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the ipSecIntegrity property value. The ipSecIntegrity property
-     * @return a ipSecIntegrity
+     * @return a IpSecIntegrity
      */
     @jakarta.annotation.Nullable
     public IpSecIntegrity getIpSecIntegrity() {
@@ -111,7 +111,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the pfsGroup property value. The pfsGroup property
-     * @return a pfsGroup
+     * @return a PfsGroup
      */
     @jakarta.annotation.Nullable
     public PfsGroup getPfsGroup() {
@@ -119,7 +119,7 @@ public class TunnelConfigurationIKEv2Custom extends TunnelConfiguration implemen
     }
     /**
      * Gets the saLifeTimeSeconds property value. a standard specifiying Security Association lifetime with recommended values from an RFC standard.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSaLifeTimeSeconds() {

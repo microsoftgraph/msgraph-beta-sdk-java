@@ -30,7 +30,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
      */
     private Integer numberOfAttempts;
     /**
-     * Instantiates a new customExtensionCalloutResult and sets the default values.
+     * Instantiates a new CustomExtensionCalloutResult and sets the default values.
      */
     public CustomExtensionCalloutResult() {
         super();
@@ -39,7 +39,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionCalloutResult
+     * @return a CustomExtensionCalloutResult
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionCalloutResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the customExtensionId property value. Identifier of the custom extension that was called.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionId() {
@@ -64,7 +64,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the errorCode property value. Error code that was returned when the last API attempt failed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -86,7 +86,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the httpStatus property value. The HTTP status code that was returned by the target API endpoint after the last API attempt.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHttpStatus() {
@@ -94,7 +94,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
     }
     /**
      * Gets the numberOfAttempts property value. The number of API calls to the customer's API.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNumberOfAttempts() {

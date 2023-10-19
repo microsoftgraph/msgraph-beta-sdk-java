@@ -41,7 +41,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
      */
     private String versionNumber;
     /**
-     * Instantiates a new managedIOSLobApp and sets the default values.
+     * Instantiates a new ManagedIOSLobApp and sets the default values.
      */
     public ManagedIOSLobApp() {
         super();
@@ -50,7 +50,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedIOSLobApp
+     * @return a ManagedIOSLobApp
      */
     @jakarta.annotation.Nonnull
     public static ManagedIOSLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
-     * @return a iosDeviceType
+     * @return a IosDeviceType
      */
     @jakarta.annotation.Nullable
     public IosDeviceType getApplicableDeviceType() {
@@ -67,7 +67,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the buildNumber property value. The build number of managed iOS Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBuildNumber() {
@@ -75,7 +75,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the bundleId property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -107,7 +107,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -115,7 +115,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a iosMinimumOperatingSystem
+     * @return a IosMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public IosMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -123,7 +123,7 @@ public class ManagedIOSLobApp extends ManagedMobileLobApp implements Parsable {
     }
     /**
      * Gets the versionNumber property value. The version number of managed iOS Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionNumber() {

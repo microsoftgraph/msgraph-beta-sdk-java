@@ -36,7 +36,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/alternativeRecording", rawUrl);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Get alternativeRecording for the navigation property sessions from solutions
      * @return a CompletableFuture of InputStream
      */
     @jakarta.annotation.Nonnull
@@ -44,7 +44,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Get alternativeRecording for the navigation property sessions from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
      */
@@ -57,7 +57,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Update alternativeRecording for the navigation property sessions in solutions
      * @param body Binary request body
      * @return a CompletableFuture of InputStream
      */
@@ -66,7 +66,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Update alternativeRecording for the navigation property sessions in solutions
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
@@ -81,7 +81,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Get alternativeRecording for the navigation property sessions from solutions
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,26 +89,26 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Get alternativeRecording for the navigation property sessions from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Update alternativeRecording for the navigation property sessions in solutions
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -117,7 +117,7 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
+     * Update alternativeRecording for the navigation property sessions in solutions
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -126,22 +126,22 @@ public class AlternativeRecordingRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PUT;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
         if (requestConfiguration != null) {
             final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PUT;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setStreamContent(body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a alternativeRecordingRequestBuilder
+     * @return a AlternativeRecordingRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AlternativeRecordingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

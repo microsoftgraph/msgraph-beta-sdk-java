@@ -28,7 +28,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      */
     private String managedInstallerConfiguredDateTime;
     /**
-     * Instantiates a new windowsManagementApp and sets the default values.
+     * Instantiates a new WindowsManagementApp and sets the default values.
      */
     public WindowsManagementApp() {
         super();
@@ -36,7 +36,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagementApp
+     * @return a WindowsManagementApp
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagementApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the availableVersion property value. Windows management app available version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailableVersion() {
@@ -66,7 +66,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the healthStates property value. The list of health states for installed Windows management app.
-     * @return a windowsManagementAppHealthState
+     * @return a java.util.List<WindowsManagementAppHealthState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsManagementAppHealthState> getHealthStates() {
@@ -74,7 +74,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the managedInstaller property value. ManagedInstallerStatus
-     * @return a managedInstallerStatus
+     * @return a ManagedInstallerStatus
      */
     @jakarta.annotation.Nullable
     public ManagedInstallerStatus getManagedInstaller() {
@@ -82,7 +82,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
     }
     /**
      * Gets the managedInstallerConfiguredDateTime property value. Managed Installer Configured Date Time
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedInstallerConfiguredDateTime() {

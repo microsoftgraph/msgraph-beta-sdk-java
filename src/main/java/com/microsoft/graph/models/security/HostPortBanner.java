@@ -39,7 +39,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
      */
     private Integer timesObserved;
     /**
-     * Instantiates a new hostPortBanner and sets the default values.
+     * Instantiates a new HostPortBanner and sets the default values.
      */
     public HostPortBanner() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPortBanner
+     * @return a HostPortBanner
      */
     @jakarta.annotation.Nonnull
     public static HostPortBanner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         return new HostPortBanner();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the banner property value. The banner property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBanner() {
@@ -103,7 +103,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,7 +111,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scanProtocol property value. The scanProtocol property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScanProtocol() {
@@ -119,7 +119,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timesObserved property value. The timesObserved property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimesObserved() {
@@ -140,8 +140,8 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

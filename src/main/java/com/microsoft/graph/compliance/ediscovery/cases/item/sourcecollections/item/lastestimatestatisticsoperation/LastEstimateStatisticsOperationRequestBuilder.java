@@ -37,8 +37,8 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/lastEstimateStatisticsOperation{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get the last estimateStatisticsOperation object associated with a source collection. 
-     * @return a CompletableFuture of estimateStatisticsOperation
+     * Get the last estimateStatisticsOperation object associated with a source collection.  This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of EstimateStatisticsOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
@@ -49,9 +49,9 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get the last estimateStatisticsOperation object associated with a source collection. 
+     * Get the last estimateStatisticsOperation object associated with a source collection.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of estimateStatisticsOperation
+     * @return a CompletableFuture of EstimateStatisticsOperation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-lastestimatestatisticsoperation?view=graph-rest-1.0">Find more info here</a>
@@ -66,7 +66,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return this.requestAdapter.sendAsync(requestInfo, EstimateStatisticsOperation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get the last estimateStatisticsOperation object associated with a source collection. 
+     * Get the last estimateStatisticsOperation object associated with a source collection.  This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
@@ -77,7 +77,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get the last estimateStatisticsOperation object associated with a source collection. 
+     * Get the last estimateStatisticsOperation object associated with a source collection.  This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -87,10 +87,6 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -98,12 +94,16 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lastEstimateStatisticsOperationRequestBuilder
+     * @return a LastEstimateStatisticsOperationRequestBuilder
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
@@ -114,7 +114,7 @@ public class LastEstimateStatisticsOperationRequestBuilder extends BaseRequestBu
         return new LastEstimateStatisticsOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the last estimateStatisticsOperation object associated with a source collection. 
+     * Get the last estimateStatisticsOperation object associated with a source collection.  This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -23,7 +23,7 @@ public class HostPair extends Entity implements Parsable {
      */
     private OffsetDateTime lastSeenDateTime;
     /**
-     * The reason the two hosts are identified as hostPairs.
+     * The reason that two hosts are identified as hostPair.
      */
     private String linkKind;
     /**
@@ -31,7 +31,7 @@ public class HostPair extends Entity implements Parsable {
      */
     private Host parentHost;
     /**
-     * Instantiates a new hostPair and sets the default values.
+     * Instantiates a new HostPair and sets the default values.
      */
     public HostPair() {
         super();
@@ -39,7 +39,7 @@ public class HostPair extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPair
+     * @return a HostPair
      */
     @jakarta.annotation.Nonnull
     public static HostPair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class HostPair extends Entity implements Parsable {
     }
     /**
      * Gets the childHost property value. The childHost property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getChildHost() {
@@ -85,8 +85,8 @@ public class HostPair extends Entity implements Parsable {
         return this.lastSeenDateTime;
     }
     /**
-     * Gets the linkKind property value. The reason the two hosts are identified as hostPairs.
-     * @return a string
+     * Gets the linkKind property value. The reason that two hosts are identified as hostPair.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLinkKind() {
@@ -94,7 +94,7 @@ public class HostPair extends Entity implements Parsable {
     }
     /**
      * Gets the parentHost property value. The parentHost property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getParentHost() {
@@ -135,7 +135,7 @@ public class HostPair extends Entity implements Parsable {
         this.lastSeenDateTime = value;
     }
     /**
-     * Sets the linkKind property value. The reason the two hosts are identified as hostPairs.
+     * Sets the linkKind property value. The reason that two hosts are identified as hostPair.
      * @param value Value to set for the linkKind property.
      */
     public void setLinkKind(@jakarta.annotation.Nullable final String value) {

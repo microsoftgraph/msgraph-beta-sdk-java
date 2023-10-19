@@ -1,12 +1,7 @@
 package com.microsoft.graph.directory.administrativeunits.item;
 
-import com.microsoft.graph.directory.administrativeunits.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.item.members.MembersRequestBuilder;
-import com.microsoft.graph.directory.administrativeunits.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.directory.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
 import com.microsoft.graph.models.AdministrativeUnit;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -29,20 +24,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to call the checkMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the checkMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
      */
     @jakarta.annotation.Nonnull
@@ -50,32 +31,11 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the members property of the microsoft.graph.administrativeUnit entity.
      */
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the restore method.
-     */
-    @jakarta.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the scopedRoleMembers property of the microsoft.graph.administrativeUnit entity.
@@ -121,7 +81,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Conceptual container for user and group directory objects.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get() {
@@ -130,7 +90,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Conceptual container for user and group directory objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -143,7 +103,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property administrativeUnits in directory
      * @param body The request body
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> patch(@jakarta.annotation.Nonnull final AdministrativeUnit body) {
@@ -153,7 +113,7 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property administrativeUnits in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of administrativeUnit
+     * @return a CompletableFuture of AdministrativeUnit
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AdministrativeUnit> patch(@jakarta.annotation.Nonnull final AdministrativeUnit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -180,15 +140,15 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -207,10 +167,6 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -218,6 +174,10 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -239,17 +199,17 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AdministrativeUnit body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

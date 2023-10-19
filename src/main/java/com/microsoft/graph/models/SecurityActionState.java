@@ -35,7 +35,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      */
     private String user;
     /**
-     * Instantiates a new securityActionState and sets the default values.
+     * Instantiates a new SecurityActionState and sets the default values.
      */
     public SecurityActionState() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityActionState
+     * @return a SecurityActionState
      */
     @jakarta.annotation.Nonnull
     public static SecurityActionState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
         return new SecurityActionState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the action. The appId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -82,7 +82,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -90,7 +90,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
@@ -106,7 +106,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the user property value. The user principal name of the signed-in user that submitted an update (PATCH) to the action. The user should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUser() {
@@ -126,8 +126,8 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

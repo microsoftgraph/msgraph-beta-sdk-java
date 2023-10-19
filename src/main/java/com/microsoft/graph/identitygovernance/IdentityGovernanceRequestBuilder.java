@@ -4,6 +4,8 @@ import com.microsoft.graph.identitygovernance.accessreviews.AccessReviewsRequest
 import com.microsoft.graph.identitygovernance.appconsent.AppConsentRequestBuilder;
 import com.microsoft.graph.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.LifecycleWorkflowsRequestBuilder;
+import com.microsoft.graph.identitygovernance.permissionsanalytics.PermissionsAnalyticsRequestBuilder;
+import com.microsoft.graph.identitygovernance.permissionsmanagement.PermissionsManagementRequestBuilder;
 import com.microsoft.graph.identitygovernance.privilegedaccess.PrivilegedAccessRequestBuilder;
 import com.microsoft.graph.identitygovernance.rolemanagementalerts.RoleManagementAlertsRequestBuilder;
 import com.microsoft.graph.identitygovernance.termsofuse.TermsOfUseRequestBuilder;
@@ -56,6 +58,20 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
         return new LifecycleWorkflowsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the permissionsAnalytics property of the microsoft.graph.identityGovernance entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsAnalyticsRequestBuilder permissionsAnalytics() {
+        return new PermissionsAnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the permissionsManagement property of the microsoft.graph.identityGovernance entity.
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsManagementRequestBuilder permissionsManagement() {
+        return new PermissionsManagementRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the privilegedAccess property of the microsoft.graph.identityGovernance entity.
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +110,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get identityGovernance
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get() {
@@ -103,7 +119,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +132,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Update identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@jakarta.annotation.Nonnull final IdentityGovernance body) {
@@ -126,7 +142,7 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Update identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of identityGovernance
+     * @return a CompletableFuture of IdentityGovernance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IdentityGovernance> patch(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -153,10 +169,6 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -164,6 +176,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -185,23 +201,23 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a identityGovernanceRequestBuilder
+     * @return a IdentityGovernanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public IdentityGovernanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

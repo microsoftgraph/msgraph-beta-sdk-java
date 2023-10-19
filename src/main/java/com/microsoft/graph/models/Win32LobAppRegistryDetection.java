@@ -37,7 +37,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
      */
     private String valueName;
     /**
-     * Instantiates a new win32LobAppRegistryDetection and sets the default values.
+     * Instantiates a new Win32LobAppRegistryDetection and sets the default values.
      */
     public Win32LobAppRegistryDetection() {
         super();
@@ -46,7 +46,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppRegistryDetection
+     * @return a Win32LobAppRegistryDetection
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppRegistryDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     }
     /**
      * Gets the check32BitOn64System property value. A value indicating whether this registry path is for checking 32-bit app on 64-bit system
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCheck32BitOn64System() {
@@ -63,7 +63,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     }
     /**
      * Gets the detectionType property value. Contains all supported registry data detection type.
-     * @return a win32LobAppRegistryDetectionType
+     * @return a Win32LobAppRegistryDetectionType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRegistryDetectionType getDetectionType() {
@@ -71,7 +71,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     }
     /**
      * Gets the detectionValue property value. The registry detection value
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDetectionValue() {
@@ -94,7 +94,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     }
     /**
      * Gets the keyPath property value. The registry key path to detect Win32 Line of Business (LoB) app
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKeyPath() {
@@ -102,7 +102,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     }
     /**
      * Gets the operator property value. Contains properties for detection operator.
-     * @return a win32LobAppDetectionOperator
+     * @return a EnumSet<Win32LobAppDetectionOperator>
      */
     @jakarta.annotation.Nullable
     public EnumSet<Win32LobAppDetectionOperator> getOperator() {
@@ -110,7 +110,7 @@ public class Win32LobAppRegistryDetection extends Win32LobAppDetection implement
     }
     /**
      * Gets the valueName property value. The registry value name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValueName() {

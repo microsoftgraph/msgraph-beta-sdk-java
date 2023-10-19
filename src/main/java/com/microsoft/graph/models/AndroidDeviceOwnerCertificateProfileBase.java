@@ -41,7 +41,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
      */
     private SubjectNameFormat subjectNameFormat;
     /**
-     * Instantiates a new androidDeviceOwnerCertificateProfileBase and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerCertificateProfileBase and sets the default values.
      */
     public AndroidDeviceOwnerCertificateProfileBase() {
         super();
@@ -50,7 +50,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerCertificateProfileBase
+     * @return a AndroidDeviceOwnerCertificateProfileBase
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerCertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the certificateValidityPeriodScale property value. Certificate Validity Period Options.
-     * @return a certificateValidityPeriodScale
+     * @return a CertificateValidityPeriodScale
      */
     @jakarta.annotation.Nullable
     public CertificateValidityPeriodScale getCertificateValidityPeriodScale() {
@@ -76,7 +76,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the certificateValidityPeriodValue property value. Value for the Certificate Validity Period.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateValidityPeriodValue() {
@@ -84,7 +84,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
-     * @return a extendedKeyUsage
+     * @return a java.util.List<ExtendedKeyUsage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtendedKeyUsage> getExtendedKeyUsages() {
@@ -108,7 +108,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the renewalThresholdPercentage property value. Certificate renewal threshold percentage. Valid values 1 to 99
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRenewalThresholdPercentage() {
@@ -116,7 +116,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the rootCertificate property value. Trusted Root Certificate.
-     * @return a androidDeviceOwnerTrustedRootCertificate
+     * @return a AndroidDeviceOwnerTrustedRootCertificate
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerTrustedRootCertificate getRootCertificate() {
@@ -124,7 +124,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
-     * @return a subjectAlternativeNameType
+     * @return a EnumSet<SubjectAlternativeNameType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SubjectAlternativeNameType> getSubjectAlternativeNameType() {
@@ -132,7 +132,7 @@ public class AndroidDeviceOwnerCertificateProfileBase extends DeviceConfiguratio
     }
     /**
      * Gets the subjectNameFormat property value. Certificate Subject Name Format. Possible values are: commonName, commonNameIncludingEmail, commonNameAsEmail, custom, commonNameAsIMEI, commonNameAsSerialNumber, commonNameAsAadDeviceId, commonNameAsIntuneDeviceId, commonNameAsDurableDeviceId.
-     * @return a subjectNameFormat
+     * @return a SubjectNameFormat
      */
     @jakarta.annotation.Nullable
     public SubjectNameFormat getSubjectNameFormat() {

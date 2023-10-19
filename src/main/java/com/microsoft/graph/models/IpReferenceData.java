@@ -42,7 +42,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
      */
     private String vendor;
     /**
-     * Instantiates a new ipReferenceData and sets the default values.
+     * Instantiates a new IpReferenceData and sets the default values.
      */
     public IpReferenceData() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipReferenceData
+     * @return a IpReferenceData
      */
     @jakarta.annotation.Nonnull
     public static IpReferenceData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
         return new IpReferenceData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the asn property value. The asn property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getAsn() {
@@ -75,7 +75,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the city property value. The city property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -83,7 +83,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the countryOrRegionCode property value. The countryOrRegionCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegionCode() {
@@ -107,7 +107,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organization property value. The organization property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganization() {
@@ -123,7 +123,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -131,7 +131,7 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {
@@ -153,8 +153,8 @@ public class IpReferenceData implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

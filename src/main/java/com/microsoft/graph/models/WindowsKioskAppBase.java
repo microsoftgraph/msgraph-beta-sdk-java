@@ -37,7 +37,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
      */
     private WindowsAppStartLayoutTileSize startLayoutTileSize;
     /**
-     * Instantiates a new windowsKioskAppBase and sets the default values.
+     * Instantiates a new WindowsKioskAppBase and sets the default values.
      */
     public WindowsKioskAppBase() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskAppBase
+     * @return a WindowsKioskAppBase
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskAppBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
         return new WindowsKioskAppBase();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appType property value. The type of Windows kiosk app.
-     * @return a windowsKioskAppType
+     * @return a WindowsKioskAppType
      */
     @jakarta.annotation.Nullable
     public WindowsKioskAppType getAppType() {
@@ -79,7 +79,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the autoLaunch property value. Allow the app to be auto-launched in multi-app kiosk mode
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoLaunch() {
@@ -101,7 +101,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Represents the friendly name of an app
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -109,7 +109,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -117,7 +117,7 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the startLayoutTileSize property value. The tile size of Windows app in the start layout.
-     * @return a windowsAppStartLayoutTileSize
+     * @return a WindowsAppStartLayoutTileSize
      */
     @jakarta.annotation.Nullable
     public WindowsAppStartLayoutTileSize getStartLayoutTileSize() {
@@ -137,8 +137,8 @@ public class WindowsKioskAppBase implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

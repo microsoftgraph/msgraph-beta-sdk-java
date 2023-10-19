@@ -13,7 +13,7 @@ public class LoginPageCollectionResponse extends BaseCollectionPaginationCountRe
      */
     private java.util.List<LoginPage> value;
     /**
-     * Instantiates a new loginPageCollectionResponse and sets the default values.
+     * Instantiates a new LoginPageCollectionResponse and sets the default values.
      */
     public LoginPageCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class LoginPageCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a loginPageCollectionResponse
+     * @return a LoginPageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static LoginPageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class LoginPageCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a loginPage
+     * @return a java.util.List<LoginPage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LoginPage> getValue() {

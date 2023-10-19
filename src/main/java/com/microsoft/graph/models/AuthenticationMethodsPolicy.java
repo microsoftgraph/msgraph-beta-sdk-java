@@ -26,7 +26,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      */
     private AuthenticationMethodsPolicyMigrationState policyMigrationState;
     /**
@@ -50,7 +50,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     private SystemCredentialPreferences systemCredentialPreferences;
     /**
-     * Instantiates a new authenticationMethodsPolicy and sets the default values.
+     * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
      */
     public AuthenticationMethodsPolicy() {
         super();
@@ -58,7 +58,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodsPolicy
+     * @return a AuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethodConfigurations property value. Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     * @return a authenticationMethodConfiguration
+     * @return a java.util.List<AuthenticationMethodConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodConfiguration> getAuthenticationMethodConfigurations() {
@@ -75,7 +75,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A description of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -83,7 +83,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -117,8 +117,8 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         return this.lastModifiedDateTime;
     }
     /**
-     * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
-     * @return a authenticationMethodsPolicyMigrationState
+     * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
+     * @return a AuthenticationMethodsPolicyMigrationState
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicyMigrationState getPolicyMigrationState() {
@@ -126,7 +126,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the policyVersion property value. The version of the policy in use.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyVersion() {
@@ -134,7 +134,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the reconfirmationInDays property value. Days before the user will be asked to reconfirm their method.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReconfirmationInDays() {
@@ -142,7 +142,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
-     * @return a registrationEnforcement
+     * @return a RegistrationEnforcement
      */
     @jakarta.annotation.Nullable
     public RegistrationEnforcement getRegistrationEnforcement() {
@@ -150,7 +150,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the reportSuspiciousActivitySettings property value. Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
-     * @return a reportSuspiciousActivitySettings
+     * @return a ReportSuspiciousActivitySettings
      */
     @jakarta.annotation.Nullable
     public ReportSuspiciousActivitySettings getReportSuspiciousActivitySettings() {
@@ -158,7 +158,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the systemCredentialPreferences property value. Prompt users with their most-preferred credential for multifactor authentication.
-     * @return a systemCredentialPreferences
+     * @return a SystemCredentialPreferences
      */
     @jakarta.annotation.Nullable
     public SystemCredentialPreferences getSystemCredentialPreferences() {
@@ -211,7 +211,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         this.lastModifiedDateTime = value;
     }
     /**
-     * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @param value Value to set for the policyMigrationState property.
      */
     public void setPolicyMigrationState(@jakarta.annotation.Nullable final AuthenticationMethodsPolicyMigrationState value) {

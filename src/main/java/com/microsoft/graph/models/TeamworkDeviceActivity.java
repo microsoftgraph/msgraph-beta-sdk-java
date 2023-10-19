@@ -30,7 +30,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new teamworkDeviceActivity and sets the default values.
+     * Instantiates a new TeamworkDeviceActivity and sets the default values.
      */
     public TeamworkDeviceActivity() {
         super();
@@ -38,7 +38,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceActivity
+     * @return a TeamworkDeviceActivity
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceActivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     }
     /**
      * Gets the activePeripherals property value. The active peripheral devices attached to the device.
-     * @return a teamworkActivePeripherals
+     * @return a TeamworkActivePeripherals
      */
     @jakarta.annotation.Nullable
     public TeamworkActivePeripherals getActivePeripherals() {
@@ -55,7 +55,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the device activity document.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -85,7 +85,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device activity details.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {

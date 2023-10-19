@@ -36,19 +36,21 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getFrontlineReport", rawUrl);
     }
     /**
-     * Invoke action getFrontlineReport
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action getFrontlineReport
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of InputStream
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<InputStream> post(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * Invoke action getFrontlineReport
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -69,7 +71,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action getFrontlineReport
+     * Get the Windows 365 Frontline reports, such as real-time or historical data reports. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -78,22 +80,22 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetFrontlineReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getFrontlineReportRequestBuilder
+     * @return a GetFrontlineReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFrontlineReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

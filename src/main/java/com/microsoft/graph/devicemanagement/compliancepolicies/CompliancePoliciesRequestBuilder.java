@@ -60,7 +60,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * List of all compliance policies
-     * @return a CompletableFuture of deviceManagementCompliancePolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementCompliancePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicyCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * List of all compliance policies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCompliancePolicyCollectionResponse
+     * @return a CompletableFuture of DeviceManagementCompliancePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to compliancePolicies for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body) {
@@ -92,7 +92,7 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to compliancePolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementCompliancePolicy
+     * @return a CompletableFuture of DeviceManagementCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementCompliancePolicy> post(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,6 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class CompliancePoliciesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementCompliancePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a compliancePoliciesRequestBuilder
+     * @return a CompliancePoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CompliancePoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

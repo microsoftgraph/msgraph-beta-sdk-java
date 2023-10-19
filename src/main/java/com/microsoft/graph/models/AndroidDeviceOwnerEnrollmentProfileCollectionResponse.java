@@ -13,7 +13,7 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionResponse extends BaseC
      */
     private java.util.List<AndroidDeviceOwnerEnrollmentProfile> value;
     /**
-     * Instantiates a new androidDeviceOwnerEnrollmentProfileCollectionResponse and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerEnrollmentProfileCollectionResponse and sets the default values.
      */
     public AndroidDeviceOwnerEnrollmentProfileCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionResponse extends BaseC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerEnrollmentProfileCollectionResponse
+     * @return a AndroidDeviceOwnerEnrollmentProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerEnrollmentProfileCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AndroidDeviceOwnerEnrollmentProfileCollectionResponse extends BaseC
     }
     /**
      * Gets the value property value. The value property
-     * @return a androidDeviceOwnerEnrollmentProfile
+     * @return a java.util.List<AndroidDeviceOwnerEnrollmentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerEnrollmentProfile> getValue() {

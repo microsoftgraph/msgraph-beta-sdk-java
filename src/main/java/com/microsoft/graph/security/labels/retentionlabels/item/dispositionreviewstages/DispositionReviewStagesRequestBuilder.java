@@ -60,7 +60,7 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
-     * @return a CompletableFuture of dispositionReviewStageCollectionResponse
+     * @return a CompletableFuture of DispositionReviewStageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStageCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     /**
      * When action at the end of retention is chosen as 'dispositionReview', dispositionReviewStages specifies a sequential set of stages with at least one reviewer in each stage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dispositionReviewStageCollectionResponse
+     * @return a CompletableFuture of DispositionReviewStageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStageCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to dispositionReviewStages for security
      * @param body The request body
-     * @return a CompletableFuture of dispositionReviewStage
+     * @return a CompletableFuture of DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStage> post(@jakarta.annotation.Nonnull final DispositionReviewStage body) {
@@ -92,7 +92,7 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to dispositionReviewStages for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of dispositionReviewStage
+     * @return a CompletableFuture of DispositionReviewStage
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DispositionReviewStage> post(@jakarta.annotation.Nonnull final DispositionReviewStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,6 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class DispositionReviewStagesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DispositionReviewStage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dispositionReviewStagesRequestBuilder
+     * @return a DispositionReviewStagesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DispositionReviewStagesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -17,7 +17,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
      */
     private java.util.List<DeviceManagementConfigurationOptionDefinition> options;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingDefinition and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingDefinition() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingDefinition
+     * @return a DeviceManagementConfigurationChoiceSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     }
     /**
      * Gets the defaultOptionId property value. Default option for the choice setting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultOptionId() {
@@ -60,7 +60,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     }
     /**
      * Gets the options property value. Options for the setting that can be selected.
-     * @return a deviceManagementConfigurationOptionDefinition
+     * @return a java.util.List<DeviceManagementConfigurationOptionDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationOptionDefinition> getOptions() {

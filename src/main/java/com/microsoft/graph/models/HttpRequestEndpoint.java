@@ -13,7 +13,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      */
     private String targetUrl;
     /**
-     * Instantiates a new httpRequestEndpoint and sets the default values.
+     * Instantiates a new HttpRequestEndpoint and sets the default values.
      */
     public HttpRequestEndpoint() {
         super();
@@ -22,7 +22,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a httpRequestEndpoint
+     * @return a HttpRequestEndpoint
      */
     @jakarta.annotation.Nonnull
     public static HttpRequestEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
     }
     /**
      * Gets the targetUrl property value. The HTTP endpoint that a custom extension calls.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetUrl() {

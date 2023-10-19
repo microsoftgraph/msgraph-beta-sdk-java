@@ -13,7 +13,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
      */
     private java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> value;
     /**
-     * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse and sets the default values.
+     * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse and sets the default values.
      */
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
     }
     /**
      * Gets the value property value. The value property
-     * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
+     * @return a java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> getValue() {

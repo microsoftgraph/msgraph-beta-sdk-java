@@ -17,7 +17,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     private Boolean hidden;
     /**
-     * Instantiates a new communicationsApplicationIdentity and sets the default values.
+     * Instantiates a new CommunicationsApplicationIdentity and sets the default values.
      */
     public CommunicationsApplicationIdentity() {
         super();
@@ -26,7 +26,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a communicationsApplicationIdentity
+     * @return a CommunicationsApplicationIdentity
      */
     @jakarta.annotation.Nonnull
     public static CommunicationsApplicationIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
     }
     /**
      * Gets the applicationType property value. First party Microsoft application presenting this identity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationType() {
@@ -54,7 +54,7 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
     }
     /**
      * Gets the hidden property value. True if the participant wouldn't like to be shown in other participants' rosters.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHidden() {

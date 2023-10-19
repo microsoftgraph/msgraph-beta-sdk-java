@@ -14,7 +14,7 @@ public class WhoisRecordCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<WhoisRecord> value;
     /**
-     * Instantiates a new whoisRecordCollectionResponse and sets the default values.
+     * Instantiates a new WhoisRecordCollectionResponse and sets the default values.
      */
     public WhoisRecordCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class WhoisRecordCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a whoisRecordCollectionResponse
+     * @return a WhoisRecordCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WhoisRecordCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class WhoisRecordCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a whoisRecord
+     * @return a java.util.List<WhoisRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WhoisRecord> getValue() {

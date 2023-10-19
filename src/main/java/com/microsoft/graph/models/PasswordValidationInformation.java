@@ -26,7 +26,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      */
     private java.util.List<ValidationResult> validationResults;
     /**
-     * Instantiates a new passwordValidationInformation and sets the default values.
+     * Instantiates a new PasswordValidationInformation and sets the default values.
      */
     public PasswordValidationInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordValidationInformation
+     * @return a PasswordValidationInformation
      */
     @jakarta.annotation.Nonnull
     public static PasswordValidationInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
         return new PasswordValidationInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the isValid property value. Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsValid() {
@@ -71,7 +71,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the validationResults property value. The list of password validation rules and whether the password passed those rules. Not nullable. Read-only.
-     * @return a validationResult
+     * @return a java.util.List<ValidationResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ValidationResult> getValidationResults() {
@@ -97,8 +97,8 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

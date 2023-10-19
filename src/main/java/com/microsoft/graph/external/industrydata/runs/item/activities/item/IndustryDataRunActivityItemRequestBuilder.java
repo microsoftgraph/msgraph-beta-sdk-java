@@ -46,7 +46,7 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
     }
     /**
      * The set of activities performed during the run.
-     * @return a CompletableFuture of industryDataRunActivity
+     * @return a CompletableFuture of IndustryDataRunActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataRunActivity> get() {
@@ -55,7 +55,7 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
     /**
      * The set of activities performed during the run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of industryDataRunActivity
+     * @return a CompletableFuture of IndustryDataRunActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<IndustryDataRunActivity> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,10 +81,6 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -92,6 +88,10 @@ public class IndustryDataRunActivityItemRequestBuilder extends BaseRequestBuilde
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

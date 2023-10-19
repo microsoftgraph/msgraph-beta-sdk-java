@@ -10,31 +10,31 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantOrganization extends Entity implements Parsable {
     /**
-     * Date when multi-tenant organization was created. Read-only.
+     * Date when multitenant organization was created. Read-only.
      */
     private OffsetDateTime createdDateTime;
     /**
-     * Description of the multi-tenant organization.
+     * Description of the multitenant organization.
      */
     private String description;
     /**
-     * Display name of the multi-tenant organization.
+     * Display name of the multitenant organization.
      */
     private String displayName;
     /**
-     * Defines the status of a tenant joining a multi-tenant organization.
+     * Defines the status of a tenant joining a multitenant organization.
      */
     private MultiTenantOrganizationJoinRequestRecord joinRequest;
     /**
-     * State of the multi-tenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multi-tenant organization is created. inactive indicates the multi-tenant organization is not created. Read-only.
+     * State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
      */
     private MultiTenantOrganizationState state;
     /**
-     * Defines tenants added to a multi-tenant organization.
+     * Defines tenants added to a multitenant organization.
      */
     private java.util.List<MultiTenantOrganizationMember> tenants;
     /**
-     * Instantiates a new multiTenantOrganization and sets the default values.
+     * Instantiates a new MultiTenantOrganization and sets the default values.
      */
     public MultiTenantOrganization() {
         super();
@@ -42,7 +42,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a multiTenantOrganization
+     * @return a MultiTenantOrganization
      */
     @jakarta.annotation.Nonnull
     public static MultiTenantOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class MultiTenantOrganization extends Entity implements Parsable {
         return new MultiTenantOrganization();
     }
     /**
-     * Gets the createdDateTime property value. Date when multi-tenant organization was created. Read-only.
+     * Gets the createdDateTime property value. Date when multitenant organization was created. Read-only.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -58,16 +58,16 @@ public class MultiTenantOrganization extends Entity implements Parsable {
         return this.createdDateTime;
     }
     /**
-     * Gets the description property value. Description of the multi-tenant organization.
-     * @return a string
+     * Gets the description property value. Description of the multitenant organization.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
         return this.description;
     }
     /**
-     * Gets the displayName property value. Display name of the multi-tenant organization.
-     * @return a string
+     * Gets the displayName property value. Display name of the multitenant organization.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -89,24 +89,24 @@ public class MultiTenantOrganization extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the joinRequest property value. Defines the status of a tenant joining a multi-tenant organization.
-     * @return a multiTenantOrganizationJoinRequestRecord
+     * Gets the joinRequest property value. Defines the status of a tenant joining a multitenant organization.
+     * @return a MultiTenantOrganizationJoinRequestRecord
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationJoinRequestRecord getJoinRequest() {
         return this.joinRequest;
     }
     /**
-     * Gets the state property value. State of the multi-tenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multi-tenant organization is created. inactive indicates the multi-tenant organization is not created. Read-only.
-     * @return a multiTenantOrganizationState
+     * Gets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
+     * @return a MultiTenantOrganizationState
      */
     @jakarta.annotation.Nullable
     public MultiTenantOrganizationState getState() {
         return this.state;
     }
     /**
-     * Gets the tenants property value. Defines tenants added to a multi-tenant organization.
-     * @return a multiTenantOrganizationMember
+     * Gets the tenants property value. Defines tenants added to a multitenant organization.
+     * @return a java.util.List<MultiTenantOrganizationMember>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiTenantOrganizationMember> getTenants() {
@@ -127,42 +127,42 @@ public class MultiTenantOrganization extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("tenants", this.getTenants());
     }
     /**
-     * Sets the createdDateTime property value. Date when multi-tenant organization was created. Read-only.
+     * Sets the createdDateTime property value. Date when multitenant organization was created. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.createdDateTime = value;
     }
     /**
-     * Sets the description property value. Description of the multi-tenant organization.
+     * Sets the description property value. Description of the multitenant organization.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.description = value;
     }
     /**
-     * Sets the displayName property value. Display name of the multi-tenant organization.
+     * Sets the displayName property value. Display name of the multitenant organization.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the joinRequest property value. Defines the status of a tenant joining a multi-tenant organization.
+     * Sets the joinRequest property value. Defines the status of a tenant joining a multitenant organization.
      * @param value Value to set for the joinRequest property.
      */
     public void setJoinRequest(@jakarta.annotation.Nullable final MultiTenantOrganizationJoinRequestRecord value) {
         this.joinRequest = value;
     }
     /**
-     * Sets the state property value. State of the multi-tenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multi-tenant organization is created. inactive indicates the multi-tenant organization is not created. Read-only.
+     * Sets the state property value. State of the multitenant organization. The possible values are: active, inactive, unknownFutureValue. active indicates the multitenant organization is created. inactive indicates the multitenant organization isn't created. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final MultiTenantOrganizationState value) {
         this.state = value;
     }
     /**
-     * Sets the tenants property value. Defines tenants added to a multi-tenant organization.
+     * Sets the tenants property value. Defines tenants added to a multitenant organization.
      * @param value Value to set for the tenants property.
      */
     public void setTenants(@jakarta.annotation.Nullable final java.util.List<MultiTenantOrganizationMember> value) {

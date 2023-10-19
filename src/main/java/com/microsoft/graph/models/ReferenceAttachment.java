@@ -33,7 +33,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      */
     private String thumbnailUrl;
     /**
-     * Instantiates a new referenceAttachment and sets the default values.
+     * Instantiates a new ReferenceAttachment and sets the default values.
      */
     public ReferenceAttachment() {
         super();
@@ -42,7 +42,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a referenceAttachment
+     * @return a ReferenceAttachment
      */
     @jakarta.annotation.Nonnull
     public static ReferenceAttachment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the isFolder property value. Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFolder() {
@@ -74,7 +74,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the permission property value. Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
-     * @return a referenceAttachmentPermission
+     * @return a ReferenceAttachmentPermission
      */
     @jakarta.annotation.Nullable
     public ReferenceAttachmentPermission getPermission() {
@@ -82,7 +82,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the previewUrl property value. Applies to only a reference attachment of an image - URL to get a preview image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreviewUrl() {
@@ -90,7 +90,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the providerType property value. The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
-     * @return a referenceAttachmentProvider
+     * @return a ReferenceAttachmentProvider
      */
     @jakarta.annotation.Nullable
     public ReferenceAttachmentProvider getProviderType() {
@@ -98,7 +98,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the sourceUrl property value. URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceUrl() {
@@ -106,7 +106,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. Applies to only a reference attachment of an image - URL to get a thumbnail image. Use thumbnailUrl and previewUrl only when sourceUrl identifies an image file. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {

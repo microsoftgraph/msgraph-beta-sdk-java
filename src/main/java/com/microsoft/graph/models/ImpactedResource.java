@@ -18,11 +18,11 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     private java.util.List<KeyValue> additionalDetails;
     /**
-     * The URL link to the corresponding Azure AD resource.
+     * The URL link to the corresponding Microsoft Entra resource.
      */
     private String apiUrl;
     /**
-     * Friendly name of the Azure AD resource.
+     * Friendly name of the Microsoft Entra resource.
      */
     private String displayName;
     /**
@@ -38,7 +38,7 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     private String owner;
     /**
-     * The URL link to the corresponding Azure AD portal page of the resource.
+     * The URL link to the corresponding Microsoft Entra admin center page of the resource.
      */
     private String portalUrl;
     /**
@@ -54,7 +54,7 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     private String recommendationId;
     /**
-     * Indicates the type of Azure AD resource. Examples include user, application.
+     * Indicates the type of Microsoft Entra resource. Examples include user, application.
      */
     private String resourceType;
     /**
@@ -66,7 +66,7 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     private String subjectId;
     /**
-     * Instantiates a new impactedResource and sets the default values.
+     * Instantiates a new ImpactedResource and sets the default values.
      */
     public ImpactedResource() {
         super();
@@ -74,7 +74,7 @@ public class ImpactedResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a impactedResource
+     * @return a ImpactedResource
      */
     @jakarta.annotation.Nonnull
     public static ImpactedResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -91,23 +91,23 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the additionalDetails property value. Additional information unique to the impactedResource to help contextualize the recommendation.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
         return this.additionalDetails;
     }
     /**
-     * Gets the apiUrl property value. The URL link to the corresponding Azure AD resource.
-     * @return a string
+     * Gets the apiUrl property value. The URL link to the corresponding Microsoft Entra resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApiUrl() {
         return this.apiUrl;
     }
     /**
-     * Gets the displayName property value. Friendly name of the Azure AD resource.
-     * @return a string
+     * Gets the displayName property value. Friendly name of the Microsoft Entra resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -138,7 +138,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Name of the user or service that last updated the status.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedBy() {
@@ -146,7 +146,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the status was last updated.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModifiedDateTime() {
@@ -154,15 +154,15 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The user responsible for maintaining the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
         return this.owner;
     }
     /**
-     * Gets the portalUrl property value. The URL link to the corresponding Azure AD portal page of the resource.
-     * @return a string
+     * Gets the portalUrl property value. The URL link to the corresponding Microsoft Entra admin center page of the resource.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPortalUrl() {
@@ -178,7 +178,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the rank property value. Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRank() {
@@ -186,15 +186,15 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the recommendationId property value. The unique identifier of the recommendation that the resource is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendationId() {
         return this.recommendationId;
     }
     /**
-     * Gets the resourceType property value. Indicates the type of Azure AD resource. Examples include user, application.
-     * @return a string
+     * Gets the resourceType property value. Indicates the type of Microsoft Entra resource. Examples include user, application.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceType() {
@@ -202,7 +202,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a recommendationStatus
+     * @return a RecommendationStatus
      */
     @jakarta.annotation.Nullable
     public RecommendationStatus getStatus() {
@@ -210,7 +210,7 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the subjectId property value. The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectId() {
@@ -253,14 +253,14 @@ public class ImpactedResource extends Entity implements Parsable {
         this.additionalDetails = value;
     }
     /**
-     * Sets the apiUrl property value. The URL link to the corresponding Azure AD resource.
+     * Sets the apiUrl property value. The URL link to the corresponding Microsoft Entra resource.
      * @param value Value to set for the apiUrl property.
      */
     public void setApiUrl(@jakarta.annotation.Nullable final String value) {
         this.apiUrl = value;
     }
     /**
-     * Sets the displayName property value. Friendly name of the Azure AD resource.
+     * Sets the displayName property value. Friendly name of the Microsoft Entra resource.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -288,7 +288,7 @@ public class ImpactedResource extends Entity implements Parsable {
         this.owner = value;
     }
     /**
-     * Sets the portalUrl property value. The URL link to the corresponding Azure AD portal page of the resource.
+     * Sets the portalUrl property value. The URL link to the corresponding Microsoft Entra admin center page of the resource.
      * @param value Value to set for the portalUrl property.
      */
     public void setPortalUrl(@jakarta.annotation.Nullable final String value) {
@@ -316,7 +316,7 @@ public class ImpactedResource extends Entity implements Parsable {
         this.recommendationId = value;
     }
     /**
-     * Sets the resourceType property value. Indicates the type of Azure AD resource. Examples include user, application.
+     * Sets the resourceType property value. Indicates the type of Microsoft Entra resource. Examples include user, application.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {

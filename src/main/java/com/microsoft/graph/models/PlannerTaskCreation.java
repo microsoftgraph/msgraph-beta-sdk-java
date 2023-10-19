@@ -26,7 +26,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      */
     private PlannerTeamsPublicationInfo teamsPublicationInfo;
     /**
-     * Instantiates a new plannerTaskCreation and sets the default values.
+     * Instantiates a new PlannerTaskCreation and sets the default values.
      */
     public PlannerTaskCreation() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTaskCreation
+     * @return a PlannerTaskCreation
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskCreation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
         return new PlannerTaskCreation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the creationSourceKind property value. Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
-     * @return a plannerCreationSourceKind
+     * @return a PlannerCreationSourceKind
      */
     @jakarta.annotation.Nullable
     public PlannerCreationSourceKind getCreationSourceKind() {
@@ -79,7 +79,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -87,7 +87,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the teamsPublicationInfo property value. Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
-     * @return a plannerTeamsPublicationInfo
+     * @return a PlannerTeamsPublicationInfo
      */
     @jakarta.annotation.Nullable
     public PlannerTeamsPublicationInfo getTeamsPublicationInfo() {
@@ -105,8 +105,8 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

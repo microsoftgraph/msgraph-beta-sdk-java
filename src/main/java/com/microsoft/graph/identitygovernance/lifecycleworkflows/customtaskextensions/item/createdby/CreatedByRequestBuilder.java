@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.customtaskextensions.item.createdby;
 
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.customtaskextensions.item.createdby.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.customtaskextensions.item.createdby.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,13 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new CreatedByRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -45,17 +53,17 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/customTaskExtensions/{customTaskExtension%2Did}/createdBy{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
-     * @return a CompletableFuture of user
+     * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get() {
         return get(null);
     }
     /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -66,7 +74,7 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -74,17 +82,13 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -92,12 +96,16 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createdByRequestBuilder
+     * @return a CreatedByRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreatedByRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -105,7 +113,7 @@ public class CreatedByRequestBuilder extends BaseRequestBuilder {
         return new CreatedByRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

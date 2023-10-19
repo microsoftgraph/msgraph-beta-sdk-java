@@ -55,7 +55,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
      */
     private String userId;
     /**
-     * Instantiates a new privilegedApproval and sets the default values.
+     * Instantiates a new PrivilegedApproval and sets the default values.
      */
     public PrivilegedApproval() {
         super();
@@ -63,7 +63,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedApproval
+     * @return a PrivilegedApproval
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedApproval createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -80,7 +80,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalState property value. The approvalState property
-     * @return a approvalState
+     * @return a ApprovalState
      */
     @jakarta.annotation.Nullable
     public ApprovalState getApprovalState() {
@@ -88,7 +88,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approvalType property value. The approvalType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApprovalType() {
@@ -96,7 +96,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the approverReason property value. The approverReason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApproverReason() {
@@ -132,7 +132,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the request property value. The request property
-     * @return a privilegedRoleAssignmentRequest
+     * @return a PrivilegedRoleAssignmentRequest
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleAssignmentRequest getRequest() {
@@ -140,7 +140,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the requestorReason property value. The requestorReason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestorReason() {
@@ -148,7 +148,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
@@ -156,7 +156,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the roleInfo property value. The roleInfo property
-     * @return a privilegedRole
+     * @return a PrivilegedRole
      */
     @jakarta.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
@@ -172,7 +172,7 @@ public class PrivilegedApproval extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

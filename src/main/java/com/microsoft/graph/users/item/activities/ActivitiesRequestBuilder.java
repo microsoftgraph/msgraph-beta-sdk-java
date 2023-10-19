@@ -68,7 +68,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The user's activities across devices. Read-only. Nullable.
-     * @return a CompletableFuture of userActivityCollectionResponse
+     * @return a CompletableFuture of UserActivityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserActivityCollectionResponse> get() {
@@ -77,7 +77,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * The user's activities across devices. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userActivityCollectionResponse
+     * @return a CompletableFuture of UserActivityCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserActivityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,7 +90,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to activities for users
      * @param body The request body
-     * @return a CompletableFuture of userActivity
+     * @return a CompletableFuture of UserActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserActivity> post(@jakarta.annotation.Nonnull final UserActivity body) {
@@ -100,7 +100,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to activities for users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userActivity
+     * @return a CompletableFuture of UserActivity
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserActivity> post(@jakarta.annotation.Nonnull final UserActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,10 +127,6 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -138,6 +134,10 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -159,23 +159,23 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserActivity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activitiesRequestBuilder
+     * @return a ActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

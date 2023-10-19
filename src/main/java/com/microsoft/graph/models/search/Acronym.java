@@ -17,7 +17,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      */
     private AnswerState state;
     /**
-     * Instantiates a new acronym and sets the default values.
+     * Instantiates a new Acronym and sets the default values.
      */
     public Acronym() {
         super();
@@ -25,7 +25,7 @@ public class Acronym extends SearchAnswer implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a acronym
+     * @return a Acronym
      */
     @jakarta.annotation.Nonnull
     public static Acronym createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class Acronym extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the standsFor property value. What the acronym stands for.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStandsFor() {
@@ -53,7 +53,7 @@ public class Acronym extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a answerState
+     * @return a AnswerState
      */
     @jakarta.annotation.Nullable
     public AnswerState getState() {

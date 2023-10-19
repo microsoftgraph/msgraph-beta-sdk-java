@@ -13,7 +13,7 @@ public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<SalesOrderLine> value;
     /**
-     * Instantiates a new salesOrderLineCollectionResponse and sets the default values.
+     * Instantiates a new SalesOrderLineCollectionResponse and sets the default values.
      */
     public SalesOrderLineCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a salesOrderLineCollectionResponse
+     * @return a SalesOrderLineCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SalesOrderLineCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class SalesOrderLineCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a salesOrderLine
+     * @return a java.util.List<SalesOrderLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SalesOrderLine> getValue() {

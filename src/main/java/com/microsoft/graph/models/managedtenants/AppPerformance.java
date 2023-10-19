@@ -51,7 +51,7 @@ public class AppPerformance extends Entity implements Parsable {
      */
     private Integer totalAppFreezeCount;
     /**
-     * Instantiates a new appPerformance and sets the default values.
+     * Instantiates a new AppPerformance and sets the default values.
      */
     public AppPerformance() {
         super();
@@ -59,7 +59,7 @@ public class AppPerformance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appPerformance
+     * @return a AppPerformance
      */
     @jakarta.annotation.Nonnull
     public static AppPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appFriendlyName property value. The appFriendlyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppFriendlyName() {
@@ -76,7 +76,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appName property value. The appName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -84,7 +84,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appPublisher property value. The appPublisher property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -119,7 +119,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The meanTimeToFailureInMinutes property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {
@@ -127,7 +127,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The tenantDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -135,7 +135,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -143,7 +143,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the totalActiveDeviceCount property value. The totalActiveDeviceCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalActiveDeviceCount() {
@@ -151,7 +151,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the totalAppCrashCount property value. The totalAppCrashCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAppCrashCount() {
@@ -159,7 +159,7 @@ public class AppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the totalAppFreezeCount property value. The totalAppFreezeCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAppFreezeCount() {

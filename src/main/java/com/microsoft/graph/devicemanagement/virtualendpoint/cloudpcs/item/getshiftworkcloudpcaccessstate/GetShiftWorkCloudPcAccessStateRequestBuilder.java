@@ -37,18 +37,24 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState
-     * @return a CompletableFuture of shiftWorkCloudPcAccessState
+     * @return a CompletableFuture of ShiftWorkCloudPcAccessState
+     * @deprecated
+     * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<ShiftWorkCloudPcAccessState> get() {
         return get(null);
     }
     /**
      * Invoke function getShiftWorkCloudPcAccessState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of shiftWorkCloudPcAccessState
+     * @return a CompletableFuture of ShiftWorkCloudPcAccessState
+     * @deprecated
+     * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public java.util.concurrent.CompletableFuture<ShiftWorkCloudPcAccessState> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -59,8 +65,11 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
     /**
      * Invoke function getShiftWorkCloudPcAccessState
      * @return a RequestInformation
+     * @deprecated
+     * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -68,28 +77,34 @@ public class GetShiftWorkCloudPcAccessStateRequestBuilder extends BaseRequestBui
      * Invoke function getShiftWorkCloudPcAccessState
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
+     * @deprecated
+     * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getShiftWorkCloudPcAccessStateRequestBuilder
+     * @return a GetShiftWorkCloudPcAccessStateRequestBuilder
+     * @deprecated
+     * The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API as of 2023-08/getShiftWorkCloudPcAccessState on 2023-09-05 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetShiftWorkCloudPcAccessStateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GetShiftWorkCloudPcAccessStateRequestBuilder(rawUrl, requestAdapter);

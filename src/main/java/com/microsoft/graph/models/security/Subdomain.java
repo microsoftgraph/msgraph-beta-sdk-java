@@ -19,7 +19,7 @@ public class Subdomain extends Entity implements Parsable {
      */
     private Host host;
     /**
-     * Instantiates a new subdomain and sets the default values.
+     * Instantiates a new Subdomain and sets the default values.
      */
     public Subdomain() {
         super();
@@ -27,7 +27,7 @@ public class Subdomain extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subdomain
+     * @return a Subdomain
      */
     @jakarta.annotation.Nonnull
     public static Subdomain createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class Subdomain extends Entity implements Parsable {
     }
     /**
      * Gets the host property value. The host property
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nullable
     public Host getHost() {

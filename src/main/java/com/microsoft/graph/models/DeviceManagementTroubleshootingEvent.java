@@ -33,7 +33,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
      */
     private DeviceManagementTroubleshootingErrorDetails troubleshootingErrorDetails;
     /**
-     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
      */
     public DeviceManagementTroubleshootingEvent() {
         super();
@@ -41,7 +41,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a DeviceManagementTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     }
     /**
      * Gets the additionalInformation property value. A set of string key and string value pairs which provides additional information on the Troubleshooting event
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAdditionalInformation() {
@@ -67,7 +67,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     }
     /**
      * Gets the correlationId property value. Id used for tracing the failure in the service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -83,7 +83,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     }
     /**
      * Gets the eventName property value. Event Name corresponding to the Troubleshooting Event. It is an Optional field
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
@@ -105,7 +105,7 @@ public class DeviceManagementTroubleshootingEvent extends Entity implements Pars
     }
     /**
      * Gets the troubleshootingErrorDetails property value. Object containing detailed information about the error and its remediation.
-     * @return a deviceManagementTroubleshootingErrorDetails
+     * @return a DeviceManagementTroubleshootingErrorDetails
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTroubleshootingErrorDetails getTroubleshootingErrorDetails() {

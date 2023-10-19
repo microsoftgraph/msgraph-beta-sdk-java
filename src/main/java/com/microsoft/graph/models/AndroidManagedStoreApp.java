@@ -48,7 +48,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     private Integer usedLicenseCount;
     /**
-     * Instantiates a new androidManagedStoreApp and sets the default values.
+     * Instantiates a new AndroidManagedStoreApp and sets the default values.
      */
     public AndroidManagedStoreApp() {
         super();
@@ -57,7 +57,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreApp
+     * @return a AndroidManagedStoreApp
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appIdentifier property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppIdentifier() {
@@ -81,7 +81,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appStoreUrl property value. The Play for Work Store app URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
@@ -89,7 +89,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appTracks property value. The tracks that are visible to this enterprise.
-     * @return a androidManagedStoreAppTrack
+     * @return a java.util.List<AndroidManagedStoreAppTrack>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppTrack> getAppTracks() {
@@ -115,7 +115,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivate() {
@@ -123,7 +123,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the isSystemApp property value. Indicates whether the app is a preinstalled system app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSystemApp() {
@@ -131,7 +131,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the packageId property value. The package identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
@@ -139,7 +139,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSupportsOemConfig() {
@@ -147,7 +147,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the totalLicenseCount property value. The total number of VPP licenses.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
@@ -155,7 +155,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {

@@ -62,7 +62,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      */
     private String toolTip;
     /**
-     * Instantiates a new sensitivityLabel and sets the default values.
+     * Instantiates a new SensitivityLabel and sets the default values.
      */
     public SensitivityLabel() {
         super();
@@ -70,7 +70,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitivityLabel
+     * @return a SensitivityLabel
      */
     @jakarta.annotation.Nonnull
     public static SensitivityLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,7 +79,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the applicableTo property value. The applicableTo property
-     * @return a sensitivityLabelTarget
+     * @return a EnumSet<SensitivityLabelTarget>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitivityLabelTarget> getApplicableTo() {
@@ -87,7 +87,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
-     * @return a applicationMode
+     * @return a ApplicationMode
      */
     @jakarta.annotation.Nullable
     public ApplicationMode getApplicationMode() {
@@ -95,7 +95,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the assignedPolicies property value. The assignedPolicies property
-     * @return a labelPolicy
+     * @return a java.util.List<LabelPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LabelPolicy> getAssignedPolicies() {
@@ -103,7 +103,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the autoLabeling property value. The autoLabeling property
-     * @return a autoLabeling
+     * @return a AutoLabeling
      */
     @jakarta.annotation.Nullable
     public AutoLabeling getAutoLabeling() {
@@ -111,7 +111,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -119,7 +119,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -149,7 +149,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isDefault property value. The isDefault property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -157,7 +157,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEndpointProtectionEnabled() {
@@ -165,7 +165,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the labelActions property value. The labelActions property
-     * @return a labelActionBase
+     * @return a java.util.List<LabelActionBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LabelActionBase> getLabelActions() {
@@ -173,7 +173,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -181,7 +181,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -189,7 +189,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the sublabels property value. The sublabels property
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSublabels() {
@@ -197,7 +197,7 @@ public class SensitivityLabel extends Entity implements Parsable {
     }
     /**
      * Gets the toolTip property value. The toolTip property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getToolTip() {

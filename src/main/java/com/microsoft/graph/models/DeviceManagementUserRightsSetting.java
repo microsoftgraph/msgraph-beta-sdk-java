@@ -29,7 +29,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
      */
     private StateManagementSetting state;
     /**
-     * Instantiates a new deviceManagementUserRightsSetting and sets the default values.
+     * Instantiates a new DeviceManagementUserRightsSetting and sets the default values.
      */
     public DeviceManagementUserRightsSetting() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementUserRightsSetting
+     * @return a DeviceManagementUserRightsSetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementUserRightsSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
         return new DeviceManagementUserRightsSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the localUsersOrGroups property value. Representing a collection of local users or groups which will be set on device if the state of this setting is Allowed. This collection can contain a maximum of 500 elements.
-     * @return a deviceManagementUserRightsLocalUserOrGroup
+     * @return a java.util.List<DeviceManagementUserRightsLocalUserOrGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementUserRightsLocalUserOrGroup> getLocalUsersOrGroups() {
@@ -74,7 +74,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -82,7 +82,7 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
     }
     /**
      * Gets the state property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getState() {
@@ -100,8 +100,8 @@ public class DeviceManagementUserRightsSetting implements AdditionalDataHolder, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

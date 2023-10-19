@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
      */
     private String serialNumber;
     /**
-     * Instantiates a new userExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsNotAutopilotReadyDevice and sets the default values.
      */
     public UserExperienceAnalyticsNotAutopilotReadyDevice() {
         super();
@@ -56,7 +56,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a UserExperienceAnalyticsNotAutopilotReadyDevice
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsNotAutopilotReadyDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the autoPilotProfileAssigned property value. The intune device's autopilotProfileAssigned.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotProfileAssigned() {
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the autoPilotRegistered property value. The intune device's autopilotRegistered.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoPilotRegistered() {
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the azureAdJoinType property value. The intune device's azure Ad joinType.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureAdJoinType() {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the azureAdRegistered property value. The intune device's azureAdRegistered.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAzureAdRegistered() {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the deviceName property value. The intune device's name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -123,7 +123,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the managedBy property value. The intune device's managed by.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedBy() {
@@ -131,7 +131,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the manufacturer property value. The intune device's manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -139,7 +139,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the model property value. The intune device's model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -147,7 +147,7 @@ public class UserExperienceAnalyticsNotAutopilotReadyDevice extends Entity imple
     }
     /**
      * Gets the serialNumber property value. The intune device's serial number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {

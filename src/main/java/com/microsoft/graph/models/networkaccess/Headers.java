@@ -30,7 +30,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
      */
     private String xForwardedFor;
     /**
-     * Instantiates a new headers and sets the default values.
+     * Instantiates a new Headers and sets the default values.
      */
     public Headers() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a headers
+     * @return a Headers
      */
     @jakarta.annotation.Nonnull
     public static Headers createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
         return new Headers();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -76,7 +76,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the origin property value. Represents the origin or source from which the request is being made.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrigin() {
@@ -84,7 +84,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the referrer property value. Represents the referring URL or the URL of the web page that the current request originates from.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferrer() {
@@ -92,7 +92,7 @@ public class Headers implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the xForwardedFor property value. Represents the information about the client original IP address when the request passes through one or more proxy servers or load balancers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getXForwardedFor() {
@@ -111,8 +111,8 @@ public class Headers implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

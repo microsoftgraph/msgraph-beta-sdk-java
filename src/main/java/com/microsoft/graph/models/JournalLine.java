@@ -74,7 +74,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
      */
     private LocalDate postingDate;
     /**
-     * Instantiates a new journalLine and sets the default values.
+     * Instantiates a new JournalLine and sets the default values.
      */
     public JournalLine() {
         this.setAdditionalData(new HashMap<>());
@@ -82,7 +82,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a journalLine
+     * @return a JournalLine
      */
     @jakarta.annotation.Nonnull
     public static JournalLine createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +91,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
@@ -107,14 +107,14 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountNumber property value. The accountNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountNumber() {
         return this.accountNumber;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the amount property value. The amount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getAmount() {
@@ -131,7 +131,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the comment property value. The comment property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getComment() {
@@ -139,7 +139,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -147,7 +147,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the documentNumber property value. The documentNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDocumentNumber() {
@@ -155,7 +155,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalDocumentNumber property value. The externalDocumentNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalDocumentNumber() {
@@ -194,7 +194,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the journalDisplayName property value. The journalDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJournalDisplayName() {
@@ -210,7 +210,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lineNumber property value. The lineNumber property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLineNumber() {
@@ -218,7 +218,7 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -276,8 +276,8 @@ public class JournalLine implements AdditionalDataHolder, Parsable {
         this.accountNumber = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

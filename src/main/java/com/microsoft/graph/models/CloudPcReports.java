@@ -13,7 +13,7 @@ public class CloudPcReports extends Entity implements Parsable {
      */
     private java.util.List<CloudPcExportJob> exportJobs;
     /**
-     * Instantiates a new cloudPcReports and sets the default values.
+     * Instantiates a new CloudPcReports and sets the default values.
      */
     public CloudPcReports() {
         super();
@@ -21,7 +21,7 @@ public class CloudPcReports extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcReports
+     * @return a CloudPcReports
      */
     @jakarta.annotation.Nonnull
     public static CloudPcReports createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class CloudPcReports extends Entity implements Parsable {
     }
     /**
      * Gets the exportJobs property value. The export jobs created for downloading reports.
-     * @return a cloudPcExportJob
+     * @return a java.util.List<CloudPcExportJob>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcExportJob> getExportJobs() {

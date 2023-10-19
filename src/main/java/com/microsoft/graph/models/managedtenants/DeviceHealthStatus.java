@@ -71,7 +71,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
      */
     private String topProcesses;
     /**
-     * Instantiates a new deviceHealthStatus and sets the default values.
+     * Instantiates a new DeviceHealthStatus and sets the default values.
      */
     public DeviceHealthStatus() {
         super();
@@ -79,7 +79,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthStatus
+     * @return a DeviceHealthStatus
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,7 +88,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the blueScreenCount property value. The blueScreenCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBlueScreenCount() {
@@ -96,7 +96,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the bootTotalDurationInSeconds property value. The bootTotalDurationInSeconds property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getBootTotalDurationInSeconds() {
@@ -104,7 +104,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -112,7 +112,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceMake property value. The deviceMake property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceMake() {
@@ -120,7 +120,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The deviceModel property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -128,7 +128,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -160,7 +160,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthStatus() {
@@ -176,7 +176,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. The osVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -184,7 +184,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the primaryDiskType property value. The primaryDiskType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryDiskType() {
@@ -192,7 +192,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the restartCount property value. The restartCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRestartCount() {
@@ -200,7 +200,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the startupPerformanceScore property value. The startupPerformanceScore property
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getStartupPerformanceScore() {
@@ -208,7 +208,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The tenantDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -216,7 +216,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -224,7 +224,7 @@ public class DeviceHealthStatus extends Entity implements Parsable {
     }
     /**
      * Gets the topProcesses property value. The topProcesses property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTopProcesses() {

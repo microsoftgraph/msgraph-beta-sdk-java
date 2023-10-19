@@ -35,7 +35,7 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/external/industryData/dataConnectors/{industryDataConnector%2Did}/microsoft.graph.industryData.validate", rawUrl);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector.
+     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-validate?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -43,7 +43,7 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         return post(null);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector.
+     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/industrydata-industrydataconnector-validate?view=graph-rest-1.0">Find more info here</a>
      */
@@ -56,7 +56,7 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector.
+     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -64,28 +64,28 @@ public class MicrosoftGraphIndustryDataValidateRequestBuilder extends BaseReques
         return toPostRequestInformation(null);
     }
     /**
-     * Perform validations applicable for the specific instance of the data connector.
+     * Perform validations applicable for the specific instance of the data connector. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphIndustryDataValidateRequestBuilder
+     * @return a MicrosoftGraphIndustryDataValidateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIndustryDataValidateRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

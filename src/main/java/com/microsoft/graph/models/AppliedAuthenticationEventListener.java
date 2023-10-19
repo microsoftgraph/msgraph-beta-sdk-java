@@ -30,7 +30,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
      */
     private String odataType;
     /**
-     * Instantiates a new appliedAuthenticationEventListener and sets the default values.
+     * Instantiates a new AppliedAuthenticationEventListener and sets the default values.
      */
     public AppliedAuthenticationEventListener() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appliedAuthenticationEventListener
+     * @return a AppliedAuthenticationEventListener
      */
     @jakarta.annotation.Nonnull
     public static AppliedAuthenticationEventListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
         return new AppliedAuthenticationEventListener();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
-     * @return a authenticationEventType
+     * @return a AuthenticationEventType
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventType getEventType() {
@@ -63,7 +63,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the executedListenerId property value. ID of the authentication event listener that was executed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExecutedListenerId() {
@@ -84,7 +84,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the handlerResult property value. The result from the listening client, such as an Azure Logic App and Azure Functions, of this authentication event.
-     * @return a authenticationEventHandlerResult
+     * @return a AuthenticationEventHandlerResult
      */
     @jakarta.annotation.Nullable
     public AuthenticationEventHandlerResult getHandlerResult() {
@@ -92,7 +92,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -14,15 +14,15 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The appScope property
+     * App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      */
     private OAuthAppScope appScope;
     /**
-     * The displayLogo property
+     * App display logo.
      */
     private String displayLogo;
     /**
-     * The displayName property
+     * App name.
      */
     private String displayName;
     /**
@@ -30,7 +30,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new oAuthConsentAppDetail and sets the default values.
+     * Instantiates a new OAuthConsentAppDetail and sets the default values.
      */
     public OAuthConsentAppDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a oAuthConsentAppDetail
+     * @return a OAuthConsentAppDetail
      */
     @jakarta.annotation.Nonnull
     public static OAuthConsentAppDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         return new OAuthConsentAppDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,24 +54,24 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the appScope property value. The appScope property
-     * @return a oAuthAppScope
+     * Gets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
+     * @return a OAuthAppScope
      */
     @jakarta.annotation.Nullable
     public OAuthAppScope getAppScope() {
         return this.appScope;
     }
     /**
-     * Gets the displayLogo property value. The displayLogo property
-     * @return a string
+     * Gets the displayLogo property value. App display logo.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayLogo() {
         return this.displayLogo;
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
+     * Gets the displayName property value. App name.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -92,7 +92,7 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,28 +111,28 @@ public class OAuthConsentAppDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the appScope property value. The appScope property
+     * Sets the appScope property value. App scope. Possible values are: unknown, readCalendar, readContact, readMail, readAllChat, readAllFile, readAndWriteMail, sendMail, unknownFutureValue.
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final OAuthAppScope value) {
         this.appScope = value;
     }
     /**
-     * Sets the displayLogo property value. The displayLogo property
+     * Sets the displayLogo property value. App display logo.
      * @param value Value to set for the displayLogo property.
      */
     public void setDisplayLogo(@jakarta.annotation.Nullable final String value) {
         this.displayLogo = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. App name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

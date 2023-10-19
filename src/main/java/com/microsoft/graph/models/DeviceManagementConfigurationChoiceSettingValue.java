@@ -20,7 +20,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      */
     private String value;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingValue and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingValue and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingValue() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingValue
+     * @return a DeviceManagementConfigurationChoiceSettingValue
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
     }
     /**
      * Gets the children property value. Child settings.
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a java.util.List<DeviceManagementConfigurationSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingInstance> getChildren() {
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
     }
     /**
      * Gets the value property value. Choice setting value: an OptionDefinition ItemId.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

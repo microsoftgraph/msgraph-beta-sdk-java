@@ -13,7 +13,7 @@ public class AttackSimulationOperationCollectionResponse extends BaseCollectionP
      */
     private java.util.List<AttackSimulationOperation> value;
     /**
-     * Instantiates a new attackSimulationOperationCollectionResponse and sets the default values.
+     * Instantiates a new AttackSimulationOperationCollectionResponse and sets the default values.
      */
     public AttackSimulationOperationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AttackSimulationOperationCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationOperationCollectionResponse
+     * @return a AttackSimulationOperationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationOperationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AttackSimulationOperationCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a attackSimulationOperation
+     * @return a java.util.List<AttackSimulationOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AttackSimulationOperation> getValue() {

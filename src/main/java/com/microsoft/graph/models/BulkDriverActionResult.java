@@ -33,7 +33,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> successfulDriverIds;
     /**
-     * Instantiates a new bulkDriverActionResult and sets the default values.
+     * Instantiates a new BulkDriverActionResult and sets the default values.
      */
     public BulkDriverActionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bulkDriverActionResult
+     * @return a BulkDriverActionResult
      */
     @jakarta.annotation.Nonnull
     public static BulkDriverActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
         return new BulkDriverActionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the failedDriverIds property value. List of driver Ids where the action is failed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFailedDriverIds() {
@@ -79,7 +79,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the notFoundDriverIds property value. List of driver Ids that are not found.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotFoundDriverIds() {
@@ -87,7 +87,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the successfulDriverIds property value. List of driver Ids where the action is successful.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSuccessfulDriverIds() {
@@ -114,8 +114,8 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

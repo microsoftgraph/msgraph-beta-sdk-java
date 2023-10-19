@@ -59,7 +59,7 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get ports from security
-     * @return a CompletableFuture of hostPortCollectionResponse
+     * @return a CompletableFuture of HostPortCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPortCollectionResponse> get() {
@@ -68,7 +68,7 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get ports from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPortCollectionResponse
+     * @return a CompletableFuture of HostPortCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPortCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -94,10 +94,6 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -105,12 +101,16 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a portsRequestBuilder
+     * @return a PortsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PortsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

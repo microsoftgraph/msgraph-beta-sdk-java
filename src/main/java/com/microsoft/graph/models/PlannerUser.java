@@ -41,7 +41,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
      */
     private java.util.List<PlannerTask> tasks;
     /**
-     * Instantiates a new plannerUser and sets the default values.
+     * Instantiates a new PlannerUser and sets the default values.
      */
     public PlannerUser() {
         super();
@@ -49,7 +49,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerUser
+     * @return a PlannerUser
      */
     @jakarta.annotation.Nonnull
     public static PlannerUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the all property value. The all property
-     * @return a plannerDelta
+     * @return a java.util.List<PlannerDelta>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerDelta> getAll() {
@@ -66,7 +66,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the favoritePlanReferences property value. A collection that contains the references to the plans that the user has marked as favorites.
-     * @return a plannerFavoritePlanReferenceCollection
+     * @return a PlannerFavoritePlanReferenceCollection
      */
     @jakarta.annotation.Nullable
     public PlannerFavoritePlanReferenceCollection getFavoritePlanReferences() {
@@ -74,7 +74,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the favoritePlans property value. Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getFavoritePlans() {
@@ -99,7 +99,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the plans property value. The plans property
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
@@ -107,7 +107,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the recentPlanReferences property value. A collection that contains references to the plans that were viewed recently by the user in apps that support recent plans.
-     * @return a plannerRecentPlanReferenceCollection
+     * @return a PlannerRecentPlanReferenceCollection
      */
     @jakarta.annotation.Nullable
     public PlannerRecentPlanReferenceCollection getRecentPlanReferences() {
@@ -115,7 +115,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the recentPlans property value. Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getRecentPlans() {
@@ -123,7 +123,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the rosterPlans property value. Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getRosterPlans() {
@@ -131,7 +131,7 @@ public class PlannerUser extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns the plannerTasks assigned to the user.
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {

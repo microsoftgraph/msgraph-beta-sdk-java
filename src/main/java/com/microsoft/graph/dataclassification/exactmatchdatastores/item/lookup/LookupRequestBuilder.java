@@ -37,26 +37,26 @@ public class LookupRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action lookup
      * @param body The request body
-     * @return a CompletableFuture of lookupResponse
+     * @return a CompletableFuture of LookupPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LookupResponse> post(@jakarta.annotation.Nonnull final LookupPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<LookupPostResponse> post(@jakarta.annotation.Nonnull final LookupPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action lookup
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of lookupResponse
+     * @return a CompletableFuture of LookupPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<LookupResponse> post(@jakarta.annotation.Nonnull final LookupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<LookupPostResponse> post(@jakarta.annotation.Nonnull final LookupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, LookupResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, LookupPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action lookup
@@ -77,23 +77,23 @@ public class LookupRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LookupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a lookupRequestBuilder
+     * @return a LookupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LookupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

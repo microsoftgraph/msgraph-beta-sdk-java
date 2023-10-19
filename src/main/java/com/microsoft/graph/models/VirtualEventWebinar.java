@@ -17,15 +17,15 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
      */
     private java.util.List<CommunicationsUserIdentity> coOrganizers;
     /**
-     * The registrationConfiguration property
+     * Registration configuration of the webinar.
      */
     private VirtualEventRegistrationConfiguration registrationConfiguration;
     /**
-     * The registrations property
+     * Registration records of the webinar.
      */
     private java.util.List<VirtualEventRegistration> registrations;
     /**
-     * Instantiates a new virtualEventWebinar and sets the default values.
+     * Instantiates a new VirtualEventWebinar and sets the default values.
      */
     public VirtualEventWebinar() {
         super();
@@ -33,7 +33,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventWebinar
+     * @return a VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventWebinar createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the audience property value. To whom the webinar is visible.
-     * @return a meetingAudience
+     * @return a MeetingAudience
      */
     @jakarta.annotation.Nullable
     public MeetingAudience getAudience() {
@@ -50,7 +50,7 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
     }
     /**
      * Gets the coOrganizers property value. Identity information of coorganizers of the webinar.
-     * @return a communicationsUserIdentity
+     * @return a java.util.List<CommunicationsUserIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CommunicationsUserIdentity> getCoOrganizers() {
@@ -70,16 +70,16 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the registrationConfiguration property value. The registrationConfiguration property
-     * @return a virtualEventRegistrationConfiguration
+     * Gets the registrationConfiguration property value. Registration configuration of the webinar.
+     * @return a VirtualEventRegistrationConfiguration
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationConfiguration getRegistrationConfiguration() {
         return this.registrationConfiguration;
     }
     /**
-     * Gets the registrations property value. The registrations property
-     * @return a virtualEventRegistration
+     * Gets the registrations property value. Registration records of the webinar.
+     * @return a java.util.List<VirtualEventRegistration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventRegistration> getRegistrations() {
@@ -112,14 +112,14 @@ public class VirtualEventWebinar extends VirtualEvent implements Parsable {
         this.coOrganizers = value;
     }
     /**
-     * Sets the registrationConfiguration property value. The registrationConfiguration property
+     * Sets the registrationConfiguration property value. Registration configuration of the webinar.
      * @param value Value to set for the registrationConfiguration property.
      */
     public void setRegistrationConfiguration(@jakarta.annotation.Nullable final VirtualEventRegistrationConfiguration value) {
         this.registrationConfiguration = value;
     }
     /**
-     * Sets the registrations property value. The registrations property
+     * Sets the registrations property value. Registration records of the webinar.
      * @param value Value to set for the registrations property.
      */
     public void setRegistrations(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistration> value) {

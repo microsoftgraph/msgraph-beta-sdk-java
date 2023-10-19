@@ -37,17 +37,17 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get registrationConfiguration from solutions
-     * @return a CompletableFuture of virtualEventRegistrationConfiguration
+     * Registration configuration of the webinar.
+     * @return a CompletableFuture of VirtualEventRegistrationConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistrationConfiguration> get() {
         return get(null);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Registration configuration of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventRegistrationConfiguration
+     * @return a CompletableFuture of VirtualEventRegistrationConfiguration
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistrationConfiguration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +58,7 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventRegistrationConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Registration configuration of the webinar.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,17 +66,13 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Registration configuration of the webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,12 +80,16 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a registrationConfigurationRequestBuilder
+     * @return a RegistrationConfigurationRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegistrationConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -97,7 +97,7 @@ public class RegistrationConfigurationRequestBuilder extends BaseRequestBuilder 
         return new RegistrationConfigurationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get registrationConfiguration from solutions
+     * Registration configuration of the webinar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

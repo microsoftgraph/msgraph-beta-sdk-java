@@ -116,7 +116,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
      */
     private String website;
     /**
-     * Instantiates a new customer and sets the default values.
+     * Instantiates a new Customer and sets the default values.
      */
     public Customer() {
         this.setAdditionalData(new HashMap<>());
@@ -124,7 +124,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customer
+     * @return a Customer
      */
     @jakarta.annotation.Nonnull
     public static Customer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -132,7 +132,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
         return new Customer();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. The address property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
@@ -149,7 +149,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the blocked property value. The blocked property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBlocked() {
@@ -157,7 +157,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a currency
+     * @return a Currency
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
@@ -165,7 +165,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -181,7 +181,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -189,7 +189,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. The email property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -247,7 +247,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -255,7 +255,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -263,7 +263,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the paymentMethod property value. The paymentMethod property
-     * @return a paymentMethod
+     * @return a PaymentMethod
      */
     @jakarta.annotation.Nullable
     public PaymentMethod getPaymentMethod() {
@@ -279,7 +279,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the paymentTerm property value. The paymentTerm property
-     * @return a paymentTerm
+     * @return a PaymentTerm
      */
     @jakarta.annotation.Nullable
     public PaymentTerm getPaymentTerm() {
@@ -295,7 +295,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
@@ -303,7 +303,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a picture
+     * @return a java.util.List<Picture>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -311,7 +311,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shipmentMethod property value. The shipmentMethod property
-     * @return a shipmentMethod
+     * @return a ShipmentMethod
      */
     @jakarta.annotation.Nullable
     public ShipmentMethod getShipmentMethod() {
@@ -327,7 +327,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the taxAreaDisplayName property value. The taxAreaDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxAreaDisplayName() {
@@ -343,7 +343,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the taxLiable property value. The taxLiable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTaxLiable() {
@@ -351,7 +351,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
@@ -359,7 +359,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -367,7 +367,7 @@ public class Customer implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the website property value. The website property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {
@@ -407,8 +407,8 @@ public class Customer implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

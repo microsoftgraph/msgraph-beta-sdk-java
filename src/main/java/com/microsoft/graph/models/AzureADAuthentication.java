@@ -13,7 +13,7 @@ public class AzureADAuthentication extends Entity implements Parsable {
      */
     private java.util.List<ServiceLevelAgreementAttainment> attainments;
     /**
-     * Instantiates a new azureADAuthentication and sets the default values.
+     * Instantiates a new AzureADAuthentication and sets the default values.
      */
     public AzureADAuthentication() {
         super();
@@ -21,7 +21,7 @@ public class AzureADAuthentication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureADAuthentication
+     * @return a AzureADAuthentication
      */
     @jakarta.annotation.Nonnull
     public static AzureADAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class AzureADAuthentication extends Entity implements Parsable {
     }
     /**
      * Gets the attainments property value. A list of monthly serviceLevelAgreementAttainment objects.
-     * @return a serviceLevelAgreementAttainment
+     * @return a java.util.List<ServiceLevelAgreementAttainment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceLevelAgreementAttainment> getAttainments() {

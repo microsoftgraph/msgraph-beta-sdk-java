@@ -70,7 +70,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
      */
     private Boolean secureByDefault;
     /**
-     * Instantiates a new deviceManagementSettings and sets the default values.
+     * Instantiates a new DeviceManagementSettings and sets the default values.
      */
     public DeviceManagementSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -78,7 +78,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettings
+     * @return a DeviceManagementSettings
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +86,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
         return new DeviceManagementSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -95,7 +95,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the androidDeviceAdministratorEnrollmentEnabled property value. The property to determine if Android device administrator enrollment is enabled for this account.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAndroidDeviceAdministratorEnrollmentEnabled() {
@@ -103,7 +103,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the derivedCredentialProvider property value. Provider type for Derived Credentials.
-     * @return a derivedCredentialProviderType
+     * @return a DerivedCredentialProviderType
      */
     @jakarta.annotation.Nullable
     public DerivedCredentialProviderType getDerivedCredentialProvider() {
@@ -111,7 +111,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the derivedCredentialUrl property value. The Derived Credential Provider self-service URI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDerivedCredentialUrl() {
@@ -119,7 +119,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceComplianceCheckinThresholdDays() {
@@ -127,7 +127,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the deviceInactivityBeforeRetirementInDay property value. When the device does not check in for specified number of days, the company data might be removed and the device will not be under management. Valid values 30 to 270
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceInactivityBeforeRetirementInDay() {
@@ -135,7 +135,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the enableAutopilotDiagnostics property value. Determines whether the autopilot diagnostic feature is enabled or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAutopilotDiagnostics() {
@@ -143,7 +143,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the enableDeviceGroupMembershipReport property value. Determines whether the device group membership report feature is enabled or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableDeviceGroupMembershipReport() {
@@ -151,7 +151,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the enableEnhancedTroubleshootingExperience property value. Determines whether the enhanced troubleshooting UX is enabled or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableEnhancedTroubleshootingExperience() {
@@ -159,7 +159,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the enableLogCollection property value. Determines whether the log collection feature should be available for use.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableLogCollection() {
@@ -167,7 +167,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the enhancedJailBreak property value. Is feature enabled or not for enhanced jailbreak detection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnhancedJailBreak() {
@@ -198,7 +198,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the ignoreDevicesForUnsupportedSettingsEnabled property value. The property to determine whether to ignore unsupported compliance settings on certian models of devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreDevicesForUnsupportedSettingsEnabled() {
@@ -206,7 +206,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScheduledActionEnabled() {
@@ -214,7 +214,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -222,7 +222,7 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureByDefault() {
@@ -251,8 +251,8 @@ public class DeviceManagementSettings implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -13,7 +13,7 @@ public class TeamworkDeviceCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<TeamworkDevice> value;
     /**
-     * Instantiates a new teamworkDeviceCollectionResponse and sets the default values.
+     * Instantiates a new TeamworkDeviceCollectionResponse and sets the default values.
      */
     public TeamworkDeviceCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class TeamworkDeviceCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceCollectionResponse
+     * @return a TeamworkDeviceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class TeamworkDeviceCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a teamworkDevice
+     * @return a java.util.List<TeamworkDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkDevice> getValue() {

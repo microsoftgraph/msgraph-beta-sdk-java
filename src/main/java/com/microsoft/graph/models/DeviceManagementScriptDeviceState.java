@@ -37,7 +37,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      */
     private RunState runState;
     /**
-     * Instantiates a new deviceManagementScriptDeviceState and sets the default values.
+     * Instantiates a new DeviceManagementScriptDeviceState and sets the default values.
      */
     public DeviceManagementScriptDeviceState() {
         super();
@@ -45,7 +45,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptDeviceState
+     * @return a DeviceManagementScriptDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the errorCode property value. Error code corresponding to erroneous execution of the device management script.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -62,7 +62,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the errorDescription property value. Error description corresponding to erroneous execution of the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
@@ -93,7 +93,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the managedDevice property value. The managed devices that executes the device management script.
-     * @return a managedDevice
+     * @return a ManagedDevice
      */
     @jakarta.annotation.Nullable
     public ManagedDevice getManagedDevice() {
@@ -101,7 +101,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the resultMessage property value. Details of execution output.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResultMessage() {
@@ -109,7 +109,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {

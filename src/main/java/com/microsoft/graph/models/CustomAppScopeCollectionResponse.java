@@ -13,7 +13,7 @@ public class CustomAppScopeCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<CustomAppScope> value;
     /**
-     * Instantiates a new customAppScopeCollectionResponse and sets the default values.
+     * Instantiates a new CustomAppScopeCollectionResponse and sets the default values.
      */
     public CustomAppScopeCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CustomAppScopeCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customAppScopeCollectionResponse
+     * @return a CustomAppScopeCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CustomAppScopeCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CustomAppScopeCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a customAppScope
+     * @return a java.util.List<CustomAppScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomAppScope> getValue() {

@@ -53,7 +53,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      */
     private DeviceAppManagementTaskStatus status;
     /**
-     * Instantiates a new deviceAppManagementTask and sets the default values.
+     * Instantiates a new DeviceAppManagementTask and sets the default values.
      */
     public DeviceAppManagementTask() {
         super();
@@ -61,7 +61,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAppManagementTask
+     * @return a DeviceAppManagementTask
      */
     @jakarta.annotation.Nonnull
     public static DeviceAppManagementTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,7 +79,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the assignedTo property value. The name or email of the admin this task is assigned to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
@@ -87,7 +87,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the category property value. Device app management task category.
-     * @return a deviceAppManagementTaskCategory
+     * @return a DeviceAppManagementTaskCategory
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskCategory getCategory() {
@@ -103,7 +103,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the creator property value. The email address of the creator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreator() {
@@ -111,7 +111,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the creatorNotes property value. Notes from the creator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatorNotes() {
@@ -119,7 +119,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -127,7 +127,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -162,7 +162,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. Device app management task priority.
-     * @return a deviceAppManagementTaskPriority
+     * @return a DeviceAppManagementTaskPriority
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskPriority getPriority() {
@@ -170,7 +170,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Device app management task status.
-     * @return a deviceAppManagementTaskStatus
+     * @return a DeviceAppManagementTaskStatus
      */
     @jakarta.annotation.Nullable
     public DeviceAppManagementTaskStatus getStatus() {

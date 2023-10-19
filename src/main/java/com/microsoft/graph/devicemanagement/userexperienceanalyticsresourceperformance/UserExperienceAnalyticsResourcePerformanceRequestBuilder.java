@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     }
     /**
      * User experience analytics resource performance
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformanceCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     /**
      * User experience analytics resource performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformanceCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformanceCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformanceCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     /**
      * Create new navigation property to userExperienceAnalyticsResourcePerformance for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsResourcePerformance body) {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
      * Create new navigation property to userExperienceAnalyticsResourcePerformance for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsResourcePerformance
+     * @return a CompletableFuture of UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsResourcePerformance> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsResourcePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     /**
      * Provides operations to call the summarizeDeviceResourcePerformance method.
      * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
-     * @return a summarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder
+     * @return a SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder summarizeDeviceResourcePerformanceWithSummarizeBy(@jakarta.annotation.Nonnull final String summarizeBy) {
@@ -130,10 +130,6 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -141,6 +137,10 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -162,23 +162,23 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsResourcePerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsResourcePerformanceRequestBuilder
+     * @return a UserExperienceAnalyticsResourcePerformanceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsResourcePerformanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

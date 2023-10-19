@@ -22,7 +22,7 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new mentionsPreview and sets the default values.
+     * Instantiates a new MentionsPreview and sets the default values.
      */
     public MentionsPreview() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mentionsPreview
+     * @return a MentionsPreview
      */
     @jakarta.annotation.Nonnull
     public static MentionsPreview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
         return new MentionsPreview();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isMentioned property value. True if the signed-in user is mentioned in the parent resource instance. Read-only. Supports filter.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMentioned() {
@@ -66,7 +66,7 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -83,8 +83,8 @@ public class MentionsPreview implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

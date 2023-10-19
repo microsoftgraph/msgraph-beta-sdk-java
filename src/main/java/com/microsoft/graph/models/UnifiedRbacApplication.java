@@ -29,7 +29,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
      */
     private java.util.List<UnifiedRoleAssignment> transitiveRoleAssignments;
     /**
-     * Instantiates a new unifiedRbacApplication and sets the default values.
+     * Instantiates a new UnifiedRbacApplication and sets the default values.
      */
     public UnifiedRbacApplication() {
         super();
@@ -37,7 +37,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRbacApplication
+     * @return a UnifiedRbacApplication
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRbacApplication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the customAppScopes property value. Workload-specific scope object that represents the resources for which the principal has been granted access.
-     * @return a customAppScope
+     * @return a java.util.List<CustomAppScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomAppScope> getCustomAppScopes() {
@@ -68,7 +68,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the resourceNamespaces property value. Resource that represents a collection of related actions.
-     * @return a unifiedRbacResourceNamespace
+     * @return a java.util.List<UnifiedRbacResourceNamespace>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceNamespace> getResourceNamespaces() {
@@ -76,7 +76,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. Resource to grant access to users or groups.
-     * @return a unifiedRoleAssignment
+     * @return a java.util.List<UnifiedRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getRoleAssignments() {
@@ -84,7 +84,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitions property value. The roles allowed by RBAC providers and the permissions assigned to the roles.
-     * @return a unifiedRoleDefinition
+     * @return a java.util.List<UnifiedRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getRoleDefinitions() {
@@ -92,7 +92,7 @@ public class UnifiedRbacApplication extends Entity implements Parsable {
     }
     /**
      * Gets the transitiveRoleAssignments property value. Resource to grant access to users or groups that are transitive.
-     * @return a unifiedRoleAssignment
+     * @return a java.util.List<UnifiedRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleAssignment> getTransitiveRoleAssignments() {

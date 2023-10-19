@@ -18,7 +18,7 @@ public class TenantStatus extends Entity implements Parsable {
      */
     private OnboardingStatus onboardingStatus;
     /**
-     * Instantiates a new tenantStatus and sets the default values.
+     * Instantiates a new TenantStatus and sets the default values.
      */
     public TenantStatus() {
         super();
@@ -26,7 +26,7 @@ public class TenantStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantStatus
+     * @return a TenantStatus
      */
     @jakarta.annotation.Nonnull
     public static TenantStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TenantStatus extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingErrorMessage property value. Reflects a message to the user if there's an error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnboardingErrorMessage() {
@@ -54,7 +54,7 @@ public class TenantStatus extends Entity implements Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The onboardingStatus property
-     * @return a onboardingStatus
+     * @return a OnboardingStatus
      */
     @jakarta.annotation.Nullable
     public OnboardingStatus getOnboardingStatus() {

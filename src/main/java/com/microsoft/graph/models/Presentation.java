@@ -13,7 +13,7 @@ public class Presentation extends Entity implements Parsable {
      */
     private java.util.List<DocumentComment> comments;
     /**
-     * Instantiates a new presentation and sets the default values.
+     * Instantiates a new Presentation and sets the default values.
      */
     public Presentation() {
         super();
@@ -21,7 +21,7 @@ public class Presentation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a presentation
+     * @return a Presentation
      */
     @jakarta.annotation.Nonnull
     public static Presentation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,7 +30,7 @@ public class Presentation extends Entity implements Parsable {
     }
     /**
      * Gets the comments property value. The comments property
-     * @return a documentComment
+     * @return a java.util.List<DocumentComment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DocumentComment> getComments() {

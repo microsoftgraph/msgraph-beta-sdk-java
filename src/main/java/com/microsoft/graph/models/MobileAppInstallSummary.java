@@ -52,7 +52,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
      */
     private Integer pendingInstallUserCount;
     /**
-     * Instantiates a new mobileAppInstallSummary and sets the default values.
+     * Instantiates a new MobileAppInstallSummary and sets the default values.
      */
     public MobileAppInstallSummary() {
         super();
@@ -60,7 +60,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppInstallSummary
+     * @return a MobileAppInstallSummary
      */
     @jakarta.annotation.Nonnull
     public static MobileAppInstallSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,7 +69,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedDeviceCount property value. Number of Devices that have failed to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
@@ -77,7 +77,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedUserCount property value. Number of Users that have 1 or more device that failed to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUserCount() {
@@ -104,7 +104,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the installedDeviceCount property value. Number of Devices that have successfully installed this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledDeviceCount() {
@@ -112,7 +112,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the installedUserCount property value. Number of Users whose devices have all succeeded to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInstalledUserCount() {
@@ -120,7 +120,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableDeviceCount property value. Number of Devices that are not applicable for this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableDeviceCount() {
@@ -128,7 +128,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableUserCount property value. Number of Users whose devices were all not applicable for this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableUserCount() {
@@ -136,7 +136,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notInstalledDeviceCount property value. Number of Devices that does not have this app installed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledDeviceCount() {
@@ -144,7 +144,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the notInstalledUserCount property value. Number of Users that have 1 or more devices that did not install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotInstalledUserCount() {
@@ -152,7 +152,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the pendingInstallDeviceCount property value. Number of Devices that have been notified to install this app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingInstallDeviceCount() {
@@ -160,7 +160,7 @@ public class MobileAppInstallSummary extends Entity implements Parsable {
     }
     /**
      * Gets the pendingInstallUserCount property value. Number of Users that have 1 or more device that have been notified to install this app and have 0 devices with failures.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingInstallUserCount() {

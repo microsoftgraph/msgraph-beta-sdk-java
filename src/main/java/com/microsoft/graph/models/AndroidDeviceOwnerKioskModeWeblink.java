@@ -20,7 +20,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      */
     private String link;
     /**
-     * Instantiates a new androidDeviceOwnerKioskModeWeblink and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerKioskModeWeblink and sets the default values.
      */
     public AndroidDeviceOwnerKioskModeWeblink() {
         super();
@@ -29,7 +29,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerKioskModeWeblink
+     * @return a AndroidDeviceOwnerKioskModeWeblink
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeWeblink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
     }
     /**
      * Gets the label property value. Display name for weblink
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
@@ -57,7 +57,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
     }
     /**
      * Gets the link property value. Link for weblink
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLink() {

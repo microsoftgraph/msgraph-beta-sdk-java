@@ -57,7 +57,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Device compliance users status overview
-     * @return a CompletableFuture of deviceComplianceUserOverview
+     * @return a CompletableFuture of DeviceComplianceUserOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> get() {
@@ -66,7 +66,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Device compliance users status overview
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceUserOverview
+     * @return a CompletableFuture of DeviceComplianceUserOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property userStatusOverview in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceComplianceUserOverview
+     * @return a CompletableFuture of DeviceComplianceUserOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> patch(@jakarta.annotation.Nonnull final DeviceComplianceUserOverview body) {
@@ -89,7 +89,7 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property userStatusOverview in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceComplianceUserOverview
+     * @return a CompletableFuture of DeviceComplianceUserOverview
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceComplianceUserOverview> patch(@jakarta.annotation.Nonnull final DeviceComplianceUserOverview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -116,15 +116,15 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
@@ -143,10 +143,6 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -154,6 +150,10 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -175,23 +175,23 @@ public class UserStatusOverviewRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceComplianceUserOverview body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userStatusOverviewRequestBuilder
+     * @return a UserStatusOverviewRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserStatusOverviewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

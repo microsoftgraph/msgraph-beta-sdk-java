@@ -13,7 +13,7 @@ public class ProgramResource extends Identity implements Parsable {
      */
     private String type;
     /**
-     * Instantiates a new programResource and sets the default values.
+     * Instantiates a new ProgramResource and sets the default values.
      */
     public ProgramResource() {
         super();
@@ -22,7 +22,7 @@ public class ProgramResource extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a programResource
+     * @return a ProgramResource
      */
     @jakarta.annotation.Nonnull
     public static ProgramResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ProgramResource extends Identity implements Parsable {
     }
     /**
      * Gets the type property value. Type of the resource, indicating whether it is a group or an app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {

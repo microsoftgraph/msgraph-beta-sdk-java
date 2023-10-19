@@ -39,7 +39,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
      */
     private OffsetDateTime lastActionDateTime;
     /**
-     * Instantiates a new managedTenantAlertRuleDefinition and sets the default values.
+     * Instantiates a new ManagedTenantAlertRuleDefinition and sets the default values.
      */
     public ManagedTenantAlertRuleDefinition() {
         super();
@@ -47,7 +47,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlertRuleDefinition
+     * @return a ManagedTenantAlertRuleDefinition
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertRuleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
     }
     /**
      * Gets the alertRules property value. The alertRules property
-     * @return a managedTenantAlertRule
+     * @return a java.util.List<ManagedTenantAlertRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantAlertRule> getAlertRules() {
@@ -64,7 +64,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -80,7 +80,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
     }
     /**
      * Gets the definitionTemplate property value. The definitionTemplate property
-     * @return a alertRuleDefinitionTemplate
+     * @return a AlertRuleDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public AlertRuleDefinitionTemplate getDefinitionTemplate() {
@@ -88,7 +88,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -112,7 +112,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements Parsable
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {

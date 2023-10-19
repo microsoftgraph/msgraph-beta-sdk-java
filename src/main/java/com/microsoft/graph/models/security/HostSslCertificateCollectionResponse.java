@@ -14,7 +14,7 @@ public class HostSslCertificateCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<HostSslCertificate> value;
     /**
-     * Instantiates a new hostSslCertificateCollectionResponse and sets the default values.
+     * Instantiates a new HostSslCertificateCollectionResponse and sets the default values.
      */
     public HostSslCertificateCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class HostSslCertificateCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostSslCertificateCollectionResponse
+     * @return a HostSslCertificateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static HostSslCertificateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class HostSslCertificateCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a hostSslCertificate
+     * @return a java.util.List<HostSslCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getValue() {

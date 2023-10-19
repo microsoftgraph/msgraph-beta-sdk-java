@@ -22,7 +22,7 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
      */
     private String reviewResult;
     /**
-     * Instantiates a new recordDecisionsPostRequestBody and sets the default values.
+     * Instantiates a new RecordDecisionsPostRequestBody and sets the default values.
      */
     public RecordDecisionsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recordDecisionsPostRequestBody
+     * @return a RecordDecisionsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RecordDecisionsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
         return new RecordDecisionsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
     }
     /**
      * Gets the justification property value. The justification property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -66,7 +66,7 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
     }
     /**
      * Gets the reviewResult property value. The reviewResult property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewResult() {
@@ -83,8 +83,8 @@ public class RecordDecisionsPostRequestBody implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

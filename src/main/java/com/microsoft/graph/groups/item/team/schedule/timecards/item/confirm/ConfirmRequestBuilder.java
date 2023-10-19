@@ -36,8 +36,8 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule/timeCards/{timeCard%2Did}/confirm", rawUrl);
     }
     /**
-     * Confirm a specific timeCard.
-     * @return a CompletableFuture of timeCard
+     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-confirm?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -45,9 +45,9 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Confirm a specific timeCard.
+     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of timeCard
+     * @return a CompletableFuture of TimeCard
      * @see <a href="https://learn.microsoft.com/graph/api/timecard-confirm?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TimeCard::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Confirm a specific timeCard.
+     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -67,29 +67,29 @@ public class ConfirmRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Confirm a specific timeCard.
+     * Confirm a specific timeCard. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a confirmRequestBuilder
+     * @return a ConfirmRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ConfirmRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

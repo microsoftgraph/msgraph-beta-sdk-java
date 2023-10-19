@@ -38,7 +38,7 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The set of Role Scope Tags defined on the Role Assignment.
-     * @return a CompletableFuture of roleScopeTag
+     * @return a CompletableFuture of RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTag> get() {
@@ -47,7 +47,7 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The set of Role Scope Tags defined on the Role Assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of roleScopeTag
+     * @return a CompletableFuture of RoleScopeTag
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<RoleScopeTag> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -73,10 +73,6 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class RoleScopeTagItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

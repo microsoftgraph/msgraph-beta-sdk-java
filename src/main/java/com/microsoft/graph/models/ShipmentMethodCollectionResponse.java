@@ -13,7 +13,7 @@ public class ShipmentMethodCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<ShipmentMethod> value;
     /**
-     * Instantiates a new shipmentMethodCollectionResponse and sets the default values.
+     * Instantiates a new ShipmentMethodCollectionResponse and sets the default values.
      */
     public ShipmentMethodCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ShipmentMethodCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a shipmentMethodCollectionResponse
+     * @return a ShipmentMethodCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ShipmentMethodCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ShipmentMethodCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a shipmentMethod
+     * @return a java.util.List<ShipmentMethod>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ShipmentMethod> getValue() {

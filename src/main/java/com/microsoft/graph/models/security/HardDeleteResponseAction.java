@@ -14,7 +14,7 @@ public class HardDeleteResponseAction extends ResponseAction implements Parsable
      */
     private EnumSet<EmailEntityIdentifier> identifier;
     /**
-     * Instantiates a new hardDeleteResponseAction and sets the default values.
+     * Instantiates a new HardDeleteResponseAction and sets the default values.
      */
     public HardDeleteResponseAction() {
         super();
@@ -23,7 +23,7 @@ public class HardDeleteResponseAction extends ResponseAction implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hardDeleteResponseAction
+     * @return a HardDeleteResponseAction
      */
     @jakarta.annotation.Nonnull
     public static HardDeleteResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class HardDeleteResponseAction extends ResponseAction implements Parsable
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a emailEntityIdentifier
+     * @return a EnumSet<EmailEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EmailEntityIdentifier> getIdentifier() {

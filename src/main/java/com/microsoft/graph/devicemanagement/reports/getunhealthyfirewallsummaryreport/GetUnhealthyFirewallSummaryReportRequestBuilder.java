@@ -78,22 +78,22 @@ public class GetUnhealthyFirewallSummaryReportRequestBuilder extends BaseRequest
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetUnhealthyFirewallSummaryReportPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getUnhealthyFirewallSummaryReportRequestBuilder
+     * @return a GetUnhealthyFirewallSummaryReportRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetUnhealthyFirewallSummaryReportRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

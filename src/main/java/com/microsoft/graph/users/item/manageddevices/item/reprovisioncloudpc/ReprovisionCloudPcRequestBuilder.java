@@ -35,7 +35,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/reprovisionCloudPc", rawUrl);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID.
+     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-reprovisioncloudpc?view=graph-rest-1.0">Find more info here</a>
@@ -46,7 +46,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID.
+     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
@@ -62,7 +62,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID.
+     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
@@ -73,7 +73,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Reprovision a Cloud PC with an Intune managed device ID.
+     * Reprovision a Cloud PC with an Intune managed device ID. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      * @deprecated
@@ -83,21 +83,21 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reprovisionCloudPcRequestBuilder
+     * @return a ReprovisionCloudPcRequestBuilder
      * @deprecated
      * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc on 2023-07-17 and will be removed 2023-09-30
      */

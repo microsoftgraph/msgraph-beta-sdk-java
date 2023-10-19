@@ -36,24 +36,24 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
-     * @return a CompletableFuture of importOffice365DeviceConfigurationPoliciesResponse
+     * @return a CompletableFuture of ImportOffice365DeviceConfigurationPoliciesPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post() {
+    public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesPostResponse> post() {
         return post(null);
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importOffice365DeviceConfigurationPoliciesResponse
+     * @return a CompletableFuture of ImportOffice365DeviceConfigurationPoliciesPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<ImportOffice365DeviceConfigurationPoliciesPostResponse> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportOffice365DeviceConfigurationPoliciesResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, ImportOffice365DeviceConfigurationPoliciesPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action importOffice365DeviceConfigurationPolicies
@@ -71,22 +71,22 @@ public class ImportOffice365DeviceConfigurationPoliciesRequestBuilder extends Ba
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importOffice365DeviceConfigurationPoliciesRequestBuilder
+     * @return a ImportOffice365DeviceConfigurationPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportOffice365DeviceConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

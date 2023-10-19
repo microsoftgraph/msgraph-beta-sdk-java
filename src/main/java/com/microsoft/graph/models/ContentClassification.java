@@ -34,7 +34,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      */
     private Integer uniqueCount;
     /**
-     * Instantiates a new contentClassification and sets the default values.
+     * Instantiates a new ContentClassification and sets the default values.
      */
     public ContentClassification() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentClassification
+     * @return a ContentClassification
      */
     @jakarta.annotation.Nonnull
     public static ContentClassification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
         return new ContentClassification();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the confidence property value. The confidence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
@@ -81,7 +81,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the matches property value. The matches property
-     * @return a matchLocation
+     * @return a java.util.List<MatchLocation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MatchLocation> getMatches() {
@@ -89,7 +89,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sensitiveTypeId property value. The sensitiveTypeId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSensitiveTypeId() {
@@ -105,7 +105,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the uniqueCount property value. The uniqueCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUniqueCount() {
@@ -125,8 +125,8 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

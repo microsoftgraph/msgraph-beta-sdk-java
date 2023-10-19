@@ -18,6 +18,7 @@ import com.microsoft.graph.groups.item.sites.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.pages.PagesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.groups.item.sites.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.groups.item.sites.item.termstore.TermStoreRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
@@ -146,6 +147,13 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the recycleBin property of the microsoft.graph.site entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RecycleBinRequestBuilder recycleBin() {
+        return new RecycleBinRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
      */
     @jakarta.annotation.Nonnull
@@ -177,7 +185,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get() {
@@ -186,7 +194,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -201,7 +209,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -213,7 +221,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
      * @param listId Usage: listId='{listId}'
-     * @return a getApplicableContentTypesForListWithListIdRequestBuilder
+     * @return a GetApplicableContentTypesForListWithListIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
@@ -223,7 +231,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getByPath method.
      * @param path Usage: path='{path}'
-     * @return a getByPathWithPathRequestBuilder
+     * @return a GetByPathWithPathRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetByPathWithPathRequestBuilder getByPathWithPath(@jakarta.annotation.Nonnull final String path) {
@@ -233,7 +241,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property sites in groups
      * @param body The request body
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body) {
@@ -243,7 +251,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property sites in groups
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a CompletableFuture of Site
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -270,10 +278,6 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -281,6 +285,10 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -302,17 +310,17 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

@@ -58,17 +58,17 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/registrations{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get registrations from solutions
-     * @return a CompletableFuture of virtualEventRegistrationCollectionResponse
+     * Registration records of this virtual event session.
+     * @return a CompletableFuture of VirtualEventRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistrationCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventRegistrationCollectionResponse
+     * @return a CompletableFuture of VirtualEventRegistrationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventRegistrationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +79,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,17 +87,13 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -105,12 +101,16 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a registrationsRequestBuilder
+     * @return a RegistrationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RegistrationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -118,7 +118,7 @@ public class RegistrationsRequestBuilder extends BaseRequestBuilder {
         return new RegistrationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

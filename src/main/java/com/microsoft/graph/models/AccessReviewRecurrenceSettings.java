@@ -26,15 +26,15 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      */
     private Integer recurrenceCount;
     /**
-     * How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it is never, then there is no explicit end of the recurrence series. If it is endBy, then the recurrence ends at a certain date. If it is occurrences, then the series ends after recurrenceCount instances of the review have completed.
+     * How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it's never, then there's no explicit end of the recurrence series. If it's endBy, then the recurrence ends at a certain date. If it's occurrences, then the series ends after recurrenceCount instances of the review have completed.
      */
     private String recurrenceEndType;
     /**
-     * The recurrence interval. Possible vaules: onetime, weekly, monthly, quarterly, halfyearly or annual.
+     * The recurrence interval. Possible values: onetime, weekly, monthly, quarterly, halfyearly or annual.
      */
     private String recurrenceType;
     /**
-     * Instantiates a new accessReviewRecurrenceSettings and sets the default values.
+     * Instantiates a new AccessReviewRecurrenceSettings and sets the default values.
      */
     public AccessReviewRecurrenceSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewRecurrenceSettings
+     * @return a AccessReviewRecurrenceSettings
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewRecurrenceSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
         return new AccessReviewRecurrenceSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     }
     /**
      * Gets the durationInDays property value. The duration in days for recurrence.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
@@ -81,7 +81,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,23 +89,23 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
     }
     /**
      * Gets the recurrenceCount property value. The count of recurrences, if the value of recurrenceEndType is occurrences, or 0 otherwise.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRecurrenceCount() {
         return this.recurrenceCount;
     }
     /**
-     * Gets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it is never, then there is no explicit end of the recurrence series. If it is endBy, then the recurrence ends at a certain date. If it is occurrences, then the series ends after recurrenceCount instances of the review have completed.
-     * @return a string
+     * Gets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it's never, then there's no explicit end of the recurrence series. If it's endBy, then the recurrence ends at a certain date. If it's occurrences, then the series ends after recurrenceCount instances of the review have completed.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecurrenceEndType() {
         return this.recurrenceEndType;
     }
     /**
-     * Gets the recurrenceType property value. The recurrence interval. Possible vaules: onetime, weekly, monthly, quarterly, halfyearly or annual.
-     * @return a string
+     * Gets the recurrenceType property value. The recurrence interval. Possible values: onetime, weekly, monthly, quarterly, halfyearly or annual.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecurrenceType() {
@@ -125,8 +125,8 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -153,14 +153,14 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
         this.recurrenceCount = value;
     }
     /**
-     * Sets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it is never, then there is no explicit end of the recurrence series. If it is endBy, then the recurrence ends at a certain date. If it is occurrences, then the series ends after recurrenceCount instances of the review have completed.
+     * Sets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it's never, then there's no explicit end of the recurrence series. If it's endBy, then the recurrence ends at a certain date. If it's occurrences, then the series ends after recurrenceCount instances of the review have completed.
      * @param value Value to set for the recurrenceEndType property.
      */
     public void setRecurrenceEndType(@jakarta.annotation.Nullable final String value) {
         this.recurrenceEndType = value;
     }
     /**
-     * Sets the recurrenceType property value. The recurrence interval. Possible vaules: onetime, weekly, monthly, quarterly, halfyearly or annual.
+     * Sets the recurrenceType property value. The recurrence interval. Possible values: onetime, weekly, monthly, quarterly, halfyearly or annual.
      * @param value Value to set for the recurrenceType property.
      */
     public void setRecurrenceType(@jakarta.annotation.Nullable final String value) {

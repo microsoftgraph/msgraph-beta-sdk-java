@@ -66,7 +66,7 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
     }
     /**
      * Get dailyPrintUsageSummariesByUser from reports
-     * @return a CompletableFuture of printUsageByUserCollectionResponse
+     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
      * @deprecated
      * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -78,7 +78,7 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
     /**
      * Get dailyPrintUsageSummariesByUser from reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByUserCollectionResponse
+     * @return a CompletableFuture of PrintUsageByUserCollectionResponse
      * @deprecated
      * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -94,7 +94,7 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
     /**
      * Create new navigation property to dailyPrintUsageSummariesByUser for reports
      * @param body The request body
-     * @return a CompletableFuture of printUsageByUser
+     * @return a CompletableFuture of PrintUsageByUser
      * @deprecated
      * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -107,7 +107,7 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
      * Create new navigation property to dailyPrintUsageSummariesByUser for reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of printUsageByUser
+     * @return a CompletableFuture of PrintUsageByUser
      * @deprecated
      * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
@@ -143,10 +143,6 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -154,6 +150,10 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -181,23 +181,23 @@ public class DailyPrintUsageSummariesByUserRequestBuilder extends BaseRequestBui
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final PrintUsageByUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a dailyPrintUsageSummariesByUserRequestBuilder
+     * @return a DailyPrintUsageSummariesByUserRequestBuilder
      * @deprecated
      * The dailyPrintUsageSummariesByUser navigation property is deprecated and will stop returning data on July 31, 2023. Please use the dailyPrintUsage navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */

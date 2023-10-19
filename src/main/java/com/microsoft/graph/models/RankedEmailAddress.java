@@ -26,7 +26,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
      */
     private Double rank;
     /**
-     * Instantiates a new rankedEmailAddress and sets the default values.
+     * Instantiates a new RankedEmailAddress and sets the default values.
      */
     public RankedEmailAddress() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rankedEmailAddress
+     * @return a RankedEmailAddress
      */
     @jakarta.annotation.Nonnull
     public static RankedEmailAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
         return new RankedEmailAddress();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. The email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -71,7 +71,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the rank property value. The rank of the email address. A rank is used as a sort key, in relation to the other returned results. A higher rank value corresponds to a more relevant result. Relevance is determined by communication, collaboration, and business relationship signals.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getRank() {
@@ -97,8 +97,8 @@ public class RankedEmailAddress implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

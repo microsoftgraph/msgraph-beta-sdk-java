@@ -17,7 +17,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
      */
     private Integer percentageOfGlobalAdminsOutOfRolesThreshold;
     /**
-     * Instantiates a new tooManyGlobalAdminsAssignedToTenantAlertConfiguration and sets the default values.
+     * Instantiates a new TooManyGlobalAdminsAssignedToTenantAlertConfiguration and sets the default values.
      */
     public TooManyGlobalAdminsAssignedToTenantAlertConfiguration() {
         super();
@@ -26,7 +26,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tooManyGlobalAdminsAssignedToTenantAlertConfiguration
+     * @return a TooManyGlobalAdminsAssignedToTenantAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TooManyGlobalAdminsAssignedToTenantAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
     }
     /**
      * Gets the globalAdminCountThreshold property value. The threshold for the number of accounts assigned the Global Administrator role in the tenant. Triggers an alert if the number of global administrators in the tenant reaches or crosses this threshold value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGlobalAdminCountThreshold() {
@@ -54,7 +54,7 @@ public class TooManyGlobalAdminsAssignedToTenantAlertConfiguration extends Unifi
     }
     /**
      * Gets the percentageOfGlobalAdminsOutOfRolesThreshold property value. Threshold of the percentage of global administrators out of all the role assignments in the tenant. Triggers an alert if the percentage in the tenant reaches or crosses this threshold value.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageOfGlobalAdminsOutOfRolesThreshold() {

@@ -24,7 +24,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
      */
     private RunState runState;
     /**
-     * Instantiates a new mobileAppTroubleshootingAppStateHistory and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingAppStateHistory and sets the default values.
      */
     public MobileAppTroubleshootingAppStateHistory() {
         super();
@@ -32,7 +32,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppTroubleshootingAppStateHistory
+     * @return a MobileAppTroubleshootingAppStateHistory
      */
     @jakarta.annotation.Nonnull
     public static MobileAppTroubleshootingAppStateHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * Gets the actionType property value. Defines the Action Types for an Intune Application.
-     * @return a mobileAppActionType
+     * @return a MobileAppActionType
      */
     @jakarta.annotation.Nullable
     public MobileAppActionType getActionType() {
@@ -49,7 +49,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * Gets the errorCode property value. Error code for the failure, empty if no failure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -69,7 +69,7 @@ public class MobileAppTroubleshootingAppStateHistory extends MobileAppTroublesho
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getRunState() {

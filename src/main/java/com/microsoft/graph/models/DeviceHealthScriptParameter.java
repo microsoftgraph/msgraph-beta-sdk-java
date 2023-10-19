@@ -37,7 +37,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
      */
     private String odataType;
     /**
-     * Instantiates a new deviceHealthScriptParameter and sets the default values.
+     * Instantiates a new DeviceHealthScriptParameter and sets the default values.
      */
     public DeviceHealthScriptParameter() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptParameter
+     * @return a DeviceHealthScriptParameter
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
         return new DeviceHealthScriptParameter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the applyDefaultValueWhenNotAssigned property value. Whether Apply DefaultValue When Not Assigned
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyDefaultValueWhenNotAssigned() {
@@ -79,7 +79,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the description property value. The description of the param
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -101,7 +101,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isRequired property value. Whether the param is required
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -109,7 +109,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the name property value. The name of the param
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -117,7 +117,7 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -137,8 +137,8 @@ public class DeviceHealthScriptParameter implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

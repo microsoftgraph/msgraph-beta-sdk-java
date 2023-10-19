@@ -20,7 +20,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      */
     private Integer failedDeviceCount;
     /**
-     * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentSummary and sets the default values.
+     * Instantiates a new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary and sets the default values.
      */
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary() {
         super();
@@ -28,7 +28,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDefenderApplicationControlSupplementalPolicyDeploymentSummary
+     * @return a WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary
      */
     @jakarta.annotation.Nonnull
     public static WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
     }
     /**
      * Gets the deployedDeviceCount property value. Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedDeviceCount() {
@@ -45,7 +45,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
     }
     /**
      * Gets the failedDeviceCount property value. Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
