@@ -41,7 +41,7 @@ public class WebPartData implements IJsonBackedObject {
 
     /**
      * The Audiences.
-     * Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
+     * Audience information of the web part. By using this property, specific content is prioritized to specific audiences.
      */
     @SerializedName(value = "audiences", alternate = {"Audiences"})
     @Expose

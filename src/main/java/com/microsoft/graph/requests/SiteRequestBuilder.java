@@ -291,6 +291,16 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     public com.microsoft.graph.requests.PermissionRequestBuilder permissions(@Nonnull final String id) {
         return new com.microsoft.graph.requests.PermissionRequestBuilder(getRequestUrlWithAdditionalSegment("permissions") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for RecycleBin
+     *
+     * @return the RecycleBinRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RecycleBinRequestBuilder recycleBin() {
+        return new com.microsoft.graph.requests.RecycleBinRequestBuilder(getRequestUrlWithAdditionalSegment("recycleBin"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the Site collection
      *

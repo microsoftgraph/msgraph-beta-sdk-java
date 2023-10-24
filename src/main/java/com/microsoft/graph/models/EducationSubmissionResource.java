@@ -8,8 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EducationResource;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -28,7 +30,7 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
 
     /**
      * The Assignment Resource Url.
-     * Pointer to the assignment from which this resource was copied. If this is null, the student uploaded the resource.
+     * Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
      */
     @SerializedName(value = "assignmentResourceUrl", alternate = {"AssignmentResourceUrl"})
     @Expose
@@ -44,6 +46,15 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
 	@Nullable
     public EducationResource resource;
 
+    /**
+     * The Dependent Resources.
+     * 
+     */
+    @SerializedName(value = "dependentResources", alternate = {"DependentResources"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage dependentResources;
+
 
     /**
      * Sets the raw JSON object
@@ -53,5 +64,9 @@ public class EducationSubmissionResource extends Entity implements IJsonBackedOb
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("dependentResources")) {
+            dependentResources = serializer.deserializeObject(json.get("dependentResources"), com.microsoft.graph.requests.EducationSubmissionResourceCollectionPage.class);
+        }
     }
 }

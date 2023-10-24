@@ -44,7 +44,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Automatic User Consent Settings.
-     * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
+     * Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      */
     @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
     @Expose
@@ -53,7 +53,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The B2b Collaboration Inbound.
-     * Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationInbound", alternate = {"B2bCollaborationInbound"})
     @Expose
@@ -62,7 +62,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The B2b Collaboration Outbound.
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationOutbound", alternate = {"B2bCollaborationOutbound"})
     @Expose
@@ -80,7 +80,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The B2b Direct Connect Outbound.
-     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectOutbound", alternate = {"B2bDirectConnectOutbound"})
     @Expose
@@ -89,7 +89,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Inbound Trust.
-     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      */
     @SerializedName(value = "inboundTrust", alternate = {"InboundTrust"})
     @Expose
@@ -98,7 +98,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Is In Multi Tenant Organization.
-     * 
+     * Identifies whether a tenant is a member of a multitenant organization.
      */
     @SerializedName(value = "isInMultiTenantOrganization", alternate = {"IsInMultiTenantOrganization"})
     @Expose
@@ -116,7 +116,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Tenant Id.
-     * The tenant identifier for the partner Azure AD organization. Read-only. Key.
+     * The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -125,7 +125,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Tenant Restrictions.
-     * Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied idenities on your network or devices.
+     * Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied identities on your network or devices.
      */
     @SerializedName(value = "tenantRestrictions", alternate = {"TenantRestrictions"})
     @Expose
@@ -134,10 +134,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
 
     /**
      * The Identity Synchronization.
-     * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
-     * @deprecated 
+     * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.
      */
-    @Deprecated
     @SerializedName(value = "identitySynchronization", alternate = {"IdentitySynchronization"})
     @Expose
 	@Nullable

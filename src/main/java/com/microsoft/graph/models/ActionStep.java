@@ -40,7 +40,7 @@ public class ActionStep implements IJsonBackedObject {
 
     /**
      * The Action Url.
-     * A link to the documentation or Azure portal page that is associated with the action step.
+     * A link to the documentation or Microsoft Entra admin center page that is associated with the action step.
      */
     @SerializedName(value = "actionUrl", alternate = {"ActionUrl"})
     @Expose

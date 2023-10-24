@@ -36,7 +36,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Customized Report Recipient Email Address.
-     * Specifies the destination where the reported messages from end users will land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
+     * Specifies the destination where the reported messages from end users land whenever they report something as phish, junk or not junk. The default value is null. Optional for creation.
      */
     @SerializedName(value = "customizedReportRecipientEmailAddress", alternate = {"CustomizedReportRecipientEmailAddress"})
     @Expose
@@ -63,7 +63,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Is Customized Message Enabled.
-     * Indicates whether the email notifications sent to end users to inform them if an email is phish, spam or junk is customized or not. The default value is false. Optional for creation.
+     * Indicates whether the email notifications sent to end users to inform them if an email is a phish mail, spam or junk is customized or not. The default value is false. Optional for creation.
      */
     @SerializedName(value = "isCustomizedMessageEnabled", alternate = {"IsCustomizedMessageEnabled"})
     @Expose
@@ -90,7 +90,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Is Never Report Enabled For Users.
-     * Indicates whether end users can simply move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
+     * Indicates whether end users can move the message from one folder to another based on the action of spam, phish or not junk without actually reporting it. The default value is true. Optional for creation.
      */
     @SerializedName(value = "isNeverReportEnabledForUsers", alternate = {"IsNeverReportEnabledForUsers"})
     @Expose
@@ -117,7 +117,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Is Report To Customized Email Address Enabled.
-     * Indicates whether emails reported by end users should be send to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
+     * Indicates whether emails reported by end users should be sent to the custom mailbox configured using customizedReportRecipientEmailAddress.  The default value is false. Optional for creation.
      */
     @SerializedName(value = "isReportToCustomizedEmailAddressEnabled", alternate = {"IsReportToCustomizedEmailAddressEnabled"})
     @Expose
@@ -126,7 +126,7 @@ public class EmailThreatSubmissionPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Is Report To Microsoft Enabled.
-     * If enabled, the email will be sent to Microsoft for analysis. The default value is false. Required for creation.
+     * If enabled, the email is sent to Microsoft for analysis. The default value is false. Required for creation.
      */
     @SerializedName(value = "isReportToMicrosoftEnabled", alternate = {"IsReportToMicrosoftEnabled"})
     @Expose

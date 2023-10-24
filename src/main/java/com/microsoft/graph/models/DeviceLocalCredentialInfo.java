@@ -47,7 +47,7 @@ public class DeviceLocalCredentialInfo extends Entity implements IJsonBackedObje
 
     /**
      * The Last Backup Date Time.
-     * When the local administrator account credential was backed up to Azure Active Directory.
+     * When the local administrator account credential was backed up to Microsoft Entra ID.
      */
     @SerializedName(value = "lastBackupDateTime", alternate = {"LastBackupDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class DeviceLocalCredentialInfo extends Entity implements IJsonBackedObje
 
     /**
      * The Refresh Date Time.
-     * When the local administrator account credential will be refreshed and backed up to Azure Active Directory.
+     * When the local administrator account credential will be refreshed and backed up to Microsoft Entra ID.
      */
     @SerializedName(value = "refreshDateTime", alternate = {"RefreshDateTime"})
     @Expose

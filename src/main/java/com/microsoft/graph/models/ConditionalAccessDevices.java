@@ -68,7 +68,7 @@ public class ConditionalAccessDevices implements IJsonBackedObject {
 
     /**
      * The Include Devices.
-     * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFIlter is set.
+     * States in the scope of the policy. All is the only allowed value. Cannot be set if deviceFilter is set.
      */
     @SerializedName(value = "includeDevices", alternate = {"IncludeDevices"})
     @Expose

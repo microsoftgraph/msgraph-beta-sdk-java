@@ -97,6 +97,26 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
         return new com.microsoft.graph.requests.RecommendationRequestBuilder(getRequestUrlWithAdditionalSegment("recommendations") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the DeviceLocalCredentialInfo collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionRequestBuilder deviceLocalCredentials() {
+        return new com.microsoft.graph.requests.DeviceLocalCredentialInfoCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceLocalCredentials"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceLocalCredentialInfo item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceLocalCredentialInfoRequestBuilder deviceLocalCredentials(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceLocalCredentialInfoRequestBuilder(getRequestUrlWithAdditionalSegment("deviceLocalCredentials") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AdministrativeUnit collection
      *
      * @return the collection request builder
@@ -172,8 +192,8 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder deletedItems() {
-        return new com.microsoft.graph.requests.DirectoryObjectCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder deletedItems() {
+        return new com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems"), getClient(), null);
     }
 
     /**
@@ -183,8 +203,8 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.DirectoryObjectRequestBuilder deletedItems(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.DirectoryObjectRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder deletedItems(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DirectoryObjectWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deletedItems") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the User collection

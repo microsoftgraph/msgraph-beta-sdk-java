@@ -27,7 +27,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity.
-     * A string which uniquely represents the operation that occurred. Required. Read-only.
+     * A string that uniquely represents the operation that occurred. Required. Read-only.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -36,7 +36,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Activity Date Time.
-     * The time when the activity ocurred. Required. Read-only.
+     * The time when the activity occurred. Required. Read-only.
      */
     @SerializedName(value = "activityDateTime", alternate = {"ActivityDateTime"})
     @Expose
@@ -54,7 +54,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * A category which represents a logical grouping of activities. Required. Read-only.
+     * A category that represents a logical grouping of activities. Required. Read-only.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -126,7 +126,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Ids.
-     * The collection of Azure Active Directory tenant identifiers for the managed tenants that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * The collection of Microsoft Entra tenant identifiers for the managed tenants that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      */
     @SerializedName(value = "tenantIds", alternate = {"TenantIds"})
     @Expose
@@ -135,7 +135,7 @@ public class AuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Names.
-     * The collection of tenant names that were impacted by this change. This is formatted as a list of comma-separated values. Required. Read-only.
+     * The collection of tenant names that were affected by a change, and is formatted as a list of comma-separated values. Required. Read-only.
      */
     @SerializedName(value = "tenantNames", alternate = {"TenantNames"})
     @Expose

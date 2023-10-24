@@ -52,7 +52,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Visibility.
-     * The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
+     * The visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
      */
     @SerializedName(value = "visibility", alternate = {"Visibility"})
     @Expose
@@ -106,7 +106,7 @@ public class WorkbookWorksheet extends Entity implements IJsonBackedObject {
 
     /**
      * The Tasks.
-     * 
+     * Collection of document tasks on this worksheet. Read-only.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

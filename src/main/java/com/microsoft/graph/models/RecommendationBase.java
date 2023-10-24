@@ -44,7 +44,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Benefits.
-     * An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
+     * An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Microsoft Entra admin center.
      */
     @SerializedName(value = "benefits", alternate = {"Benefits"})
     @Expose
@@ -116,7 +116,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Insights.
-     * Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
+     * Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Microsoft Entra admin center.
      */
     @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
@@ -185,6 +185,15 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RecommendationType recommendationType;
+
+    /**
+     * The Release Type.
+     * The current release type of the recommendation. The possible values are: preview, generallyAvailable, unknownFutureValue.
+     */
+    @SerializedName(value = "releaseType", alternate = {"ReleaseType"})
+    @Expose
+	@Nullable
+    public String releaseType;
 
     /**
      * The Remediation Impact.

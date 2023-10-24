@@ -37,7 +37,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Access Review Id.
-     * The feature-generated id of the access review.
+     * The feature-generated ID of the access review.
      */
     @SerializedName(value = "accessReviewId", alternate = {"AccessReviewId"})
     @Expose
@@ -46,7 +46,7 @@ public class AccessReviewDecision extends Entity implements IJsonBackedObject {
 
     /**
      * The Applied By.
-     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was auto-applied, the userPrincipalName is empty.
+     * When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
      */
     @SerializedName(value = "appliedBy", alternate = {"AppliedBy"})
     @Expose

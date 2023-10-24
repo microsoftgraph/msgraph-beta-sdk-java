@@ -145,6 +145,15 @@ public class MacOSMinimumOperatingSystem implements IJsonBackedObject {
 	@Nullable
     public Boolean v13_0;
 
+    /**
+     * The V14_0.
+     * When TRUE, indicates macOS 14.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     */
+    @SerializedName(value = "v14_0", alternate = {"V14_0"})
+    @Expose
+	@Nullable
+    public Boolean v14_0;
+
 
     /**
      * Sets the raw JSON object

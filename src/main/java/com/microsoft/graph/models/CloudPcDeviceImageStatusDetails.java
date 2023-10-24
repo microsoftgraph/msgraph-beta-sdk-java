@@ -36,6 +36,22 @@ public enum CloudPcDeviceImageStatusDetails
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * vm Already Azure Adjoined
+    */
+    VM_ALREADY_AZURE_ADJOINED,
+    /**
+    * paid Source Image Not Support
+    */
+    PAID_SOURCE_IMAGE_NOT_SUPPORT,
+    /**
+    * source Image Not Support Customize VMName
+    */
+    SOURCE_IMAGE_NOT_SUPPORT_CUSTOMIZE_VM_NAME,
+    /**
+    * source Image Size Exceeds Limitation
+    */
+    SOURCE_IMAGE_SIZE_EXCEEDS_LIMITATION,
+    /**
     * For CloudPcDeviceImageStatusDetails values that were not expected from the service
     */
     UNEXPECTED_VALUE

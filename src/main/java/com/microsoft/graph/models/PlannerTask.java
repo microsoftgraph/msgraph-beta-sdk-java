@@ -155,7 +155,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Has Description.
-     * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+     * Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
      */
     @SerializedName(value = "hasDescription", alternate = {"HasDescription"})
     @Expose

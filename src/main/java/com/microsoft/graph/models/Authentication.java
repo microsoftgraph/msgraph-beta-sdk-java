@@ -19,6 +19,7 @@ import com.microsoft.graph.requests.LongRunningOperationCollectionPage;
 import com.microsoft.graph.requests.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.PasswordAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage;
+import com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.SoftwareOathAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.TemporaryAccessPassAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.WindowsHelloForBusinessAuthenticationMethodCollectionPage;
@@ -120,6 +121,15 @@ public class Authentication extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage phoneMethods;
 
     /**
+     * The Platform Credential Methods.
+     * 
+     */
+    @SerializedName(value = "platformCredentialMethods", alternate = {"PlatformCredentialMethods"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodCollectionPage platformCredentialMethods;
+
+    /**
      * The Software Oath Methods.
      * 
      */
@@ -186,6 +196,10 @@ public class Authentication extends Entity implements IJsonBackedObject {
 
         if (json.has("phoneMethods")) {
             phoneMethods = serializer.deserializeObject(json.get("phoneMethods"), com.microsoft.graph.requests.PhoneAuthenticationMethodCollectionPage.class);
+        }
+
+        if (json.has("platformCredentialMethods")) {
+            platformCredentialMethods = serializer.deserializeObject(json.get("platformCredentialMethods"), com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodCollectionPage.class);
         }
 
         if (json.has("softwareOathMethods")) {

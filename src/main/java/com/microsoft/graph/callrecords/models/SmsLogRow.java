@@ -183,7 +183,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * The unique identifier (GUID) of the user in Azure Active Directory.
+     * The unique identifier (GUID) of the user in Microsoft Entra ID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -192,7 +192,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

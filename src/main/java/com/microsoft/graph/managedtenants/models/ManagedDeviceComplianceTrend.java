@@ -90,7 +90,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements IJsonBackedO
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

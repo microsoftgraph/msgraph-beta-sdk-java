@@ -65,6 +65,15 @@ public class CrossTenantSummary implements IJsonBackedObject {
     public Integer newTenantCount;
 
     /**
+     * The Rarely Used Tenant Count.
+     * 
+     */
+    @SerializedName(value = "rarelyUsedTenantCount", alternate = {"RarelyUsedTenantCount"})
+    @Expose
+	@Nullable
+    public Integer rarelyUsedTenantCount;
+
+    /**
      * The Tenant Count.
      * Count of unique tenants that were accessed, that are different from the device's home tenant, in the time frame between startDateTime and endDateTime.
      */

@@ -58,7 +58,7 @@ public class EntitiesSummary implements IJsonBackedObject {
 
     /**
      * The User Count.
-     * Count of unique Azure Active Directoy users that were seen.
+     * Count of unique Microsoft Entra users that were seen.
      */
     @SerializedName(value = "userCount", alternate = {"UserCount"})
     @Expose

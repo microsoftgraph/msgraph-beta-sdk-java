@@ -29,7 +29,7 @@ public class Connectivity extends Entity implements IJsonBackedObject {
 
     /**
      * The Branches.
-     * Branch represent locations for connectivity.
+     * Branches represent locations for connectivity.
      */
     @SerializedName(value = "branches", alternate = {"Branches"})
     @Expose

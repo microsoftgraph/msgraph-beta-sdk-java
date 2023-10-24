@@ -91,7 +91,9 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseCollectionRequest
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceBulkReprovisionCloudPcRequestBuilder bulkReprovisionCloudPc(@Nonnull final ManagedDeviceBulkReprovisionCloudPcParameterSet parameters) {
         return new ManagedDeviceBulkReprovisionCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bulkReprovisionCloudPc"), getClient(), null, parameters);
@@ -101,7 +103,9 @@ public class ManagedDeviceCollectionRequestBuilder extends BaseCollectionRequest
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceBulkRestoreCloudPcRequestBuilder bulkRestoreCloudPc(@Nonnull final ManagedDeviceBulkRestoreCloudPcParameterSet parameters) {
         return new ManagedDeviceBulkRestoreCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.bulkRestoreCloudPc"), getClient(), null, parameters);

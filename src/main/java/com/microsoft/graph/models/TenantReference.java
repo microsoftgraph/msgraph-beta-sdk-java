@@ -39,7 +39,7 @@ public class TenantReference implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The identifier of the Azure AD tenant. Read-only. Key.
+     * The identifier of the Microsoft Entra tenant. Read-only. Key.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

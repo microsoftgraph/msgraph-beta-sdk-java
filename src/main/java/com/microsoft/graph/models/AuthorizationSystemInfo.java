@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AuthorizationSystemType;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,15 @@ public class AuthorizationSystemInfo implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Authorization System Type.
+     * 
+     */
+    @SerializedName(value = "authorizationSystemType", alternate = {"AuthorizationSystemType"})
+    @Expose
+	@Nullable
+    public AuthorizationSystemType authorizationSystemType;
 
     /**
      * The Display Name.

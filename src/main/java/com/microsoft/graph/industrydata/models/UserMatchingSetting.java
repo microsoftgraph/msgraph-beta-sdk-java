@@ -42,7 +42,7 @@ public class UserMatchingSetting implements IJsonBackedObject {
 
     /**
      * The Match Target.
-     * The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
+     * The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
      */
     @SerializedName(value = "matchTarget", alternate = {"MatchTarget"})
     @Expose

@@ -40,7 +40,7 @@ public class WhoisContact implements IJsonBackedObject {
 
     /**
      * The Address.
-     * 
+     * The physical address of the entity.
      */
     @SerializedName(value = "address", alternate = {"Address"})
     @Expose
@@ -49,7 +49,7 @@ public class WhoisContact implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * The email of this WHOIS contact.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -58,7 +58,7 @@ public class WhoisContact implements IJsonBackedObject {
 
     /**
      * The Fax.
-     * 
+     * The fax of this WHOIS contact. No format is guaranteed.
      */
     @SerializedName(value = "fax", alternate = {"Fax"})
     @Expose
@@ -67,7 +67,7 @@ public class WhoisContact implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The name of this WHOIS contact.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -76,7 +76,7 @@ public class WhoisContact implements IJsonBackedObject {
 
     /**
      * The Organization.
-     * 
+     * The organization of this WHOIS contact.
      */
     @SerializedName(value = "organization", alternate = {"Organization"})
     @Expose
@@ -85,7 +85,7 @@ public class WhoisContact implements IJsonBackedObject {
 
     /**
      * The Telephone.
-     * 
+     * The telephone of this WHOIS contact. No format is guaranteed.
      */
     @SerializedName(value = "telephone", alternate = {"Telephone"})
     @Expose

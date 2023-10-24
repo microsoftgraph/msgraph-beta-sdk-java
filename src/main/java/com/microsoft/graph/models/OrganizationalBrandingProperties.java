@@ -67,7 +67,7 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
 
     /**
      * The Content Customization.
-     * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Azure Active Directory for customers tenants only.
+     * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Microsoft Entra ID for customers tenants only.
      */
     @SerializedName(value = "contentCustomization", alternate = {"ContentCustomization"})
     @Expose

@@ -28,7 +28,7 @@ public class ServiceLevelAgreementRoot extends Entity implements IJsonBackedObje
 
     /**
      * The Azure ADAuthentication.
-     * Collects the Azure AD SLA attainment for each month for an Azure AD tenant.
+     * Collects the Microsoft Entra SLA attainment for each month for a Microsoft Entra tenant.
      */
     @SerializedName(value = "azureADAuthentication", alternate = {"AzureADAuthentication"})
     @Expose

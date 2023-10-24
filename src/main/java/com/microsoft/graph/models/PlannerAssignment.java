@@ -40,7 +40,7 @@ public class PlannerAssignment implements IJsonBackedObject {
 
     /**
      * The Assigned By.
-     * The identity of the user that performed the assignment of the task, i.e. the assignor.
+     * The identity of the user that performed the assignment of the task, that is, the assignor.
      */
     @SerializedName(value = "assignedBy", alternate = {"AssignedBy"})
     @Expose

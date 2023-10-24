@@ -27,7 +27,7 @@ public class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAle
 
     /**
      * The Role Display Name.
-     * The name of the Azure AD directory role.
+     * The name of the Microsoft Entra ID directory role.
      */
     @SerializedName(value = "roleDisplayName", alternate = {"RoleDisplayName"})
     @Expose

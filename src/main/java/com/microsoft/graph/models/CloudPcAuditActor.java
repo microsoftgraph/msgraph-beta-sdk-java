@@ -51,7 +51,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The Application Id.
-     * Azure AD application ID.
+     * Microsoft Entra application ID.
      */
     @SerializedName(value = "applicationId", alternate = {"ApplicationId"})
     @Expose
@@ -105,7 +105,7 @@ public class CloudPcAuditActor implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Azure AD user ID.
+     * Microsoft Entra user ID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

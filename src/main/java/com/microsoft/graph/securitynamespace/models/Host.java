@@ -14,6 +14,7 @@ import com.microsoft.graph.security.models.WhoisRecord;
 import com.microsoft.graph.security.models.Artifact;
 import com.microsoft.graph.security.requests.HostComponentCollectionPage;
 import com.microsoft.graph.security.requests.HostCookieCollectionPage;
+import com.microsoft.graph.security.requests.HostPortCollectionPage;
 import com.microsoft.graph.security.requests.HostSslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
@@ -101,6 +102,13 @@ public class Host extends Artifact implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage passiveDnsReverse;
 
     /**
+     * The Ports.
+     * The hostPorts associated with a host.
+     */
+	@Nullable
+    public com.microsoft.graph.security.requests.HostPortCollectionPage ports;
+
+    /**
      * The Reputation.
      * Represents a calculated reputation of this host.
      */
@@ -111,7 +119,7 @@ public class Host extends Artifact implements IJsonBackedObject {
 
     /**
      * The Ssl Certificates.
-     * 
+     * The hostSslCertificates that are associated with this host.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.HostSslCertificateCollectionPage sslCertificates;
@@ -132,7 +140,7 @@ public class Host extends Artifact implements IJsonBackedObject {
 
     /**
      * The Whois.
-     * 
+     * The most recent whoisRecord for this host.
      */
     @SerializedName(value = "whois", alternate = {"Whois"})
     @Expose
@@ -175,6 +183,10 @@ public class Host extends Artifact implements IJsonBackedObject {
 
         if (json.has("passiveDnsReverse")) {
             passiveDnsReverse = serializer.deserializeObject(json.get("passiveDnsReverse"), com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage.class);
+        }
+
+        if (json.has("ports")) {
+            ports = serializer.deserializeObject(json.get("ports"), com.microsoft.graph.security.requests.HostPortCollectionPage.class);
         }
 
         if (json.has("sslCertificates")) {
