@@ -13,7 +13,7 @@ public class PronounsSettings extends Entity implements Parsable {
      */
     private Boolean isEnabledInOrganization;
     /**
-     * Instantiates a new pronounsSettings and sets the default values.
+     * Instantiates a new PronounsSettings and sets the default values.
      */
     public PronounsSettings() {
         super();
@@ -21,7 +21,7 @@ public class PronounsSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pronounsSettings
+     * @return a PronounsSettings
      */
     @jakarta.annotation.Nonnull
     public static PronounsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PronounsSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isEnabledInOrganization property value. true to enable pronouns in the organization, false otherwise. The default is false, and pronouns are disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabledInOrganization() {

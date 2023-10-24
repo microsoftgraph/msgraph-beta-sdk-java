@@ -37,7 +37,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceManagementIntentDeviceState and sets the default values.
+     * Instantiates a new DeviceManagementIntentDeviceState and sets the default values.
      */
     public DeviceManagementIntentDeviceState() {
         super();
@@ -45,7 +45,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentDeviceState
+     * @return a DeviceManagementIntentDeviceState
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the deviceDisplayName property value. Device name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -62,7 +62,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the deviceId property value. Device id that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -93,7 +93,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -101,7 +101,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the userName property value. The user name that is being reported on a device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -109,7 +109,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
     }
     /**
      * Gets the userPrincipalName property value. The user principal name that is being reported on a device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -46,7 +46,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
      */
     private EducationSynchronizationProfileState state;
     /**
-     * Instantiates a new educationSynchronizationProfile and sets the default values.
+     * Instantiates a new EducationSynchronizationProfile and sets the default values.
      */
     public EducationSynchronizationProfile() {
         super();
@@ -54,7 +54,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationProfile
+     * @return a EducationSynchronizationProfile
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the dataProvider property value. The dataProvider property
-     * @return a educationSynchronizationDataProvider
+     * @return a EducationSynchronizationDataProvider
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationDataProvider getDataProvider() {
@@ -71,7 +71,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the displayName property value. Name of the configuration profile for syncing identities.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -79,7 +79,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the errors property value. All errors associated with this synchronization profile.
-     * @return a educationSynchronizationError
+     * @return a java.util.List<EducationSynchronizationError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationError> getErrors() {
@@ -113,7 +113,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the handleSpecialCharacterConstraint property value. Determines if School Data Sync should automatically replace unsupported special characters while syncing from source.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHandleSpecialCharacterConstraint() {
@@ -121,7 +121,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the identitySynchronizationConfiguration property value. The identitySynchronizationConfiguration property
-     * @return a educationIdentitySynchronizationConfiguration
+     * @return a EducationIdentitySynchronizationConfiguration
      */
     @jakarta.annotation.Nullable
     public EducationIdentitySynchronizationConfiguration getIdentitySynchronizationConfiguration() {
@@ -129,7 +129,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the licensesToAssign property value. License setup configuration.
-     * @return a educationSynchronizationLicenseAssignment
+     * @return a java.util.List<EducationSynchronizationLicenseAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationLicenseAssignment> getLicensesToAssign() {
@@ -137,7 +137,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the profileStatus property value. The synchronization status.
-     * @return a educationSynchronizationProfileStatus
+     * @return a EducationSynchronizationProfileStatus
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfileStatus getProfileStatus() {
@@ -145,7 +145,7 @@ public class EducationSynchronizationProfile extends Entity implements Parsable 
     }
     /**
      * Gets the state property value. The state of the profile. Possible values are: provisioning, provisioned, provisioningFailed, deleting, deletionFailed.
-     * @return a educationSynchronizationProfileState
+     * @return a EducationSynchronizationProfileState
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationProfileState getState() {

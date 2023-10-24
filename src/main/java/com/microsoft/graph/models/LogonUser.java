@@ -47,7 +47,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new logonUser and sets the default values.
+     * Instantiates a new LogonUser and sets the default values.
      */
     public LogonUser() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a logonUser
+     * @return a LogonUser
      */
     @jakarta.annotation.Nonnull
     public static LogonUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountDomain property value. Domain of user account used to logon.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountDomain() {
@@ -72,7 +72,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountName property value. Account name of user account used to logon.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -80,14 +80,14 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
-     * @return a userAccountSecurityType
+     * @return a UserAccountSecurityType
      */
     @jakarta.annotation.Nullable
     public UserAccountSecurityType getAccountType() {
         return this.accountType;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonId property value. User logon ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLogonId() {
@@ -137,7 +137,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a logonType
+     * @return a java.util.List<LogonType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LogonType> getLogonTypes() {
@@ -145,7 +145,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -189,8 +189,8 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
         this.accountType = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

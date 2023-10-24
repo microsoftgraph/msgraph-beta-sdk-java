@@ -67,7 +67,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     private String odataType;
     /**
-     * Instantiates a new teamworkSystemConfiguration and sets the default values.
+     * Instantiates a new TeamworkSystemConfiguration and sets the default values.
      */
     public TeamworkSystemConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -75,7 +75,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkSystemConfiguration
+     * @return a TeamworkSystemConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSystemConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         return new TeamworkSystemConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the dateTimeConfiguration property value. The date and time configurations for a device.
-     * @return a teamworkDateTimeConfiguration
+     * @return a TeamworkDateTimeConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDateTimeConfiguration getDateTimeConfiguration() {
@@ -100,7 +100,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the defaultPassword property value. The default password for the device. Write-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultPassword() {
@@ -138,7 +138,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isDeviceLockEnabled property value. True if the device lock is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceLockEnabled() {
@@ -146,7 +146,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isLoggingEnabled property value. True if logging is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLoggingEnabled() {
@@ -154,7 +154,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isPowerSavingEnabled property value. True if power saving is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPowerSavingEnabled() {
@@ -162,7 +162,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isScreenCaptureEnabled property value. True if screen capture is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScreenCaptureEnabled() {
@@ -170,7 +170,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isSilentModeEnabled property value. True if silent mode is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSilentModeEnabled() {
@@ -178,7 +178,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the language property value. The language option for the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
@@ -186,7 +186,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the lockPin property value. The pin that unlocks the device. Write-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLockPin() {
@@ -194,7 +194,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the loggingLevel property value. The logging level for the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoggingLevel() {
@@ -202,7 +202,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the networkConfiguration property value. The network configuration for the device.
-     * @return a teamworkNetworkConfiguration
+     * @return a TeamworkNetworkConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkNetworkConfiguration getNetworkConfiguration() {
@@ -210,7 +210,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -238,8 +238,8 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

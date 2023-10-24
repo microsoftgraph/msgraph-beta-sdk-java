@@ -9,19 +9,19 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
     /**
-     * The displayName property
+     * The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
      */
     private String displayName;
     /**
-     * The totalCount property
+     * The total number of front-line service plans purchased by the customer.
      */
     private Integer totalCount;
     /**
-     * The usedCount property
+     * The number of service plans that have been used for the account.
      */
     private Integer usedCount;
     /**
-     * Instantiates a new cloudPcFrontLineServicePlan and sets the default values.
+     * Instantiates a new CloudPcFrontLineServicePlan and sets the default values.
      */
     public CloudPcFrontLineServicePlan() {
         super();
@@ -29,7 +29,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcFrontLineServicePlan
+     * @return a CloudPcFrontLineServicePlan
      */
     @jakarta.annotation.Nonnull
     public static CloudPcFrontLineServicePlan createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,8 +37,8 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         return new CloudPcFrontLineServicePlan();
     }
     /**
-     * Gets the displayName property value. The displayName property
-     * @return a string
+     * Gets the displayName property value. The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -57,16 +57,16 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the totalCount property value. The totalCount property
-     * @return a integer
+     * Gets the totalCount property value. The total number of front-line service plans purchased by the customer.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCount() {
         return this.totalCount;
     }
     /**
-     * Gets the usedCount property value. The usedCount property
-     * @return a integer
+     * Gets the usedCount property value. The number of service plans that have been used for the account.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsedCount() {
@@ -84,21 +84,21 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         writer.writeIntegerValue("usedCount", this.getUsedCount());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.displayName = value;
     }
     /**
-     * Sets the totalCount property value. The totalCount property
+     * Sets the totalCount property value. The total number of front-line service plans purchased by the customer.
      * @param value Value to set for the totalCount property.
      */
     public void setTotalCount(@jakarta.annotation.Nullable final Integer value) {
         this.totalCount = value;
     }
     /**
-     * Sets the usedCount property value. The usedCount property
+     * Sets the usedCount property value. The number of service plans that have been used for the account.
      * @param value Value to set for the usedCount property.
      */
     public void setUsedCount(@jakarta.annotation.Nullable final Integer value) {

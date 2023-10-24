@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcUserSetting extends Entity implements Parsable {
     /**
-     * Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      */
     private java.util.List<CloudPcUserSettingAssignment> assignments;
     /**
@@ -42,7 +42,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     private Boolean selfServiceEnabled;
     /**
-     * Instantiates a new cloudPcUserSetting and sets the default values.
+     * Instantiates a new CloudPcUserSetting and sets the default values.
      */
     public CloudPcUserSetting() {
         super();
@@ -50,7 +50,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcUserSetting
+     * @return a CloudPcUserSetting
      */
     @jakarta.annotation.Nonnull
     public static CloudPcUserSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,8 +58,8 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return new CloudPcUserSetting();
     }
     /**
-     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
-     * @return a cloudPcUserSettingAssignment
+     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * @return a java.util.List<CloudPcUserSettingAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserSettingAssignment> getAssignments() {
@@ -75,7 +75,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The setting name displayed in the user interface.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -108,7 +108,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     }
     /**
      * Gets the localAdminEnabled property value. Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalAdminEnabled() {
@@ -116,7 +116,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     }
     /**
      * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getResetEnabled() {
@@ -124,7 +124,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     }
     /**
      * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
-     * @return a cloudPcRestorePointSetting
+     * @return a CloudPcRestorePointSetting
      */
     @jakarta.annotation.Nullable
     public CloudPcRestorePointSetting getRestorePointSetting() {
@@ -132,7 +132,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     }
     /**
      * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSelfServiceEnabled() {
@@ -155,7 +155,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         writer.writeBooleanValue("selfServiceEnabled", this.getSelfServiceEnabled());
     }
     /**
-     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcUserSettingAssignment> value) {

@@ -25,7 +25,7 @@ public class Planner extends Entity implements Parsable {
      */
     private java.util.List<PlannerTask> tasks;
     /**
-     * Instantiates a new planner and sets the default values.
+     * Instantiates a new Planner and sets the default values.
      */
     public Planner() {
         super();
@@ -33,7 +33,7 @@ public class Planner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a planner
+     * @return a Planner
      */
     @jakarta.annotation.Nonnull
     public static Planner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class Planner extends Entity implements Parsable {
     }
     /**
      * Gets the buckets property value. Read-only. Nullable. Returns a collection of the specified buckets
-     * @return a plannerBucket
+     * @return a java.util.List<PlannerBucket>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerBucket> getBuckets() {
@@ -63,7 +63,7 @@ public class Planner extends Entity implements Parsable {
     }
     /**
      * Gets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
-     * @return a plannerPlan
+     * @return a java.util.List<PlannerPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlan> getPlans() {
@@ -71,7 +71,7 @@ public class Planner extends Entity implements Parsable {
     }
     /**
      * Gets the rosters property value. Read-only. Nullable. Returns a collection of the specified rosters
-     * @return a plannerRoster
+     * @return a java.util.List<PlannerRoster>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerRoster> getRosters() {
@@ -79,7 +79,7 @@ public class Planner extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. Read-only. Nullable. Returns a collection of the specified tasks
-     * @return a plannerTask
+     * @return a java.util.List<PlannerTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTask> getTasks() {

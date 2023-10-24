@@ -13,11 +13,11 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
      */
     private String name;
     /**
-     * Operations that an authorized principal are allowed to perform.
+     * Operations that an authorized principal is allowed to perform.
      */
     private java.util.List<UnifiedRbacResourceAction> resourceActions;
     /**
-     * Instantiates a new unifiedRbacResourceNamespace and sets the default values.
+     * Instantiates a new UnifiedRbacResourceNamespace and sets the default values.
      */
     public UnifiedRbacResourceNamespace() {
         super();
@@ -25,7 +25,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRbacResourceNamespace
+     * @return a UnifiedRbacResourceNamespace
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRbacResourceNamespace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,15 +45,15 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name of the resource namespace. Typically, the same name as the id property, such as microsoft.aad.b2c. Required. Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
         return this.name;
     }
     /**
-     * Gets the resourceActions property value. Operations that an authorized principal are allowed to perform.
-     * @return a unifiedRbacResourceAction
+     * Gets the resourceActions property value. Operations that an authorized principal is allowed to perform.
+     * @return a java.util.List<UnifiedRbacResourceAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRbacResourceAction> getResourceActions() {
@@ -77,7 +77,7 @@ public class UnifiedRbacResourceNamespace extends Entity implements Parsable {
         this.name = value;
     }
     /**
-     * Sets the resourceActions property value. Operations that an authorized principal are allowed to perform.
+     * Sets the resourceActions property value. Operations that an authorized principal is allowed to perform.
      * @param value Value to set for the resourceActions property.
      */
     public void setResourceActions(@jakarta.annotation.Nullable final java.util.List<UnifiedRbacResourceAction> value) {

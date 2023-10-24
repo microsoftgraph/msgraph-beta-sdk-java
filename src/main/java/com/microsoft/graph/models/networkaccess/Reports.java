@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Reports extends Entity implements Parsable {
     /**
-     * Instantiates a new reports and sets the default values.
+     * Instantiates a new Reports and sets the default values.
      */
     public Reports() {
         super();
@@ -18,7 +18,7 @@ public class Reports extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a reports
+     * @return a Reports
      */
     @jakarta.annotation.Nonnull
     public static Reports createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

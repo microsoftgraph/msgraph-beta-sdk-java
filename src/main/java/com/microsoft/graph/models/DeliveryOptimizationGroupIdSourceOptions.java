@@ -16,7 +16,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      */
     private DeliveryOptimizationGroupIdOptionsType groupIdSourceOption;
     /**
-     * Instantiates a new deliveryOptimizationGroupIdSourceOptions and sets the default values.
+     * Instantiates a new DeliveryOptimizationGroupIdSourceOptions and sets the default values.
      */
     public DeliveryOptimizationGroupIdSourceOptions() {
         super();
@@ -25,7 +25,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deliveryOptimizationGroupIdSourceOptions
+     * @return a DeliveryOptimizationGroupIdSourceOptions
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationGroupIdSourceOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
     }
     /**
      * Gets the groupIdSourceOption property value. Possible values for the DeliveryOptimizationGroupIdOptionsType setting.
-     * @return a deliveryOptimizationGroupIdOptionsType
+     * @return a DeliveryOptimizationGroupIdOptionsType
      */
     @jakarta.annotation.Nullable
     public DeliveryOptimizationGroupIdOptionsType getGroupIdSourceOption() {

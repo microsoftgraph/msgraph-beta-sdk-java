@@ -73,7 +73,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     }
     /**
      * Collection of resource access settings associated with account.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> get() {
@@ -82,7 +82,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     /**
      * Collection of resource access settings associated with account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -95,7 +95,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     /**
      * Update the navigation property resourceAccessProfiles in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> patch(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body) {
@@ -105,7 +105,7 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
      * Update the navigation property resourceAccessProfiles in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementResourceAccessProfileBase
+     * @return a CompletableFuture of DeviceManagementResourceAccessProfileBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceManagementResourceAccessProfileBase> patch(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -132,15 +132,16 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -159,10 +160,6 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -170,6 +167,10 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -191,17 +192,17 @@ public class DeviceManagementResourceAccessProfileBaseItemRequestBuilder extends
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementResourceAccessProfileBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

@@ -46,7 +46,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
      */
     private Integer successCount;
     /**
-     * Instantiates a new deviceComplianceDeviceOverview and sets the default values.
+     * Instantiates a new DeviceComplianceDeviceOverview and sets the default values.
      */
     public DeviceComplianceDeviceOverview() {
         super();
@@ -54,7 +54,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceDeviceOverview
+     * @return a DeviceComplianceDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceDeviceOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
@@ -71,7 +71,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the conflictCount property value. Number of devices in conflict
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
@@ -79,7 +79,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -87,7 +87,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the failedCount property value. Number of failed devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -121,7 +121,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -129,7 +129,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the notApplicablePlatformCount property value. Number of not applicable devices due to mismatch platform and policy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicablePlatformCount() {
@@ -137,7 +137,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the pendingCount property value. Number of pending devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -145,7 +145,7 @@ public class DeviceComplianceDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the successCount property value. Number of succeeded devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

@@ -13,7 +13,7 @@ public class CloudPcGalleryImageCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<CloudPcGalleryImage> value;
     /**
-     * Instantiates a new cloudPcGalleryImageCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcGalleryImageCollectionResponse and sets the default values.
      */
     public CloudPcGalleryImageCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CloudPcGalleryImageCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcGalleryImageCollectionResponse
+     * @return a CloudPcGalleryImageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcGalleryImageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CloudPcGalleryImageCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcGalleryImage
+     * @return a java.util.List<CloudPcGalleryImage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcGalleryImage> getValue() {

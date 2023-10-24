@@ -30,7 +30,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
      */
     private String odataType;
     /**
-     * Instantiates a new windowsDriverUpdateProfileInventorySyncStatus and sets the default values.
+     * Instantiates a new WindowsDriverUpdateProfileInventorySyncStatus and sets the default values.
      */
     public WindowsDriverUpdateProfileInventorySyncStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsDriverUpdateProfileInventorySyncStatus
+     * @return a WindowsDriverUpdateProfileInventorySyncStatus
      */
     @jakarta.annotation.Nonnull
     public static WindowsDriverUpdateProfileInventorySyncStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
         return new WindowsDriverUpdateProfileInventorySyncStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the driverInventorySyncState property value. Windows DnF update inventory sync state.
-     * @return a windowsDriverUpdateProfileInventorySyncState
+     * @return a WindowsDriverUpdateProfileInventorySyncState
      */
     @jakarta.annotation.Nullable
     public WindowsDriverUpdateProfileInventorySyncState getDriverInventorySyncState() {
@@ -83,7 +83,7 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,8 +101,8 @@ public class WindowsDriverUpdateProfileInventorySyncStatus implements Additional
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -32,7 +32,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
      */
     private AndroidWiFiSecurityType wiFiSecurityType;
     /**
-     * Instantiates a new androidWorkProfileWiFiConfiguration and sets the default values.
+     * Instantiates a new AndroidWorkProfileWiFiConfiguration and sets the default values.
      */
     public AndroidWorkProfileWiFiConfiguration() {
         super();
@@ -41,7 +41,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWorkProfileWiFiConfiguration
+     * @return a AndroidWorkProfileWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -65,7 +65,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -87,7 +87,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -95,7 +95,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -103,7 +103,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
-     * @return a androidWiFiSecurityType
+     * @return a AndroidWiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public AndroidWiFiSecurityType getWiFiSecurityType() {

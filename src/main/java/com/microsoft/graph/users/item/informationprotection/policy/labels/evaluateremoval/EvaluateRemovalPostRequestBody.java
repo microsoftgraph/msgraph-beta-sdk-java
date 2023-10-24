@@ -24,7 +24,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
      */
     private DowngradeJustification downgradeJustification;
     /**
-     * Instantiates a new evaluateRemovalPostRequestBody and sets the default values.
+     * Instantiates a new EvaluateRemovalPostRequestBody and sets the default values.
      */
     public EvaluateRemovalPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -32,7 +32,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateRemovalPostRequestBody
+     * @return a EvaluateRemovalPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static EvaluateRemovalPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
         return new EvaluateRemovalPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
     }
     /**
      * Gets the contentInfo property value. The contentInfo property
-     * @return a contentInfo
+     * @return a ContentInfo
      */
     @jakarta.annotation.Nullable
     public ContentInfo getContentInfo() {
@@ -57,7 +57,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
     }
     /**
      * Gets the downgradeJustification property value. The downgradeJustification property
-     * @return a downgradeJustification
+     * @return a DowngradeJustification
      */
     @jakarta.annotation.Nullable
     public DowngradeJustification getDowngradeJustification() {
@@ -85,8 +85,8 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

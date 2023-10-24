@@ -33,7 +33,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     private java.util.List<CloudPcExternalPartnerSetting> externalPartnerSettings;
     /**
-     * The frontLineServicePlans property
+     * Front-line service plans for a Cloud PC.
      */
     private java.util.List<CloudPcFrontLineServicePlan> frontLineServicePlans;
     /**
@@ -61,7 +61,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     private java.util.List<CloudPcServicePlan> servicePlans;
     /**
-     * Cloud PC shared-use service plans.
+     * The sharedUseServicePlans property
      */
     private java.util.List<CloudPcSharedUseServicePlan> sharedUseServicePlans;
     /**
@@ -77,7 +77,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     private java.util.List<CloudPcUserSetting> userSettings;
     /**
-     * Instantiates a new virtualEndpoint and sets the default values.
+     * Instantiates a new VirtualEndpoint and sets the default values.
      */
     public VirtualEndpoint() {
         super();
@@ -85,7 +85,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEndpoint
+     * @return a VirtualEndpoint
      */
     @jakarta.annotation.Nonnull
     public static VirtualEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -94,7 +94,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the auditEvents property value. Cloud PC audit event.
-     * @return a cloudPcAuditEvent
+     * @return a java.util.List<CloudPcAuditEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcAuditEvent> getAuditEvents() {
@@ -102,7 +102,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the bulkActions property value. The bulkActions property
-     * @return a cloudPcBulkAction
+     * @return a java.util.List<CloudPcBulkAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcBulkAction> getBulkActions() {
@@ -110,7 +110,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPCs property value. Cloud managed virtual desktops.
-     * @return a cloudPC
+     * @return a java.util.List<CloudPC>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPC> getCloudPCs() {
@@ -118,7 +118,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the crossCloudGovernmentOrganizationMapping property value. Cloud PC organization mapping between public and US Government Community Cloud (GCC) organizations.
-     * @return a cloudPcCrossCloudGovernmentOrganizationMapping
+     * @return a CloudPcCrossCloudGovernmentOrganizationMapping
      */
     @jakarta.annotation.Nullable
     public CloudPcCrossCloudGovernmentOrganizationMapping getCrossCloudGovernmentOrganizationMapping() {
@@ -126,7 +126,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the deviceImages property value. The image resource on Cloud PC.
-     * @return a cloudPcDeviceImage
+     * @return a java.util.List<CloudPcDeviceImage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcDeviceImage> getDeviceImages() {
@@ -134,7 +134,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
-     * @return a cloudPcExternalPartnerSetting
+     * @return a java.util.List<CloudPcExternalPartnerSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcExternalPartnerSetting> getExternalPartnerSettings() {
@@ -167,8 +167,8 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the frontLineServicePlans property value. The frontLineServicePlans property
-     * @return a cloudPcFrontLineServicePlan
+     * Gets the frontLineServicePlans property value. Front-line service plans for a Cloud PC.
+     * @return a java.util.List<CloudPcFrontLineServicePlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcFrontLineServicePlan> getFrontLineServicePlans() {
@@ -176,7 +176,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the galleryImages property value. The gallery image resource on Cloud PC.
-     * @return a cloudPcGalleryImage
+     * @return a java.util.List<CloudPcGalleryImage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcGalleryImage> getGalleryImages() {
@@ -184,7 +184,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesConnections property value. A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
-     * @return a cloudPcOnPremisesConnection
+     * @return a java.util.List<CloudPcOnPremisesConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcOnPremisesConnection> getOnPremisesConnections() {
@@ -192,7 +192,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the organizationSettings property value. The Cloud PC organization settings for a tenant.
-     * @return a cloudPcOrganizationSettings
+     * @return a CloudPcOrganizationSettings
      */
     @jakarta.annotation.Nullable
     public CloudPcOrganizationSettings getOrganizationSettings() {
@@ -200,7 +200,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningPolicies property value. Cloud PC provisioning policy.
-     * @return a cloudPcProvisioningPolicy
+     * @return a java.util.List<CloudPcProvisioningPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicy> getProvisioningPolicies() {
@@ -208,7 +208,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the reports property value. Cloud PC related reports.
-     * @return a cloudPcReports
+     * @return a CloudPcReports
      */
     @jakarta.annotation.Nullable
     public CloudPcReports getReports() {
@@ -216,15 +216,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlans property value. Cloud PC service plans.
-     * @return a cloudPcServicePlan
+     * @return a java.util.List<CloudPcServicePlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcServicePlan> getServicePlans() {
         return this.servicePlans;
     }
     /**
-     * Gets the sharedUseServicePlans property value. Cloud PC shared-use service plans.
-     * @return a cloudPcSharedUseServicePlan
+     * Gets the sharedUseServicePlans property value. The sharedUseServicePlans property
+     * @return a java.util.List<CloudPcSharedUseServicePlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcSharedUseServicePlan> getSharedUseServicePlans() {
@@ -232,7 +232,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the snapshots property value. Cloud PC snapshots.
-     * @return a cloudPcSnapshot
+     * @return a java.util.List<CloudPcSnapshot>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcSnapshot> getSnapshots() {
@@ -240,7 +240,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the supportedRegions property value. Cloud PC supported regions.
-     * @return a cloudPcSupportedRegion
+     * @return a java.util.List<CloudPcSupportedRegion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcSupportedRegion> getSupportedRegions() {
@@ -248,7 +248,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the userSettings property value. Cloud PC user settings.
-     * @return a cloudPcUserSetting
+     * @return a java.util.List<CloudPcUserSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserSetting> getUserSettings() {
@@ -322,7 +322,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.externalPartnerSettings = value;
     }
     /**
-     * Sets the frontLineServicePlans property value. The frontLineServicePlans property
+     * Sets the frontLineServicePlans property value. Front-line service plans for a Cloud PC.
      * @param value Value to set for the frontLineServicePlans property.
      */
     public void setFrontLineServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcFrontLineServicePlan> value) {
@@ -371,7 +371,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.servicePlans = value;
     }
     /**
-     * Sets the sharedUseServicePlans property value. Cloud PC shared-use service plans.
+     * Sets the sharedUseServicePlans property value. The sharedUseServicePlans property
      * @param value Value to set for the sharedUseServicePlans property.
      */
     public void setSharedUseServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcSharedUseServicePlan> value) {

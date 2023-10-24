@@ -20,7 +20,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      */
     private DeviceManagementConfigurationSettingInstance settingInstance;
     /**
-     * Instantiates a new deviceManagementConfigurationSetting and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSetting and sets the default values.
      */
     public DeviceManagementConfigurationSetting() {
         super();
@@ -28,7 +28,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSetting
+     * @return a DeviceManagementConfigurationSetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
     }
     /**
      * Gets the settingDefinitions property value. List of related Setting Definitions. This property is read-only.
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getSettingDefinitions() {
@@ -56,7 +56,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
     }
     /**
      * Gets the settingInstance property value. Setting instance within policy
-     * @return a deviceManagementConfigurationSettingInstance
+     * @return a DeviceManagementConfigurationSettingInstance
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingInstance getSettingInstance() {

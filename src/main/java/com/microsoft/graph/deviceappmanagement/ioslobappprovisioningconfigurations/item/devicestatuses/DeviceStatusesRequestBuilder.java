@@ -60,7 +60,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of device installation states for this mobile app configuration.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatusCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of device installation states for this mobile app configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatusCollectionResponse
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatusCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to deviceStatuses for deviceAppManagement
      * @param body The request body
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus body) {
@@ -92,7 +92,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceStatuses for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of managedDeviceMobileAppConfigurationDeviceStatus
+     * @return a CompletableFuture of ManagedDeviceMobileAppConfigurationDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ManagedDeviceMobileAppConfigurationDeviceStatus> post(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,6 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDeviceMobileAppConfigurationDeviceStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceStatusesRequestBuilder
+     * @return a DeviceStatusesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceStatusesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

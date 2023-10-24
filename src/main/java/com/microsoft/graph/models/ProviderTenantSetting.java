@@ -30,7 +30,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
      */
     private String vendor;
     /**
-     * Instantiates a new providerTenantSetting and sets the default values.
+     * Instantiates a new ProviderTenantSetting and sets the default values.
      */
     public ProviderTenantSetting() {
         super();
@@ -38,7 +38,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a providerTenantSetting
+     * @return a ProviderTenantSetting
      */
     @jakarta.annotation.Nonnull
     public static ProviderTenantSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -55,7 +55,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     }
     /**
      * Gets the enabled property value. The enabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -85,7 +85,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     }
     /**
      * Gets the provider property value. The provider property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvider() {
@@ -93,7 +93,7 @@ public class ProviderTenantSetting extends Entity implements Parsable {
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendor() {

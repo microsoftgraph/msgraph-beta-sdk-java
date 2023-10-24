@@ -70,7 +70,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      */
     private String targetId;
     /**
-     * Instantiates a new accessPackageAssignment and sets the default values.
+     * Instantiates a new AccessPackageAssignment and sets the default values.
      */
     public AccessPackageAssignment() {
         super();
@@ -78,7 +78,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignment
+     * @return a AccessPackageAssignment
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -95,7 +95,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentPolicy property value. Read-only. Nullable. Supports $filter (eq) on the id property
-     * @return a accessPackageAssignmentPolicy
+     * @return a AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nullable
     public AccessPackageAssignmentPolicy getAccessPackageAssignmentPolicy() {
@@ -103,7 +103,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentRequests property value. The accessPackageAssignmentRequests property
-     * @return a accessPackageAssignmentRequest
+     * @return a java.util.List<AccessPackageAssignmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAccessPackageAssignmentRequests() {
@@ -111,7 +111,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentResourceRoles property value. The resource roles delivered to the target user for this assignment. Read-only. Nullable.
-     * @return a accessPackageAssignmentResourceRole
+     * @return a java.util.List<AccessPackageAssignmentResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentResourceRole> getAccessPackageAssignmentResourceRoles() {
@@ -119,7 +119,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageId property value. The identifier of the access package. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
@@ -127,7 +127,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentPolicyId property value. The identifier of the access package assignment policy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentPolicyId() {
@@ -135,7 +135,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentState property value. The state of the access package assignment. Possible values are Delivering, Delivered, or Expired. Read-only. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentState() {
@@ -143,7 +143,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentStatus property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentStatus() {
@@ -151,7 +151,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the catalogId property value. The identifier of the catalog containing the access package. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogId() {
@@ -159,7 +159,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionCalloutInstances property value. Information about all the custom extension calls that were made during the access package assignment workflow.
-     * @return a customExtensionCalloutInstance
+     * @return a java.util.List<CustomExtensionCalloutInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionCalloutInstance> getCustomExtensionCalloutInstances() {
@@ -199,7 +199,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the isExtended property value. Indicates whether the access package assignment is extended. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExtended() {
@@ -207,7 +207,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the schedule property value. When the access assignment is to be in place. Read-only.
-     * @return a requestSchedule
+     * @return a RequestSchedule
      */
     @jakarta.annotation.Nullable
     public RequestSchedule getSchedule() {
@@ -215,7 +215,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-     * @return a accessPackageSubject
+     * @return a AccessPackageSubject
      */
     @jakarta.annotation.Nullable
     public AccessPackageSubject getTarget() {
@@ -223,7 +223,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the targetId property value. The ID of the subject with the assignment. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetId() {

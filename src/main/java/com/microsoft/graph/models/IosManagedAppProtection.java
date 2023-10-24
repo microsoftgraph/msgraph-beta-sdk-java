@@ -88,7 +88,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
      */
     private Boolean thirdPartyKeyboardsBlocked;
     /**
-     * Instantiates a new iosManagedAppProtection and sets the default values.
+     * Instantiates a new IosManagedAppProtection and sets the default values.
      */
     public IosManagedAppProtection() {
         super();
@@ -97,7 +97,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosManagedAppProtection
+     * @return a IosManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static IosManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -106,7 +106,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the allowedIosDeviceModels property value. Semicolon seperated list of device models allowed, as a string, for the managed app to work.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAllowedIosDeviceModels() {
@@ -114,7 +114,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the appActionIfIosDeviceModelNotAllowed property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfIosDeviceModelNotAllowed() {
@@ -122,7 +122,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the appDataEncryptionType property value. Represents the level to which app data is encrypted for managed apps
-     * @return a managedAppDataEncryptionType
+     * @return a ManagedAppDataEncryptionType
      */
     @jakarta.annotation.Nullable
     public ManagedAppDataEncryptionType getAppDataEncryptionType() {
@@ -130,7 +130,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -138,7 +138,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomBrowserProtocol() {
@@ -146,7 +146,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the customDialerAppProtocol property value. Protocol of a custom dialer app to click-to-open a phone number on iOS, for example, skype:.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomDialerAppProtocol() {
@@ -154,7 +154,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the deployedAppCount property value. Count of apps to which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -162,7 +162,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the deploymentSummary property value. Navigation property to deployment summary of the configuration.
-     * @return a managedAppPolicyDeploymentSummary
+     * @return a ManagedAppPolicyDeploymentSummary
      */
     @jakarta.annotation.Nullable
     public ManagedAppPolicyDeploymentSummary getDeploymentSummary() {
@@ -170,7 +170,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the disableProtectionOfManagedOutboundOpenInData property value. Disable protection of data transferred to other apps through IOS OpenIn option. This setting is only allowed to be True when AllowedOutboundDataTransferDestinations is set to ManagedApps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableProtectionOfManagedOutboundOpenInData() {
@@ -178,7 +178,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the exemptedAppProtocols property value. Apps in this list will be exempt from the policy and will be able to receive data from managed apps.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getExemptedAppProtocols() {
@@ -186,7 +186,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the exemptedUniversalLinks property value. A list of custom urls that are allowed to invocate an unmanaged app
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getExemptedUniversalLinks() {
@@ -194,7 +194,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the faceIdBlocked property value. Indicates whether use of the FaceID is allowed in place of a pin if PinRequired is set to True.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFaceIdBlocked() {
@@ -230,7 +230,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the filterOpenInToOnlyManagedApps property value. Defines if open-in operation is supported from the managed app to the filesharing locations selected. This setting only applies when AllowedOutboundDataTransferDestinations is set to ManagedApps and DisableProtectionOfManagedOutboundOpenInData is set to False.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFilterOpenInToOnlyManagedApps() {
@@ -238,7 +238,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the managedUniversalLinks property value. A list of custom urls that are allowed to invocate a managed app
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedUniversalLinks() {
@@ -246,7 +246,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
@@ -254,7 +254,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the minimumWarningSdkVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningSdkVersion() {
@@ -262,7 +262,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeSdkVersion() {
@@ -270,7 +270,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the protectInboundDataFromUnknownSources property value. Protect incoming data from unknown source. This setting is only allowed to be True when AllowedInboundDataTransferSources is set to AllApps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getProtectInboundDataFromUnknownSources() {
@@ -278,7 +278,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     }
     /**
      * Gets the thirdPartyKeyboardsBlocked property value. Defines if third party keyboards are allowed while accessing a managed app
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getThirdPartyKeyboardsBlocked() {

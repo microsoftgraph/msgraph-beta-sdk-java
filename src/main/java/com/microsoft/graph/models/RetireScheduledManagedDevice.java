@@ -66,7 +66,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new retireScheduledManagedDevice and sets the default values.
+     * Instantiates a new RetireScheduledManagedDevice and sets the default values.
      */
     public RetireScheduledManagedDevice() {
         this.setAdditionalData(new HashMap<>());
@@ -74,7 +74,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a retireScheduledManagedDevice
+     * @return a RetireScheduledManagedDevice
      */
     @jakarta.annotation.Nonnull
     public static RetireScheduledManagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         return new RetireScheduledManagedDevice();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the complianceState property value. The complianceState property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getComplianceState() {
@@ -99,7 +99,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceCompliancePolicyId property value. Device Compliance PolicyId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceCompliancePolicyId() {
@@ -107,7 +107,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceCompliancePolicyName property value. Device Compliance Policy Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceCompliancePolicyName() {
@@ -115,7 +115,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceType property value. Device type.
-     * @return a deviceType
+     * @return a DeviceType
      */
     @jakarta.annotation.Nullable
     public DeviceType getDeviceType() {
@@ -144,7 +144,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the id property value. Key of the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -152,7 +152,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the managedDeviceId property value. Managed DeviceId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -160,7 +160,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the managedDeviceName property value. Managed Device Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -168,7 +168,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the managementAgent property value. Management agent type.
-     * @return a managementAgentType
+     * @return a ManagementAgentType
      */
     @jakarta.annotation.Nullable
     public ManagementAgentType getManagementAgent() {
@@ -176,7 +176,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -184,7 +184,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the ownerType property value. Owner type of device.
-     * @return a managedDeviceOwnerType
+     * @return a ManagedDeviceOwnerType
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceOwnerType getOwnerType() {
@@ -200,7 +200,7 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -227,8 +227,8 @@ public class RetireScheduledManagedDevice implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

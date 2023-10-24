@@ -53,7 +53,7 @@ public class PersonName extends ItemFacet implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new personName and sets the default values.
+     * Instantiates a new PersonName and sets the default values.
      */
     public PersonName() {
         super();
@@ -62,7 +62,7 @@ public class PersonName extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personName
+     * @return a PersonName
      */
     @jakarta.annotation.Nonnull
     public static PersonName createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Provides an ordered rendering of firstName and lastName depending on the locale of the user or their device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -99,7 +99,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the first property value. First name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirst() {
@@ -107,7 +107,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the initials property value. Initials of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitials() {
@@ -115,7 +115,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the languageTag property value. Contains the name for the language (en-US, no-NB, en-AU) following IETF BCP47 format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
@@ -123,7 +123,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the last property value. Last name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLast() {
@@ -131,7 +131,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the maiden property value. Maiden name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaiden() {
@@ -139,7 +139,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the middle property value. Middle name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMiddle() {
@@ -147,7 +147,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the nickname property value. Nickname of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNickname() {
@@ -155,7 +155,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the pronunciation property value. Guidance on how to pronounce the users name.
-     * @return a personNamePronounciation
+     * @return a PersonNamePronounciation
      */
     @jakarta.annotation.Nullable
     public PersonNamePronounciation getPronunciation() {
@@ -163,7 +163,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the suffix property value. Designators used after the users name (eg: PhD.)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSuffix() {
@@ -171,7 +171,7 @@ public class PersonName extends ItemFacet implements Parsable {
     }
     /**
      * Gets the title property value. Honorifics used to prefix a users name (eg: Dr, Sir, Madam, Mrs.)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

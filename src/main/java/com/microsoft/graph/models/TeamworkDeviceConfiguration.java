@@ -58,7 +58,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      */
     private TeamworkTeamsClientConfiguration teamsClientConfiguration;
     /**
-     * Instantiates a new teamworkDeviceConfiguration and sets the default values.
+     * Instantiates a new TeamworkDeviceConfiguration and sets the default values.
      */
     public TeamworkDeviceConfiguration() {
         super();
@@ -66,7 +66,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceConfiguration
+     * @return a TeamworkDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the cameraConfiguration property value. The camera configuration. Applicable only for Microsoft Teams Rooms-enabled devices.
-     * @return a teamworkCameraConfiguration
+     * @return a TeamworkCameraConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkCameraConfiguration getCameraConfiguration() {
@@ -83,7 +83,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the device configuration document.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -99,7 +99,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayConfiguration property value. The display configuration.
-     * @return a teamworkDisplayConfiguration
+     * @return a TeamworkDisplayConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDisplayConfiguration getDisplayConfiguration() {
@@ -128,7 +128,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the hardwareConfiguration property value. The hardware configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkHardwareConfiguration
+     * @return a TeamworkHardwareConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkHardwareConfiguration getHardwareConfiguration() {
@@ -136,7 +136,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device configuration.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -152,7 +152,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the microphoneConfiguration property value. The microphone configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkMicrophoneConfiguration
+     * @return a TeamworkMicrophoneConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkMicrophoneConfiguration getMicrophoneConfiguration() {
@@ -160,7 +160,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the softwareVersions property value. Information related to software versions for the device, such as firmware, operating system, Teams client, and admin agent.
-     * @return a teamworkDeviceSoftwareVersions
+     * @return a TeamworkDeviceSoftwareVersions
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceSoftwareVersions getSoftwareVersions() {
@@ -168,7 +168,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the speakerConfiguration property value. The speaker configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkSpeakerConfiguration
+     * @return a TeamworkSpeakerConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkSpeakerConfiguration getSpeakerConfiguration() {
@@ -176,7 +176,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the systemConfiguration property value. The system configuration. Not applicable for Teams Rooms-enabled devices.
-     * @return a teamworkSystemConfiguration
+     * @return a TeamworkSystemConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkSystemConfiguration getSystemConfiguration() {
@@ -184,7 +184,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the teamsClientConfiguration property value. The Teams client configuration. Applicable only for Teams Rooms-enabled devices.
-     * @return a teamworkTeamsClientConfiguration
+     * @return a TeamworkTeamsClientConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkTeamsClientConfiguration getTeamsClientConfiguration() {

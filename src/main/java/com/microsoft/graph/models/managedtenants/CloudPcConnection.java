@@ -27,11 +27,11 @@ public class CloudPcConnection extends Entity implements Parsable {
      */
     private String tenantDisplayName;
     /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      */
     private String tenantId;
     /**
-     * Instantiates a new cloudPcConnection and sets the default values.
+     * Instantiates a new CloudPcConnection and sets the default values.
      */
     public CloudPcConnection() {
         super();
@@ -39,7 +39,7 @@ public class CloudPcConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcConnection
+     * @return a CloudPcConnection
      */
     @jakarta.annotation.Nonnull
     public static CloudPcConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class CloudPcConnection extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the cloud PC connection. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,7 +70,7 @@ public class CloudPcConnection extends Entity implements Parsable {
     }
     /**
      * Gets the healthCheckStatus property value. The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthCheckStatus() {
@@ -86,15 +86,15 @@ public class CloudPcConnection extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -142,7 +142,7 @@ public class CloudPcConnection extends Entity implements Parsable {
         this.tenantDisplayName = value;
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

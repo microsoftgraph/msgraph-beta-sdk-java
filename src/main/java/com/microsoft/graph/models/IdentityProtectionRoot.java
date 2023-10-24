@@ -18,23 +18,23 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      */
     private java.util.List<RiskDetection> riskDetections;
     /**
-     * Azure AD service principals that are at risk.
+     * Microsoft Entra service principals that are at risk.
      */
     private java.util.List<RiskyServicePrincipal> riskyServicePrincipals;
     /**
-     * Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Users that are flagged as at-risk by Microsoft Entra ID Protection.
      */
     private java.util.List<RiskyUser> riskyUsers;
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      */
     private java.util.List<ServicePrincipalRiskDetection> servicePrincipalRiskDetections;
     /**
-     * Instantiates a new identityProtectionRoot and sets the default values.
+     * Instantiates a new IdentityProtectionRoot and sets the default values.
      */
     public IdentityProtectionRoot() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityProtectionRoot
+     * @return a IdentityProtectionRoot
      */
     @jakarta.annotation.Nonnull
     public static IdentityProtectionRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
         return new IdentityProtectionRoot();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,39 +73,39 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.
-     * @return a riskDetection
+     * Gets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
+     * @return a java.util.List<RiskDetection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskDetection> getRiskDetections() {
         return this.riskDetections;
     }
     /**
-     * Gets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
-     * @return a riskyServicePrincipal
+     * Gets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
+     * @return a java.util.List<RiskyServicePrincipal>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyServicePrincipal> getRiskyServicePrincipals() {
         return this.riskyServicePrincipals;
     }
     /**
-     * Gets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
-     * @return a riskyUser
+     * Gets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
+     * @return a java.util.List<RiskyUser>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RiskyUser> getRiskyUsers() {
         return this.riskyUsers;
     }
     /**
-     * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
-     * @return a servicePrincipalRiskDetection
+     * Gets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
+     * @return a java.util.List<ServicePrincipalRiskDetection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalRiskDetection> getServicePrincipalRiskDetections() {
@@ -125,8 +125,8 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -139,28 +139,28 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the riskDetections property value. Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Sets the riskDetections property value. Risk detection in Microsoft Entra ID Protection and the associated information about the detection.
      * @param value Value to set for the riskDetections property.
      */
     public void setRiskDetections(@jakarta.annotation.Nullable final java.util.List<RiskDetection> value) {
         this.riskDetections = value;
     }
     /**
-     * Sets the riskyServicePrincipals property value. Azure AD service principals that are at risk.
+     * Sets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
      * @param value Value to set for the riskyServicePrincipals property.
      */
     public void setRiskyServicePrincipals(@jakarta.annotation.Nullable final java.util.List<RiskyServicePrincipal> value) {
         this.riskyServicePrincipals = value;
     }
     /**
-     * Sets the riskyUsers property value. Users that are flagged as at-risk by Azure AD Identity Protection.
+     * Sets the riskyUsers property value. Users that are flagged as at-risk by Microsoft Entra ID Protection.
      * @param value Value to set for the riskyUsers property.
      */
     public void setRiskyUsers(@jakarta.annotation.Nullable final java.util.List<RiskyUser> value) {
         this.riskyUsers = value;
     }
     /**
-     * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Sets the servicePrincipalRiskDetections property value. Represents information about detected at-risk service principals in a Microsoft Entra tenant.
      * @param value Value to set for the servicePrincipalRiskDetections property.
      */
     public void setServicePrincipalRiskDetections(@jakarta.annotation.Nullable final java.util.List<ServicePrincipalRiskDetection> value) {

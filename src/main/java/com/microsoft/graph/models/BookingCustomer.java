@@ -20,7 +20,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      */
     private java.util.List<Phone> phones;
     /**
-     * Instantiates a new bookingCustomer and sets the default values.
+     * Instantiates a new BookingCustomer and sets the default values.
      */
     public BookingCustomer() {
         super();
@@ -28,7 +28,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomer
+     * @return a BookingCustomer
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * Gets the addresses property value. Addresses associated with the customer, including home, business and other addresses.
-     * @return a physicalAddress
+     * @return a java.util.List<PhysicalAddress>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PhysicalAddress> getAddresses() {
@@ -56,7 +56,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
     }
     /**
      * Gets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
-     * @return a phone
+     * @return a java.util.List<Phone>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Phone> getPhones() {

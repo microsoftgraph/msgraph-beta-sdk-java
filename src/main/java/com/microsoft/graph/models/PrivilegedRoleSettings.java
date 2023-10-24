@@ -50,7 +50,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
      */
     private Boolean ticketingInfoOnElevation;
     /**
-     * Instantiates a new privilegedRoleSettings and sets the default values.
+     * Instantiates a new PrivilegedRoleSettings and sets the default values.
      */
     public PrivilegedRoleSettings() {
         super();
@@ -58,7 +58,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleSettings
+     * @return a PrivilegedRoleSettings
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the approvalOnElevation property value. The approvalOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApprovalOnElevation() {
@@ -75,7 +75,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the approverIds property value. The approverIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getApproverIds() {
@@ -110,7 +110,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the isMfaOnElevationConfigurable property value. The isMfaOnElevationConfigurable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMfaOnElevationConfigurable() {
@@ -118,7 +118,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the lastGlobalAdmin property value. The lastGlobalAdmin property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLastGlobalAdmin() {
@@ -134,7 +134,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the mfaOnElevation property value. The mfaOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMfaOnElevation() {
@@ -150,7 +150,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the notificationToUserOnElevation property value. The notificationToUserOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getNotificationToUserOnElevation() {
@@ -158,7 +158,7 @@ public class PrivilegedRoleSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ticketingInfoOnElevation property value. The ticketingInfoOnElevation property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTicketingInfoOnElevation() {

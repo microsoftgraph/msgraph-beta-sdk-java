@@ -21,7 +21,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
      */
     private java.util.List<BusinessScenarioTask> tasks;
     /**
-     * Instantiates a new businessScenarioPlanner and sets the default values.
+     * Instantiates a new BusinessScenarioPlanner and sets the default values.
      */
     public BusinessScenarioPlanner() {
         super();
@@ -29,7 +29,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessScenarioPlanner
+     * @return a BusinessScenarioPlanner
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenarioPlanner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * Gets the planConfiguration property value. The configuration of Planner plans that will be created for the scenario.
-     * @return a plannerPlanConfiguration
+     * @return a PlannerPlanConfiguration
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfiguration getPlanConfiguration() {
@@ -58,7 +58,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * Gets the taskConfiguration property value. The configuration of Planner tasks that will be created for the scenario.
-     * @return a plannerTaskConfiguration
+     * @return a PlannerTaskConfiguration
      */
     @jakarta.annotation.Nullable
     public PlannerTaskConfiguration getTaskConfiguration() {
@@ -66,7 +66,7 @@ public class BusinessScenarioPlanner extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. The Planner tasks for the scenario.
-     * @return a businessScenarioTask
+     * @return a java.util.List<BusinessScenarioTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BusinessScenarioTask> getTasks() {

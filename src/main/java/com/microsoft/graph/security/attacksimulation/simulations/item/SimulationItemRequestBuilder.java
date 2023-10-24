@@ -61,7 +61,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/attackSimulation/simulations/{simulation%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Delete an attack simulation campaign for a tenant.
+     * Delete an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * Delete an attack simulation campaign for a tenant.
+     * Delete an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -82,8 +82,8 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get an attack simulation campaign for a tenant.
-     * @return a CompletableFuture of simulation
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -91,9 +91,9 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -105,9 +105,9 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Simulation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -115,10 +115,10 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of simulation
+     * @return a CompletableFuture of Simulation
      * @see <a href="https://learn.microsoft.com/graph/api/simulation-update?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, Simulation::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Delete an attack simulation campaign for a tenant.
+     * Delete an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -139,26 +139,27 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an attack simulation campaign for a tenant.
+     * Delete an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -166,17 +167,13 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -184,10 +181,14 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -196,7 +197,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an attack simulation campaign for a tenant.
+     * Update an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -205,17 +206,17 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Simulation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -235,7 +236,7 @@ public class SimulationItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get an attack simulation campaign for a tenant.
+     * Get an attack simulation campaign for a tenant. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

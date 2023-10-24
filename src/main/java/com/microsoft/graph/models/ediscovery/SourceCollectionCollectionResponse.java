@@ -14,7 +14,7 @@ public class SourceCollectionCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<SourceCollection> value;
     /**
-     * Instantiates a new sourceCollectionCollectionResponse and sets the default values.
+     * Instantiates a new SourceCollectionCollectionResponse and sets the default values.
      */
     public SourceCollectionCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class SourceCollectionCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sourceCollectionCollectionResponse
+     * @return a SourceCollectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SourceCollectionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class SourceCollectionCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a sourceCollection
+     * @return a java.util.List<SourceCollection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceCollection> getValue() {

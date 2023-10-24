@@ -16,7 +16,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new embeddedSIMActivationCodePoolAssignment and sets the default values.
+     * Instantiates a new EmbeddedSIMActivationCodePoolAssignment and sets the default values.
      */
     public EmbeddedSIMActivationCodePoolAssignment() {
         super();
@@ -24,7 +24,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a embeddedSIMActivationCodePoolAssignment
+     * @return a EmbeddedSIMActivationCodePoolAssignment
      */
     @jakarta.annotation.Nonnull
     public static EmbeddedSIMActivationCodePoolAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
     }
     /**
      * Gets the target property value. Base type for assignment targets.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

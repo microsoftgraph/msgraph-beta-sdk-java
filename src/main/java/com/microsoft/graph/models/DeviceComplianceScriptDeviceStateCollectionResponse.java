@@ -13,7 +13,7 @@ public class DeviceComplianceScriptDeviceStateCollectionResponse extends BaseCol
      */
     private java.util.List<DeviceComplianceScriptDeviceState> value;
     /**
-     * Instantiates a new deviceComplianceScriptDeviceStateCollectionResponse and sets the default values.
+     * Instantiates a new DeviceComplianceScriptDeviceStateCollectionResponse and sets the default values.
      */
     public DeviceComplianceScriptDeviceStateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceComplianceScriptDeviceStateCollectionResponse extends BaseCol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptDeviceStateCollectionResponse
+     * @return a DeviceComplianceScriptDeviceStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptDeviceStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceComplianceScriptDeviceStateCollectionResponse extends BaseCol
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceComplianceScriptDeviceState
+     * @return a java.util.List<DeviceComplianceScriptDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScriptDeviceState> getValue() {

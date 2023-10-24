@@ -29,7 +29,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
      */
     private String odataType;
     /**
-     * Instantiates a new dataProcessorServiceForWindowsFeaturesOnboarding and sets the default values.
+     * Instantiates a new DataProcessorServiceForWindowsFeaturesOnboarding and sets the default values.
      */
     public DataProcessorServiceForWindowsFeaturesOnboarding() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dataProcessorServiceForWindowsFeaturesOnboarding
+     * @return a DataProcessorServiceForWindowsFeaturesOnboarding
      */
     @jakarta.annotation.Nonnull
     public static DataProcessorServiceForWindowsFeaturesOnboarding createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
         return new DataProcessorServiceForWindowsFeaturesOnboarding();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
     }
     /**
      * Gets the areDataProcessorServiceForWindowsFeaturesEnabled property value. Indicates whether the tenant has enabled MEM features utilizing Data Processor Service for Windows (DPSW) data. When TRUE, the tenant has enabled MEM features utilizing Data Processor Service for Windows (DPSW) data. When FALSE, the tenant has not enabled MEM features utilizing Data Processor Service for Windows (DPSW) data. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAreDataProcessorServiceForWindowsFeaturesEnabled() {
@@ -74,7 +74,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
     }
     /**
      * Gets the hasValidWindowsLicense property value. Indicates whether the tenant has required Windows license. When TRUE, the tenant has the required Windows license. When FALSE, the tenant does not have the required Windows license. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasValidWindowsLicense() {
@@ -82,7 +82,7 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,8 +100,8 @@ public class DataProcessorServiceForWindowsFeaturesOnboarding implements Additio
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -44,7 +44,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
      */
     private java.util.List<BookingWorkHours> workingHours;
     /**
-     * Instantiates a new bookingStaffMember and sets the default values.
+     * Instantiates a new BookingStaffMember and sets the default values.
      */
     public BookingStaffMember() {
         super();
@@ -52,7 +52,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingStaffMember
+     * @return a BookingStaffMember
      */
     @jakarta.annotation.Nonnull
     public static BookingStaffMember createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAvailabilityIsAffectedByPersonalCalendar() {
@@ -69,7 +69,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the colorIndex property value. Identifies a color to represent the staff member. The color corresponds to the color palette in the Staff details page in the Bookings app.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getColorIndex() {
@@ -94,7 +94,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the isEmailNotificationEnabled property value. True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEmailNotificationEnabled() {
@@ -102,7 +102,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the membershipStatus property value. The membershipStatus property
-     * @return a bookingStaffMembershipStatus
+     * @return a BookingStaffMembershipStatus
      */
     @jakarta.annotation.Nullable
     public BookingStaffMembershipStatus getMembershipStatus() {
@@ -110,7 +110,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the role property value. The role property
-     * @return a bookingStaffRole
+     * @return a BookingStaffRole
      */
     @jakarta.annotation.Nullable
     public BookingStaffRole getRole() {
@@ -118,7 +118,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the timeZone property value. The time zone of the staff member. For a list of possible values, see dateTimeTimeZone.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
@@ -126,7 +126,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseBusinessHours() {
@@ -134,7 +134,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
     }
     /**
      * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they are initialized to be the same as the businessHours property of the business.
-     * @return a bookingWorkHours
+     * @return a java.util.List<BookingWorkHours>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingWorkHours> getWorkingHours() {

@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventSession extends OnlineMeeting implements Parsable {
     /**
-     * The registrations property
+     * Registration records of this virtual event session.
      */
     private java.util.List<VirtualEventRegistration> registrations;
     /**
-     * Instantiates a new virtualEventSession and sets the default values.
+     * Instantiates a new VirtualEventSession and sets the default values.
      */
     public VirtualEventSession() {
         super();
@@ -21,7 +21,7 @@ public class VirtualEventSession extends OnlineMeeting implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventSession
+     * @return a VirtualEventSession
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,8 +39,8 @@ public class VirtualEventSession extends OnlineMeeting implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the registrations property value. The registrations property
-     * @return a virtualEventRegistration
+     * Gets the registrations property value. Registration records of this virtual event session.
+     * @return a java.util.List<VirtualEventRegistration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventRegistration> getRegistrations() {
@@ -56,7 +56,7 @@ public class VirtualEventSession extends OnlineMeeting implements Parsable {
         writer.writeCollectionOfObjectValues("registrations", this.getRegistrations());
     }
     /**
-     * Sets the registrations property value. The registrations property
+     * Sets the registrations property value. Registration records of this virtual event session.
      * @param value Value to set for the registrations property.
      */
     public void setRegistrations(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistration> value) {

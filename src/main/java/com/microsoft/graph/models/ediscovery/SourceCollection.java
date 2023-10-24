@@ -37,7 +37,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     private java.util.List<DataSource> custodianSources;
     /**
-     * When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      */
     private EnumSet<DataSourceScopes> dataSourceScopes;
     /**
@@ -65,7 +65,7 @@ public class SourceCollection extends Entity implements Parsable {
      */
     private java.util.List<NoncustodialDataSource> noncustodialSources;
     /**
-     * Instantiates a new sourceCollection and sets the default values.
+     * Instantiates a new SourceCollection and sets the default values.
      */
     public SourceCollection() {
         super();
@@ -73,7 +73,7 @@ public class SourceCollection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sourceCollection
+     * @return a SourceCollection
      */
     @jakarta.annotation.Nonnull
     public static SourceCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the additionalSources property value. Adds an additional source to the sourceCollection.
-     * @return a dataSource
+     * @return a java.util.List<DataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSource> getAdditionalSources() {
@@ -90,7 +90,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the addToReviewSetOperation property value. Adds the results of the sourceCollection to the specified reviewSet.
-     * @return a addToReviewSetOperation
+     * @return a AddToReviewSetOperation
      */
     @jakarta.annotation.Nullable
     public AddToReviewSetOperation getAddToReviewSetOperation() {
@@ -98,7 +98,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the contentQuery property value. The query string in KQL (Keyword Query Language) query. For details, see Keyword queries and search conditions for Content Search and eDiscovery. You can refine searches by using fields paired with values; for example, subject:'Quarterly Financials' AND Date>=06/01/2016 AND Date<=07/01/2016.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentQuery() {
@@ -106,7 +106,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The user who created the sourceCollection.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -122,15 +122,15 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the custodianSources property value. Custodian sources that are included in the sourceCollection.
-     * @return a dataSource
+     * @return a java.util.List<DataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSource> getCustodianSources() {
         return this.custodianSources;
     }
     /**
-     * Gets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     * @return a dataSourceScopes
+     * Gets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * @return a EnumSet<DataSourceScopes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DataSourceScopes> getDataSourceScopes() {
@@ -138,7 +138,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the sourceCollection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -146,7 +146,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the sourceCollection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -176,7 +176,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the sourceCollection.
-     * @return a estimateStatisticsOperation
+     * @return a EstimateStatisticsOperation
      */
     @jakarta.annotation.Nullable
     public EstimateStatisticsOperation getLastEstimateStatisticsOperation() {
@@ -184,7 +184,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the sourceCollection.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -200,7 +200,7 @@ public class SourceCollection extends Entity implements Parsable {
     }
     /**
      * Gets the noncustodialSources property value. noncustodialDataSource sources that are included in the sourceCollection
-     * @return a noncustodialDataSource
+     * @return a java.util.List<NoncustodialDataSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NoncustodialDataSource> getNoncustodialSources() {
@@ -270,7 +270,7 @@ public class SourceCollection extends Entity implements Parsable {
         this.custodianSources = value;
     }
     /**
-     * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
+     * Sets the dataSourceScopes property value. When specified, the collection spans across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
      * @param value Value to set for the dataSourceScopes property.
      */
     public void setDataSourceScopes(@jakarta.annotation.Nullable final EnumSet<DataSourceScopes> value) {

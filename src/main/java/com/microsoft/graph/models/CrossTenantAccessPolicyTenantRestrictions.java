@@ -13,7 +13,7 @@ public class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccess
      */
     private DevicesFilter devices;
     /**
-     * Instantiates a new crossTenantAccessPolicyTenantRestrictions and sets the default values.
+     * Instantiates a new CrossTenantAccessPolicyTenantRestrictions and sets the default values.
      */
     public CrossTenantAccessPolicyTenantRestrictions() {
         super();
@@ -22,7 +22,7 @@ public class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccess
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a crossTenantAccessPolicyTenantRestrictions
+     * @return a CrossTenantAccessPolicyTenantRestrictions
      */
     @jakarta.annotation.Nonnull
     public static CrossTenantAccessPolicyTenantRestrictions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccess
     }
     /**
      * Gets the devices property value. Defines the rule for filtering devices and whether devices satisfying the rule should be allowed or blocked. Not implemented.
-     * @return a devicesFilter
+     * @return a DevicesFilter
      */
     @jakarta.annotation.Nullable
     public DevicesFilter getDevices() {

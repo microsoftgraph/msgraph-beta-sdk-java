@@ -13,7 +13,7 @@ public class MobileAppRelationshipCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<MobileAppRelationship> value;
     /**
-     * Instantiates a new mobileAppRelationshipCollectionResponse and sets the default values.
+     * Instantiates a new MobileAppRelationshipCollectionResponse and sets the default values.
      */
     public MobileAppRelationshipCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MobileAppRelationshipCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppRelationshipCollectionResponse
+     * @return a MobileAppRelationshipCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MobileAppRelationshipCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MobileAppRelationshipCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a mobileAppRelationship
+     * @return a java.util.List<MobileAppRelationship>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppRelationship> getValue() {

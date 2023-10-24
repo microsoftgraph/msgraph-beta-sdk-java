@@ -61,7 +61,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      */
     private Integer upgradeWindowUtcOffsetInMinutes;
     /**
-     * Instantiates a new microsoftTunnelSite and sets the default values.
+     * Instantiates a new MicrosoftTunnelSite and sets the default values.
      */
     public MicrosoftTunnelSite() {
         super();
@@ -69,7 +69,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelSite
+     * @return a MicrosoftTunnelSite
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The site's description (optional)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -86,7 +86,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the site. This property is required when a site is created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -115,7 +115,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalNetworkProbeUrl() {
@@ -123,7 +123,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftTunnelConfiguration property value. The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite
-     * @return a microsoftTunnelConfiguration
+     * @return a MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelConfiguration getMicrosoftTunnelConfiguration() {
@@ -131,7 +131,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftTunnelServers property value. A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite
-     * @return a microsoftTunnelServer
+     * @return a java.util.List<MicrosoftTunnelServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelServer> getMicrosoftTunnelServers() {
@@ -139,7 +139,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the publicAddress property value. The site's public domain name or IP address
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublicAddress() {
@@ -147,7 +147,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -155,7 +155,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the upgradeAutomatically property value. The site's automatic upgrade setting. True for automatic upgrades, false for manual control
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUpgradeAutomatically() {
@@ -163,7 +163,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the upgradeAvailable property value. The site provides the state of when an upgrade is available
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUpgradeAvailable() {
@@ -187,7 +187,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     }
     /**
      * Gets the upgradeWindowUtcOffsetInMinutes property value. The site's timezone represented as a minute offset from UTC
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUpgradeWindowUtcOffsetInMinutes() {

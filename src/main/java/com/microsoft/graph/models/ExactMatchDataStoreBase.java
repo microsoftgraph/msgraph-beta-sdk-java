@@ -26,7 +26,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Instantiates a new exactMatchDataStoreBase and sets the default values.
+     * Instantiates a new ExactMatchDataStoreBase and sets the default values.
      */
     public ExactMatchDataStoreBase() {
         super();
@@ -34,7 +34,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchDataStoreBase
+     * @return a ExactMatchDataStoreBase
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchDataStoreBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the columns property value. The columns property
-     * @return a exactDataMatchStoreColumn
+     * @return a java.util.List<ExactDataMatchStoreColumn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExactDataMatchStoreColumn> getColumns() {
@@ -66,7 +66,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -74,7 +74,7 @@ public class ExactMatchDataStoreBase extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

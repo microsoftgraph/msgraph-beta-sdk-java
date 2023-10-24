@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingGroupInstance extends DeviceManagementConfigurationSettingInstance implements Parsable {
     /**
-     * Instantiates a new deviceManagementConfigurationSettingGroupInstance and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingGroupInstance and sets the default values.
      */
     public DeviceManagementConfigurationSettingGroupInstance() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementConfigurationSettingGroupInstance extends DeviceMan
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingGroupInstance
+     * @return a DeviceManagementConfigurationSettingGroupInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingGroupInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

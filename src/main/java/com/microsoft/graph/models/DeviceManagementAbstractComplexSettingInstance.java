@@ -20,7 +20,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
      */
     private java.util.List<DeviceManagementSettingInstance> value;
     /**
-     * Instantiates a new deviceManagementAbstractComplexSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementAbstractComplexSettingInstance and sets the default values.
      */
     public DeviceManagementAbstractComplexSettingInstance() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementAbstractComplexSettingInstance
+     * @return a DeviceManagementAbstractComplexSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAbstractComplexSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     }
     /**
      * Gets the implementationId property value. The definition ID for the chosen implementation of this complex setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImplementationId() {
@@ -57,7 +57,7 @@ public class DeviceManagementAbstractComplexSettingInstance extends DeviceManage
     }
     /**
      * Gets the value property value. The values that make up the complex setting
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getValue() {

@@ -13,7 +13,7 @@ public class IpAddress extends RuleDestination implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new ipAddress and sets the default values.
+     * Instantiates a new IpAddress and sets the default values.
      */
     public IpAddress() {
         super();
@@ -22,7 +22,7 @@ public class IpAddress extends RuleDestination implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipAddress
+     * @return a IpAddress
      */
     @jakarta.annotation.Nonnull
     public static IpAddress createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class IpAddress extends RuleDestination implements Parsable {
     }
     /**
      * Gets the value property value. Defines the IP address used in a destination for a rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

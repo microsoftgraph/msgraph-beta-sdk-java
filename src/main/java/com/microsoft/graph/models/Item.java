@@ -93,7 +93,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      */
     private BigDecimal unitPrice;
     /**
-     * Instantiates a new item and sets the default values.
+     * Instantiates a new Item and sets the default values.
      */
     public Item() {
         this.setAdditionalData(new HashMap<>());
@@ -101,7 +101,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a item
+     * @return a Item
      */
     @jakarta.annotation.Nonnull
     public static Item createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -109,7 +109,7 @@ public class Item implements AdditionalDataHolder, Parsable {
         return new Item();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the blocked property value. The blocked property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlocked() {
@@ -134,7 +134,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -170,7 +170,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the gtin property value. The gtin property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGtin() {
@@ -186,7 +186,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inventory property value. The inventory property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInventory() {
@@ -194,7 +194,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the itemCategory property value. The itemCategory property
-     * @return a itemCategory
+     * @return a ItemCategory
      */
     @jakarta.annotation.Nullable
     public ItemCategory getItemCategory() {
@@ -202,7 +202,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the itemCategoryCode property value. The itemCategoryCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemCategoryCode() {
@@ -226,7 +226,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -234,7 +234,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -242,7 +242,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a picture
+     * @return a java.util.List<Picture>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
@@ -250,7 +250,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the priceIncludesTax property value. The priceIncludesTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPriceIncludesTax() {
@@ -258,7 +258,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the taxGroupCode property value. The taxGroupCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxGroupCode() {
@@ -274,7 +274,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -282,7 +282,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the unitCost property value. The unitCost property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitCost() {
@@ -290,7 +290,7 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitPrice() {
@@ -324,8 +324,8 @@ public class Item implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

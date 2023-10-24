@@ -16,7 +16,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
      */
     private String defaultValue;
     /**
-     * Instantiates a new deviceHealthScriptStringParameter and sets the default values.
+     * Instantiates a new DeviceHealthScriptStringParameter and sets the default values.
      */
     public DeviceHealthScriptStringParameter() {
         super();
@@ -25,7 +25,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptStringParameter
+     * @return a DeviceHealthScriptStringParameter
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptStringParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class DeviceHealthScriptStringParameter extends DeviceHealthScriptParamet
     }
     /**
      * Gets the defaultValue property value. The default value of string param
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {

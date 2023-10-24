@@ -42,7 +42,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
      */
     private String twitterProfileWebUrl;
     /**
-     * Instantiates a new virtualEventPresenterDetails and sets the default values.
+     * Instantiates a new VirtualEventPresenterDetails and sets the default values.
      */
     public VirtualEventPresenterDetails() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventPresenterDetails
+     * @return a VirtualEventPresenterDetails
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventPresenterDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
         return new VirtualEventPresenterDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the bio property value. Bio of the presenter.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBio() {
@@ -75,7 +75,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the company property value. The presenter's company name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompany() {
@@ -99,7 +99,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the jobTitle property value. The presenter's job title.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -107,7 +107,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the linkedInProfileWebUrl property value. The presenter's LinkedIn profile URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLinkedInProfileWebUrl() {
@@ -115,7 +115,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the personalSiteWebUrl property value. The presenter's personal website URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPersonalSiteWebUrl() {
@@ -131,7 +131,7 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the twitterProfileWebUrl property value. The presenter's Twitter profile URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTwitterProfileWebUrl() {
@@ -153,8 +153,8 @@ public class VirtualEventPresenterDetails implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

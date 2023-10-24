@@ -30,7 +30,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      */
     private String type;
     /**
-     * Instantiates a new educationFileSynchronizationVerificationMessage and sets the default values.
+     * Instantiates a new EducationFileSynchronizationVerificationMessage and sets the default values.
      */
     public EducationFileSynchronizationVerificationMessage() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationFileSynchronizationVerificationMessage
+     * @return a EducationFileSynchronizationVerificationMessage
      */
     @jakarta.annotation.Nonnull
     public static EducationFileSynchronizationVerificationMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         return new EducationFileSynchronizationVerificationMessage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     }
     /**
      * Gets the description property value. Detailed information about the message type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -76,7 +76,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     }
     /**
      * Gets the fileName property value. The fileName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -84,7 +84,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     }
     /**
      * Gets the type property value. Type of the message. Possible values are: error, warning, information.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -111,8 +111,8 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

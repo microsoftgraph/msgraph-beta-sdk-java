@@ -13,7 +13,7 @@ public class DeviceManagementExchangeOnPremisesPolicyCollectionResponse extends 
      */
     private java.util.List<DeviceManagementExchangeOnPremisesPolicy> value;
     /**
-     * Instantiates a new deviceManagementExchangeOnPremisesPolicyCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementExchangeOnPremisesPolicyCollectionResponse and sets the default values.
      */
     public DeviceManagementExchangeOnPremisesPolicyCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementExchangeOnPremisesPolicyCollectionResponse extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementExchangeOnPremisesPolicyCollectionResponse
+     * @return a DeviceManagementExchangeOnPremisesPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementExchangeOnPremisesPolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementExchangeOnPremisesPolicyCollectionResponse extends 
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementExchangeOnPremisesPolicy
+     * @return a java.util.List<DeviceManagementExchangeOnPremisesPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExchangeOnPremisesPolicy> getValue() {

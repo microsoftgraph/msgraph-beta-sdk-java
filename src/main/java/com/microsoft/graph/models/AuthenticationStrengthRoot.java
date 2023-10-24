@@ -26,7 +26,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
      */
     private java.util.List<AuthenticationStrengthPolicy> policies;
     /**
-     * Instantiates a new authenticationStrengthRoot and sets the default values.
+     * Instantiates a new AuthenticationStrengthRoot and sets the default values.
      */
     public AuthenticationStrengthRoot() {
         super();
@@ -34,7 +34,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationStrengthRoot
+     * @return a AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationStrengthRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationCombinations property value. A collection of all valid authentication method combinations in the system.
-     * @return a authenticationMethodModes
+     * @return a java.util.List<AuthenticationMethodModes>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getAuthenticationCombinations() {
@@ -51,7 +51,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethodModes property value. Names and descriptions of all valid authentication method modes in the system.
-     * @return a authenticationMethodModeDetail
+     * @return a java.util.List<AuthenticationMethodModeDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModeDetail> getAuthenticationMethodModes() {
@@ -59,7 +59,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     }
     /**
      * Gets the combinations property value. The combinations property
-     * @return a authenticationMethodModes
+     * @return a java.util.List<AuthenticationMethodModes>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodModes> getCombinations() {
@@ -80,7 +80,7 @@ public class AuthenticationStrengthRoot extends Entity implements Parsable {
     }
     /**
      * Gets the policies property value. A collection of authentication strength policies that exist for this tenant, including both built-in and custom policies.
-     * @return a authenticationStrengthPolicy
+     * @return a java.util.List<AuthenticationStrengthPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationStrengthPolicy> getPolicies() {

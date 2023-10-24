@@ -13,7 +13,7 @@ public class DirectorySettingCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<DirectorySetting> value;
     /**
-     * Instantiates a new directorySettingCollectionResponse and sets the default values.
+     * Instantiates a new DirectorySettingCollectionResponse and sets the default values.
      */
     public DirectorySettingCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DirectorySettingCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directorySettingCollectionResponse
+     * @return a DirectorySettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DirectorySettingCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DirectorySettingCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a directorySetting
+     * @return a java.util.List<DirectorySetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectorySetting> getValue() {

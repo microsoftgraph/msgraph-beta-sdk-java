@@ -13,7 +13,7 @@ public class UserExperienceAnalyticsAnomalyCollectionResponse extends BaseCollec
      */
     private java.util.List<UserExperienceAnalyticsAnomaly> value;
     /**
-     * Instantiates a new userExperienceAnalyticsAnomalyCollectionResponse and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAnomalyCollectionResponse and sets the default values.
      */
     public UserExperienceAnalyticsAnomalyCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UserExperienceAnalyticsAnomalyCollectionResponse extends BaseCollec
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAnomalyCollectionResponse
+     * @return a UserExperienceAnalyticsAnomalyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomalyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsAnomalyCollectionResponse extends BaseCollec
     }
     /**
      * Gets the value property value. The value property
-     * @return a userExperienceAnalyticsAnomaly
+     * @return a java.util.List<UserExperienceAnalyticsAnomaly>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomaly> getValue() {

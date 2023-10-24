@@ -10,11 +10,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
-     * The number of days to look back from current timestamp within which the account has not signed in.
+     * The number of days to look back from current timestamp within which the account hasn't signed in.
      */
     private PeriodAndDuration duration;
     /**
-     * Instantiates a new staleSignInAlertConfiguration and sets the default values.
+     * Instantiates a new StaleSignInAlertConfiguration and sets the default values.
      */
     public StaleSignInAlertConfiguration() {
         super();
@@ -23,7 +23,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a staleSignInAlertConfiguration
+     * @return a StaleSignInAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static StaleSignInAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
         return new StaleSignInAlertConfiguration();
     }
     /**
-     * Gets the duration property value. The number of days to look back from current timestamp within which the account has not signed in.
+     * Gets the duration property value. The number of days to look back from current timestamp within which the account hasn't signed in.
      * @return a PeriodAndDuration
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
         writer.writePeriodAndDurationValue("duration", this.getDuration());
     }
     /**
-     * Sets the duration property value. The number of days to look back from current timestamp within which the account has not signed in.
+     * Sets the duration property value. The number of days to look back from current timestamp within which the account hasn't signed in.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {

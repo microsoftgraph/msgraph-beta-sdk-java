@@ -30,11 +30,11 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      */
     private String targetDomain;
     /**
-     * The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
+     * The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
      */
     private String targetPropertyName;
     /**
-     * Instantiates a new educationIdentityMatchingOptions and sets the default values.
+     * Instantiates a new EducationIdentityMatchingOptions and sets the default values.
      */
     public EducationIdentityMatchingOptions() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationIdentityMatchingOptions
+     * @return a EducationIdentityMatchingOptions
      */
     @jakarta.annotation.Nonnull
     public static EducationIdentityMatchingOptions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
         return new EducationIdentityMatchingOptions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     }
     /**
      * Gets the appliesTo property value. The appliesTo property
-     * @return a educationUserRole
+     * @return a EducationUserRole
      */
     @jakarta.annotation.Nullable
     public EducationUserRole getAppliesTo() {
@@ -81,7 +81,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     }
     /**
      * Gets the sourcePropertyName property value. The name of the source property, which should be a field name in the source data. This property is case-sensitive.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourcePropertyName() {
@@ -97,15 +97,15 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     }
     /**
      * Gets the targetDomain property value. The domain to suffix with the source property to match on the target. If provided as null, the source property will be used to match with the target property.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetDomain() {
         return this.targetDomain;
     }
     /**
-     * Gets the targetPropertyName property value. The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
-     * @return a string
+     * Gets the targetPropertyName property value. The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetPropertyName() {
@@ -125,8 +125,8 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -160,7 +160,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
         this.targetDomain = value;
     }
     /**
-     * Sets the targetPropertyName property value. The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
+     * Sets the targetPropertyName property value. The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
      * @param value Value to set for the targetPropertyName property.
      */
     public void setTargetPropertyName(@jakarta.annotation.Nullable final String value) {

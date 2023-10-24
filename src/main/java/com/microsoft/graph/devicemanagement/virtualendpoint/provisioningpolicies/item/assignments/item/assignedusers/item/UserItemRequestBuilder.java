@@ -1,6 +1,7 @@
 package com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assignedusers.item;
 
 import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assignedusers.item.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assignedusers.item.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -32,6 +33,16 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     * @deprecated
+     * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new UserItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -49,7 +60,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */
@@ -61,7 +72,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a CompletableFuture of User
      * @deprecated
      * The onPremisesConnectionId property is deprecated and will stop returning on July 30, 2023. as of 2023-03/onPremisesConnectionId on 2023-03-16 and will be removed 2023-07-30
      */
@@ -96,10 +107,6 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -107,6 +114,10 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**

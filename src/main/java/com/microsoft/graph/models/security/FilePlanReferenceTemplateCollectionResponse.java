@@ -14,7 +14,7 @@ public class FilePlanReferenceTemplateCollectionResponse extends BaseCollectionP
      */
     private java.util.List<FilePlanReferenceTemplate> value;
     /**
-     * Instantiates a new filePlanReferenceTemplateCollectionResponse and sets the default values.
+     * Instantiates a new FilePlanReferenceTemplateCollectionResponse and sets the default values.
      */
     public FilePlanReferenceTemplateCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class FilePlanReferenceTemplateCollectionResponse extends BaseCollectionP
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a filePlanReferenceTemplateCollectionResponse
+     * @return a FilePlanReferenceTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static FilePlanReferenceTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class FilePlanReferenceTemplateCollectionResponse extends BaseCollectionP
     }
     /**
      * Gets the value property value. The value property
-     * @return a filePlanReferenceTemplate
+     * @return a java.util.List<FilePlanReferenceTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FilePlanReferenceTemplate> getValue() {

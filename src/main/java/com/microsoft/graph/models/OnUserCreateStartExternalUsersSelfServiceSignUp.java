@@ -13,7 +13,7 @@ public class OnUserCreateStartExternalUsersSelfServiceSignUp extends OnUserCreat
      */
     private UserType userTypeToCreate;
     /**
-     * Instantiates a new onUserCreateStartExternalUsersSelfServiceSignUp and sets the default values.
+     * Instantiates a new OnUserCreateStartExternalUsersSelfServiceSignUp and sets the default values.
      */
     public OnUserCreateStartExternalUsersSelfServiceSignUp() {
         super();
@@ -22,7 +22,7 @@ public class OnUserCreateStartExternalUsersSelfServiceSignUp extends OnUserCreat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onUserCreateStartExternalUsersSelfServiceSignUp
+     * @return a OnUserCreateStartExternalUsersSelfServiceSignUp
      */
     @jakarta.annotation.Nonnull
     public static OnUserCreateStartExternalUsersSelfServiceSignUp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class OnUserCreateStartExternalUsersSelfServiceSignUp extends OnUserCreat
     }
     /**
      * Gets the userTypeToCreate property value. The type of user object to create. The possible values are: member, guest, unknownFutureValue.
-     * @return a userType
+     * @return a UserType
      */
     @jakarta.annotation.Nullable
     public UserType getUserTypeToCreate() {

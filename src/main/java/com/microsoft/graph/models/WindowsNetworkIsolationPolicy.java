@@ -53,7 +53,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      */
     private String odataType;
     /**
-     * Instantiates a new windowsNetworkIsolationPolicy and sets the default values.
+     * Instantiates a new WindowsNetworkIsolationPolicy and sets the default values.
      */
     public WindowsNetworkIsolationPolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -61,7 +61,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsNetworkIsolationPolicy
+     * @return a WindowsNetworkIsolationPolicy
      */
     @jakarta.annotation.Nonnull
     public static WindowsNetworkIsolationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,7 +69,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
         return new WindowsNetworkIsolationPolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -78,7 +78,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseCloudResources property value. Contains a list of enterprise resource domains hosted in the cloud that need to be protected. Connections to these resources are considered enterprise data. If a proxy is paired with a cloud resource, traffic to the cloud resource will be routed through the enterprise network via the denoted proxy server (on Port 80). A proxy server used for this purpose must also be configured using the EnterpriseInternalProxyServers policy. This collection can contain a maximum of 500 elements.
-     * @return a proxiedDomain
+     * @return a java.util.List<ProxiedDomain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProxiedDomain> getEnterpriseCloudResources() {
@@ -86,7 +86,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnterpriseInternalProxyServers() {
@@ -94,7 +94,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseIPRanges property value. Sets the enterprise IP ranges that define the computers in the enterprise network. Data that comes from those computers will be considered part of the enterprise and protected. These locations will be considered a safe destination for enterprise data to be shared to. This collection can contain a maximum of 500 elements.
-     * @return a ipRange
+     * @return a java.util.List<IpRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IpRange> getEnterpriseIPRanges() {
@@ -102,7 +102,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseIPRangesAreAuthoritative property value. Boolean value that tells the client to accept the configured list and not to use heuristics to attempt to find other subnets. Default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseIPRangesAreAuthoritative() {
@@ -110,7 +110,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseNetworkDomainNames property value. This is the list of domains that comprise the boundaries of the enterprise. Data from one of these domains that is sent to a device will be considered enterprise data and protected. These locations will be considered a safe destination for enterprise data to be shared to.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnterpriseNetworkDomainNames() {
@@ -118,7 +118,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseProxyServers property value. This is a list of proxy servers. Any server not on this list is considered non-enterprise.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnterpriseProxyServers() {
@@ -126,7 +126,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the enterpriseProxyServersAreAuthoritative property value. Boolean value that tells the client to accept the configured list of proxies and not try to detect other work proxies. Default is false
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnterpriseProxyServersAreAuthoritative() {
@@ -152,7 +152,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the neutralDomainResources property value. List of domain names that can used for work or personal resource.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNeutralDomainResources() {
@@ -160,7 +160,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -184,8 +184,8 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -30,7 +30,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
      */
     private String odataType;
     /**
-     * Instantiates a new branchConnectivityConfiguration and sets the default values.
+     * Instantiates a new BranchConnectivityConfiguration and sets the default values.
      */
     public BranchConnectivityConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a branchConnectivityConfiguration
+     * @return a BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public static BranchConnectivityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
         return new BranchConnectivityConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the branchId property value. The branchId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBranchId() {
@@ -63,7 +63,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the branchName property value. The branchName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBranchName() {
@@ -84,7 +84,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the links property value. The links property
-     * @return a connectivityConfigurationLink
+     * @return a java.util.List<ConnectivityConfigurationLink>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectivityConfigurationLink> getLinks() {
@@ -92,7 +92,7 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,8 +111,8 @@ public class BranchConnectivityConfiguration implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -112,7 +112,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
      */
     private String windowsInformationProtectionDomain;
     /**
-     * Instantiates a new windows10VpnConfiguration and sets the default values.
+     * Instantiates a new Windows10VpnConfiguration and sets the default values.
      */
     public Windows10VpnConfiguration() {
         super();
@@ -121,7 +121,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10VpnConfiguration
+     * @return a Windows10VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -130,7 +130,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the associatedApps property value. Associated Apps. This collection can contain a maximum of 10000 elements.
-     * @return a windows10AssociatedApps
+     * @return a java.util.List<Windows10AssociatedApps>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Windows10AssociatedApps> getAssociatedApps() {
@@ -138,7 +138,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the authenticationMethod property value. Windows 10 VPN connection types.
-     * @return a windows10VpnAuthenticationMethod
+     * @return a Windows10VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public Windows10VpnAuthenticationMethod getAuthenticationMethod() {
@@ -146,7 +146,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the connectionType property value. VPN connection types.
-     * @return a windows10VpnConnectionType
+     * @return a Windows10VpnConnectionType
      */
     @jakarta.annotation.Nullable
     public Windows10VpnConnectionType getConnectionType() {
@@ -154,7 +154,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the cryptographySuite property value. Cryptography Suite security settings for IKEv2 VPN in Windows10 and above
-     * @return a cryptographySuite
+     * @return a CryptographySuite
      */
     @jakarta.annotation.Nullable
     public CryptographySuite getCryptographySuite() {
@@ -162,7 +162,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the dnsRules property value. DNS rules. This collection can contain a maximum of 1000 elements.
-     * @return a vpnDnsRule
+     * @return a java.util.List<VpnDnsRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnDnsRule> getDnsRules() {
@@ -170,7 +170,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the dnsSuffixes property value. Specify DNS suffixes to add to the DNS search list to properly route short names.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSuffixes() {
@@ -178,7 +178,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the eapXml property value. Extensible Authentication Protocol (EAP) XML. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getEapXml() {
@@ -186,7 +186,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableAlwaysOn property value. Enable Always On mode.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAlwaysOn() {
@@ -194,7 +194,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableConditionalAccess property value. Enable conditional access.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableConditionalAccess() {
@@ -202,7 +202,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableDeviceTunnel property value. Enable device tunnel.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableDeviceTunnel() {
@@ -210,7 +210,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableDnsRegistration property value. Enable IP address registration with internal DNS.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableDnsRegistration() {
@@ -218,7 +218,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableSingleSignOnWithAlternateCertificate property value. Enable single sign-on (SSO) with alternate certificate.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSingleSignOnWithAlternateCertificate() {
@@ -226,7 +226,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the enableSplitTunneling property value. Enable split tunneling.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSplitTunneling() {
@@ -268,7 +268,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a windowsCertificateProfileBase
+     * @return a WindowsCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public WindowsCertificateProfileBase getIdentityCertificate() {
@@ -276,7 +276,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the microsoftTunnelSiteId property value. ID of the Microsoft Tunnel site associated with the VPN profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
@@ -284,7 +284,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the onlyAssociatedAppsCanUseConnection property value. Only associated Apps can use connection (per-app VPN).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnlyAssociatedAppsCanUseConnection() {
@@ -292,7 +292,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
-     * @return a windows10VpnProfileTarget
+     * @return a Windows10VpnProfileTarget
      */
     @jakarta.annotation.Nullable
     public Windows10VpnProfileTarget getProfileTarget() {
@@ -300,7 +300,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the proxyServer property value. Proxy Server.
-     * @return a windows10VpnProxyServer
+     * @return a Windows10VpnProxyServer
      */
     @jakarta.annotation.Nullable
     public Windows10VpnProxyServer getProxyServer() {
@@ -308,7 +308,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the rememberUserCredentials property value. Remember user credentials.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRememberUserCredentials() {
@@ -316,7 +316,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the routes property value. Routes (optional for third-party providers). This collection can contain a maximum of 1000 elements.
-     * @return a vpnRoute
+     * @return a java.util.List<VpnRoute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnRoute> getRoutes() {
@@ -324,7 +324,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the singleSignOnEku property value. Single sign-on Extended Key Usage (EKU).
-     * @return a extendedKeyUsage
+     * @return a ExtendedKeyUsage
      */
     @jakarta.annotation.Nullable
     public ExtendedKeyUsage getSingleSignOnEku() {
@@ -332,7 +332,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the singleSignOnIssuerHash property value. Single sign-on issuer hash.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSingleSignOnIssuerHash() {
@@ -340,7 +340,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the trafficRules property value. Traffic rules. This collection can contain a maximum of 1000 elements.
-     * @return a vpnTrafficRule
+     * @return a java.util.List<VpnTrafficRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnTrafficRule> getTrafficRules() {
@@ -348,7 +348,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the trustedNetworkDomains property value. Trusted Network Domains
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTrustedNetworkDomains() {
@@ -356,7 +356,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
     }
     /**
      * Gets the windowsInformationProtectionDomain property value. Windows Information Protection (WIP) domain to associate with this connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWindowsInformationProtectionDomain() {

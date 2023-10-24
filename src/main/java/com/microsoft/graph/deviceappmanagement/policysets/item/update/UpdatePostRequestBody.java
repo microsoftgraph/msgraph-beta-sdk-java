@@ -32,7 +32,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<PolicySetItem> updatedPolicySetItems;
     /**
-     * Instantiates a new updatePostRequestBody and sets the default values.
+     * Instantiates a new UpdatePostRequestBody and sets the default values.
      */
     public UpdatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -40,7 +40,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updatePostRequestBody
+     * @return a UpdatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,14 +49,14 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the addedPolicySetItems property value. The addedPolicySetItems property
-     * @return a policySetItem
+     * @return a java.util.List<PolicySetItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetItem> getAddedPolicySetItems() {
         return this.addedPolicySetItems;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -65,7 +65,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the assignments property value. The assignments property
-     * @return a policySetAssignment
+     * @return a java.util.List<PolicySetAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetAssignment> getAssignments() {
@@ -73,7 +73,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deletedPolicySetItems property value. The deletedPolicySetItems property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeletedPolicySetItems() {
@@ -94,7 +94,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the updatedPolicySetItems property value. The updatedPolicySetItems property
-     * @return a policySetItem
+     * @return a java.util.List<PolicySetItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetItem> getUpdatedPolicySetItems() {
@@ -120,8 +120,8 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
         this.addedPolicySetItems = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

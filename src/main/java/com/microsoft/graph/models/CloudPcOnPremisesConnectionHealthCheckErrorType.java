@@ -17,6 +17,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     AdJoinCheckCredentialsExpired("adJoinCheckCredentialsExpired"),
     AdJoinCheckAccountLockedOrDisabled("adJoinCheckAccountLockedOrDisabled"),
     AdJoinCheckAccountQuotaExceeded("adJoinCheckAccountQuotaExceeded"),
+    AdJoinCheckServerNotOperational("adJoinCheckServerNotOperational"),
     AdJoinCheckUnknownError("adJoinCheckUnknownError"),
     EndpointConnectivityCheckCloudPcUrlNotAllowListed("endpointConnectivityCheckCloudPcUrlNotAllowListed"),
     EndpointConnectivityCheckWVDUrlNotAllowListed("endpointConnectivityCheckWVDUrlNotAllowListed"),
@@ -93,6 +94,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "adJoinCheckCredentialsExpired": return AdJoinCheckCredentialsExpired;
             case "adJoinCheckAccountLockedOrDisabled": return AdJoinCheckAccountLockedOrDisabled;
             case "adJoinCheckAccountQuotaExceeded": return AdJoinCheckAccountQuotaExceeded;
+            case "adJoinCheckServerNotOperational": return AdJoinCheckServerNotOperational;
             case "adJoinCheckUnknownError": return AdJoinCheckUnknownError;
             case "endpointConnectivityCheckCloudPcUrlNotAllowListed": return EndpointConnectivityCheckCloudPcUrlNotAllowListed;
             case "endpointConnectivityCheckWVDUrlNotAllowListed": return EndpointConnectivityCheckWVDUrlNotAllowListed;

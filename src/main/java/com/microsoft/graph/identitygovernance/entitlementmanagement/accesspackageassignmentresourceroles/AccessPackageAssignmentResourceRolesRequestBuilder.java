@@ -67,8 +67,8 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentResourceRoles{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
-     * @return a CompletableFuture of accessPackageAssignmentResourceRoleCollectionResponse
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentresourceroles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -76,9 +76,9 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentResourceRoleCollectionResponse
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRoleCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignmentresourceroles?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
     /**
      * Create new navigation property to accessPackageAssignmentResourceRoles for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessPackageAssignmentResourceRole
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> post(@jakarta.annotation.Nonnull final AccessPackageAssignmentResourceRole body) {
@@ -102,7 +102,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
      * Create new navigation property to accessPackageAssignmentResourceRoles for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessPackageAssignmentResourceRole
+     * @return a CompletableFuture of AccessPackageAssignmentResourceRole
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessPackageAssignmentResourceRole> post(@jakarta.annotation.Nonnull final AccessPackageAssignmentResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -114,7 +114,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return this.requestAdapter.sendAsync(requestInfo, AccessPackageAssignmentResourceRole::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -122,17 +122,13 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -140,6 +136,10 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -161,23 +161,23 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignmentResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a accessPackageAssignmentResourceRolesRequestBuilder
+     * @return a AccessPackageAssignmentResourceRolesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentResourceRolesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -185,7 +185,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
         return new AccessPackageAssignmentResourceRolesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages.
+     * Retrieve a list of accessPackageAssignmentResourceRole objects.  The resulting list includes all the resource roles of all assignments that the caller has access to read, across all catalogs and access packages. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

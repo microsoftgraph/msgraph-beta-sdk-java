@@ -13,7 +13,7 @@ public class MobileAppIntentAndStateCollectionResponse extends BaseCollectionPag
      */
     private java.util.List<MobileAppIntentAndState> value;
     /**
-     * Instantiates a new mobileAppIntentAndStateCollectionResponse and sets the default values.
+     * Instantiates a new MobileAppIntentAndStateCollectionResponse and sets the default values.
      */
     public MobileAppIntentAndStateCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MobileAppIntentAndStateCollectionResponse extends BaseCollectionPag
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppIntentAndStateCollectionResponse
+     * @return a MobileAppIntentAndStateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MobileAppIntentAndStateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MobileAppIntentAndStateCollectionResponse extends BaseCollectionPag
     }
     /**
      * Gets the value property value. The value property
-     * @return a mobileAppIntentAndState
+     * @return a java.util.List<MobileAppIntentAndState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppIntentAndState> getValue() {

@@ -16,7 +16,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
      */
     private Boolean defaultChecked;
     /**
-     * Instantiates a new groupPolicyPresentationCheckBox and sets the default values.
+     * Instantiates a new GroupPolicyPresentationCheckBox and sets the default values.
      */
     public GroupPolicyPresentationCheckBox() {
         super();
@@ -25,7 +25,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationCheckBox
+     * @return a GroupPolicyPresentationCheckBox
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationCheckBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class GroupPolicyPresentationCheckBox extends GroupPolicyUploadedPresenta
     }
     /**
      * Gets the defaultChecked property value. Default value for the check box. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefaultChecked() {

@@ -70,7 +70,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      */
     private DeviceManagementConfigurationPolicyTemplateReference templateReference;
     /**
-     * Instantiates a new deviceManagementConfigurationPolicy and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicy and sets the default values.
      */
     public DeviceManagementConfigurationPolicy() {
         super();
@@ -78,7 +78,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicy
+     * @return a DeviceManagementConfigurationPolicy
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the assignments property value. Policy assignments
-     * @return a deviceManagementConfigurationPolicyAssignment
+     * @return a java.util.List<DeviceManagementConfigurationPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyAssignment> getAssignments() {
@@ -103,7 +103,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the creationSource property value. Policy creation source
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreationSource() {
@@ -111,7 +111,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the description property value. Policy description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -142,7 +142,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the isAssigned property value. Policy assignment status. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -158,7 +158,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the name property value. Policy name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -166,7 +166,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
@@ -174,7 +174,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the priorityMetaData property value. Indicates the priority of each policies that are selected by the admin during enrollment process
-     * @return a deviceManagementPriorityMetaData
+     * @return a DeviceManagementPriorityMetaData
      */
     @jakarta.annotation.Nullable
     public DeviceManagementPriorityMetaData getPriorityMetaData() {
@@ -182,7 +182,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -190,7 +190,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the settingCount property value. Number of settings
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
@@ -198,7 +198,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the settings property value. Policy settings
-     * @return a deviceManagementConfigurationSetting
+     * @return a java.util.List<DeviceManagementConfigurationSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSetting> getSettings() {
@@ -206,7 +206,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
@@ -214,7 +214,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
     }
     /**
      * Gets the templateReference property value. Template reference information
-     * @return a deviceManagementConfigurationPolicyTemplateReference
+     * @return a DeviceManagementConfigurationPolicyTemplateReference
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplateReference getTemplateReference() {

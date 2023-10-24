@@ -42,7 +42,7 @@ public class AlertRule extends Entity implements Parsable {
      */
     private RuleThreshold threshold;
     /**
-     * Instantiates a new alertRule and sets the default values.
+     * Instantiates a new AlertRule and sets the default values.
      */
     public AlertRule() {
         super();
@@ -50,7 +50,7 @@ public class AlertRule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertRule
+     * @return a AlertRule
      */
     @jakarta.annotation.Nonnull
     public static AlertRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the alertRuleTemplate property value. The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a alertRuleTemplate
+     * @return a AlertRuleTemplate
      */
     @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
@@ -67,7 +67,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The rule description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -75,7 +75,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -83,7 +83,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the enabled property value. The status of the rule that indicates whether the rule is enabled or disabled. If true, the rule is enabled; otherwise, the rule is disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -108,7 +108,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the isSystemRule property value. Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSystemRule() {
@@ -116,7 +116,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the notificationChannels property value. The notification channels of the rule selected by the user.
-     * @return a notificationChannel
+     * @return a java.util.List<NotificationChannel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationChannel> getNotificationChannels() {
@@ -124,7 +124,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a ruleSeverityType
+     * @return a RuleSeverityType
      */
     @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {
@@ -132,7 +132,7 @@ public class AlertRule extends Entity implements Parsable {
     }
     /**
      * Gets the threshold property value. The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
-     * @return a ruleThreshold
+     * @return a RuleThreshold
      */
     @jakarta.annotation.Nullable
     public RuleThreshold getThreshold() {

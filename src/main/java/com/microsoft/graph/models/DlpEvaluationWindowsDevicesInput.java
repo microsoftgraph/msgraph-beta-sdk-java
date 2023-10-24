@@ -17,7 +17,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      */
     private String sharedBy;
     /**
-     * Instantiates a new dlpEvaluationWindowsDevicesInput and sets the default values.
+     * Instantiates a new DlpEvaluationWindowsDevicesInput and sets the default values.
      */
     public DlpEvaluationWindowsDevicesInput() {
         super();
@@ -26,7 +26,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dlpEvaluationWindowsDevicesInput
+     * @return a DlpEvaluationWindowsDevicesInput
      */
     @jakarta.annotation.Nonnull
     public static DlpEvaluationWindowsDevicesInput createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     }
     /**
      * Gets the contentProperties property value. The contentProperties property
-     * @return a contentProperties
+     * @return a ContentProperties
      */
     @jakarta.annotation.Nullable
     public ContentProperties getContentProperties() {
@@ -54,7 +54,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     }
     /**
      * Gets the sharedBy property value. The sharedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSharedBy() {

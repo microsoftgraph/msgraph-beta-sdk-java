@@ -38,7 +38,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
      */
     private java.util.List<PlannerPlanConfigurationLocalization> localizations;
     /**
-     * Instantiates a new plannerPlanConfiguration and sets the default values.
+     * Instantiates a new PlannerPlanConfiguration and sets the default values.
      */
     public PlannerPlanConfiguration() {
         super();
@@ -46,7 +46,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlanConfiguration
+     * @return a PlannerPlanConfiguration
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlanConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the buckets property value. List the buckets that should be created in the plan.
-     * @return a plannerPlanConfigurationBucketDefinition
+     * @return a java.util.List<PlannerPlanConfigurationBucketDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationBucketDefinition> getBuckets() {
@@ -63,7 +63,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The identity of the creator of the plan configuration.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -79,7 +79,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the defaultLanguage property value. The language code for the default language to be used for the names of the objects created for the plan.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLanguage() {
@@ -103,7 +103,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the user who last modified the plan configuration.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -119,7 +119,7 @@ public class PlannerPlanConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the localizations property value. Localized names for the plan configuration.
-     * @return a plannerPlanConfigurationLocalization
+     * @return a java.util.List<PlannerPlanConfigurationLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationLocalization> getLocalizations() {

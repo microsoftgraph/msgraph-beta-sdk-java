@@ -13,7 +13,7 @@ public class WorkbookDocumentTaskCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<WorkbookDocumentTask> value;
     /**
-     * Instantiates a new workbookDocumentTaskCollectionResponse and sets the default values.
+     * Instantiates a new WorkbookDocumentTaskCollectionResponse and sets the default values.
      */
     public WorkbookDocumentTaskCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class WorkbookDocumentTaskCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookDocumentTaskCollectionResponse
+     * @return a WorkbookDocumentTaskCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static WorkbookDocumentTaskCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class WorkbookDocumentTaskCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a workbookDocumentTask
+     * @return a java.util.List<WorkbookDocumentTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookDocumentTask> getValue() {

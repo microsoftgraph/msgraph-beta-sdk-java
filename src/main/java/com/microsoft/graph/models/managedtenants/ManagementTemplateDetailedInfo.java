@@ -34,7 +34,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
      */
     private Integer version;
     /**
-     * Instantiates a new managementTemplateDetailedInfo and sets the default values.
+     * Instantiates a new ManagementTemplateDetailedInfo and sets the default values.
      */
     public ManagementTemplateDetailedInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateDetailedInfo
+     * @return a ManagementTemplateDetailedInfo
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateDetailedInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         return new ManagementTemplateDetailedInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     }
     /**
      * Gets the category property value. The category property
-     * @return a managementCategory
+     * @return a ManagementCategory
      */
     @jakarta.annotation.Nullable
     public ManagementCategory getCategory() {
@@ -67,7 +67,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     }
     /**
      * Gets the displayName property value. The display name for the management template. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -89,7 +89,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     }
     /**
      * Gets the managementTemplateId property value. The unique identifier for the management template. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementTemplateId() {
@@ -97,7 +97,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
     }
     /**
      * Gets the version property value. The version property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {
@@ -125,8 +125,8 @@ public class ManagementTemplateDetailedInfo implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

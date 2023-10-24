@@ -34,7 +34,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      */
     private AccessPackageCustomExtensionHandlerStatus status;
     /**
-     * Instantiates a new customExtensionHandlerInstance and sets the default values.
+     * Instantiates a new CustomExtensionHandlerInstance and sets the default values.
      */
     public CustomExtensionHandlerInstance() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customExtensionHandlerInstance
+     * @return a CustomExtensionHandlerInstance
      */
     @jakarta.annotation.Nonnull
     public static CustomExtensionHandlerInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
         return new CustomExtensionHandlerInstance();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     }
     /**
      * Gets the customExtensionId property value. Identifier of the customAccessPackageWorkflowExtension triggered at this instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomExtensionId() {
@@ -67,7 +67,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     }
     /**
      * Gets the externalCorrelationId property value. The unique run ID for the logic app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalCorrelationId() {
@@ -89,7 +89,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,7 +97,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     }
     /**
      * Gets the stage property value. Indicates the stage of the request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
-     * @return a accessPackageCustomExtensionStage
+     * @return a AccessPackageCustomExtensionStage
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionStage getStage() {
@@ -105,7 +105,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     }
     /**
      * Gets the status property value. Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
-     * @return a accessPackageCustomExtensionHandlerStatus
+     * @return a AccessPackageCustomExtensionHandlerStatus
      */
     @jakarta.annotation.Nullable
     public AccessPackageCustomExtensionHandlerStatus getStatus() {
@@ -125,8 +125,8 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

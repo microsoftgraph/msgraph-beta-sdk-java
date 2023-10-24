@@ -70,7 +70,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
-     * @return a filterByCurrentUserWithOnRequestBuilder
+     * @return a FilterByCurrentUserWithOnRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
@@ -78,17 +78,17 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
     }
     /**
-     * Represents an Azure AD access review decision on an instance of a review.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItemCollectionResponse
+     * Represents a Microsoft Entra access review decision on an instance of a review.
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItemCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Represents an Azure AD access review decision on an instance of a review.
+     * Represents a Microsoft Entra access review decision on an instance of a review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItemCollectionResponse
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItemCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItemCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -101,7 +101,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to decisions for identityGovernance
      * @param body The request body
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> post(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body) {
@@ -111,7 +111,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to decisions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of accessReviewInstanceDecisionItem
+     * @return a CompletableFuture of AccessReviewInstanceDecisionItem
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AccessReviewInstanceDecisionItem> post(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -123,7 +123,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Represents an Azure AD access review decision on an instance of a review.
+     * Represents a Microsoft Entra access review decision on an instance of a review.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -131,17 +131,13 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents an Azure AD access review decision on an instance of a review.
+     * Represents a Microsoft Entra access review decision on an instance of a review.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -149,6 +145,10 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -170,23 +170,23 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a decisionsRequestBuilder
+     * @return a DecisionsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DecisionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -194,7 +194,7 @@ public class DecisionsRequestBuilder extends BaseRequestBuilder {
         return new DecisionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents an Azure AD access review decision on an instance of a review.
+     * Represents a Microsoft Entra access review decision on an instance of a review.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

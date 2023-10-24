@@ -60,7 +60,7 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get fileSecurityProfiles from security
-     * @return a CompletableFuture of fileSecurityProfileCollectionResponse
+     * @return a CompletableFuture of FileSecurityProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FileSecurityProfileCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get fileSecurityProfiles from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fileSecurityProfileCollectionResponse
+     * @return a CompletableFuture of FileSecurityProfileCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FileSecurityProfileCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to fileSecurityProfiles for security
      * @param body The request body
-     * @return a CompletableFuture of fileSecurityProfile
+     * @return a CompletableFuture of FileSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FileSecurityProfile> post(@jakarta.annotation.Nonnull final FileSecurityProfile body) {
@@ -92,7 +92,7 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to fileSecurityProfiles for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of fileSecurityProfile
+     * @return a CompletableFuture of FileSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<FileSecurityProfile> post(@jakarta.annotation.Nonnull final FileSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,6 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class FileSecurityProfilesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final FileSecurityProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a fileSecurityProfilesRequestBuilder
+     * @return a FileSecurityProfilesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FileSecurityProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

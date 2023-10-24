@@ -38,7 +38,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> get() {
@@ -47,7 +47,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -73,10 +73,6 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**

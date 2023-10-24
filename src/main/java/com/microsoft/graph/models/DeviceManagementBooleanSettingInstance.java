@@ -16,7 +16,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      */
     private Boolean value;
     /**
-     * Instantiates a new deviceManagementBooleanSettingInstance and sets the default values.
+     * Instantiates a new DeviceManagementBooleanSettingInstance and sets the default values.
      */
     public DeviceManagementBooleanSettingInstance() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementBooleanSettingInstance
+     * @return a DeviceManagementBooleanSettingInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementBooleanSettingInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
     }
     /**
      * Gets the value property value. The boolean value
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getValue() {

@@ -33,7 +33,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      */
     private ZebraFotaConnectorState state;
     /**
-     * Instantiates a new zebraFotaConnector and sets the default values.
+     * Instantiates a new ZebraFotaConnector and sets the default values.
      */
     public ZebraFotaConnector() {
         super();
@@ -41,7 +41,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaConnector
+     * @return a ZebraFotaConnector
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentAuthorizationUrl property value. Complete account enrollment authorization URL. This corresponds to verificationuricomplete in the Zebra API documentations.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentAuthorizationUrl() {
@@ -58,7 +58,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentToken property value. Tenant enrollment token from Zebra. The token is used to enroll Zebra devices in the FOTA Service via app config.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentToken() {
@@ -80,7 +80,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     }
     /**
      * Gets the fotaAppsApproved property value. Flag indicating if required Firmware Over-the-Air (FOTA) Apps have been approved.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFotaAppsApproved() {
@@ -96,7 +96,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Represents various states for Zebra FOTA connector.
-     * @return a zebraFotaConnectorState
+     * @return a ZebraFotaConnectorState
      */
     @jakarta.annotation.Nullable
     public ZebraFotaConnectorState getState() {

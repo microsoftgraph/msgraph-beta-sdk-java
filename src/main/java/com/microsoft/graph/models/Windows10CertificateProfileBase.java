@@ -12,7 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Windows10CertificateProfileBase extends WindowsCertificateProfileBase implements Parsable {
     /**
-     * Instantiates a new windows10CertificateProfileBase and sets the default values.
+     * Instantiates a new Windows10CertificateProfileBase and sets the default values.
      */
     public Windows10CertificateProfileBase() {
         super();
@@ -21,7 +21,7 @@ public class Windows10CertificateProfileBase extends WindowsCertificateProfileBa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10CertificateProfileBase
+     * @return a Windows10CertificateProfileBase
      */
     @jakarta.annotation.Nonnull
     public static Windows10CertificateProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

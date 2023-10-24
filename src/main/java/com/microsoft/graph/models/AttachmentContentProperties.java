@@ -17,7 +17,7 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
      */
     private java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
     /**
-     * Instantiates a new attachmentContentProperties and sets the default values.
+     * Instantiates a new AttachmentContentProperties and sets the default values.
      */
     public AttachmentContentProperties() {
         super();
@@ -26,7 +26,7 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attachmentContentProperties
+     * @return a AttachmentContentProperties
      */
     @jakarta.annotation.Nonnull
     public static AttachmentContentProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
     }
     /**
      * Gets the currentLabel property value. The currentLabel property
-     * @return a currentLabel
+     * @return a CurrentLabel
      */
     @jakarta.annotation.Nullable
     public CurrentLabel getCurrentLabel() {
@@ -43,7 +43,7 @@ public class AttachmentContentProperties extends ContentProperties implements Pa
     }
     /**
      * Gets the discoveredSensitiveTypes property value. The discoveredSensitiveTypes property
-     * @return a discoveredSensitiveType
+     * @return a java.util.List<DiscoveredSensitiveType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DiscoveredSensitiveType> getDiscoveredSensitiveTypes() {

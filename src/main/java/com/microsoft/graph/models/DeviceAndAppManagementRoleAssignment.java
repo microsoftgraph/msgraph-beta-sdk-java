@@ -20,7 +20,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      */
     private java.util.List<RoleScopeTag> roleScopeTags;
     /**
-     * Instantiates a new deviceAndAppManagementRoleAssignment and sets the default values.
+     * Instantiates a new DeviceAndAppManagementRoleAssignment and sets the default values.
      */
     public DeviceAndAppManagementRoleAssignment() {
         super();
@@ -28,7 +28,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementRoleAssignment
+     * @return a DeviceAndAppManagementRoleAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementRoleAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +48,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     }
     /**
      * Gets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMembers() {
@@ -56,7 +56,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     }
     /**
      * Gets the roleScopeTags property value. The set of Role Scope Tags defined on the Role Assignment.
-     * @return a roleScopeTag
+     * @return a java.util.List<RoleScopeTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTag> getRoleScopeTags() {

@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
      */
     private String osVersion;
     /**
-     * Instantiates a new userExperienceAnalyticsAnomalyDevice and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAnomalyDevice and sets the default values.
      */
     public UserExperienceAnalyticsAnomalyDevice() {
         super();
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAnomalyDevice
+     * @return a UserExperienceAnalyticsAnomalyDevice
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomalyDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the anomalyId property value. The unique identifier of the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnomalyId() {
@@ -98,7 +98,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the correlationGroupId property value. The unique identifier of the correlation group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationGroupId() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -114,7 +114,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the deviceManufacturer property value. The manufacturer name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
@@ -122,7 +122,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the deviceModel property value. The model name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the deviceName property value. The name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -138,7 +138,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the deviceStatus property value. Indicates the status of the device in the correlation group. Eg: Device status can be anomalous, affected, at risk.
-     * @return a userExperienceAnalyticsDeviceStatus
+     * @return a UserExperienceAnalyticsDeviceStatus
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceStatus getDeviceStatus() {
@@ -166,7 +166,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the osName property value. The name of the OS installed on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsName() {
@@ -174,7 +174,7 @@ public class UserExperienceAnalyticsAnomalyDevice extends Entity implements Pars
     }
     /**
      * Gets the osVersion property value. The OS version installed on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {

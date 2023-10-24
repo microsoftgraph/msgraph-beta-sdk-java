@@ -18,7 +18,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
      */
     private PeriodAndDuration timeIntervalBetweenActivations;
     /**
-     * Instantiates a new sequentialActivationRenewalsAlertConfiguration and sets the default values.
+     * Instantiates a new SequentialActivationRenewalsAlertConfiguration and sets the default values.
      */
     public SequentialActivationRenewalsAlertConfiguration() {
         super();
@@ -27,7 +27,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sequentialActivationRenewalsAlertConfiguration
+     * @return a SequentialActivationRenewalsAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static SequentialActivationRenewalsAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleM
     }
     /**
      * Gets the sequentialActivationCounterThreshold property value. The minimum number of activations within the timeIntervalBetweenActivations period to trigger an alert.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequentialActivationCounterThreshold() {

@@ -13,7 +13,7 @@ public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<MacOSPkgApp> value;
     /**
-     * Instantiates a new macOSPkgAppCollectionResponse and sets the default values.
+     * Instantiates a new MacOSPkgAppCollectionResponse and sets the default values.
      */
     public MacOSPkgAppCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSPkgAppCollectionResponse
+     * @return a MacOSPkgAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MacOSPkgAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MacOSPkgAppCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a macOSPkgApp
+     * @return a java.util.List<MacOSPkgApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSPkgApp> getValue() {

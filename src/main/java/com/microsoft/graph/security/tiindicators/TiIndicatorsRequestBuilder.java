@@ -91,8 +91,8 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/tiIndicators{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
-     * @return a CompletableFuture of tiIndicatorCollectionResponse
+     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of TiIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -100,9 +100,9 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tiIndicatorCollectionResponse
+     * @return a CompletableFuture of TiIndicatorCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-list?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -114,9 +114,9 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TiIndicatorCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new tiIndicator object.
+     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of tiIndicator
+     * @return a CompletableFuture of TiIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -124,10 +124,10 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new tiIndicator object.
+     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tiIndicator
+     * @return a CompletableFuture of TiIndicator
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicators-post?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -140,7 +140,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, TiIndicator::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -148,17 +148,13 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -166,10 +162,14 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
-     * Create a new tiIndicator object.
+     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -178,7 +178,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new tiIndicator object.
+     * Create a new tiIndicator object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -187,23 +187,23 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TiIndicator body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a tiIndicatorsRequestBuilder
+     * @return a TiIndicatorsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public TiIndicatorsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -211,7 +211,7 @@ public class TiIndicatorsRequestBuilder extends BaseRequestBuilder {
         return new TiIndicatorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of tiIndicator objects.
+     * Retrieve a list of tiIndicator objects. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

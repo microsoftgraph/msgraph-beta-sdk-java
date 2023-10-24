@@ -37,26 +37,26 @@ public class SearchExistingIdentitiesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action searchExistingIdentities
      * @param body The request body
-     * @return a CompletableFuture of searchExistingIdentitiesResponse
+     * @return a CompletableFuture of SearchExistingIdentitiesPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body) {
+    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesPostResponse> post(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action searchExistingIdentities
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of searchExistingIdentitiesResponse
+     * @return a CompletableFuture of SearchExistingIdentitiesPostResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesResponse> post(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<SearchExistingIdentitiesPostResponse> post(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, SearchExistingIdentitiesResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, SearchExistingIdentitiesPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action searchExistingIdentities
@@ -77,23 +77,23 @@ public class SearchExistingIdentitiesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SearchExistingIdentitiesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a searchExistingIdentitiesRequestBuilder
+     * @return a SearchExistingIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SearchExistingIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -13,7 +13,7 @@ public class AllowedDataLocationCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<AllowedDataLocation> value;
     /**
-     * Instantiates a new allowedDataLocationCollectionResponse and sets the default values.
+     * Instantiates a new AllowedDataLocationCollectionResponse and sets the default values.
      */
     public AllowedDataLocationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AllowedDataLocationCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a allowedDataLocationCollectionResponse
+     * @return a AllowedDataLocationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AllowedDataLocationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AllowedDataLocationCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a allowedDataLocation
+     * @return a java.util.List<AllowedDataLocation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AllowedDataLocation> getValue() {

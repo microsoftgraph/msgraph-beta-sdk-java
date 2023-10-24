@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationGroupSettingInstanceTemplate extends D
      */
     private DeviceManagementConfigurationGroupSettingValueTemplate groupSettingValueTemplate;
     /**
-     * Instantiates a new deviceManagementConfigurationGroupSettingInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationGroupSettingInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationGroupSettingInstanceTemplate() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationGroupSettingInstanceTemplate extends D
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationGroupSettingInstanceTemplate
+     * @return a DeviceManagementConfigurationGroupSettingInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationGroupSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DeviceManagementConfigurationGroupSettingInstanceTemplate extends D
     }
     /**
      * Gets the groupSettingValueTemplate property value. Group Setting Value Template
-     * @return a deviceManagementConfigurationGroupSettingValueTemplate
+     * @return a DeviceManagementConfigurationGroupSettingValueTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingValueTemplate getGroupSettingValueTemplate() {

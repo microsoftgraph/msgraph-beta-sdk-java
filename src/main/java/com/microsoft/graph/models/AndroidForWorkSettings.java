@@ -49,7 +49,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      */
     private java.util.List<String> targetGroupIds;
     /**
-     * Instantiates a new androidForWorkSettings and sets the default values.
+     * Instantiates a new AndroidForWorkSettings and sets the default values.
      */
     public AndroidForWorkSettings() {
         super();
@@ -57,7 +57,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkSettings
+     * @return a AndroidForWorkSettings
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the bindStatus property value. Bind status of the tenant with the Google EMM API
-     * @return a androidForWorkBindStatus
+     * @return a AndroidForWorkBindStatus
      */
     @jakarta.annotation.Nullable
     public AndroidForWorkBindStatus getBindStatus() {
@@ -74,7 +74,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the deviceOwnerManagementEnabled property value. Indicates if this account is flighting for Android Device Owner Management with CloudDPC.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceOwnerManagementEnabled() {
@@ -82,7 +82,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentTarget property value. Android for Work device management targeting type for the account
-     * @return a androidForWorkEnrollmentTarget
+     * @return a AndroidForWorkEnrollmentTarget
      */
     @jakarta.annotation.Nullable
     public AndroidForWorkEnrollmentTarget getEnrollmentTarget() {
@@ -116,7 +116,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the lastAppSyncStatus property value. Sync status of the tenant with the Google EMM API
-     * @return a androidForWorkSyncStatus
+     * @return a AndroidForWorkSyncStatus
      */
     @jakarta.annotation.Nullable
     public AndroidForWorkSyncStatus getLastAppSyncStatus() {
@@ -132,7 +132,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ownerOrganizationName property value. Organization name used when onboarding Android for Work
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerOrganizationName() {
@@ -140,7 +140,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the ownerUserPrincipalName property value. Owner UPN that created the enterprise
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerUserPrincipalName() {
@@ -148,7 +148,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     }
     /**
      * Gets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetGroupIds() {

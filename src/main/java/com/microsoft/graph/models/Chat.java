@@ -74,7 +74,7 @@ public class Chat extends Entity implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new chat and sets the default values.
+     * Instantiates a new Chat and sets the default values.
      */
     public Chat() {
         super();
@@ -82,7 +82,7 @@ public class Chat extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chat
+     * @return a Chat
      */
     @jakarta.annotation.Nonnull
     public static Chat createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -91,7 +91,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the chatType property value. The chatType property
-     * @return a chatType
+     * @return a ChatType
      */
     @jakarta.annotation.Nullable
     public ChatType getChatType() {
@@ -132,7 +132,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the installedApps property value. A collection of all the apps in the chat. Nullable.
-     * @return a teamsAppInstallation
+     * @return a java.util.List<TeamsAppInstallation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAppInstallation> getInstalledApps() {
@@ -140,7 +140,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the lastMessagePreview property value. Preview of the last message sent in the chat. Null if no messages have been sent in the chat. Currently, only the list chats operation supports this property.
-     * @return a chatMessageInfo
+     * @return a ChatMessageInfo
      */
     @jakarta.annotation.Nullable
     public ChatMessageInfo getLastMessagePreview() {
@@ -156,7 +156,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the members property value. A collection of all the members in the chat. Nullable.
-     * @return a conversationMember
+     * @return a java.util.List<ConversationMember>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConversationMember> getMembers() {
@@ -164,7 +164,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the messages property value. A collection of all the messages in the chat. Nullable.
-     * @return a chatMessage
+     * @return a java.util.List<ChatMessage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getMessages() {
@@ -172,7 +172,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn't associated with an online meeting, the property is empty. Read-only.
-     * @return a teamworkOnlineMeetingInfo
+     * @return a TeamworkOnlineMeetingInfo
      */
     @jakarta.annotation.Nullable
     public TeamworkOnlineMeetingInfo getOnlineMeetingInfo() {
@@ -180,7 +180,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. A collection of all the Teams async operations that ran or are running on the chat. Nullable.
-     * @return a teamsAsyncOperation
+     * @return a java.util.List<TeamsAsyncOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
@@ -188,7 +188,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the permissionGrants property value. A collection of permissions granted to apps for the chat.
-     * @return a resourceSpecificPermissionGrant
+     * @return a java.util.List<ResourceSpecificPermissionGrant>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceSpecificPermissionGrant> getPermissionGrants() {
@@ -196,7 +196,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the pinnedMessages property value. A collection of all the pinned messages in the chat. Nullable.
-     * @return a pinnedChatMessageInfo
+     * @return a java.util.List<PinnedChatMessageInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PinnedChatMessageInfo> getPinnedMessages() {
@@ -204,7 +204,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the tabs property value. A collection of all the tabs in the chat. Nullable.
-     * @return a teamsTab
+     * @return a java.util.List<TeamsTab>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamsTab> getTabs() {
@@ -212,7 +212,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The identifier of the tenant in which the chat was created. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -220,7 +220,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the topic property value. (Optional) Subject or topic for the chat. Only available for group chats.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTopic() {
@@ -228,7 +228,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the viewpoint property value. Represents caller-specific information about the chat, such as last message read date and time. This property is populated only when the request is made in a delegated context.
-     * @return a chatViewpoint
+     * @return a ChatViewpoint
      */
     @jakarta.annotation.Nullable
     public ChatViewpoint getViewpoint() {
@@ -236,7 +236,7 @@ public class Chat extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. The URL for the chat in Microsoft Teams. The URL should be treated as an opaque blob, and not parsed. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

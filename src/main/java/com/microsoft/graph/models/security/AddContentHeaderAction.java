@@ -37,7 +37,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      */
     private String uiElementName;
     /**
-     * Instantiates a new addContentHeaderAction and sets the default values.
+     * Instantiates a new AddContentHeaderAction and sets the default values.
      */
     public AddContentHeaderAction() {
         super();
@@ -46,7 +46,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addContentHeaderAction
+     * @return a AddContentHeaderAction
      */
     @jakarta.annotation.Nonnull
     public static AddContentHeaderAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a contentAlignment
+     * @return a ContentAlignment
      */
     @jakarta.annotation.Nullable
     public ContentAlignment getAlignment() {
@@ -79,7 +79,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontColor() {
@@ -87,7 +87,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the fontName property value. Name of the font to use for the header.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFontName() {
@@ -95,7 +95,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the fontSize property value. Font size to use for the header.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFontSize() {
@@ -103,7 +103,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the margin property value. The margin of the header from the top of the document.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMargin() {
@@ -111,7 +111,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the text property value. The contents of the header itself.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
@@ -119,7 +119,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
     }
     /**
      * Gets the uiElementName property value. The name of the UI element where the header should be placed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUiElementName() {

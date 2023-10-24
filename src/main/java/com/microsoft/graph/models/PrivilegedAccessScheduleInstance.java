@@ -18,7 +18,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
      */
     private OffsetDateTime startDateTime;
     /**
-     * Instantiates a new privilegedAccessScheduleInstance and sets the default values.
+     * Instantiates a new PrivilegedAccessScheduleInstance and sets the default values.
      */
     public PrivilegedAccessScheduleInstance() {
         super();
@@ -26,7 +26,7 @@ public class PrivilegedAccessScheduleInstance extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessScheduleInstance
+     * @return a PrivilegedAccessScheduleInstance
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessScheduleInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

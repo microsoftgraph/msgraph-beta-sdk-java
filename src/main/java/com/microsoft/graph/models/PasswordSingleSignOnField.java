@@ -22,7 +22,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      */
     private String defaultLabel;
     /**
-     * Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
+     * Id used to identity the field type. This is an internal ID and possible values are param1, param2, paramuserName, parampassword.
      */
     private String fieldId;
     /**
@@ -34,7 +34,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      */
     private String type;
     /**
-     * Instantiates a new passwordSingleSignOnField and sets the default values.
+     * Instantiates a new PasswordSingleSignOnField and sets the default values.
      */
     public PasswordSingleSignOnField() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a passwordSingleSignOnField
+     * @return a PasswordSingleSignOnField
      */
     @jakarta.annotation.Nonnull
     public static PasswordSingleSignOnField createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         return new PasswordSingleSignOnField();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the customizedLabel property value. Title/label override for customization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedLabel() {
@@ -67,7 +67,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the defaultLabel property value. Label that would be used if no customizedLabel is provided. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLabel() {
@@ -88,8 +88,8 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
-     * @return a string
+     * Gets the fieldId property value. Id used to identity the field type. This is an internal ID and possible values are param1, param2, paramuserName, parampassword.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFieldId() {
@@ -97,7 +97,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the type property value. Type of the credential. The values can be text, password.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -125,8 +125,8 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -146,7 +146,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
         this.defaultLabel = value;
     }
     /**
-     * Sets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param1, param2, paramuserName, parampassword.
+     * Sets the fieldId property value. Id used to identity the field type. This is an internal ID and possible values are param1, param2, paramuserName, parampassword.
      * @param value Value to set for the fieldId property.
      */
     public void setFieldId(@jakarta.annotation.Nullable final String value) {
