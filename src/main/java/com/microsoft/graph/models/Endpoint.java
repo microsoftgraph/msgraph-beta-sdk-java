@@ -27,7 +27,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Capability.
-     * Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.
+     * Describes the capability that is associated with this resource. (for example, Messages, Conversations, etc.) Not nullable. Read-only.
      */
     @SerializedName(value = "capability", alternate = {"Capability"})
     @Expose
@@ -54,7 +54,7 @@ public class Endpoint extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Provider Resource Id.
-     * For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.
+     * For Microsoft 365 groups, this is set to a well-known name for the resource (for example, Yammer.FeedURL etc.). Not nullable. Read-only.
      */
     @SerializedName(value = "providerResourceId", alternate = {"ProviderResourceId"})
     @Expose

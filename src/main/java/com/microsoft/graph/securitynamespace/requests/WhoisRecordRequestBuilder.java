@@ -66,4 +66,24 @@ public class WhoisRecordRequestBuilder extends BaseRequestBuilder<WhoisRecord> {
     public com.microsoft.graph.security.requests.HostWithReferenceRequestBuilder host() {
         return new com.microsoft.graph.security.requests.HostWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("host"), getClient(), null);
     }
+    /**
+     *  Gets a request builder for the WhoisHistoryRecord collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionWithReferencesRequestBuilder history() {
+        return new com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("history"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WhoisHistoryRecord item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordWithReferenceRequestBuilder history(@Nonnull final String id) {
+        return new com.microsoft.graph.security.requests.WhoisHistoryRecordWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("history") + "/" + id, getClient(), null);
+    }
 }

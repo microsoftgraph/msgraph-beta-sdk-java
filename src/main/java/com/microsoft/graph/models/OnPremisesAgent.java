@@ -40,7 +40,7 @@ public class OnPremisesAgent extends Entity implements IJsonBackedObject {
 
     /**
      * The Machine Name.
-     * The name of the machine that the aggent is running on. Read-only
+     * The name of the machine that the agent is running on. Read-only
      */
     @SerializedName(value = "machineName", alternate = {"MachineName"})
     @Expose

@@ -48,6 +48,14 @@ public enum CaseAction
     */
     PURGE_DATA,
     /**
+    * export Report
+    */
+    EXPORT_REPORT,
+    /**
+    * export Result
+    */
+    EXPORT_RESULT,
+    /**
     * For CaseAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

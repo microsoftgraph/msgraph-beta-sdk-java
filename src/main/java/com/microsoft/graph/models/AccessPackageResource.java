@@ -86,7 +86,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Origin Id.
-     * The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group.
+     * The unique identifier of the resource in the origin system. In the case of a Microsoft Entra group, this is the identifier of the group.
      */
     @SerializedName(value = "originId", alternate = {"OriginId"})
     @Expose
@@ -104,7 +104,7 @@ public class AccessPackageResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Type.
-     * The type of the resource, such as Application if it is an Azure AD connected application, or SharePoint Online Site for a SharePoint Online site.
+     * The type of the resource, such as Application if it is a Microsoft Entra connected application, or SharePoint Online Site for a SharePoint Online site.
      */
     @SerializedName(value = "resourceType", alternate = {"ResourceType"})
     @Expose

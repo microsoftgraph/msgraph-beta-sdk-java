@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MacOSIncludedApp;
 import com.microsoft.graph.models.MacOSMinimumOperatingSystem;
+import com.microsoft.graph.models.MacOSAppScript;
 import com.microsoft.graph.models.MobileLobApp;
 
 
@@ -54,6 +55,24 @@ public class MacOSPkgApp extends MobileLobApp implements IJsonBackedObject {
     @Expose
 	@Nullable
     public MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
+
+    /**
+     * The Post Install Script.
+     * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     */
+    @SerializedName(value = "postInstallScript", alternate = {"PostInstallScript"})
+    @Expose
+	@Nullable
+    public MacOSAppScript postInstallScript;
+
+    /**
+     * The Pre Install Script.
+     * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     */
+    @SerializedName(value = "preInstallScript", alternate = {"PreInstallScript"})
+    @Expose
+	@Nullable
+    public MacOSAppScript preInstallScript;
 
     /**
      * The Primary Bundle Id.

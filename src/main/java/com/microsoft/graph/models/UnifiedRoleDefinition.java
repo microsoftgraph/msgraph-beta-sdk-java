@@ -76,7 +76,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Privileged.
-     * 
+     * Flag indicating if the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      */
     @SerializedName(value = "isPrivileged", alternate = {"IsPrivileged"})
     @Expose
@@ -121,7 +121,7 @@ public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Inherits Permissions From.
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles support this attribute.
      */
     @SerializedName(value = "inheritsPermissionsFrom", alternate = {"InheritsPermissionsFrom"})
     @Expose

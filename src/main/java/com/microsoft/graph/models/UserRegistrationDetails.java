@@ -31,7 +31,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Default Mfa Method.
-     * The method the user or admin selected as default for performing multi-factor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
+     * The method the user or admin selected as default for performing multifactor authentication for the user. The possible values are: none, mobilePhone, alternateMobilePhone, officePhone, microsoftAuthenticatorPush, softwareOneTimePasscode, unknownFutureValue.
      */
     @SerializedName(value = "defaultMfaMethod", alternate = {"DefaultMfaMethod"})
     @Expose
@@ -49,7 +49,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Capable.
-     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
+     * Indicates whether the user has registered a strong authentication method for multifactor authentication. The method must be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaCapable", alternate = {"IsMfaCapable"})
     @Expose
@@ -58,7 +58,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The Is Mfa Registered.
-     * Indicates whether the user has registered a strong authentication method for multi-factor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
+     * Indicates whether the user has registered a strong authentication method for multifactor authentication. The method may not necessarily be allowed by the authentication methods policy. Supports $filter (eq).
      */
     @SerializedName(value = "isMfaRegistered", alternate = {"IsMfaRegistered"})
     @Expose
@@ -139,7 +139,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Display Name.
-     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
+     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderby.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -148,7 +148,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Preferred Method For Secondary Authentication.
-     * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
+     * The method the user selected as the default second-factor for performing multifactor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
      */
     @SerializedName(value = "userPreferredMethodForSecondaryAuthentication", alternate = {"UserPreferredMethodForSecondaryAuthentication"})
     @Expose
@@ -157,7 +157,7 @@ public class UserRegistrationDetails extends Entity implements IJsonBackedObject
 
     /**
      * The User Principal Name.
-     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderBy.
+     * The user principal name, such as AdeleV@contoso.com. Supports $filter (eq, startsWith) and $orderby.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

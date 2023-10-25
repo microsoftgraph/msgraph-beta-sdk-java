@@ -35,7 +35,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Logs.
-     * Represnts network connections that are routed through Global Secure Access.
+     * Represents network connections that are routed through Global Secure Access.
      */
     @SerializedName(value = "logs", alternate = {"Logs"})
     @Expose
@@ -62,7 +62,7 @@ public class NetworkAccessRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Forwarding Policies.
-     * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
+     * A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
      */
     @SerializedName(value = "forwardingPolicies", alternate = {"ForwardingPolicies"})
     @Expose

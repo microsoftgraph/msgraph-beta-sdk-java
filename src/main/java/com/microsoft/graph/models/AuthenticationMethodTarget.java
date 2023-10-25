@@ -37,7 +37,7 @@ public class AuthenticationMethodTarget extends Entity implements IJsonBackedObj
 
     /**
      * The Target Type.
-     * Possible values are: group, and unknownFutureValue. From December 2022, targeting individual users using user is no longer recommended. Existing targets will remain but we recommend to move the individual users to a targeted group.
+     * Possible values are: group, and unknownFutureValue. From December 2022, targeting individual users using user is no longer recommended. Existing targets remain but we recommend moving the individual users to a targeted group.
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose

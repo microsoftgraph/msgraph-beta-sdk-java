@@ -52,10 +52,6 @@ public enum Label
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * icon Url
-    */
-    ICON_URL,
-    /**
     * container Name
     */
     CONTAINER_NAME,
@@ -63,6 +59,10 @@ public enum Label
     * container Url
     */
     CONTAINER_URL,
+    /**
+    * icon Url
+    */
+    ICON_URL,
     /**
     * For Label values that were not expected from the service
     */

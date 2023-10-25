@@ -39,7 +39,7 @@ public class TenantInfo implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional.
+     * The Microsoft Entra tenant identifier for the managed tenant. Optional.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

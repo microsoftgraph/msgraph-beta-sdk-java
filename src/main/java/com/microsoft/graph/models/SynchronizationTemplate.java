@@ -75,7 +75,7 @@ public class SynchronizationTemplate extends Entity implements IJsonBackedObject
 
     /**
      * The Metadata.
-     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
+     * Additional extension properties. Unless mentioned explicitly, metadata values shouldn't be changed.
      */
     @SerializedName(value = "metadata", alternate = {"Metadata"})
     @Expose

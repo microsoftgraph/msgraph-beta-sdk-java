@@ -56,4 +56,24 @@ public class EducationAssignmentResourceRequestBuilder extends BaseRequestBuilde
     }
 
 
+    /**
+     *  Gets a request builder for the EducationAssignmentResource collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationAssignmentResourceCollectionRequestBuilder dependentResources() {
+        return new com.microsoft.graph.requests.EducationAssignmentResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dependentResources"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the EducationAssignmentResource item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.EducationAssignmentResourceRequestBuilder dependentResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.EducationAssignmentResourceRequestBuilder(getRequestUrlWithAdditionalSegment("dependentResources") + "/" + id, getClient(), null);
+    }
 }

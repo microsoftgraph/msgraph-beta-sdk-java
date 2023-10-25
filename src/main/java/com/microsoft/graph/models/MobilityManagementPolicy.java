@@ -93,7 +93,7 @@ public class MobilityManagementPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Included Groups.
-     * Azure AD groups under the scope of the mobility management application if appliesTo is selected
+     * Microsoft Entra groups under the scope of the mobility management application if appliesTo is selected
      */
 	@Nullable
     public com.microsoft.graph.requests.GroupCollectionPage includedGroups;

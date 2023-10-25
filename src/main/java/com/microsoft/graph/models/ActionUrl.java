@@ -48,7 +48,7 @@ public class ActionUrl implements IJsonBackedObject {
 
     /**
      * The Url.
-     * The URL to the documentation or Azure portal page.
+     * The URL to the documentation or Microsoft Entra admin center page.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

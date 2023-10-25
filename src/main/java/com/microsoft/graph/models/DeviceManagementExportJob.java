@@ -31,7 +31,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Expiration Date Time.
-     * Time that the exported report expires
+     * Time that the exported report expires. This property is read-only.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Request Date Time.
-     * Time that the exported report was requested
+     * Time that the exported report was requested. This property is read-only.
      */
     @SerializedName(value = "requestDateTime", alternate = {"RequestDateTime"})
     @Expose
@@ -103,7 +103,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Status.
-     * Status of the export job. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Status of the export job. This property is read-only. Possible values are: unknown, notStarted, inProgress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -112,7 +112,7 @@ public class DeviceManagementExportJob extends Entity implements IJsonBackedObje
 
     /**
      * The Url.
-     * Temporary location of the exported report
+     * Temporary location of the exported report. This property is read-only.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

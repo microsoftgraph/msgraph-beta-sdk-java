@@ -30,7 +30,7 @@ public class StatusDetails extends StatusBase implements IJsonBackedObject {
 
     /**
      * The Additional Details.
-     * Additional details in case of error.
+     * Additional details if there is an error.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose

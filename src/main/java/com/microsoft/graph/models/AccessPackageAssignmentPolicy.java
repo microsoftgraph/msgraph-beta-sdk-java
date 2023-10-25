@@ -46,7 +46,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Access Review Settings.
-     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
+     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
      */
     @SerializedName(value = "accessReviewSettings", alternate = {"AccessReviewSettings"})
     @Expose
@@ -100,7 +100,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Duration In Days.
-     * The number of days in which assignments from this policy last until they are expired.
+     * The number of days in which assignments from this policy last until they're expired.
      */
     @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
     @Expose
@@ -163,7 +163,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
     /**
      * The Verifiable Credential Settings.
-     * Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     * Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
      */
     @SerializedName(value = "verifiableCredentialSettings", alternate = {"VerifiableCredentialSettings"})
     @Expose

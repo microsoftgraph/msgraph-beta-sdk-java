@@ -31,7 +31,7 @@ public class HostSslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The First Seen Date Time.
-     * 
+     * The first date and time that this hostSslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
@@ -40,7 +40,7 @@ public class HostSslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Last Seen Date Time.
-     * 
+     * The most recent date and time that this hostSslCertificate was observed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class HostSslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Ports.
-     * 
+     * The ports related with this hostSslCertificate.
      */
     @SerializedName(value = "ports", alternate = {"Ports"})
     @Expose
@@ -58,7 +58,7 @@ public class HostSslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Host.
-     * 
+     * The host for this hostSslCertificate.
      */
     @SerializedName(value = "host", alternate = {"Host"})
     @Expose
@@ -67,7 +67,7 @@ public class HostSslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Ssl Certificate.
-     * 
+     * The sslCertificate for this hostSslCertificate.
      */
     @SerializedName(value = "sslCertificate", alternate = {"SslCertificate"})
     @Expose

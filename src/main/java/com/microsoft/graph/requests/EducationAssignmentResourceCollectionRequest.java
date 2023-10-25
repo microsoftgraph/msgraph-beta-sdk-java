@@ -7,7 +7,6 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.EducationAssignment;
 import com.microsoft.graph.models.EducationAssignmentResource;
 import java.util.Arrays;
 import java.util.EnumSet;

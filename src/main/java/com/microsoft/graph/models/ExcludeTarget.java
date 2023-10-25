@@ -40,7 +40,7 @@ public class ExcludeTarget implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The object identifier of an Azure AD group.
+     * The object identifier of a Microsoft Entra group.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

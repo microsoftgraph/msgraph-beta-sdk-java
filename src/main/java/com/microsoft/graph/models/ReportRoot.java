@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsRoot;
 import com.microsoft.graph.models.ServiceLevelAgreementRoot;
+import com.microsoft.graph.models.UserInsightsRoot;
 import com.microsoft.graph.models.SecurityReportsRoot;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AppCredentialSignInActivityCollectionPage;
@@ -55,7 +56,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication Methods.
-     * Container for navigation properties for Azure AD authentication methods resources.
+     * Container for navigation properties for Microsoft Entra authentication methods resources.
      */
     @SerializedName(value = "authenticationMethods", alternate = {"AuthenticationMethods"})
     @Expose
@@ -99,6 +100,15 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.UserCredentialUsageDetailsCollectionPage userCredentialUsageDetails;
+
+    /**
+     * The User Insights.
+     * 
+     */
+    @SerializedName(value = "userInsights", alternate = {"UserInsights"})
+    @Expose
+	@Nullable
+    public UserInsightsRoot userInsights;
 
     /**
      * The Daily Print Usage.
@@ -191,7 +201,7 @@ public class ReportRoot extends Entity implements IJsonBackedObject {
 
     /**
      * The Security.
-     * Provides the ability to launch a realistic simulated phishing attack that organizations can learn from.
+     * Provides the ability to launch a realistically simulated phishing attack that organizations can learn from.
      */
     @SerializedName(value = "security", alternate = {"Security"})
     @Expose

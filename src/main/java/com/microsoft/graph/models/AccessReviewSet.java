@@ -32,7 +32,7 @@ public class AccessReviewSet extends Entity implements IJsonBackedObject {
 
     /**
      * The Decisions.
-     * Represents an Azure AD access review decision on an instance of a review.
+     * Represents a Microsoft Entra access review decision on an instance of a review.
      */
     @SerializedName(value = "decisions", alternate = {"Decisions"})
     @Expose

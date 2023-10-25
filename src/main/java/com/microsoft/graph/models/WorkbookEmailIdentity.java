@@ -39,7 +39,7 @@ public class WorkbookEmailIdentity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class WorkbookEmailIdentity implements IJsonBackedObject {
 
     /**
      * The Email.
-     * 
+     * Email address of the user.
      */
     @SerializedName(value = "email", alternate = {"Email"})
     @Expose
@@ -57,7 +57,7 @@ public class WorkbookEmailIdentity implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * The unique identifier of the user.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose

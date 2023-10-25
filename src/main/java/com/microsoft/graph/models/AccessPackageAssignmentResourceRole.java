@@ -50,7 +50,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements IJson
 
     /**
      * The Status.
-     * The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
+     * The value is PendingFulfillment when the access package assignment hasn't yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

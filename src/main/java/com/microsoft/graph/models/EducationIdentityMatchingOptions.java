@@ -67,7 +67,7 @@ public class EducationIdentityMatchingOptions implements IJsonBackedObject {
 
     /**
      * The Target Property Name.
-     * The name of the target property, which should be a valid property in Azure AD. This property is case-sensitive.
+     * The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
      */
     @SerializedName(value = "targetPropertyName", alternate = {"TargetPropertyName"})
     @Expose

@@ -51,7 +51,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Approximate Last Sign In Date Time.
-     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.
+     * The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderby.
      */
     @SerializedName(value = "approximateLastSignInDateTime", alternate = {"ApproximateLastSignInDateTime"})
     @Expose
@@ -114,7 +114,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
+     * The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -123,7 +123,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Domain Name.
-     * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
+     * The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
      */
     @SerializedName(value = "domainName", alternate = {"DomainName"})
     @Expose
@@ -150,7 +150,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Extension Attributes.
-     * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, not, startsWith, and eq on null values).
+     * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
      */
     @SerializedName(value = "extensionAttributes", alternate = {"ExtensionAttributes"})
     @Expose
@@ -159,7 +159,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Hostnames.
-     * List of hostNames for the device.
+     * List of host names for the device.
      */
     @SerializedName(value = "hostnames", alternate = {"Hostnames"})
     @Expose
@@ -186,7 +186,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Is Management Restricted.
-     * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
      */
     @SerializedName(value = "isManagementRestricted", alternate = {"IsManagementRestricted"})
     @Expose
@@ -228,6 +228,15 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime onPremisesLastSyncDateTime;
+
+    /**
+     * The On Premises Security Identifier.
+     * The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
+     */
+    @SerializedName(value = "onPremisesSecurityIdentifier", alternate = {"OnPremisesSecurityIdentifier"})
+    @Expose
+	@Nullable
+    public String onPremisesSecurityIdentifier;
 
     /**
      * The On Premises Sync Enabled.
@@ -294,7 +303,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Trust Type.
-     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      */
     @SerializedName(value = "trustType", alternate = {"TrustType"})
     @Expose
@@ -303,7 +312,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Kind.
-     * Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Form factor of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     @SerializedName(value = "kind", alternate = {"Kind"})
     @Expose
@@ -312,7 +321,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Manufacturer.
-     * Manufacturer of the device. Read-only.
+     * Manufacturer of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     @SerializedName(value = "manufacturer", alternate = {"Manufacturer"})
     @Expose
@@ -321,7 +330,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Model.
-     * Model of the device. Read-only.
+     * Model of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     @SerializedName(value = "model", alternate = {"Model"})
     @Expose
@@ -330,7 +339,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Name.
-     * Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Friendly name of the device. Only returned if user signs in with a Microsoft account as part of Project Rome.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -339,7 +348,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Platform.
-     * Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Platform of device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose

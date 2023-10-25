@@ -36,6 +36,10 @@ public enum SignInAccessType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * passthrough
+    */
+    PASSTHROUGH,
+    /**
     * For SignInAccessType values that were not expected from the service
     */
     UNEXPECTED_VALUE

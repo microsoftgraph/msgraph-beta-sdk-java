@@ -70,9 +70,7 @@ public class SynchronizationJob extends Entity implements IJsonBackedObject {
     /**
      * The Bulk Upload.
      * The bulk upload operation for the job.
-     * @deprecated 
      */
-    @Deprecated
     @SerializedName(value = "bulkUpload", alternate = {"BulkUpload"})
     @Expose
 	@Nullable

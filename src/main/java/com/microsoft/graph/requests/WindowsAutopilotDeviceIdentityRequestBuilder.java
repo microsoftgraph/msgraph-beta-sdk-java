@@ -81,6 +81,15 @@ public class WindowsAutopilotDeviceIdentityRequestBuilder extends BaseRequestBui
     }
 
     /**
+     * Unblocks next autopilot enrollment.
+     * @return the request builder
+     */
+    @Nonnull
+    public WindowsAutopilotDeviceIdentityAllowNextEnrollmentRequestBuilder allowNextEnrollment() {
+        return new WindowsAutopilotDeviceIdentityAllowNextEnrollmentRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.allowNextEnrollment"), getClient(), null);
+    }
+
+    /**
      * Assigns resource account to Autopilot devices.
      * @return the request builder
      * @param parameters the parameters for the service method

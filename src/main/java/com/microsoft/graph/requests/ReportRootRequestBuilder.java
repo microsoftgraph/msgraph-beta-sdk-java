@@ -288,6 +288,16 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     public com.microsoft.graph.requests.UserCredentialUsageDetailsRequestBuilder userCredentialUsageDetails(@Nonnull final String id) {
         return new com.microsoft.graph.requests.UserCredentialUsageDetailsRequestBuilder(getRequestUrlWithAdditionalSegment("userCredentialUsageDetails") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for UserInsightsRoot
+     *
+     * @return the UserInsightsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserInsightsRootRequestBuilder userInsights() {
+        return new com.microsoft.graph.requests.UserInsightsRootRequestBuilder(getRequestUrlWithAdditionalSegment("userInsights"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the PrintUsage collection
      *

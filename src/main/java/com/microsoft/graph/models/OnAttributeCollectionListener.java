@@ -28,7 +28,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
 
     /**
      * The Handler.
-     * Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Required. Configuration for what to invoke if the event resolves to this listener.
      */
     @SerializedName(value = "handler", alternate = {"Handler"})
     @Expose

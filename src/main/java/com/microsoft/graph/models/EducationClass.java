@@ -183,7 +183,7 @@ public class EducationClass extends Entity implements IJsonBackedObject {
 
     /**
      * The Modules.
-     * 
+     * All modules in the class. Nullable.
      */
     @SerializedName(value = "modules", alternate = {"Modules"})
     @Expose

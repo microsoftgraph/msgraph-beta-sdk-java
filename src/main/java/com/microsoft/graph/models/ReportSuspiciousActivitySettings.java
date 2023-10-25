@@ -50,7 +50,7 @@ public class ReportSuspiciousActivitySettings implements IJsonBackedObject {
 
     /**
      * The State.
-     * Specifies the state of the reportSuspiciousActivitySettings object. The possible values are: default, enabled, disabled, unknownFutureValue. Setting to default will result in a disabled state.
+     * Specifies the state of the reportSuspiciousActivitySettings object. The possible values are: default, enabled, disabled, unknownFutureValue. Setting to default results in a disabled state.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
@@ -59,7 +59,7 @@ public class ReportSuspiciousActivitySettings implements IJsonBackedObject {
 
     /**
      * The Voice Reporting Code.
-     * Specifies the number the user will enter on their phone to report the MFA prompt as suspicious.
+     * Specifies the number the user enters on their phone to report the MFA prompt as suspicious.
      */
     @SerializedName(value = "voiceReportingCode", alternate = {"VoiceReportingCode"})
     @Expose

@@ -39,7 +39,7 @@ public class CloudRealtimeCommunicationInfo implements IJsonBackedObject {
 
     /**
      * The Is Sip Enabled.
-     * 
+     * Indicates whether the user has a SIP-enabled client registered for them. Read-only.
      */
     @SerializedName(value = "isSipEnabled", alternate = {"IsSipEnabled"})
     @Expose

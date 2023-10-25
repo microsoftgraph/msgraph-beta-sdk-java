@@ -42,7 +42,7 @@ public class TenantAllowOrBlockListAction implements IJsonBackedObject {
 
     /**
      * The Action.
-     * Specifies whether the tenant allow block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
+     * Specifies whether the tenant allow-or-block list is an allow or block. The possible values are: allow, block, and unkownFutureValue.
      */
     @SerializedName(value = "action", alternate = {"Action"})
     @Expose
@@ -60,7 +60,7 @@ public class TenantAllowOrBlockListAction implements IJsonBackedObject {
 
     /**
      * The Note.
-     * Specifies the note added to the tenant allow block list entry in the format of string.
+     * Specifies the note added to the tenant allow-or-block list entry in the format of string.
      */
     @SerializedName(value = "note", alternate = {"Note"})
     @Expose
