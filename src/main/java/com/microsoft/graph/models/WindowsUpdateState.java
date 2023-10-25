@@ -46,7 +46,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new windowsUpdateState and sets the default values.
+     * Instantiates a new WindowsUpdateState and sets the default values.
      */
     public WindowsUpdateState() {
         super();
@@ -54,7 +54,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateState
+     * @return a WindowsUpdateState
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Device display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -71,7 +71,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -79,7 +79,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the featureUpdateVersion property value. The current feature update version of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFeatureUpdateVersion() {
@@ -121,7 +121,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the qualityUpdateVersion property value. The Quality Update Version of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQualityUpdateVersion() {
@@ -129,7 +129,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Windows update for business configuration device states
-     * @return a windowsUpdateStatus
+     * @return a WindowsUpdateStatus
      */
     @jakarta.annotation.Nullable
     public WindowsUpdateStatus getStatus() {
@@ -137,7 +137,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The id of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -145,7 +145,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

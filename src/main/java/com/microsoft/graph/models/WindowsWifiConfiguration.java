@@ -64,7 +64,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      */
     private WiFiSecurityType wifiSecurityType;
     /**
-     * Instantiates a new windowsWifiConfiguration and sets the default values.
+     * Instantiates a new WindowsWifiConfiguration and sets the default values.
      */
     public WindowsWifiConfiguration() {
         super();
@@ -73,7 +73,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsWifiConfiguration
+     * @return a WindowsWifiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsWifiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the connectAutomatically property value. Specify whether the wifi connection should connect automatically when in range.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -97,7 +97,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the connectToPreferredNetwork property value. Specify whether the wifi connection should connect to more preferred networks when already connected to this one.  Requires ConnectAutomatically to be true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectToPreferredNetwork() {
@@ -105,7 +105,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. Specify whether the wifi connection should connect automatically even when the SSID is not broadcasting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -135,7 +135,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the forceFIPSCompliance property value. Specify whether to force FIPS compliance.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getForceFIPSCompliance() {
@@ -143,7 +143,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
-     * @return a meteredConnectionLimitType
+     * @return a MeteredConnectionLimitType
      */
     @jakarta.annotation.Nullable
     public MeteredConnectionLimitType getMeteredConnectionLimit() {
@@ -151,7 +151,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the networkName property value. Specify the network configuration name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -159,7 +159,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -167,7 +167,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the URL for the proxy server configuration script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
@@ -175,7 +175,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the proxyManualAddress property value. Specify the IP address for the proxy server.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
@@ -183,7 +183,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the proxyManualPort property value. Specify the port for the proxy server.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
@@ -191,7 +191,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic.
-     * @return a wiFiProxySetting
+     * @return a WiFiProxySetting
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySetting() {
@@ -199,7 +199,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the ssid property value. Specify the SSID of the wifi connection.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -207,7 +207,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
-     * @return a wiFiSecurityType
+     * @return a WiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public WiFiSecurityType getWifiSecurityType() {

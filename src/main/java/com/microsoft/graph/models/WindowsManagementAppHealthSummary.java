@@ -24,7 +24,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      */
     private Integer unknownDeviceCount;
     /**
-     * Instantiates a new windowsManagementAppHealthSummary and sets the default values.
+     * Instantiates a new WindowsManagementAppHealthSummary and sets the default values.
      */
     public WindowsManagementAppHealthSummary() {
         super();
@@ -32,7 +32,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagementAppHealthSummary
+     * @return a WindowsManagementAppHealthSummary
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagementAppHealthSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     }
     /**
      * Gets the healthyDeviceCount property value. Healthy device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHealthyDeviceCount() {
@@ -61,7 +61,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     }
     /**
      * Gets the unhealthyDeviceCount property value. Unhealthy device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnhealthyDeviceCount() {
@@ -69,7 +69,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     }
     /**
      * Gets the unknownDeviceCount property value. Unknown device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownDeviceCount() {

@@ -54,7 +54,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private String displayName;
     /**
-     * The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
+     * The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
      */
     private String domainName;
     /**
@@ -66,7 +66,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private String enrollmentType;
     /**
-     * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, not, startsWith, and eq on null values).
+     * Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
      */
     private OnPremisesExtensionAttributes extensionAttributes;
     /**
@@ -74,7 +74,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<Extension> extensions;
     /**
-     * List of hostNames for the device.
+     * List of host names for the device.
      */
     private java.util.List<String> hostnames;
     /**
@@ -86,7 +86,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private Boolean isManaged;
     /**
-     * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
      */
     private Boolean isManagementRestricted;
     /**
@@ -94,7 +94,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private Boolean isRooted;
     /**
-     * Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Form factor of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     private String kind;
     /**
@@ -102,7 +102,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private String managementType;
     /**
-     * Manufacturer of the device. Read-only.
+     * Manufacturer of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     private String manufacturer;
     /**
@@ -114,11 +114,11 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> memberOf;
     /**
-     * Model of the device. Read-only.
+     * Model of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     private String model;
     /**
-     * Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Friendly name of the device. Only returned if user signs in with a Microsoft account as part of Project Rome.
      */
     private String name;
     /**
@@ -126,7 +126,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private OffsetDateTime onPremisesLastSyncDateTime;
     /**
-     * The onPremisesSecurityIdentifier property
+     * The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
      */
     private String onPremisesSecurityIdentifier;
     /**
@@ -146,7 +146,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> physicalIds;
     /**
-     * Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Platform of device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      */
     private String platform;
     /**
@@ -178,7 +178,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<DirectoryObject> transitiveMemberOf;
     /**
-     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      */
     private String trustType;
     /**
@@ -186,7 +186,7 @@ public class Device extends DirectoryObject implements Parsable {
      */
     private java.util.List<UsageRight> usageRights;
     /**
-     * Instantiates a new device and sets the default values.
+     * Instantiates a new Device and sets the default values.
      */
     public Device() {
         super();
@@ -195,7 +195,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a device
+     * @return a Device
      */
     @jakarta.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -204,7 +204,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
@@ -212,7 +212,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a alternativeSecurityId
+     * @return a java.util.List<AlternativeSecurityId>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AlternativeSecurityId> getAlternativeSecurityIds() {
@@ -228,7 +228,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the commands property value. Set of commands sent to this device.
-     * @return a command
+     * @return a java.util.List<Command>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Command> getCommands() {
@@ -244,7 +244,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceCategory() {
@@ -252,7 +252,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceId property value. Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -260,7 +260,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceMetadata property value. For internal use only. Set to null.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceMetadata() {
@@ -268,7 +268,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceOwnership() {
@@ -276,7 +276,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the deviceVersion property value. For internal use only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceVersion() {
@@ -284,15 +284,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
     /**
-     * Gets the domainName property value. The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
-     * @return a string
+     * Gets the domainName property value. The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainName() {
@@ -300,7 +300,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentProfileName() {
@@ -308,15 +308,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrollmentType() {
         return this.enrollmentType;
     }
     /**
-     * Gets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, not, startsWith, and eq on null values).
-     * @return a onPremisesExtensionAttributes
+     * Gets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
+     * @return a OnPremisesExtensionAttributes
      */
     @jakarta.annotation.Nullable
     public OnPremisesExtensionAttributes getExtensionAttributes() {
@@ -324,7 +324,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the device. Read-only. Nullable.
-     * @return a extension
+     * @return a java.util.List<Extension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
@@ -384,8 +384,8 @@ public class Device extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hostnames property value. List of hostNames for the device.
-     * @return a string
+     * Gets the hostnames property value. List of host names for the device.
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getHostnames() {
@@ -393,7 +393,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isCompliant property value. true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompliant() {
@@ -401,15 +401,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isManaged property value. true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
         return this.isManaged;
     }
     /**
-     * Gets the isManagementRestricted property value. true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
-     * @return a boolean
+     * Gets the isManagementRestricted property value. Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManagementRestricted() {
@@ -417,15 +417,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isRooted property value. true if device is rooted; false if device is jail-broken. This can only be updated by Intune.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRooted() {
         return this.isRooted;
     }
     /**
-     * Gets the kind property value. Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
-     * @return a string
+     * Gets the kind property value. Form factor of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKind() {
@@ -433,15 +433,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the managementType property value. Management channel of the device.  This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagementType() {
         return this.managementType;
     }
     /**
-     * Gets the manufacturer property value. Manufacturer of the device. Read-only.
-     * @return a string
+     * Gets the manufacturer property value. Manufacturer of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -449,7 +449,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the mdmAppId property value. Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMdmAppId() {
@@ -457,23 +457,23 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the memberOf property value. Groups and administrative units that this device is a member of. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getMemberOf() {
         return this.memberOf;
     }
     /**
-     * Gets the model property value. Model of the device. Read-only.
-     * @return a string
+     * Gets the model property value. Model of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
         return this.model;
     }
     /**
-     * Gets the name property value. Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
-     * @return a string
+     * Gets the name property value. Friendly name of the device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -488,8 +488,8 @@ public class Device extends DirectoryObject implements Parsable {
         return this.onPremisesLastSyncDateTime;
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
-     * @return a string
+     * Gets the onPremisesSecurityIdentifier property value. The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
@@ -497,7 +497,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
@@ -505,7 +505,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -513,7 +513,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the operatingSystemVersion property value. Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemVersion() {
@@ -521,15 +521,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPhysicalIds() {
         return this.physicalIds;
     }
     /**
-     * Gets the platform property value. Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
-     * @return a string
+     * Gets the platform property value. Platform of device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlatform() {
@@ -537,7 +537,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the profileType property value. The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileType() {
@@ -545,7 +545,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the registeredOwners property value. The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredOwners() {
@@ -553,7 +553,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the registeredUsers property value. Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getRegisteredUsers() {
@@ -569,7 +569,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the status property value. Device is online or offline. Only returned if user signs in with a Microsoft account as part of Project Rome.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
@@ -577,7 +577,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSystemLabels() {
@@ -585,15 +585,15 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the transitiveMemberOf property value. Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getTransitiveMemberOf() {
         return this.transitiveMemberOf;
     }
     /**
-     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
-     * @return a string
+     * Gets the trustType property value. Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTrustType() {
@@ -601,7 +601,7 @@ public class Device extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the usageRights property value. Represents the usage rights a device has been granted.
-     * @return a usageRight
+     * @return a java.util.List<UsageRight>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UsageRight> getUsageRights() {
@@ -737,7 +737,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the domainName property value. The on-premises domain name of Hybrid Azure AD joined devices. This property is set by Intune.
+     * Sets the domainName property value. The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
@@ -758,7 +758,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.enrollmentType = value;
     }
     /**
-     * Sets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Azure AD. Supports $filter (eq, not, startsWith, and eq on null values).
+     * Sets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes are not selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
      * @param value Value to set for the extensionAttributes property.
      */
     public void setExtensionAttributes(@jakarta.annotation.Nullable final OnPremisesExtensionAttributes value) {
@@ -772,7 +772,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.extensions = value;
     }
     /**
-     * Sets the hostnames property value. List of hostNames for the device.
+     * Sets the hostnames property value. List of host names for the device.
      * @param value Value to set for the hostnames property.
      */
     public void setHostnames(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -793,7 +793,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.isManaged = value;
     }
     /**
-     * Sets the isManagementRestricted property value. true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * Sets the isManagementRestricted property value. Indicates whether the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. The default value is false. Read-only.  To manage a device that's a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
      * @param value Value to set for the isManagementRestricted property.
      */
     public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
@@ -807,7 +807,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.isRooted = value;
     }
     /**
-     * Sets the kind property value. Form factor of device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Sets the kind property value. Form factor of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      * @param value Value to set for the kind property.
      */
     public void setKind(@jakarta.annotation.Nullable final String value) {
@@ -821,7 +821,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.managementType = value;
     }
     /**
-     * Sets the manufacturer property value. Manufacturer of the device. Read-only.
+     * Sets the manufacturer property value. Manufacturer of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
@@ -842,14 +842,14 @@ public class Device extends DirectoryObject implements Parsable {
         this.memberOf = value;
     }
     /**
-     * Sets the model property value. Model of the device. Read-only.
+     * Sets the model property value. Model of the device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.model = value;
     }
     /**
-     * Sets the name property value. Friendly name of a device. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Sets the name property value. Friendly name of the device. Only returned if user signs in with a Microsoft account as part of Project Rome.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -863,7 +863,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.onPremisesLastSyncDateTime = value;
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Sets the onPremisesSecurityIdentifier property value. The on-premises security identifier (SID) for the user who was synchronized from on-premises to the cloud. Read-only. Returned only on $select. Supports $filter (eq).
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
@@ -898,7 +898,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.physicalIds = value;
     }
     /**
-     * Sets the platform property value. Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome.
+     * Sets the platform property value. Platform of device. Only returned if the user signs in with a Microsoft account as part of Project Rome.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final String value) {
@@ -954,7 +954,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.transitiveMemberOf = value;
     }
     /**
-     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory
+     * Sets the trustType property value. Type of trust for the joined device. Read-only. Possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Microsoft Entra ID). For more details, see Introduction to device management in Microsoft Entra ID.
      * @param value Value to set for the trustType property.
      */
     public void setTrustType(@jakarta.annotation.Nullable final String value) {

@@ -41,7 +41,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
      */
     private String versionName;
     /**
-     * Instantiates a new androidLobApp and sets the default values.
+     * Instantiates a new AndroidLobApp and sets the default values.
      */
     public AndroidLobApp() {
         super();
@@ -50,7 +50,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidLobApp
+     * @return a AndroidLobApp
      */
     @jakarta.annotation.Nonnull
     public static AndroidLobApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityName property value. The Identity Name. This property is being deprecated in 2302(February 2023).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
@@ -83,7 +83,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the identityVersion property value. The identity version. This property is being deprecated in 2302(February 2023).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
@@ -91,7 +91,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a androidMinimumOperatingSystem
+     * @return a AndroidMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public AndroidMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
@@ -99,7 +99,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the packageId property value. The package identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
@@ -107,7 +107,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the targetedPlatforms property value. Specifies which platform(s) can be targeted for a given Android LOB application or Managed Android LOB application.
-     * @return a androidTargetedPlatforms
+     * @return a EnumSet<AndroidTargetedPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AndroidTargetedPlatforms> getTargetedPlatforms() {
@@ -115,7 +115,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the versionCode property value. The version code of Android Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionCode() {
@@ -123,7 +123,7 @@ public class AndroidLobApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the versionName property value. The version name of Android Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionName() {

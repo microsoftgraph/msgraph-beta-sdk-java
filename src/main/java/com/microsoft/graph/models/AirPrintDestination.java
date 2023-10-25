@@ -37,7 +37,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     private String resourcePath;
     /**
-     * Instantiates a new airPrintDestination and sets the default values.
+     * Instantiates a new AirPrintDestination and sets the default values.
      */
     public AirPrintDestination() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a airPrintDestination
+     * @return a AirPrintDestination
      */
     @jakarta.annotation.Nonnull
     public static AirPrintDestination createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
         return new AirPrintDestination();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the forceTls property value. If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getForceTls() {
@@ -84,7 +84,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. The IP Address of the AirPrint destination.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -92,7 +92,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,7 +100,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the port property value. The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -108,7 +108,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourcePath property value. The Resource Path associated with the printer. This corresponds to the rp parameter of the ipps.tcp Bonjour record. For example: printers/CanonMG5300series, printers/XeroxPhaser7600, ipp/print, EpsonIPPPrinter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourcePath() {
@@ -128,8 +128,8 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

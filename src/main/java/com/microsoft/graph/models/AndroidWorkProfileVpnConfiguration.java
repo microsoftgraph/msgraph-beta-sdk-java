@@ -80,7 +80,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
      */
     private java.util.List<String> targetedPackageIds;
     /**
-     * Instantiates a new androidWorkProfileVpnConfiguration and sets the default values.
+     * Instantiates a new AndroidWorkProfileVpnConfiguration and sets the default values.
      */
     public AndroidWorkProfileVpnConfiguration() {
         super();
@@ -89,7 +89,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWorkProfileVpnConfiguration
+     * @return a AndroidWorkProfileVpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileVpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +98,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the alwaysOn property value. Whether or not to enable always-on VPN connection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAlwaysOn() {
@@ -106,7 +106,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the alwaysOnLockdown property value. If always-on VPN connection is enabled, whether or not to lock network traffic when that VPN is disconnected.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAlwaysOnLockdown() {
@@ -114,7 +114,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
@@ -122,7 +122,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the connectionName property value. Connection name displayed to the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionName() {
@@ -130,7 +130,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the connectionType property value. Android Work Profile VPN connection type.
-     * @return a androidWorkProfileVpnConnectionType
+     * @return a AndroidWorkProfileVpnConnectionType
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileVpnConnectionType getConnectionType() {
@@ -138,7 +138,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the customData property value. Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getCustomData() {
@@ -146,7 +146,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the customKeyValueData property value. Custom data when connection type is set to Citrix. This collection can contain a maximum of 25 elements.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getCustomKeyValueData() {
@@ -180,7 +180,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the fingerprint property value. Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFingerprint() {
@@ -188,7 +188,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a androidWorkProfileCertificateProfileBase
+     * @return a AndroidWorkProfileCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileCertificateProfileBase getIdentityCertificate() {
@@ -196,7 +196,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMicrosoftTunnelSiteId() {
@@ -204,7 +204,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getProxyExclusionList() {
@@ -212,7 +212,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the proxyServer property value. Proxy server.
-     * @return a vpnProxyServer
+     * @return a VpnProxyServer
      */
     @jakarta.annotation.Nullable
     public VpnProxyServer getProxyServer() {
@@ -220,7 +220,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the realm property value. Realm when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -228,7 +228,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the role property value. Role when connection type is set to Pulse Secure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -236,7 +236,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
-     * @return a vpnServer
+     * @return a java.util.List<VpnServer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VpnServer> getServers() {
@@ -244,7 +244,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the targetedMobileApps property value. Targeted mobile apps. This collection can contain a maximum of 500 elements.
-     * @return a appListItem
+     * @return a java.util.List<AppListItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppListItem> getTargetedMobileApps() {
@@ -252,7 +252,7 @@ public class AndroidWorkProfileVpnConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the targetedPackageIds property value. Targeted App package IDs.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTargetedPackageIds() {

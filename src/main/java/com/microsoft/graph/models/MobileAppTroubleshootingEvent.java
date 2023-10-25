@@ -36,7 +36,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     private String userId;
     /**
-     * Instantiates a new mobileAppTroubleshootingEvent and sets the default values.
+     * Instantiates a new MobileAppTroubleshootingEvent and sets the default values.
      */
     public MobileAppTroubleshootingEvent() {
         super();
@@ -44,7 +44,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppTroubleshootingEvent
+     * @return a MobileAppTroubleshootingEvent
      */
     @jakarta.annotation.Nonnull
     public static MobileAppTroubleshootingEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     }
     /**
      * Gets the applicationId property value. Intune application identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -61,7 +61,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     }
     /**
      * Gets the appLogCollectionRequests property value. The collection property of AppLogUploadRequest.
-     * @return a appLogCollectionRequest
+     * @return a java.util.List<AppLogCollectionRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppLogCollectionRequest> getAppLogCollectionRequests() {
@@ -69,7 +69,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     }
     /**
      * Gets the deviceId property value. Device identifier created or collected by Intune.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -92,7 +92,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     }
     /**
      * Gets the history property value. Intune Mobile Application Troubleshooting History Item
-     * @return a mobileAppTroubleshootingHistoryItem
+     * @return a java.util.List<MobileAppTroubleshootingHistoryItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppTroubleshootingHistoryItem> getHistory() {
@@ -100,7 +100,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceIdentifier() {
@@ -108,7 +108,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {

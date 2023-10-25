@@ -33,7 +33,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceManagementIntentUserState and sets the default values.
+     * Instantiates a new DeviceManagementIntentUserState and sets the default values.
      */
     public DeviceManagementIntentUserState() {
         super();
@@ -41,7 +41,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentUserState
+     * @return a DeviceManagementIntentUserState
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentUserState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
     }
     /**
      * Gets the deviceCount property value. Count of Devices that belongs to a user for an intent
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -80,7 +80,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -88,7 +88,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
     }
     /**
      * Gets the userName property value. The user name that is being reported on a device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -96,7 +96,7 @@ public class DeviceManagementIntentUserState extends Entity implements Parsable 
     }
     /**
      * Gets the userPrincipalName property value. The user principal name that is being reported on a device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

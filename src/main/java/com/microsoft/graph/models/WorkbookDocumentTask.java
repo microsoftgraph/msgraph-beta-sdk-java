@@ -54,7 +54,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new workbookDocumentTask and sets the default values.
+     * Instantiates a new WorkbookDocumentTask and sets the default values.
      */
     public WorkbookDocumentTask() {
         super();
@@ -62,7 +62,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workbookDocumentTask
+     * @return a WorkbookDocumentTask
      */
     @jakarta.annotation.Nonnull
     public static WorkbookDocumentTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the assignees property value. A collection of user identities the task is assigned to.
-     * @return a workbookEmailIdentity
+     * @return a java.util.List<WorkbookEmailIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookEmailIdentity> getAssignees() {
@@ -79,7 +79,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the changes property value. A collection of task change histories.
-     * @return a workbookDocumentTaskChange
+     * @return a java.util.List<WorkbookDocumentTaskChange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookDocumentTaskChange> getChanges() {
@@ -87,7 +87,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the comment property value. The comment that the task is associated with.
-     * @return a workbookComment
+     * @return a WorkbookComment
      */
     @jakarta.annotation.Nullable
     public WorkbookComment getComment() {
@@ -95,7 +95,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the completedBy property value. The identity of the user who completed the task. Nullable.
-     * @return a workbookEmailIdentity
+     * @return a WorkbookEmailIdentity
      */
     @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getCompletedBy() {
@@ -111,7 +111,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. A user identity that creates the task. Nullable.
-     * @return a workbookEmailIdentity
+     * @return a WorkbookEmailIdentity
      */
     @jakarta.annotation.Nullable
     public WorkbookEmailIdentity getCreatedBy() {
@@ -147,7 +147,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the percentComplete property value. An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
@@ -155,7 +155,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the priority property value. An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -163,7 +163,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the startAndDueDateTime property value. Start and due date of the task. Nullable.
-     * @return a workbookDocumentTaskSchedule
+     * @return a WorkbookDocumentTaskSchedule
      */
     @jakarta.annotation.Nullable
     public WorkbookDocumentTaskSchedule getStartAndDueDateTime() {
@@ -171,7 +171,7 @@ public class WorkbookDocumentTask extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of the task.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

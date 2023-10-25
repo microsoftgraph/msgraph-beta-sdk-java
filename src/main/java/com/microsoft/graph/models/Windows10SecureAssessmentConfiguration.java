@@ -44,7 +44,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     private String localGuestAccountName;
     /**
-     * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
+     * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
      */
     public Windows10SecureAssessmentConfiguration() {
         super();
@@ -53,7 +53,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10SecureAssessmentConfiguration
+     * @return a Windows10SecureAssessmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the allowPrinting property value. Indicates whether or not to allow the app from printing during the test.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPrinting() {
@@ -70,7 +70,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowScreenCapture() {
@@ -78,7 +78,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTextSuggestion() {
@@ -86,7 +86,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the assessmentAppUserModelId property value. Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssessmentAppUserModelId() {
@@ -94,7 +94,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigurationAccount() {
@@ -102,7 +102,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the configurationAccountType property value. Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
-     * @return a secureAssessmentAccountType
+     * @return a SecureAssessmentAccountType
      */
     @jakarta.annotation.Nullable
     public SecureAssessmentAccountType getConfigurationAccountType() {
@@ -127,7 +127,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLaunchUri() {
@@ -135,7 +135,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     }
     /**
      * Gets the localGuestAccountName property value. Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalGuestAccountName() {

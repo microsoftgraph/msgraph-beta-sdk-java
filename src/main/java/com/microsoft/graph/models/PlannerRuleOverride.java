@@ -26,7 +26,7 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> rules;
     /**
-     * Instantiates a new plannerRuleOverride and sets the default values.
+     * Instantiates a new PlannerRuleOverride and sets the default values.
      */
     public PlannerRuleOverride() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerRuleOverride
+     * @return a PlannerRuleOverride
      */
     @jakarta.annotation.Nonnull
     public static PlannerRuleOverride createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
         return new PlannerRuleOverride();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name of the override. Allowed override values will be dependent on the property affected by the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -71,7 +71,7 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the rules property value. Overridden rules. These are used as rules for the override instead of the default rules.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRules() {
@@ -97,8 +97,8 @@ public class PlannerRuleOverride implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

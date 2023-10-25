@@ -37,7 +37,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
      */
     private java.util.List<PrivilegedAccessGroupEligibilitySchedule> eligibilitySchedules;
     /**
-     * Instantiates a new privilegedAccessGroup and sets the default values.
+     * Instantiates a new PrivilegedAccessGroup and sets the default values.
      */
     public PrivilegedAccessGroup() {
         super();
@@ -45,7 +45,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedAccessGroup
+     * @return a PrivilegedAccessGroup
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedAccessGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentApprovals property value. The assignmentApprovals property
-     * @return a approval
+     * @return a java.util.List<Approval>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Approval> getAssignmentApprovals() {
@@ -62,7 +62,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentScheduleInstances property value. The instances of assignment schedules to activate a just-in-time access.
-     * @return a privilegedAccessGroupAssignmentScheduleInstance
+     * @return a java.util.List<PrivilegedAccessGroupAssignmentScheduleInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupAssignmentScheduleInstance> getAssignmentScheduleInstances() {
@@ -70,7 +70,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentScheduleRequests property value. The schedule requests for operations to create, update, delete, extend, and renew an assignment.
-     * @return a privilegedAccessGroupAssignmentScheduleRequest
+     * @return a java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupAssignmentScheduleRequest> getAssignmentScheduleRequests() {
@@ -78,7 +78,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentSchedules property value. The assignment schedules to activate a just-in-time access.
-     * @return a privilegedAccessGroupAssignmentSchedule
+     * @return a java.util.List<PrivilegedAccessGroupAssignmentSchedule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupAssignmentSchedule> getAssignmentSchedules() {
@@ -86,7 +86,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the eligibilityScheduleInstances property value. The instances of eligibility schedules to activate a just-in-time access.
-     * @return a privilegedAccessGroupEligibilityScheduleInstance
+     * @return a java.util.List<PrivilegedAccessGroupEligibilityScheduleInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupEligibilityScheduleInstance> getEligibilityScheduleInstances() {
@@ -94,7 +94,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the eligibilityScheduleRequests property value. The schedule requests for operations to create, update, delete, extend, and renew an eligibility.
-     * @return a privilegedAccessGroupEligibilityScheduleRequest
+     * @return a java.util.List<PrivilegedAccessGroupEligibilityScheduleRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupEligibilityScheduleRequest> getEligibilityScheduleRequests() {
@@ -102,7 +102,7 @@ public class PrivilegedAccessGroup extends Entity implements Parsable {
     }
     /**
      * Gets the eligibilitySchedules property value. The eligibility schedules to activate a just-in-time access.
-     * @return a privilegedAccessGroupEligibilitySchedule
+     * @return a java.util.List<PrivilegedAccessGroupEligibilitySchedule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedAccessGroupEligibilitySchedule> getEligibilitySchedules() {

@@ -31,7 +31,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
      */
     private OffsetDateTime updatedDateTime;
     /**
-     * Instantiates a new cloudPcConnectivityResult and sets the default values.
+     * Instantiates a new CloudPcConnectivityResult and sets the default values.
      */
     public CloudPcConnectivityResult() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcConnectivityResult
+     * @return a CloudPcConnectivityResult
      */
     @jakarta.annotation.Nonnull
     public static CloudPcConnectivityResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
         return new CloudPcConnectivityResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -56,7 +56,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property will be empty.
-     * @return a cloudPcHealthCheckItem
+     * @return a java.util.List<CloudPcHealthCheckItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcHealthCheckItem> getFailedHealthCheckItems() {
@@ -77,7 +77,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -85,7 +85,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the status property value. The status property
-     * @return a cloudPcConnectivityStatus
+     * @return a CloudPcConnectivityStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcConnectivityStatus getStatus() {
@@ -112,8 +112,8 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

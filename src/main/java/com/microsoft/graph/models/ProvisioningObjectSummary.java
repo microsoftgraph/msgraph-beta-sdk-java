@@ -42,7 +42,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private java.util.List<ModifiedProperty> modifiedProperties;
     /**
-     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+     * Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      */
     private ProvisioningAction provisioningAction;
     /**
@@ -78,11 +78,11 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     private ProvisioningSystem targetSystem;
     /**
-     * Unique Azure AD tenant ID. Supports $filter (eq, contains).
+     * Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      */
     private String tenantId;
     /**
-     * Instantiates a new provisioningObjectSummary and sets the default values.
+     * Instantiates a new ProvisioningObjectSummary and sets the default values.
      */
     public ProvisioningObjectSummary() {
         super();
@@ -90,7 +90,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a provisioningObjectSummary
+     * @return a ProvisioningObjectSummary
      */
     @jakarta.annotation.Nonnull
     public static ProvisioningObjectSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -99,7 +99,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAction() {
@@ -115,7 +115,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the changeId property value. Unique ID of this change in this cycle. Supports $filter (eq, contains).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChangeId() {
@@ -123,7 +123,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the cycleId property value. Unique ID per job iteration. Supports $filter (eq, contains).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCycleId() {
@@ -131,7 +131,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds. Supports $filter (eq, gt, lt).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInMilliseconds() {
@@ -166,7 +166,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. Details of who initiated this provisioning. Supports $filter (eq, contains).
-     * @return a initiator
+     * @return a Initiator
      */
     @jakarta.annotation.Nullable
     public Initiator getInitiatedBy() {
@@ -174,7 +174,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the jobId property value. The unique ID for the whole provisioning job. Supports $filter (eq, contains).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobId() {
@@ -182,15 +182,15 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
-     * @return a modifiedProperty
+     * @return a java.util.List<ModifiedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
         return this.modifiedProperties;
     }
     /**
-     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
-     * @return a provisioningAction
+     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
+     * @return a ProvisioningAction
      */
     @jakarta.annotation.Nullable
     public ProvisioningAction getProvisioningAction() {
@@ -198,7 +198,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningStatusInfo property value. Details of provisioning status. Supports $filter (eq, contains) for status.
-     * @return a provisioningStatusInfo
+     * @return a ProvisioningStatusInfo
      */
     @jakarta.annotation.Nullable
     public ProvisioningStatusInfo getProvisioningStatusInfo() {
@@ -206,7 +206,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningSteps property value. Details of each step in provisioning.
-     * @return a provisioningStep
+     * @return a java.util.List<ProvisioningStep>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningStep> getProvisioningSteps() {
@@ -214,7 +214,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipal property value. Represents the service principal used for provisioning. Supports $filter (eq) for id and name.
-     * @return a provisioningServicePrincipal
+     * @return a ProvisioningServicePrincipal
      */
     @jakarta.annotation.Nullable
     public ProvisioningServicePrincipal getServicePrincipal() {
@@ -222,7 +222,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the sourceIdentity property value. Details of source object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
-     * @return a provisionedIdentity
+     * @return a ProvisionedIdentity
      */
     @jakarta.annotation.Nullable
     public ProvisionedIdentity getSourceIdentity() {
@@ -230,7 +230,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the sourceSystem property value. Details of source system of the object being provisioned. Supports $filter (eq, contains) for displayName.
-     * @return a provisioningSystem
+     * @return a ProvisioningSystem
      */
     @jakarta.annotation.Nullable
     public ProvisioningSystem getSourceSystem() {
@@ -238,7 +238,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the statusInfo property value. The statusInfo property
-     * @return a statusBase
+     * @return a StatusBase
      */
     @jakarta.annotation.Nullable
     public StatusBase getStatusInfo() {
@@ -246,7 +246,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the targetIdentity property value. Details of target object being provisioned. Supports $filter (eq, contains) for identityType, id, and displayName.
-     * @return a provisionedIdentity
+     * @return a ProvisionedIdentity
      */
     @jakarta.annotation.Nullable
     public ProvisionedIdentity getTargetIdentity() {
@@ -254,15 +254,15 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
     }
     /**
      * Gets the targetSystem property value. Details of target system of the object being provisioned. Supports $filter (eq, contains) for displayName.
-     * @return a provisioningSystem
+     * @return a ProvisioningSystem
      */
     @jakarta.annotation.Nullable
     public ProvisioningSystem getTargetSystem() {
         return this.targetSystem;
     }
     /**
-     * Gets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
-     * @return a string
+     * Gets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -351,7 +351,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.modifiedProperties = value;
     }
     /**
-     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. Supports $filter (eq, contains).
+     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
      */
     public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningAction value) {
@@ -414,7 +414,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.targetSystem = value;
     }
     /**
-     * Sets the tenantId property value. Unique Azure AD tenant ID. Supports $filter (eq, contains).
+     * Sets the tenantId property value. Unique Microsoft Entra tenant ID. Supports $filter (eq, contains).
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

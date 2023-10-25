@@ -58,7 +58,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      */
     private CloudPcGalleryImageStatus status;
     /**
-     * Instantiates a new cloudPcGalleryImage and sets the default values.
+     * Instantiates a new CloudPcGalleryImage and sets the default values.
      */
     public CloudPcGalleryImage() {
         super();
@@ -66,7 +66,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcGalleryImage
+     * @return a CloudPcGalleryImage
      */
     @jakarta.annotation.Nonnull
     public static CloudPcGalleryImage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The official display name of the gallery image. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -120,7 +120,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the offer property value. The offer name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOffer() {
@@ -128,7 +128,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the offerDisplayName property value. The official display offer name of the gallery image. For example, Windows 10 Enterprise + OS Optimizations. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOfferDisplayName() {
@@ -136,7 +136,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. The publisher name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -144,7 +144,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the recommendedSku property value. Recommended Cloud PC SKU for this gallery image. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRecommendedSku() {
@@ -152,7 +152,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the sizeInGB property value. The size of this image in gigabytes. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSizeInGB() {
@@ -160,7 +160,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the sku property value. The SKU name of the gallery image. This value is passed to Azure to get the image resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSku() {
@@ -168,7 +168,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the skuDisplayName property value. The official display stock keeping unit (SKU) name of this gallery image. For example, 2004. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSkuDisplayName() {
@@ -184,7 +184,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the gallery image on the Cloud PC. Possible values are: supported, supportedWithWarning, notSupported, unknownFutureValue. Read-only.
-     * @return a cloudPcGalleryImageStatus
+     * @return a CloudPcGalleryImageStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcGalleryImageStatus getStatus() {

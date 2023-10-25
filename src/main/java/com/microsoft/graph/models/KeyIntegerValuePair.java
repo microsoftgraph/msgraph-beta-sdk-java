@@ -16,7 +16,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
      */
     private Integer value;
     /**
-     * Instantiates a new keyIntegerValuePair and sets the default values.
+     * Instantiates a new KeyIntegerValuePair and sets the default values.
      */
     public KeyIntegerValuePair() {
         super();
@@ -25,7 +25,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a keyIntegerValuePair
+     * @return a KeyIntegerValuePair
      */
     @jakarta.annotation.Nonnull
     public static KeyIntegerValuePair createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     }
     /**
      * Gets the value property value. The integer value of the key-value pair.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getValue() {

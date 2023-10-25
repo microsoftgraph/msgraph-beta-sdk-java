@@ -4,6 +4,8 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.VirtualEventWebinar;
 import com.microsoft.graph.models.VirtualEventWebinarCollectionResponse;
 import com.microsoft.graph.solutions.virtualevents.webinars.count.CountRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.getbyuseridandrolewithuseridwithrole.GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder;
+import com.microsoft.graph.solutions.virtualevents.webinars.getbyuserrolewithrole.GetByUserRoleWithRoleRequestBuilder;
 import com.microsoft.graph.solutions.virtualevents.webinars.item.VirtualEventWebinarItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -59,17 +61,17 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
-     * @return a CompletableFuture of virtualEventWebinarCollectionResponse
+     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of VirtualEventWebinarCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinarCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventWebinarCollectionResponse
+     * @return a CompletableFuture of VirtualEventWebinarCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinarCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,9 +82,31 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventWebinarCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
+     * Provides operations to call the getByUserIdAndRole method.
+     * @param role Usage: role='{role}'
+     * @param userId Usage: userId='{userId}'
+     * @return a GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder getByUserIdAndRoleWithUserIdWithRole(@jakarta.annotation.Nonnull final String role, @jakarta.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(role);
+        Objects.requireNonNull(userId);
+        return new GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder(pathParameters, requestAdapter, role, userId);
+    }
+    /**
+     * Provides operations to call the getByUserRole method.
+     * @param role Usage: role='{role}'
+     * @return a GetByUserRoleWithRoleRequestBuilder
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserRoleWithRoleRequestBuilder getByUserRoleWithRole(@jakarta.annotation.Nonnull final String role) {
+        Objects.requireNonNull(role);
+        return new GetByUserRoleWithRoleRequestBuilder(pathParameters, requestAdapter, role);
+    }
+    /**
      * Create new navigation property to webinars for solutions
      * @param body The request body
-     * @return a CompletableFuture of virtualEventWebinar
+     * @return a CompletableFuture of VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinar> post(@jakarta.annotation.Nonnull final VirtualEventWebinar body) {
@@ -92,7 +116,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to webinars for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventWebinar
+     * @return a CompletableFuture of VirtualEventWebinar
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<VirtualEventWebinar> post(@jakarta.annotation.Nonnull final VirtualEventWebinar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +128,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, VirtualEventWebinar::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,17 +136,13 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +150,10 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -151,23 +175,23 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventWebinar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a webinarsRequestBuilder
+     * @return a WebinarsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WebinarsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +199,7 @@ public class WebinarsRequestBuilder extends BaseRequestBuilder {
         return new WebinarsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a virtualEventWebinar object.
+     * Read the properties and relationships of a virtualEventWebinar object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

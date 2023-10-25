@@ -41,7 +41,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     private String thumbnailUrl;
     /**
-     * Instantiates a new projectParticipation and sets the default values.
+     * Instantiates a new ProjectParticipation and sets the default values.
      */
     public ProjectParticipation() {
         super();
@@ -50,7 +50,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a projectParticipation
+     * @return a ProjectParticipation
      */
     @jakarta.annotation.Nonnull
     public static ProjectParticipation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the categories property value. Contains categories a user has associated with the project (for example, digital transformation, oil rig).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -67,7 +67,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the client property value. Contains detailed information about the client the project was for.
-     * @return a companyDetail
+     * @return a CompanyDetail
      */
     @jakarta.annotation.Nullable
     public CompanyDetail getClient() {
@@ -75,7 +75,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCollaborationTags() {
@@ -83,7 +83,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the colleagues property value. Lists people that also worked on the project.
-     * @return a relatedPerson
+     * @return a java.util.List<RelatedPerson>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getColleagues() {
@@ -91,7 +91,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the detail property value. Contains detail about the user's role on the project.
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nullable
     public PositionDetail getDetail() {
@@ -99,7 +99,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the project.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -124,7 +124,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the sponsors property value. The Person or people who sponsored the project.
-     * @return a relatedPerson
+     * @return a java.util.List<RelatedPerson>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedPerson> getSponsors() {
@@ -132,7 +132,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {

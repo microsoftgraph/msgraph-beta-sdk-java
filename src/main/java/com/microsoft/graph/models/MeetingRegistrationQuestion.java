@@ -25,7 +25,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      */
     private Boolean isRequired;
     /**
-     * Instantiates a new meetingRegistrationQuestion and sets the default values.
+     * Instantiates a new MeetingRegistrationQuestion and sets the default values.
      */
     public MeetingRegistrationQuestion() {
         super();
@@ -33,7 +33,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingRegistrationQuestion
+     * @return a MeetingRegistrationQuestion
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistrationQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the answerInputType property value. Answer input type of the custom registration question.
-     * @return a answerInputType
+     * @return a AnswerInputType
      */
     @jakarta.annotation.Nullable
     public AnswerInputType getAnswerInputType() {
@@ -50,7 +50,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the answerOptions property value. Answer options when answerInputType is radioButton.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerOptions() {
@@ -58,7 +58,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name of the custom registration question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -79,7 +79,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     }
     /**
      * Gets the isRequired property value. Indicates whether the question is required. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {

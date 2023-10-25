@@ -48,7 +48,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
      */
     private String userName;
     /**
-     * Instantiates a new restrictedAppsViolation and sets the default values.
+     * Instantiates a new RestrictedAppsViolation and sets the default values.
      */
     public RestrictedAppsViolation() {
         super();
@@ -56,7 +56,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a restrictedAppsViolation
+     * @return a RestrictedAppsViolation
      */
     @jakarta.annotation.Nonnull
     public static RestrictedAppsViolation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationId property value. Device configuration profile unique identifier, must be Guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceConfigurationId() {
@@ -73,7 +73,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationName property value. Device configuration profile name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceConfigurationName() {
@@ -81,7 +81,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. Device name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -107,7 +107,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Managed device unique identifier, must be Guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -115,7 +115,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a policyPlatformType
+     * @return a PolicyPlatformType
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
@@ -123,7 +123,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the restrictedApps property value. List of violated restricted apps
-     * @return a managedDeviceReportedApp
+     * @return a java.util.List<ManagedDeviceReportedApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceReportedApp> getRestrictedApps() {
@@ -131,7 +131,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the restrictedAppsState property value. Restricted apps state
-     * @return a restrictedAppsState
+     * @return a RestrictedAppsState
      */
     @jakarta.annotation.Nullable
     public RestrictedAppsState getRestrictedAppsState() {
@@ -139,7 +139,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. User unique identifier, must be Guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -147,7 +147,7 @@ public class RestrictedAppsViolation extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. User name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {

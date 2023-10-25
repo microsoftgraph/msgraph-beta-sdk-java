@@ -37,7 +37,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      */
     private String schoolYear;
     /**
-     * Instantiates a new educationPowerSchoolDataProvider and sets the default values.
+     * Instantiates a new EducationPowerSchoolDataProvider and sets the default values.
      */
     public EducationPowerSchoolDataProvider() {
         super();
@@ -46,7 +46,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationPowerSchoolDataProvider
+     * @return a EducationPowerSchoolDataProvider
      */
     @jakarta.annotation.Nonnull
     public static EducationPowerSchoolDataProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the allowTeachersInMultipleSchools property value. Indicates whether the source has multiple identifiers for a single student or teacher.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowTeachersInMultipleSchools() {
@@ -63,7 +63,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the clientId property value. The client ID used to connect to PowerSchool.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
@@ -71,7 +71,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the clientSecret property value. The client secret to authenticate the connection to the PowerSchool instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
@@ -79,7 +79,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the connectionUrl property value. The connection URL to the PowerSchool instance.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectionUrl() {
@@ -87,7 +87,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the customizations property value. Optional customization to be applied to the synchronization profile.
-     * @return a educationSynchronizationCustomizations
+     * @return a EducationSynchronizationCustomizations
      */
     @jakarta.annotation.Nullable
     public EducationSynchronizationCustomizations getCustomizations() {
@@ -111,7 +111,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the schoolsIds property value. The list of schools to sync.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSchoolsIds() {
@@ -119,7 +119,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     }
     /**
      * Gets the schoolYear property value. The school year to sync.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSchoolYear() {

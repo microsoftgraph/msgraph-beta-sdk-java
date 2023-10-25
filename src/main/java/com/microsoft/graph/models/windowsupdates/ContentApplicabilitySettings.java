@@ -22,11 +22,11 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
      */
     private java.util.List<String> offerWhileRecommendedBy;
     /**
-     * Settings for governing safeguard holds on offering content.
+     * Settings for governing safeguard-holds on offering content.
      */
     private SafeguardSettings safeguard;
     /**
-     * Instantiates a new contentApplicabilitySettings and sets the default values.
+     * Instantiates a new ContentApplicabilitySettings and sets the default values.
      */
     public ContentApplicabilitySettings() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a contentApplicabilitySettings
+     * @return a ContentApplicabilitySettings
      */
     @jakarta.annotation.Nonnull
     public static ContentApplicabilitySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
         return new ContentApplicabilitySettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,15 +71,15 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the offerWhileRecommendedBy property value. Offer if the update is recommended by a vendor in the list, otherwise withhold the offer.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOfferWhileRecommendedBy() {
         return this.offerWhileRecommendedBy;
     }
     /**
-     * Gets the safeguard property value. Settings for governing safeguard holds on offering content.
-     * @return a safeguardSettings
+     * Gets the safeguard property value. Settings for governing safeguard-holds on offering content.
+     * @return a SafeguardSettings
      */
     @jakarta.annotation.Nullable
     public SafeguardSettings getSafeguard() {
@@ -97,8 +97,8 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -118,7 +118,7 @@ public class ContentApplicabilitySettings implements AdditionalDataHolder, Parsa
         this.offerWhileRecommendedBy = value;
     }
     /**
-     * Sets the safeguard property value. Settings for governing safeguard holds on offering content.
+     * Sets the safeguard property value. Settings for governing safeguard-holds on offering content.
      * @param value Value to set for the safeguard property.
      */
     public void setSafeguard(@jakarta.annotation.Nullable final SafeguardSettings value) {

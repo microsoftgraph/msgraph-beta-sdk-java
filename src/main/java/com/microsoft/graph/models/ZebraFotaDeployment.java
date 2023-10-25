@@ -36,7 +36,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new zebraFotaDeployment and sets the default values.
+     * Instantiates a new ZebraFotaDeployment and sets the default values.
      */
     public ZebraFotaDeployment() {
         super();
@@ -44,7 +44,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a zebraFotaDeployment
+     * @return a ZebraFotaDeployment
      */
     @jakarta.annotation.Nonnull
     public static ZebraFotaDeployment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentAssignments property value. Collection of Android FOTA Assignment
-     * @return a androidFotaDeploymentAssignment
+     * @return a java.util.List<AndroidFotaDeploymentAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidFotaDeploymentAssignment> getDeploymentAssignments() {
@@ -61,7 +61,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentSettings property value. The Zebra FOTA deployment complex type that describes the settings required to create a FOTA deployment.
-     * @return a zebraFotaDeploymentSettings
+     * @return a ZebraFotaDeploymentSettings
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeploymentSettings getDeploymentSettings() {
@@ -69,7 +69,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentStatus property value. Represents the deployment status from Zebra. The status is a high level status of the deployment as opposed being a detailed status per device.
-     * @return a zebraFotaDeploymentStatus
+     * @return a ZebraFotaDeploymentStatus
      */
     @jakarta.annotation.Nullable
     public ZebraFotaDeploymentStatus getDeploymentStatus() {
@@ -77,7 +77,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. A human readable description of the deployment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -85,7 +85,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. A human readable name of the deployment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -108,7 +108,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

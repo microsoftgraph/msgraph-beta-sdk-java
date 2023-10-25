@@ -15,15 +15,15 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The banner property
+     * The text response received from a web component when scanning a hostPort.
      */
     private String banner;
     /**
-     * The firstSeenDateTime property
+     * The first date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime firstSeenDateTime;
     /**
-     * The lastSeenDateTime property
+     * The last date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastSeenDateTime;
     /**
@@ -31,15 +31,15 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The scanProtocol property
+     * The specific protocol used to scan the hostPort.
      */
     private String scanProtocol;
     /**
-     * The timesObserved property
+     * The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPortBanner in all its scans.
      */
     private Integer timesObserved;
     /**
-     * Instantiates a new hostPortBanner and sets the default values.
+     * Instantiates a new HostPortBanner and sets the default values.
      */
     public HostPortBanner() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPortBanner
+     * @return a HostPortBanner
      */
     @jakarta.annotation.Nonnull
     public static HostPortBanner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         return new HostPortBanner();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,8 +63,8 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the banner property value. The banner property
-     * @return a string
+     * Gets the banner property value. The text response received from a web component when scanning a hostPort.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBanner() {
@@ -86,7 +86,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Gets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         return this.firstSeenDateTime;
     }
     /**
-     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Gets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -103,23 +103,23 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the scanProtocol property value. The scanProtocol property
-     * @return a string
+     * Gets the scanProtocol property value. The specific protocol used to scan the hostPort.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScanProtocol() {
         return this.scanProtocol;
     }
     /**
-     * Gets the timesObserved property value. The timesObserved property
-     * @return a integer
+     * Gets the timesObserved property value. The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPortBanner in all its scans.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTimesObserved() {
@@ -140,28 +140,28 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the banner property value. The banner property
+     * Sets the banner property value. The text response received from a web component when scanning a hostPort.
      * @param value Value to set for the banner property.
      */
     public void setBanner(@jakarta.annotation.Nullable final String value) {
         this.banner = value;
     }
     /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
-     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Sets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPortBanner. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -175,14 +175,14 @@ public class HostPortBanner implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the scanProtocol property value. The scanProtocol property
+     * Sets the scanProtocol property value. The specific protocol used to scan the hostPort.
      * @param value Value to set for the scanProtocol property.
      */
     public void setScanProtocol(@jakarta.annotation.Nullable final String value) {
         this.scanProtocol = value;
     }
     /**
-     * Sets the timesObserved property value. The timesObserved property
+     * Sets the timesObserved property value. The total amount of times that Microsoft Defender Threat Intelligence has observed the hostPortBanner in all its scans.
      * @param value Value to set for the timesObserved property.
      */
     public void setTimesObserved(@jakarta.annotation.Nullable final Integer value) {

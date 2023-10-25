@@ -32,7 +32,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
      */
     private String teamIdentifier;
     /**
-     * Instantiates a new credentialSingleSignOnExtension and sets the default values.
+     * Instantiates a new CredentialSingleSignOnExtension and sets the default values.
      */
     public CredentialSingleSignOnExtension() {
         super();
@@ -41,7 +41,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialSingleSignOnExtension
+     * @return a CredentialSingleSignOnExtension
      */
     @jakarta.annotation.Nonnull
     public static CredentialSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     * @return a keyTypedValuePair
+     * @return a java.util.List<KeyTypedValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
@@ -58,7 +58,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -66,7 +66,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionIdentifier() {
@@ -88,7 +88,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRealm() {
@@ -96,7 +96,7 @@ public class CredentialSingleSignOnExtension extends SingleSignOnExtension imple
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamIdentifier() {

@@ -13,7 +13,7 @@ public class OnPremisesAgentCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<OnPremisesAgent> value;
     /**
-     * Instantiates a new onPremisesAgentCollectionResponse and sets the default values.
+     * Instantiates a new OnPremisesAgentCollectionResponse and sets the default values.
      */
     public OnPremisesAgentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class OnPremisesAgentCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesAgentCollectionResponse
+     * @return a OnPremisesAgentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesAgentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class OnPremisesAgentCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a onPremisesAgent
+     * @return a java.util.List<OnPremisesAgent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesAgent> getValue() {

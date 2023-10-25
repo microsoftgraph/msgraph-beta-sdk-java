@@ -131,7 +131,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Cloud PC related reports.
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CompletableFuture of CloudPcReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcReports> get() {
@@ -140,7 +140,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Cloud PC related reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CompletableFuture of CloudPcReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcReports> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -153,7 +153,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRealTimeRemoteConnectionLatency method.
      * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
-     * @return a getRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder
+     * @return a GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder getRealTimeRemoteConnectionLatencyWithCloudPcId(@jakarta.annotation.Nonnull final String cloudPcId) {
@@ -163,7 +163,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRealTimeRemoteConnectionStatus method.
      * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
-     * @return a getRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder
+     * @return a GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder getRealTimeRemoteConnectionStatusWithCloudPcId(@jakarta.annotation.Nonnull final String cloudPcId) {
@@ -173,7 +173,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property reports in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CompletableFuture of CloudPcReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcReports> patch(@jakarta.annotation.Nonnull final CloudPcReports body) {
@@ -183,7 +183,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reports in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcReports
+     * @return a CompletableFuture of CloudPcReports
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CloudPcReports> patch(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -210,15 +210,16 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -237,10 +238,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -248,6 +245,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -269,23 +270,23 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportsRequestBuilder
+     * @return a ReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

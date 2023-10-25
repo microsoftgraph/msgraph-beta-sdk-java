@@ -18,7 +18,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
      */
     private IsolationType isolationType;
     /**
-     * Instantiates a new isolateDeviceResponseAction and sets the default values.
+     * Instantiates a new IsolateDeviceResponseAction and sets the default values.
      */
     public IsolateDeviceResponseAction() {
         super();
@@ -27,7 +27,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a isolateDeviceResponseAction
+     * @return a IsolateDeviceResponseAction
      */
     @jakarta.annotation.Nonnull
     public static IsolateDeviceResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a deviceIdEntityIdentifier
+     * @return a EnumSet<DeviceIdEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceIdEntityIdentifier> getIdentifier() {
@@ -55,7 +55,7 @@ public class IsolateDeviceResponseAction extends ResponseAction implements Parsa
     }
     /**
      * Gets the isolationType property value. The isolationType property
-     * @return a isolationType
+     * @return a IsolationType
      */
     @jakarta.annotation.Nullable
     public IsolationType getIsolationType() {

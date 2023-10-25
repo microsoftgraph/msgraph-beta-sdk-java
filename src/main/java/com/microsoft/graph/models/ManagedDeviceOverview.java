@@ -41,7 +41,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     private Integer mdmEnrolledCount;
     /**
-     * Instantiates a new managedDeviceOverview and sets the default values.
+     * Instantiates a new ManagedDeviceOverview and sets the default values.
      */
     public ManagedDeviceOverview() {
         super();
@@ -49,7 +49,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceOverview
+     * @return a ManagedDeviceOverview
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the deviceExchangeAccessStateSummary property value. Distribution of Exchange Access State in Intune
-     * @return a deviceExchangeAccessStateSummary
+     * @return a DeviceExchangeAccessStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceExchangeAccessStateSummary getDeviceExchangeAccessStateSummary() {
@@ -66,7 +66,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the deviceOperatingSystemSummary property value. Device operating system summary.
-     * @return a deviceOperatingSystemSummary
+     * @return a DeviceOperatingSystemSummary
      */
     @jakarta.annotation.Nullable
     public DeviceOperatingSystemSummary getDeviceOperatingSystemSummary() {
@@ -74,7 +74,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the dualEnrolledDeviceCount property value. The number of devices enrolled in both MDM and EAS
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDualEnrolledDeviceCount() {
@@ -82,7 +82,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the enrolledDeviceCount property value. Total enrolled device count. Does not include PC devices managed via Intune PC Agent
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
@@ -114,7 +114,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceModelsAndManufacturers property value. Models and Manufactures meatadata for managed devices in the account
-     * @return a managedDeviceModelsAndManufacturers
+     * @return a ManagedDeviceModelsAndManufacturers
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceModelsAndManufacturers getManagedDeviceModelsAndManufacturers() {
@@ -122,7 +122,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     }
     /**
      * Gets the mdmEnrolledCount property value. The number of devices enrolled in MDM
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMdmEnrolledCount() {

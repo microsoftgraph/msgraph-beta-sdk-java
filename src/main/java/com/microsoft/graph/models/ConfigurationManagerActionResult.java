@@ -20,7 +20,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      */
     private Integer errorCode;
     /**
-     * Instantiates a new configurationManagerActionResult and sets the default values.
+     * Instantiates a new ConfigurationManagerActionResult and sets the default values.
      */
     public ConfigurationManagerActionResult() {
         super();
@@ -28,7 +28,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configurationManagerActionResult
+     * @return a ConfigurationManagerActionResult
      */
     @jakarta.annotation.Nonnull
     public static ConfigurationManagerActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,7 +37,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
     }
     /**
      * Gets the actionDeliveryStatus property value. Delivery state of Configuration Manager device action
-     * @return a configurationManagerActionDeliveryStatus
+     * @return a ConfigurationManagerActionDeliveryStatus
      */
     @jakarta.annotation.Nullable
     public ConfigurationManagerActionDeliveryStatus getActionDeliveryStatus() {
@@ -45,7 +45,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
     }
     /**
      * Gets the errorCode property value. Error code of Configuration Manager action from client
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {

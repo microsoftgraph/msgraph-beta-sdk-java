@@ -68,7 +68,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      */
     private Boolean wifiBlockEditConfigurations;
     /**
-     * Instantiates a new aospDeviceOwnerDeviceConfiguration and sets the default values.
+     * Instantiates a new AospDeviceOwnerDeviceConfiguration and sets the default values.
      */
     public AospDeviceOwnerDeviceConfiguration() {
         super();
@@ -77,7 +77,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aospDeviceOwnerDeviceConfiguration
+     * @return a AospDeviceOwnerDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AospDeviceOwnerDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +86,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the appsBlockInstallFromUnknownSources property value. Indicates whether or not the user is allowed to enable unknown sources setting. When set to true, user is not allowed to enable unknown sources settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppsBlockInstallFromUnknownSources() {
@@ -94,7 +94,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the bluetoothBlockConfiguration property value. Indicates whether or not to block a user from configuring bluetooth.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlockConfiguration() {
@@ -102,7 +102,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the bluetoothBlocked property value. Indicates whether or not to disable the use of bluetooth. When set to true, bluetooth cannot be enabled on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBluetoothBlocked() {
@@ -110,7 +110,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the cameraBlocked property value. Indicates whether or not to disable the use of the camera.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCameraBlocked() {
@@ -118,7 +118,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the factoryResetBlocked property value. Indicates whether or not the factory reset option in settings is disabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFactoryResetBlocked() {
@@ -149,7 +149,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the passwordMinimumLength property value. Indicates the minimum length of the password required on the device. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -157,7 +157,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -165,7 +165,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a androidDeviceOwnerRequiredPasswordType
+     * @return a AndroidDeviceOwnerRequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
@@ -173,7 +173,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Indicates the number of times a user can enter an incorrect password before the device is wiped. Valid values 4 to 11
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -181,7 +181,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the screenCaptureBlocked property value. Indicates whether or not to disable the capability to take screenshots.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenCaptureBlocked() {
@@ -189,7 +189,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the securityAllowDebuggingFeatures property value. Indicates whether or not to block the user from enabling debugging features on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityAllowDebuggingFeatures() {
@@ -197,7 +197,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the storageBlockExternalMedia property value. Indicates whether or not to block external media.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageBlockExternalMedia() {
@@ -205,7 +205,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the storageBlockUsbFileTransfer property value. Indicates whether or not to block USB file transfer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageBlockUsbFileTransfer() {
@@ -213,7 +213,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     }
     /**
      * Gets the wifiBlockEditConfigurations property value. Indicates whether or not to block the user from editing the wifi connection settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWifiBlockEditConfigurations() {

@@ -101,7 +101,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
      */
     private Boolean waitForDeviceConfiguredConfirmation;
     /**
-     * Instantiates a new depEnrollmentBaseProfile and sets the default values.
+     * Instantiates a new DepEnrollmentBaseProfile and sets the default values.
      */
     public DepEnrollmentBaseProfile() {
         super();
@@ -110,7 +110,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depEnrollmentBaseProfile
+     * @return a DepEnrollmentBaseProfile
      */
     @jakarta.annotation.Nonnull
     public static DepEnrollmentBaseProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -127,7 +127,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the appleIdDisabled property value. Indicates if Apple id setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleIdDisabled() {
@@ -135,7 +135,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the applePayDisabled property value. Indicates if Apple pay setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplePayDisabled() {
@@ -143,7 +143,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the configurationWebUrl property value. URL for setup assistant login
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigurationWebUrl() {
@@ -151,7 +151,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the deviceNameTemplate property value. Sets a literal or name pattern.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceNameTemplate() {
@@ -159,7 +159,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the diagnosticsDisabled property value. Indicates if diagnostics setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticsDisabled() {
@@ -167,7 +167,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the displayToneSetupDisabled property value. Indicates if displaytone setup screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisplayToneSetupDisabled() {
@@ -175,7 +175,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the enabledSkipKeys property value. enabledSkipKeys contains all the enabled skip keys as strings
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledSkipKeys() {
@@ -183,7 +183,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the enrollmentTimeAzureAdGroupIds property value. EnrollmentTimeAzureAdGroupIds contains list of enrollment time Azure Group Ids to be associated with profile
-     * @return a UUID
+     * @return a java.util.List<UUID>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UUID> getEnrollmentTimeAzureAdGroupIds() {
@@ -222,7 +222,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the isDefault property value. Indicates if this is the default profile
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -230,7 +230,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the isMandatory property value. Indicates if the profile is mandatory
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {
@@ -238,7 +238,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the locationDisabled property value. Indicates if Location service setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocationDisabled() {
@@ -246,7 +246,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the privacyPaneDisabled property value. Indicates if privacy screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrivacyPaneDisabled() {
@@ -254,7 +254,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the profileRemovalDisabled property value. Indicates if the profile removal option is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getProfileRemovalDisabled() {
@@ -262,7 +262,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the restoreBlocked property value. Indicates if Restore setup pane is blocked
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRestoreBlocked() {
@@ -270,7 +270,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the screenTimeScreenDisabled property value. Indicates if screen timeout setup is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getScreenTimeScreenDisabled() {
@@ -278,7 +278,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the siriDisabled property value. Indicates if siri setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriDisabled() {
@@ -286,7 +286,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSupervisedModeEnabled() {
@@ -294,7 +294,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the supportDepartment property value. Support department information
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportDepartment() {
@@ -302,7 +302,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the supportPhoneNumber property value. Support phone number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportPhoneNumber() {
@@ -310,7 +310,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the termsAndConditionsDisabled property value. Indicates if 'Terms and Conditions' setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTermsAndConditionsDisabled() {
@@ -318,7 +318,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the touchIdDisabled property value. Indicates if touch id setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTouchIdDisabled() {
@@ -326,7 +326,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
     }
     /**
      * Gets the waitForDeviceConfiguredConfirmation property value. Indicates if the device will need to wait for configured confirmation
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWaitForDeviceConfiguredConfirmation() {

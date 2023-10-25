@@ -26,7 +26,11 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new destinationSummary and sets the default values.
+     * The trafficType property
+     */
+    private TrafficType trafficType;
+    /**
+     * Instantiates a new DestinationSummary and sets the default values.
      */
     public DestinationSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +38,7 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a destinationSummary
+     * @return a DestinationSummary
      */
     @jakarta.annotation.Nonnull
     public static DestinationSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +46,7 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
         return new DestinationSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +55,7 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the count property value. Count of the aggregation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCount() {
@@ -59,7 +63,7 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destination property value. Destination FQDN or IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestination() {
@@ -71,19 +75,28 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("count", (n) -> { this.setCount(n.getIntegerValue()); });
         deserializerMap.put("destination", (n) -> { this.setDestination(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType.class)); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
+    }
+    /**
+     * Gets the trafficType property value. The trafficType property
+     * @return a TrafficType
+     */
+    @jakarta.annotation.Nullable
+    public TrafficType getTrafficType() {
+        return this.trafficType;
     }
     /**
      * Serializes information the current object
@@ -94,11 +107,12 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
         writer.writeIntegerValue("count", this.getCount());
         writer.writeStringValue("destination", this.getDestination());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeEnumValue("trafficType", this.getTrafficType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -123,5 +137,12 @@ public class DestinationSummary implements AdditionalDataHolder, Parsable {
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.odataType = value;
+    }
+    /**
+     * Sets the trafficType property value. The trafficType property
+     * @param value Value to set for the trafficType property.
+     */
+    public void setTrafficType(@jakarta.annotation.Nullable final TrafficType value) {
+        this.trafficType = value;
     }
 }

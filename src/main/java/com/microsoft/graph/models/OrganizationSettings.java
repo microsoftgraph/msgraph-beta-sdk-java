@@ -25,7 +25,7 @@ public class OrganizationSettings extends Entity implements Parsable {
      */
     private InsightsSettings peopleInsights;
     /**
-     * Instantiates a new organizationSettings and sets the default values.
+     * Instantiates a new OrganizationSettings and sets the default values.
      */
     public OrganizationSettings() {
         super();
@@ -33,7 +33,7 @@ public class OrganizationSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a organizationSettings
+     * @return a OrganizationSettings
      */
     @jakarta.annotation.Nonnull
     public static OrganizationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class OrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
-     * @return a insightsSettings
+     * @return a InsightsSettings
      */
     @jakarta.annotation.Nullable
     public InsightsSettings getContactInsights() {
@@ -63,7 +63,7 @@ public class OrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the itemInsights property value. Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
-     * @return a insightsSettings
+     * @return a InsightsSettings
      */
     @jakarta.annotation.Nullable
     public InsightsSettings getItemInsights() {
@@ -71,7 +71,7 @@ public class OrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftApplicationDataAccess property value. The microsoftApplicationDataAccess property
-     * @return a microsoftApplicationDataAccessSettings
+     * @return a MicrosoftApplicationDataAccessSettings
      */
     @jakarta.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings getMicrosoftApplicationDataAccess() {
@@ -79,7 +79,7 @@ public class OrganizationSettings extends Entity implements Parsable {
     }
     /**
      * Gets the peopleInsights property value. Contains the properties that are configured by an administrator for the visibility of a list of people relevant and working with a user in Microsoft 365. List peopleInsights returns the settings to display or return people insights in an organization.
-     * @return a insightsSettings
+     * @return a InsightsSettings
      */
     @jakarta.annotation.Nullable
     public InsightsSettings getPeopleInsights() {

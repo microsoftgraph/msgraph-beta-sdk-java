@@ -58,7 +58,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     private String toolTip;
     /**
-     * Instantiates a new matchingLabel and sets the default values.
+     * Instantiates a new MatchingLabel and sets the default values.
      */
     public MatchingLabel() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a matchingLabel
+     * @return a MatchingLabel
      */
     @jakarta.annotation.Nonnull
     public static MatchingLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
         return new MatchingLabel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
-     * @return a applicationMode
+     * @return a ApplicationMode
      */
     @jakarta.annotation.Nullable
     public ApplicationMode getApplicationMode() {
@@ -91,7 +91,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -99,7 +99,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -127,7 +127,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -135,7 +135,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEndpointProtectionEnabled() {
@@ -143,7 +143,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the labelActions property value. The labelActions property
-     * @return a labelActionBase
+     * @return a java.util.List<LabelActionBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LabelActionBase> getLabelActions() {
@@ -151,7 +151,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -159,7 +159,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -167,7 +167,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the policyTip property value. The policyTip property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyTip() {
@@ -175,7 +175,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -183,7 +183,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the toolTip property value. The toolTip property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getToolTip() {
@@ -209,8 +209,8 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

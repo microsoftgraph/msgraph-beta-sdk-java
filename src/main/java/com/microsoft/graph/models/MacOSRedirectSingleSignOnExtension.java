@@ -28,7 +28,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
      */
     private java.util.List<String> urlPrefixes;
     /**
-     * Instantiates a new macOSRedirectSingleSignOnExtension and sets the default values.
+     * Instantiates a new MacOSRedirectSingleSignOnExtension and sets the default values.
      */
     public MacOSRedirectSingleSignOnExtension() {
         super();
@@ -37,7 +37,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSRedirectSingleSignOnExtension
+     * @return a MacOSRedirectSingleSignOnExtension
      */
     @jakarta.annotation.Nonnull
     public static MacOSRedirectSingleSignOnExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the configurations property value. Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements.
-     * @return a keyTypedValuePair
+     * @return a java.util.List<KeyTypedValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
@@ -54,7 +54,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtensionIdentifier() {
@@ -75,7 +75,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamIdentifier() {
@@ -83,7 +83,7 @@ public class MacOSRedirectSingleSignOnExtension extends MacOSSingleSignOnExtensi
     }
     /**
      * Gets the urlPrefixes property value. One or more URL prefixes of identity providers on whose behalf the app extension performs single sign-on. URLs must begin with http:// or https://. All URL prefixes must be unique for all profiles.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUrlPrefixes() {

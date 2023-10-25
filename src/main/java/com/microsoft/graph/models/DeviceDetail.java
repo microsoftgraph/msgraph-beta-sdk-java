@@ -50,7 +50,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
      */
     private String trustType;
     /**
-     * Instantiates a new deviceDetail and sets the default values.
+     * Instantiates a new DeviceDetail and sets the default values.
      */
     public DeviceDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceDetail
+     * @return a DeviceDetail
      */
     @jakarta.annotation.Nonnull
     public static DeviceDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         return new DeviceDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the browser property value. Indicates the browser information of the used for signing-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBrowser() {
@@ -83,7 +83,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the browserId property value. The browserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBrowserId() {
@@ -91,7 +91,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceId property value. Refers to the UniqueID of the device used for signing-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -99,7 +99,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. Refers to the name of the device used for signing-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -125,7 +125,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isCompliant property value. Indicates whether the device is compliant or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompliant() {
@@ -133,7 +133,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isManaged property value. Indicates if the device is managed or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsManaged() {
@@ -141,7 +141,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -149,7 +149,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operatingSystem property value. Indicates the OS name and version used for signing-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -157,7 +157,7 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trustType property value. Indicates information on whether the signed-in device is Workplace Joined, AzureAD Joined, Domain Joined.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTrustType() {
@@ -181,8 +181,8 @@ public class DeviceDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

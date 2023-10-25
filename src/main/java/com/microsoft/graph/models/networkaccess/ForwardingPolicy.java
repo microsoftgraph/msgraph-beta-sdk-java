@@ -13,7 +13,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
      */
     private TrafficForwardingType trafficForwardingType;
     /**
-     * Instantiates a new forwardingPolicy and sets the default values.
+     * Instantiates a new ForwardingPolicy and sets the default values.
      */
     public ForwardingPolicy() {
         super();
@@ -22,7 +22,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forwardingPolicy
+     * @return a ForwardingPolicy
      */
     @jakarta.annotation.Nonnull
     public static ForwardingPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ForwardingPolicy extends Policy implements Parsable {
     }
     /**
      * Gets the trafficForwardingType property value. The trafficForwardingType property
-     * @return a trafficForwardingType
+     * @return a TrafficForwardingType
      */
     @jakarta.annotation.Nullable
     public TrafficForwardingType getTrafficForwardingType() {

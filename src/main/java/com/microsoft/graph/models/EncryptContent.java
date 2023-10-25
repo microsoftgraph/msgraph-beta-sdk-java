@@ -13,7 +13,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      */
     private EncryptWith encryptWith;
     /**
-     * Instantiates a new encryptContent and sets the default values.
+     * Instantiates a new EncryptContent and sets the default values.
      */
     public EncryptContent() {
         super();
@@ -22,7 +22,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a encryptContent
+     * @return a EncryptContent
      */
     @jakarta.annotation.Nonnull
     public static EncryptContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     }
     /**
      * Gets the encryptWith property value. The encryptWith property
-     * @return a encryptWith
+     * @return a EncryptWith
      */
     @jakarta.annotation.Nullable
     public EncryptWith getEncryptWith() {

@@ -37,7 +37,7 @@ public class TeamsTab extends Entity implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new teamsTab and sets the default values.
+     * Instantiates a new TeamsTab and sets the default values.
      */
     public TeamsTab() {
         super();
@@ -45,7 +45,7 @@ public class TeamsTab extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamsTab
+     * @return a TeamsTab
      */
     @jakarta.annotation.Nonnull
     public static TeamsTab createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. Container for custom settings applied to a tab. The tab is considered configured only once this property is set.
-     * @return a teamsTabConfiguration
+     * @return a TeamsTabConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamsTabConfiguration getConfiguration() {
@@ -62,7 +62,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the tab.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -86,7 +86,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the messageId property value. The messageId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageId() {
@@ -94,7 +94,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the sortOrderIndex property value. Index of the order used for sorting tabs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSortOrderIndex() {
@@ -102,7 +102,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the teamsApp property value. The application that is linked to the tab.
-     * @return a teamsApp
+     * @return a TeamsApp
      */
     @jakarta.annotation.Nullable
     public TeamsApp getTeamsApp() {
@@ -110,7 +110,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the teamsAppId property value. The teamsAppId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsAppId() {
@@ -118,7 +118,7 @@ public class TeamsTab extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. Deep link URL of the tab instance. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

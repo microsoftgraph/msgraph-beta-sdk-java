@@ -38,7 +38,7 @@ public class ClassifyExactMatchesRequestBuilder extends BaseRequestBuilder {
     /**
      * Invoke action classifyExactMatches
      * @param body The request body
-     * @return a CompletableFuture of exactMatchClassificationResult
+     * @return a CompletableFuture of ExactMatchClassificationResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@jakarta.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body) {
@@ -48,7 +48,7 @@ public class ClassifyExactMatchesRequestBuilder extends BaseRequestBuilder {
      * Invoke action classifyExactMatches
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of exactMatchClassificationResult
+     * @return a CompletableFuture of ExactMatchClassificationResult
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ExactMatchClassificationResult> post(@jakarta.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -78,23 +78,23 @@ public class ClassifyExactMatchesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ClassifyExactMatchesPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a classifyExactMatchesRequestBuilder
+     * @return a ClassifyExactMatchesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ClassifyExactMatchesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -17,7 +17,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      */
     private String printerName;
     /**
-     * Instantiates a new printUsageByPrinter and sets the default values.
+     * Instantiates a new PrintUsageByPrinter and sets the default values.
      */
     public PrintUsageByPrinter() {
         super();
@@ -25,7 +25,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printUsageByPrinter
+     * @return a PrintUsageByPrinter
      */
     @jakarta.annotation.Nonnull
     public static PrintUsageByPrinter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     }
     /**
      * Gets the printerId property value. The printerId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrinterId() {
@@ -53,7 +53,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
     }
     /**
      * Gets the printerName property value. The name of the printer represented by these statistics.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrinterName() {

@@ -34,7 +34,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
      */
     private String peerIpAddress;
     /**
-     * Instantiates a new bgpConfiguration and sets the default values.
+     * Instantiates a new BgpConfiguration and sets the default values.
      */
     public BgpConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bgpConfiguration
+     * @return a BgpConfiguration
      */
     @jakarta.annotation.Nonnull
     public static BgpConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
         return new BgpConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the asn property value. Specifies the ASN of the BGP.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAsn() {
@@ -81,7 +81,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. The ipAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -89,7 +89,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localIpAddress property value. Specifies the BGP IP address of peer (Microsoft, in this case).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalIpAddress() {
@@ -97,7 +97,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the peerIpAddress property value. Specifies the BGP IP address of customer's on-premise VPN router configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPeerIpAddress() {
@@ -125,8 +125,8 @@ public class BgpConfiguration implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

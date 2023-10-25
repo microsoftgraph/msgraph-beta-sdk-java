@@ -18,15 +18,15 @@ public class DeviceLocalCredential extends Entity implements Parsable {
      */
     private String accountSid;
     /**
-     * When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
+     * When the local adminstrator account credential for the device object was backed up to Microsoft Entra ID.
      */
     private OffsetDateTime backupDateTime;
     /**
-     * The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
+     * The password for the local administrator account that is backed up to Microsoft Entra ID and returned as a base 64 encoded value.
      */
     private String passwordBase64;
     /**
-     * Instantiates a new deviceLocalCredential and sets the default values.
+     * Instantiates a new DeviceLocalCredential and sets the default values.
      */
     public DeviceLocalCredential() {
         super();
@@ -34,7 +34,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceLocalCredential
+     * @return a DeviceLocalCredential
      */
     @jakarta.annotation.Nonnull
     public static DeviceLocalCredential createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the accountName property value. The name of the local admin account for which LAPS is enabled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -51,14 +51,14 @@ public class DeviceLocalCredential extends Entity implements Parsable {
     }
     /**
      * Gets the accountSid property value. The SID of the local admin account for which LAPS is enabled.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountSid() {
         return this.accountSid;
     }
     /**
-     * Gets the backupDateTime property value. When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
+     * Gets the backupDateTime property value. When the local adminstrator account credential for the device object was backed up to Microsoft Entra ID.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -79,8 +79,8 @@ public class DeviceLocalCredential extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
-     * @return a string
+     * Gets the passwordBase64 property value. The password for the local administrator account that is backed up to Microsoft Entra ID and returned as a base 64 encoded value.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordBase64() {
@@ -113,14 +113,14 @@ public class DeviceLocalCredential extends Entity implements Parsable {
         this.accountSid = value;
     }
     /**
-     * Sets the backupDateTime property value. When the local adminstrator account credential for the device object was backed up to Azure Active Directory.
+     * Sets the backupDateTime property value. When the local adminstrator account credential for the device object was backed up to Microsoft Entra ID.
      * @param value Value to set for the backupDateTime property.
      */
     public void setBackupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backupDateTime = value;
     }
     /**
-     * Sets the passwordBase64 property value. The password for the local administrator account that is backed up to Azure Active Directory and returned as a base 64 encoded value.
+     * Sets the passwordBase64 property value. The password for the local administrator account that is backed up to Microsoft Entra ID and returned as a base 64 encoded value.
      * @param value Value to set for the passwordBase64 property.
      */
     public void setPasswordBase64(@jakarta.annotation.Nullable final String value) {

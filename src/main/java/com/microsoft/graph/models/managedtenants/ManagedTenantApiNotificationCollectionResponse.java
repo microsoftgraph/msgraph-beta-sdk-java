@@ -14,7 +14,7 @@ public class ManagedTenantApiNotificationCollectionResponse extends BaseCollecti
      */
     private java.util.List<ManagedTenantApiNotification> value;
     /**
-     * Instantiates a new managedTenantApiNotificationCollectionResponse and sets the default values.
+     * Instantiates a new ManagedTenantApiNotificationCollectionResponse and sets the default values.
      */
     public ManagedTenantApiNotificationCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ManagedTenantApiNotificationCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantApiNotificationCollectionResponse
+     * @return a ManagedTenantApiNotificationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantApiNotificationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ManagedTenantApiNotificationCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a managedTenantApiNotification
+     * @return a java.util.List<ManagedTenantApiNotification>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedTenantApiNotification> getValue() {

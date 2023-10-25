@@ -20,7 +20,7 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
      */
     private Integer minimumLength;
     /**
-     * Instantiates a new deviceManagementSettingCollectionConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingCollectionConstraint and sets the default values.
      */
     public DeviceManagementSettingCollectionConstraint() {
         super();
@@ -29,7 +29,7 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingCollectionConstraint
+     * @return a DeviceManagementSettingCollectionConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingCollectionConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
     }
     /**
      * Gets the maximumLength property value. The maximum number of elements in the collection
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumLength() {
@@ -57,7 +57,7 @@ public class DeviceManagementSettingCollectionConstraint extends DeviceManagemen
     }
     /**
      * Gets the minimumLength property value. The minimum number of elements in the collection
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumLength() {

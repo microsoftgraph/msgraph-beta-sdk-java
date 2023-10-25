@@ -51,11 +51,11 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     private String tenantDisplayName;
     /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      */
     private String tenantId;
     /**
-     * Instantiates a new aggregatedPolicyCompliance and sets the default values.
+     * Instantiates a new AggregatedPolicyCompliance and sets the default values.
      */
     public AggregatedPolicyCompliance() {
         super();
@@ -63,7 +63,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aggregatedPolicyCompliance
+     * @return a AggregatedPolicyCompliance
      */
     @jakarta.annotation.Nonnull
     public static AggregatedPolicyCompliance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,7 +72,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyId property value. Identifier for the device compliance policy. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyId() {
@@ -80,7 +80,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyName property value. Name of the device compliance policy. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyName() {
@@ -88,7 +88,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyPlatform property value. Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyPlatform() {
@@ -96,7 +96,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicyType property value. The type of compliance policy. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompliancePolicyType() {
@@ -132,7 +132,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfCompliantDevices property value. The number of devices that are in a compliant status. Optional. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNumberOfCompliantDevices() {
@@ -140,7 +140,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfErrorDevices property value. The number of devices that are in an error status. Optional. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNumberOfErrorDevices() {
@@ -148,7 +148,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the numberOfNonCompliantDevices property value. The number of device that are in a non-compliant status. Optional. Read-only.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNumberOfNonCompliantDevices() {
@@ -164,15 +164,15 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -268,7 +268,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
         this.tenantDisplayName = value;
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

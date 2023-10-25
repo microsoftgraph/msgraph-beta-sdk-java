@@ -46,7 +46,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
      */
     private String status;
     /**
-     * Instantiates a new teamworkDeviceOperation and sets the default values.
+     * Instantiates a new TeamworkDeviceOperation and sets the default values.
      */
     public TeamworkDeviceOperation() {
         super();
@@ -54,7 +54,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceOperation
+     * @return a TeamworkDeviceOperation
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who created the device operation.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -87,7 +87,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the error property value. Error details are available only in case of a failed status.
-     * @return a operationError
+     * @return a OperationError
      */
     @jakarta.annotation.Nullable
     public OperationError getError() {
@@ -113,7 +113,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionBy property value. Identity of the user who last modified the device operation.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastActionBy() {
@@ -129,7 +129,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationType property value. The operationType property
-     * @return a teamworkDeviceOperationType
+     * @return a TeamworkDeviceOperationType
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceOperationType getOperationType() {
@@ -145,7 +145,7 @@ public class TeamworkDeviceOperation extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The current status of the async operation, for example, Queued, Scheduled, InProgress,  Successful, Cancelled, and Failed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

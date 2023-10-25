@@ -58,17 +58,19 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/threatIntelligence/hosts/{host%2Did}/ports{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get ports from security
-     * @return a CompletableFuture of hostPortCollectionResponse
+     * Get the list of hostPort resources associated with a host.
+     * @return a CompletableFuture of HostPortCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-ports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPortCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get ports from security
+     * Get the list of hostPort resources associated with a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of hostPortCollectionResponse
+     * @return a CompletableFuture of HostPortCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/security-host-list-ports?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<HostPortCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -79,7 +81,7 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, HostPortCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get ports from security
+     * Get the list of hostPort resources associated with a host.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -87,17 +89,13 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get ports from security
+     * Get the list of hostPort resources associated with a host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -105,12 +103,16 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a portsRequestBuilder
+     * @return a PortsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public PortsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -118,7 +120,7 @@ public class PortsRequestBuilder extends BaseRequestBuilder {
         return new PortsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get ports from security
+     * Get the list of hostPort resources associated with a host.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

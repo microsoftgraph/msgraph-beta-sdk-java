@@ -60,7 +60,7 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get evaluateDlpPoliciesJobs from dataClassification
-     * @return a CompletableFuture of jobResponseBaseCollectionResponse
+     * @return a CompletableFuture of JobResponseBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBaseCollectionResponse> get() {
@@ -69,7 +69,7 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get evaluateDlpPoliciesJobs from dataClassification
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of jobResponseBaseCollectionResponse
+     * @return a CompletableFuture of JobResponseBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBaseCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to evaluateDlpPoliciesJobs for dataClassification
      * @param body The request body
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> post(@jakarta.annotation.Nonnull final JobResponseBase body) {
@@ -92,7 +92,7 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to evaluateDlpPoliciesJobs for dataClassification
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of jobResponseBase
+     * @return a CompletableFuture of JobResponseBase
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<JobResponseBase> post(@jakarta.annotation.Nonnull final JobResponseBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -119,10 +119,6 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class EvaluateDlpPoliciesJobsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final JobResponseBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a evaluateDlpPoliciesJobsRequestBuilder
+     * @return a EvaluateDlpPoliciesJobsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EvaluateDlpPoliciesJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

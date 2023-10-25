@@ -38,7 +38,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
      */
     private String teamsClientSoftwareVersion;
     /**
-     * Instantiates a new teamworkDeviceSoftwareVersions and sets the default values.
+     * Instantiates a new TeamworkDeviceSoftwareVersions and sets the default values.
      */
     public TeamworkDeviceSoftwareVersions() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceSoftwareVersions
+     * @return a TeamworkDeviceSoftwareVersions
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceSoftwareVersions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
         return new TeamworkDeviceSoftwareVersions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the adminAgentSoftwareVersion property value. The software version for the admin agent running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAgentSoftwareVersion() {
@@ -86,7 +86,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the firmwareSoftwareVersion property value. The software version for the firmware running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirmwareSoftwareVersion() {
@@ -94,7 +94,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemSoftwareVersion() {
@@ -110,7 +110,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the partnerAgentSoftwareVersion property value. The software version for the partner agent running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPartnerAgentSoftwareVersion() {
@@ -118,7 +118,7 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the teamsClientSoftwareVersion property value. The software version for the Teams client running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsClientSoftwareVersion() {
@@ -139,8 +139,8 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

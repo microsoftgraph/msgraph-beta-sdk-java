@@ -38,7 +38,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
      */
     private String street;
     /**
-     * Instantiates a new postalAddressType and sets the default values.
+     * Instantiates a new PostalAddressType and sets the default values.
      */
     public PostalAddressType() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nonnull
     public static PostalAddressType createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
         return new PostalAddressType();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the city property value. The city property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -71,7 +71,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the countryLetterCode property value. The countryLetterCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryLetterCode() {
@@ -94,7 +94,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -102,7 +102,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the postalCode property value. The postalCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
@@ -110,7 +110,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getState() {
@@ -118,7 +118,7 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the street property value. The street property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStreet() {
@@ -139,8 +139,8 @@ public class PostalAddressType implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

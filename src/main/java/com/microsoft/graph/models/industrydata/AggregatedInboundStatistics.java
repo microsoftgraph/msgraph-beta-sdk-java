@@ -22,7 +22,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      */
     private Integer groups;
     /**
-     * The aggregate count of active people matched to an Azure Active Directory user, by role.
+     * The aggregate count of active people matched to a Microsoft Entra user, by role.
      */
     private java.util.List<IndustryDataRunRoleCountMetric> matchedPeopleByRole;
     /**
@@ -42,7 +42,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      */
     private Integer people;
     /**
-     * The aggregate count of active people not matched to an Azure Active Directory user, by role.
+     * The aggregate count of active people not matched to a Microsoft Entra user, by role.
      */
     private java.util.List<IndustryDataRunRoleCountMetric> unmatchedPeopleByRole;
     /**
@@ -50,7 +50,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
      */
     private Integer warnings;
     /**
-     * Instantiates a new aggregatedInboundStatistics and sets the default values.
+     * Instantiates a new AggregatedInboundStatistics and sets the default values.
      */
     public AggregatedInboundStatistics() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aggregatedInboundStatistics
+     * @return a AggregatedInboundStatistics
      */
     @jakarta.annotation.Nonnull
     public static AggregatedInboundStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
         return new AggregatedInboundStatistics();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the errors property value. The aggregate count of errors encountered by activities during this run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrors() {
@@ -101,15 +101,15 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the groups property value. The aggregate count of active inbound groups processed during the run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGroups() {
         return this.groups;
     }
     /**
-     * Gets the matchedPeopleByRole property value. The aggregate count of active people matched to an Azure Active Directory user, by role.
-     * @return a industryDataRunRoleCountMetric
+     * Gets the matchedPeopleByRole property value. The aggregate count of active people matched to a Microsoft Entra user, by role.
+     * @return a java.util.List<IndustryDataRunRoleCountMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getMatchedPeopleByRole() {
@@ -117,7 +117,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the memberships property value. The aggregate count of active inbound memberships processed during the run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMemberships() {
@@ -125,7 +125,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -133,7 +133,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the organizations property value. The aggregate count of active inbound organizations processed during the run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOrganizations() {
@@ -141,15 +141,15 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the people property value. The aggregate count of active inbound people processed during the run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPeople() {
         return this.people;
     }
     /**
-     * Gets the unmatchedPeopleByRole property value. The aggregate count of active people not matched to an Azure Active Directory user, by role.
-     * @return a industryDataRunRoleCountMetric
+     * Gets the unmatchedPeopleByRole property value. The aggregate count of active people not matched to a Microsoft Entra user, by role.
+     * @return a java.util.List<IndustryDataRunRoleCountMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRunRoleCountMetric> getUnmatchedPeopleByRole() {
@@ -157,7 +157,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the warnings property value. The aggregate count of warnings generated by activities during this run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWarnings() {
@@ -173,8 +173,8 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -194,7 +194,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
         this.groups = value;
     }
     /**
-     * Sets the matchedPeopleByRole property value. The aggregate count of active people matched to an Azure Active Directory user, by role.
+     * Sets the matchedPeopleByRole property value. The aggregate count of active people matched to a Microsoft Entra user, by role.
      * @param value Value to set for the matchedPeopleByRole property.
      */
     public void setMatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {
@@ -229,7 +229,7 @@ public class AggregatedInboundStatistics implements AdditionalDataHolder, Parsab
         this.people = value;
     }
     /**
-     * Sets the unmatchedPeopleByRole property value. The aggregate count of active people not matched to an Azure Active Directory user, by role.
+     * Sets the unmatchedPeopleByRole property value. The aggregate count of active people not matched to a Microsoft Entra user, by role.
      * @param value Value to set for the unmatchedPeopleByRole property.
      */
     public void setUnmatchedPeopleByRole(@jakarta.annotation.Nullable final java.util.List<IndustryDataRunRoleCountMetric> value) {

@@ -24,7 +24,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
      */
     private Boolean required;
     /**
-     * Instantiates a new groupPolicyPresentationTextBox and sets the default values.
+     * Instantiates a new GroupPolicyPresentationTextBox and sets the default values.
      */
     public GroupPolicyPresentationTextBox() {
         super();
@@ -33,7 +33,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationTextBox
+     * @return a GroupPolicyPresentationTextBox
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationTextBox createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the defaultValue property value. Localized default string displayed in the text box. The default value is empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultValue() {
@@ -62,7 +62,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters. Default value is 1023.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaxLength() {
@@ -70,7 +70,7 @@ public class GroupPolicyPresentationTextBox extends GroupPolicyUploadedPresentat
     }
     /**
      * Gets the required property value. Requirement to enter a value in the text box. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequired() {

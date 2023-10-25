@@ -96,7 +96,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      */
     private Boolean zoomDisabled;
     /**
-     * Instantiates a new depMacOSEnrollmentProfile and sets the default values.
+     * Instantiates a new DepMacOSEnrollmentProfile and sets the default values.
      */
     public DepMacOSEnrollmentProfile() {
         super();
@@ -105,7 +105,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depMacOSEnrollmentProfile
+     * @return a DepMacOSEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static DepMacOSEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,7 +114,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the accessibilityScreenDisabled property value. Indicates if Accessibility screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessibilityScreenDisabled() {
@@ -122,7 +122,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the adminAccountFullName property value. Indicates what the full name for the admin account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAccountFullName() {
@@ -130,7 +130,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the adminAccountPassword property value. Indicates what the password for the admin account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAccountPassword() {
@@ -138,7 +138,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the adminAccountUserName property value. Indicates what the user name for the admin account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAccountUserName() {
@@ -146,7 +146,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the autoAdvanceSetupEnabled property value. Indicates if Setup Assistant will automatically advance through its screen
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoAdvanceSetupEnabled() {
@@ -154,7 +154,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the autoUnlockWithWatchDisabled property value. Indicates if UnlockWithWatch screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoUnlockWithWatchDisabled() {
@@ -162,7 +162,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the chooseYourLockScreenDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getChooseYourLockScreenDisabled() {
@@ -170,7 +170,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the dontAutoPopulatePrimaryAccountInfo property value. Indicates whether Setup Assistant will auto populate the primary account information
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDontAutoPopulatePrimaryAccountInfo() {
@@ -178,7 +178,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the enableRestrictEditing property value. Indicates whether the user will enable blockediting
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableRestrictEditing() {
@@ -216,7 +216,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the fileVaultDisabled property value. Indicates if file vault is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFileVaultDisabled() {
@@ -224,7 +224,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the hideAdminAccount property value. Indicates whether the admin account should be hidded or not
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHideAdminAccount() {
@@ -232,7 +232,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the iCloudDiagnosticsDisabled property value. Indicates if iCloud Analytics screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudDiagnosticsDisabled() {
@@ -240,7 +240,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the iCloudStorageDisabled property value. Indicates if iCloud Documents and Desktop screen is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getICloudStorageDisabled() {
@@ -248,7 +248,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the passCodeDisabled property value. Indicates if Passcode setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPassCodeDisabled() {
@@ -256,7 +256,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the primaryAccountFullName property value. Indicates what the full name for the primary account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryAccountFullName() {
@@ -264,7 +264,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the primaryAccountUserName property value. Indicates what the account name for the primary account is
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryAccountUserName() {
@@ -272,7 +272,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the registrationDisabled property value. Indicates if registration is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRegistrationDisabled() {
@@ -280,7 +280,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the requestRequiresNetworkTether property value. Indicates if the device is network-tethered to run the command
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequestRequiresNetworkTether() {
@@ -288,7 +288,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the setPrimarySetupAccountAsRegularUser property value. Indicates whether Setup Assistant will set the account as a regular user
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSetPrimarySetupAccountAsRegularUser() {
@@ -296,7 +296,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the skipPrimarySetupAccountCreation property value. Indicates whether Setup Assistant will skip the user interface for primary account setup
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSkipPrimarySetupAccountCreation() {
@@ -304,7 +304,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     }
     /**
      * Gets the zoomDisabled property value. Indicates if zoom setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getZoomDisabled() {

@@ -22,7 +22,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
      */
     private PeerConnectivityConfiguration peerConfiguration;
     /**
-     * Instantiates a new connectivityConfigurationLink and sets the default values.
+     * Instantiates a new ConnectivityConfigurationLink and sets the default values.
      */
     public ConnectivityConfigurationLink() {
         super();
@@ -30,7 +30,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectivityConfigurationLink
+     * @return a ConnectivityConfigurationLink
      */
     @jakarta.annotation.Nonnull
     public static ConnectivityConfigurationLink createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * Gets the localConfigurations property value. The localConfigurations property
-     * @return a localConnectivityConfiguration
+     * @return a java.util.List<LocalConnectivityConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LocalConnectivityConfiguration> getLocalConfigurations() {
@@ -67,7 +67,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
     }
     /**
      * Gets the peerConfiguration property value. The peerConfiguration property
-     * @return a peerConnectivityConfiguration
+     * @return a PeerConnectivityConfiguration
      */
     @jakarta.annotation.Nullable
     public PeerConnectivityConfiguration getPeerConfiguration() {

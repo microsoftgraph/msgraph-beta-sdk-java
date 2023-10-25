@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LabelDetails extends ParentLabelDetails implements Parsable {
     /**
-     * Instantiates a new labelDetails and sets the default values.
+     * Instantiates a new LabelDetails and sets the default values.
      */
     public LabelDetails() {
         super();
@@ -18,7 +18,7 @@ public class LabelDetails extends ParentLabelDetails implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a labelDetails
+     * @return a LabelDetails
      */
     @jakarta.annotation.Nonnull
     public static LabelDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

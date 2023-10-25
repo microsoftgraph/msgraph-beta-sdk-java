@@ -47,7 +47,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     private String summary;
     /**
-     * Instantiates a new positionDetail and sets the default values.
+     * Instantiates a new PositionDetail and sets the default values.
      */
     public PositionDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nonnull
     public static PositionDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         return new PositionDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the company property value. Detail about the company or employer.
-     * @return a companyDetail
+     * @return a CompanyDetail
      */
     @jakarta.annotation.Nullable
     public CompanyDetail getCompany() {
@@ -80,7 +80,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. Description of the position in question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -113,7 +113,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jobTitle property value. The title held when in that position.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
@@ -121,7 +121,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -129,7 +129,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the role property value. The role the position entailed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -145,7 +145,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the summary property value. Short summary of the position.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSummary() {
@@ -168,8 +168,8 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

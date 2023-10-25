@@ -42,7 +42,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     private ContactRelationship relationship;
     /**
-     * Instantiates a new relatedContact and sets the default values.
+     * Instantiates a new RelatedContact and sets the default values.
      */
     public RelatedContact() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relatedContact
+     * @return a RelatedContact
      */
     @jakarta.annotation.Nonnull
     public static RelatedContact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,14 +59,14 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessConsent property value. Indicates whether the user has been consented to access student data.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccessConsent() {
         return this.accessConsent;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. Name of the contact. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -83,7 +83,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the emailAddress property value. Email address of the contact.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
@@ -107,7 +107,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The id property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -115,7 +115,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mobilePhone property value. Mobile phone number of the contact.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
@@ -123,7 +123,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -131,7 +131,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the relationship property value. The relationship property
-     * @return a contactRelationship
+     * @return a ContactRelationship
      */
     @jakarta.annotation.Nullable
     public ContactRelationship getRelationship() {
@@ -160,8 +160,8 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
         this.accessConsent = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

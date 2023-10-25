@@ -22,11 +22,11 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      */
     private String policyId;
     /**
-     * The name of the Private Link policy in Azure AD.
+     * The name of the Private Link policy in Microsoft Entra ID.
      */
     private String policyName;
     /**
-     * The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
+     * The tenant identifier of the Microsoft Entra tenant the Private Link policy belongs to.
      */
     private String policyTenantId;
     /**
@@ -34,7 +34,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      */
     private String resourceId;
     /**
-     * Instantiates a new privateLinkDetails and sets the default values.
+     * Instantiates a new PrivateLinkDetails and sets the default values.
      */
     public PrivateLinkDetails() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privateLinkDetails
+     * @return a PrivateLinkDetails
      */
     @jakarta.annotation.Nonnull
     public static PrivateLinkDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
         return new PrivateLinkDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -81,23 +81,23 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the policyId property value. The unique identifier for the Private Link policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
         return this.policyId;
     }
     /**
-     * Gets the policyName property value. The name of the Private Link policy in Azure AD.
-     * @return a string
+     * Gets the policyName property value. The name of the Private Link policy in Microsoft Entra ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
         return this.policyName;
     }
     /**
-     * Gets the policyTenantId property value. The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
-     * @return a string
+     * Gets the policyTenantId property value. The tenant identifier of the Microsoft Entra tenant the Private Link policy belongs to.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyTenantId() {
@@ -105,7 +105,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceId property value. The Azure Resource Manager (ARM) path for the Private Link policy resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -125,8 +125,8 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -146,14 +146,14 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
         this.policyId = value;
     }
     /**
-     * Sets the policyName property value. The name of the Private Link policy in Azure AD.
+     * Sets the policyName property value. The name of the Private Link policy in Microsoft Entra ID.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
         this.policyName = value;
     }
     /**
-     * Sets the policyTenantId property value. The tenant identifier of the Azure AD tenant the Private Link policy belongs to.
+     * Sets the policyTenantId property value. The tenant identifier of the Microsoft Entra tenant the Private Link policy belongs to.
      * @param value Value to set for the policyTenantId property.
      */
     public void setPolicyTenantId(@jakarta.annotation.Nullable final String value) {

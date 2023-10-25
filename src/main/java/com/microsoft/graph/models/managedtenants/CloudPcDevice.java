@@ -51,7 +51,7 @@ public class CloudPcDevice extends Entity implements Parsable {
      */
     private String tenantDisplayName;
     /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      */
     private String tenantId;
     /**
@@ -59,7 +59,7 @@ public class CloudPcDevice extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new cloudPcDevice and sets the default values.
+     * Instantiates a new CloudPcDevice and sets the default values.
      */
     public CloudPcDevice() {
         super();
@@ -67,7 +67,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDevice
+     * @return a CloudPcDevice
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -76,7 +76,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPcStatus property value. The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcStatus() {
@@ -84,7 +84,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceSpecification property value. The specification of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceSpecification() {
@@ -92,7 +92,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name  of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -129,7 +129,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. The managed device identifier of the cloud PC device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -137,7 +137,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceName property value. The managed device display name of the cloud PC device. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceName() {
@@ -145,7 +145,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningPolicyId property value. The provisioning policy identifier for the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProvisioningPolicyId() {
@@ -153,7 +153,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlanName property value. The service plan name of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePlanName() {
@@ -161,7 +161,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the servicePlanType property value. The service plan type of the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePlanType() {
@@ -169,15 +169,15 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
         return this.tenantDisplayName;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -185,7 +185,7 @@ public class CloudPcDevice extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the cloud PC device. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -282,7 +282,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         this.tenantDisplayName = value;
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

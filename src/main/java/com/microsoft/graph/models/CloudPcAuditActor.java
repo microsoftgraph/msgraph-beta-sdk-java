@@ -18,7 +18,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      */
     private String applicationDisplayName;
     /**
-     * Azure AD application ID.
+     * Microsoft Entra application ID.
      */
     private String applicationId;
     /**
@@ -46,7 +46,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      */
     private CloudPcAuditActorType type;
     /**
-     * Azure AD user ID.
+     * Microsoft Entra user ID.
      */
     private String userId;
     /**
@@ -62,7 +62,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<CloudPcUserRoleScopeTagInfo> userRoleScopeTags;
     /**
-     * Instantiates a new cloudPcAuditActor and sets the default values.
+     * Instantiates a new CloudPcAuditActor and sets the default values.
      */
     public CloudPcAuditActor() {
         this.setAdditionalData(new HashMap<>());
@@ -70,7 +70,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcAuditActor
+     * @return a CloudPcAuditActor
      */
     @jakarta.annotation.Nonnull
     public static CloudPcAuditActor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         return new CloudPcAuditActor();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -87,15 +87,15 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationDisplayName property value. Name of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationDisplayName() {
         return this.applicationDisplayName;
     }
     /**
-     * Gets the applicationId property value. Azure AD application ID.
-     * @return a string
+     * Gets the applicationId property value. Microsoft Entra application ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -124,7 +124,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -132,7 +132,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -140,7 +140,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remoteTenantId property value. The delegated partner tenant ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteTenantId() {
@@ -148,7 +148,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remoteUserId property value. The delegated partner user ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteUserId() {
@@ -156,7 +156,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
@@ -164,15 +164,15 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a cloudPcAuditActorType
+     * @return a CloudPcAuditActorType
      */
     @jakarta.annotation.Nullable
     public CloudPcAuditActorType getType() {
         return this.type;
     }
     /**
-     * Gets the userId property value. Azure AD user ID.
-     * @return a string
+     * Gets the userId property value. Microsoft Entra user ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -180,7 +180,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPermissions property value. List of user permissions and application permissions when the audit event was performed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
@@ -188,7 +188,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name (UPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -196,7 +196,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userRoleScopeTags property value. List of role scope tags.
-     * @return a cloudPcUserRoleScopeTagInfo
+     * @return a java.util.List<CloudPcUserRoleScopeTagInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcUserRoleScopeTagInfo> getUserRoleScopeTags() {
@@ -223,8 +223,8 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -237,7 +237,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         this.applicationDisplayName = value;
     }
     /**
-     * Sets the applicationId property value. Azure AD application ID.
+     * Sets the applicationId property value. Microsoft Entra application ID.
      * @param value Value to set for the applicationId property.
      */
     public void setApplicationId(@jakarta.annotation.Nullable final String value) {
@@ -286,7 +286,7 @@ public class CloudPcAuditActor implements AdditionalDataHolder, Parsable {
         this.type = value;
     }
     /**
-     * Sets the userId property value. Azure AD user ID.
+     * Sets the userId property value. Microsoft Entra user ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

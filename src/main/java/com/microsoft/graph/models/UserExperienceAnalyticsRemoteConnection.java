@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      */
     private String virtualNetwork;
     /**
-     * Instantiates a new userExperienceAnalyticsRemoteConnection and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsRemoteConnection and sets the default values.
      */
     public UserExperienceAnalyticsRemoteConnection() {
         super();
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsRemoteConnection
+     * @return a UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsRemoteConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the cloudPcFailurePercentage property value. The sign in failure percentage of Cloud PC Device. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCloudPcFailurePercentage() {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the cloudPcRoundTripTime property value. The round tip time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCloudPcRoundTripTime() {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the cloudPcSignInTime property value. The sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCloudPcSignInTime() {
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the coreBootTime property value. The core boot time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCoreBootTime() {
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the coreSignInTime property value. The core sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCoreSignInTime() {
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the deviceCount property value. The count of remote connection. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceCount() {
@@ -129,7 +129,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -137,7 +137,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the deviceName property value. The name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the manufacturer property value. The user experience analytics manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -175,7 +175,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the model property value. The user experience analytics device model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -183,7 +183,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the remoteSignInTime property value. The remote sign in time of Cloud PC Device. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getRemoteSignInTime() {
@@ -191,7 +191,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the userPrincipalName property value. The user experience analytics userPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -199,7 +199,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     }
     /**
      * Gets the virtualNetwork property value. The user experience analytics virtual network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVirtualNetwork() {

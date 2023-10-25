@@ -17,7 +17,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
      */
     private String target;
     /**
-     * Instantiates a new serviceProvisioningLinkedResourceErrorDetail and sets the default values.
+     * Instantiates a new ServiceProvisioningLinkedResourceErrorDetail and sets the default values.
      */
     public ServiceProvisioningLinkedResourceErrorDetail() {
         super();
@@ -25,7 +25,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceProvisioningLinkedResourceErrorDetail
+     * @return a ServiceProvisioningLinkedResourceErrorDetail
      */
     @jakarta.annotation.Nonnull
     public static ServiceProvisioningLinkedResourceErrorDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     }
     /**
      * Gets the propertyName property value. The propertyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPropertyName() {
@@ -53,7 +53,7 @@ public class ServiceProvisioningLinkedResourceErrorDetail extends ServiceProvisi
     }
     /**
      * Gets the target property value. The target property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTarget() {

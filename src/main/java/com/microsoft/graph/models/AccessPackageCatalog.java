@@ -70,7 +70,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     private OffsetDateTime modifiedDateTime;
     /**
-     * Instantiates a new accessPackageCatalog and sets the default values.
+     * Instantiates a new AccessPackageCatalog and sets the default values.
      */
     public AccessPackageCatalog() {
         super();
@@ -78,7 +78,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageCatalog
+     * @return a AccessPackageCatalog
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageCatalog createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageCustomWorkflowExtensions property value. The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
-     * @return a customCalloutExtension
+     * @return a java.util.List<CustomCalloutExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomCalloutExtension> getAccessPackageCustomWorkflowExtensions() {
@@ -95,7 +95,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceRoles property value. The roles in each resource in a catalog. Read-only.
-     * @return a accessPackageResourceRole
+     * @return a java.util.List<AccessPackageResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRole> getAccessPackageResourceRoles() {
@@ -103,7 +103,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResources property value. The accessPackageResources property
-     * @return a accessPackageResource
+     * @return a java.util.List<AccessPackageResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getAccessPackageResources() {
@@ -111,7 +111,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceScopes property value. The accessPackageResourceScopes property
-     * @return a accessPackageResourceScope
+     * @return a java.util.List<AccessPackageResourceScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceScope> getAccessPackageResourceScopes() {
@@ -119,7 +119,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackages property value. The access packages in this catalog. Read-only. Nullable. Supports $expand.
-     * @return a accessPackage
+     * @return a java.util.List<AccessPackage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackages() {
@@ -127,7 +127,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the catalogStatus property value. Has the value Published if the access packages are available for management.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogStatus() {
@@ -135,7 +135,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the catalogType property value. One of UserManaged or ServiceDefault.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCatalogType() {
@@ -143,7 +143,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. UPN of the user who created this resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -159,7 +159,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the customAccessPackageWorkflowExtensions property value. The customAccessPackageWorkflowExtensions property
-     * @return a customAccessPackageWorkflowExtension
+     * @return a java.util.List<CustomAccessPackageWorkflowExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomAccessPackageWorkflowExtension> getCustomAccessPackageWorkflowExtensions() {
@@ -167,7 +167,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the access package catalog.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -175,7 +175,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the access package catalog. Supports $filter (eq, contains).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -207,7 +207,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the isExternallyVisible property value. Whether the access packages in this catalog can be requested by users outside of the tenant.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternallyVisible() {
@@ -215,7 +215,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. The UPN of the user who last modified this resource. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {

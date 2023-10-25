@@ -13,7 +13,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
      */
     private java.util.List<SensitiveContentLocation> matches;
     /**
-     * Instantiates a new exactMatchDetectedSensitiveContent and sets the default values.
+     * Instantiates a new ExactMatchDetectedSensitiveContent and sets the default values.
      */
     public ExactMatchDetectedSensitiveContent() {
         super();
@@ -21,7 +21,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a exactMatchDetectedSensitiveContent
+     * @return a ExactMatchDetectedSensitiveContent
      */
     @jakarta.annotation.Nonnull
     public static ExactMatchDetectedSensitiveContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ExactMatchDetectedSensitiveContent extends DetectedSensitiveContent
     }
     /**
      * Gets the matches property value. The matches property
-     * @return a sensitiveContentLocation
+     * @return a java.util.List<SensitiveContentLocation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentLocation> getMatches() {

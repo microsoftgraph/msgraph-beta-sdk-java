@@ -18,7 +18,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      */
     private CloudPcManagementAssignmentTarget target;
     /**
-     * Instantiates a new cloudPcUserSettingAssignment and sets the default values.
+     * Instantiates a new CloudPcUserSettingAssignment and sets the default values.
      */
     public CloudPcUserSettingAssignment() {
         super();
@@ -26,7 +26,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcUserSettingAssignment
+     * @return a CloudPcUserSettingAssignment
      */
     @jakarta.annotation.Nonnull
     public static CloudPcUserSettingAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The assignment target for the user setting. Currently, the only target supported for this user setting is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
-     * @return a cloudPcManagementAssignmentTarget
+     * @return a CloudPcManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public CloudPcManagementAssignmentTarget getTarget() {

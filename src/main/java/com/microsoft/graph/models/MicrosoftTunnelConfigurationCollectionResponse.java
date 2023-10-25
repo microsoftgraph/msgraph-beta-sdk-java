@@ -13,7 +13,7 @@ public class MicrosoftTunnelConfigurationCollectionResponse extends BaseCollecti
      */
     private java.util.List<MicrosoftTunnelConfiguration> value;
     /**
-     * Instantiates a new microsoftTunnelConfigurationCollectionResponse and sets the default values.
+     * Instantiates a new MicrosoftTunnelConfigurationCollectionResponse and sets the default values.
      */
     public MicrosoftTunnelConfigurationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MicrosoftTunnelConfigurationCollectionResponse extends BaseCollecti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelConfigurationCollectionResponse
+     * @return a MicrosoftTunnelConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelConfigurationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MicrosoftTunnelConfigurationCollectionResponse extends BaseCollecti
     }
     /**
      * Gets the value property value. The value property
-     * @return a microsoftTunnelConfiguration
+     * @return a java.util.List<MicrosoftTunnelConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelConfiguration> getValue() {

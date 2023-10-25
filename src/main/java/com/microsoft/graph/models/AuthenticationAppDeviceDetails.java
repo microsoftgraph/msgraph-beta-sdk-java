@@ -34,7 +34,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
      */
     private String operatingSystem;
     /**
-     * Instantiates a new authenticationAppDeviceDetails and sets the default values.
+     * Instantiates a new AuthenticationAppDeviceDetails and sets the default values.
      */
     public AuthenticationAppDeviceDetails() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationAppDeviceDetails
+     * @return a AuthenticationAppDeviceDetails
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationAppDeviceDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
         return new AuthenticationAppDeviceDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     }
     /**
      * Gets the appVersion property value. The version of the client authentication app used during the authentication step.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -67,7 +67,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     }
     /**
      * Gets the clientApp property value. The name of the client authentication app used during the authentication step.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientApp() {
@@ -75,7 +75,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     }
     /**
      * Gets the deviceId property value. ID of the device used during the authentication step.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -97,7 +97,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
     }
     /**
      * Gets the operatingSystem property value. The operating system running on the device used for the authentication step.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -125,8 +125,8 @@ public class AuthenticationAppDeviceDetails implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

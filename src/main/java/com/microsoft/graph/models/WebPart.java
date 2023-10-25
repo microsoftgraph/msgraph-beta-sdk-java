@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WebPart extends Entity implements Parsable {
     /**
-     * Instantiates a new webPart and sets the default values.
+     * Instantiates a new WebPart and sets the default values.
      */
     public WebPart() {
         super();
@@ -17,7 +17,7 @@ public class WebPart extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webPart
+     * @return a WebPart
      */
     @jakarta.annotation.Nonnull
     public static WebPart createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

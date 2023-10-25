@@ -55,7 +55,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
      */
     private String surname;
     /**
-     * Instantiates a new sslCertificateEntity and sets the default values.
+     * Instantiates a new SslCertificateEntity and sets the default values.
      */
     public SslCertificateEntity() {
         this.setAdditionalData(new HashMap<>());
@@ -63,7 +63,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sslCertificateEntity
+     * @return a SslCertificateEntity
      */
     @jakarta.annotation.Nonnull
     public static SslCertificateEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
         return new SslCertificateEntity();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the address property value. A physical address of the entity.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
@@ -88,7 +88,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alternateNames property value. Alternate names for this entity that are part of the certificate.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAlternateNames() {
@@ -96,7 +96,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the commonName property value. A common name for this entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCommonName() {
@@ -104,7 +104,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the email property value. An email for this entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -131,7 +131,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the givenName property value. If the entity is a person, this is the person's given name (first name).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -139,7 +139,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -147,7 +147,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organizationName property value. If the entity is an organization, this is the name of the organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganizationName() {
@@ -155,7 +155,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organizationUnitName property value. If the entity is an organization, this communicates if a unit in the organization is named on the entity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganizationUnitName() {
@@ -163,7 +163,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the serialNumber property value. A serial number assigned to the entity; usually only available if the entity is the issuer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSerialNumber() {
@@ -171,7 +171,7 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the surname property value. If the entity is a person, this is the person's surname (last name).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -196,8 +196,8 @@ public class SslCertificateEntity implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

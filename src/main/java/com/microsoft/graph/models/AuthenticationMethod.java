@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethod extends Entity implements Parsable {
     /**
-     * Instantiates a new authenticationMethod and sets the default values.
+     * Instantiates a new AuthenticationMethod and sets the default values.
      */
     public AuthenticationMethod() {
         super();
@@ -17,7 +17,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethod
+     * @return a AuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -32,6 +32,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
                 case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
                 case "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod": return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();
                 case "#microsoft.graph.phoneAuthenticationMethod": return new PhoneAuthenticationMethod();
+                case "#microsoft.graph.platformCredentialAuthenticationMethod": return new PlatformCredentialAuthenticationMethod();
                 case "#microsoft.graph.softwareOathAuthenticationMethod": return new SoftwareOathAuthenticationMethod();
                 case "#microsoft.graph.temporaryAccessPassAuthenticationMethod": return new TemporaryAccessPassAuthenticationMethod();
                 case "#microsoft.graph.windowsHelloForBusinessAuthenticationMethod": return new WindowsHelloForBusinessAuthenticationMethod();

@@ -14,7 +14,7 @@ public class MyRoleCollectionResponse extends BaseCollectionPaginationCountRespo
      */
     private java.util.List<MyRole> value;
     /**
-     * Instantiates a new myRoleCollectionResponse and sets the default values.
+     * Instantiates a new MyRoleCollectionResponse and sets the default values.
      */
     public MyRoleCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class MyRoleCollectionResponse extends BaseCollectionPaginationCountRespo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a myRoleCollectionResponse
+     * @return a MyRoleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MyRoleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class MyRoleCollectionResponse extends BaseCollectionPaginationCountRespo
     }
     /**
      * Gets the value property value. The value property
-     * @return a myRole
+     * @return a java.util.List<MyRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MyRole> getValue() {

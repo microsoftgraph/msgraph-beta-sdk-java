@@ -38,7 +38,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
      */
     private Integer offset;
     /**
-     * Instantiates a new sensitiveContentLocation and sets the default values.
+     * Instantiates a new SensitiveContentLocation and sets the default values.
      */
     public SensitiveContentLocation() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitiveContentLocation
+     * @return a SensitiveContentLocation
      */
     @jakarta.annotation.Nonnull
     public static SensitiveContentLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
         return new SensitiveContentLocation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the confidence property value. The confidence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
@@ -71,7 +71,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the evidences property value. The evidences property
-     * @return a sensitiveContentEvidence
+     * @return a java.util.List<SensitiveContentEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentEvidence> getEvidences() {
@@ -94,7 +94,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the idMatch property value. The idMatch property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdMatch() {
@@ -102,7 +102,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the length property value. The length property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLength() {
@@ -110,7 +110,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the offset property value. The offset property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOffset() {
@@ -139,8 +139,8 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -56,8 +56,8 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
-     * @return a CompletableFuture of companySubscription
+     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
+     * @return a CompletableFuture of CompanySubscription
      * @see <a href="https://learn.microsoft.com/graph/api/companysubscription-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -65,9 +65,9 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companySubscription
+     * @return a CompletableFuture of CompanySubscription
      * @see <a href="https://learn.microsoft.com/graph/api/companysubscription-get?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -81,7 +81,7 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property subscriptions in directory
      * @param body The request body
-     * @return a CompletableFuture of companySubscription
+     * @return a CompletableFuture of CompanySubscription
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanySubscription> patch(@jakarta.annotation.Nonnull final CompanySubscription body) {
@@ -91,7 +91,7 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property subscriptions in directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of companySubscription
+     * @return a CompletableFuture of CompanySubscription
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CompanySubscription> patch(@jakarta.annotation.Nonnull final CompanySubscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -118,19 +118,20 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -138,17 +139,13 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -156,6 +153,10 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -177,17 +178,17 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CompanySubscription body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -207,7 +208,7 @@ public class CompanySubscriptionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get a specific commercial subscription that an organization has acquired.
+     * Get a specific commercial subscription that an organization has acquired. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

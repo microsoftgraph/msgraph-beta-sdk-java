@@ -44,7 +44,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      */
     private SecurityBaselineComplianceState state;
     /**
-     * Instantiates a new securityBaselineSettingState and sets the default values.
+     * Instantiates a new SecurityBaselineSettingState and sets the default values.
      */
     public SecurityBaselineSettingState() {
         super();
@@ -52,7 +52,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineSettingState
+     * @return a SecurityBaselineSettingState
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineSettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the contributingPolicies property value. The policies that contribute to this setting instance
-     * @return a securityBaselineContributingPolicy
+     * @return a java.util.List<SecurityBaselineContributingPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityBaselineContributingPolicy> getContributingPolicies() {
@@ -69,7 +69,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The error code if the setting is in error state
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorCode() {
@@ -94,7 +94,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the settingCategoryId property value. The setting category id which this setting belongs to
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingCategoryId() {
@@ -102,7 +102,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the settingCategoryName property value. The setting category name which this setting belongs to
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingCategoryName() {
@@ -110,7 +110,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the settingId property value. The setting id guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingId() {
@@ -118,7 +118,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the settingName property value. The setting name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -126,7 +126,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the sourcePolicies property value. The policies that contribute to this setting instance
-     * @return a settingSource
+     * @return a java.util.List<SettingSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSourcePolicies() {
@@ -134,7 +134,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {

@@ -15,7 +15,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private ApiApplication api;
     /**
-     * The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
      */
     private String appId;
     /**
@@ -35,7 +35,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private Certification certification;
     /**
-     * The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
+     * The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
      */
     private ConnectorGroup connectorGroup;
     /**
@@ -47,7 +47,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private DirectoryObject createdOnBehalfOf;
     /**
-     * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      */
     private String defaultRedirectUri;
     /**
@@ -71,7 +71,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private java.util.List<FederatedIdentityCredential> federatedIdentityCredentials;
     /**
-     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
      */
     private String groupMembershipClaims;
     /**
@@ -79,11 +79,11 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
     /**
-     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      */
     private java.util.List<String> identifierUris;
     /**
-     * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      */
     private InformationalUrl info;
     /**
@@ -91,7 +91,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private Boolean isDeviceOnlyAuthSupported;
     /**
-     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      */
     private Boolean isFallbackPublicClient;
     /**
@@ -111,7 +111,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private OnPremisesPublishing onPremisesPublishing;
     /**
-     * Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+     * Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
      */
     private OptionalClaims optionalClaims;
     /**
@@ -135,7 +135,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private String publisherDomain;
     /**
-     * Specifies whether this application requires Azure AD to verify the signed authentication requests.
+     * Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
      */
     private RequestSignatureVerification requestSignatureVerification;
     /**
@@ -163,7 +163,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private SpaApplication spa;
     /**
-     * Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      */
     private Synchronization synchronization;
     /**
@@ -171,7 +171,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private java.util.List<String> tags;
     /**
-     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+     * Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      */
     private UUID tokenEncryptionKeyId;
     /**
@@ -199,7 +199,7 @@ public class Application extends DirectoryObject implements Parsable {
      */
     private WindowsApplication windows;
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
      */
     public Application() {
         super();
@@ -208,7 +208,7 @@ public class Application extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a application
+     * @return a Application
      */
     @jakarta.annotation.Nonnull
     public static Application createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -217,15 +217,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the api property value. Specifies settings for an application that implements a web API.
-     * @return a apiApplication
+     * @return a ApiApplication
      */
     @jakarta.annotation.Nullable
     public ApiApplication getApi() {
         return this.api;
     }
     /**
-     * Gets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
-     * @return a string
+     * Gets the appId property value. The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -233,7 +233,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
-     * @return a appManagementPolicy
+     * @return a java.util.List<AppManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
@@ -241,7 +241,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
-     * @return a appRole
+     * @return a java.util.List<AppRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppRole> getAppRoles() {
@@ -249,7 +249,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the authenticationBehaviors property value. The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
-     * @return a authenticationBehaviors
+     * @return a AuthenticationBehaviors
      */
     @jakarta.annotation.Nullable
     public AuthenticationBehaviors getAuthenticationBehaviors() {
@@ -257,15 +257,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the certification property value. Specifies the certification status of the application.
-     * @return a certification
+     * @return a Certification
      */
     @jakarta.annotation.Nullable
     public Certification getCertification() {
         return this.certification;
     }
     /**
-     * Gets the connectorGroup property value. The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
-     * @return a connectorGroup
+     * Gets the connectorGroup property value. The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
+     * @return a ConnectorGroup
      */
     @jakarta.annotation.Nullable
     public ConnectorGroup getConnectorGroup() {
@@ -281,15 +281,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
-     * @return a directoryObject
+     * @return a DirectoryObject
      */
     @jakarta.annotation.Nullable
     public DirectoryObject getCreatedOnBehalfOf() {
         return this.createdOnBehalfOf;
     }
     /**
-     * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
-     * @return a string
+     * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultRedirectUri() {
@@ -297,7 +297,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -305,7 +305,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisabledByMicrosoftStatus() {
@@ -313,7 +313,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -321,7 +321,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     * @return a extensionProperty
+     * @return a java.util.List<ExtensionProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExtensionProperty> getExtensionProperties() {
@@ -329,7 +329,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
-     * @return a federatedIdentityCredential
+     * @return a java.util.List<FederatedIdentityCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FederatedIdentityCredential> getFederatedIdentityCredentials() {
@@ -392,8 +392,8 @@ public class Application extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
-     * @return a string
+     * Gets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupMembershipClaims() {
@@ -401,23 +401,23 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
-     * @return a homeRealmDiscoveryPolicy
+     * @return a java.util.List<HomeRealmDiscoveryPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
         return this.homeRealmDiscoveryPolicies;
     }
     /**
-     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
-     * @return a string
+     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getIdentifierUris() {
         return this.identifierUris;
     }
     /**
-     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
-     * @return a informationalUrl
+     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * @return a InformationalUrl
      */
     @jakarta.annotation.Nullable
     public InformationalUrl getInfo() {
@@ -425,15 +425,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceOnlyAuthSupported() {
         return this.isDeviceOnlyAuthSupported;
     }
     /**
-     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
-     * @return a boolean
+     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFallbackPublicClient() {
@@ -441,7 +441,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a keyCredential
+     * @return a java.util.List<KeyCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyCredential> getKeyCredentials() {
@@ -449,7 +449,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the logo property value. The main logo for the application. Not nullable.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getLogo() {
@@ -457,7 +457,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the notes property value. Notes relevant for the management of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -465,15 +465,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the onPremisesPublishing property value. Represents the set of properties required for configuring Application Proxy for this application. Configuring these properties allows you to publish your on-premises application for secure remote access.
-     * @return a onPremisesPublishing
+     * @return a OnPremisesPublishing
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishing getOnPremisesPublishing() {
         return this.onPremisesPublishing;
     }
     /**
-     * Gets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
-     * @return a optionalClaims
+     * Gets the optionalClaims property value. Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+     * @return a OptionalClaims
      */
     @jakarta.annotation.Nullable
     public OptionalClaims getOptionalClaims() {
@@ -481,7 +481,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand, $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1), and $select nested in $expand.
-     * @return a directoryObject
+     * @return a java.util.List<DirectoryObject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DirectoryObject> getOwners() {
@@ -489,7 +489,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the parentalControlSettings property value. Specifies parental control settings for an application.
-     * @return a parentalControlSettings
+     * @return a ParentalControlSettings
      */
     @jakarta.annotation.Nullable
     public ParentalControlSettings getParentalControlSettings() {
@@ -497,7 +497,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     * @return a passwordCredential
+     * @return a java.util.List<PasswordCredential>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PasswordCredential> getPasswordCredentials() {
@@ -505,7 +505,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
-     * @return a publicClientApplication
+     * @return a PublicClientApplication
      */
     @jakarta.annotation.Nullable
     public PublicClientApplication getPublicClient() {
@@ -513,15 +513,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the publisherDomain property value. The verified publisher domain for the application. Read-only. Supports $filter (eq, ne, ge, le, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisherDomain() {
         return this.publisherDomain;
     }
     /**
-     * Gets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
-     * @return a requestSignatureVerification
+     * Gets the requestSignatureVerification property value. Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
+     * @return a RequestSignatureVerification
      */
     @jakarta.annotation.Nullable
     public RequestSignatureVerification getRequestSignatureVerification() {
@@ -529,7 +529,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
-     * @return a requiredResourceAccess
+     * @return a java.util.List<RequiredResourceAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RequiredResourceAccess> getRequiredResourceAccess() {
@@ -537,7 +537,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSamlMetadataUrl() {
@@ -545,7 +545,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceManagementReference() {
@@ -553,7 +553,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the servicePrincipalLockConfiguration property value. Specifies whether sensitive properties of a multi-tenant application should be locked for editing after the application is provisioned in a tenant. Nullable. null by default.
-     * @return a servicePrincipalLockConfiguration
+     * @return a ServicePrincipalLockConfiguration
      */
     @jakarta.annotation.Nullable
     public ServicePrincipalLockConfiguration getServicePrincipalLockConfiguration() {
@@ -561,7 +561,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignInAudience() {
@@ -569,15 +569,15 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
-     * @return a spaApplication
+     * @return a SpaApplication
      */
     @jakarta.annotation.Nullable
     public SpaApplication getSpa() {
         return this.spa;
     }
     /**
-     * Gets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
-     * @return a synchronization
+     * Gets the synchronization property value. Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
+     * @return a Synchronization
      */
     @jakarta.annotation.Nullable
     public Synchronization getSynchronization() {
@@ -585,14 +585,14 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
         return this.tags;
     }
     /**
-     * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+     * Gets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      * @return a UUID
      */
     @jakarta.annotation.Nullable
@@ -601,7 +601,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
-     * @return a tokenIssuancePolicy
+     * @return a java.util.List<TokenIssuancePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
@@ -609,7 +609,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies assigned to this application. Supports $expand.
-     * @return a tokenLifetimePolicy
+     * @return a java.util.List<TokenLifetimePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
@@ -617,7 +617,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the uniqueName property value. The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniqueName() {
@@ -625,7 +625,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
-     * @return a verifiedPublisher
+     * @return a VerifiedPublisher
      */
     @jakarta.annotation.Nullable
     public VerifiedPublisher getVerifiedPublisher() {
@@ -633,7 +633,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the web property value. Specifies settings for a web application.
-     * @return a webApplication
+     * @return a WebApplication
      */
     @jakarta.annotation.Nullable
     public WebApplication getWeb() {
@@ -641,7 +641,7 @@ public class Application extends DirectoryObject implements Parsable {
     }
     /**
      * Gets the windows property value. Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.
-     * @return a windowsApplication
+     * @return a WindowsApplication
      */
     @jakarta.annotation.Nullable
     public WindowsApplication getWindows() {
@@ -710,7 +710,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.api = value;
     }
     /**
-     * Sets the appId property value. The unique identifier for the application that is assigned by Azure AD. Not nullable. Read-only. Supports $filter (eq).
+     * Sets the appId property value. The unique identifier for the application that is assigned by Microsoft Entra ID. Not nullable. Read-only. Alternate key. Supports $filter (eq).
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
@@ -745,7 +745,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.certification = value;
     }
     /**
-     * Sets the connectorGroup property value. The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
+     * Sets the connectorGroup property value. The connectorGroup the application is using with Microsoft Entra application proxy. Nullable.
      * @param value Value to set for the connectorGroup property.
      */
     public void setConnectorGroup(@jakarta.annotation.Nullable final ConnectorGroup value) {
@@ -766,7 +766,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.createdOnBehalfOf = value;
     }
     /**
-     * Sets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * Sets the defaultRedirectUri property value. The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      * @param value Value to set for the defaultRedirectUri property.
      */
     public void setDefaultRedirectUri(@jakarta.annotation.Nullable final String value) {
@@ -808,7 +808,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.federatedIdentityCredentials = value;
     }
     /**
-     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+     * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Microsoft Entra roles), All (this gets all security groups, distribution groups, and Microsoft Entra directory roles that the signed-in user is a member of).
      * @param value Value to set for the groupMembershipClaims property.
      */
     public void setGroupMembershipClaims(@jakarta.annotation.Nullable final String value) {
@@ -822,14 +822,14 @@ public class Application extends DirectoryObject implements Parsable {
         this.homeRealmDiscoveryPolicies = value;
     }
     /**
-     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.identifierUris = value;
     }
     /**
-     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @param value Value to set for the info property.
      */
     public void setInfo(@jakarta.annotation.Nullable final InformationalUrl value) {
@@ -843,7 +843,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.isDeviceOnlyAuthSupported = value;
     }
     /**
-     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
+     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID cannot determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      * @param value Value to set for the isFallbackPublicClient property.
      */
     public void setIsFallbackPublicClient(@jakarta.annotation.Nullable final Boolean value) {
@@ -878,7 +878,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.onPremisesPublishing = value;
     }
     /**
-     * Sets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
+     * Sets the optionalClaims property value. Application developers can configure optional claims in their Microsoft Entra applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
      * @param value Value to set for the optionalClaims property.
      */
     public void setOptionalClaims(@jakarta.annotation.Nullable final OptionalClaims value) {
@@ -920,7 +920,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.publisherDomain = value;
     }
     /**
-     * Sets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
+     * Sets the requestSignatureVerification property value. Specifies whether this application requires Microsoft Entra ID to verify the signed authentication requests.
      * @param value Value to set for the requestSignatureVerification property.
      */
     public void setRequestSignatureVerification(@jakarta.annotation.Nullable final RequestSignatureVerification value) {
@@ -969,7 +969,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.spa = value;
     }
     /**
-     * Sets the synchronization property value. Represents the capability for Azure Active Directory (Azure AD) identity synchronization through the Microsoft Graph API.
+     * Sets the synchronization property value. Represents the capability for Microsoft Entra identity synchronization through the Microsoft Graph API.
      * @param value Value to set for the synchronization property.
      */
     public void setSynchronization(@jakarta.annotation.Nullable final Synchronization value) {
@@ -983,7 +983,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.tags = value;
     }
     /**
-     * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+     * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Microsoft Entra ID encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
      * @param value Value to set for the tokenEncryptionKeyId property.
      */
     public void setTokenEncryptionKeyId(@jakarta.annotation.Nullable final UUID value) {

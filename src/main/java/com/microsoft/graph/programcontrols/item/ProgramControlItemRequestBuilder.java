@@ -45,7 +45,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-delete?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return delete(null);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @see <a href="https://learn.microsoft.com/graph/api/programcontrol-delete?view=graph-rest-1.0">Find more info here</a>
      */
@@ -67,7 +67,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get entity from programControls by key
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> get() {
@@ -76,7 +76,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get entity from programControls by key
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -89,7 +89,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in programControls
      * @param body The request body
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> patch(@jakarta.annotation.Nonnull final ProgramControl body) {
@@ -99,7 +99,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * Update entity in programControls
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of programControl
+     * @return a CompletableFuture of ProgramControl
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProgramControl> patch(@jakarta.annotation.Nonnull final ProgramControl body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProgramControl::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -119,22 +119,23 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * In the Azure AD access reviews feature, delete a programControl object.  This unlinks an access review from a program.
+     * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -153,10 +154,6 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -164,6 +161,10 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -185,17 +186,17 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ProgramControl body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

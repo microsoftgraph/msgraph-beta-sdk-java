@@ -85,7 +85,7 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of assignment filters
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilterCollectionResponse
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilterCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> get() {
@@ -94,7 +94,7 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of assignment filters
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilterCollectionResponse
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilterCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilterCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getPlatformSupportedProperties method.
      * @param platform Usage: platform='{platform}'
-     * @return a getPlatformSupportedPropertiesWithPlatformRequestBuilder
+     * @return a GetPlatformSupportedPropertiesWithPlatformRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetPlatformSupportedPropertiesWithPlatformRequestBuilder getPlatformSupportedPropertiesWithPlatform(@jakarta.annotation.Nonnull final String platform) {
@@ -117,7 +117,7 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to assignmentFilters for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> post(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body) {
@@ -127,7 +127,7 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to assignmentFilters for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceAndAppManagementAssignmentFilter
+     * @return a CompletableFuture of DeviceAndAppManagementAssignmentFilter
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAndAppManagementAssignmentFilter> post(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -154,10 +154,6 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -165,6 +161,10 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -186,23 +186,23 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceAndAppManagementAssignmentFilter body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a assignmentFiltersRequestBuilder
+     * @return a AssignmentFiltersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public AssignmentFiltersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

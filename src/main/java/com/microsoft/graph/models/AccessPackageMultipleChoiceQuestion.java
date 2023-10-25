@@ -17,7 +17,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      */
     private java.util.List<AccessPackageAnswerChoice> choices;
     /**
-     * Instantiates a new accessPackageMultipleChoiceQuestion and sets the default values.
+     * Instantiates a new AccessPackageMultipleChoiceQuestion and sets the default values.
      */
     public AccessPackageMultipleChoiceQuestion() {
         super();
@@ -26,7 +26,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageMultipleChoiceQuestion
+     * @return a AccessPackageMultipleChoiceQuestion
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageMultipleChoiceQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     }
     /**
      * Gets the allowsMultipleSelection property value. Indicates whether requestor can select multiple choices as their answer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowsMultipleSelection() {
@@ -43,7 +43,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     }
     /**
      * Gets the choices property value. List of answer choices.
-     * @return a accessPackageAnswerChoice
+     * @return a java.util.List<AccessPackageAnswerChoice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAnswerChoice> getChoices() {

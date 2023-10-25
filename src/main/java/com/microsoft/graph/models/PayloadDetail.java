@@ -30,7 +30,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
      */
     private String phishingUrl;
     /**
-     * Instantiates a new payloadDetail and sets the default values.
+     * Instantiates a new PayloadDetail and sets the default values.
      */
     public PayloadDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a payloadDetail
+     * @return a PayloadDetail
      */
     @jakarta.annotation.Nonnull
     public static PayloadDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         return new PayloadDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the coachmarks property value. Payload coachmark details.
-     * @return a payloadCoachmark
+     * @return a java.util.List<PayloadCoachmark>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PayloadCoachmark> getCoachmarks() {
@@ -70,7 +70,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the content property value. Payload content details.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -91,7 +91,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the phishingUrl property value. The phishing URL used to target a user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhishingUrl() {
@@ -118,8 +118,8 @@ public class PayloadDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

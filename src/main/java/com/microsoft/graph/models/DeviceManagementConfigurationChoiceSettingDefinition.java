@@ -9,15 +9,15 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationChoiceSettingDefinition extends DeviceManagementConfigurationSettingDefinition implements Parsable {
     /**
-     * Default option for the choice setting.
+     * Default option for choice setting
      */
     private String defaultOptionId;
     /**
-     * Options for the setting that can be selected.
+     * Options for the setting that can be selected
      */
     private java.util.List<DeviceManagementConfigurationOptionDefinition> options;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingDefinition and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingDefinition() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingDefinition
+     * @return a DeviceManagementConfigurationChoiceSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,8 +40,8 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
         return new DeviceManagementConfigurationChoiceSettingDefinition();
     }
     /**
-     * Gets the defaultOptionId property value. Default option for the choice setting.
-     * @return a string
+     * Gets the defaultOptionId property value. Default option for choice setting
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultOptionId() {
@@ -59,8 +59,8 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
         return deserializerMap;
     }
     /**
-     * Gets the options property value. Options for the setting that can be selected.
-     * @return a deviceManagementConfigurationOptionDefinition
+     * Gets the options property value. Options for the setting that can be selected
+     * @return a java.util.List<DeviceManagementConfigurationOptionDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationOptionDefinition> getOptions() {
@@ -77,14 +77,14 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
         writer.writeCollectionOfObjectValues("options", this.getOptions());
     }
     /**
-     * Sets the defaultOptionId property value. Default option for the choice setting.
+     * Sets the defaultOptionId property value. Default option for choice setting
      * @param value Value to set for the defaultOptionId property.
      */
     public void setDefaultOptionId(@jakarta.annotation.Nullable final String value) {
         this.defaultOptionId = value;
     }
     /**
-     * Sets the options property value. Options for the setting that can be selected.
+     * Sets the options property value. Options for the setting that can be selected
      * @param value Value to set for the options property.
      */
     public void setOptions(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationOptionDefinition> value) {

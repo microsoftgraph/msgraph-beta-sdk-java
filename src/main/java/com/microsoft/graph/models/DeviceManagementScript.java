@@ -73,7 +73,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      */
     private java.util.List<DeviceManagementScriptUserState> userRunStates;
     /**
-     * Instantiates a new deviceManagementScript and sets the default values.
+     * Instantiates a new DeviceManagementScript and sets the default values.
      */
     public DeviceManagementScript() {
         super();
@@ -81,7 +81,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScript
+     * @return a DeviceManagementScript
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +90,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the device management script.
-     * @return a deviceManagementScriptAssignment
+     * @return a java.util.List<DeviceManagementScriptAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptAssignment> getAssignments() {
@@ -106,7 +106,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Optional description for the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -114,7 +114,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the deviceRunStates property value. List of run states for this script across all devices.
-     * @return a deviceManagementScriptDeviceState
+     * @return a java.util.List<DeviceManagementScriptDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
@@ -122,7 +122,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the device management script.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -130,7 +130,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the enforceSignatureCheck property value. Indicate whether the script signature needs be checked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnforceSignatureCheck() {
@@ -162,7 +162,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the fileName property value. Script file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {
@@ -170,7 +170,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for the device management script.
-     * @return a deviceManagementScriptGroupAssignment
+     * @return a java.util.List<DeviceManagementScriptGroupAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptGroupAssignment> getGroupAssignments() {
@@ -186,7 +186,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tag IDs for this PowerShellScript instance.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -194,7 +194,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether the PowerShell script should run as 32-bit
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunAs32Bit() {
@@ -202,7 +202,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -210,7 +210,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the runSummary property value. Run summary for device management script.
-     * @return a deviceManagementScriptRunSummary
+     * @return a DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nullable
     public DeviceManagementScriptRunSummary getRunSummary() {
@@ -218,7 +218,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the scriptContent property value. The script content.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getScriptContent() {
@@ -226,7 +226,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     }
     /**
      * Gets the userRunStates property value. List of run states for this script across all users.
-     * @return a deviceManagementScriptUserState
+     * @return a java.util.List<DeviceManagementScriptUserState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptUserState> getUserRunStates() {

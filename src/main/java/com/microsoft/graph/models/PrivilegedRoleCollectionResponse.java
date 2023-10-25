@@ -13,7 +13,7 @@ public class PrivilegedRoleCollectionResponse extends BaseCollectionPaginationCo
      */
     private java.util.List<PrivilegedRole> value;
     /**
-     * Instantiates a new privilegedRoleCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedRoleCollectionResponse and sets the default values.
      */
     public PrivilegedRoleCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PrivilegedRoleCollectionResponse extends BaseCollectionPaginationCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleCollectionResponse
+     * @return a PrivilegedRoleCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRoleCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PrivilegedRoleCollectionResponse extends BaseCollectionPaginationCo
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedRole
+     * @return a java.util.List<PrivilegedRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedRole> getValue() {

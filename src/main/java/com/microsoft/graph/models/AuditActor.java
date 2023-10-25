@@ -69,7 +69,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<RoleScopeTagInfo> userRoleScopeTags;
     /**
-     * Instantiates a new auditActor and sets the default values.
+     * Instantiates a new AuditActor and sets the default values.
      */
     public AuditActor() {
         this.setAdditionalData(new HashMap<>());
@@ -77,7 +77,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a auditActor
+     * @return a AuditActor
      */
     @jakarta.annotation.Nonnull
     public static AuditActor createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
         return new AuditActor();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -94,7 +94,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationDisplayName property value. Name of the Application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationDisplayName() {
@@ -102,7 +102,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationId property value. AAD Application Id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
@@ -110,7 +110,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the auditActorType property value. Actor Type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuditActorType() {
@@ -140,7 +140,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IPAddress.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -148,7 +148,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -156,7 +156,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remoteTenantId property value. Remote Tenant Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteTenantId() {
@@ -164,7 +164,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remoteUserId property value. Remote User Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteUserId() {
@@ -172,7 +172,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the servicePrincipalName property value. Service Principal Name (SPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
@@ -180,7 +180,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. Actor Type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -188,7 +188,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userId property value. User Id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -196,7 +196,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPermissions property value. List of user permissions when the audit was performed.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUserPermissions() {
@@ -204,7 +204,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name (UPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -212,7 +212,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userRoleScopeTags property value. List of user scope tags when the audit was performed.
-     * @return a roleScopeTagInfo
+     * @return a java.util.List<RoleScopeTagInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTagInfo> getUserRoleScopeTags() {
@@ -240,8 +240,8 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

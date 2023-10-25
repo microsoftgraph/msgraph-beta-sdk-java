@@ -41,7 +41,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      */
     private MicrosoftTunnelLogCollectionStatus status;
     /**
-     * Instantiates a new microsoftTunnelServerLogCollectionResponse and sets the default values.
+     * Instantiates a new MicrosoftTunnelServerLogCollectionResponse and sets the default values.
      */
     public MicrosoftTunnelServerLogCollectionResponse() {
         super();
@@ -49,7 +49,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelServerLogCollectionResponse
+     * @return a MicrosoftTunnelServerLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelServerLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -98,7 +98,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the serverId property value. ID of the server the log collection is requested upon
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServerId() {
@@ -106,7 +106,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the sizeInBytes property value. The size of the logs in bytes
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSizeInBytes() {
@@ -122,7 +122,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     }
     /**
      * Gets the status property value. Enum type that represent the status of log collection
-     * @return a microsoftTunnelLogCollectionStatus
+     * @return a MicrosoftTunnelLogCollectionStatus
      */
     @jakarta.annotation.Nullable
     public MicrosoftTunnelLogCollectionStatus getStatus() {

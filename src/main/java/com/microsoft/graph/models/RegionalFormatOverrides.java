@@ -46,7 +46,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
      */
     private String timeZone;
     /**
-     * Instantiates a new regionalFormatOverrides and sets the default values.
+     * Instantiates a new RegionalFormatOverrides and sets the default values.
      */
     public RegionalFormatOverrides() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a regionalFormatOverrides
+     * @return a RegionalFormatOverrides
      */
     @jakarta.annotation.Nonnull
     public static RegionalFormatOverrides createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
         return new RegionalFormatOverrides();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the calendar property value. The calendar to use, e.g., Gregorian Calendar.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalendar() {
@@ -96,7 +96,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the firstDayOfWeek property value. The first day of the week to use, e.g., Sunday.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirstDayOfWeek() {
@@ -104,7 +104,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the longDateFormat property value. The long date time format to be used for displaying dates.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLongDateFormat() {
@@ -112,7 +112,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the longTimeFormat property value. The long time format to be used for displaying time.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLongTimeFormat() {
@@ -120,7 +120,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -128,7 +128,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shortDateFormat property value. The short date time format to be used for displaying dates.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortDateFormat() {
@@ -136,7 +136,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the shortTimeFormat property value. The short time format to be used for displaying time.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortTimeFormat() {
@@ -144,7 +144,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the timeZone property value. The timezone to be used for displaying time.Returned by default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
@@ -167,8 +167,8 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

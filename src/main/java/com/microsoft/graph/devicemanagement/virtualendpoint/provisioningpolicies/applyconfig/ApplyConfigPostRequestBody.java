@@ -24,7 +24,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     private EnumSet<CloudPcPolicySettingType> policySettings;
     /**
-     * Instantiates a new applyConfigPostRequestBody and sets the default values.
+     * Instantiates a new ApplyConfigPostRequestBody and sets the default values.
      */
     public ApplyConfigPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -32,7 +32,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applyConfigPostRequestBody
+     * @return a ApplyConfigPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ApplyConfigPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, Parsabl
         return new ApplyConfigPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the cloudPcIds property value. The cloudPcIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCloudPcIds() {
@@ -68,7 +68,7 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the policySettings property value. The policySettings property
-     * @return a cloudPcPolicySettingType
+     * @return a EnumSet<CloudPcPolicySettingType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<CloudPcPolicySettingType> getPolicySettings() {
@@ -85,8 +85,8 @@ public class ApplyConfigPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

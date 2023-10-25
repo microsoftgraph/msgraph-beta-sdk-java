@@ -25,7 +25,7 @@ public class PrivilegedRole extends Entity implements Parsable {
      */
     private PrivilegedRoleSummary summary;
     /**
-     * Instantiates a new privilegedRole and sets the default values.
+     * Instantiates a new PrivilegedRole and sets the default values.
      */
     public PrivilegedRole() {
         super();
@@ -33,7 +33,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRole
+     * @return a PrivilegedRole
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedRole createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The assignments property
-     * @return a privilegedRoleAssignment
+     * @return a java.util.List<PrivilegedRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedRoleAssignment> getAssignments() {
@@ -63,7 +63,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -71,7 +71,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a privilegedRoleSettings
+     * @return a PrivilegedRoleSettings
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSettings getSettings() {
@@ -79,7 +79,7 @@ public class PrivilegedRole extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. The summary property
-     * @return a privilegedRoleSummary
+     * @return a PrivilegedRoleSummary
      */
     @jakarta.annotation.Nullable
     public PrivilegedRoleSummary getSummary() {

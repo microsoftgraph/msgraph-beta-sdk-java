@@ -13,7 +13,7 @@ public class ItemPublicationCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<ItemPublication> value;
     /**
-     * Instantiates a new itemPublicationCollectionResponse and sets the default values.
+     * Instantiates a new ItemPublicationCollectionResponse and sets the default values.
      */
     public ItemPublicationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ItemPublicationCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPublicationCollectionResponse
+     * @return a ItemPublicationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ItemPublicationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ItemPublicationCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a itemPublication
+     * @return a java.util.List<ItemPublication>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemPublication> getValue() {

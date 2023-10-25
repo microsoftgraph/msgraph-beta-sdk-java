@@ -14,7 +14,7 @@ public class ManagementTemplateCollectionResponse extends BaseCollectionPaginati
      */
     private java.util.List<ManagementTemplate> value;
     /**
-     * Instantiates a new managementTemplateCollectionResponse and sets the default values.
+     * Instantiates a new ManagementTemplateCollectionResponse and sets the default values.
      */
     public ManagementTemplateCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ManagementTemplateCollectionResponse extends BaseCollectionPaginati
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateCollectionResponse
+     * @return a ManagementTemplateCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ManagementTemplateCollectionResponse extends BaseCollectionPaginati
     }
     /**
      * Gets the value property value. The value property
-     * @return a managementTemplate
+     * @return a java.util.List<ManagementTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplate> getValue() {

@@ -29,7 +29,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
      */
     private GroupPolicyPresentation presentation;
     /**
-     * Instantiates a new groupPolicyPresentationValue and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValue and sets the default values.
      */
     public GroupPolicyPresentationValue() {
         super();
@@ -37,7 +37,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValue
+     * @return a GroupPolicyPresentationValue
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValue createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     }
     /**
      * Gets the definitionValue property value. The group policy definition value associated with the presentation value.
-     * @return a groupPolicyDefinitionValue
+     * @return a GroupPolicyDefinitionValue
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinitionValue getDefinitionValue() {
@@ -95,7 +95,7 @@ public class GroupPolicyPresentationValue extends Entity implements Parsable {
     }
     /**
      * Gets the presentation property value. The group policy presentation associated with the presentation value.
-     * @return a groupPolicyPresentation
+     * @return a GroupPolicyPresentation
      */
     @jakarta.annotation.Nullable
     public GroupPolicyPresentation getPresentation() {

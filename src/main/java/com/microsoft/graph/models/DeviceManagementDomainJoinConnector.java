@@ -29,7 +29,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     private String version;
     /**
-     * Instantiates a new deviceManagementDomainJoinConnector and sets the default values.
+     * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
      */
     public DeviceManagementDomainJoinConnector() {
         super();
@@ -37,7 +37,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementDomainJoinConnector
+     * @return a DeviceManagementDomainJoinConnector
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the displayName property value. The connector display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the state property value. The ODJ request states.
-     * @return a deviceManagementDomainJoinConnectorState
+     * @return a DeviceManagementDomainJoinConnectorState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDomainJoinConnectorState getState() {
@@ -83,7 +83,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     }
     /**
      * Gets the version property value. The version of the connector.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

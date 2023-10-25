@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      */
     private DeviceManagementConfigurationSettingValueDefinition valueDefinition;
     /**
-     * Instantiates a new deviceManagementConfigurationSimpleSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSimpleSettingDefinition and sets the default values.
      */
     public DeviceManagementConfigurationSimpleSettingDefinition() {
         super();
@@ -33,7 +33,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSimpleSettingDefinition
+     * @return a DeviceManagementConfigurationSimpleSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSimpleSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
     }
     /**
      * Gets the defaultValue property value. Default setting value for this setting
-     * @return a deviceManagementConfigurationSettingValue
+     * @return a DeviceManagementConfigurationSettingValue
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingValue getDefaultValue() {
@@ -57,7 +57,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
     }
     /**
      * Gets the dependedOnBy property value. list of child settings that depend on this setting
-     * @return a deviceManagementConfigurationSettingDependedOnBy
+     * @return a java.util.List<DeviceManagementConfigurationSettingDependedOnBy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDependedOnBy> getDependedOnBy() {
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
     }
     /**
      * Gets the dependentOn property value. list of parent settings this setting is dependent on
-     * @return a deviceManagementConfigurationDependentOn
+     * @return a java.util.List<DeviceManagementConfigurationDependentOn>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationDependentOn> getDependentOn() {
@@ -86,7 +86,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
     }
     /**
      * Gets the valueDefinition property value. Definition of the value for this setting
-     * @return a deviceManagementConfigurationSettingValueDefinition
+     * @return a DeviceManagementConfigurationSettingValueDefinition
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingValueDefinition getValueDefinition() {

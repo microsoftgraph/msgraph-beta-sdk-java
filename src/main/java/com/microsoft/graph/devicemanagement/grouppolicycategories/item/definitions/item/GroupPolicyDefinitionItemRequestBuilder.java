@@ -38,7 +38,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The immediate GroupPolicyDefinition children of the category
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get() {
@@ -47,7 +47,7 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * The immediate GroupPolicyDefinition children of the category
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyDefinition
+     * @return a CompletableFuture of GroupPolicyDefinition
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<GroupPolicyDefinition> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -73,10 +73,6 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class GroupPolicyDefinitionItemRequestBuilder extends BaseRequestBuilder 
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**

@@ -16,7 +16,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
      */
     private String targetGroupId;
     /**
-     * Instantiates a new mobileAppProvisioningConfigGroupAssignment and sets the default values.
+     * Instantiates a new MobileAppProvisioningConfigGroupAssignment and sets the default values.
      */
     public MobileAppProvisioningConfigGroupAssignment() {
         super();
@@ -24,7 +24,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppProvisioningConfigGroupAssignment
+     * @return a MobileAppProvisioningConfigGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static MobileAppProvisioningConfigGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class MobileAppProvisioningConfigGroupAssignment extends Entity implement
     }
     /**
      * Gets the targetGroupId property value. The ID of the AAD group in which the app provisioning configuration is being targeted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {

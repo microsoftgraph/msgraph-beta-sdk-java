@@ -66,7 +66,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
      */
     private String osVersion;
     /**
-     * Instantiates a new unmanagedDevice and sets the default values.
+     * Instantiates a new UnmanagedDevice and sets the default values.
      */
     public UnmanagedDevice() {
         this.setAdditionalData(new HashMap<>());
@@ -74,7 +74,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unmanagedDevice
+     * @return a UnmanagedDevice
      */
     @jakarta.annotation.Nonnull
     public static UnmanagedDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
         return new UnmanagedDevice();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +91,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceName property value. Device name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -99,7 +99,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the domain property value. Domain.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
@@ -128,7 +128,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipAddress property value. IP address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -136,7 +136,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the lastLoggedOnUser property value. Last logged on user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastLoggedOnUser() {
@@ -152,7 +152,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the location property value. Location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocation() {
@@ -160,7 +160,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the macAddress property value. MAC address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
@@ -168,7 +168,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the manufacturer property value. Manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -176,7 +176,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the model property value. Model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -184,7 +184,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -192,7 +192,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the os property value. Operating system.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOs() {
@@ -200,7 +200,7 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the osVersion property value. Operating system version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -227,8 +227,8 @@ public class UnmanagedDevice implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

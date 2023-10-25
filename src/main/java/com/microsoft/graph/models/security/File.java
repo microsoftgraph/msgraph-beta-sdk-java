@@ -60,7 +60,7 @@ public class File extends Entity implements Parsable {
      */
     private String subjectTitle;
     /**
-     * Instantiates a new file and sets the default values.
+     * Instantiates a new File and sets the default values.
      */
     public File() {
         super();
@@ -68,7 +68,7 @@ public class File extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a file
+     * @return a File
      */
     @jakarta.annotation.Nonnull
     public static File createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -84,7 +84,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -100,7 +100,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the extension property value. The extension property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExtension() {
@@ -108,7 +108,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the extractedTextContent property value. The extractedTextContent property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getExtractedTextContent() {
@@ -137,7 +137,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -145,7 +145,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -153,7 +153,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the otherProperties property value. The otherProperties property
-     * @return a stringValueDictionary
+     * @return a StringValueDictionary
      */
     @jakarta.annotation.Nullable
     public StringValueDictionary getOtherProperties() {
@@ -161,7 +161,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a fileProcessingStatus
+     * @return a FileProcessingStatus
      */
     @jakarta.annotation.Nullable
     public FileProcessingStatus getProcessingStatus() {
@@ -169,7 +169,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the senderOrAuthors property value. The senderOrAuthors property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSenderOrAuthors() {
@@ -177,7 +177,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -185,7 +185,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the sourceType property value. The sourceType property
-     * @return a sourceType
+     * @return a EnumSet<SourceType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SourceType> getSourceType() {
@@ -193,7 +193,7 @@ public class File extends Entity implements Parsable {
     }
     /**
      * Gets the subjectTitle property value. The subjectTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectTitle() {
