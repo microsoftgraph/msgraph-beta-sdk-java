@@ -42,6 +42,15 @@ public class AuthenticationMethodsRegistrationCampaign implements IJsonBackedObj
     }
 
     /**
+     * The Enforce Registration After Allowed Snoozes.
+     * Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+     */
+    @SerializedName(value = "enforceRegistrationAfterAllowedSnoozes", alternate = {"EnforceRegistrationAfterAllowedSnoozes"})
+    @Expose
+	@Nullable
+    public Boolean enforceRegistrationAfterAllowedSnoozes;
+
+    /**
      * The Exclude Targets.
      * Users and groups of users that are excluded from being prompted to set up the authentication method.
      */
@@ -61,7 +70,7 @@ public class AuthenticationMethodsRegistrationCampaign implements IJsonBackedObj
 
     /**
      * The Snooze Duration In Days.
-     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0' – The user is prompted during every MFA attempt.
+     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0 – The user is prompted during every MFA attempt.
      */
     @SerializedName(value = "snoozeDurationInDays", alternate = {"SnoozeDurationInDays"})
     @Expose
@@ -70,7 +79,7 @@ public class AuthenticationMethodsRegistrationCampaign implements IJsonBackedObj
 
     /**
      * The State.
-     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

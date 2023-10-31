@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.Entity;
 
 
@@ -33,6 +34,42 @@ public class CallRecording extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The Meeting Id.
+     * The unique identifier of the onlineMeeting related to this recording. Read-only.
+     */
+    @SerializedName(value = "meetingId", alternate = {"MeetingId"})
+    @Expose
+	@Nullable
+    public String meetingId;
+
+    /**
+     * The Meeting Organizer.
+     * The identity information of the organizer of the onlineMeeting related to this recording. Read-only.
+     */
+    @SerializedName(value = "meetingOrganizer", alternate = {"MeetingOrganizer"})
+    @Expose
+	@Nullable
+    public IdentitySet meetingOrganizer;
+
+    /**
+     * The Meeting Organizer Id.
+     * The unique identifier of the organizer of the onlineMeeting related to this recording. Read-only.
+     */
+    @SerializedName(value = "meetingOrganizerId", alternate = {"MeetingOrganizerId"})
+    @Expose
+	@Nullable
+    public String meetingOrganizerId;
+
+    /**
+     * The Recording Content Url.
+     * The URL which can be used to access the content of the recording. Read-only.
+     */
+    @SerializedName(value = "recordingContentUrl", alternate = {"RecordingContentUrl"})
+    @Expose
+	@Nullable
+    public String recordingContentUrl;
 
 
     /**

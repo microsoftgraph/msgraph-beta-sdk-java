@@ -27,7 +27,7 @@ public class EducationLinkedAssignmentResource extends EducationResource impleme
 
     /**
      * The Url.
-     * 
+     * URL of the actual assignment.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

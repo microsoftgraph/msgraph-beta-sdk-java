@@ -32,7 +32,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Assignees.
-     * 
+     * A collection of user identities the task is assigned to.
      */
     @SerializedName(value = "assignees", alternate = {"Assignees"})
     @Expose
@@ -41,7 +41,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed By.
-     * 
+     * The identity of the user who completed the task. Nullable.
      */
     @SerializedName(value = "completedBy", alternate = {"CompletedBy"})
     @Expose
@@ -50,7 +50,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Completed Date Time.
-     * 
+     * Date and time when the task was completed. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -59,7 +59,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * A user identity that creates the task. Nullable.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -68,7 +68,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date and time when the task was created. Nullable. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -77,7 +77,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Percent Complete.
-     * 
+     * An integer value from 0 to 100 that represents the percentage of the completion of the task. 100 means that the task is completed. Nullable.
      */
     @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose
@@ -86,7 +86,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * 
+     * An integer value from 0 to 10 that represents the priority of the task. A lower value indicates a higher priority. Nullable.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -95,7 +95,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Start And Due Date Time.
-     * 
+     * Start and due date of the task. Nullable.
      */
     @SerializedName(value = "startAndDueDateTime", alternate = {"StartAndDueDateTime"})
     @Expose
@@ -104,7 +104,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * The title of the task.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -113,7 +113,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Changes.
-     * 
+     * A collection of task change histories.
      */
     @SerializedName(value = "changes", alternate = {"Changes"})
     @Expose
@@ -122,7 +122,7 @@ public class WorkbookDocumentTask extends Entity implements IJsonBackedObject {
 
     /**
      * The Comment.
-     * 
+     * The comment that the task is associated with.
      */
     @SerializedName(value = "comment", alternate = {"Comment"})
     @Expose

@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.PrivateNetworkDestinationType;
+import com.microsoft.graph.models.PrivateNetworkProtocol;
 import com.microsoft.graph.models.ApplicationSegment;
 
 
@@ -36,6 +38,15 @@ public class IpApplicationSegment extends ApplicationSegment implements IJsonBac
     public String destinationHost;
 
     /**
+     * The Destination Type.
+     * 
+     */
+    @SerializedName(value = "destinationType", alternate = {"DestinationType"})
+    @Expose
+	@Nullable
+    public PrivateNetworkDestinationType destinationType;
+
+    /**
      * The Port.
      * 
      */
@@ -52,6 +63,15 @@ public class IpApplicationSegment extends ApplicationSegment implements IJsonBac
     @Expose
 	@Nullable
     public java.util.List<String> ports;
+
+    /**
+     * The Protocol.
+     * 
+     */
+    @SerializedName(value = "protocol", alternate = {"Protocol"})
+    @Expose
+	@Nullable
+    public EnumSet<PrivateNetworkProtocol> protocol;
 
 
     /**

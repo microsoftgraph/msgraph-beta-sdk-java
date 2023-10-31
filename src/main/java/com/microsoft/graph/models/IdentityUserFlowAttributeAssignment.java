@@ -40,7 +40,7 @@ public class IdentityUserFlowAttributeAssignment extends Entity implements IJson
 
     /**
      * The Is Optional.
-     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user cannot complete sign-up without providing a value.
+     * Determines whether the identityUserFlowAttribute is optional. true means the user doesn't have to provide a value. false means the user can't complete sign-up without providing a value.
      */
     @SerializedName(value = "isOptional", alternate = {"IsOptional"})
     @Expose

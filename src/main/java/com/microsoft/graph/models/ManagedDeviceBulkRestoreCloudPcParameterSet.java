@@ -19,7 +19,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Managed Device Bulk Restore Cloud Pc Parameter Set.
+ * @deprecated The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
  */
+@Deprecated
 public class ManagedDeviceBulkRestoreCloudPcParameterSet {
     /**
      * The managed Device Ids.

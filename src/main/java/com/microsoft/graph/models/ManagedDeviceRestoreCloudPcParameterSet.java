@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Managed Device Restore Cloud Pc Parameter Set.
+ * @deprecated The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead
  */
+@Deprecated
 public class ManagedDeviceRestoreCloudPcParameterSet {
     /**
      * The cloud Pc Snapshot Id.

@@ -75,6 +75,24 @@ public class PositionDetail implements IJsonBackedObject {
     public String jobTitle;
 
     /**
+     * The Layer.
+     * 
+     */
+    @SerializedName(value = "layer", alternate = {"Layer"})
+    @Expose
+	@Nullable
+    public Integer layer;
+
+    /**
+     * The Level.
+     * 
+     */
+    @SerializedName(value = "level", alternate = {"Level"})
+    @Expose
+	@Nullable
+    public String level;
+
+    /**
      * The Role.
      * The role the position entailed.
      */

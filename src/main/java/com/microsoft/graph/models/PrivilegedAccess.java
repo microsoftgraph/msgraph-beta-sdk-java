@@ -69,7 +69,7 @@ public class PrivilegedAccess extends Entity implements IJsonBackedObject {
 
     /**
      * The Role Definitions.
-     * A collection of role defintions for the provider.
+     * A collection of role definitions for the provider.
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose

@@ -71,7 +71,7 @@ public class ConversationMemberReferenceRequest extends BaseReferenceRequest<Con
     @Nonnull
     public java.util.concurrent.CompletableFuture<ConversationMember> putAsync(@Nonnull final ConversationMember srcConversationMember) {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/chats/{id}/members/" + srcConversationMember.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/joinedTeams/{id}/members/" + srcConversationMember.id));
         return sendAsync(HttpMethod.PUT, payload);
     }
 
@@ -85,7 +85,7 @@ public class ConversationMemberReferenceRequest extends BaseReferenceRequest<Con
     @Nullable
     public ConversationMember put(@Nonnull final ConversationMember srcConversationMember) throws ClientException {
         final JsonObject payload = new JsonObject();
-        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/chats/{id}/members/" + srcConversationMember.id));
+        payload.add("@odata.id", new JsonPrimitive(this.getClient().getServiceRoot() + "/directory/deletedItemsAsUser/{id}/joinedTeams/{id}/members/" + srcConversationMember.id));
         return send(HttpMethod.PUT, payload);
     }
 }

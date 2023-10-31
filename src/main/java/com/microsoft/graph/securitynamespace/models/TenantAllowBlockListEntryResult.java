@@ -41,7 +41,7 @@ public class TenantAllowBlockListEntryResult implements IJsonBackedObject {
 
     /**
      * The Entry Type.
-     * The entry type of tenant allow block list. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
+     * The tenant allow-block list entry type. The possible values are: url, fileHash, sender, recipient and unkownFutureValue.
      */
     @SerializedName(value = "entryType", alternate = {"EntryType"})
     @Expose
@@ -50,7 +50,7 @@ public class TenantAllowBlockListEntryResult implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * Specifies when will this entry expire in date time.
+     * Specifies the date and time when the entry expires.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose

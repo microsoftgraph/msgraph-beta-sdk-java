@@ -20,7 +20,9 @@ import com.microsoft.graph.models.ManagedDeviceBulkReprovisionCloudPcParameterSe
 
 /**
  * The class for the Managed Device Bulk Reprovision Cloud Pc Request.
+ * @deprecated The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api.
  */
+@Deprecated
 public class ManagedDeviceBulkReprovisionCloudPcRequest extends BaseRequest<CloudPcBulkRemoteActionResult> {
     /**
      * The request for this ManagedDeviceBulkReprovisionCloudPc

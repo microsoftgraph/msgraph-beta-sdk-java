@@ -57,7 +57,7 @@ public class Profile extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * Profile state.The possible values are: enabled, disabled.
+     * Profile state. The possible values are: enabled, disabled.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

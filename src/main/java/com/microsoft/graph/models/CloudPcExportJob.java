@@ -75,7 +75,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Report Name.
-     * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport.
+     * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, inaccessibleCloudPcReports.
      */
     @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose

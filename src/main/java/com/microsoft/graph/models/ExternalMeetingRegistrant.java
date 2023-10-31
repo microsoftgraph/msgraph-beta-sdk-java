@@ -27,7 +27,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
 
     /**
      * The Tenant Id.
-     * The tenant ID of this registrant if in Azure Active Directory.
+     * The tenant ID of this registrant if in Microsoft Entra ID.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -36,7 +36,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
 
     /**
      * The User Id.
-     * The user ID of this registrant if in Azure Active Directory.
+     * The user ID of this registrant if in Microsoft Entra ID.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

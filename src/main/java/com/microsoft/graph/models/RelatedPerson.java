@@ -57,6 +57,15 @@ public class RelatedPerson implements IJsonBackedObject {
     public PersonRelationship relationship;
 
     /**
+     * The User Id.
+     * 
+     */
+    @SerializedName(value = "userId", alternate = {"UserId"})
+    @Expose
+	@Nullable
+    public String userId;
+
+    /**
      * The User Principal Name.
      * Email address or reference to person within organization.
      */

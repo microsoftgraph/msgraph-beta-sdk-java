@@ -69,7 +69,7 @@ public class IdentityContainer implements IJsonBackedObject {
 
     /**
      * The Authentication Events Flows.
-     * Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
+     * Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.
      */
     @SerializedName(value = "authenticationEventsFlows", alternate = {"AuthenticationEventsFlows"})
     @Expose

@@ -28,7 +28,7 @@ public class BitlockerRecoveryKey extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date and time when the key was originally backed up to Azure Active Directory.
+     * The date and time when the key was originally backed up to Microsoft Entra ID.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose

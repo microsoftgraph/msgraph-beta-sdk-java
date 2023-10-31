@@ -31,7 +31,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The display name of the user that created the module.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -40,7 +40,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * 
+     * Description of the module.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Name of the module.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -67,7 +67,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Pinned.
-     * 
+     * Indicates whether the module is pinned or not.
      */
     @SerializedName(value = "isPinned", alternate = {"IsPinned"})
     @Expose
@@ -76,7 +76,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * The last user that modified the module.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -85,7 +85,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -94,7 +94,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources Folder Url.
-     * 
+     * Folder URL where all the file resources for this module are stored.
      */
     @SerializedName(value = "resourcesFolderUrl", alternate = {"ResourcesFolderUrl"})
     @Expose
@@ -103,7 +103,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -112,7 +112,7 @@ public class EducationModule extends Entity implements IJsonBackedObject {
 
     /**
      * The Resources.
-     * 
+     * Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
      */
     @SerializedName(value = "resources", alternate = {"Resources"})
     @Expose

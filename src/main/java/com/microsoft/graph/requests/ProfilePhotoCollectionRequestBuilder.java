@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.ProfilePhoto;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class ProfilePhotoCollectionRequestBuilder extends BaseCollectionRequestBuilder<ProfilePhoto, ProfilePhotoRequestBuilder, ProfilePhotoCollectionResponse, ProfilePhotoCollectionPage, ProfilePhotoCollectionRequest> {
 
     /**
-     * The request builder for this collection of Group
+     * The request builder for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client

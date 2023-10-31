@@ -14,6 +14,7 @@ import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcConnectivityEvent;
 import com.microsoft.graph.models.CloudPcLaunchInfo;
+import com.microsoft.graph.models.FrontlineCloudPcAccessState;
 import com.microsoft.graph.models.ShiftWorkCloudPcAccessState;
 import com.microsoft.graph.models.CloudPcRemoteActionCapability;
 import java.util.Arrays;

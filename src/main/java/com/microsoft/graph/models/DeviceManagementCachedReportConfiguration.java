@@ -29,7 +29,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
 
     /**
      * The Expiration Date Time.
-     * Time that the cached report expires
+     * Time that the cached report expires. This property is read-only.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
 
     /**
      * The Last Refresh Date Time.
-     * Time that the cached report was last refreshed
+     * Time that the cached report was last refreshed. This property is read-only.
      */
     @SerializedName(value = "lastRefreshDateTime", alternate = {"LastRefreshDateTime"})
     @Expose
@@ -74,7 +74,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
 
     /**
      * The Report Name.
-     * Name of the report
+     * Name of the report. This property is read-only.
      */
     @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose
@@ -92,7 +92,7 @@ public class DeviceManagementCachedReportConfiguration extends Entity implements
 
     /**
      * The Status.
-     * Status of the cached report. Possible values are: unknown, notStarted, inProgress, completed, failed.
+     * Status of the cached report. This property is read-only. Possible values are: unknown, notStarted, inProgress, completed, failed.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

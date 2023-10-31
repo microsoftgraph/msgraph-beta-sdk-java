@@ -215,6 +215,15 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
 	@Nullable
     public Boolean touchIdDisabled;
 
+    /**
+     * The Wait For Device Configured Confirmation.
+     * Indicates if the device will need to wait for configured confirmation
+     */
+    @SerializedName(value = "waitForDeviceConfiguredConfirmation", alternate = {"WaitForDeviceConfiguredConfirmation"})
+    @Expose
+	@Nullable
+    public Boolean waitForDeviceConfiguredConfirmation;
+
 
     /**
      * Sets the raw JSON object

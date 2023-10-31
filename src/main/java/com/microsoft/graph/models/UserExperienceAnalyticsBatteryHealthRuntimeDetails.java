@@ -27,7 +27,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
 
     /**
      * The Active Devices.
-     * Number of active devices within the tenant. Valid values -2147483648 to 2147483647
+     * Number of active devices within the tenant. Valid values 0 to 2147483647
      */
     @SerializedName(value = "activeDevices", alternate = {"ActiveDevices"})
     @Expose
@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
 
     /**
      * The Battery Runtime Fair.
-     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values -2147483648 to 2147483647
+     * Number of devices whose active runtime is greater than 3 hours but lesser than 5 hours. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryRuntimeFair", alternate = {"BatteryRuntimeFair"})
     @Expose
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
 
     /**
      * The Battery Runtime Good.
-     * Number of devices  whose active runtime is greater than 5 hours. Valid values -2147483648 to 2147483647
+     * Number of devices  whose active runtime is greater than 5 hours. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryRuntimeGood", alternate = {"BatteryRuntimeGood"})
     @Expose
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity i
 
     /**
      * The Battery Runtime Poor.
-     * Number of devices whose active runtime is lesser than 3 hours. Valid values -2147483648 to 2147483647
+     * Number of devices whose active runtime is lesser than 3 hours. Valid values 0 to 2147483647
      */
     @SerializedName(value = "batteryRuntimePoor", alternate = {"BatteryRuntimePoor"})
     @Expose

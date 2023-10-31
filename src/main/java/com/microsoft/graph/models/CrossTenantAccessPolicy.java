@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CrossTenantAccessPolicyConfigurationDefault;
+import com.microsoft.graph.models.PolicyTemplate;
 import com.microsoft.graph.models.TenantRelationshipAccessPolicyBase;
 import com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage;
 
@@ -39,7 +40,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
 
     /**
      * The Default.
-     * Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
+     * Defines the default configuration for how your organization interacts with external Microsoft Entra organizations.
      */
     @SerializedName(value = "default", alternate = {"Default"})
     @Expose
@@ -48,12 +49,21 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
 
     /**
      * The Partners.
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Defines partner-specific configurations for external Microsoft Entra organizations.
      */
     @SerializedName(value = "partners", alternate = {"Partners"})
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CrossTenantAccessPolicyConfigurationPartnerCollectionPage partners;
+
+    /**
+     * The Templates.
+     * Represents the base policy in the directory for multi-tenant organization settings.
+     */
+    @SerializedName(value = "templates", alternate = {"Templates"})
+    @Expose
+	@Nullable
+    public PolicyTemplate templates;
 
 
     /**

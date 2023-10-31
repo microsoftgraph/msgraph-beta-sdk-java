@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.X509CertificateAuthenticationModeConfiguration;
 import com.microsoft.graph.models.X509CertificateUserBinding;
+import com.microsoft.graph.models.X509CertificateIssuerHintsConfiguration;
 import com.microsoft.graph.models.AuthenticationMethodConfiguration;
 import com.microsoft.graph.requests.AuthenticationMethodTargetCollectionPage;
 
@@ -40,12 +41,21 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
 
     /**
      * The Certificate User Bindings.
-     * Defines fields in the X.509 certificate that map to attributes of the Azure AD user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
+     * Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      */
     @SerializedName(value = "certificateUserBindings", alternate = {"CertificateUserBindings"})
     @Expose
 	@Nullable
     public java.util.List<X509CertificateUserBinding> certificateUserBindings;
+
+    /**
+     * The Issuer Hints Configuration.
+     * Determines whether issuer(CA) hints are sent back to the client side to filter the certificates shown in certificate picker.
+     */
+    @SerializedName(value = "issuerHintsConfiguration", alternate = {"IssuerHintsConfiguration"})
+    @Expose
+	@Nullable
+    public X509CertificateIssuerHintsConfiguration issuerHintsConfiguration;
 
     /**
      * The Include Targets.

@@ -48,7 +48,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Api Url.
-     * The URL link to the corresponding Azure AD resource.
+     * The URL link to the corresponding Microsoft Entra resource.
      */
     @SerializedName(value = "apiUrl", alternate = {"ApiUrl"})
     @Expose
@@ -57,7 +57,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Friendly name of the Azure AD resource.
+     * Friendly name of the Microsoft Entra resource.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -93,7 +93,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Portal Url.
-     * The URL link to the corresponding Azure AD portal page of the resource.
+     * The URL link to the corresponding Microsoft Entra admin center page of the resource.
      */
     @SerializedName(value = "portalUrl", alternate = {"PortalUrl"})
     @Expose
@@ -129,7 +129,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Type.
-     * Indicates the type of Azure AD resource. Examples include user, application.
+     * Indicates the type of Microsoft Entra resource. Examples include user, application.
      */
     @SerializedName(value = "resourceType", alternate = {"ResourceType"})
     @Expose

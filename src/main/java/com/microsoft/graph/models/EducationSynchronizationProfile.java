@@ -70,7 +70,7 @@ public class EducationSynchronizationProfile extends Entity implements IJsonBack
 
     /**
      * The Identity Synchronization Configuration.
-     * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] AAD Users.
+     * Determines how the Profile should [create new][fullsync] or [match existing][dirsync] Microsoft Entra users.
      */
     @SerializedName(value = "identitySynchronizationConfiguration", alternate = {"IdentitySynchronizationConfiguration"})
     @Expose

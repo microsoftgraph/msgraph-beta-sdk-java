@@ -35,7 +35,7 @@ public class ThreatSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Admin Review.
-     * Specifies the admin review property which constitutes of who reviewed the user submission, when and what was it identified as.
+     * Specifies the admin review property that constitutes of who reviewed the user submission, when and what was it identified as.
      */
     @SerializedName(value = "adminReview", alternate = {"AdminReview"})
     @Expose
@@ -116,7 +116,7 @@ public class ThreatSubmission extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * Indicates the tenant id of the submitter. Not required when created using a POST operation. It is extracted from the token of the post API call.
+     * Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose

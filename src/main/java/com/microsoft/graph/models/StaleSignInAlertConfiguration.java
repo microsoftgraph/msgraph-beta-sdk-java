@@ -27,7 +27,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
 
     /**
      * The Duration.
-     * The number of days to look back from current timestamp within which the account has not signed in.
+     * The number of days to look back from current timestamp within which the account hasn't signed in.
      */
     @SerializedName(value = "duration", alternate = {"Duration"})
     @Expose

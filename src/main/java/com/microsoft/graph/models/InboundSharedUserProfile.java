@@ -39,7 +39,7 @@ public class InboundSharedUserProfile implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The name displayed in the address book for teh user at the time when the sharing record was created. Read-only.
+     * The name displayed in the address book for the user at the time when the sharing record was created. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

@@ -48,7 +48,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
 
     /**
      * The Matched People By Role.
-     * Number of people matched to an Azure Active Directory user, by role.
+     * Number of people matched to a Microsoft Entra user, by role.
      */
     @SerializedName(value = "matchedPeopleByRole", alternate = {"MatchedPeopleByRole"})
     @Expose
@@ -84,7 +84,7 @@ public class InboundActivityResults extends IndustryDataActivityStatistics imple
 
     /**
      * The Unmatched People By Role.
-     * Number of people not matched to an Azure Active Directory user, by role.
+     * Number of people not matched to a Microsoft Entra user, by role.
      */
     @SerializedName(value = "unmatchedPeopleByRole", alternate = {"UnmatchedPeopleByRole"})
     @Expose

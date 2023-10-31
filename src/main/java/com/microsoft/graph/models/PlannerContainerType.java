@@ -32,6 +32,10 @@ public enum PlannerContainerType
     */
     DRIVE_ITEM,
     /**
+    * user
+    */
+    USER,
+    /**
     * For PlannerContainerType values that were not expected from the service
     */
     UNEXPECTED_VALUE
