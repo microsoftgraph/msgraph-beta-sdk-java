@@ -82,7 +82,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private String officeLocation;
     /**
-     * Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      */
     private EducationOnPremisesInfo onPremisesInfo;
     /**
@@ -162,7 +162,7 @@ public class EducationUser extends Entity implements Parsable {
      */
     private String userType;
     /**
-     * Instantiates a new educationUser and sets the default values.
+     * Instantiates a new EducationUser and sets the default values.
      */
     public EducationUser() {
         super();
@@ -170,7 +170,7 @@ public class EducationUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationUser
+     * @return a EducationUser
      */
     @jakarta.annotation.Nonnull
     public static EducationUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -179,7 +179,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports /$filter.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAccountEnabled() {
@@ -187,7 +187,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
-     * @return a assignedLicense
+     * @return a java.util.List<AssignedLicense>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedLicense> getAssignedLicenses() {
@@ -195,7 +195,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
-     * @return a assignedPlan
+     * @return a java.util.List<AssignedPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
@@ -203,7 +203,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. List of assignments for the user. Nullable.
-     * @return a educationAssignment
+     * @return a java.util.List<EducationAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationAssignment> getAssignments() {
@@ -211,7 +211,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the businessPhones property value. The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
@@ -219,7 +219,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the classes property value. Classes to which the user belongs. Nullable.
-     * @return a educationClass
+     * @return a java.util.List<EducationClass>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getClasses() {
@@ -227,7 +227,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Entity who created the user.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -235,7 +235,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the department property value. The name for the department in which the user works. Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDepartment() {
@@ -243,7 +243,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name displayed in the address book for the user. Supports $filter and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -251,7 +251,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. The type of external source this resource was generated from (automatically determined from externalSourceDetail). Possible values are: sis, lms, or manual.
-     * @return a educationExternalSource
+     * @return a EducationExternalSource
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
@@ -259,7 +259,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the externalSourceDetail property value. The name of the external source this resource was generated from.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {
@@ -314,7 +314,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the givenName property value. The given name (first name) of the user. Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGivenName() {
@@ -322,7 +322,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.onmicrosoft.com'. Read-Only. Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMail() {
@@ -330,7 +330,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getMailingAddress() {
@@ -338,7 +338,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMailNickname() {
@@ -346,7 +346,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the middleName property value. The middle name of user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMiddleName() {
@@ -354,7 +354,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the mobilePhone property value. The primary cellular telephone number for the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobilePhone() {
@@ -362,15 +362,15 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the officeLocation property value. The officeLocation property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOfficeLocation() {
         return this.officeLocation;
     }
     /**
-     * Gets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
-     * @return a educationOnPremisesInfo
+     * Gets the onPremisesInfo property value. Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
+     * @return a EducationOnPremisesInfo
      */
     @jakarta.annotation.Nullable
     public EducationOnPremisesInfo getOnPremisesInfo() {
@@ -378,7 +378,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for more details.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasswordPolicies() {
@@ -386,7 +386,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
-     * @return a passwordProfile
+     * @return a PasswordProfile
      */
     @jakarta.annotation.Nullable
     public PasswordProfile getPasswordProfile() {
@@ -394,7 +394,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreferredLanguage() {
@@ -402,7 +402,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the primaryRole property value. The primaryRole property
-     * @return a educationUserRole
+     * @return a EducationUserRole
      */
     @jakarta.annotation.Nullable
     public EducationUserRole getPrimaryRole() {
@@ -410,7 +410,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
-     * @return a provisionedPlan
+     * @return a java.util.List<ProvisionedPlan>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
@@ -426,7 +426,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the relatedContacts property value. Related records related to the user. Possible relationships are parent, relative, aide, doctor, guardian, child, other, unknownFutureValue
-     * @return a relatedContact
+     * @return a java.util.List<RelatedContact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RelatedContact> getRelatedContacts() {
@@ -434,7 +434,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getResidenceAddress() {
@@ -442,7 +442,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the rubrics property value. When set, the grading rubric attached to the assignment.
-     * @return a educationRubric
+     * @return a java.util.List<EducationRubric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationRubric> getRubrics() {
@@ -450,7 +450,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the schools property value. Schools to which the user belongs. Nullable.
-     * @return a educationSchool
+     * @return a java.util.List<EducationSchool>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSchool> getSchools() {
@@ -458,7 +458,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the showInAddressList property value. The showInAddressList property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInAddressList() {
@@ -466,7 +466,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the student property value. If the primary role is student, this block contains student specific data.
-     * @return a educationStudent
+     * @return a EducationStudent
      */
     @jakarta.annotation.Nullable
     public EducationStudent getStudent() {
@@ -474,7 +474,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the surname property value. The user's surname (family name or last name). Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSurname() {
@@ -482,7 +482,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the taughtClasses property value. Classes for which the user is a teacher.
-     * @return a educationClass
+     * @return a java.util.List<EducationClass>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationClass> getTaughtClasses() {
@@ -490,7 +490,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
-     * @return a educationTeacher
+     * @return a EducationTeacher
      */
     @jakarta.annotation.Nullable
     public EducationTeacher getTeacher() {
@@ -498,7 +498,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsageLocation() {
@@ -506,7 +506,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the user property value. The user property
-     * @return a user
+     * @return a User
      */
     @jakarta.annotation.Nullable
     public User getUser() {
@@ -514,7 +514,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -522,7 +522,7 @@ public class EducationUser extends Entity implements Parsable {
     }
     /**
      * Gets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserType() {
@@ -701,7 +701,7 @@ public class EducationUser extends Entity implements Parsable {
         this.officeLocation = value;
     }
     /**
-     * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
+     * Sets the onPremisesInfo property value. Additional information used to associate the Microsoft Entra user with its Active Directory counterpart.
      * @param value Value to set for the onPremisesInfo property.
      */
     public void setOnPremisesInfo(@jakarta.annotation.Nullable final EducationOnPremisesInfo value) {

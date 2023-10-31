@@ -42,7 +42,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceComplianceDeviceStatus and sets the default values.
+     * Instantiates a new DeviceComplianceDeviceStatus and sets the default values.
      */
     public DeviceComplianceDeviceStatus() {
         super();
@@ -50,7 +50,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceDeviceStatus
+     * @return a DeviceComplianceDeviceStatus
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceDeviceStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -75,7 +75,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The device model that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -108,7 +108,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. Platform of the device that is being reported
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPlatform() {
@@ -116,7 +116,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getStatus() {
@@ -124,7 +124,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. The User Name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -132,7 +132,7 @@ public class DeviceComplianceDeviceStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

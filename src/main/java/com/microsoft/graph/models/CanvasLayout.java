@@ -17,7 +17,7 @@ public class CanvasLayout extends Entity implements Parsable {
      */
     private VerticalSection verticalSection;
     /**
-     * Instantiates a new canvasLayout and sets the default values.
+     * Instantiates a new CanvasLayout and sets the default values.
      */
     public CanvasLayout() {
         super();
@@ -25,7 +25,7 @@ public class CanvasLayout extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a canvasLayout
+     * @return a CanvasLayout
      */
     @jakarta.annotation.Nonnull
     public static CanvasLayout createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class CanvasLayout extends Entity implements Parsable {
     }
     /**
      * Gets the horizontalSections property value. Collection of horizontal sections on the SharePoint page.
-     * @return a horizontalSection
+     * @return a java.util.List<HorizontalSection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HorizontalSection> getHorizontalSections() {
@@ -53,7 +53,7 @@ public class CanvasLayout extends Entity implements Parsable {
     }
     /**
      * Gets the verticalSection property value. Vertical section on the SharePoint page.
-     * @return a verticalSection
+     * @return a VerticalSection
      */
     @jakarta.annotation.Nullable
     public VerticalSection getVerticalSection() {

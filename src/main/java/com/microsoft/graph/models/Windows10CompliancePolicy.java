@@ -156,7 +156,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     private Boolean virtualizationBasedSecurityEnabled;
     /**
-     * Instantiates a new windows10CompliancePolicy and sets the default values.
+     * Instantiates a new Windows10CompliancePolicy and sets the default values.
      */
     public Windows10CompliancePolicy() {
         super();
@@ -165,7 +165,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10CompliancePolicy
+     * @return a Windows10CompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static Windows10CompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -174,7 +174,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the activeFirewallRequired property value. Require active firewall on Windows devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getActiveFirewallRequired() {
@@ -182,7 +182,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the antiSpywareRequired property value. Require any AntiSpyware solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAntiSpywareRequired() {
@@ -190,7 +190,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the antivirusRequired property value. Require any Antivirus solution registered with Windows Decurity Center to be on and monitoring (e.g. Symantec, Windows Defender).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAntivirusRequired() {
@@ -198,7 +198,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the bitLockerEnabled property value. Require devices to be reported healthy by Windows Device Health Attestation - bit locker is enabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBitLockerEnabled() {
@@ -206,7 +206,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the codeIntegrityEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCodeIntegrityEnabled() {
@@ -214,7 +214,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the configurationManagerComplianceRequired property value. Require to consider SCCM Compliance state into consideration for Intune Compliance State.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConfigurationManagerComplianceRequired() {
@@ -222,7 +222,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the defenderEnabled property value. Require Windows Defender Antimalware on Windows devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDefenderEnabled() {
@@ -230,7 +230,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the defenderVersion property value. Require Windows Defender Antimalware minimum version on Windows devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefenderVersion() {
@@ -238,7 +238,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the deviceCompliancePolicyScript property value. Not yet documented
-     * @return a deviceCompliancePolicyScript
+     * @return a DeviceCompliancePolicyScript
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyScript getDeviceCompliancePolicyScript() {
@@ -246,7 +246,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
@@ -254,7 +254,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -262,7 +262,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the earlyLaunchAntiMalwareDriverEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - early launch antimalware driver is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEarlyLaunchAntiMalwareDriverEnabled() {
@@ -315,7 +315,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the firmwareProtectionEnabled property value. When TRUE, indicates that Firmware protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Firmware protection is not required to be reported as healthy. Devices that support either Dynamic Root of Trust for Measurement (DRTM) or Firmware Attack Surface Reduction (FASR) will report compliant for this setting. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFirmwareProtectionEnabled() {
@@ -323,7 +323,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the kernelDmaProtectionEnabled property value. When TRUE, indicates that Kernel Direct Memory Access (DMA) protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Kernel DMA Protection is not required to be reported as healthy. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKernelDmaProtectionEnabled() {
@@ -331,7 +331,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the memoryIntegrityEnabled property value. When TRUE, indicates that Memory Integrity as known as Hypervisor-protected Code Integrity (HVCI) or Hypervisor Enforced Code Integrity protection is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Memory Integrity Protection is not required to be reported as healthy. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMemoryIntegrityEnabled() {
@@ -339,7 +339,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the mobileOsMaximumVersion property value. Maximum Windows Phone version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobileOsMaximumVersion() {
@@ -347,7 +347,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the mobileOsMinimumVersion property value. Minimum Windows Phone version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMobileOsMinimumVersion() {
@@ -355,7 +355,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Windows 10 version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -363,7 +363,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Windows 10 version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -371,7 +371,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordBlockSimple property value. Indicates whether or not to block simple password.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockSimple() {
@@ -379,7 +379,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordExpirationDays property value. The password expiration in days.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -387,7 +387,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordMinimumCharacterSetCount property value. The number of character sets required in the password.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumCharacterSetCount() {
@@ -395,7 +395,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordMinimumLength property value. The minimum password length.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -403,7 +403,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -411,7 +411,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. The number of previous passwords to prevent re-use of.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -419,7 +419,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock Windows device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -427,7 +427,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordRequiredToUnlockFromIdle property value. Require a password to unlock an idle device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequiredToUnlockFromIdle() {
@@ -435,7 +435,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the passwordRequiredType property value. Possible values of required passwords.
-     * @return a requiredPasswordType
+     * @return a RequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public RequiredPasswordType getPasswordRequiredType() {
@@ -443,7 +443,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the requireHealthyDeviceReport property value. Require devices to be reported as healthy by Windows Device Health Attestation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireHealthyDeviceReport() {
@@ -451,7 +451,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the rtpEnabled property value. Require Windows Defender Antimalware Real-Time Protection on Windows devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRtpEnabled() {
@@ -459,7 +459,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the secureBootEnabled property value. Require devices to be reported as healthy by Windows Device Health Attestation - secure boot is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecureBootEnabled() {
@@ -467,7 +467,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the signatureOutOfDate property value. Require Windows Defender Antimalware Signature to be up to date on Windows devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSignatureOutOfDate() {
@@ -475,7 +475,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on windows devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
@@ -483,7 +483,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the tpmRequired property value. Require Trusted Platform Module(TPM) to be present.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTpmRequired() {
@@ -491,7 +491,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the validOperatingSystemBuildRanges property value. The valid operating system build ranges on Windows devices. This collection can contain a maximum of 10000 elements.
-     * @return a operatingSystemVersionRange
+     * @return a java.util.List<OperatingSystemVersionRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OperatingSystemVersionRange> getValidOperatingSystemBuildRanges() {
@@ -499,7 +499,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
     }
     /**
      * Gets the virtualizationBasedSecurityEnabled property value. When TRUE, indicates that Virtualization-based Security is required to be reported as healthy by Microsoft Azure Attestion. When FALSE, indicates that Virtualization-based Security is not required to be reported as healthy. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVirtualizationBasedSecurityEnabled() {

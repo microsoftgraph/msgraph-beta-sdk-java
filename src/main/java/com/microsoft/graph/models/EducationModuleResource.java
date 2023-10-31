@@ -13,7 +13,7 @@ public class EducationModuleResource extends Entity implements Parsable {
      */
     private EducationResource resource;
     /**
-     * Instantiates a new educationModuleResource and sets the default values.
+     * Instantiates a new EducationModuleResource and sets the default values.
      */
     public EducationModuleResource() {
         super();
@@ -21,7 +21,7 @@ public class EducationModuleResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationModuleResource
+     * @return a EducationModuleResource
      */
     @jakarta.annotation.Nonnull
     public static EducationModuleResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EducationModuleResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object that has been associated with this module.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {

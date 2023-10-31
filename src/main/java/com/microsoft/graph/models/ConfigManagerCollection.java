@@ -37,7 +37,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new configManagerCollection and sets the default values.
+     * Instantiates a new ConfigManagerCollection and sets the default values.
      */
     public ConfigManagerCollection() {
         super();
@@ -45,7 +45,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configManagerCollection
+     * @return a ConfigManagerCollection
      */
     @jakarta.annotation.Nonnull
     public static ConfigManagerCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     }
     /**
      * Gets the collectionIdentifier property value. The collection identifier in SCCM.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCollectionIdentifier() {
@@ -70,7 +70,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The DisplayName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -93,7 +93,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     }
     /**
      * Gets the hierarchyIdentifier property value. The Hierarchy Identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHierarchyIdentifier() {
@@ -101,7 +101,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     }
     /**
      * Gets the hierarchyName property value. The HierarchyName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHierarchyName() {

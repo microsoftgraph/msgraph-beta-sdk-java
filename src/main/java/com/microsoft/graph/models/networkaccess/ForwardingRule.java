@@ -21,7 +21,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      */
     private NetworkDestinationType ruleType;
     /**
-     * Instantiates a new forwardingRule and sets the default values.
+     * Instantiates a new ForwardingRule and sets the default values.
      */
     public ForwardingRule() {
         super();
@@ -30,7 +30,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a forwardingRule
+     * @return a ForwardingRule
      */
     @jakarta.annotation.Nonnull
     public static ForwardingRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,7 +47,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a forwardingRuleAction
+     * @return a ForwardingRuleAction
      */
     @jakarta.annotation.Nullable
     public ForwardingRuleAction getAction() {
@@ -55,7 +55,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
     }
     /**
      * Gets the destinations property value. Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.
-     * @return a ruleDestination
+     * @return a java.util.List<RuleDestination>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RuleDestination> getDestinations() {
@@ -75,7 +75,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
     }
     /**
      * Gets the ruleType property value. The ruleType property
-     * @return a networkDestinationType
+     * @return a NetworkDestinationType
      */
     @jakarta.annotation.Nullable
     public NetworkDestinationType getRuleType() {

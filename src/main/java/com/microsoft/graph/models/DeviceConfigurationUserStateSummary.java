@@ -37,7 +37,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      */
     private Integer unknownUserCount;
     /**
-     * Instantiates a new deviceConfigurationUserStateSummary and sets the default values.
+     * Instantiates a new DeviceConfigurationUserStateSummary and sets the default values.
      */
     public DeviceConfigurationUserStateSummary() {
         super();
@@ -45,7 +45,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationUserStateSummary
+     * @return a DeviceConfigurationUserStateSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationUserStateSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the compliantUserCount property value. Number of compliant users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantUserCount() {
@@ -62,7 +62,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the conflictUserCount property value. Number of conflict users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictUserCount() {
@@ -70,7 +70,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the errorUserCount property value. Number of error users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorUserCount() {
@@ -94,7 +94,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the nonCompliantUserCount property value. Number of NonCompliant users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantUserCount() {
@@ -102,7 +102,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the notApplicableUserCount property value. Number of not applicable users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableUserCount() {
@@ -110,7 +110,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the remediatedUserCount property value. Number of remediated users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedUserCount() {
@@ -118,7 +118,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
     }
     /**
      * Gets the unknownUserCount property value. Number of unknown users
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUnknownUserCount() {

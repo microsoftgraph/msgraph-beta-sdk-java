@@ -17,7 +17,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      */
     private String roleTemplateId;
     /**
-     * Instantiates a new roleMembershipGovernanceCriteria and sets the default values.
+     * Instantiates a new RoleMembershipGovernanceCriteria and sets the default values.
      */
     public RoleMembershipGovernanceCriteria() {
         super();
@@ -26,7 +26,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleMembershipGovernanceCriteria
+     * @return a RoleMembershipGovernanceCriteria
      */
     @jakarta.annotation.Nonnull
     public static RoleMembershipGovernanceCriteria createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
@@ -54,7 +54,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     }
     /**
      * Gets the roleTemplateId property value. The roleTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleTemplateId() {

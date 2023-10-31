@@ -17,7 +17,7 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
      */
     private Boolean isPartnerConsentPending;
     /**
-     * Instantiates a new resellerDelegatedAdminRelationship and sets the default values.
+     * Instantiates a new ResellerDelegatedAdminRelationship and sets the default values.
      */
     public ResellerDelegatedAdminRelationship() {
         super();
@@ -25,7 +25,7 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resellerDelegatedAdminRelationship
+     * @return a ResellerDelegatedAdminRelationship
      */
     @jakarta.annotation.Nonnull
     public static ResellerDelegatedAdminRelationship createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
     }
     /**
      * Gets the indirectProviderTenantId property value. The tenant ID of the indirect provider partner who created the relationship for the indirect reseller partner.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIndirectProviderTenantId() {
@@ -53,7 +53,7 @@ public class ResellerDelegatedAdminRelationship extends DelegatedAdminRelationsh
     }
     /**
      * Gets the isPartnerConsentPending property value. Indicates the indirect reseller partner consent status. true indicates that the partner has yet to review the relationship; false indicates that the partner has already provided consent by approving or rejecting the relationship.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPartnerConsentPending() {

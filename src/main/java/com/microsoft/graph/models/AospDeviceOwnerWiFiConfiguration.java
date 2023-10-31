@@ -40,7 +40,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     private AospDeviceOwnerWiFiSecurityType wiFiSecurityType;
     /**
-     * Instantiates a new aospDeviceOwnerWiFiConfiguration and sets the default values.
+     * Instantiates a new AospDeviceOwnerWiFiConfiguration and sets the default values.
      */
     public AospDeviceOwnerWiFiConfiguration() {
         super();
@@ -49,7 +49,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aospDeviceOwnerWiFiConfiguration
+     * @return a AospDeviceOwnerWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AospDeviceOwnerWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +65,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -73,7 +73,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -97,7 +97,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -105,7 +105,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -113,7 +113,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreSharedKeyIsSet() {
@@ -121,7 +121,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -129,7 +129,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for AOSP Device Owner.
-     * @return a aospDeviceOwnerWiFiSecurityType
+     * @return a AospDeviceOwnerWiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public AospDeviceOwnerWiFiSecurityType getWiFiSecurityType() {

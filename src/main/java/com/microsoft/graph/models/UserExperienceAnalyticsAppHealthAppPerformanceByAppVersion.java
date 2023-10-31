@@ -40,7 +40,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
      */
     private Integer meanTimeToFailureInMinutes;
     /**
-     * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersion and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion and sets the default values.
      */
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion() {
         super();
@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the appCrashCount property value. The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAppCrashCount() {
@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the appDisplayName property value. The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the appName property value. The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the appPublisher property value. The publisher of the application. Supports: $select, $OrderBy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the appUsageDuration property value. The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAppUsageDuration() {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the appVersion property value. The version of the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion extends 
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMeanTimeToFailureInMinutes() {

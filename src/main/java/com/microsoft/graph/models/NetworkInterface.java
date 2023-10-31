@@ -38,7 +38,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new networkInterface and sets the default values.
+     * Instantiates a new NetworkInterface and sets the default values.
      */
     public NetworkInterface() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkInterface
+     * @return a NetworkInterface
      */
     @jakarta.annotation.Nonnull
     public static NetworkInterface createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         return new NetworkInterface();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -86,7 +86,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipV4Address property value. Last IPv4 address associated with this NIC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpV4Address() {
@@ -94,7 +94,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ipV6Address property value. Last Public (also known as global) IPv6 address associated with this NIC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpV6Address() {
@@ -102,7 +102,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localIpV6Address property value. Last local (link-local or site-local) IPv6 address associated with this NIC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalIpV6Address() {
@@ -110,7 +110,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the macAddress property value. MAC address of the NIC on this host.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMacAddress() {
@@ -118,7 +118,7 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -139,8 +139,8 @@ public class NetworkInterface implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

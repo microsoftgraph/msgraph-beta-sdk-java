@@ -25,7 +25,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
      */
     private String internalUrl;
     /**
-     * Instantiates a new webApplicationSegment and sets the default values.
+     * Instantiates a new WebApplicationSegment and sets the default values.
      */
     public WebApplicationSegment() {
         super();
@@ -34,7 +34,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webApplicationSegment
+     * @return a WebApplicationSegment
      */
     @jakarta.annotation.Nonnull
     public static WebApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     }
     /**
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateUrl() {
@@ -51,7 +51,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     }
     /**
      * Gets the corsConfigurations property value. A collection of CORS Rule definitions for a particular application segment.
-     * @return a CorsConfigurationV2
+     * @return a java.util.List<CorsConfigurationV2>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CorsConfigurationV2> getCorsConfigurations() {
@@ -59,7 +59,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     }
     /**
      * Gets the externalUrl property value. The published external URL for the application segment; for example, https://intranet.contoso.com/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalUrl() {
@@ -80,7 +80,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
     }
     /**
      * Gets the internalUrl property value. The internal URL of the application segment; for example, https://intranet/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalUrl() {

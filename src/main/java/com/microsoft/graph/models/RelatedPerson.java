@@ -26,11 +26,15 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
      */
     private PersonRelationship relationship;
     /**
+     * The userId property
+     */
+    private String userId;
+    /**
      * Email address or reference to person within organization.
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new relatedPerson and sets the default values.
+     * Instantiates a new RelatedPerson and sets the default values.
      */
     public RelatedPerson() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +42,7 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relatedPerson
+     * @return a RelatedPerson
      */
     @jakarta.annotation.Nonnull
     public static RelatedPerson createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +50,7 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
         return new RelatedPerson();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +59,7 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. Name of the person.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,16 +71,17 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(PersonRelationship.class)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,15 +89,23 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
-     * @return a personRelationship
+     * @return a PersonRelationship
      */
     @jakarta.annotation.Nullable
     public PersonRelationship getRelationship() {
         return this.relationship;
     }
     /**
+     * Gets the userId property value. The userId property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getUserId() {
+        return this.userId;
+    }
+    /**
      * Gets the userPrincipalName property value. Email address or reference to person within organization.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -107,12 +120,13 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("relationship", this.getRelationship());
+        writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -137,6 +151,13 @@ public class RelatedPerson implements AdditionalDataHolder, Parsable {
      */
     public void setRelationship(@jakarta.annotation.Nullable final PersonRelationship value) {
         this.relationship = value;
+    }
+    /**
+     * Sets the userId property value. The userId property
+     * @param value Value to set for the userId property.
+     */
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
+        this.userId = value;
     }
     /**
      * Sets the userPrincipalName property value. Email address or reference to person within organization.

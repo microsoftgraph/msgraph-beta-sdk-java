@@ -42,7 +42,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new updateDevicePropertiesPostRequestBody and sets the default values.
+     * Instantiates a new UpdateDevicePropertiesPostRequestBody and sets the default values.
      */
     public UpdateDevicePropertiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateDevicePropertiesPostRequestBody
+     * @return a UpdateDevicePropertiesPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateDevicePropertiesPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
         return new UpdateDevicePropertiesPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the addressableUserName property value. The addressableUserName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddressableUserName() {
@@ -75,7 +75,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the deviceAccountPassword property value. The deviceAccountPassword property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountPassword() {
@@ -83,7 +83,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the deviceAccountUpn property value. The deviceAccountUpn property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAccountUpn() {
@@ -91,7 +91,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the deviceFriendlyName property value. The deviceFriendlyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceFriendlyName() {
@@ -99,7 +99,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -123,7 +123,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the groupTag property value. The groupTag property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupTag() {
@@ -131,7 +131,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -153,8 +153,8 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

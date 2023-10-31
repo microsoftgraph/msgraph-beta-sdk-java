@@ -57,7 +57,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> ssids;
     /**
-     * Instantiates a new vpnOnDemandRule and sets the default values.
+     * Instantiates a new VpnOnDemandRule and sets the default values.
      */
     public VpnOnDemandRule() {
         this.setAdditionalData(new HashMap<>());
@@ -65,7 +65,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnOnDemandRule
+     * @return a VpnOnDemandRule
      */
     @jakarta.annotation.Nonnull
     public static VpnOnDemandRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,14 +74,14 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the action property value. VPN On-Demand Rule Connection Action.
-     * @return a vpnOnDemandRuleConnectionAction
+     * @return a VpnOnDemandRuleConnectionAction
      */
     @jakarta.annotation.Nullable
     public VpnOnDemandRuleConnectionAction getAction() {
         return this.action;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -90,7 +90,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dnsSearchDomains property value. DNS Search Domains.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSearchDomains() {
@@ -98,7 +98,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dnsServerAddressMatch property value. DNS Search Server Address.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsServerAddressMatch() {
@@ -106,7 +106,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the domainAction property value. VPN On-Demand Rule Connection Domain Action.
-     * @return a vpnOnDemandRuleConnectionDomainAction
+     * @return a VpnOnDemandRuleConnectionDomainAction
      */
     @jakarta.annotation.Nullable
     public VpnOnDemandRuleConnectionDomainAction getDomainAction() {
@@ -114,7 +114,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the domains property value. Domains (Only applicable when Action is evaluate connection).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDomains() {
@@ -141,7 +141,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the interfaceTypeMatch property value. VPN On-Demand Rule Connection network interface type.
-     * @return a vpnOnDemandRuleInterfaceTypeMatch
+     * @return a VpnOnDemandRuleInterfaceTypeMatch
      */
     @jakarta.annotation.Nullable
     public VpnOnDemandRuleInterfaceTypeMatch getInterfaceTypeMatch() {
@@ -149,7 +149,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -157,7 +157,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the probeRequiredUrl property value. Probe Required Url (Only applicable when Action is evaluate connection and DomainAction is connect if needed).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProbeRequiredUrl() {
@@ -165,7 +165,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the probeUrl property value. A URL to probe. If this URL is successfully fetched (returning a 200 HTTP status code) without redirection, this rule matches.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProbeUrl() {
@@ -173,7 +173,7 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ssids property value. Network Service Set Identifiers (SSIDs).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSsids() {
@@ -205,8 +205,8 @@ public class VpnOnDemandRule implements AdditionalDataHolder, Parsable {
         this.action = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

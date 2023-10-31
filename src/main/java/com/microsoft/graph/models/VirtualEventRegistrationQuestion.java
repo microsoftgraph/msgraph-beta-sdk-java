@@ -25,7 +25,7 @@ public class VirtualEventRegistrationQuestion extends Entity implements Parsable
      */
     private Boolean isRequired;
     /**
-     * Instantiates a new virtualEventRegistrationQuestion and sets the default values.
+     * Instantiates a new VirtualEventRegistrationQuestion and sets the default values.
      */
     public VirtualEventRegistrationQuestion() {
         super();
@@ -33,7 +33,7 @@ public class VirtualEventRegistrationQuestion extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventRegistrationQuestion
+     * @return a VirtualEventRegistrationQuestion
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class VirtualEventRegistrationQuestion extends Entity implements Parsable
     }
     /**
      * Gets the answerChoices property value. Answer choices when answerInputType is singleChoice or multiChoice.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAnswerChoices() {
@@ -50,7 +50,7 @@ public class VirtualEventRegistrationQuestion extends Entity implements Parsable
     }
     /**
      * Gets the answerInputType property value. Input type of the registration question answer.
-     * @return a virtualEventRegistrationQuestionAnswerInputType
+     * @return a VirtualEventRegistrationQuestionAnswerInputType
      */
     @jakarta.annotation.Nullable
     public VirtualEventRegistrationQuestionAnswerInputType getAnswerInputType() {
@@ -58,7 +58,7 @@ public class VirtualEventRegistrationQuestion extends Entity implements Parsable
     }
     /**
      * Gets the displayName property value. Display name of the registration question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -79,7 +79,7 @@ public class VirtualEventRegistrationQuestion extends Entity implements Parsable
     }
     /**
      * Gets the isRequired property value. Indicates whether the question is required to answer. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {

@@ -25,9 +25,9 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @param RoomList Usage: RoomList='{RoomList}'
      */
-    public FindRoomsWithRoomListRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String roomList) {
+    public FindRoomsWithRoomListRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String RoomList) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/findRooms(RoomList='{RoomList}'){?%24top,%24skip,%24search,%24filter,%24count}", pathParameters);
-        this.pathParameters.put("RoomList", roomList);
+        this.pathParameters.put("RoomList", RoomList);
     }
     /**
      * Instantiates a new FindRoomsWithRoomListRequestBuilder and sets the default values.
@@ -39,24 +39,24 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function findRooms
-     * @return a CompletableFuture of findRoomsWithRoomListResponse
+     * @return a CompletableFuture of FindRoomsWithRoomListGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FindRoomsWithRoomListResponse> get() {
+    public java.util.concurrent.CompletableFuture<FindRoomsWithRoomListGetResponse> get() {
         return get(null);
     }
     /**
      * Invoke function findRooms
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of findRoomsWithRoomListResponse
+     * @return a CompletableFuture of FindRoomsWithRoomListGetResponse
      */
     @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<FindRoomsWithRoomListResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public java.util.concurrent.CompletableFuture<FindRoomsWithRoomListGetResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, FindRoomsWithRoomListResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.sendAsync(requestInfo, FindRoomsWithRoomListGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function findRooms
@@ -74,10 +74,6 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -85,12 +81,16 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a findRoomsWithRoomListRequestBuilder
+     * @return a FindRoomsWithRoomListRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public FindRoomsWithRoomListRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

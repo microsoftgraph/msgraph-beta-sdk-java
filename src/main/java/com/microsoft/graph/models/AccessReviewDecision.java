@@ -46,7 +46,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
      */
     private String reviewResult;
     /**
-     * Instantiates a new accessReviewDecision and sets the default values.
+     * Instantiates a new AccessReviewDecision and sets the default values.
      */
     public AccessReviewDecision() {
         super();
@@ -54,7 +54,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewDecision
+     * @return a AccessReviewDecision
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewDecision createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the accessRecommendation property value. The feature- generated recommendation shown to the reviewer, one of Approve, Deny or NotAvailable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessRecommendation() {
@@ -71,7 +71,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the accessReviewId property value. The feature-generated ID of the access review.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessReviewId() {
@@ -79,7 +79,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the appliedBy property value. When the review completes, if the results were manually applied, the user identity of the user who applied the decision. If the review was autoapplied, the userPrincipalName is empty.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getAppliedBy() {
@@ -95,7 +95,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the applyResult property value. The outcome of applying the decision, one of NotApplied, Success, Failed, NotFound or NotSupported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplyResult() {
@@ -121,7 +121,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the justification property value. The reviewer's business justification, if supplied.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJustification() {
@@ -129,7 +129,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the reviewedBy property value. The identity of the reviewer. If the recommendation was used as the review, the userPrincipalName is empty.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getReviewedBy() {
@@ -145,7 +145,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
     }
     /**
      * Gets the reviewResult property value. The result of the review, one of NotReviewed, Deny, DontKnow or Approve.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReviewResult() {

@@ -49,7 +49,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
      */
     private Integer successCount;
     /**
-     * Instantiates a new managedDeviceMobileAppConfigurationDeviceSummary and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationDeviceSummary and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationDeviceSummary() {
         super();
@@ -57,7 +57,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationDeviceSummary
+     * @return a ManagedDeviceMobileAppConfigurationDeviceSummary
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationDeviceSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the configurationVersion property value. Version of the policy for that overview
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationVersion() {
@@ -74,7 +74,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the conflictCount property value. Number of devices in conflict
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConflictCount() {
@@ -82,7 +82,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the errorCount property value. Number of error devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCount() {
@@ -90,7 +90,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the failedCount property value. Number of failed devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedCount() {
@@ -124,7 +124,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicableCount() {
@@ -132,7 +132,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the notApplicablePlatformCount property value. Number of not applicable devices due to mismatch platform and policy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNotApplicablePlatformCount() {
@@ -140,7 +140,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the pendingCount property value. Number of pending devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingCount() {
@@ -148,7 +148,7 @@ public class ManagedDeviceMobileAppConfigurationDeviceSummary extends Entity imp
     }
     /**
      * Gets the successCount property value. Number of succeeded devices
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessCount() {

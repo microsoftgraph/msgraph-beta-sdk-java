@@ -9,19 +9,19 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventRegistrationConfiguration extends Entity implements Parsable {
     /**
-     * The capacity property
+     * Total capacity of the virtual event.
      */
     private Integer capacity;
     /**
-     * The questions property
+     * Registration questions.
      */
     private java.util.List<VirtualEventRegistrationQuestion> questions;
     /**
-     * The registrationWebUrl property
+     * Registration URL of the virtual event.
      */
     private String registrationWebUrl;
     /**
-     * Instantiates a new virtualEventRegistrationConfiguration and sets the default values.
+     * Instantiates a new VirtualEventRegistrationConfiguration and sets the default values.
      */
     public VirtualEventRegistrationConfiguration() {
         super();
@@ -29,7 +29,7 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventRegistrationConfiguration
+     * @return a VirtualEventRegistrationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventRegistrationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,8 +44,8 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
         return new VirtualEventRegistrationConfiguration();
     }
     /**
-     * Gets the capacity property value. The capacity property
-     * @return a integer
+     * Gets the capacity property value. Total capacity of the virtual event.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCapacity() {
@@ -64,16 +64,16 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
         return deserializerMap;
     }
     /**
-     * Gets the questions property value. The questions property
-     * @return a virtualEventRegistrationQuestion
+     * Gets the questions property value. Registration questions.
+     * @return a java.util.List<VirtualEventRegistrationQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventRegistrationQuestion> getQuestions() {
         return this.questions;
     }
     /**
-     * Gets the registrationWebUrl property value. The registrationWebUrl property
-     * @return a string
+     * Gets the registrationWebUrl property value. Registration URL of the virtual event.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegistrationWebUrl() {
@@ -91,21 +91,21 @@ public class VirtualEventRegistrationConfiguration extends Entity implements Par
         writer.writeStringValue("registrationWebUrl", this.getRegistrationWebUrl());
     }
     /**
-     * Sets the capacity property value. The capacity property
+     * Sets the capacity property value. Total capacity of the virtual event.
      * @param value Value to set for the capacity property.
      */
     public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
         this.capacity = value;
     }
     /**
-     * Sets the questions property value. The questions property
+     * Sets the questions property value. Registration questions.
      * @param value Value to set for the questions property.
      */
     public void setQuestions(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistrationQuestion> value) {
         this.questions = value;
     }
     /**
-     * Sets the registrationWebUrl property value. The registrationWebUrl property
+     * Sets the registrationWebUrl property value. Registration URL of the virtual event.
      * @param value Value to set for the registrationWebUrl property.
      */
     public void setRegistrationWebUrl(@jakarta.annotation.Nullable final String value) {

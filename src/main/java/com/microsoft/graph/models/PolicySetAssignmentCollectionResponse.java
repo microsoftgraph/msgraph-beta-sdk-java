@@ -13,7 +13,7 @@ public class PolicySetAssignmentCollectionResponse extends BaseCollectionPaginat
      */
     private java.util.List<PolicySetAssignment> value;
     /**
-     * Instantiates a new policySetAssignmentCollectionResponse and sets the default values.
+     * Instantiates a new PolicySetAssignmentCollectionResponse and sets the default values.
      */
     public PolicySetAssignmentCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PolicySetAssignmentCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policySetAssignmentCollectionResponse
+     * @return a PolicySetAssignmentCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PolicySetAssignmentCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PolicySetAssignmentCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a policySetAssignment
+     * @return a java.util.List<PolicySetAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetAssignment> getValue() {

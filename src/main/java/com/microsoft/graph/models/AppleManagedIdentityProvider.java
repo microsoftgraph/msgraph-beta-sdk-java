@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsable {
     /**
-     * The certificate data which is a long string of text from the certificate, can be null.
+     * The certificate data that is a long string of text from the certificate, can be null.
      */
     private String certificateData;
     /**
@@ -25,7 +25,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
      */
     private String serviceId;
     /**
-     * Instantiates a new appleManagedIdentityProvider and sets the default values.
+     * Instantiates a new AppleManagedIdentityProvider and sets the default values.
      */
     public AppleManagedIdentityProvider() {
         super();
@@ -34,7 +34,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appleManagedIdentityProvider
+     * @return a AppleManagedIdentityProvider
      */
     @jakarta.annotation.Nonnull
     public static AppleManagedIdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,8 +42,8 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
         return new AppleManagedIdentityProvider();
     }
     /**
-     * Gets the certificateData property value. The certificate data which is a long string of text from the certificate, can be null.
-     * @return a string
+     * Gets the certificateData property value. The certificate data that is a long string of text from the certificate, can be null.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateData() {
@@ -51,7 +51,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the developerId property value. The Apple developer identifier. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeveloperId() {
@@ -72,7 +72,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the keyId property value. The Apple key identifier. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKeyId() {
@@ -80,7 +80,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
     }
     /**
      * Gets the serviceId property value. The Apple service identifier. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
@@ -99,7 +99,7 @@ public class AppleManagedIdentityProvider extends IdentityProviderBase implement
         writer.writeStringValue("serviceId", this.getServiceId());
     }
     /**
-     * Sets the certificateData property value. The certificate data which is a long string of text from the certificate, can be null.
+     * Sets the certificateData property value. The certificate data that is a long string of text from the certificate, can be null.
      * @param value Value to set for the certificateData property.
      */
     public void setCertificateData(@jakarta.annotation.Nullable final String value) {

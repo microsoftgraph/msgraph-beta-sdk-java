@@ -14,7 +14,7 @@ public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseColle
      */
     private java.util.List<ConditionalAccessPolicyCoverage> value;
     /**
-     * Instantiates a new conditionalAccessPolicyCoverageCollectionResponse and sets the default values.
+     * Instantiates a new ConditionalAccessPolicyCoverageCollectionResponse and sets the default values.
      */
     public ConditionalAccessPolicyCoverageCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessPolicyCoverageCollectionResponse
+     * @return a ConditionalAccessPolicyCoverageCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessPolicyCoverageCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ConditionalAccessPolicyCoverageCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a conditionalAccessPolicyCoverage
+     * @return a java.util.List<ConditionalAccessPolicyCoverage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicyCoverage> getValue() {

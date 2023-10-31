@@ -26,7 +26,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
      */
     private Boolean requireClientServicePrincipal;
     /**
-     * Instantiates a new authenticationBehaviors and sets the default values.
+     * Instantiates a new AuthenticationBehaviors and sets the default values.
      */
     public AuthenticationBehaviors() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationBehaviors
+     * @return a AuthenticationBehaviors
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationBehaviors createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
         return new AuthenticationBehaviors();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the removeUnverifiedEmailClaim property value. Removes the email claim from tokens sent to an application when the email address's domain can't be verified.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRemoveUnverifiedEmailClaim() {
@@ -79,7 +79,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the requireClientServicePrincipal property value. Requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multi-tenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireClientServicePrincipal() {
@@ -97,8 +97,8 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

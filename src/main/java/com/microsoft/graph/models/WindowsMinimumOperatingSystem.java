@@ -73,7 +73,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      */
     private Boolean v81;
     /**
-     * Instantiates a new windowsMinimumOperatingSystem and sets the default values.
+     * Instantiates a new WindowsMinimumOperatingSystem and sets the default values.
      */
     public WindowsMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
@@ -81,7 +81,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nonnull
     public static WindowsMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +89,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
         return new WindowsMinimumOperatingSystem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -121,7 +121,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -129,7 +129,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_0 property value. Windows version 10.0 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV100() {
@@ -137,7 +137,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1607 property value. Windows 10 1607 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101607() {
@@ -145,7 +145,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1703 property value. Windows 10 1703 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101703() {
@@ -153,7 +153,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1709 property value. Windows 10 1709 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101709() {
@@ -161,7 +161,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1803 property value. Windows 10 1803 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101803() {
@@ -169,7 +169,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1809 property value. Windows 10 1809 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101809() {
@@ -177,7 +177,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1903 property value. Windows 10 1903 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101903() {
@@ -185,7 +185,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_1909 property value. Windows 10 1909 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV101909() {
@@ -193,7 +193,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_2004 property value. Windows 10 2004 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV102004() {
@@ -201,7 +201,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_21H1 property value. Windows 10 21H1 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV1021H1() {
@@ -209,7 +209,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v10_2H20 property value. Windows 10 2H20 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV102H20() {
@@ -217,7 +217,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v8_0 property value. Windows version 8.0 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV80() {
@@ -225,7 +225,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the v8_1 property value. Windows version 8.1 or later.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV81() {
@@ -254,8 +254,8 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

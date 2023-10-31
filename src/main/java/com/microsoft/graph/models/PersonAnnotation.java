@@ -21,7 +21,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
      */
     private String thumbnailUrl;
     /**
-     * Instantiates a new personAnnotation and sets the default values.
+     * Instantiates a new PersonAnnotation and sets the default values.
      */
     public PersonAnnotation() {
         super();
@@ -30,7 +30,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a personAnnotation
+     * @return a PersonAnnotation
      */
     @jakarta.annotation.Nonnull
     public static PersonAnnotation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the detail property value. Contains the detail of the note itself.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getDetail() {
@@ -47,7 +47,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the note.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class PersonAnnotation extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {

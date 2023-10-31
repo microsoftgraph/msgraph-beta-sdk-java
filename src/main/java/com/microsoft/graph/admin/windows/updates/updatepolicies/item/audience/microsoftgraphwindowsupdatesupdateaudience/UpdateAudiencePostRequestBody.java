@@ -31,7 +31,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      */
     private java.util.List<UpdatableAsset> removeMembers;
     /**
-     * Instantiates a new updateAudiencePostRequestBody and sets the default values.
+     * Instantiates a new UpdateAudiencePostRequestBody and sets the default values.
      */
     public UpdateAudiencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -39,7 +39,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateAudiencePostRequestBody
+     * @return a UpdateAudiencePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateAudiencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -48,14 +48,14 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the addExclusions property value. The addExclusions property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getAddExclusions() {
         return this.addExclusions;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the addMembers property value. The addMembers property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getAddMembers() {
@@ -85,7 +85,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the removeExclusions property value. The removeExclusions property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getRemoveExclusions() {
@@ -93,7 +93,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the removeMembers property value. The removeMembers property
-     * @return a updatableAsset
+     * @return a java.util.List<UpdatableAsset>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatableAsset> getRemoveMembers() {
@@ -119,8 +119,8 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
         this.addExclusions = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

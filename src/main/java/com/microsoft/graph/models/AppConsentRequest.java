@@ -29,7 +29,7 @@ public class AppConsentRequest extends Entity implements Parsable {
      */
     private java.util.List<UserConsentRequest> userConsentRequests;
     /**
-     * Instantiates a new appConsentRequest and sets the default values.
+     * Instantiates a new AppConsentRequest and sets the default values.
      */
     public AppConsentRequest() {
         super();
@@ -37,7 +37,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appConsentRequest
+     * @return a AppConsentRequest
      */
     @jakarta.annotation.Nonnull
     public static AppConsentRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the appDisplayName property value. The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -54,7 +54,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -62,7 +62,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the consentType property value. The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConsentType() {
@@ -84,7 +84,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the pendingScopes property value. A list of pending scopes waiting for approval. This is empty if the consentType is Static. Required.
-     * @return a appConsentRequestScope
+     * @return a java.util.List<AppConsentRequestScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppConsentRequestScope> getPendingScopes() {
@@ -92,7 +92,7 @@ public class AppConsentRequest extends Entity implements Parsable {
     }
     /**
      * Gets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
-     * @return a userConsentRequest
+     * @return a java.util.List<UserConsentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserConsentRequest> getUserConsentRequests() {

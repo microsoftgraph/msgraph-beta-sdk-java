@@ -41,7 +41,7 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     private ConnectionState state;
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
      */
     public ExternalConnection() {
         super();
@@ -49,7 +49,7 @@ public class ExternalConnection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalConnection
+     * @return a ExternalConnection
      */
     @jakarta.annotation.Nonnull
     public static ExternalConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. The configuration property
-     * @return a configuration
+     * @return a Configuration
      */
     @jakarta.annotation.Nullable
     public Configuration getConfiguration() {
@@ -66,7 +66,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -91,7 +91,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the groups property value. The groups property
-     * @return a externalGroup
+     * @return a java.util.List<ExternalGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalGroup> getGroups() {
@@ -99,7 +99,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the items property value. The items property
-     * @return a externalItem
+     * @return a java.util.List<ExternalItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExternalItem> getItems() {
@@ -107,7 +107,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -115,7 +115,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The operations property
-     * @return a connectionOperation
+     * @return a java.util.List<ConnectionOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectionOperation> getOperations() {
@@ -123,7 +123,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the schema property value. The schema property
-     * @return a schema
+     * @return a Schema
      */
     @jakarta.annotation.Nullable
     public Schema getSchema() {
@@ -131,7 +131,7 @@ public class ExternalConnection extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a connectionState
+     * @return a ConnectionState
      */
     @jakarta.annotation.Nullable
     public ConnectionState getState() {

@@ -13,7 +13,7 @@ public class WebSegmentConfiguration extends SegmentConfiguration implements Par
      */
     private java.util.List<WebApplicationSegment> applicationSegments;
     /**
-     * Instantiates a new webSegmentConfiguration and sets the default values.
+     * Instantiates a new WebSegmentConfiguration and sets the default values.
      */
     public WebSegmentConfiguration() {
         super();
@@ -22,7 +22,7 @@ public class WebSegmentConfiguration extends SegmentConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webSegmentConfiguration
+     * @return a WebSegmentConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WebSegmentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class WebSegmentConfiguration extends SegmentConfiguration implements Par
     }
     /**
      * Gets the applicationSegments property value. The applicationSegments property
-     * @return a webApplicationSegment
+     * @return a java.util.List<WebApplicationSegment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebApplicationSegment> getApplicationSegments() {

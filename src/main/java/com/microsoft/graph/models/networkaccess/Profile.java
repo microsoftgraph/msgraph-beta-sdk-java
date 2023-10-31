@@ -35,7 +35,7 @@ public class Profile extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new profile and sets the default values.
+     * Instantiates a new Profile and sets the default values.
      */
     public Profile() {
         super();
@@ -43,7 +43,7 @@ public class Profile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a profile
+     * @return a Profile
      */
     @jakarta.annotation.Nonnull
     public static Profile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -90,7 +90,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Profile name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -98,7 +98,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the policies property value. Traffic forwarding policies associated with this profile.
-     * @return a policyLink
+     * @return a java.util.List<PolicyLink>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicyLink> getPolicies() {
@@ -106,7 +106,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a status
+     * @return a Status
      */
     @jakarta.annotation.Nullable
     public Status getState() {
@@ -114,7 +114,7 @@ public class Profile extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Profile version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

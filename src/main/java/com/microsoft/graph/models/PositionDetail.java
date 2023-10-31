@@ -31,6 +31,14 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     private String jobTitle;
     /**
+     * The layer property
+     */
+    private Integer layer;
+    /**
+     * The level property
+     */
+    private String level;
+    /**
      * The OdataType property
      */
     private String odataType;
@@ -47,7 +55,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     private String summary;
     /**
-     * Instantiates a new positionDetail and sets the default values.
+     * Instantiates a new PositionDetail and sets the default values.
      */
     public PositionDetail() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +63,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a positionDetail
+     * @return a PositionDetail
      */
     @jakarta.annotation.Nonnull
     public static PositionDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +71,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         return new PositionDetail();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +80,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the company property value. Detail about the company or employer.
-     * @return a companyDetail
+     * @return a CompanyDetail
      */
     @jakarta.annotation.Nullable
     public CompanyDetail getCompany() {
@@ -80,7 +88,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. Description of the position in question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -100,11 +108,13 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("company", (n) -> { this.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("endMonthYear", (n) -> { this.setEndMonthYear(n.getLocalDateValue()); });
         deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("layer", (n) -> { this.setLayer(n.getIntegerValue()); });
+        deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
         deserializerMap.put("startMonthYear", (n) -> { this.setStartMonthYear(n.getLocalDateValue()); });
@@ -113,15 +123,31 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jobTitle property value. The title held when in that position.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJobTitle() {
         return this.jobTitle;
     }
     /**
+     * Gets the layer property value. The layer property
+     * @return a Integer
+     */
+    @jakarta.annotation.Nullable
+    public Integer getLayer() {
+        return this.layer;
+    }
+    /**
+     * Gets the level property value. The level property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getLevel() {
+        return this.level;
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -129,7 +155,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the role property value. The role the position entailed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRole() {
@@ -145,7 +171,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the summary property value. Short summary of the position.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSummary() {
@@ -161,6 +187,8 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeLocalDateValue("endMonthYear", this.getEndMonthYear());
         writer.writeStringValue("jobTitle", this.getJobTitle());
+        writer.writeIntegerValue("layer", this.getLayer());
+        writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("role", this.getRole());
         writer.writeLocalDateValue("startMonthYear", this.getStartMonthYear());
@@ -168,8 +196,8 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -201,6 +229,20 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
         this.jobTitle = value;
+    }
+    /**
+     * Sets the layer property value. The layer property
+     * @param value Value to set for the layer property.
+     */
+    public void setLayer(@jakarta.annotation.Nullable final Integer value) {
+        this.layer = value;
+    }
+    /**
+     * Sets the level property value. The level property
+     * @param value Value to set for the level property.
+     */
+    public void setLevel(@jakarta.annotation.Nullable final String value) {
+        this.level = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property

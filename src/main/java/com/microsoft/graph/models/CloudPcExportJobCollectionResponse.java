@@ -13,7 +13,7 @@ public class CloudPcExportJobCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<CloudPcExportJob> value;
     /**
-     * Instantiates a new cloudPcExportJobCollectionResponse and sets the default values.
+     * Instantiates a new CloudPcExportJobCollectionResponse and sets the default values.
      */
     public CloudPcExportJobCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CloudPcExportJobCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcExportJobCollectionResponse
+     * @return a CloudPcExportJobCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CloudPcExportJobCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CloudPcExportJobCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a cloudPcExportJob
+     * @return a java.util.List<CloudPcExportJob>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcExportJob> getValue() {

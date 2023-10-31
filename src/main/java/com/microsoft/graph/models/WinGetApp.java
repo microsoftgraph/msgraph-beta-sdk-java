@@ -24,7 +24,7 @@ public class WinGetApp extends MobileApp implements Parsable {
      */
     private String packageIdentifier;
     /**
-     * Instantiates a new winGetApp and sets the default values.
+     * Instantiates a new WinGetApp and sets the default values.
      */
     public WinGetApp() {
         super();
@@ -33,7 +33,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a winGetApp
+     * @return a WinGetApp
      */
     @jakarta.annotation.Nonnull
     public static WinGetApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the installExperience property value. The install experience settings associated with this application, which are used to ensure the desired install experiences on the target device are taken into account. This includes the account type (System or User) that actions should be run as on target devices. Required at creation time.
-     * @return a winGetAppInstallExperience
+     * @return a WinGetAppInstallExperience
      */
     @jakarta.annotation.Nullable
     public WinGetAppInstallExperience getInstallExperience() {
@@ -62,7 +62,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the manifestHash property value. Hash of package metadata properties used to validate that the application matches the metadata in the source repository.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManifestHash() {
@@ -70,7 +70,7 @@ public class WinGetApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the packageIdentifier property value. The PackageIdentifier from the WinGet source repository REST API. This also maps to the Id when using the WinGet client command line application. Required at creation time, cannot be modified on existing objects.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageIdentifier() {

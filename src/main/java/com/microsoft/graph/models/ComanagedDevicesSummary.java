@@ -57,7 +57,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      */
     private Integer windowsUpdateForBusinessCount;
     /**
-     * Instantiates a new comanagedDevicesSummary and sets the default values.
+     * Instantiates a new ComanagedDevicesSummary and sets the default values.
      */
     public ComanagedDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -65,7 +65,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a comanagedDevicesSummary
+     * @return a ComanagedDevicesSummary
      */
     @jakarta.annotation.Nonnull
     public static ComanagedDevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +73,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
         return new ComanagedDevicesSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -82,7 +82,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the compliancePolicyCount property value. Number of devices with CompliancePolicy swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliancePolicyCount() {
@@ -90,7 +90,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the configurationSettingsCount property value. Number of devices with ConfigurationSettings swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfigurationSettingsCount() {
@@ -98,7 +98,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the endpointProtectionCount property value. Number of devices with EndpointProtection swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEndpointProtectionCount() {
@@ -125,7 +125,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inventoryCount property value. Number of devices with Inventory swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInventoryCount() {
@@ -133,7 +133,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the modernAppsCount property value. Number of devices with ModernApps swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getModernAppsCount() {
@@ -141,7 +141,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -149,7 +149,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the officeAppsCount property value. Number of devices with OfficeApps swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOfficeAppsCount() {
@@ -157,7 +157,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceAccessCount property value. Number of devices with ResourceAccess swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getResourceAccessCount() {
@@ -165,7 +165,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the totalComanagedCount property value. Number of Co-Managed Devices. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalComanagedCount() {
@@ -173,7 +173,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the windowsUpdateForBusinessCount property value. Number of devices with WindowsUpdateForBusiness swung-over. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWindowsUpdateForBusinessCount() {
@@ -189,8 +189,8 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

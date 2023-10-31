@@ -14,7 +14,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
      */
     private Map<String, Object> additionalData;
     /**
-     * The notificationPreference property
+     * Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
      */
     private EndUserNotificationPreference notificationPreference;
     /**
@@ -22,15 +22,15 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
      */
     private String odataType;
     /**
-     * The positiveReinforcement property
+     * Positive reinforcement detail.
      */
     private PositiveReinforcementNotification positiveReinforcement;
     /**
-     * The settingType property
+     * End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      */
     private EndUserNotificationSettingType settingType;
     /**
-     * Instantiates a new endUserNotificationSetting and sets the default values.
+     * Instantiates a new EndUserNotificationSetting and sets the default values.
      */
     public EndUserNotificationSetting() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a endUserNotificationSetting
+     * @return a EndUserNotificationSetting
      */
     @jakarta.annotation.Nonnull
     public static EndUserNotificationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
         return new EndUserNotificationSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -75,8 +75,8 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the notificationPreference property value. The notificationPreference property
-     * @return a endUserNotificationPreference
+     * Gets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
+     * @return a EndUserNotificationPreference
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationPreference getNotificationPreference() {
@@ -84,23 +84,23 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the positiveReinforcement property value. The positiveReinforcement property
-     * @return a positiveReinforcementNotification
+     * Gets the positiveReinforcement property value. Positive reinforcement detail.
+     * @return a PositiveReinforcementNotification
      */
     @jakarta.annotation.Nullable
     public PositiveReinforcementNotification getPositiveReinforcement() {
         return this.positiveReinforcement;
     }
     /**
-     * Gets the settingType property value. The settingType property
-     * @return a endUserNotificationSettingType
+     * Gets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
+     * @return a EndUserNotificationSettingType
      */
     @jakarta.annotation.Nullable
     public EndUserNotificationSettingType getSettingType() {
@@ -119,14 +119,14 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the notificationPreference property value. The notificationPreference property
+     * Sets the notificationPreference property value. Notification preference. Possible values are: unknown, microsoft, custom, unknownFutureValue.
      * @param value Value to set for the notificationPreference property.
      */
     public void setNotificationPreference(@jakarta.annotation.Nullable final EndUserNotificationPreference value) {
@@ -140,14 +140,14 @@ public class EndUserNotificationSetting implements AdditionalDataHolder, Parsabl
         this.odataType = value;
     }
     /**
-     * Sets the positiveReinforcement property value. The positiveReinforcement property
+     * Sets the positiveReinforcement property value. Positive reinforcement detail.
      * @param value Value to set for the positiveReinforcement property.
      */
     public void setPositiveReinforcement(@jakarta.annotation.Nullable final PositiveReinforcementNotification value) {
         this.positiveReinforcement = value;
     }
     /**
-     * Sets the settingType property value. The settingType property
+     * Sets the settingType property value. End user notification type. Possible values are: unknown, noTraining, trainingSelected, noNotification, unknownFutureValue.
      * @param value Value to set for the settingType property.
      */
     public void setSettingType(@jakarta.annotation.Nullable final EndUserNotificationSettingType value) {

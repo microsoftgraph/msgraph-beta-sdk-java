@@ -46,7 +46,7 @@ public class Host extends Artifact implements Parsable {
      */
     private java.util.List<PassiveDnsRecord> passiveDnsReverse;
     /**
-     * The ports property
+     * The hostPorts associated with a host.
      */
     private java.util.List<HostPort> ports;
     /**
@@ -70,7 +70,7 @@ public class Host extends Artifact implements Parsable {
      */
     private WhoisRecord whois;
     /**
-     * Instantiates a new host and sets the default values.
+     * Instantiates a new Host and sets the default values.
      */
     public Host() {
         super();
@@ -79,7 +79,7 @@ public class Host extends Artifact implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a host
+     * @return a Host
      */
     @jakarta.annotation.Nonnull
     public static Host createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -96,7 +96,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the childHostPairs property value. The hostPairs that are resources associated with a host, where that host is the parentHost and has an outgoing pairing to a cihldHost.
-     * @return a hostPair
+     * @return a java.util.List<HostPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getChildHostPairs() {
@@ -104,7 +104,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the components property value. The hostComponents that are associated with this host.
-     * @return a hostComponent
+     * @return a java.util.List<HostComponent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostComponent> getComponents() {
@@ -112,7 +112,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the cookies property value. The hostCookies that are associated with this host.
-     * @return a hostCookie
+     * @return a java.util.List<HostCookie>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostCookie> getCookies() {
@@ -152,7 +152,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the hostPairs property value. The hostPairs that are associated with this host, where this host is either the parentHost or childHost.
-     * @return a hostPair
+     * @return a java.util.List<HostPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getHostPairs() {
@@ -168,7 +168,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the parentHostPairs property value. The hostPairs that are associated with a host, where that host is the childHost and has an incoming pairing with a parentHost.
-     * @return a hostPair
+     * @return a java.util.List<HostPair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPair> getParentHostPairs() {
@@ -176,7 +176,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the passiveDns property value. Passive DNS retrieval about this host.
-     * @return a passiveDnsRecord
+     * @return a java.util.List<PassiveDnsRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDns() {
@@ -184,15 +184,15 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the passiveDnsReverse property value. Reverse passive DNS retrieval about this host.
-     * @return a passiveDnsRecord
+     * @return a java.util.List<PassiveDnsRecord>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PassiveDnsRecord> getPassiveDnsReverse() {
         return this.passiveDnsReverse;
     }
     /**
-     * Gets the ports property value. The ports property
-     * @return a hostPort
+     * Gets the ports property value. The hostPorts associated with a host.
+     * @return a java.util.List<HostPort>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostPort> getPorts() {
@@ -200,7 +200,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the reputation property value. Represents a calculated reputation of this host.
-     * @return a hostReputation
+     * @return a HostReputation
      */
     @jakarta.annotation.Nullable
     public HostReputation getReputation() {
@@ -208,7 +208,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the sslCertificates property value. The hostSslCertificates that are associated with this host.
-     * @return a hostSslCertificate
+     * @return a java.util.List<HostSslCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostSslCertificate> getSslCertificates() {
@@ -216,7 +216,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the subdomains property value. The subdomains that are associated with this host.
-     * @return a subdomain
+     * @return a java.util.List<Subdomain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getSubdomains() {
@@ -224,7 +224,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the trackers property value. The hostTrackers that are associated with this host.
-     * @return a hostTracker
+     * @return a java.util.List<HostTracker>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HostTracker> getTrackers() {
@@ -232,7 +232,7 @@ public class Host extends Artifact implements Parsable {
     }
     /**
      * Gets the whois property value. The most recent whoisRecord for this host.
-     * @return a whoisRecord
+     * @return a WhoisRecord
      */
     @jakarta.annotation.Nullable
     public WhoisRecord getWhois() {
@@ -325,7 +325,7 @@ public class Host extends Artifact implements Parsable {
         this.passiveDnsReverse = value;
     }
     /**
-     * Sets the ports property value. The ports property
+     * Sets the ports property value. The hostPorts associated with a host.
      * @param value Value to set for the ports property.
      */
     public void setPorts(@jakarta.annotation.Nullable final java.util.List<HostPort> value) {

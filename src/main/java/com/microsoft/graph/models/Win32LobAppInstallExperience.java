@@ -33,7 +33,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
      */
     private RunAsAccountType runAsAccount;
     /**
-     * Instantiates a new win32LobAppInstallExperience and sets the default values.
+     * Instantiates a new Win32LobAppInstallExperience and sets the default values.
      */
     public Win32LobAppInstallExperience() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppInstallExperience
+     * @return a Win32LobAppInstallExperience
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppInstallExperience createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
         return new Win32LobAppInstallExperience();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceRestartBehavior property value. Indicates the type of restart action.
-     * @return a win32LobAppRestartBehavior
+     * @return a Win32LobAppRestartBehavior
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRestartBehavior getDeviceRestartBehavior() {
@@ -79,7 +79,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the maxRunTimeInMinutes property value. The number of minutes the system will wait for install program to finish. Default value is 60 minutes.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxRunTimeInMinutes() {
@@ -87,7 +87,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -95,7 +95,7 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     * @return a runAsAccountType
+     * @return a RunAsAccountType
      */
     @jakarta.annotation.Nullable
     public RunAsAccountType getRunAsAccount() {
@@ -114,8 +114,8 @@ public class Win32LobAppInstallExperience implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

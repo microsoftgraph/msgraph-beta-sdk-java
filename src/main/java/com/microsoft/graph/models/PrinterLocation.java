@@ -94,7 +94,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> subunit;
     /**
-     * Instantiates a new printerLocation and sets the default values.
+     * Instantiates a new PrinterLocation and sets the default values.
      */
     public PrinterLocation() {
         this.setAdditionalData(new HashMap<>());
@@ -102,7 +102,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerLocation
+     * @return a PrinterLocation
      */
     @jakarta.annotation.Nonnull
     public static PrinterLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -110,7 +110,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
         return new PrinterLocation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAltitudeInMeters() {
@@ -127,7 +127,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the building property value. The building that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBuilding() {
@@ -135,7 +135,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the city property value. The city that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
@@ -143,7 +143,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the countryOrRegion property value. The country or region that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
@@ -180,7 +180,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFloor() {
@@ -188,7 +188,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the floorDescription property value. The description of the floor that the printer is located on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFloorDescription() {
@@ -196,7 +196,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the floorNumber property value. The floorNumber property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
@@ -204,7 +204,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the latitude property value. The latitude that the printer is located at.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
@@ -212,7 +212,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the longitude property value. The longitude that the printer is located at.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
@@ -220,7 +220,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -228,7 +228,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrganization() {
@@ -236,7 +236,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the postalCode property value. The postal code that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
@@ -244,7 +244,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roomDescription property value. The description of the room that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoomDescription() {
@@ -252,7 +252,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoomName() {
@@ -260,7 +260,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roomNumber property value. The roomNumber property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRoomNumber() {
@@ -268,7 +268,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the site property value. The site that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSite() {
@@ -276,7 +276,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the stateOrProvince property value. The state or province that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStateOrProvince() {
@@ -284,7 +284,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the streetAddress property value. The street address where the printer is located.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStreetAddress() {
@@ -292,7 +292,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubdivision() {
@@ -300,7 +300,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the subunit property value. The subunit property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubunit() {
@@ -335,8 +335,8 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

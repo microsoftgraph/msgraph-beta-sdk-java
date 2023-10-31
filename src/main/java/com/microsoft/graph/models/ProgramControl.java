@@ -46,7 +46,7 @@ public class ProgramControl extends Entity implements Parsable {
      */
     private String status;
     /**
-     * Instantiates a new programControl and sets the default values.
+     * Instantiates a new ProgramControl and sets the default values.
      */
     public ProgramControl() {
         super();
@@ -54,7 +54,7 @@ public class ProgramControl extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a programControl
+     * @return a ProgramControl
      */
     @jakarta.annotation.Nonnull
     public static ProgramControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the controlId property value. The controlId of the control, in particular the identifier of an access review. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlId() {
@@ -71,7 +71,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the controlTypeId property value. The programControlType identifies the type of program control - for example, a control linking to guest access reviews. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getControlTypeId() {
@@ -87,7 +87,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -113,7 +113,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the owner property value. The user who created the program control.
-     * @return a userIdentity
+     * @return a UserIdentity
      */
     @jakarta.annotation.Nullable
     public UserIdentity getOwner() {
@@ -121,7 +121,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the program property value. The program this control is part of.
-     * @return a program
+     * @return a Program
      */
     @jakarta.annotation.Nullable
     public Program getProgram() {
@@ -129,7 +129,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the programId property value. The programId of the program this control is a part of. Required on create.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProgramId() {
@@ -137,7 +137,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. The resource, a group or an app, targeted by this program control's access review.
-     * @return a programResource
+     * @return a ProgramResource
      */
     @jakarta.annotation.Nullable
     public ProgramResource getResource() {
@@ -145,7 +145,7 @@ public class ProgramControl extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The life cycle status of the control.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {

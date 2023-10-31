@@ -26,7 +26,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new educationIdentityDomain and sets the default values.
+     * Instantiates a new EducationIdentityDomain and sets the default values.
      */
     public EducationIdentityDomain() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationIdentityDomain
+     * @return a EducationIdentityDomain
      */
     @jakarta.annotation.Nonnull
     public static EducationIdentityDomain createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
         return new EducationIdentityDomain();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appliesTo property value. The appliesTo property
-     * @return a educationUserRole
+     * @return a EducationUserRole
      */
     @jakarta.annotation.Nullable
     public EducationUserRole getAppliesTo() {
@@ -71,7 +71,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Represents the domain for the user account.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -79,7 +79,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class EducationIdentityDomain implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

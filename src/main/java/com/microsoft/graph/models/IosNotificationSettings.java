@@ -61,7 +61,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
      */
     private Boolean soundsEnabled;
     /**
-     * Instantiates a new iosNotificationSettings and sets the default values.
+     * Instantiates a new IosNotificationSettings and sets the default values.
      */
     public IosNotificationSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -69,7 +69,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosNotificationSettings
+     * @return a IosNotificationSettings
      */
     @jakarta.annotation.Nonnull
     public static IosNotificationSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,7 +77,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         return new IosNotificationSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alertType property value. Notification Settings Alert Type.
-     * @return a iosNotificationAlertType
+     * @return a IosNotificationAlertType
      */
     @jakarta.annotation.Nullable
     public IosNotificationAlertType getAlertType() {
@@ -94,7 +94,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appName property value. Application name to be associated with the bundleID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -102,7 +102,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the badgesEnabled property value. Indicates whether badges are allowed for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBadgesEnabled() {
@@ -110,7 +110,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the bundleID property value. Bundle id of app to which to apply these notification settings.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleID() {
@@ -118,7 +118,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the enabled property value. Indicates whether notifications are allowed for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnabled() {
@@ -146,7 +146,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -154,7 +154,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
-     * @return a iosNotificationPreviewVisibility
+     * @return a IosNotificationPreviewVisibility
      */
     @jakarta.annotation.Nullable
     public IosNotificationPreviewVisibility getPreviewVisibility() {
@@ -162,7 +162,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the publisher property value. Publisher to be associated with the bundleID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -170,7 +170,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the showInNotificationCenter property value. Indicates whether notifications can be shown in notification center.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowInNotificationCenter() {
@@ -178,7 +178,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the showOnLockScreen property value. Indicates whether notifications can be shown on the lock screen.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowOnLockScreen() {
@@ -186,7 +186,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the soundsEnabled property value. Indicates whether sounds are allowed for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSoundsEnabled() {
@@ -212,8 +212,8 @@ public class IosNotificationSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

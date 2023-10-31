@@ -26,7 +26,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
      */
     private MicrosoftManagedDesktopType type;
     /**
-     * Instantiates a new microsoftManagedDesktop and sets the default values.
+     * Instantiates a new MicrosoftManagedDesktop and sets the default values.
      */
     public MicrosoftManagedDesktop() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftManagedDesktop
+     * @return a MicrosoftManagedDesktop
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftManagedDesktop createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
         return new MicrosoftManagedDesktop();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the profile property value. The name of the Microsoft Managed Desktop profile that the Windows 365 Cloud PC is associated with.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfile() {
@@ -79,7 +79,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop. It indicates the type of plan under which the device is managed if the provisioning policy is enabled. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue.
-     * @return a microsoftManagedDesktopType
+     * @return a MicrosoftManagedDesktopType
      */
     @jakarta.annotation.Nullable
     public MicrosoftManagedDesktopType getType() {
@@ -97,8 +97,8 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

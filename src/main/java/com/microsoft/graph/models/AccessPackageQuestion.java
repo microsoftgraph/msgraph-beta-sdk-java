@@ -38,7 +38,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
      */
     private AccessPackageLocalizedContent text;
     /**
-     * Instantiates a new accessPackageQuestion and sets the default values.
+     * Instantiates a new AccessPackageQuestion and sets the default values.
      */
     public AccessPackageQuestion() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageQuestion
+     * @return a AccessPackageQuestion
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageQuestion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         return new AccessPackageQuestion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. ID of the question.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -94,7 +94,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAnswerEditable property value. Specifies whether the requestor is allowed to edit answers to questions.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAnswerEditable() {
@@ -102,7 +102,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRequired property value. Whether the requestor is required to supply an answer or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -110,7 +110,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sequence property value. Relative position of this question when displaying a list of questions to the requestor.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSequence() {
@@ -126,7 +126,7 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the text property value. The text of the question to show to the requestor.
-     * @return a accessPackageLocalizedContent
+     * @return a AccessPackageLocalizedContent
      */
     @jakarta.annotation.Nullable
     public AccessPackageLocalizedContent getText() {
@@ -147,8 +147,8 @@ public class AccessPackageQuestion implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

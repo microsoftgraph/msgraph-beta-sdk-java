@@ -22,7 +22,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      */
     private PeriodAndDuration sentEmail;
     /**
-     * Instantiates a new emailActivityStatistics and sets the default values.
+     * Instantiates a new EmailActivityStatistics and sets the default values.
      */
     public EmailActivityStatistics() {
         super();
@@ -31,7 +31,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a emailActivityStatistics
+     * @return a EmailActivityStatistics
      */
     @jakarta.annotation.Nonnull
     public static EmailActivityStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

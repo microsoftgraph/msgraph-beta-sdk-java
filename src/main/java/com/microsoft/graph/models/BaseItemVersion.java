@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BaseItemVersion extends Entity implements Parsable {
     /**
-     * Identity of the user which last modified the version. Read-only.
+     * Identity of the user that last modified the version. Read-only.
      */
     private IdentitySet lastModifiedBy;
     /**
@@ -22,7 +22,7 @@ public class BaseItemVersion extends Entity implements Parsable {
      */
     private PublicationFacet publication;
     /**
-     * Instantiates a new baseItemVersion and sets the default values.
+     * Instantiates a new BaseItemVersion and sets the default values.
      */
     public BaseItemVersion() {
         super();
@@ -30,7 +30,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a baseItemVersion
+     * @return a BaseItemVersion
      */
     @jakarta.annotation.Nonnull
     public static BaseItemVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,8 +59,8 @@ public class BaseItemVersion extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
-     * @return a identitySet
+     * Gets the lastModifiedBy property value. Identity of the user that last modified the version. Read-only.
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -76,7 +76,7 @@ public class BaseItemVersion extends Entity implements Parsable {
     }
     /**
      * Gets the publication property value. Indicates the publication status of this particular version. Read-only.
-     * @return a publicationFacet
+     * @return a PublicationFacet
      */
     @jakarta.annotation.Nullable
     public PublicationFacet getPublication() {
@@ -94,7 +94,7 @@ public class BaseItemVersion extends Entity implements Parsable {
         writer.writeObjectValue("publication", this.getPublication());
     }
     /**
-     * Sets the lastModifiedBy property value. Identity of the user which last modified the version. Read-only.
+     * Sets the lastModifiedBy property value. Identity of the user that last modified the version. Read-only.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {

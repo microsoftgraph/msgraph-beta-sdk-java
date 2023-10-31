@@ -59,7 +59,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<UserTrainingEventInfo> trainingEvents;
     /**
-     * Instantiates a new userSimulationDetails and sets the default values.
+     * Instantiates a new UserSimulationDetails and sets the default values.
      */
     public UserSimulationDetails() {
         this.setAdditionalData(new HashMap<>());
@@ -67,7 +67,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userSimulationDetails
+     * @return a UserSimulationDetails
      */
     @jakarta.annotation.Nonnull
     public static UserSimulationDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         return new UserSimulationDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -84,7 +84,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the assignedTrainingsCount property value. Number of trainings assigned to a user in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAssignedTrainingsCount() {
@@ -92,7 +92,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the completedTrainingsCount property value. Number of trainings completed by a user in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompletedTrainingsCount() {
@@ -128,7 +128,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInProgressTrainingsCount() {
@@ -136,7 +136,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCompromised() {
@@ -144,7 +144,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the latestSimulationActivity property value. Indicates latest user activity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLatestSimulationActivity() {
@@ -152,7 +152,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -168,7 +168,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the simulationEvents property value. List of simulation events of a user in the attack simulation and training campaign.
-     * @return a userSimulationEventInfo
+     * @return a java.util.List<UserSimulationEventInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSimulationEventInfo> getSimulationEvents() {
@@ -176,7 +176,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the simulationUser property value. The user in an attack simulation and training campaign.
-     * @return a attackSimulationUser
+     * @return a AttackSimulationUser
      */
     @jakarta.annotation.Nullable
     public AttackSimulationUser getSimulationUser() {
@@ -184,7 +184,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trainingEvents property value. List of training events of a user in the attack simulation and training campaign.
-     * @return a userTrainingEventInfo
+     * @return a java.util.List<UserTrainingEventInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserTrainingEventInfo> getTrainingEvents() {
@@ -210,8 +210,8 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

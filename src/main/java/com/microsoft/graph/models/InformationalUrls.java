@@ -26,7 +26,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
      */
     private String singleSignOnDocumentationUrl;
     /**
-     * Instantiates a new informationalUrls and sets the default values.
+     * Instantiates a new InformationalUrls and sets the default values.
      */
     public InformationalUrls() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationalUrls
+     * @return a InformationalUrls
      */
     @jakarta.annotation.Nonnull
     public static InformationalUrls createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
         return new InformationalUrls();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appSignUpUrl property value. The appSignUpUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppSignUpUrl() {
@@ -71,7 +71,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the singleSignOnDocumentationUrl property value. The singleSignOnDocumentationUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSingleSignOnDocumentationUrl() {
@@ -97,8 +97,8 @@ public class InformationalUrls implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

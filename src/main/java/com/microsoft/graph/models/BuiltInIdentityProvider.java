@@ -17,7 +17,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
      */
     private IdentityProviderState state;
     /**
-     * Instantiates a new builtInIdentityProvider and sets the default values.
+     * Instantiates a new BuiltInIdentityProvider and sets the default values.
      */
     public BuiltInIdentityProvider() {
         super();
@@ -26,7 +26,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a builtInIdentityProvider
+     * @return a BuiltInIdentityProvider
      */
     @jakarta.annotation.Nonnull
     public static BuiltInIdentityProvider createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     }
     /**
      * Gets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityProviderType() {
@@ -54,7 +54,7 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements Par
     }
     /**
      * Gets the state property value. The state property
-     * @return a identityProviderState
+     * @return a IdentityProviderState
      */
     @jakarta.annotation.Nullable
     public IdentityProviderState getState() {

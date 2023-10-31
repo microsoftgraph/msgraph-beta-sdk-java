@@ -24,7 +24,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      */
     private Integer totalLicensesCount;
     /**
-     * Instantiates a new vppTokenRevokeLicensesActionResult and sets the default values.
+     * Instantiates a new VppTokenRevokeLicensesActionResult and sets the default values.
      */
     public VppTokenRevokeLicensesActionResult() {
         super();
@@ -32,7 +32,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vppTokenRevokeLicensesActionResult
+     * @return a VppTokenRevokeLicensesActionResult
      */
     @jakarta.annotation.Nonnull
     public static VppTokenRevokeLicensesActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the actionFailureReason property value. Possible types of reasons for an Apple Volume Purchase Program token action failure.
-     * @return a vppTokenActionFailureReason
+     * @return a VppTokenActionFailureReason
      */
     @jakarta.annotation.Nullable
     public VppTokenActionFailureReason getActionFailureReason() {
@@ -49,7 +49,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the failedLicensesCount property value. A count of the number of licenses that failed to revoke.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedLicensesCount() {
@@ -69,7 +69,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicensesCount() {

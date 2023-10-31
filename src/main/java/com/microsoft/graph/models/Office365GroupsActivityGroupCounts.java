@@ -10,11 +10,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Office365GroupsActivityGroupCounts extends Entity implements Parsable {
     /**
-     * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
+     * The number of active groups. A group is considered active if any of the following occurred: group mailbox received email, or  a user viewed, edited, shared, or synced files in SharePoint document library, or a user viewed SharePoint pages, or a user posted, read, or liked messages in Yammer groups.
      */
     private Long active;
     /**
-     * The date on which a number of groups were active.
+     * The date on which groups were active.
      */
     private LocalDate reportDate;
     /**
@@ -30,7 +30,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      */
     private Long total;
     /**
-     * Instantiates a new office365GroupsActivityGroupCounts and sets the default values.
+     * Instantiates a new Office365GroupsActivityGroupCounts and sets the default values.
      */
     public Office365GroupsActivityGroupCounts() {
         super();
@@ -38,7 +38,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityGroupCounts
+     * @return a Office365GroupsActivityGroupCounts
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityGroupCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,8 +46,8 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
         return new Office365GroupsActivityGroupCounts();
     }
     /**
-     * Gets the active property value. The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
-     * @return a int64
+     * Gets the active property value. The number of active groups. A group is considered active if any of the following occurred: group mailbox received email, or  a user viewed, edited, shared, or synced files in SharePoint document library, or a user viewed SharePoint pages, or a user posted, read, or liked messages in Yammer groups.
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getActive() {
@@ -68,7 +68,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the reportDate property value. The date on which a number of groups were active.
+     * Gets the reportDate property value. The date on which groups were active.
      * @return a LocalDate
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -93,7 +93,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
     }
     /**
      * Gets the total property value. The total number of groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotal() {
@@ -113,14 +113,14 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
         writer.writeLongValue("total", this.getTotal());
     }
     /**
-     * Sets the active property value. The number of active groups. A group is considered active if any of the following occurred: group mailbox received email; user viewed, edited, shared, or synced files in SharePoint document library; user viewed SharePoint pages; user posted, read, or liked messages in Yammer groups.
+     * Sets the active property value. The number of active groups. A group is considered active if any of the following occurred: group mailbox received email, or  a user viewed, edited, shared, or synced files in SharePoint document library, or a user viewed SharePoint pages, or a user posted, read, or liked messages in Yammer groups.
      * @param value Value to set for the active property.
      */
     public void setActive(@jakarta.annotation.Nullable final Long value) {
         this.active = value;
     }
     /**
-     * Sets the reportDate property value. The date on which a number of groups were active.
+     * Sets the reportDate property value. The date on which groups were active.
      * @param value Value to set for the reportDate property.
      */
     public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {

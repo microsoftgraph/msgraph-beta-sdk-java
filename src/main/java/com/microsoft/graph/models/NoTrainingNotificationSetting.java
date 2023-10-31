@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NoTrainingNotificationSetting extends EndUserNotificationSetting implements Parsable {
     /**
-     * The simulationNotification property
+     * The notification for the user who is part of the simulation.
      */
     private SimulationNotification simulationNotification;
     /**
-     * Instantiates a new noTrainingNotificationSetting and sets the default values.
+     * Instantiates a new NoTrainingNotificationSetting and sets the default values.
      */
     public NoTrainingNotificationSetting() {
         super();
@@ -22,7 +22,7 @@ public class NoTrainingNotificationSetting extends EndUserNotificationSetting im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a noTrainingNotificationSetting
+     * @return a NoTrainingNotificationSetting
      */
     @jakarta.annotation.Nonnull
     public static NoTrainingNotificationSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,8 +40,8 @@ public class NoTrainingNotificationSetting extends EndUserNotificationSetting im
         return deserializerMap;
     }
     /**
-     * Gets the simulationNotification property value. The simulationNotification property
-     * @return a simulationNotification
+     * Gets the simulationNotification property value. The notification for the user who is part of the simulation.
+     * @return a SimulationNotification
      */
     @jakarta.annotation.Nullable
     public SimulationNotification getSimulationNotification() {
@@ -57,7 +57,7 @@ public class NoTrainingNotificationSetting extends EndUserNotificationSetting im
         writer.writeObjectValue("simulationNotification", this.getSimulationNotification());
     }
     /**
-     * Sets the simulationNotification property value. The simulationNotification property
+     * Sets the simulationNotification property value. The notification for the user who is part of the simulation.
      * @param value Value to set for the simulationNotification property.
      */
     public void setSimulationNotification(@jakarta.annotation.Nullable final SimulationNotification value) {

@@ -18,7 +18,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      */
     private Long exchangeMailboxTotalItemCount;
     /**
-     * The number of email that the group mailbox received.
+     * The number of emails that the group mailbox received.
      */
     private Long exchangeReceivedEmailCount;
     /**
@@ -94,7 +94,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      */
     private Long yammerReadMessageCount;
     /**
-     * Instantiates a new office365GroupsActivityDetail and sets the default values.
+     * Instantiates a new Office365GroupsActivityDetail and sets the default values.
      */
     public Office365GroupsActivityDetail() {
         super();
@@ -102,7 +102,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365GroupsActivityDetail
+     * @return a Office365GroupsActivityDetail
      */
     @jakarta.annotation.Nonnull
     public static Office365GroupsActivityDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -111,7 +111,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeMailboxStorageUsedInBytes property value. The storage used of the group mailbox.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeMailboxStorageUsedInBytes() {
@@ -119,15 +119,15 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeMailboxTotalItemCount property value. The number of items in the group mailbox.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeMailboxTotalItemCount() {
         return this.exchangeMailboxTotalItemCount;
     }
     /**
-     * Gets the exchangeReceivedEmailCount property value. The number of email that the group mailbox received.
-     * @return a int64
+     * Gets the exchangeReceivedEmailCount property value. The number of emails that the group mailbox received.
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchangeReceivedEmailCount() {
@@ -135,7 +135,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the externalMemberCount property value. The group external member count.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExternalMemberCount() {
@@ -173,7 +173,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the groupDisplayName property value. The display name of the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupDisplayName() {
@@ -181,7 +181,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the groupId property value. The group id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupId() {
@@ -189,7 +189,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the groupType property value. The group type. Possible values are: Public or Private.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGroupType() {
@@ -197,7 +197,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. Whether this user has been deleted or soft deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -213,7 +213,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the memberCount property value. The group member count.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMemberCount() {
@@ -221,7 +221,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the ownerPrincipalName property value. The group owner principal name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwnerPrincipalName() {
@@ -229,7 +229,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -245,7 +245,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointActiveFileCount property value. The number of active files in SharePoint Group site.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointActiveFileCount() {
@@ -253,7 +253,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointSiteStorageUsedInBytes property value. The storage used by SharePoint Group site.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointSiteStorageUsedInBytes() {
@@ -261,7 +261,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the sharePointTotalFileCount property value. The total number of files in SharePoint Group site.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePointTotalFileCount() {
@@ -269,7 +269,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the teamsChannelMessagesCount property value. The number of channel messages in Teams team.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsChannelMessagesCount() {
@@ -277,7 +277,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the teamsMeetingsOrganizedCount property value. The number of meetings organized in Teams team.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeamsMeetingsOrganizedCount() {
@@ -285,7 +285,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the yammerLikedMessageCount property value. The number of messages liked in Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerLikedMessageCount() {
@@ -293,7 +293,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the yammerPostedMessageCount property value. The number of messages posted to Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerPostedMessageCount() {
@@ -301,7 +301,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
     }
     /**
      * Gets the yammerReadMessageCount property value. The number of messages read in Yammer groups.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammerReadMessageCount() {
@@ -351,7 +351,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
         this.exchangeMailboxTotalItemCount = value;
     }
     /**
-     * Sets the exchangeReceivedEmailCount property value. The number of email that the group mailbox received.
+     * Sets the exchangeReceivedEmailCount property value. The number of emails that the group mailbox received.
      * @param value Value to set for the exchangeReceivedEmailCount property.
      */
     public void setExchangeReceivedEmailCount(@jakarta.annotation.Nullable final Long value) {

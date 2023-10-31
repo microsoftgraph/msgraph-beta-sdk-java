@@ -42,7 +42,7 @@ public class MessageTrace extends Entity implements Parsable {
      */
     private String subject;
     /**
-     * Instantiates a new messageTrace and sets the default values.
+     * Instantiates a new MessageTrace and sets the default values.
      */
     public MessageTrace() {
         super();
@@ -50,7 +50,7 @@ public class MessageTrace extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageTrace
+     * @return a MessageTrace
      */
     @jakarta.annotation.Nonnull
     public static MessageTrace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the destinationIPAddress property value. The destinationIPAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationIPAddress() {
@@ -84,7 +84,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the messageId property value. The messageId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageId() {
@@ -100,7 +100,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a messageRecipient
+     * @return a java.util.List<MessageRecipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageRecipient> getRecipients() {
@@ -108,7 +108,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the senderEmail property value. The senderEmail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderEmail() {
@@ -116,7 +116,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
@@ -124,7 +124,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the sourceIPAddress property value. The sourceIPAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceIPAddress() {
@@ -132,7 +132,7 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

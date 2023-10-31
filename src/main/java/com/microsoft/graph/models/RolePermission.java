@@ -29,7 +29,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<ResourceAction> resourceActions;
     /**
-     * Instantiates a new rolePermission and sets the default values.
+     * Instantiates a new RolePermission and sets the default values.
      */
     public RolePermission() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a rolePermission
+     * @return a RolePermission
      */
     @jakarta.annotation.Nonnull
     public static RolePermission createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,14 +46,14 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actions property value. Allowed Actions - Deprecated
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActions() {
         return this.actions;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -82,7 +82,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the resourceActions property value. Resource Actions each containing a set of allowed and not allowed permissions.
-     * @return a resourceAction
+     * @return a java.util.List<ResourceAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceAction> getResourceActions() {
@@ -107,8 +107,8 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
         this.actions = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

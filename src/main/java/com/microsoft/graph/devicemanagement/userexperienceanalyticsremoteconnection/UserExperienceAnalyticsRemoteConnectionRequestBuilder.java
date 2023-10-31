@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     }
     /**
      * User experience analytics remote connection
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnectionCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnectionCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     /**
      * User experience analytics remote connection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnectionCollectionResponse
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnectionCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     /**
      * Create new navigation property to userExperienceAnalyticsRemoteConnection for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnection
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnection> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsRemoteConnection body) {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
      * Create new navigation property to userExperienceAnalyticsRemoteConnection for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of userExperienceAnalyticsRemoteConnection
+     * @return a CompletableFuture of UserExperienceAnalyticsRemoteConnection
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UserExperienceAnalyticsRemoteConnection> post(@jakarta.annotation.Nonnull final UserExperienceAnalyticsRemoteConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +107,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     /**
      * Provides operations to call the summarizeDeviceRemoteConnection method.
      * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
-     * @return a summarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder
+     * @return a SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder summarizeDeviceRemoteConnectionWithSummarizeBy(@jakarta.annotation.Nonnull final String summarizeBy) {
@@ -130,10 +130,6 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -141,6 +137,10 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -162,23 +162,23 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsRemoteConnection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a userExperienceAnalyticsRemoteConnectionRequestBuilder
+     * @return a UserExperienceAnalyticsRemoteConnectionRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public UserExperienceAnalyticsRemoteConnectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

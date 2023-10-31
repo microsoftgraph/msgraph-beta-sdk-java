@@ -22,7 +22,7 @@ public class ConnectionInfo implements AdditionalDataHolder, Parsable {
      */
     private String url;
     /**
-     * Instantiates a new connectionInfo and sets the default values.
+     * Instantiates a new ConnectionInfo and sets the default values.
      */
     public ConnectionInfo() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class ConnectionInfo implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectionInfo
+     * @return a ConnectionInfo
      */
     @jakarta.annotation.Nonnull
     public static ConnectionInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class ConnectionInfo implements AdditionalDataHolder, Parsable {
         return new ConnectionInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class ConnectionInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -66,7 +66,7 @@ public class ConnectionInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the url property value. The endpoint that is used by Entitlement Management to communicate with the access package resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
@@ -83,8 +83,8 @@ public class ConnectionInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

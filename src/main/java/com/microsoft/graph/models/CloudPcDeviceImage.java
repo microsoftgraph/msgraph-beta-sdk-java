@@ -51,7 +51,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new cloudPcDeviceImage and sets the default values.
+     * Instantiates a new CloudPcDeviceImage and sets the default values.
      */
     public CloudPcDeviceImage() {
         super();
@@ -59,7 +59,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDeviceImage
+     * @return a CloudPcDeviceImage
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDeviceImage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the image.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -111,7 +111,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -119,7 +119,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -127,7 +127,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
-     * @return a cloudPcDeviceImageOsStatus
+     * @return a CloudPcDeviceImageOsStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
@@ -135,7 +135,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceImageResourceId() {
@@ -143,7 +143,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
-     * @return a cloudPcDeviceImageStatus
+     * @return a CloudPcDeviceImageStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatus getStatus() {
@@ -151,7 +151,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
-     * @return a cloudPcDeviceImageStatusDetails
+     * @return a CloudPcDeviceImageStatusDetails
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatusDetails getStatusDetails() {
@@ -159,7 +159,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The image version. For example, 0.0.1 and 1.5.13.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

@@ -46,7 +46,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
      */
     private Integer top;
     /**
-     * Instantiates a new getDevicePolicySettingsComplianceReportPostRequestBody and sets the default values.
+     * Instantiates a new GetDevicePolicySettingsComplianceReportPostRequestBody and sets the default values.
      */
     public GetDevicePolicySettingsComplianceReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -54,7 +54,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getDevicePolicySettingsComplianceReportPostRequestBody
+     * @return a GetDevicePolicySettingsComplianceReportPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetDevicePolicySettingsComplianceReportPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
         return new GetDevicePolicySettingsComplianceReportPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the filter property value. The filter property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -96,7 +96,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the groupBy property value. The groupBy property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGroupBy() {
@@ -104,7 +104,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the orderBy property value. The orderBy property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
@@ -112,7 +112,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the search property value. The search property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSearch() {
@@ -120,7 +120,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the select property value. The select property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -128,7 +128,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the sessionId property value. The sessionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSessionId() {
@@ -136,7 +136,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
@@ -144,7 +144,7 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
     }
     /**
      * Gets the top property value. The top property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
@@ -167,8 +167,8 @@ public class GetDevicePolicySettingsComplianceReportPostRequestBody implements A
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

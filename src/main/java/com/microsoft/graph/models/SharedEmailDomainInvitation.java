@@ -22,7 +22,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      */
     private String invitationStatus;
     /**
-     * Instantiates a new sharedEmailDomainInvitation and sets the default values.
+     * Instantiates a new SharedEmailDomainInvitation and sets the default values.
      */
     public SharedEmailDomainInvitation() {
         super();
@@ -30,7 +30,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sharedEmailDomainInvitation
+     * @return a SharedEmailDomainInvitation
      */
     @jakarta.annotation.Nonnull
     public static SharedEmailDomainInvitation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitationDomain property value. The invitationDomain property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitationDomain() {
@@ -67,7 +67,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
     }
     /**
      * Gets the invitationStatus property value. The invitationStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInvitationStatus() {

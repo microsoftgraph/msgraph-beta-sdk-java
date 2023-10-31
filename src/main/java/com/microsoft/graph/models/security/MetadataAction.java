@@ -17,7 +17,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      */
     private java.util.List<String> metadataToRemove;
     /**
-     * Instantiates a new metadataAction and sets the default values.
+     * Instantiates a new MetadataAction and sets the default values.
      */
     public MetadataAction() {
         super();
@@ -26,7 +26,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a metadataAction
+     * @return a MetadataAction
      */
     @jakarta.annotation.Nonnull
     public static MetadataAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
     }
     /**
      * Gets the metadataToAdd property value. A collection of key-value pairs that should be added to the file.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getMetadataToAdd() {
@@ -54,7 +54,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
     }
     /**
      * Gets the metadataToRemove property value. A collection of strings that indicate which keys to remove from the file metadata.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getMetadataToRemove() {

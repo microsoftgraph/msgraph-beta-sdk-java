@@ -13,7 +13,7 @@ public class PrivilegedSignupStatusCollectionResponse extends BaseCollectionPagi
      */
     private java.util.List<PrivilegedSignupStatus> value;
     /**
-     * Instantiates a new privilegedSignupStatusCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedSignupStatusCollectionResponse and sets the default values.
      */
     public PrivilegedSignupStatusCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PrivilegedSignupStatusCollectionResponse extends BaseCollectionPagi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedSignupStatusCollectionResponse
+     * @return a PrivilegedSignupStatusCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedSignupStatusCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PrivilegedSignupStatusCollectionResponse extends BaseCollectionPagi
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedSignupStatus
+     * @return a java.util.List<PrivilegedSignupStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedSignupStatus> getValue() {

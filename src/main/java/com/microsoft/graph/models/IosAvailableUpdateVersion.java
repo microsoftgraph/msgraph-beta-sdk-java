@@ -38,7 +38,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
      */
     private java.util.List<String> supportedDevices;
     /**
-     * Instantiates a new iosAvailableUpdateVersion and sets the default values.
+     * Instantiates a new IosAvailableUpdateVersion and sets the default values.
      */
     public IosAvailableUpdateVersion() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosAvailableUpdateVersion
+     * @return a IosAvailableUpdateVersion
      */
     @jakarta.annotation.Nonnull
     public static IosAvailableUpdateVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
         return new IosAvailableUpdateVersion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -101,7 +101,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the productVersion property value. The version of the update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
@@ -109,7 +109,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the supportedDevices property value. List of supported devices for the update.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedDevices() {
@@ -129,8 +129,8 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -86,7 +86,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      */
     private WindowsFirewallRuleTrafficDirectionType trafficDirection;
     /**
-     * Instantiates a new windowsFirewallRule and sets the default values.
+     * Instantiates a new WindowsFirewallRule and sets the default values.
      */
     public WindowsFirewallRule() {
         this.setAdditionalData(new HashMap<>());
@@ -94,7 +94,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsFirewallRule
+     * @return a WindowsFirewallRule
      */
     @jakarta.annotation.Nonnull
     public static WindowsFirewallRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,14 +103,14 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the action property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getAction() {
         return this.action;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description of the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -127,7 +127,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the rule. Does not need to be unique.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -135,7 +135,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the edgeTraversal property value. State Management Setting.
-     * @return a stateManagementSetting
+     * @return a StateManagementSetting
      */
     @jakarta.annotation.Nullable
     public StateManagementSetting getEdgeTraversal() {
@@ -169,7 +169,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the filePath property value. The full file path of an app that's affected by the firewall rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilePath() {
@@ -177,7 +177,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the interfaceTypes property value. Flags representing firewall rule interface types.
-     * @return a windowsFirewallRuleInterfaceTypes
+     * @return a EnumSet<WindowsFirewallRuleInterfaceTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsFirewallRuleInterfaceTypes> getInterfaceTypes() {
@@ -185,7 +185,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalAddressRanges() {
@@ -193,7 +193,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localPortRanges property value. List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getLocalPortRanges() {
@@ -201,7 +201,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the localUserAuthorizations property value. Specifies the list of authorized local users for the app container. This is a string in Security Descriptor Definition Language (SDDL) format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocalUserAuthorizations() {
@@ -209,7 +209,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -217,7 +217,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageFamilyName() {
@@ -225,7 +225,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the profileTypes property value. Flags representing which network profile types apply to a firewall rule.
-     * @return a windowsFirewallRuleNetworkProfileTypes
+     * @return a EnumSet<WindowsFirewallRuleNetworkProfileTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsFirewallRuleNetworkProfileTypes> getProfileTypes() {
@@ -233,7 +233,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the protocol property value. 0-255 number representing the IP protocol (TCP = 6, UDP = 17). If not specified, the default is All. Valid values 0 to 255
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProtocol() {
@@ -241,7 +241,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemoteAddressRanges() {
@@ -249,7 +249,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the remotePortRanges property value. List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRemotePortRanges() {
@@ -257,7 +257,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the serviceName property value. The name used in cases when a service, not an application, is sending or receiving traffic.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceName() {
@@ -265,7 +265,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trafficDirection property value. Firewall rule traffic directions.
-     * @return a windowsFirewallRuleTrafficDirectionType
+     * @return a WindowsFirewallRuleTrafficDirectionType
      */
     @jakarta.annotation.Nullable
     public WindowsFirewallRuleTrafficDirectionType getTrafficDirection() {
@@ -304,8 +304,8 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
         this.action = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

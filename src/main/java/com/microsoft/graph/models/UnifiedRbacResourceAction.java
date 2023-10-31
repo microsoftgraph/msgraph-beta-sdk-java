@@ -45,7 +45,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
      */
     private String resourceScopeId;
     /**
-     * Instantiates a new unifiedRbacResourceAction and sets the default values.
+     * Instantiates a new UnifiedRbacResourceAction and sets the default values.
      */
     public UnifiedRbacResourceAction() {
         super();
@@ -53,7 +53,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRbacResourceAction
+     * @return a UnifiedRbacResourceAction
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRbacResourceAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,7 +62,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the actionVerb property value. HTTP method for the action, such as DELETE, GET, PATCH, POST, PUT, or null. Supports $filter (eq) but not for null values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionVerb() {
@@ -70,7 +70,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationContext property value. The authenticationContext property
-     * @return a authenticationContextClassReference
+     * @return a AuthenticationContextClassReference
      */
     @jakarta.annotation.Nullable
     public AuthenticationContextClassReference getAuthenticationContext() {
@@ -78,7 +78,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationContextId property value. The authenticationContextId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationContextId() {
@@ -86,7 +86,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description for the action. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -112,7 +112,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the isAuthenticationContextSettable property value. The isAuthenticationContextSettable property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAuthenticationContextSettable() {
@@ -120,7 +120,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the isPrivileged property value. Flag indicating if the action is a sensitive resource action. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivileged() {
@@ -128,7 +128,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -136,7 +136,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the resourceScope property value. The resourceScope property
-     * @return a unifiedRbacResourceScope
+     * @return a UnifiedRbacResourceScope
      */
     @jakarta.annotation.Nullable
     public UnifiedRbacResourceScope getResourceScope() {
@@ -144,7 +144,7 @@ public class UnifiedRbacResourceAction extends Entity implements Parsable {
     }
     /**
      * Gets the resourceScopeId property value. Not implemented.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceScopeId() {

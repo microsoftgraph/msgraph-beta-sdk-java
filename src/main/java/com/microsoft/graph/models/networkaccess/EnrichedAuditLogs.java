@@ -22,7 +22,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
      */
     private EnrichedAuditLogsSettings teams;
     /**
-     * Instantiates a new enrichedAuditLogs and sets the default values.
+     * Instantiates a new EnrichedAuditLogs and sets the default values.
      */
     public EnrichedAuditLogs() {
         super();
@@ -30,7 +30,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a enrichedAuditLogs
+     * @return a EnrichedAuditLogs
      */
     @jakarta.annotation.Nonnull
     public static EnrichedAuditLogs createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * Gets the exchange property value. Exchange Online enriched audit logs settings.
-     * @return a enrichedAuditLogsSettings
+     * @return a EnrichedAuditLogsSettings
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getExchange() {
@@ -59,7 +59,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * Gets the sharepoint property value. SharePoint Online enriched audit logs settings.
-     * @return a enrichedAuditLogsSettings
+     * @return a EnrichedAuditLogsSettings
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getSharepoint() {
@@ -67,7 +67,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
     }
     /**
      * Gets the teams property value. Teams enriched audit logs settings.
-     * @return a enrichedAuditLogsSettings
+     * @return a EnrichedAuditLogsSettings
      */
     @jakarta.annotation.Nullable
     public EnrichedAuditLogsSettings getTeams() {

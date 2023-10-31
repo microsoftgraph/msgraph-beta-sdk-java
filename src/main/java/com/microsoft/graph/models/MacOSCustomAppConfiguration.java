@@ -24,7 +24,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      */
     private String fileName;
     /**
-     * Instantiates a new macOSCustomAppConfiguration and sets the default values.
+     * Instantiates a new MacOSCustomAppConfiguration and sets the default values.
      */
     public MacOSCustomAppConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSCustomAppConfiguration
+     * @return a MacOSCustomAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MacOSCustomAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the bundleId property value. Bundle id for targeting.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {
@@ -50,7 +50,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getConfigurationXml() {
@@ -70,7 +70,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
     }
     /**
      * Gets the fileName property value. Configuration file name (.plist
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileName() {

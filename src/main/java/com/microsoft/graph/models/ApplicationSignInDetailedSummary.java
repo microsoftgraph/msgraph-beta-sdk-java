@@ -30,7 +30,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      */
     private SignInStatus status;
     /**
-     * Instantiates a new applicationSignInDetailedSummary and sets the default values.
+     * Instantiates a new ApplicationSignInDetailedSummary and sets the default values.
      */
     public ApplicationSignInDetailedSummary() {
         super();
@@ -38,7 +38,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a applicationSignInDetailedSummary
+     * @return a ApplicationSignInDetailedSummary
      */
     @jakarta.annotation.Nonnull
     public static ApplicationSignInDetailedSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     }
     /**
      * Gets the appDisplayName property value. Name of the application that the user signed in to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -63,7 +63,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     }
     /**
      * Gets the appId property value. ID of the application that the user signed in to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -85,7 +85,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     }
     /**
      * Gets the signInCount property value. Count of sign-ins made by the application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSignInCount() {
@@ -93,7 +93,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
     }
     /**
      * Gets the status property value. Details of the sign-in status.
-     * @return a signInStatus
+     * @return a SignInStatus
      */
     @jakarta.annotation.Nullable
     public SignInStatus getStatus() {

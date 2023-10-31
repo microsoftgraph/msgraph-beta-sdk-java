@@ -66,7 +66,7 @@ public class SecurityAction extends Entity implements Parsable {
      */
     private SecurityVendorInformation vendorInformation;
     /**
-     * Instantiates a new securityAction and sets the default values.
+     * Instantiates a new SecurityAction and sets the default values.
      */
     public SecurityAction() {
         super();
@@ -74,7 +74,7 @@ public class SecurityAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityAction
+     * @return a SecurityAction
      */
     @jakarta.annotation.Nonnull
     public static SecurityAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the actionReason property value. Reason for invoking this action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionReason() {
@@ -91,7 +91,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the appId property value. The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -99,7 +99,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -107,7 +107,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the clientContext property value. The clientContext property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
@@ -131,7 +131,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the errorInfo property value. Error info when the action fails.
-     * @return a resultInfo
+     * @return a ResultInfo
      */
     @jakarta.annotation.Nullable
     public ResultInfo getErrorInfo() {
@@ -170,7 +170,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Action name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -178,7 +178,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the parameters property value. Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getParameters() {
@@ -186,7 +186,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the states property value. Collection of securityActionState to keep the history of an action.
-     * @return a securityActionState
+     * @return a java.util.List<SecurityActionState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityActionState> getStates() {
@@ -194,7 +194,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
@@ -202,7 +202,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the user property value. The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUser() {
@@ -210,7 +210,7 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

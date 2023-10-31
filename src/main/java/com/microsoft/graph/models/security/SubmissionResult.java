@@ -39,7 +39,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      */
     private EnumSet<UserMailboxSetting> userMailboxSetting;
     /**
-     * Instantiates a new submissionResult and sets the default values.
+     * Instantiates a new SubmissionResult and sets the default values.
      */
     public SubmissionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a submissionResult
+     * @return a SubmissionResult
      */
     @jakarta.annotation.Nonnull
     public static SubmissionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return new SubmissionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
-     * @return a submissionResultCategory
+     * @return a SubmissionResultCategory
      */
     @jakarta.annotation.Nullable
     public SubmissionResultCategory getCategory() {
@@ -72,7 +72,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the detail property value. Specifies the extra details provided by Microsoft to substantiate their analysis result.
-     * @return a submissionResultDetail
+     * @return a SubmissionResultDetail
      */
     @jakarta.annotation.Nullable
     public SubmissionResultDetail getDetail() {
@@ -80,7 +80,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
-     * @return a submissionDetectedFile
+     * @return a java.util.List<SubmissionDetectedFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubmissionDetectedFile> getDetectedFiles() {
@@ -88,7 +88,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the detectedUrls property value. Specifies the URLs detected by Microsoft in the submitted email.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetectedUrls() {
@@ -111,7 +111,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -119,7 +119,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
-     * @return a userMailboxSetting
+     * @return a EnumSet<UserMailboxSetting>
      */
     @jakarta.annotation.Nullable
     public EnumSet<UserMailboxSetting> getUserMailboxSetting() {
@@ -140,8 +140,8 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

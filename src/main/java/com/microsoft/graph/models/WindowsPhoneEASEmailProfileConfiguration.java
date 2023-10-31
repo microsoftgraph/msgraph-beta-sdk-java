@@ -52,7 +52,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      */
     private Boolean syncTasks;
     /**
-     * Instantiates a new windowsPhoneEASEmailProfileConfiguration and sets the default values.
+     * Instantiates a new WindowsPhoneEASEmailProfileConfiguration and sets the default values.
      */
     public WindowsPhoneEASEmailProfileConfiguration() {
         super();
@@ -61,7 +61,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhoneEASEmailProfileConfiguration
+     * @return a WindowsPhoneEASEmailProfileConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhoneEASEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the accountName property value. Account name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
@@ -78,7 +78,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows 8.1. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyOnlyToWindowsPhone81() {
@@ -86,7 +86,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
@@ -94,7 +94,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
@@ -102,7 +102,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the emailSyncSchedule property value. Possible values for email sync schedule.
-     * @return a emailSyncSchedule
+     * @return a EmailSyncSchedule
      */
     @jakarta.annotation.Nullable
     public EmailSyncSchedule getEmailSyncSchedule() {
@@ -129,7 +129,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
@@ -137,7 +137,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
@@ -145,7 +145,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the syncCalendar property value. Whether or not to sync the calendar.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncCalendar() {
@@ -153,7 +153,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the syncContacts property value. Whether or not to sync contacts.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncContacts() {
@@ -161,7 +161,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     }
     /**
      * Gets the syncTasks property value. Whether or not to sync tasks.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSyncTasks() {

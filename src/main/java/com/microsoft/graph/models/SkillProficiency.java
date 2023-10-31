@@ -33,7 +33,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new skillProficiency and sets the default values.
+     * Instantiates a new SkillProficiency and sets the default values.
      */
     public SkillProficiency() {
         super();
@@ -42,7 +42,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a skillProficiency
+     * @return a SkillProficiency
      */
     @jakarta.annotation.Nonnull
     public static SkillProficiency createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the categories property value. Contains categories a user has associated with the skill (for example, personal, professional, hobby).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
@@ -59,7 +59,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCollaborationTags() {
@@ -67,7 +67,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the skill.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -90,7 +90,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the proficiency property value. Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
-     * @return a skillProficiencyLevel
+     * @return a SkillProficiencyLevel
      */
     @jakarta.annotation.Nullable
     public SkillProficiencyLevel getProficiency() {
@@ -98,7 +98,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -106,7 +106,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
     }
     /**
      * Gets the webUrl property value. Contains a link to an information source about the skill.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

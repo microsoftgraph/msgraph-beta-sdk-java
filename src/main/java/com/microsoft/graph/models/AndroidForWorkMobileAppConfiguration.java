@@ -32,7 +32,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
      */
     private AndroidProfileApplicability profileApplicability;
     /**
-     * Instantiates a new androidForWorkMobileAppConfiguration and sets the default values.
+     * Instantiates a new AndroidForWorkMobileAppConfiguration and sets the default values.
      */
     public AndroidForWorkMobileAppConfiguration() {
         super();
@@ -41,7 +41,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkMobileAppConfiguration
+     * @return a AndroidForWorkMobileAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkMobileAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the connectedAppsEnabled property value. Setting to specify whether to allow ConnectedApps experience for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectedAppsEnabled() {
@@ -72,7 +72,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the packageId property value. Android For Work app configuration package id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
@@ -80,7 +80,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the payloadJson property value. Android For Work app configuration JSON payload.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadJson() {
@@ -88,7 +88,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the permissionActions property value. List of Android app permissions and corresponding permission actions.
-     * @return a androidPermissionAction
+     * @return a java.util.List<AndroidPermissionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidPermissionAction> getPermissionActions() {
@@ -96,7 +96,7 @@ public class AndroidForWorkMobileAppConfiguration extends ManagedDeviceMobileApp
     }
     /**
      * Gets the profileApplicability property value. Android profile applicability
-     * @return a androidProfileApplicability
+     * @return a AndroidProfileApplicability
      */
     @jakarta.annotation.Nullable
     public AndroidProfileApplicability getProfileApplicability() {
