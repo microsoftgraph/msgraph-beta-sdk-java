@@ -14,6 +14,10 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     private Map<String, Object> additionalData;
     /**
+     * Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+     */
+    private Boolean enforceRegistrationAfterAllowedSnoozes;
+    /**
      * Users and groups of users that are excluded from being prompted to set up the authentication method.
      */
     private java.util.List<ExcludeTarget> excludeTargets;
@@ -26,7 +30,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     private String odataType;
     /**
-     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0'  The user is prompted during every MFA attempt.
+     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
      */
     private Integer snoozeDurationInDays;
     /**
@@ -34,7 +38,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     private AdvancedConfigState state;
     /**
-     * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
+     * Instantiates a new AuthenticationMethodsRegistrationCampaign and sets the default values.
      */
     public AuthenticationMethodsRegistrationCampaign() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +46,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodsRegistrationCampaign
+     * @return a AuthenticationMethodsRegistrationCampaign
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodsRegistrationCampaign createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +54,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return new AuthenticationMethodsRegistrationCampaign();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,8 +62,16 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return this.additionalData;
     }
     /**
+     * Gets the enforceRegistrationAfterAllowedSnoozes property value. Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getEnforceRegistrationAfterAllowedSnoozes() {
+        return this.enforceRegistrationAfterAllowedSnoozes;
+    }
+    /**
      * Gets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
-     * @return a excludeTarget
+     * @return a java.util.List<ExcludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
@@ -71,7 +83,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("enforceRegistrationAfterAllowedSnoozes", (n) -> { this.setEnforceRegistrationAfterAllowedSnoozes(n.getBooleanValue()); });
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -81,7 +94,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
-     * @return a authenticationMethodsRegistrationCampaignIncludeTarget
+     * @return a java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
@@ -89,15 +102,15 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0'  The user is prompted during every MFA attempt.
-     * @return a integer
+     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSnoozeDurationInDays() {
@@ -105,7 +118,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the state property value. The state property
-     * @return a advancedConfigState
+     * @return a AdvancedConfigState
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
@@ -117,6 +130,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("enforceRegistrationAfterAllowedSnoozes", this.getEnforceRegistrationAfterAllowedSnoozes());
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -125,11 +139,18 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
+    }
+    /**
+     * Sets the enforceRegistrationAfterAllowedSnoozes property value. Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+     * @param value Value to set for the enforceRegistrationAfterAllowedSnoozes property.
+     */
+    public void setEnforceRegistrationAfterAllowedSnoozes(@jakarta.annotation.Nullable final Boolean value) {
+        this.enforceRegistrationAfterAllowedSnoozes = value;
     }
     /**
      * Sets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
@@ -153,7 +174,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         this.odataType = value;
     }
     /**
-     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0'  The user is prompted during every MFA attempt.
+     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
      * @param value Value to set for the snoozeDurationInDays property.
      */
     public void setSnoozeDurationInDays(@jakarta.annotation.Nullable final Integer value) {

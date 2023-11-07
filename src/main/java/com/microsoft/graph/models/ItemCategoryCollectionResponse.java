@@ -13,7 +13,7 @@ public class ItemCategoryCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<ItemCategory> value;
     /**
-     * Instantiates a new itemCategoryCollectionResponse and sets the default values.
+     * Instantiates a new ItemCategoryCollectionResponse and sets the default values.
      */
     public ItemCategoryCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ItemCategoryCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemCategoryCollectionResponse
+     * @return a ItemCategoryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ItemCategoryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ItemCategoryCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a itemCategory
+     * @return a java.util.List<ItemCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ItemCategory> getValue() {

@@ -20,7 +20,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      */
     private String folderName;
     /**
-     * Instantiates a new androidDeviceOwnerKioskModeManagedFolderReference and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerKioskModeManagedFolderReference and sets the default values.
      */
     public AndroidDeviceOwnerKioskModeManagedFolderReference() {
         super();
@@ -29,7 +29,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerKioskModeManagedFolderReference
+     * @return a AndroidDeviceOwnerKioskModeManagedFolderReference
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeManagedFolderReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
     }
     /**
      * Gets the folderIdentifier property value. Unique identifier for the folder
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFolderIdentifier() {
@@ -57,7 +57,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
     }
     /**
      * Gets the folderName property value. Name of the folder
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFolderName() {

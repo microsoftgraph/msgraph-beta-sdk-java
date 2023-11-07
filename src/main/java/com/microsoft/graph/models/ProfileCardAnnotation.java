@@ -18,7 +18,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      */
     private String displayName;
     /**
-     * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
+     * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
      */
     private java.util.List<DisplayNameLocalization> localizations;
     /**
@@ -26,7 +26,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new profileCardAnnotation and sets the default values.
+     * Instantiates a new ProfileCardAnnotation and sets the default values.
      */
     public ProfileCardAnnotation() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a profileCardAnnotation
+     * @return a ProfileCardAnnotation
      */
     @jakarta.annotation.Nonnull
     public static ProfileCardAnnotation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
         return new ProfileCardAnnotation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. If present, the value of this field is used by the profile card as the default property label in the experience (for example, 'Cost Center').
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -70,8 +70,8 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
-     * @return a displayNameLocalization
+     * Gets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
+     * @return a java.util.List<DisplayNameLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DisplayNameLocalization> getLocalizations() {
@@ -79,7 +79,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -97,8 +97,8 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -111,7 +111,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
+     * Sets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
      * @param value Value to set for the localizations property.
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {

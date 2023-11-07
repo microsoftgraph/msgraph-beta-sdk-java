@@ -13,7 +13,7 @@ public class ServiceNowConnectionCollectionResponse extends BaseCollectionPagina
      */
     private java.util.List<ServiceNowConnection> value;
     /**
-     * Instantiates a new serviceNowConnectionCollectionResponse and sets the default values.
+     * Instantiates a new ServiceNowConnectionCollectionResponse and sets the default values.
      */
     public ServiceNowConnectionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ServiceNowConnectionCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceNowConnectionCollectionResponse
+     * @return a ServiceNowConnectionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ServiceNowConnectionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ServiceNowConnectionCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a serviceNowConnection
+     * @return a java.util.List<ServiceNowConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceNowConnection> getValue() {

@@ -25,7 +25,7 @@ public class EducationOrganization extends Entity implements Parsable {
      */
     private String externalSourceDetail;
     /**
-     * Instantiates a new educationOrganization and sets the default values.
+     * Instantiates a new EducationOrganization and sets the default values.
      */
     public EducationOrganization() {
         super();
@@ -33,7 +33,7 @@ public class EducationOrganization extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationOrganization
+     * @return a EducationOrganization
      */
     @jakarta.annotation.Nonnull
     public static EducationOrganization createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Organization description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -57,7 +57,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Organization display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -65,7 +65,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the externalSource property value. Where this user was created from. Possible values are: sis, lms, or manual.
-     * @return a educationExternalSource
+     * @return a EducationExternalSource
      */
     @jakarta.annotation.Nullable
     public EducationExternalSource getExternalSource() {
@@ -73,7 +73,7 @@ public class EducationOrganization extends Entity implements Parsable {
     }
     /**
      * Gets the externalSourceDetail property value. The externalSourceDetail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalSourceDetail() {

@@ -34,7 +34,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new itemPublication and sets the default values.
+     * Instantiates a new ItemPublication and sets the default values.
      */
     public ItemPublication() {
         super();
@@ -43,7 +43,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPublication
+     * @return a ItemPublication
      */
     @jakarta.annotation.Nonnull
     public static ItemPublication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     }
     /**
      * Gets the description property value. Description of the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -60,7 +60,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Title of the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -91,7 +91,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     }
     /**
      * Gets the publisher property value. Publication or publisher for the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -99,7 +99,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     }
     /**
      * Gets the thumbnailUrl property value. URL referencing a thumbnail of the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbnailUrl() {
@@ -107,7 +107,7 @@ public class ItemPublication extends ItemFacet implements Parsable {
     }
     /**
      * Gets the webUrl property value. URL referencing the publication.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

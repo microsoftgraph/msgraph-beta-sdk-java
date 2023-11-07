@@ -24,7 +24,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
      */
     private Boolean preComposedIconEnabled;
     /**
-     * Instantiates a new macOSWebClip and sets the default values.
+     * Instantiates a new MacOSWebClip and sets the default values.
      */
     public MacOSWebClip() {
         super();
@@ -33,7 +33,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSWebClip
+     * @return a MacOSWebClip
      */
     @jakarta.annotation.Nonnull
     public static MacOSWebClip createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the appUrl property value. The web app URL starting with http:// or https://, such as https://learn.microsoft.com/mem/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppUrl() {
@@ -62,7 +62,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFullScreenEnabled() {
@@ -70,7 +70,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreComposedIconEnabled() {

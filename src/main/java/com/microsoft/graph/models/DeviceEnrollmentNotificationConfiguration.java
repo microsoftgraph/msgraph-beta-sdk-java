@@ -38,7 +38,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
      */
     private EnrollmentNotificationTemplateType templateType;
     /**
-     * Instantiates a new deviceEnrollmentNotificationConfiguration and sets the default values.
+     * Instantiates a new DeviceEnrollmentNotificationConfiguration and sets the default values.
      */
     public DeviceEnrollmentNotificationConfiguration() {
         super();
@@ -47,7 +47,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentNotificationConfiguration
+     * @return a DeviceEnrollmentNotificationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentNotificationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the brandingOptions property value. Branding Options for the Message Template. Branding is defined in the Intune Admin Console.
-     * @return a enrollmentNotificationBrandingOptions
+     * @return a EnumSet<EnrollmentNotificationBrandingOptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EnrollmentNotificationBrandingOptions> getBrandingOptions() {
@@ -64,7 +64,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the defaultLocale property value. DefaultLocale for the Enrollment Notification
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultLocale() {
@@ -95,7 +95,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the notificationTemplates property value. The list of notification data -
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getNotificationTemplates() {
@@ -103,7 +103,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the platformType property value. This enum indicates the platform type for which the enrollment restriction applies.
-     * @return a enrollmentRestrictionPlatformType
+     * @return a EnrollmentRestrictionPlatformType
      */
     @jakarta.annotation.Nullable
     public EnrollmentRestrictionPlatformType getPlatformType() {
@@ -111,7 +111,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
     }
     /**
      * Gets the templateType property value. This enum indicates the Template type for which the enrollment notification applies.
-     * @return a enrollmentNotificationTemplateType
+     * @return a EnrollmentNotificationTemplateType
      */
     @jakarta.annotation.Nullable
     public EnrollmentNotificationTemplateType getTemplateType() {

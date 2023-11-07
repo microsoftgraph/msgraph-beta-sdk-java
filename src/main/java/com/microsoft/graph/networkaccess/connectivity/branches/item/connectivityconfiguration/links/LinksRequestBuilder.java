@@ -59,17 +59,17 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/connectivity/branches/{branchSite%2Did}/connectivityConfiguration/links{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get links from networkAccess
-     * @return a CompletableFuture of connectivityConfigurationLinkCollectionResponse
+     * List of connectivity configurations for deviceLink objects.
+     * @return a CompletableFuture of ConnectivityConfigurationLinkCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLinkCollectionResponse> get() {
         return get(null);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectivityConfigurationLinkCollectionResponse
+     * @return a CompletableFuture of ConnectivityConfigurationLinkCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLinkCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,7 +82,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to links for networkAccess
      * @param body The request body
-     * @return a CompletableFuture of connectivityConfigurationLink
+     * @return a CompletableFuture of ConnectivityConfigurationLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLink> post(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body) {
@@ -92,7 +92,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to links for networkAccess
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of connectivityConfigurationLink
+     * @return a CompletableFuture of ConnectivityConfigurationLink
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ConnectivityConfigurationLink> post(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -104,7 +104,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ConnectivityConfigurationLink::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -112,17 +112,13 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConnectivityConfigurationLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a linksRequestBuilder
+     * @return a LinksRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public LinksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -175,7 +175,7 @@ public class LinksRequestBuilder extends BaseRequestBuilder {
         return new LinksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get links from networkAccess
+     * List of connectivity configurations for deviceLink objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -14,7 +14,7 @@ public class SensitivityLabelCollectionResponse extends BaseCollectionPagination
      */
     private java.util.List<SensitivityLabel> value;
     /**
-     * Instantiates a new sensitivityLabelCollectionResponse and sets the default values.
+     * Instantiates a new SensitivityLabelCollectionResponse and sets the default values.
      */
     public SensitivityLabelCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class SensitivityLabelCollectionResponse extends BaseCollectionPagination
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitivityLabelCollectionResponse
+     * @return a SensitivityLabelCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SensitivityLabelCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class SensitivityLabelCollectionResponse extends BaseCollectionPagination
     }
     /**
      * Gets the value property value. The value property
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getValue() {

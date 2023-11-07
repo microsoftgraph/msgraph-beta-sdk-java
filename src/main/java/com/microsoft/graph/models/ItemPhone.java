@@ -21,7 +21,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
      */
     private PhoneType type;
     /**
-     * Instantiates a new itemPhone and sets the default values.
+     * Instantiates a new ItemPhone and sets the default values.
      */
     public ItemPhone() {
         super();
@@ -30,7 +30,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemPhone
+     * @return a ItemPhone
      */
     @jakarta.annotation.Nonnull
     public static ItemPhone createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. Friendly name the user has assigned this phone number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -59,7 +59,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     }
     /**
      * Gets the number property value. Phone number provided by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
@@ -67,7 +67,7 @@ public class ItemPhone extends ItemFacet implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a phoneType
+     * @return a PhoneType
      */
     @jakarta.annotation.Nullable
     public PhoneType getType() {

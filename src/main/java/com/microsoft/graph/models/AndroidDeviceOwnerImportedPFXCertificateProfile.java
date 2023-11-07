@@ -28,7 +28,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
      */
     private java.util.List<AndroidDeviceOwnerSilentCertificateAccess> silentCertificateAccessDetails;
     /**
-     * Instantiates a new androidDeviceOwnerImportedPFXCertificateProfile and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerImportedPFXCertificateProfile and sets the default values.
      */
     public AndroidDeviceOwnerImportedPFXCertificateProfile() {
         super();
@@ -37,7 +37,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerImportedPFXCertificateProfile
+     * @return a AndroidDeviceOwnerImportedPFXCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerImportedPFXCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a androidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerCertificateAccessType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
@@ -67,7 +67,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     }
     /**
      * Gets the intendedPurpose property value. PFX Import Options.
-     * @return a intendedPurpose
+     * @return a IntendedPurpose
      */
     @jakarta.annotation.Nullable
     public IntendedPurpose getIntendedPurpose() {
@@ -75,7 +75,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -83,7 +83,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
-     * @return a androidDeviceOwnerSilentCertificateAccess
+     * @return a java.util.List<AndroidDeviceOwnerSilentCertificateAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {

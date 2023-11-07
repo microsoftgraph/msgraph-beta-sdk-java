@@ -46,6 +46,10 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private Boolean isBackendCertificateValidationEnabled;
     /**
+     * The isDnsResolutionEnabled property
+     */
+    private Boolean isDnsResolutionEnabled;
+    /**
      * Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
      */
     private Boolean isHttpOnlyCookieEnabled;
@@ -54,7 +58,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private Boolean isOnPremPublishingEnabled;
     /**
-     * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
+     * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
      */
     private Boolean isPersistentCookieEnabled;
     /**
@@ -82,7 +86,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<OnPremisesApplicationSegment> onPremisesApplicationSegments;
     /**
-     * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
+     * Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
      */
     private SegmentConfiguration segmentsConfiguration;
     /**
@@ -106,7 +110,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     private PasswordCredential verifiedCustomDomainPasswordCredential;
     /**
-     * Instantiates a new onPremisesPublishing and sets the default values.
+     * Instantiates a new OnPremisesPublishing and sets the default values.
      */
     public OnPremisesPublishing() {
         this.setAdditionalData(new HashMap<>());
@@ -114,7 +118,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesPublishing
+     * @return a OnPremisesPublishing
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesPublishing createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -122,7 +126,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         return new OnPremisesPublishing();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +135,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateUrl() {
@@ -139,7 +143,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationServerTimeout() {
@@ -147,7 +151,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the applicationType property value. Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationType() {
@@ -155,7 +159,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
-     * @return a externalAuthenticationType
+     * @return a ExternalAuthenticationType
      */
     @jakarta.annotation.Nullable
     public ExternalAuthenticationType getExternalAuthenticationType() {
@@ -163,7 +167,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the externalUrl property value. The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalUrl() {
@@ -175,7 +179,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(23);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
         deserializerMap.put("applicationServerTimeout", (n) -> { this.setApplicationServerTimeout(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
@@ -184,6 +188,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         deserializerMap.put("internalUrl", (n) -> { this.setInternalUrl(n.getStringValue()); });
         deserializerMap.put("isAccessibleViaZTNAClient", (n) -> { this.setIsAccessibleViaZTNAClient(n.getBooleanValue()); });
         deserializerMap.put("isBackendCertificateValidationEnabled", (n) -> { this.setIsBackendCertificateValidationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isDnsResolutionEnabled", (n) -> { this.setIsDnsResolutionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isHttpOnlyCookieEnabled", (n) -> { this.setIsHttpOnlyCookieEnabled(n.getBooleanValue()); });
         deserializerMap.put("isOnPremPublishingEnabled", (n) -> { this.setIsOnPremPublishingEnabled(n.getBooleanValue()); });
         deserializerMap.put("isPersistentCookieEnabled", (n) -> { this.setIsPersistentCookieEnabled(n.getBooleanValue()); });
@@ -203,7 +208,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the internalUrl property value. The internal url of the application. For example, https://intranet/.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInternalUrl() {
@@ -211,7 +216,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isAccessibleViaZTNAClient property value. The isAccessibleViaZTNAClient property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAccessibleViaZTNAClient() {
@@ -219,15 +224,23 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isBackendCertificateValidationEnabled property value. Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBackendCertificateValidationEnabled() {
         return this.isBackendCertificateValidationEnabled;
     }
     /**
+     * Gets the isDnsResolutionEnabled property value. The isDnsResolutionEnabled property
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDnsResolutionEnabled() {
+        return this.isDnsResolutionEnabled;
+    }
+    /**
      * Gets the isHttpOnlyCookieEnabled property value. Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHttpOnlyCookieEnabled() {
@@ -235,15 +248,15 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isOnPremPublishingEnabled property value. Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsOnPremPublishingEnabled() {
         return this.isOnPremPublishingEnabled;
     }
     /**
-     * Gets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
-     * @return a boolean
+     * Gets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPersistentCookieEnabled() {
@@ -251,7 +264,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isSecureCookieEnabled property value. Indicates if the Secure cookie flag should be set in the HTTP response headers. Set this value to true to transmit cookies over a secure channel such as an encrypted HTTPS request. Default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSecureCookieEnabled() {
@@ -259,7 +272,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isStateSessionEnabled property value. Indicates whether validation of the state parameter when the client uses the OAuth 2.0 authorization code grant flow is enabled. This setting allows admins to specify whether they want to enable CSRF protection for their apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsStateSessionEnabled() {
@@ -267,7 +280,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isTranslateHostHeaderEnabled property value. Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTranslateHostHeaderEnabled() {
@@ -275,7 +288,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isTranslateLinksInBodyEnabled property value. Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTranslateLinksInBodyEnabled() {
@@ -283,7 +296,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -291,15 +304,15 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onPremisesApplicationSegments property value. The onPremisesApplicationSegments property
-     * @return a onPremisesApplicationSegment
+     * @return a java.util.List<OnPremisesApplicationSegment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesApplicationSegment> getOnPremisesApplicationSegments() {
         return this.onPremisesApplicationSegments;
     }
     /**
-     * Gets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
-     * @return a segmentConfiguration
+     * Gets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
+     * @return a SegmentConfiguration
      */
     @jakarta.annotation.Nullable
     public SegmentConfiguration getSegmentsConfiguration() {
@@ -307,7 +320,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the singleSignOnSettings property value. Represents the single sign-on configuration for the on-premises application.
-     * @return a onPremisesPublishingSingleSignOn
+     * @return a OnPremisesPublishingSingleSignOn
      */
     @jakarta.annotation.Nullable
     public OnPremisesPublishingSingleSignOn getSingleSignOnSettings() {
@@ -315,7 +328,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the useAlternateUrlForTranslationAndRedirect property value. The useAlternateUrlForTranslationAndRedirect property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseAlternateUrlForTranslationAndRedirect() {
@@ -323,7 +336,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the verifiedCustomDomainCertificatesMetadata property value. Details of the certificate associated with the application when a custom domain is in use. null when using the default domain. Read-only.
-     * @return a verifiedCustomDomainCertificatesMetadata
+     * @return a VerifiedCustomDomainCertificatesMetadata
      */
     @jakarta.annotation.Nullable
     public VerifiedCustomDomainCertificatesMetadata getVerifiedCustomDomainCertificatesMetadata() {
@@ -331,7 +344,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the verifiedCustomDomainKeyCredential property value. The associated key credential for the custom domain used.
-     * @return a keyCredential
+     * @return a KeyCredential
      */
     @jakarta.annotation.Nullable
     public KeyCredential getVerifiedCustomDomainKeyCredential() {
@@ -339,7 +352,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the verifiedCustomDomainPasswordCredential property value. The associated password credential for the custom domain used.
-     * @return a passwordCredential
+     * @return a PasswordCredential
      */
     @jakarta.annotation.Nullable
     public PasswordCredential getVerifiedCustomDomainPasswordCredential() {
@@ -359,6 +372,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         writer.writeStringValue("internalUrl", this.getInternalUrl());
         writer.writeBooleanValue("isAccessibleViaZTNAClient", this.getIsAccessibleViaZTNAClient());
         writer.writeBooleanValue("isBackendCertificateValidationEnabled", this.getIsBackendCertificateValidationEnabled());
+        writer.writeBooleanValue("isDnsResolutionEnabled", this.getIsDnsResolutionEnabled());
         writer.writeBooleanValue("isHttpOnlyCookieEnabled", this.getIsHttpOnlyCookieEnabled());
         writer.writeBooleanValue("isOnPremPublishingEnabled", this.getIsOnPremPublishingEnabled());
         writer.writeBooleanValue("isPersistentCookieEnabled", this.getIsPersistentCookieEnabled());
@@ -377,8 +391,8 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -440,6 +454,13 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.isBackendCertificateValidationEnabled = value;
     }
     /**
+     * Sets the isDnsResolutionEnabled property value. The isDnsResolutionEnabled property
+     * @param value Value to set for the isDnsResolutionEnabled property.
+     */
+    public void setIsDnsResolutionEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.isDnsResolutionEnabled = value;
+    }
+    /**
      * Sets the isHttpOnlyCookieEnabled property value. Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.
      * @param value Value to set for the isHttpOnlyCookieEnabled property.
      */
@@ -454,7 +475,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.isOnPremPublishingEnabled = value;
     }
     /**
-     * Sets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
+     * Sets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
      * @param value Value to set for the isPersistentCookieEnabled property.
      */
     public void setIsPersistentCookieEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -503,7 +524,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
         this.onPremisesApplicationSegments = value;
     }
     /**
-     * Sets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
+     * Sets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
      * @param value Value to set for the segmentsConfiguration property.
      */
     public void setSegmentsConfiguration(@jakarta.annotation.Nullable final SegmentConfiguration value) {

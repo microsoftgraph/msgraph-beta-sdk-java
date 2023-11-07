@@ -70,7 +70,7 @@ public class TeamworkDevice extends Entity implements Parsable {
      */
     private java.util.List<TeamworkDeviceOperation> operations;
     /**
-     * Instantiates a new teamworkDevice and sets the default values.
+     * Instantiates a new TeamworkDevice and sets the default values.
      */
     public TeamworkDevice() {
         super();
@@ -78,7 +78,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDevice
+     * @return a TeamworkDevice
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDevice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -87,7 +87,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. The activity properties that change based on the device usage.
-     * @return a teamworkDeviceActivity
+     * @return a TeamworkDeviceActivity
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceActivity getActivity() {
@@ -95,7 +95,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the activityState property value. The activity state of the device. The possible values are: unknown, busy, idle, unavailable, unknownFutureValue.
-     * @return a teamworkDeviceActivityState
+     * @return a TeamworkDeviceActivityState
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceActivityState getActivityState() {
@@ -103,7 +103,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the companyAssetTag property value. The company asset tag assigned by the admin on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCompanyAssetTag() {
@@ -111,7 +111,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the configuration property value. The configuration properties of the device.
-     * @return a teamworkDeviceConfiguration
+     * @return a TeamworkDeviceConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceConfiguration getConfiguration() {
@@ -119,7 +119,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity of the user who enrolled the device to the tenant.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -135,7 +135,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the currentUser property value. The signed-in user on the device.
-     * @return a teamworkUserIdentity
+     * @return a TeamworkUserIdentity
      */
     @jakarta.annotation.Nullable
     public TeamworkUserIdentity getCurrentUser() {
@@ -143,7 +143,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the deviceType property value. The deviceType property
-     * @return a teamworkDeviceType
+     * @return a TeamworkDeviceType
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceType getDeviceType() {
@@ -175,7 +175,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the hardwareDetail property value. The hardwareDetail property
-     * @return a teamworkHardwareDetail
+     * @return a TeamworkHardwareDetail
      */
     @jakarta.annotation.Nullable
     public TeamworkHardwareDetail getHardwareDetail() {
@@ -183,7 +183,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the health property value. The health properties of the device.
-     * @return a teamworkDeviceHealth
+     * @return a TeamworkDeviceHealth
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceHealth getHealth() {
@@ -191,7 +191,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The health status of the device. The possible values are: unknown, offline, critical, nonUrgent, healthy, unknownFutureValue.
-     * @return a teamworkDeviceHealthStatus
+     * @return a TeamworkDeviceHealthStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkDeviceHealthStatus getHealthStatus() {
@@ -199,7 +199,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device details.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -215,7 +215,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the notes property value. The notes added by the admin to the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
@@ -223,7 +223,7 @@ public class TeamworkDevice extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. The async operations on the device.
-     * @return a teamworkDeviceOperation
+     * @return a java.util.List<TeamworkDeviceOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkDeviceOperation> getOperations() {

@@ -41,7 +41,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      */
     private Integer version;
     /**
-     * Instantiates a new cartToClassAssociation and sets the default values.
+     * Instantiates a new CartToClassAssociation and sets the default values.
      */
     public CartToClassAssociation() {
         super();
@@ -49,7 +49,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cartToClassAssociation
+     * @return a CartToClassAssociation
      */
     @jakarta.annotation.Nonnull
     public static CartToClassAssociation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the classroomIds property value. Identifiers of classrooms to be associated with device carts.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getClassroomIds() {
@@ -74,7 +74,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Admin provided description of the CartToClassAssociation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -82,7 +82,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCartIds property value. Identifiers of device carts to be associated with classes.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeviceCartIds() {
@@ -90,7 +90,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -122,7 +122,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the CartToClassAssociation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

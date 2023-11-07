@@ -28,7 +28,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      */
     private DeviceAndAppManagementAssignmentTarget target;
     /**
-     * Instantiates a new deviceConfigurationAssignment and sets the default values.
+     * Instantiates a new DeviceConfigurationAssignment and sets the default values.
      */
     public DeviceConfigurationAssignment() {
         super();
@@ -36,7 +36,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationAssignment
+     * @return a DeviceConfigurationAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the intent property value. The admin intent to apply or remove the profile. Possible values are: apply, remove.
-     * @return a deviceConfigAssignmentIntent
+     * @return a DeviceConfigAssignmentIntent
      */
     @jakarta.annotation.Nullable
     public DeviceConfigAssignmentIntent getIntent() {
@@ -66,7 +66,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Represents source of assignment.
-     * @return a deviceAndAppManagementAssignmentSource
+     * @return a DeviceAndAppManagementAssignmentSource
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentSource getSource() {
@@ -74,7 +74,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the sourceId property value. The identifier of the source of the assignment. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceId() {
@@ -82,7 +82,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
     }
     /**
      * Gets the target property value. The assignment target for the device configuration.
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentTarget getTarget() {

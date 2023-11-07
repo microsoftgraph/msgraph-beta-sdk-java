@@ -21,7 +21,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      */
     private String vendorId;
     /**
-     * Instantiates a new teamworkPeripheral and sets the default values.
+     * Instantiates a new TeamworkPeripheral and sets the default values.
      */
     public TeamworkPeripheral() {
         super();
@@ -29,7 +29,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkPeripheral
+     * @return a TeamworkPeripheral
      */
     @jakarta.annotation.Nonnull
     public static TeamworkPeripheral createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Display name for the peripheral.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -58,7 +58,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     }
     /**
      * Gets the productId property value. The product ID of the device. Each product from a vendor has its own ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductId() {
@@ -66,7 +66,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     }
     /**
      * Gets the vendorId property value. The unique identifier for the vendor of the device. Each vendor has a unique ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorId() {

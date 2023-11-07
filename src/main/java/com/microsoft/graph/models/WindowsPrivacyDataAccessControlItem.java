@@ -28,7 +28,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      */
     private WindowsPrivacyDataCategory dataCategory;
     /**
-     * Instantiates a new windowsPrivacyDataAccessControlItem and sets the default values.
+     * Instantiates a new WindowsPrivacyDataAccessControlItem and sets the default values.
      */
     public WindowsPrivacyDataAccessControlItem() {
         super();
@@ -36,7 +36,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPrivacyDataAccessControlItem
+     * @return a WindowsPrivacyDataAccessControlItem
      */
     @jakarta.annotation.Nonnull
     public static WindowsPrivacyDataAccessControlItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the accessLevel property value. Determine the access level to specific Windows privacy data category.
-     * @return a windowsPrivacyDataAccessLevel
+     * @return a WindowsPrivacyDataAccessLevel
      */
     @jakarta.annotation.Nullable
     public WindowsPrivacyDataAccessLevel getAccessLevel() {
@@ -53,7 +53,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the appDisplayName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -61,7 +61,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the appPackageFamilyName property value. The Package Family Name of a Windows app. When set, the access level applies to the specified application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPackageFamilyName() {
@@ -69,7 +69,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     }
     /**
      * Gets the dataCategory property value. Windows privacy data category specifier for privacy data access.
-     * @return a windowsPrivacyDataCategory
+     * @return a WindowsPrivacyDataCategory
      */
     @jakarta.annotation.Nullable
     public WindowsPrivacyDataCategory getDataCategory() {

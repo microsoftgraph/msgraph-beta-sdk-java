@@ -47,7 +47,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
      */
     private CloudPcStatusDetails statusDetails;
     /**
-     * Instantiates a new cloudPcRemoteActionResult and sets the default values.
+     * Instantiates a new CloudPcRemoteActionResult and sets the default values.
      */
     public CloudPcRemoteActionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcRemoteActionResult
+     * @return a CloudPcRemoteActionResult
      */
     @jakarta.annotation.Nonnull
     public static CloudPcRemoteActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -64,7 +64,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the actionName property value. The specified action. Supported values in the Microsoft Endpoint Manager portal are: Reprovision, Resize, Restore. Supported values in enterprise Cloud PC devices are: Reboot, Rename, Reprovision, Troubleshoot.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionName() {
@@ -72,14 +72,14 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the actionState property value. State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
-     * @return a actionState
+     * @return a ActionState
      */
     @jakarta.annotation.Nullable
     public ActionState getActionState() {
         return this.actionState;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the cloudPcId property value. The ID of the Cloud PC device on which the remote action is performed. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcId() {
@@ -121,7 +121,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the managedDeviceId property value. The ID of the Intune managed device on which the remote action is performed. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -129,7 +129,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -145,7 +145,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the statusDetails property value. The details of the Cloud PC status.
-     * @return a cloudPcStatusDetails
+     * @return a CloudPcStatusDetails
      */
     @jakarta.annotation.Nullable
     public CloudPcStatusDetails getStatusDetails() {
@@ -182,8 +182,8 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, Parsable
         this.actionState = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

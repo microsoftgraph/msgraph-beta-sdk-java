@@ -26,7 +26,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
      */
     private String ruleId;
     /**
-     * Instantiates a new policyRuleDelta and sets the default values.
+     * Instantiates a new PolicyRuleDelta and sets the default values.
      */
     public PolicyRuleDelta() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyRuleDelta
+     * @return a PolicyRuleDelta
      */
     @jakarta.annotation.Nonnull
     public static PolicyRuleDelta createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,14 +43,14 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a forwardingRuleAction
+     * @return a ForwardingRuleAction
      */
     @jakarta.annotation.Nullable
     public ForwardingRuleAction getAction() {
         return this.action;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +71,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleId property value. The identifier of the policy rule to update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleId() {
@@ -104,8 +104,8 @@ public class PolicyRuleDelta implements AdditionalDataHolder, Parsable {
         this.action = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -38,7 +38,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      */
     private ManagementParameterValueType valueType;
     /**
-     * Instantiates a new templateParameter and sets the default values.
+     * Instantiates a new TemplateParameter and sets the default values.
      */
     public TemplateParameter() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a templateParameter
+     * @return a TemplateParameter
      */
     @jakarta.annotation.Nonnull
     public static TemplateParameter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         return new TemplateParameter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the description property value. The description for the template parameter. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -71,7 +71,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the template parameter. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -94,7 +94,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJsonAllowedValues() {
@@ -102,7 +102,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the jsonDefaultValue property value. The default value for the template parameter represented by a serialized string of JSON. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getJsonDefaultValue() {
@@ -110,7 +110,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the valueType property value. The valueType property
-     * @return a managementParameterValueType
+     * @return a ManagementParameterValueType
      */
     @jakarta.annotation.Nullable
     public ManagementParameterValueType getValueType() {
@@ -139,8 +139,8 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

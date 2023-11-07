@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AadUserConversationMemberResult extends ActionResultPart implements Parsable {
     /**
-     * The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * The user object ID of the Microsoft Entra user that was being added as part of the bulk operation.
      */
     private String userId;
     /**
-     * Instantiates a new aadUserConversationMemberResult and sets the default values.
+     * Instantiates a new AadUserConversationMemberResult and sets the default values.
      */
     public AadUserConversationMemberResult() {
         super();
@@ -22,7 +22,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aadUserConversationMemberResult
+     * @return a AadUserConversationMemberResult
      */
     @jakarta.annotation.Nonnull
     public static AadUserConversationMemberResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,8 +40,8 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
         return deserializerMap;
     }
     /**
-     * Gets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
-     * @return a string
+     * Gets the userId property value. The user object ID of the Microsoft Entra user that was being added as part of the bulk operation.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -57,7 +57,7 @@ public class AadUserConversationMemberResult extends ActionResultPart implements
         writer.writeStringValue("userId", this.getUserId());
     }
     /**
-     * Sets the userId property value. The user object ID of the Azure AD user that was being added as part of the bulk operation.
+     * Sets the userId property value. The user object ID of the Microsoft Entra user that was being added as part of the bulk operation.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

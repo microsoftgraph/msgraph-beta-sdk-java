@@ -14,15 +14,15 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
      */
     private Map<String, Object> additionalData;
     /**
-     * The asn property
+     * Specifies ASN of one end of IPSec tunnel (local or peer).
      */
     private Integer asn;
     /**
-     * The bgpAddress property
+     * Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
      */
     private String bgpAddress;
     /**
-     * The endpoint property
+     * Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
      */
     private String endpoint;
     /**
@@ -30,7 +30,7 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
      */
     private String odataType;
     /**
-     * Instantiates a new peerConnectivityConfiguration and sets the default values.
+     * Instantiates a new PeerConnectivityConfiguration and sets the default values.
      */
     public PeerConnectivityConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a peerConnectivityConfiguration
+     * @return a PeerConnectivityConfiguration
      */
     @jakarta.annotation.Nonnull
     public static PeerConnectivityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
         return new PeerConnectivityConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,24 +54,24 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
         return this.additionalData;
     }
     /**
-     * Gets the asn property value. The asn property
-     * @return a integer
+     * Gets the asn property value. Specifies ASN of one end of IPSec tunnel (local or peer).
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAsn() {
         return this.asn;
     }
     /**
-     * Gets the bgpAddress property value. The bgpAddress property
-     * @return a string
+     * Gets the bgpAddress property value. Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBgpAddress() {
         return this.bgpAddress;
     }
     /**
-     * Gets the endpoint property value. The endpoint property
-     * @return a string
+     * Gets the endpoint property value. Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEndpoint() {
@@ -92,7 +92,7 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -111,28 +111,28 @@ public class PeerConnectivityConfiguration implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the asn property value. The asn property
+     * Sets the asn property value. Specifies ASN of one end of IPSec tunnel (local or peer).
      * @param value Value to set for the asn property.
      */
     public void setAsn(@jakarta.annotation.Nullable final Integer value) {
         this.asn = value;
     }
     /**
-     * Sets the bgpAddress property value. The bgpAddress property
+     * Sets the bgpAddress property value. Specifies BGP IPv4 address of one end of IPSec tunnel (local or peer).
      * @param value Value to set for the bgpAddress property.
      */
     public void setBgpAddress(@jakarta.annotation.Nullable final String value) {
         this.bgpAddress = value;
     }
     /**
-     * Sets the endpoint property value. The endpoint property
+     * Sets the endpoint property value. Specifies public IPv4 address of one end of IPSec tunnel (local or peer).
      * @param value Value to set for the endpoint property.
      */
     public void setEndpoint(@jakarta.annotation.Nullable final String value) {

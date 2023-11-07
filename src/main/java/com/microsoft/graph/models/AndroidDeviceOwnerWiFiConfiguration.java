@@ -60,7 +60,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      */
     private AndroidDeviceOwnerWiFiSecurityType wiFiSecurityType;
     /**
-     * Instantiates a new androidDeviceOwnerWiFiConfiguration and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerWiFiConfiguration and sets the default values.
      */
     public AndroidDeviceOwnerWiFiConfiguration() {
         super();
@@ -69,7 +69,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerWiFiConfiguration
+     * @return a AndroidDeviceOwnerWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -93,7 +93,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -122,7 +122,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -130,7 +130,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -138,7 +138,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreSharedKeyIsSet() {
@@ -146,7 +146,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyAutomaticConfigurationUrl() {
@@ -154,7 +154,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as .example.com.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyExclusionList() {
@@ -162,7 +162,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyManualAddress property value. Specify the proxy server IP address. Android documentation does not specify IPv4 or IPv6. For example: 192.168.1.1.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyManualAddress() {
@@ -170,7 +170,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxyManualPort property value. Specify the proxy server port.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProxyManualPort() {
@@ -178,7 +178,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the proxySettings property value. Wi-Fi Proxy Settings.
-     * @return a wiFiProxySetting
+     * @return a WiFiProxySetting
      */
     @jakarta.annotation.Nullable
     public WiFiProxySetting getProxySettings() {
@@ -186,7 +186,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -194,7 +194,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android Device Owner.
-     * @return a androidDeviceOwnerWiFiSecurityType
+     * @return a AndroidDeviceOwnerWiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerWiFiSecurityType getWiFiSecurityType() {

@@ -29,7 +29,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      */
     private ItemActivityTimeSet times;
     /**
-     * Instantiates a new itemActivityOLD and sets the default values.
+     * Instantiates a new ItemActivityOLD and sets the default values.
      */
     public ItemActivityOLD() {
         super();
@@ -37,7 +37,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemActivityOLD
+     * @return a ItemActivityOLD
      */
     @jakarta.annotation.Nonnull
     public static ItemActivityOLD createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the action property value. The action property
-     * @return a itemActionSet
+     * @return a ItemActionSet
      */
     @jakarta.annotation.Nullable
     public ItemActionSet getAction() {
@@ -54,7 +54,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the actor property value. The actor property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getActor() {
@@ -62,7 +62,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the driveItem property value. The driveItem property
-     * @return a driveItem
+     * @return a DriveItem
      */
     @jakarta.annotation.Nullable
     public DriveItem getDriveItem() {
@@ -84,7 +84,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the listItem property value. The listItem property
-     * @return a listItem
+     * @return a ListItem
      */
     @jakarta.annotation.Nullable
     public ListItem getListItem() {
@@ -92,7 +92,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
     }
     /**
      * Gets the times property value. The times property
-     * @return a itemActivityTimeSet
+     * @return a ItemActivityTimeSet
      */
     @jakarta.annotation.Nullable
     public ItemActivityTimeSet getTimes() {

@@ -98,7 +98,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      */
     private PrintScaling scaling;
     /**
-     * Instantiates a new printerDocumentConfiguration and sets the default values.
+     * Instantiates a new PrinterDocumentConfiguration and sets the default values.
      */
     public PrinterDocumentConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -106,7 +106,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerDocumentConfiguration
+     * @return a PrinterDocumentConfiguration
      */
     @jakarta.annotation.Nonnull
     public static PrinterDocumentConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -114,7 +114,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         return new PrinterDocumentConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the collate property value. The collate property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCollate() {
@@ -131,7 +131,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the colorMode property value. The colorMode property
-     * @return a printColorMode
+     * @return a PrintColorMode
      */
     @jakarta.annotation.Nullable
     public PrintColorMode getColorMode() {
@@ -139,7 +139,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the copies property value. The copies property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCopies() {
@@ -147,7 +147,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the dpi property value. The dpi property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDpi() {
@@ -155,7 +155,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the duplexMode property value. The duplexMode property
-     * @return a printDuplexMode
+     * @return a PrintDuplexMode
      */
     @jakarta.annotation.Nullable
     public PrintDuplexMode getDuplexMode() {
@@ -163,7 +163,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the feedDirection property value. The feedDirection property
-     * @return a printerFeedDirection
+     * @return a PrinterFeedDirection
      */
     @jakarta.annotation.Nullable
     public PrinterFeedDirection getFeedDirection() {
@@ -171,7 +171,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the feedOrientation property value. The feedOrientation property
-     * @return a printerFeedOrientation
+     * @return a PrinterFeedOrientation
      */
     @jakarta.annotation.Nullable
     public PrinterFeedOrientation getFeedOrientation() {
@@ -209,7 +209,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a printFinishing
+     * @return a java.util.List<PrintFinishing>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintFinishing> getFinishings() {
@@ -217,7 +217,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the fitPdfToPage property value. The fitPdfToPage property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFitPdfToPage() {
@@ -225,7 +225,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the inputBin property value. The inputBin property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInputBin() {
@@ -233,7 +233,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the margin property value. The margin property
-     * @return a printMargin
+     * @return a PrintMargin
      */
     @jakarta.annotation.Nullable
     public PrintMargin getMargin() {
@@ -241,7 +241,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the mediaSize property value. The mediaSize property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaSize() {
@@ -249,7 +249,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the mediaType property value. The mediaType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaType() {
@@ -257,7 +257,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the multipageLayout property value. The multipageLayout property
-     * @return a printMultipageLayout
+     * @return a PrintMultipageLayout
      */
     @jakarta.annotation.Nullable
     public PrintMultipageLayout getMultipageLayout() {
@@ -265,7 +265,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -273,7 +273,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the orientation property value. The orientation property
-     * @return a printOrientation
+     * @return a PrintOrientation
      */
     @jakarta.annotation.Nullable
     public PrintOrientation getOrientation() {
@@ -281,7 +281,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the outputBin property value. The outputBin property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOutputBin() {
@@ -289,7 +289,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the pageRanges property value. The pageRanges property
-     * @return a integerRange
+     * @return a java.util.List<IntegerRange>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntegerRange> getPageRanges() {
@@ -297,7 +297,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the pagesPerSheet property value. The pagesPerSheet property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPagesPerSheet() {
@@ -305,7 +305,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the quality property value. The quality property
-     * @return a printQuality
+     * @return a PrintQuality
      */
     @jakarta.annotation.Nullable
     public PrintQuality getQuality() {
@@ -313,7 +313,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the scaling property value. The scaling property
-     * @return a printScaling
+     * @return a PrintScaling
      */
     @jakarta.annotation.Nullable
     public PrintScaling getScaling() {
@@ -349,8 +349,8 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

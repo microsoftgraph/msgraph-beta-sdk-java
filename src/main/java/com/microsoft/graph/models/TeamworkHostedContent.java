@@ -17,7 +17,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
      */
     private String contentType;
     /**
-     * Instantiates a new teamworkHostedContent and sets the default values.
+     * Instantiates a new TeamworkHostedContent and sets the default values.
      */
     public TeamworkHostedContent() {
         super();
@@ -25,7 +25,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkHostedContent
+     * @return a TeamworkHostedContent
      */
     @jakarta.annotation.Nonnull
     public static TeamworkHostedContent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     }
     /**
      * Gets the contentBytes property value. Write only. Bytes for the hosted content (such as images).
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContentBytes() {
@@ -49,7 +49,7 @@ public class TeamworkHostedContent extends Entity implements Parsable {
     }
     /**
      * Gets the contentType property value. Write only. Content type, such as image/png, image/jpg.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentType() {

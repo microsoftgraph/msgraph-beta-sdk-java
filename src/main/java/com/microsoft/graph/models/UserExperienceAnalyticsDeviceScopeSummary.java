@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
      */
     private Integer totalDeviceScopesEnabled;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceScopeSummary and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceScopeSummary and sets the default values.
      */
     public UserExperienceAnalyticsDeviceScopeSummary() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceScopeSummary
+     * @return a UserExperienceAnalyticsDeviceScopeSummary
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScopeSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
         return new UserExperienceAnalyticsDeviceScopeSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the completedDeviceScopeIds property value. A collection of the user experience analytics device scope Unique Identifiers that are enabled and finished recalculating the report metric.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCompletedDeviceScopeIds() {
@@ -84,7 +84,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the insufficientDataDeviceScopeIds property value. A collection of user experience analytics device scope Unique Identitfiers that are enabled but there is insufficient data to calculate results.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInsufficientDataDeviceScopeIds() {
@@ -92,7 +92,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,7 +100,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the totalDeviceScopes property value. The total number of user experience analytics device scopes. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceScopes() {
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
     }
     /**
      * Gets the totalDeviceScopesEnabled property value. The total number of user experience analytics device scopes that are enabled. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalDeviceScopesEnabled() {
@@ -128,8 +128,8 @@ public class UserExperienceAnalyticsDeviceScopeSummary implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

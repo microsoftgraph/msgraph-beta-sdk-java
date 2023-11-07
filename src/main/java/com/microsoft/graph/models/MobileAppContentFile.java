@@ -53,11 +53,19 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     private Long sizeEncrypted;
     /**
+     * Indicates the size of the file after encryption, in bytes.
+     */
+    private Long sizeEncryptedInBytes;
+    /**
+     * Indicates the original size of the file, in bytes.
+     */
+    private Long sizeInBytes;
+    /**
      * Contains properties for upload request states.
      */
     private MobileAppContentFileUploadState uploadState;
     /**
-     * Instantiates a new mobileAppContentFile and sets the default values.
+     * Instantiates a new MobileAppContentFile and sets the default values.
      */
     public MobileAppContentFile() {
         super();
@@ -65,7 +73,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppContentFile
+     * @return a MobileAppContentFile
      */
     @jakarta.annotation.Nonnull
     public static MobileAppContentFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +82,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the azureStorageUri property value. The Azure Storage URI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageUri() {
@@ -113,12 +121,14 @@ public class MobileAppContentFile extends Entity implements Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
         deserializerMap.put("sizeEncrypted", (n) -> { this.setSizeEncrypted(n.getLongValue()); });
+        deserializerMap.put("sizeEncryptedInBytes", (n) -> { this.setSizeEncryptedInBytes(n.getLongValue()); });
+        deserializerMap.put("sizeInBytes", (n) -> { this.setSizeInBytes(n.getLongValue()); });
         deserializerMap.put("uploadState", (n) -> { this.setUploadState(n.getEnumValue(MobileAppContentFileUploadState.class)); });
         return deserializerMap;
     }
     /**
      * Gets the isCommitted property value. A value indicating whether the file is committed.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommitted() {
@@ -126,7 +136,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isDependency property value. Whether the content file is a dependency for the main content file.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDependency() {
@@ -134,7 +144,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the isFrameworkFile property value. A value indicating whether the file is a framework file.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFrameworkFile() {
@@ -142,7 +152,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the manifest property value. The manifest information.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getManifest() {
@@ -150,7 +160,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. the file name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -158,7 +168,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size of the file prior to encryption.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSize() {
@@ -166,15 +176,31 @@ public class MobileAppContentFile extends Entity implements Parsable {
     }
     /**
      * Gets the sizeEncrypted property value. The size of the file after encryption.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSizeEncrypted() {
         return this.sizeEncrypted;
     }
     /**
+     * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes.
+     * @return a Long
+     */
+    @jakarta.annotation.Nullable
+    public Long getSizeEncryptedInBytes() {
+        return this.sizeEncryptedInBytes;
+    }
+    /**
+     * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes.
+     * @return a Long
+     */
+    @jakarta.annotation.Nullable
+    public Long getSizeInBytes() {
+        return this.sizeInBytes;
+    }
+    /**
      * Gets the uploadState property value. Contains properties for upload request states.
-     * @return a mobileAppContentFileUploadState
+     * @return a MobileAppContentFileUploadState
      */
     @jakarta.annotation.Nullable
     public MobileAppContentFileUploadState getUploadState() {
@@ -197,6 +223,8 @@ public class MobileAppContentFile extends Entity implements Parsable {
         writer.writeStringValue("name", this.getName());
         writer.writeLongValue("size", this.getSize());
         writer.writeLongValue("sizeEncrypted", this.getSizeEncrypted());
+        writer.writeLongValue("sizeEncryptedInBytes", this.getSizeEncryptedInBytes());
+        writer.writeLongValue("sizeInBytes", this.getSizeInBytes());
         writer.writeEnumValue("uploadState", this.getUploadState());
     }
     /**
@@ -268,6 +296,20 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {
         this.sizeEncrypted = value;
+    }
+    /**
+     * Sets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes.
+     * @param value Value to set for the sizeEncryptedInBytes property.
+     */
+    public void setSizeEncryptedInBytes(@jakarta.annotation.Nullable final Long value) {
+        this.sizeEncryptedInBytes = value;
+    }
+    /**
+     * Sets the sizeInBytes property value. Indicates the original size of the file, in bytes.
+     * @param value Value to set for the sizeInBytes property.
+     */
+    public void setSizeInBytes(@jakarta.annotation.Nullable final Long value) {
+        this.sizeInBytes = value;
     }
     /**
      * Sets the uploadState property value. Contains properties for upload request states.

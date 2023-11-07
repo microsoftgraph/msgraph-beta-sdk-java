@@ -36,9 +36,9 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantTags/{tenantTag%2Did}/microsoft.graph.managedTenants.unassignTag", rawUrl);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants.
+     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of tenantTag
+     * @return a CompletableFuture of TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-unassigntag?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -46,10 +46,10 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         return post(body, null);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants.
+     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of tenantTag
+     * @return a CompletableFuture of TenantTag
      * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenanttag-unassigntag?view=graph-rest-1.0">Find more info here</a>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         return this.requestAdapter.sendAsync(requestInfo, TenantTag::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants.
+     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
         return toPostRequestInformation(body, null);
     }
     /**
-     * Un-assigns the tenant tag from the specified managed tenants.
+     * Un-assigns the tenant tag from the specified managed tenants. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -80,23 +80,23 @@ public class MicrosoftGraphManagedTenantsUnassignTagRequestBuilder extends BaseR
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnassignTagPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a microsoftGraphManagedTenantsUnassignTagRequestBuilder
+     * @return a MicrosoftGraphManagedTenantsUnassignTagRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphManagedTenantsUnassignTagRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

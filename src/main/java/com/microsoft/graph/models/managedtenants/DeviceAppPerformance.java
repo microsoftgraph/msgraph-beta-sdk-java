@@ -75,7 +75,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
      */
     private Integer totalAppFreezeCount;
     /**
-     * Instantiates a new deviceAppPerformance and sets the default values.
+     * Instantiates a new DeviceAppPerformance and sets the default values.
      */
     public DeviceAppPerformance() {
         super();
@@ -83,7 +83,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAppPerformance
+     * @return a DeviceAppPerformance
      */
     @jakarta.annotation.Nonnull
     public static DeviceAppPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -92,7 +92,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appFriendlyName property value. The appFriendlyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppFriendlyName() {
@@ -100,7 +100,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appName property value. The appName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -108,7 +108,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appPublisher property value. The appPublisher property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -116,7 +116,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the appVersion property value. The appVersion property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppVersion() {
@@ -124,7 +124,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. The deviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -132,7 +132,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceManufacturer property value. The deviceManufacturer property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceManufacturer() {
@@ -140,7 +140,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceModel property value. The deviceModel property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceModel() {
@@ -148,7 +148,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -181,7 +181,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHealthStatus() {
@@ -189,7 +189,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the isLatestUsedVersion property value. The isLatestUsedVersion property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIsLatestUsedVersion() {
@@ -197,7 +197,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the isMostUsedVersion property value. The isMostUsedVersion property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIsMostUsedVersion() {
@@ -213,7 +213,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantDisplayName property value. The tenantDisplayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantDisplayName() {
@@ -221,7 +221,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -229,7 +229,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the totalAppCrashCount property value. The totalAppCrashCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAppCrashCount() {
@@ -237,7 +237,7 @@ public class DeviceAppPerformance extends Entity implements Parsable {
     }
     /**
      * Gets the totalAppFreezeCount property value. The totalAppFreezeCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalAppFreezeCount() {

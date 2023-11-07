@@ -13,7 +13,7 @@ public class PrivilegedOperationEventCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<PrivilegedOperationEvent> value;
     /**
-     * Instantiates a new privilegedOperationEventCollectionResponse and sets the default values.
+     * Instantiates a new PrivilegedOperationEventCollectionResponse and sets the default values.
      */
     public PrivilegedOperationEventCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PrivilegedOperationEventCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedOperationEventCollectionResponse
+     * @return a PrivilegedOperationEventCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedOperationEventCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PrivilegedOperationEventCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a privilegedOperationEvent
+     * @return a java.util.List<PrivilegedOperationEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegedOperationEvent> getValue() {

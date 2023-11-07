@@ -15,7 +15,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      */
     private DelegatedPrivilegeStatus delegatedPrivilegeStatus;
     /**
@@ -55,7 +55,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<WorkloadStatus> workloadStatuses;
     /**
-     * Instantiates a new tenantStatusInformation and sets the default values.
+     * Instantiates a new TenantStatusInformation and sets the default values.
      */
     public TenantStatusInformation() {
         this.setAdditionalData(new HashMap<>());
@@ -63,7 +63,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantStatusInformation
+     * @return a TenantStatusInformation
      */
     @jakarta.annotation.Nonnull
     public static TenantStatusInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         return new TenantStatusInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,8 +79,8 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
-     * @return a delegatedPrivilegeStatus
+     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * @return a DelegatedPrivilegeStatus
      */
     @jakarta.annotation.Nullable
     public DelegatedPrivilegeStatus getDelegatedPrivilegeStatus() {
@@ -115,7 +115,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the offboardedByUserId property value. The identifier for the account that offboarded the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOffboardedByUserId() {
@@ -139,7 +139,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onboardedByUserId property value. The identifier for the account that onboarded the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnboardedByUserId() {
@@ -155,7 +155,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
-     * @return a tenantOnboardingStatus
+     * @return a TenantOnboardingStatus
      */
     @jakarta.annotation.Nullable
     public TenantOnboardingStatus getOnboardingStatus() {
@@ -163,7 +163,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
-     * @return a tenantOnboardingEligibilityReason
+     * @return a TenantOnboardingEligibilityReason
      */
     @jakarta.annotation.Nullable
     public TenantOnboardingEligibilityReason getTenantOnboardingEligibilityReason() {
@@ -171,7 +171,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the workloadStatuses property value. The collection of workload statues for the managed tenant. Optional. Read-only.
-     * @return a workloadStatus
+     * @return a java.util.List<WorkloadStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadStatus> getWorkloadStatuses() {
@@ -196,14 +196,14 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @param value Value to set for the delegatedPrivilegeStatus property.
      */
     public void setDelegatedPrivilegeStatus(@jakarta.annotation.Nullable final DelegatedPrivilegeStatus value) {

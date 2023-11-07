@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      */
     private UserExperienceAnalyticsHealthState modelHealthStatus;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthModelPerformance() {
         super();
@@ -68,7 +68,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a UserExperienceAnalyticsBatteryHealthModelPerformance
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthModelPerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the activeDevices property value. Number of active devices for that model. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the averageBatteryAgeInDays property value. The mean of the battery age for all devices of a given model in a tenant. Unit in days. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageBatteryAgeInDays() {
@@ -93,7 +93,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the averageEstimatedRuntimeInMinutes property value. The mean of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageEstimatedRuntimeInMinutes() {
@@ -101,7 +101,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageMaxCapacityPercentage() {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the manufacturer property value. Name of the device manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -138,7 +138,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the meanFullBatteryDrainCount property value. The mean of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMeanFullBatteryDrainCount() {
@@ -146,7 +146,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the medianEstimatedRuntimeInMinutes property value. The median of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMedianEstimatedRuntimeInMinutes() {
@@ -154,7 +154,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the medianFullBatteryDrainCount property value. The median of number of times the battery has been discharged an amount that equals 100% of its capacity for all devices of a given model in a tenant. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMedianFullBatteryDrainCount() {
@@ -162,7 +162,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the medianMaxCapacityPercentage property value. The median of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMedianMaxCapacityPercentage() {
@@ -170,7 +170,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the model property value. The model name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -178,7 +178,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the modelBatteryHealthScore property value. A weighted average of a models maximum capacity score and runtime estimate score. Values range from 0-100. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getModelBatteryHealthScore() {
@@ -186,7 +186,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     }
     /**
      * Gets the modelHealthStatus property value. The modelHealthStatus property
-     * @return a userExperienceAnalyticsHealthState
+     * @return a UserExperienceAnalyticsHealthState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsHealthState getModelHealthStatus() {

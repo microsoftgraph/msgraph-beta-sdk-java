@@ -110,7 +110,7 @@ public class ChatMessage extends Entity implements Parsable {
      */
     private String webUrl;
     /**
-     * Instantiates a new chatMessage and sets the default values.
+     * Instantiates a new ChatMessage and sets the default values.
      */
     public ChatMessage() {
         super();
@@ -118,7 +118,7 @@ public class ChatMessage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessage
+     * @return a ChatMessage
      */
     @jakarta.annotation.Nonnull
     public static ChatMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -127,7 +127,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the attachments property value. References to attached objects like files, tabs, meetings etc.
-     * @return a chatMessageAttachment
+     * @return a java.util.List<ChatMessageAttachment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessageAttachment> getAttachments() {
@@ -135,7 +135,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. The body property
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -143,7 +143,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the channelIdentity property value. If the message was sent in a channel, represents identity of the channel.
-     * @return a channelIdentity
+     * @return a ChannelIdentity
      */
     @jakarta.annotation.Nullable
     public ChannelIdentity getChannelIdentity() {
@@ -151,7 +151,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the chatId property value. If the message was sent in a chat, represents the identity of the chat.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChatId() {
@@ -175,7 +175,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the etag property value. Read-only. Version number of the chat message.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEtag() {
@@ -183,7 +183,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, adding new members. For event messages, the messageType property will be set to systemEventMessage.
-     * @return a eventMessageDetail
+     * @return a EventMessageDetail
      */
     @jakarta.annotation.Nullable
     public EventMessageDetail getEventDetail() {
@@ -225,7 +225,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the from property value. Details of the sender of the chat message. Can only be set during migration.
-     * @return a chatMessageFromIdentitySet
+     * @return a ChatMessageFromIdentitySet
      */
     @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
@@ -233,7 +233,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the hostedContents property value. Content in a message hosted by Microsoft Teams - for example, images or code snippets.
-     * @return a chatMessageHostedContent
+     * @return a java.util.List<ChatMessageHostedContent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessageHostedContent> getHostedContents() {
@@ -241,7 +241,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a chatMessageImportance
+     * @return a ChatMessageImportance
      */
     @jakarta.annotation.Nullable
     public ChatMessageImportance getImportance() {
@@ -265,7 +265,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the locale property value. Locale of the chat message set by the client. Always set to en-us.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocale() {
@@ -273,7 +273,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the mentions property value. List of entities mentioned in the chat message. Supported entities are: user, bot, team, channel, and tag.
-     * @return a chatMessageMention
+     * @return a java.util.List<ChatMessageMention>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessageMention> getMentions() {
@@ -281,7 +281,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the messageHistory property value. List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
-     * @return a chatMessageHistoryItem
+     * @return a java.util.List<ChatMessageHistoryItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessageHistoryItem> getMessageHistory() {
@@ -289,7 +289,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the messageType property value. The messageType property
-     * @return a chatMessageType
+     * @return a ChatMessageType
      */
     @jakarta.annotation.Nullable
     public ChatMessageType getMessageType() {
@@ -297,7 +297,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the onBehalfOf property value. User attribution of the message when bot sends a message on behalf of a user.
-     * @return a chatMessageFromIdentitySet
+     * @return a ChatMessageFromIdentitySet
      */
     @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getOnBehalfOf() {
@@ -305,7 +305,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the policyViolation property value. Defines the properties of a policy violation set by a data loss prevention (DLP) application.
-     * @return a chatMessagePolicyViolation
+     * @return a ChatMessagePolicyViolation
      */
     @jakarta.annotation.Nullable
     public ChatMessagePolicyViolation getPolicyViolation() {
@@ -313,7 +313,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the reactions property value. Reactions for this chat message (for example, Like).
-     * @return a chatMessageReaction
+     * @return a java.util.List<ChatMessageReaction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessageReaction> getReactions() {
@@ -321,7 +321,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the replies property value. Replies for a specified message. Supports $expand for channel messages.
-     * @return a chatMessage
+     * @return a java.util.List<ChatMessage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChatMessage> getReplies() {
@@ -329,7 +329,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the replyToId property value. Read-only. ID of the parent chat message or root chat message of the thread. (Only applies to chat messages in channels, not chats.)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReplyToId() {
@@ -337,7 +337,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the subject property value. The subject of the chat message, in plaintext.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
@@ -345,7 +345,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the summary property value. Summary text of the chat message that could be used for push notifications and summary views or fall back views. Only applies to channel chat messages, not chat messages in a chat.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSummary() {
@@ -353,7 +353,7 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the webUrl property value. Read-only. Link to the message in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {

@@ -26,7 +26,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
      */
     private String odataType;
     /**
-     * Instantiates a new educationSynchronizationConnectionSettings and sets the default values.
+     * Instantiates a new EducationSynchronizationConnectionSettings and sets the default values.
      */
     public EducationSynchronizationConnectionSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationConnectionSettings
+     * @return a EducationSynchronizationConnectionSettings
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationConnectionSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         return new EducationSynchronizationConnectionSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
     }
     /**
      * Gets the clientId property value. Client ID used to connect to the provider.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientId() {
@@ -67,7 +67,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
     }
     /**
      * Gets the clientSecret property value. Client secret to authenticate the connection to the provider.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientSecret() {
@@ -87,7 +87,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,8 +105,8 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -13,7 +13,7 @@ public class AdminAppsAndServices extends Entity implements Parsable {
      */
     private AppsAndServicesSettings settings;
     /**
-     * Instantiates a new adminAppsAndServices and sets the default values.
+     * Instantiates a new AdminAppsAndServices and sets the default values.
      */
     public AdminAppsAndServices() {
         super();
@@ -21,7 +21,7 @@ public class AdminAppsAndServices extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a adminAppsAndServices
+     * @return a AdminAppsAndServices
      */
     @jakarta.annotation.Nonnull
     public static AdminAppsAndServices createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AdminAppsAndServices extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a appsAndServicesSettings
+     * @return a AppsAndServicesSettings
      */
     @jakarta.annotation.Nullable
     public AppsAndServicesSettings getSettings() {

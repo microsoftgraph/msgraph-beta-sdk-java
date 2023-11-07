@@ -24,7 +24,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      */
     private Integer managedDeviceAuthority;
     /**
-     * Instantiates a new deviceComanagementAuthorityConfiguration and sets the default values.
+     * Instantiates a new DeviceComanagementAuthorityConfiguration and sets the default values.
      */
     public DeviceComanagementAuthorityConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComanagementAuthorityConfiguration
+     * @return a DeviceComanagementAuthorityConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceComanagementAuthorityConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     }
     /**
      * Gets the configurationManagerAgentCommandLineArgument property value. CoManagement Authority configuration ConfigurationManagerAgentCommandLineArgument
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConfigurationManagerAgentCommandLineArgument() {
@@ -62,7 +62,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     }
     /**
      * Gets the installConfigurationManagerAgent property value. CoManagement Authority configuration InstallConfigurationManagerAgent
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInstallConfigurationManagerAgent() {
@@ -70,7 +70,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     }
     /**
      * Gets the managedDeviceAuthority property value. CoManagement Authority configuration ManagedDeviceAuthority
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getManagedDeviceAuthority() {

@@ -204,7 +204,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
      */
     private Boolean workProfileRequirePassword;
     /**
-     * Instantiates a new androidWorkProfileGeneralDeviceConfiguration and sets the default values.
+     * Instantiates a new AndroidWorkProfileGeneralDeviceConfiguration and sets the default values.
      */
     public AndroidWorkProfileGeneralDeviceConfiguration() {
         super();
@@ -213,7 +213,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWorkProfileGeneralDeviceConfiguration
+     * @return a AndroidWorkProfileGeneralDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileGeneralDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -222,7 +222,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the allowedGoogleAccountDomains property value. Determine domains allow-list for accounts that can be added to work profile.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAllowedGoogleAccountDomains() {
@@ -230,7 +230,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the blockUnifiedPasswordForWorkProfile property value. Prevent using unified password for unlocking device and work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockUnifiedPasswordForWorkProfile() {
@@ -295,7 +295,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordBlockFaceUnlock property value. Indicates whether or not to block face unlock.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockFaceUnlock() {
@@ -303,7 +303,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockFingerprintUnlock() {
@@ -311,7 +311,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordBlockIrisUnlock property value. Indicates whether or not to block iris unlock.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockIrisUnlock() {
@@ -319,7 +319,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordBlockTrustAgents() {
@@ -327,7 +327,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -335,7 +335,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum length of passwords. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -343,7 +343,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -351,7 +351,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -359,7 +359,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordRequiredType property value. Android Work Profile required password type.
-     * @return a androidWorkProfileRequiredPasswordType
+     * @return a AndroidWorkProfileRequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getPasswordRequiredType() {
@@ -367,7 +367,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -375,7 +375,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a androidRequiredPasswordComplexity
+     * @return a AndroidRequiredPasswordComplexity
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
@@ -383,7 +383,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
@@ -391,7 +391,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the vpnAlwaysOnPackageIdentifier property value. Enable lockdown mode for always-on VPN.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVpnAlwaysOnPackageIdentifier() {
@@ -399,7 +399,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the vpnEnableAlwaysOnLockdownMode property value. Enable lockdown mode for always-on VPN.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getVpnEnableAlwaysOnLockdownMode() {
@@ -407,7 +407,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileAccountUse property value. An enum representing possible values for account use in work profile.
-     * @return a androidWorkProfileAccountUse
+     * @return a AndroidWorkProfileAccountUse
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileAccountUse getWorkProfileAccountUse() {
@@ -415,7 +415,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileAllowAppInstallsFromUnknownSources property value. Indicates whether to allow installation of apps from unknown sources.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileAllowAppInstallsFromUnknownSources() {
@@ -423,7 +423,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileAllowWidgets property value. Allow widgets from work profile apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileAllowWidgets() {
@@ -431,7 +431,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockAddingAccounts property value. Block users from adding/removing accounts in work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockAddingAccounts() {
@@ -439,7 +439,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockCamera property value. Block work profile camera.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockCamera() {
@@ -447,7 +447,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockCrossProfileCallerId property value. Block display work profile caller ID in personal profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockCrossProfileCallerId() {
@@ -455,7 +455,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockCrossProfileContactsSearch property value. Block work profile contacts availability in personal profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockCrossProfileContactsSearch() {
@@ -463,7 +463,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockCrossProfileCopyPaste property value. Boolean that indicates if the setting disallow cross profile copy/paste is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockCrossProfileCopyPaste() {
@@ -471,7 +471,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockNotificationsWhileDeviceLocked property value. Indicates whether or not to block notifications while device locked.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockNotificationsWhileDeviceLocked() {
@@ -479,7 +479,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockPersonalAppInstallsFromUnknownSources property value. Prevent app installations from unknown sources in the personal profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockPersonalAppInstallsFromUnknownSources() {
@@ -487,7 +487,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBlockScreenCapture property value. Block screen capture in work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBlockScreenCapture() {
@@ -495,7 +495,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileBluetoothEnableContactSharing property value. Allow bluetooth devices to access enterprise contacts.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileBluetoothEnableContactSharing() {
@@ -503,7 +503,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileDataSharingType property value. Android Work Profile cross profile data sharing type.
-     * @return a androidWorkProfileCrossProfileDataSharingType
+     * @return a AndroidWorkProfileCrossProfileDataSharingType
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileCrossProfileDataSharingType getWorkProfileDataSharingType() {
@@ -511,7 +511,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileDefaultAppPermissionPolicy property value. Android Work Profile default app permission policy type.
-     * @return a androidWorkProfileDefaultAppPermissionPolicyType
+     * @return a AndroidWorkProfileDefaultAppPermissionPolicyType
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileDefaultAppPermissionPolicyType getWorkProfileDefaultAppPermissionPolicy() {
@@ -519,7 +519,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordBlockFaceUnlock property value. Indicates whether or not to block face unlock for work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfilePasswordBlockFaceUnlock() {
@@ -527,7 +527,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordBlockFingerprintUnlock property value. Indicates whether or not to block fingerprint unlock for work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfilePasswordBlockFingerprintUnlock() {
@@ -535,7 +535,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordBlockIrisUnlock property value. Indicates whether or not to block iris unlock for work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfilePasswordBlockIrisUnlock() {
@@ -543,7 +543,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordBlockTrustAgents property value. Indicates whether or not to block Smart Lock and other trust agents for work profile.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfilePasswordBlockTrustAgents() {
@@ -551,7 +551,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordExpirationDays property value. Number of days before the work profile password expires. Valid values 1 to 365
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordExpirationDays() {
@@ -559,7 +559,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinimumLength property value. Minimum length of work profile password. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinimumLength() {
@@ -567,7 +567,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinLetterCharacters property value. Minimum # of letter characters required in work profile password. Valid values 1 to 10
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinLetterCharacters() {
@@ -575,7 +575,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinLowerCaseCharacters property value. Minimum # of lower-case characters required in work profile password. Valid values 1 to 10
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinLowerCaseCharacters() {
@@ -583,7 +583,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinNonLetterCharacters property value. Minimum # of non-letter characters required in work profile password. Valid values 1 to 10
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinNonLetterCharacters() {
@@ -591,7 +591,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinNumericCharacters property value. Minimum # of numeric characters required in work profile password. Valid values 1 to 10
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinNumericCharacters() {
@@ -599,7 +599,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinSymbolCharacters property value. Minimum # of symbols required in work profile password. Valid values 1 to 10
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinSymbolCharacters() {
@@ -607,7 +607,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinUpperCaseCharacters property value. Minimum # of upper-case characters required in work profile password. Valid values 1 to 10
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinUpperCaseCharacters() {
@@ -615,7 +615,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout() {
@@ -623,7 +623,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordPreviousPasswordBlockCount property value. Number of previous work profile passwords to block. Valid values 0 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordPreviousPasswordBlockCount() {
@@ -631,7 +631,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordRequiredType property value. Android Work Profile required password type.
-     * @return a androidWorkProfileRequiredPasswordType
+     * @return a AndroidWorkProfileRequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileRequiredPasswordType getWorkProfilePasswordRequiredType() {
@@ -639,7 +639,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfilePasswordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getWorkProfilePasswordSignInFailureCountBeforeFactoryReset() {
@@ -647,7 +647,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileRequiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a androidRequiredPasswordComplexity
+     * @return a AndroidRequiredPasswordComplexity
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordComplexity getWorkProfileRequiredPasswordComplexity() {
@@ -655,7 +655,7 @@ public class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfigur
     }
     /**
      * Gets the workProfileRequirePassword property value. Password is required or not for work profile
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWorkProfileRequirePassword() {

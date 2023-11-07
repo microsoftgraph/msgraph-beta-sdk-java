@@ -16,7 +16,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
      */
     private DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
     /**
-     * Instantiates a new iosDerivedCredentialAuthenticationConfiguration and sets the default values.
+     * Instantiates a new IosDerivedCredentialAuthenticationConfiguration and sets the default values.
      */
     public IosDerivedCredentialAuthenticationConfiguration() {
         super();
@@ -25,7 +25,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosDerivedCredentialAuthenticationConfiguration
+     * @return a IosDerivedCredentialAuthenticationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosDerivedCredentialAuthenticationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class IosDerivedCredentialAuthenticationConfiguration extends DeviceConfi
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {

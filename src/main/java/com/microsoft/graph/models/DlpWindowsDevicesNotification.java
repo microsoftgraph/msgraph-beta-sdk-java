@@ -17,7 +17,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      */
     private String lastModfiedBy;
     /**
-     * Instantiates a new dlpWindowsDevicesNotification and sets the default values.
+     * Instantiates a new DlpWindowsDevicesNotification and sets the default values.
      */
     public DlpWindowsDevicesNotification() {
         super();
@@ -26,7 +26,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a dlpWindowsDevicesNotification
+     * @return a DlpWindowsDevicesNotification
      */
     @jakarta.annotation.Nonnull
     public static DlpWindowsDevicesNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     }
     /**
      * Gets the contentName property value. The contentName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContentName() {
@@ -54,7 +54,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     }
     /**
      * Gets the lastModfiedBy property value. The lastModfiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastModfiedBy() {

@@ -21,7 +21,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      */
     private Boolean useUtc;
     /**
-     * Instantiates a new deviceHealthScriptTimeSchedule and sets the default values.
+     * Instantiates a new DeviceHealthScriptTimeSchedule and sets the default values.
      */
     public DeviceHealthScriptTimeSchedule() {
         super();
@@ -30,7 +30,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptTimeSchedule
+     * @return a DeviceHealthScriptTimeSchedule
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptTimeSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,7 +66,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     }
     /**
      * Gets the useUtc property value. Indicate if the time is Utc or client local time.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseUtc() {

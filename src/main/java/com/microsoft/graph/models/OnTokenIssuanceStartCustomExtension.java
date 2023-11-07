@@ -13,7 +13,7 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
      */
     private java.util.List<OnTokenIssuanceStartReturnClaim> claimsForTokenConfiguration;
     /**
-     * Instantiates a new onTokenIssuanceStartCustomExtension and sets the default values.
+     * Instantiates a new OnTokenIssuanceStartCustomExtension and sets the default values.
      */
     public OnTokenIssuanceStartCustomExtension() {
         super();
@@ -22,7 +22,7 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onTokenIssuanceStartCustomExtension
+     * @return a OnTokenIssuanceStartCustomExtension
      */
     @jakarta.annotation.Nonnull
     public static OnTokenIssuanceStartCustomExtension createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,7 +31,7 @@ public class OnTokenIssuanceStartCustomExtension extends CustomAuthenticationExt
     }
     /**
      * Gets the claimsForTokenConfiguration property value. Collection of claims to be returned by the API called by this custom authentication extension.
-     * @return a onTokenIssuanceStartReturnClaim
+     * @return a java.util.List<OnTokenIssuanceStartReturnClaim>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OnTokenIssuanceStartReturnClaim> getClaimsForTokenConfiguration() {

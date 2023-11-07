@@ -16,7 +16,7 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
      */
     private Integer maximumCacheSizePercentage;
     /**
-     * Instantiates a new deliveryOptimizationMaxCacheSizePercentage and sets the default values.
+     * Instantiates a new DeliveryOptimizationMaxCacheSizePercentage and sets the default values.
      */
     public DeliveryOptimizationMaxCacheSizePercentage() {
         super();
@@ -25,7 +25,7 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deliveryOptimizationMaxCacheSizePercentage
+     * @return a DeliveryOptimizationMaxCacheSizePercentage
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationMaxCacheSizePercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DeliveryOptimizationMaxCacheSizePercentage extends DeliveryOptimiza
     }
     /**
      * Gets the maximumCacheSizePercentage property value. Specifies the maximum cache size that Delivery Optimization can utilize, as a percentage of disk size (1-100). Valid values 1 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumCacheSizePercentage() {

@@ -25,7 +25,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      */
     private Long successfulActivityCount;
     /**
-     * Instantiates a new credentialUsageSummary and sets the default values.
+     * Instantiates a new CredentialUsageSummary and sets the default values.
      */
     public CredentialUsageSummary() {
         super();
@@ -33,7 +33,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a credentialUsageSummary
+     * @return a CredentialUsageSummary
      */
     @jakarta.annotation.Nonnull
     public static CredentialUsageSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     }
     /**
      * Gets the authMethod property value. The authMethod property
-     * @return a usageAuthMethod
+     * @return a UsageAuthMethod
      */
     @jakarta.annotation.Nullable
     public UsageAuthMethod getAuthMethod() {
@@ -50,7 +50,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failureActivityCount property value. Provides the count of failed resets or registration data.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFailureActivityCount() {
@@ -58,7 +58,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     }
     /**
      * Gets the feature property value. The feature property
-     * @return a featureType
+     * @return a FeatureType
      */
     @jakarta.annotation.Nullable
     public FeatureType getFeature() {
@@ -79,7 +79,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     }
     /**
      * Gets the successfulActivityCount property value. Provides the count of successful registrations or resets.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSuccessfulActivityCount() {

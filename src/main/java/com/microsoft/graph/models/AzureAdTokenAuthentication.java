@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationConfiguration implements Parsable {
     /**
-     * The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
+     * The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
      */
     private String resourceId;
     /**
-     * Instantiates a new azureAdTokenAuthentication and sets the default values.
+     * Instantiates a new AzureAdTokenAuthentication and sets the default values.
      */
     public AzureAdTokenAuthentication() {
         super();
@@ -22,7 +22,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a azureAdTokenAuthentication
+     * @return a AzureAdTokenAuthentication
      */
     @jakarta.annotation.Nonnull
     public static AzureAdTokenAuthentication createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,8 +40,8 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
         return deserializerMap;
     }
     /**
-     * Gets the resourceId property value. The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
-     * @return a string
+     * Gets the resourceId property value. The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -57,7 +57,7 @@ public class AzureAdTokenAuthentication extends CustomExtensionAuthenticationCon
         writer.writeStringValue("resourceId", this.getResourceId());
     }
     /**
-     * Sets the resourceId property value. The appID of the Azure AD application to use to authenticate a logic app with a custom access package workflow extension.
+     * Sets the resourceId property value. The appID of the Microsoft Entra application to use to authenticate a logic app with a custom access package workflow extension.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {

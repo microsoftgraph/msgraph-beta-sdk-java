@@ -46,11 +46,15 @@ public class RiskDetection extends Entity implements Parsable {
      */
     private SignInLocation location;
     /**
+     * The mitreTechniqueId property
+     */
+    private String mitreTechniqueId;
+    /**
      * Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      */
     private String requestId;
     /**
-     * Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
      */
     private RiskDetail riskDetail;
     /**
@@ -58,7 +62,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     private String riskEventType;
     /**
-     * Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
      */
     private RiskLevel riskLevel;
     /**
@@ -90,7 +94,7 @@ public class RiskDetection extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new riskDetection and sets the default values.
+     * Instantiates a new RiskDetection and sets the default values.
      */
     public RiskDetection() {
         super();
@@ -98,7 +102,7 @@ public class RiskDetection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a riskDetection
+     * @return a RiskDetection
      */
     @jakarta.annotation.Nonnull
     public static RiskDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -107,7 +111,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
-     * @return a activityType
+     * @return a ActivityType
      */
     @jakarta.annotation.Nullable
     public ActivityType getActivity() {
@@ -123,7 +127,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInfo property value. Additional information associated with the risk detection in JSON format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInfo() {
@@ -131,7 +135,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. Correlation ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -147,7 +151,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the detectionTimingType property value. Timing of the detected risk (real-time/offline). The possible values are notDefined, realtime, nearRealtime, offline, unknownFutureValue.
-     * @return a riskDetectionTimingType
+     * @return a RiskDetectionTimingType
      */
     @jakarta.annotation.Nullable
     public RiskDetectionTimingType getDetectionTimingType() {
@@ -169,6 +173,7 @@ public class RiskDetection extends Entity implements Parsable {
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("mitreTechniqueId", (n) -> { this.setMitreTechniqueId(n.getStringValue()); });
         deserializerMap.put("requestId", (n) -> { this.setRequestId(n.getStringValue()); });
         deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
         deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
@@ -184,7 +189,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -200,23 +205,31 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. Location of the sign-in.
-     * @return a signInLocation
+     * @return a SignInLocation
      */
     @jakarta.annotation.Nullable
     public SignInLocation getLocation() {
         return this.location;
     }
     /**
+     * Gets the mitreTechniqueId property value. The mitreTechniqueId property
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getMitreTechniqueId() {
+        return this.mitreTechniqueId;
+    }
+    /**
      * Gets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestId() {
         return this.requestId;
     }
     /**
-     * Gets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
-     * @return a riskDetail
+     * Gets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -224,15 +237,15 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventType property value. The type of risk event detected. The possible values are unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence, generic,adminConfirmedUserCompromised, mcasImpossibleTravel, mcasSuspiciousInboxManipulationRules, investigationsThreatIntelligenceSigninLinked, maliciousIPAddressValidCredentialsBlockedIP, anomalousUserActivity, userReportedSuspiciousActivity.  For more information about each value, see riskEventType values.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskEventType() {
         return this.riskEventType;
     }
     /**
-     * Gets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
-     * @return a riskLevel
+     * Gets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
+     * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevel() {
@@ -240,7 +253,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. The state of a detected risky user or sign-in. The possible values are none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, and unknownFutureValue.
-     * @return a riskState
+     * @return a RiskState
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -248,7 +261,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the riskType property value. The riskType property
-     * @return a riskEventType
+     * @return a RiskEventType
      */
     @jakarta.annotation.Nullable
     public RiskEventType getRiskType() {
@@ -256,7 +269,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the source property value. Source of the risk detection. For example, activeDirectory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSource() {
@@ -264,7 +277,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. Indicates the type of token issuer for the detected sign-in risk. The possible values are AzureAD, ADFederationServices, and unknownFutureValue.
-     * @return a tokenIssuerType
+     * @return a TokenIssuerType
      */
     @jakarta.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {
@@ -272,7 +285,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. Name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -280,7 +293,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. Unique ID of the user.  The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -288,7 +301,7 @@ public class RiskDetection extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -310,6 +323,7 @@ public class RiskDetection extends Entity implements Parsable {
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeObjectValue("location", this.getLocation());
+        writer.writeStringValue("mitreTechniqueId", this.getMitreTechniqueId());
         writer.writeStringValue("requestId", this.getRequestId());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
         writer.writeStringValue("riskEventType", this.getRiskEventType());
@@ -386,6 +400,13 @@ public class RiskDetection extends Entity implements Parsable {
         this.location = value;
     }
     /**
+     * Sets the mitreTechniqueId property value. The mitreTechniqueId property
+     * @param value Value to set for the mitreTechniqueId property.
+     */
+    public void setMitreTechniqueId(@jakarta.annotation.Nullable final String value) {
+        this.mitreTechniqueId = value;
+    }
+    /**
      * Sets the requestId property value. Request ID of the sign-in associated with the risk detection. This property is null if the risk detection is not associated with a sign-in.
      * @param value Value to set for the requestId property.
      */
@@ -393,7 +414,7 @@ public class RiskDetection extends Entity implements Parsable {
         this.requestId = value;
     }
     /**
-     * Sets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Sets the riskDetail property value. Details of the detected risk. The possible values are: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection. Note that you must use the Prefer: include - unknown -enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal , m365DAdminDismissedDetection. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
@@ -407,7 +428,7 @@ public class RiskDetection extends Entity implements Parsable {
         this.riskEventType = value;
     }
     /**
-     * Sets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden.
+     * Sets the riskLevel property value. Level of the detected risk. The possible values are low, medium, high, hidden, none, unknownFutureValue. Note: Details for this property are only available for Microsoft Entra ID P2 customers. P1 customers will be returned hidden.
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {

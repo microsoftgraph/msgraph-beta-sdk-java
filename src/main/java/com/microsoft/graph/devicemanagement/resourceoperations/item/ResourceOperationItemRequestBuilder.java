@@ -58,7 +58,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The Resource Operations.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> get() {
@@ -67,7 +67,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The Resource Operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -80,7 +80,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getScopesForUser method.
      * @param userid Usage: userid='{userid}'
-     * @return a getScopesForUserWithUseridRequestBuilder
+     * @return a GetScopesForUserWithUseridRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetScopesForUserWithUseridRequestBuilder getScopesForUserWithUserid(@jakarta.annotation.Nonnull final String userid) {
@@ -90,7 +90,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> patch(@jakarta.annotation.Nonnull final ResourceOperation body) {
@@ -100,7 +100,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property resourceOperations in deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of resourceOperation
+     * @return a CompletableFuture of ResourceOperation
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ResourceOperation> patch(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -127,15 +127,16 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -154,10 +155,6 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -165,6 +162,10 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -186,17 +187,17 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ResourceOperation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

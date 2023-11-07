@@ -13,7 +13,7 @@ public class Win32LobAppCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<Win32LobApp> value;
     /**
-     * Instantiates a new win32LobAppCollectionResponse and sets the default values.
+     * Instantiates a new Win32LobAppCollectionResponse and sets the default values.
      */
     public Win32LobAppCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class Win32LobAppCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppCollectionResponse
+     * @return a Win32LobAppCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class Win32LobAppCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a win32LobApp
+     * @return a java.util.List<Win32LobApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Win32LobApp> getValue() {

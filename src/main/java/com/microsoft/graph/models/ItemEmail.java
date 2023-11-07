@@ -21,7 +21,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      */
     private EmailType type;
     /**
-     * Instantiates a new itemEmail and sets the default values.
+     * Instantiates a new ItemEmail and sets the default values.
      */
     public ItemEmail() {
         super();
@@ -30,7 +30,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemEmail
+     * @return a ItemEmail
      */
     @jakarta.annotation.Nonnull
     public static ItemEmail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the address property value. The email address itself.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
@@ -47,7 +47,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the displayName property value. The name or label a user has associated with a particular email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -67,7 +67,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a emailType
+     * @return a EmailType
      */
     @jakarta.annotation.Nullable
     public EmailType getType() {

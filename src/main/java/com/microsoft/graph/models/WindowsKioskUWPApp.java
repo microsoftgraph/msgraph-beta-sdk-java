@@ -24,7 +24,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
      */
     private String containedAppId;
     /**
-     * Instantiates a new windowsKioskUWPApp and sets the default values.
+     * Instantiates a new WindowsKioskUWPApp and sets the default values.
      */
     public WindowsKioskUWPApp() {
         super();
@@ -33,7 +33,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsKioskUWPApp
+     * @return a WindowsKioskUWPApp
      */
     @jakarta.annotation.Nonnull
     public static WindowsKioskUWPApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
     }
     /**
      * Gets the appId property value. This references an Intune App that will be target to the same assignments as Kiosk configuration
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -50,7 +50,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
     }
     /**
      * Gets the appUserModelId property value. This is the only Application User Model ID (AUMID) that will be available to launch use while in Kiosk Mode
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppUserModelId() {
@@ -58,7 +58,7 @@ public class WindowsKioskUWPApp extends WindowsKioskAppBase implements Parsable 
     }
     /**
      * Gets the containedAppId property value. This references an contained App from an Intune App
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContainedAppId() {

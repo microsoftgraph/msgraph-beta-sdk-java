@@ -53,7 +53,7 @@ public class PolicySet extends Entity implements Parsable {
      */
     private PolicySetStatus status;
     /**
-     * Instantiates a new policySet and sets the default values.
+     * Instantiates a new PolicySet and sets the default values.
      */
     public PolicySet() {
         super();
@@ -61,7 +61,7 @@ public class PolicySet extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policySet
+     * @return a PolicySet
      */
     @jakarta.annotation.Nonnull
     public static PolicySet createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. Assignments of the PolicySet.
-     * @return a policySetAssignment
+     * @return a java.util.List<PolicySetAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetAssignment> getAssignments() {
@@ -86,7 +86,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the PolicySet.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -94,7 +94,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. DisplayName of the PolicySet.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -102,7 +102,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The errorCode property
-     * @return a errorCode
+     * @return a ErrorCode
      */
     @jakarta.annotation.Nullable
     public ErrorCode getErrorCode() {
@@ -129,7 +129,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the guidedDeploymentTags property value. Tags of the guided deployment
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getGuidedDeploymentTags() {
@@ -137,7 +137,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the items property value. Items of the PolicySet with maximum count 100.
-     * @return a policySetItem
+     * @return a java.util.List<PolicySetItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicySetItem> getItems() {
@@ -153,7 +153,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTags property value. RoleScopeTags of the PolicySet
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTags() {
@@ -161,7 +161,7 @@ public class PolicySet extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The enum to specify the status of PolicySet.
-     * @return a policySetStatus
+     * @return a PolicySetStatus
      */
     @jakarta.annotation.Nullable
     public PolicySetStatus getStatus() {

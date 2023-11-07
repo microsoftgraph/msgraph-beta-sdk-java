@@ -1,5 +1,9 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp.containedapps.ContainedAppsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphmicrosoftstoreforbusinessapp.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.models.MicrosoftStoreForBusinessApp;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +25,34 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the containedApps property of the microsoft.graph.microsoftStoreForBusinessApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ContainedAppsRequestBuilder containedApps() {
+        return new ContainedAppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RelationshipsRequestBuilder relationships() {
+        return new RelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GraphMicrosoftStoreForBusinessAppRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,7 +70,7 @@ public class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequest
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.microsoftStoreForBusinessApp
-     * @return a CompletableFuture of microsoftStoreForBusinessApp
+     * @return a CompletableFuture of MicrosoftStoreForBusinessApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> get() {
@@ -47,7 +79,7 @@ public class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequest
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.microsoftStoreForBusinessApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of microsoftStoreForBusinessApp
+     * @return a CompletableFuture of MicrosoftStoreForBusinessApp
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<MicrosoftStoreForBusinessApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -73,10 +105,6 @@ public class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequest
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,12 +112,16 @@ public class GraphMicrosoftStoreForBusinessAppRequestBuilder extends BaseRequest
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphMicrosoftStoreForBusinessAppRequestBuilder
+     * @return a GraphMicrosoftStoreForBusinessAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphMicrosoftStoreForBusinessAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

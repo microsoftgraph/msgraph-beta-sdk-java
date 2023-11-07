@@ -15,7 +15,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * Who created the resource.
+     * Who created the resource?
      */
     private IdentitySet createdBy;
     /**
@@ -27,7 +27,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      */
     private String displayName;
     /**
-     * Who was the last user to modify the resource.
+     * Who was the last user to modify the resource?
      */
     private IdentitySet lastModifiedBy;
     /**
@@ -39,7 +39,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new educationResource and sets the default values.
+     * Instantiates a new EducationResource and sets the default values.
      */
     public EducationResource() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nonnull
     public static EducationResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return new EducationResource();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -79,8 +79,8 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return this.additionalData;
     }
     /**
-     * Gets the createdBy property value. Who created the resource.
-     * @return a identitySet
+     * Gets the createdBy property value. Who created the resource?
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -96,7 +96,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. Display name of resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -118,8 +118,8 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. Who was the last user to modify the resource.
-     * @return a identitySet
+     * Gets the lastModifiedBy property value. Who was the last user to modify the resource?
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -135,7 +135,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -152,14 +152,14 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the createdBy property value. Who created the resource.
+     * Sets the createdBy property value. Who created the resource?
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -180,7 +180,7 @@ public class EducationResource implements AdditionalDataHolder, Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the lastModifiedBy property value. Who was the last user to modify the resource.
+     * Sets the lastModifiedBy property value. Who was the last user to modify the resource?
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {

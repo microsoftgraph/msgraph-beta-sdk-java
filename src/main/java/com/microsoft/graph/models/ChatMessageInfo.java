@@ -34,7 +34,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      */
     private ChatMessageType messageType;
     /**
-     * Instantiates a new chatMessageInfo and sets the default values.
+     * Instantiates a new ChatMessageInfo and sets the default values.
      */
     public ChatMessageInfo() {
         super();
@@ -42,7 +42,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a chatMessageInfo
+     * @return a ChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public static ChatMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn't return @mentions and attachments.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -67,7 +67,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the eventDetail property value. Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property is set to systemEventMessage.
-     * @return a eventMessageDetail
+     * @return a EventMessageDetail
      */
     @jakarta.annotation.Nullable
     public EventMessageDetail getEventDetail() {
@@ -90,7 +90,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the from property value. Information about the sender of the message.
-     * @return a chatMessageFromIdentitySet
+     * @return a ChatMessageFromIdentitySet
      */
     @jakarta.annotation.Nullable
     public ChatMessageFromIdentitySet getFrom() {
@@ -98,7 +98,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the isDeleted property value. If set to true, the original message has been deleted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleted() {
@@ -106,7 +106,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the messageType property value. The messageType property
-     * @return a chatMessageType
+     * @return a ChatMessageType
      */
     @jakarta.annotation.Nullable
     public ChatMessageType getMessageType() {

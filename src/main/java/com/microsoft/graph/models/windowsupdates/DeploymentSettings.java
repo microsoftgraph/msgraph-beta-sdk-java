@@ -38,7 +38,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      */
     private UserExperienceSettings userExperience;
     /**
-     * Instantiates a new deploymentSettings and sets the default values.
+     * Instantiates a new DeploymentSettings and sets the default values.
      */
     public DeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deploymentSettings
+     * @return a DeploymentSettings
      */
     @jakarta.annotation.Nonnull
     public static DeploymentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         return new DeploymentSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the contentApplicability property value. Settings for governing whether content is applicable to a device.
-     * @return a contentApplicabilitySettings
+     * @return a ContentApplicabilitySettings
      */
     @jakarta.annotation.Nullable
     public ContentApplicabilitySettings getContentApplicability() {
@@ -71,7 +71,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the expedite property value. Settings for governing whether updates should be expedited.
-     * @return a expediteSettings
+     * @return a ExpediteSettings
      */
     @jakarta.annotation.Nullable
     public ExpediteSettings getExpedite() {
@@ -94,7 +94,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the monitoring property value. Settings for governing conditions to monitor and automated actions to take.
-     * @return a monitoringSettings
+     * @return a MonitoringSettings
      */
     @jakarta.annotation.Nullable
     public MonitoringSettings getMonitoring() {
@@ -102,7 +102,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -110,7 +110,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the schedule property value. Settings for governing how and when the content is rolled out.
-     * @return a scheduleSettings
+     * @return a ScheduleSettings
      */
     @jakarta.annotation.Nullable
     public ScheduleSettings getSchedule() {
@@ -118,7 +118,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userExperience property value. Settings for governing end user update experience.
-     * @return a userExperienceSettings
+     * @return a UserExperienceSettings
      */
     @jakarta.annotation.Nullable
     public UserExperienceSettings getUserExperience() {
@@ -139,8 +139,8 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

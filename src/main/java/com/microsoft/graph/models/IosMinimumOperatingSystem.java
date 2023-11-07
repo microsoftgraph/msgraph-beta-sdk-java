@@ -49,6 +49,10 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     private Boolean v160;
     /**
+     * When TRUE, only Version 17.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     */
+    private Boolean v170;
+    /**
      * When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     private Boolean v80;
@@ -57,7 +61,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     private Boolean v90;
     /**
-     * Instantiates a new iosMinimumOperatingSystem and sets the default values.
+     * Instantiates a new IosMinimumOperatingSystem and sets the default values.
      */
     public IosMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
@@ -65,7 +69,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosMinimumOperatingSystem
+     * @return a IosMinimumOperatingSystem
      */
     @jakarta.annotation.Nonnull
     public static IosMinimumOperatingSystem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,7 +77,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
         return new IosMinimumOperatingSystem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +90,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("v10_0", (n) -> { this.setV100(n.getBooleanValue()); });
         deserializerMap.put("v11_0", (n) -> { this.setV110(n.getBooleanValue()); });
@@ -95,13 +99,14 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
         deserializerMap.put("v14_0", (n) -> { this.setV140(n.getBooleanValue()); });
         deserializerMap.put("v15_0", (n) -> { this.setV150(n.getBooleanValue()); });
         deserializerMap.put("v16_0", (n) -> { this.setV160(n.getBooleanValue()); });
+        deserializerMap.put("v17_0", (n) -> { this.setV170(n.getBooleanValue()); });
         deserializerMap.put("v8_0", (n) -> { this.setV80(n.getBooleanValue()); });
         deserializerMap.put("v9_0", (n) -> { this.setV90(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -109,7 +114,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV100() {
@@ -117,7 +122,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV110() {
@@ -125,7 +130,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV120() {
@@ -133,7 +138,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV130() {
@@ -141,7 +146,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV140() {
@@ -149,7 +154,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV150() {
@@ -157,15 +162,23 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v16_0 property value. When TRUE, only Version 16.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV160() {
         return this.v160;
     }
     /**
+     * Gets the v17_0 property value. When TRUE, only Version 17.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getV170() {
+        return this.v170;
+    }
+    /**
      * Gets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV80() {
@@ -173,7 +186,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getV90() {
@@ -193,13 +206,14 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
         writer.writeBooleanValue("v14_0", this.getV140());
         writer.writeBooleanValue("v15_0", this.getV150());
         writer.writeBooleanValue("v16_0", this.getV160());
+        writer.writeBooleanValue("v17_0", this.getV170());
         writer.writeBooleanValue("v8_0", this.getV80());
         writer.writeBooleanValue("v9_0", this.getV90());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -259,6 +273,13 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     public void setV160(@jakarta.annotation.Nullable final Boolean value) {
         this.v160 = value;
+    }
+    /**
+     * Sets the v17_0 property value. When TRUE, only Version 17.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v17_0 property.
+     */
+    public void setV170(@jakarta.annotation.Nullable final Boolean value) {
+        this.v170 = value;
     }
     /**
      * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.

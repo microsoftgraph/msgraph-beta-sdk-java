@@ -18,11 +18,11 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The rules that should be enforced on the tasks when they are being changed outside of the scenario, based on the role of the caller.
+     * The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
      */
     private java.util.List<PlannerTaskRoleBasedRule> rules;
     /**
-     * Instantiates a new plannerTaskPolicy and sets the default values.
+     * Instantiates a new PlannerTaskPolicy and sets the default values.
      */
     public PlannerTaskPolicy() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTaskPolicy
+     * @return a PlannerTaskPolicy
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, Parsable {
         return new PlannerTaskPolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,15 +58,15 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the rules property value. The rules that should be enforced on the tasks when they are being changed outside of the scenario, based on the role of the caller.
-     * @return a plannerTaskRoleBasedRule
+     * Gets the rules property value. The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
+     * @return a java.util.List<PlannerTaskRoleBasedRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerTaskRoleBasedRule> getRules() {
@@ -83,8 +83,8 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -97,7 +97,7 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the rules property value. The rules that should be enforced on the tasks when they are being changed outside of the scenario, based on the role of the caller.
+     * Sets the rules property value. The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<PlannerTaskRoleBasedRule> value) {

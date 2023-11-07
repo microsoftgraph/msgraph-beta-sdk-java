@@ -36,7 +36,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
      */
     private Boolean rememberUserCredentials;
     /**
-     * Instantiates a new windowsPhone81VpnConfiguration and sets the default values.
+     * Instantiates a new WindowsPhone81VpnConfiguration and sets the default values.
      */
     public WindowsPhone81VpnConfiguration() {
         super();
@@ -45,7 +45,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhone81VpnConfiguration
+     * @return a WindowsPhone81VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the authenticationMethod property value. VPN Authentication Method.
-     * @return a vpnAuthenticationMethod
+     * @return a VpnAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public VpnAuthenticationMethod getAuthenticationMethod() {
@@ -62,7 +62,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the bypassVpnOnCompanyWifi property value. Bypass VPN on company Wi-Fi.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassVpnOnCompanyWifi() {
@@ -70,7 +70,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the bypassVpnOnHomeWifi property value. Bypass VPN on home Wi-Fi.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassVpnOnHomeWifi() {
@@ -78,7 +78,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the dnsSuffixSearchList property value. DNS suffix search list.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsSuffixSearchList() {
@@ -101,7 +101,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
-     * @return a windowsPhone81CertificateProfileBase
+     * @return a WindowsPhone81CertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public WindowsPhone81CertificateProfileBase getIdentityCertificate() {
@@ -109,7 +109,7 @@ public class WindowsPhone81VpnConfiguration extends Windows81VpnConfiguration im
     }
     /**
      * Gets the rememberUserCredentials property value. Remember user credentials.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRememberUserCredentials() {

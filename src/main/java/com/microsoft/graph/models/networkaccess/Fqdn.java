@@ -13,7 +13,7 @@ public class Fqdn extends RuleDestination implements Parsable {
      */
     private String value;
     /**
-     * Instantiates a new fqdn and sets the default values.
+     * Instantiates a new Fqdn and sets the default values.
      */
     public Fqdn() {
         super();
@@ -22,7 +22,7 @@ public class Fqdn extends RuleDestination implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a fqdn
+     * @return a Fqdn
      */
     @jakarta.annotation.Nonnull
     public static Fqdn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class Fqdn extends RuleDestination implements Parsable {
     }
     /**
      * Gets the value property value. Defines the FQDN used in a destination for a rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {

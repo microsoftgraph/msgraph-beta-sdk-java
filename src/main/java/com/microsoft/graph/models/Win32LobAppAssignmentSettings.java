@@ -12,6 +12,10 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /**
+     * The auto-update settings to apply for this app assignment.
+     */
+    private Win32LobAppAutoUpdateSettings autoUpdateSettings;
+    /**
      * Contains value for delivery optimization priority.
      */
     private Win32LobAppDeliveryOptimizationPriority deliveryOptimizationPriority;
@@ -28,7 +32,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     private Win32LobAppRestartSettings restartSettings;
     /**
-     * Instantiates a new win32LobAppAssignmentSettings and sets the default values.
+     * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.
      */
     public Win32LobAppAssignmentSettings() {
         super();
@@ -37,16 +41,31 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppAssignmentSettings
+     * @return a Win32LobAppAssignmentSettings
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppAssignmentSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.win32CatalogAppAssignmentSettings": return new Win32CatalogAppAssignmentSettings();
+            }
+        }
         return new Win32LobAppAssignmentSettings();
     }
     /**
+     * Gets the autoUpdateSettings property value. The auto-update settings to apply for this app assignment.
+     * @return a Win32LobAppAutoUpdateSettings
+     */
+    @jakarta.annotation.Nullable
+    public Win32LobAppAutoUpdateSettings getAutoUpdateSettings() {
+        return this.autoUpdateSettings;
+    }
+    /**
      * Gets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
-     * @return a win32LobAppDeliveryOptimizationPriority
+     * @return a Win32LobAppDeliveryOptimizationPriority
      */
     @jakarta.annotation.Nullable
     public Win32LobAppDeliveryOptimizationPriority getDeliveryOptimizationPriority() {
@@ -59,6 +78,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("autoUpdateSettings", (n) -> { this.setAutoUpdateSettings(n.getObjectValue(Win32LobAppAutoUpdateSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("deliveryOptimizationPriority", (n) -> { this.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority.class)); });
         deserializerMap.put("installTimeSettings", (n) -> { this.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getEnumValue(Win32LobAppNotification.class)); });
@@ -67,7 +87,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
-     * @return a mobileAppInstallTimeSettings
+     * @return a MobileAppInstallTimeSettings
      */
     @jakarta.annotation.Nullable
     public MobileAppInstallTimeSettings getInstallTimeSettings() {
@@ -75,7 +95,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the notifications property value. Contains value for notification status.
-     * @return a win32LobAppNotification
+     * @return a Win32LobAppNotification
      */
     @jakarta.annotation.Nullable
     public Win32LobAppNotification getNotifications() {
@@ -83,7 +103,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * Gets the restartSettings property value. The reboot settings to apply for this app assignment.
-     * @return a win32LobAppRestartSettings
+     * @return a Win32LobAppRestartSettings
      */
     @jakarta.annotation.Nullable
     public Win32LobAppRestartSettings getRestartSettings() {
@@ -96,10 +116,18 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("autoUpdateSettings", this.getAutoUpdateSettings());
         writer.writeEnumValue("deliveryOptimizationPriority", this.getDeliveryOptimizationPriority());
         writer.writeObjectValue("installTimeSettings", this.getInstallTimeSettings());
         writer.writeEnumValue("notifications", this.getNotifications());
         writer.writeObjectValue("restartSettings", this.getRestartSettings());
+    }
+    /**
+     * Sets the autoUpdateSettings property value. The auto-update settings to apply for this app assignment.
+     * @param value Value to set for the autoUpdateSettings property.
+     */
+    public void setAutoUpdateSettings(@jakarta.annotation.Nullable final Win32LobAppAutoUpdateSettings value) {
+        this.autoUpdateSettings = value;
     }
     /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.

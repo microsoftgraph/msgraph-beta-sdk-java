@@ -14,7 +14,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
      */
     private Map<String, Object> additionalData;
     /**
-     * The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
+     * The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
      */
     private UserMatchTargetReferenceValue matchTarget;
     /**
@@ -34,7 +34,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
      */
     private IdentifierTypeReferenceValue sourceIdentifier;
     /**
-     * Instantiates a new userMatchingSetting and sets the default values.
+     * Instantiates a new UserMatchingSetting and sets the default values.
      */
     public UserMatchingSetting() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userMatchingSetting
+     * @return a UserMatchingSetting
      */
     @jakarta.annotation.Nonnull
     public static UserMatchingSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
         return new UserMatchingSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,8 +72,8 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
-     * @return a userMatchTargetReferenceValue
+     * Gets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
+     * @return a UserMatchTargetReferenceValue
      */
     @jakarta.annotation.Nullable
     public UserMatchTargetReferenceValue getMatchTarget() {
@@ -81,7 +81,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -89,7 +89,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the priorityOrder property value. The priority order to apply when a user has multiple RefRole codes assigned.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriorityOrder() {
@@ -97,7 +97,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roleGroup property value. The roleGroup property
-     * @return a roleGroup
+     * @return a RoleGroup
      */
     @jakarta.annotation.Nullable
     public RoleGroup getRoleGroup() {
@@ -105,7 +105,7 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sourceIdentifier property value. The sourceIdentifier property
-     * @return a identifierTypeReferenceValue
+     * @return a IdentifierTypeReferenceValue
      */
     @jakarta.annotation.Nullable
     public IdentifierTypeReferenceValue getSourceIdentifier() {
@@ -125,14 +125,14 @@ public class UserMatchingSetting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
     }
     /**
-     * Sets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with an Azure Active Directory user object.
+     * Sets the matchTarget property value. The RefUserMatchTarget for matching a user from the source with a Microsoft Entra user object.
      * @param value Value to set for the matchTarget property.
      */
     public void setMatchTarget(@jakarta.annotation.Nullable final UserMatchTargetReferenceValue value) {

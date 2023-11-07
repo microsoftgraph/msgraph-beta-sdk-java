@@ -38,7 +38,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      */
     private java.util.List<OutlookTask> tasks;
     /**
-     * Instantiates a new outlookTaskFolder and sets the default values.
+     * Instantiates a new OutlookTaskFolder and sets the default values.
      */
     public OutlookTaskFolder() {
         super();
@@ -46,7 +46,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookTaskFolder
+     * @return a OutlookTaskFolder
      */
     @jakarta.annotation.Nonnull
     public static OutlookTaskFolder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the changeKey property value. The version of the task folder.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
@@ -79,7 +79,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultFolder property value. True if the folder is the default task folder.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultFolder() {
@@ -87,7 +87,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
-     * @return a multiValueLegacyExtendedProperty
+     * @return a java.util.List<MultiValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -95,7 +95,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name of the task folder.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -111,7 +111,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
-     * @return a singleValueLegacyExtendedProperty
+     * @return a java.util.List<SingleValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
@@ -119,7 +119,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
     }
     /**
      * Gets the tasks property value. The tasks in this task folder. Read-only. Nullable.
-     * @return a outlookTask
+     * @return a java.util.List<OutlookTask>
      */
     @jakarta.annotation.Nullable
     public java.util.List<OutlookTask> getTasks() {

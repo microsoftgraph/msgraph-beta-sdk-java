@@ -10,19 +10,19 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryAudit extends Entity implements Parsable {
     /**
-     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
+     * Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and $orderby.
      */
     private OffsetDateTime activityDateTime;
     /**
-     * Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
+     * Indicates the activity name or the operation name (for example 'Create User', 'Add member to group'). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
      */
     private String activityDisplayName;
     /**
-     * Indicates additional details on the activity.
+     * Indicates more details on the activity.
      */
     private java.util.List<KeyValue> additionalDetails;
     /**
-     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
+     * Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
      */
     private String category;
     /**
@@ -38,7 +38,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private String loggedByService;
     /**
-     * Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
+     * Indicates the type of operation that was performed. The possible values include but aren't limited to the following: Add, Assign, Update, Unassign, and Delete.
      */
     private String operationType;
     /**
@@ -58,7 +58,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     private String userAgent;
     /**
-     * Instantiates a new directoryAudit and sets the default values.
+     * Instantiates a new DirectoryAudit and sets the default values.
      */
     public DirectoryAudit() {
         super();
@@ -66,7 +66,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directoryAudit
+     * @return a DirectoryAudit
      */
     @jakarta.annotation.Nonnull
     public static DirectoryAudit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return new DirectoryAudit();
     }
     /**
-     * Gets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
+     * Gets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and $orderby.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -82,24 +82,24 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.activityDateTime;
     }
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
-     * @return a string
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (for example 'Create User', 'Add member to group'). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivityDisplayName() {
         return this.activityDisplayName;
     }
     /**
-     * Gets the additionalDetails property value. Indicates additional details on the activity.
-     * @return a keyValue
+     * Gets the additionalDetails property value. Indicates more details on the activity.
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAdditionalDetails() {
         return this.additionalDetails;
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
-     * @return a string
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
@@ -107,7 +107,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -136,7 +136,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedBy property value. The initiatedBy property
-     * @return a auditActivityInitiator
+     * @return a AuditActivityInitiator
      */
     @jakarta.annotation.Nullable
     public AuditActivityInitiator getInitiatedBy() {
@@ -144,15 +144,15 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoggedByService() {
         return this.loggedByService;
     }
     /**
-     * Gets the operationType property value. Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
-     * @return a string
+     * Gets the operationType property value. Indicates the type of operation that was performed. The possible values include but aren't limited to the following: Add, Assign, Update, Unassign, and Delete.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperationType() {
@@ -160,7 +160,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
-     * @return a operationResult
+     * @return a OperationResult
      */
     @jakarta.annotation.Nullable
     public OperationResult getResult() {
@@ -168,7 +168,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the resultReason property value. Indicates the reason for failure if the result is failure or timeout.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResultReason() {
@@ -176,7 +176,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the targetResources property value. Information about the resource that changed due to the activity. Supports $filter (eq) for id and displayName; and $filter (startswith) for displayName.
-     * @return a targetResource
+     * @return a java.util.List<TargetResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetResource> getTargetResources() {
@@ -184,7 +184,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     }
     /**
      * Gets the userAgent property value. Type of user agent used by a user in the activity.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserAgent() {
@@ -211,28 +211,28 @@ public class DirectoryAudit extends Entity implements Parsable {
         writer.writeStringValue("userAgent", this.getUserAgent());
     }
     /**
-     * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.Supports $filter (eq, ge, le) and $orderby.
+     * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and $orderby.
      * @param value Value to set for the activityDateTime property.
      */
     public void setActivityDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.activityDateTime = value;
     }
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (E.g. 'Create User', 'Add member to group'). For a list of activities logged, refer to Azure AD audit log categories and activities. Supports $filter (eq, startswith).
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (for example 'Create User', 'Add member to group'). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
      * @param value Value to set for the activityDisplayName property.
      */
     public void setActivityDisplayName(@jakarta.annotation.Nullable final String value) {
         this.activityDisplayName = value;
     }
     /**
-     * Sets the additionalDetails property value. Indicates additional details on the activity.
+     * Sets the additionalDetails property value. Indicates more details on the activity.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.additionalDetails = value;
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Azure AD audit log categories and activities.
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
@@ -260,7 +260,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.loggedByService = value;
     }
     /**
-     * Sets the operationType property value. Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
+     * Sets the operationType property value. Indicates the type of operation that was performed. The possible values include but aren't limited to the following: Add, Assign, Update, Unassign, and Delete.
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final String value) {

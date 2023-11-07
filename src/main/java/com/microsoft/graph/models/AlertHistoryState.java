@@ -47,7 +47,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
      */
     private String user;
     /**
-     * Instantiates a new alertHistoryState and sets the default values.
+     * Instantiates a new AlertHistoryState and sets the default values.
      */
     public AlertHistoryState() {
         this.setAdditionalData(new HashMap<>());
@@ -55,7 +55,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a alertHistoryState
+     * @return a AlertHistoryState
      */
     @jakarta.annotation.Nonnull
     public static AlertHistoryState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +63,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         return new AlertHistoryState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -72,7 +72,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appId property value. The Application ID of the calling application that submitted an update (PATCH) to the alert. The appId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
@@ -80,7 +80,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the assignedTo property value. UPN of user the alert was assigned to (note: alert.assignedTo only stores the last value/UPN).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
@@ -88,7 +88,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the comments property value. Comment entered by signed-in user.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getComments() {
@@ -96,7 +96,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
-     * @return a alertFeedback
+     * @return a AlertFeedback
      */
     @jakarta.annotation.Nullable
     public AlertFeedback getFeedback() {
@@ -121,7 +121,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -129,7 +129,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
-     * @return a alertStatus
+     * @return a AlertStatus
      */
     @jakarta.annotation.Nullable
     public AlertStatus getStatus() {
@@ -145,7 +145,7 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the user property value. UPN of the signed-in user that updated the alert (taken from the bearer token - if in user/delegated auth mode).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUser() {
@@ -168,8 +168,8 @@ public class AlertHistoryState implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -3,6 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -13,6 +14,10 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      */
     private String destinationHost;
     /**
+     * The destinationType property
+     */
+    private PrivateNetworkDestinationType destinationType;
+    /**
      * The port property
      */
     private Integer port;
@@ -21,7 +26,11 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      */
     private java.util.List<String> ports;
     /**
-     * Instantiates a new ipApplicationSegment and sets the default values.
+     * The protocol property
+     */
+    private EnumSet<PrivateNetworkProtocol> protocol;
+    /**
+     * Instantiates a new IpApplicationSegment and sets the default values.
      */
     public IpApplicationSegment() {
         super();
@@ -30,7 +39,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ipApplicationSegment
+     * @return a IpApplicationSegment
      */
     @jakarta.annotation.Nonnull
     public static IpApplicationSegment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,11 +48,19 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     }
     /**
      * Gets the destinationHost property value. The destinationHost property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationHost() {
         return this.destinationHost;
+    }
+    /**
+     * Gets the destinationType property value. The destinationType property
+     * @return a PrivateNetworkDestinationType
+     */
+    @jakarta.annotation.Nullable
+    public PrivateNetworkDestinationType getDestinationType() {
+        return this.destinationType;
     }
     /**
      * The deserialization information for the current model
@@ -53,13 +70,15 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("destinationHost", (n) -> { this.setDestinationHost(n.getStringValue()); });
+        deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(PrivateNetworkDestinationType.class)); });
         deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
         deserializerMap.put("ports", (n) -> { this.setPorts(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumSetValue(PrivateNetworkProtocol.class)); });
         return deserializerMap;
     }
     /**
      * Gets the port property value. The port property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPort() {
@@ -67,11 +86,19 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     }
     /**
      * Gets the ports property value. The ports property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPorts() {
         return this.ports;
+    }
+    /**
+     * Gets the protocol property value. The protocol property
+     * @return a EnumSet<PrivateNetworkProtocol>
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<PrivateNetworkProtocol> getProtocol() {
+        return this.protocol;
     }
     /**
      * Serializes information the current object
@@ -81,8 +108,10 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("destinationHost", this.getDestinationHost());
+        writer.writeEnumValue("destinationType", this.getDestinationType());
         writer.writeIntegerValue("port", this.getPort());
         writer.writeCollectionOfPrimitiveValues("ports", this.getPorts());
+        writer.writeEnumSetValue("protocol", this.getProtocol());
     }
     /**
      * Sets the destinationHost property value. The destinationHost property
@@ -90,6 +119,13 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      */
     public void setDestinationHost(@jakarta.annotation.Nullable final String value) {
         this.destinationHost = value;
+    }
+    /**
+     * Sets the destinationType property value. The destinationType property
+     * @param value Value to set for the destinationType property.
+     */
+    public void setDestinationType(@jakarta.annotation.Nullable final PrivateNetworkDestinationType value) {
+        this.destinationType = value;
     }
     /**
      * Sets the port property value. The port property
@@ -104,5 +140,12 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
      */
     public void setPorts(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.ports = value;
+    }
+    /**
+     * Sets the protocol property value. The protocol property
+     * @param value Value to set for the protocol property.
+     */
+    public void setProtocol(@jakarta.annotation.Nullable final EnumSet<PrivateNetworkProtocol> value) {
+        this.protocol = value;
     }
 }

@@ -244,6 +244,10 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     private java.util.List<DeviceManagementDomainJoinConnector> domainJoinConnectors;
     /**
+     * List of elevation requests
+     */
+    private java.util.List<PrivilegeManagementElevationRequest> elevationRequests;
+    /**
      * The embedded SIM activation code pools created by this account.
      */
     private java.util.List<EmbeddedSIMActivationCodePool> embeddedSIMActivationCodePools;
@@ -736,7 +740,7 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     private java.util.List<ZebraFotaDeployment> zebraFotaDeployments;
     /**
-     * Instantiates a new deviceManagement and sets the default values.
+     * Instantiates a new DeviceManagement and sets the default values.
      */
     public DeviceManagement() {
         super();
@@ -744,7 +748,7 @@ public class DeviceManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagement
+     * @return a DeviceManagement
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -761,7 +765,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the adminConsent property value. Admin consent information.
-     * @return a adminConsent
+     * @return a AdminConsent
      */
     @jakarta.annotation.Nullable
     public AdminConsent getAdminConsent() {
@@ -769,7 +773,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the advancedThreatProtectionOnboardingStateSummary property value. The summary state of ATP onboarding state for this account.
-     * @return a advancedThreatProtectionOnboardingStateSummary
+     * @return a AdvancedThreatProtectionOnboardingStateSummary
      */
     @jakarta.annotation.Nullable
     public AdvancedThreatProtectionOnboardingStateSummary getAdvancedThreatProtectionOnboardingStateSummary() {
@@ -777,7 +781,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidDeviceOwnerEnrollmentProfiles property value. Android device owner enrollment profile entities.
-     * @return a androidDeviceOwnerEnrollmentProfile
+     * @return a java.util.List<AndroidDeviceOwnerEnrollmentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerEnrollmentProfile> getAndroidDeviceOwnerEnrollmentProfiles() {
@@ -785,7 +789,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidForWorkAppConfigurationSchemas property value. Android for Work app configuration schema entities.
-     * @return a androidForWorkAppConfigurationSchema
+     * @return a java.util.List<AndroidForWorkAppConfigurationSchema>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidForWorkAppConfigurationSchema> getAndroidForWorkAppConfigurationSchemas() {
@@ -793,7 +797,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidForWorkEnrollmentProfiles property value. Android for Work enrollment profile entities.
-     * @return a androidForWorkEnrollmentProfile
+     * @return a java.util.List<AndroidForWorkEnrollmentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidForWorkEnrollmentProfile> getAndroidForWorkEnrollmentProfiles() {
@@ -801,7 +805,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidForWorkSettings property value. The singleton Android for Work settings entity.
-     * @return a androidForWorkSettings
+     * @return a AndroidForWorkSettings
      */
     @jakarta.annotation.Nullable
     public AndroidForWorkSettings getAndroidForWorkSettings() {
@@ -809,7 +813,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidManagedStoreAccountEnterpriseSettings property value. The singleton Android managed store account enterprise settings entity.
-     * @return a androidManagedStoreAccountEnterpriseSettings
+     * @return a AndroidManagedStoreAccountEnterpriseSettings
      */
     @jakarta.annotation.Nullable
     public AndroidManagedStoreAccountEnterpriseSettings getAndroidManagedStoreAccountEnterpriseSettings() {
@@ -817,7 +821,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the androidManagedStoreAppConfigurationSchemas property value. Android Enterprise app configuration schema entities.
-     * @return a androidManagedStoreAppConfigurationSchema
+     * @return a java.util.List<AndroidManagedStoreAppConfigurationSchema>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppConfigurationSchema> getAndroidManagedStoreAppConfigurationSchemas() {
@@ -825,7 +829,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the applePushNotificationCertificate property value. Apple push notification certificate.
-     * @return a applePushNotificationCertificate
+     * @return a ApplePushNotificationCertificate
      */
     @jakarta.annotation.Nullable
     public ApplePushNotificationCertificate getApplePushNotificationCertificate() {
@@ -833,7 +837,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the appleUserInitiatedEnrollmentProfiles property value. Apple user initiated enrollment profiles
-     * @return a appleUserInitiatedEnrollmentProfile
+     * @return a java.util.List<AppleUserInitiatedEnrollmentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppleUserInitiatedEnrollmentProfile> getAppleUserInitiatedEnrollmentProfiles() {
@@ -841,7 +845,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentFilters property value. The list of assignment filters
-     * @return a deviceAndAppManagementAssignmentFilter
+     * @return a java.util.List<DeviceAndAppManagementAssignmentFilter>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAndAppManagementAssignmentFilter> getAssignmentFilters() {
@@ -849,7 +853,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the auditEvents property value. The Audit Events
-     * @return a auditEvent
+     * @return a java.util.List<AuditEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuditEvent> getAuditEvents() {
@@ -857,7 +861,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the autopilotEvents property value. The list of autopilot events for the tenant.
-     * @return a deviceManagementAutopilotEvent
+     * @return a java.util.List<DeviceManagementAutopilotEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementAutopilotEvent> getAutopilotEvents() {
@@ -865,7 +869,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the cartToClassAssociations property value. The Cart To Class Associations.
-     * @return a cartToClassAssociation
+     * @return a java.util.List<CartToClassAssociation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CartToClassAssociation> getCartToClassAssociations() {
@@ -873,7 +877,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the categories property value. The available categories
-     * @return a deviceManagementSettingCategory
+     * @return a java.util.List<DeviceManagementSettingCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingCategory> getCategories() {
@@ -881,7 +885,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the certificateConnectorDetails property value. Collection of certificate connector details, each associated with a corresponding Intune Certificate Connector.
-     * @return a certificateConnectorDetails
+     * @return a java.util.List<CertificateConnectorDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CertificateConnectorDetails> getCertificateConnectorDetails() {
@@ -889,7 +893,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the chromeOSOnboardingSettings property value. Collection of ChromeOSOnboardingSettings settings associated with account.
-     * @return a chromeOSOnboardingSettings
+     * @return a java.util.List<ChromeOSOnboardingSettings>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ChromeOSOnboardingSettings> getChromeOSOnboardingSettings() {
@@ -897,7 +901,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPCConnectivityIssues property value. The list of CloudPC Connectivity Issue.
-     * @return a cloudPCConnectivityIssue
+     * @return a java.util.List<CloudPCConnectivityIssue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPCConnectivityIssue> getCloudPCConnectivityIssues() {
@@ -905,7 +909,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the comanagedDevices property value. The list of co-managed devices report
-     * @return a managedDevice
+     * @return a java.util.List<ManagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getComanagedDevices() {
@@ -913,7 +917,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the comanagementEligibleDevices property value. The list of co-management eligible devices report
-     * @return a comanagementEligibleDevice
+     * @return a java.util.List<ComanagementEligibleDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComanagementEligibleDevice> getComanagementEligibleDevices() {
@@ -921,7 +925,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the complianceCategories property value. List of all compliance categories
-     * @return a deviceManagementConfigurationCategory
+     * @return a java.util.List<DeviceManagementConfigurationCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationCategory> getComplianceCategories() {
@@ -929,7 +933,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the complianceManagementPartners property value. The list of Compliance Management Partners configured by the tenant.
-     * @return a complianceManagementPartner
+     * @return a java.util.List<ComplianceManagementPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ComplianceManagementPartner> getComplianceManagementPartners() {
@@ -937,7 +941,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the compliancePolicies property value. List of all compliance policies
-     * @return a deviceManagementCompliancePolicy
+     * @return a java.util.List<DeviceManagementCompliancePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementCompliancePolicy> getCompliancePolicies() {
@@ -945,7 +949,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the complianceSettings property value. List of all ComplianceSettings
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getComplianceSettings() {
@@ -953,7 +957,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccessSettings property value. The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
-     * @return a onPremisesConditionalAccessSettings
+     * @return a OnPremisesConditionalAccessSettings
      */
     @jakarta.annotation.Nullable
     public OnPremisesConditionalAccessSettings getConditionalAccessSettings() {
@@ -961,7 +965,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the configManagerCollections property value. A list of ConfigManagerCollection
-     * @return a configManagerCollection
+     * @return a java.util.List<ConfigManagerCollection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConfigManagerCollection> getConfigManagerCollections() {
@@ -969,7 +973,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the configurationCategories property value. List of all Configuration Categories
-     * @return a deviceManagementConfigurationCategory
+     * @return a java.util.List<DeviceManagementConfigurationCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationCategory> getConfigurationCategories() {
@@ -977,7 +981,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the configurationPolicies property value. List of all Configuration policies
-     * @return a deviceManagementConfigurationPolicy
+     * @return a java.util.List<DeviceManagementConfigurationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicy> getConfigurationPolicies() {
@@ -985,7 +989,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the configurationPolicyTemplates property value. List of all templates
-     * @return a deviceManagementConfigurationPolicyTemplate
+     * @return a java.util.List<DeviceManagementConfigurationPolicyTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationPolicyTemplate> getConfigurationPolicyTemplates() {
@@ -993,7 +997,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the configurationSettings property value. List of all ConfigurationSettings
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getConfigurationSettings() {
@@ -1001,7 +1005,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the connectorStatus property value. The list of connector status for the tenant.
-     * @return a connectorStatusDetails
+     * @return a java.util.List<ConnectorStatusDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectorStatusDetails> getConnectorStatus() {
@@ -1009,7 +1013,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the dataProcessorServiceForWindowsFeaturesOnboarding property value. A configuration entity for MEM features that utilize Data Processor Service for Windows (DPSW) data.
-     * @return a dataProcessorServiceForWindowsFeaturesOnboarding
+     * @return a DataProcessorServiceForWindowsFeaturesOnboarding
      */
     @jakarta.annotation.Nullable
     public DataProcessorServiceForWindowsFeaturesOnboarding getDataProcessorServiceForWindowsFeaturesOnboarding() {
@@ -1017,7 +1021,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the dataSharingConsents property value. Data sharing consents.
-     * @return a dataSharingConsent
+     * @return a java.util.List<DataSharingConsent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataSharingConsent> getDataSharingConsents() {
@@ -1025,7 +1029,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the depOnboardingSettings property value. This collections of multiple DEP tokens per-tenant.
-     * @return a depOnboardingSetting
+     * @return a java.util.List<DepOnboardingSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DepOnboardingSetting> getDepOnboardingSettings() {
@@ -1033,7 +1037,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the derivedCredentials property value. Collection of Derived credential settings associated with account.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a java.util.List<DeviceManagementDerivedCredentialSettings>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementDerivedCredentialSettings> getDerivedCredentials() {
@@ -1041,7 +1045,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the detectedApps property value. The list of detected apps associated with a device.
-     * @return a detectedApp
+     * @return a java.util.List<DetectedApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DetectedApp> getDetectedApps() {
@@ -1049,7 +1053,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCategories property value. The list of device categories with the tenant.
-     * @return a deviceCategory
+     * @return a java.util.List<DeviceCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCategory> getDeviceCategories() {
@@ -1057,7 +1061,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCompliancePolicies property value. The device compliance policies.
-     * @return a deviceCompliancePolicy
+     * @return a java.util.List<DeviceCompliancePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicy> getDeviceCompliancePolicies() {
@@ -1065,7 +1069,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCompliancePolicyDeviceStateSummary property value. The device compliance state summary for this account.
-     * @return a deviceCompliancePolicyDeviceStateSummary
+     * @return a DeviceCompliancePolicyDeviceStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceCompliancePolicyDeviceStateSummary getDeviceCompliancePolicyDeviceStateSummary() {
@@ -1073,7 +1077,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCompliancePolicySettingStateSummaries property value. The summary states of compliance policy settings for this account.
-     * @return a deviceCompliancePolicySettingStateSummary
+     * @return a java.util.List<DeviceCompliancePolicySettingStateSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicySettingStateSummary> getDeviceCompliancePolicySettingStateSummaries() {
@@ -1089,7 +1093,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceComplianceScripts property value. The list of device compliance scripts associated with the tenant.
-     * @return a deviceComplianceScript
+     * @return a java.util.List<DeviceComplianceScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceComplianceScript> getDeviceComplianceScripts() {
@@ -1097,7 +1101,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationConflictSummary property value. Summary of policies in conflict state for this account.
-     * @return a deviceConfigurationConflictSummary
+     * @return a java.util.List<DeviceConfigurationConflictSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfigurationConflictSummary> getDeviceConfigurationConflictSummary() {
@@ -1105,7 +1109,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationDeviceStateSummaries property value. The device configuration device state summary for this account.
-     * @return a deviceConfigurationDeviceStateSummary
+     * @return a DeviceConfigurationDeviceStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationDeviceStateSummary getDeviceConfigurationDeviceStateSummaries() {
@@ -1113,7 +1117,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.
-     * @return a restrictedAppsViolation
+     * @return a java.util.List<RestrictedAppsViolation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RestrictedAppsViolation> getDeviceConfigurationRestrictedAppsViolations() {
@@ -1121,7 +1125,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurations property value. The device configurations.
-     * @return a deviceConfiguration
+     * @return a java.util.List<DeviceConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceConfiguration> getDeviceConfigurations() {
@@ -1129,7 +1133,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationsAllManagedDeviceCertificateStates property value. Summary of all certificates for all devices.
-     * @return a managedAllDeviceCertificateState
+     * @return a java.util.List<ManagedAllDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedAllDeviceCertificateState> getDeviceConfigurationsAllManagedDeviceCertificateStates() {
@@ -1137,7 +1141,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceConfigurationUserStateSummaries property value. The device configuration user state summary for this account.
-     * @return a deviceConfigurationUserStateSummary
+     * @return a DeviceConfigurationUserStateSummary
      */
     @jakarta.annotation.Nullable
     public DeviceConfigurationUserStateSummary getDeviceConfigurationUserStateSummaries() {
@@ -1145,7 +1149,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceCustomAttributeShellScripts property value. The list of device custom attribute shell scripts associated with the tenant.
-     * @return a deviceCustomAttributeShellScript
+     * @return a java.util.List<DeviceCustomAttributeShellScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCustomAttributeShellScript> getDeviceCustomAttributeShellScripts() {
@@ -1153,7 +1157,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceEnrollmentConfigurations property value. The list of device enrollment configurations
-     * @return a deviceEnrollmentConfiguration
+     * @return a java.util.List<DeviceEnrollmentConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceEnrollmentConfiguration> getDeviceEnrollmentConfigurations() {
@@ -1161,7 +1165,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceHealthScripts property value. The list of device health scripts associated with the tenant.
-     * @return a deviceHealthScript
+     * @return a java.util.List<DeviceHealthScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceHealthScript> getDeviceHealthScripts() {
@@ -1169,7 +1173,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceManagementPartners property value. The list of Device Management Partners configured by the tenant.
-     * @return a deviceManagementPartner
+     * @return a java.util.List<DeviceManagementPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementPartner> getDeviceManagementPartners() {
@@ -1177,7 +1181,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceManagementScripts property value. The list of device management scripts associated with the tenant.
-     * @return a deviceManagementScript
+     * @return a java.util.List<DeviceManagementScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScript> getDeviceManagementScripts() {
@@ -1185,7 +1189,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceProtectionOverview property value. Device protection overview.
-     * @return a deviceProtectionOverview
+     * @return a DeviceProtectionOverview
      */
     @jakarta.annotation.Nullable
     public DeviceProtectionOverview getDeviceProtectionOverview() {
@@ -1193,7 +1197,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the deviceShellScripts property value. The list of device shell scripts associated with the tenant.
-     * @return a deviceShellScript
+     * @return a java.util.List<DeviceShellScript>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceShellScript> getDeviceShellScripts() {
@@ -1201,15 +1205,23 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the domainJoinConnectors property value. A list of connector objects.
-     * @return a deviceManagementDomainJoinConnector
+     * @return a java.util.List<DeviceManagementDomainJoinConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementDomainJoinConnector> getDomainJoinConnectors() {
         return this.domainJoinConnectors;
     }
     /**
+     * Gets the elevationRequests property value. List of elevation requests
+     * @return a java.util.List<PrivilegeManagementElevationRequest>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PrivilegeManagementElevationRequest> getElevationRequests() {
+        return this.elevationRequests;
+    }
+    /**
      * Gets the embeddedSIMActivationCodePools property value. The embedded SIM activation code pools created by this account.
-     * @return a embeddedSIMActivationCodePool
+     * @return a java.util.List<EmbeddedSIMActivationCodePool>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMActivationCodePool> getEmbeddedSIMActivationCodePools() {
@@ -1217,7 +1229,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeConnectors property value. The list of Exchange Connectors configured by the tenant.
-     * @return a deviceManagementExchangeConnector
+     * @return a java.util.List<DeviceManagementExchangeConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExchangeConnector> getExchangeConnectors() {
@@ -1225,7 +1237,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeOnPremisesPolicies property value. The list of Exchange On Premisis policies configured by the tenant.
-     * @return a deviceManagementExchangeOnPremisesPolicy
+     * @return a java.util.List<DeviceManagementExchangeOnPremisesPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementExchangeOnPremisesPolicy> getExchangeOnPremisesPolicies() {
@@ -1233,7 +1245,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the exchangeOnPremisesPolicy property value. The policy which controls mobile device access to Exchange On Premises
-     * @return a deviceManagementExchangeOnPremisesPolicy
+     * @return a DeviceManagementExchangeOnPremisesPolicy
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeOnPremisesPolicy getExchangeOnPremisesPolicy() {
@@ -1303,6 +1315,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("deviceProtectionOverview", (n) -> { this.setDeviceProtectionOverview(n.getObjectValue(DeviceProtectionOverview::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceShellScripts", (n) -> { this.setDeviceShellScripts(n.getCollectionOfObjectValues(DeviceShellScript::createFromDiscriminatorValue)); });
         deserializerMap.put("domainJoinConnectors", (n) -> { this.setDomainJoinConnectors(n.getCollectionOfObjectValues(DeviceManagementDomainJoinConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("elevationRequests", (n) -> { this.setElevationRequests(n.getCollectionOfObjectValues(PrivilegeManagementElevationRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("embeddedSIMActivationCodePools", (n) -> { this.setEmbeddedSIMActivationCodePools(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePool::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeConnectors", (n) -> { this.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeOnPremisesPolicies", (n) -> { this.setExchangeOnPremisesPolicies(n.getCollectionOfObjectValues(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
@@ -1430,7 +1443,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyCategories property value. The available group policy categories for this account.
-     * @return a groupPolicyCategory
+     * @return a java.util.List<GroupPolicyCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyCategory> getGroupPolicyCategories() {
@@ -1438,7 +1451,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyConfigurations property value. The group policy configurations created by this account.
-     * @return a groupPolicyConfiguration
+     * @return a java.util.List<GroupPolicyConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyConfiguration> getGroupPolicyConfigurations() {
@@ -1446,7 +1459,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyDefinitionFiles property value. The available group policy definition files for this account.
-     * @return a groupPolicyDefinitionFile
+     * @return a java.util.List<GroupPolicyDefinitionFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinitionFile> getGroupPolicyDefinitionFiles() {
@@ -1454,7 +1467,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyDefinitions property value. The available group policy definitions for this account.
-     * @return a groupPolicyDefinition
+     * @return a java.util.List<GroupPolicyDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyDefinition> getGroupPolicyDefinitions() {
@@ -1462,7 +1475,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyMigrationReports property value. A list of Group Policy migration reports.
-     * @return a groupPolicyMigrationReport
+     * @return a java.util.List<GroupPolicyMigrationReport>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyMigrationReport> getGroupPolicyMigrationReports() {
@@ -1470,7 +1483,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyObjectFiles property value. A list of Group Policy Object files uploaded.
-     * @return a groupPolicyObjectFile
+     * @return a java.util.List<GroupPolicyObjectFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyObjectFile> getGroupPolicyObjectFiles() {
@@ -1478,7 +1491,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the groupPolicyUploadedDefinitionFiles property value. The available group policy uploaded definition files for this account.
-     * @return a groupPolicyUploadedDefinitionFile
+     * @return a java.util.List<GroupPolicyUploadedDefinitionFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GroupPolicyUploadedDefinitionFile> getGroupPolicyUploadedDefinitionFiles() {
@@ -1486,7 +1499,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the importedDeviceIdentities property value. The imported device identities.
-     * @return a importedDeviceIdentity
+     * @return a java.util.List<ImportedDeviceIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedDeviceIdentity> getImportedDeviceIdentities() {
@@ -1494,7 +1507,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the importedWindowsAutopilotDeviceIdentities property value. Collection of imported Windows autopilot devices.
-     * @return a importedWindowsAutopilotDeviceIdentity
+     * @return a java.util.List<ImportedWindowsAutopilotDeviceIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ImportedWindowsAutopilotDeviceIdentity> getImportedWindowsAutopilotDeviceIdentities() {
@@ -1502,7 +1515,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the intents property value. The device management intents
-     * @return a deviceManagementIntent
+     * @return a java.util.List<DeviceManagementIntent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementIntent> getIntents() {
@@ -1518,7 +1531,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the intuneBrand property value. intuneBrand contains data which is used in customizing the appearance of the Company Portal applications as well as the end user web portal.
-     * @return a intuneBrand
+     * @return a IntuneBrand
      */
     @jakarta.annotation.Nullable
     public IntuneBrand getIntuneBrand() {
@@ -1526,7 +1539,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the intuneBrandingProfiles property value. Intune branding profiles targeted to AAD groups
-     * @return a intuneBrandingProfile
+     * @return a java.util.List<IntuneBrandingProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntuneBrandingProfile> getIntuneBrandingProfiles() {
@@ -1534,7 +1547,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the iosUpdateStatuses property value. The IOS software update installation statuses for this account.
-     * @return a iosUpdateDeviceStatus
+     * @return a java.util.List<IosUpdateDeviceStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IosUpdateDeviceStatus> getIosUpdateStatuses() {
@@ -1550,7 +1563,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the legacyPcManangementEnabled property value. The property to enable Non-MDM managed legacy PC management for this account. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLegacyPcManangementEnabled() {
@@ -1558,7 +1571,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the macOSSoftwareUpdateAccountSummaries property value. The MacOS software update account summaries for this account.
-     * @return a macOSSoftwareUpdateAccountSummary
+     * @return a java.util.List<MacOSSoftwareUpdateAccountSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateAccountSummary> getMacOSSoftwareUpdateAccountSummaries() {
@@ -1566,7 +1579,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceCleanupSettings property value. Device cleanup rule
-     * @return a managedDeviceCleanupSettings
+     * @return a ManagedDeviceCleanupSettings
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceCleanupSettings getManagedDeviceCleanupSettings() {
@@ -1574,7 +1587,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceEncryptionStates property value. Encryption report for devices in this account
-     * @return a managedDeviceEncryptionState
+     * @return a java.util.List<ManagedDeviceEncryptionState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceEncryptionState> getManagedDeviceEncryptionStates() {
@@ -1582,7 +1595,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceOverview property value. Device overview
-     * @return a managedDeviceOverview
+     * @return a ManagedDeviceOverview
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceOverview getManagedDeviceOverview() {
@@ -1590,7 +1603,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the managedDevices property value. The list of managed devices.
-     * @return a managedDevice
+     * @return a java.util.List<ManagedDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
@@ -1598,7 +1611,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumDepTokens() {
@@ -1606,7 +1619,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftTunnelConfigurations property value. Collection of MicrosoftTunnelConfiguration settings associated with account.
-     * @return a microsoftTunnelConfiguration
+     * @return a java.util.List<MicrosoftTunnelConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelConfiguration> getMicrosoftTunnelConfigurations() {
@@ -1614,7 +1627,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftTunnelHealthThresholds property value. Collection of MicrosoftTunnelHealthThreshold settings associated with account.
-     * @return a microsoftTunnelHealthThreshold
+     * @return a java.util.List<MicrosoftTunnelHealthThreshold>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelHealthThreshold> getMicrosoftTunnelHealthThresholds() {
@@ -1622,7 +1635,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftTunnelServerLogCollectionResponses property value. Collection of MicrosoftTunnelServerLogCollectionResponse settings associated with account.
-     * @return a microsoftTunnelServerLogCollectionResponse
+     * @return a java.util.List<MicrosoftTunnelServerLogCollectionResponse>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelServerLogCollectionResponse> getMicrosoftTunnelServerLogCollectionResponses() {
@@ -1630,7 +1643,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftTunnelSites property value. Collection of MicrosoftTunnelSite settings associated with account.
-     * @return a microsoftTunnelSite
+     * @return a java.util.List<MicrosoftTunnelSite>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MicrosoftTunnelSite> getMicrosoftTunnelSites() {
@@ -1638,7 +1651,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the mobileAppTroubleshootingEvents property value. The collection property of MobileAppTroubleshootingEvent.
-     * @return a mobileAppTroubleshootingEvent
+     * @return a java.util.List<MobileAppTroubleshootingEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileAppTroubleshootingEvent> getMobileAppTroubleshootingEvents() {
@@ -1646,7 +1659,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the mobileThreatDefenseConnectors property value. The list of Mobile threat Defense connectors configured by the tenant.
-     * @return a mobileThreatDefenseConnector
+     * @return a java.util.List<MobileThreatDefenseConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobileThreatDefenseConnector> getMobileThreatDefenseConnectors() {
@@ -1654,7 +1667,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the monitoring property value. The monitoring property
-     * @return a monitoring
+     * @return a Monitoring
      */
     @jakarta.annotation.Nullable
     public Monitoring getMonitoring() {
@@ -1662,7 +1675,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the ndesConnectors property value. The collection of Ndes connectors for this account.
-     * @return a ndesConnector
+     * @return a java.util.List<NdesConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NdesConnector> getNdesConnectors() {
@@ -1670,7 +1683,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the notificationMessageTemplates property value. The Notification Message Templates.
-     * @return a notificationMessageTemplate
+     * @return a java.util.List<NotificationMessageTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NotificationMessageTemplate> getNotificationMessageTemplates() {
@@ -1678,7 +1691,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the privilegeManagementElevations property value. The endpoint privilege management elevation event entity contains elevation details.
-     * @return a privilegeManagementElevation
+     * @return a java.util.List<PrivilegeManagementElevation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrivilegeManagementElevation> getPrivilegeManagementElevations() {
@@ -1686,7 +1699,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the remoteActionAudits property value. The list of device remote action audits with the tenant.
-     * @return a remoteActionAudit
+     * @return a java.util.List<RemoteActionAudit>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RemoteActionAudit> getRemoteActionAudits() {
@@ -1694,7 +1707,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the remoteAssistancePartners property value. The remote assist partners.
-     * @return a remoteAssistancePartner
+     * @return a java.util.List<RemoteAssistancePartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RemoteAssistancePartner> getRemoteAssistancePartners() {
@@ -1702,7 +1715,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the remoteAssistanceSettings property value. The remote assistance settings singleton
-     * @return a remoteAssistanceSettings
+     * @return a RemoteAssistanceSettings
      */
     @jakarta.annotation.Nullable
     public RemoteAssistanceSettings getRemoteAssistanceSettings() {
@@ -1710,7 +1723,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the reports property value. Reports singleton
-     * @return a deviceManagementReports
+     * @return a DeviceManagementReports
      */
     @jakarta.annotation.Nullable
     public DeviceManagementReports getReports() {
@@ -1718,7 +1731,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the resourceAccessProfiles property value. Collection of resource access settings associated with account.
-     * @return a deviceManagementResourceAccessProfileBase
+     * @return a java.util.List<DeviceManagementResourceAccessProfileBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementResourceAccessProfileBase> getResourceAccessProfiles() {
@@ -1726,7 +1739,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the resourceOperations property value. The Resource Operations.
-     * @return a resourceOperation
+     * @return a java.util.List<ResourceOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ResourceOperation> getResourceOperations() {
@@ -1734,7 +1747,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the reusablePolicySettings property value. List of all reusable settings that can be referred in a policy
-     * @return a deviceManagementReusablePolicySetting
+     * @return a java.util.List<DeviceManagementReusablePolicySetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementReusablePolicySetting> getReusablePolicySettings() {
@@ -1742,7 +1755,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the reusableSettings property value. List of all reusable settings
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a java.util.List<DeviceManagementConfigurationSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingDefinition> getReusableSettings() {
@@ -1750,7 +1763,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the roleAssignments property value. The Role Assignments.
-     * @return a deviceAndAppManagementRoleAssignment
+     * @return a java.util.List<DeviceAndAppManagementRoleAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAndAppManagementRoleAssignment> getRoleAssignments() {
@@ -1758,7 +1771,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the roleDefinitions property value. The Role Definitions.
-     * @return a roleDefinition
+     * @return a java.util.List<RoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleDefinition> getRoleDefinitions() {
@@ -1766,7 +1779,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTags property value. The Role Scope Tags.
-     * @return a roleScopeTag
+     * @return a java.util.List<RoleScopeTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTag> getRoleScopeTags() {
@@ -1774,7 +1787,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the serviceNowConnections property value. A list of ServiceNowConnections
-     * @return a serviceNowConnection
+     * @return a java.util.List<ServiceNowConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServiceNowConnection> getServiceNowConnections() {
@@ -1782,7 +1795,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the settingDefinitions property value. The device management intent setting definitions
-     * @return a deviceManagementSettingDefinition
+     * @return a java.util.List<DeviceManagementSettingDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingDefinition> getSettingDefinitions() {
@@ -1790,7 +1803,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the settings property value. Account level settings.
-     * @return a deviceManagementSettings
+     * @return a DeviceManagementSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementSettings getSettings() {
@@ -1798,7 +1811,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the softwareUpdateStatusSummary property value. The software update status summary.
-     * @return a softwareUpdateStatusSummary
+     * @return a SoftwareUpdateStatusSummary
      */
     @jakarta.annotation.Nullable
     public SoftwareUpdateStatusSummary getSoftwareUpdateStatusSummary() {
@@ -1806,7 +1819,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptions property value. Tenant mobile device management subscriptions.
-     * @return a deviceManagementSubscriptions
+     * @return a EnumSet<DeviceManagementSubscriptions>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementSubscriptions> getSubscriptions() {
@@ -1814,7 +1827,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the subscriptionState property value. Tenant mobile device management subscription state.
-     * @return a deviceManagementSubscriptionState
+     * @return a DeviceManagementSubscriptionState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementSubscriptionState getSubscriptionState() {
@@ -1822,7 +1835,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @return a telecomExpenseManagementPartner
+     * @return a java.util.List<TelecomExpenseManagementPartner>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TelecomExpenseManagementPartner> getTelecomExpenseManagementPartners() {
@@ -1830,7 +1843,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the templateInsights property value. List of setting insights in a template
-     * @return a deviceManagementTemplateInsightsDefinition
+     * @return a java.util.List<DeviceManagementTemplateInsightsDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplateInsightsDefinition> getTemplateInsights() {
@@ -1838,7 +1851,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the templates property value. The available templates
-     * @return a deviceManagementTemplate
+     * @return a java.util.List<DeviceManagementTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTemplate> getTemplates() {
@@ -1846,7 +1859,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the templateSettings property value. List of all TemplateSettings
-     * @return a deviceManagementConfigurationSettingTemplate
+     * @return a java.util.List<DeviceManagementConfigurationSettingTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingTemplate> getTemplateSettings() {
@@ -1854,7 +1867,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the tenantAttachRBAC property value. TenantAttach RBAC Enablement
-     * @return a tenantAttachRBAC
+     * @return a TenantAttachRBAC
      */
     @jakarta.annotation.Nullable
     public TenantAttachRBAC getTenantAttachRBAC() {
@@ -1862,7 +1875,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the termsAndConditions property value. The terms and conditions associated with device management of the company.
-     * @return a termsAndConditions
+     * @return a java.util.List<TermsAndConditions>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TermsAndConditions> getTermsAndConditions() {
@@ -1870,7 +1883,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the troubleshootingEvents property value. The list of troubleshooting events for the tenant.
-     * @return a deviceManagementTroubleshootingEvent
+     * @return a java.util.List<DeviceManagementTroubleshootingEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementTroubleshootingEvent> getTroubleshootingEvents() {
@@ -1878,7 +1891,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the unlicensedAdminstratorsEnabled property value. When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUnlicensedAdminstratorsEnabled() {
@@ -1886,7 +1899,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAnomaly property value. The user experience analytics anomaly entity contains anomaly details.
-     * @return a userExperienceAnalyticsAnomaly
+     * @return a java.util.List<UserExperienceAnalyticsAnomaly>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomaly> getUserExperienceAnalyticsAnomaly() {
@@ -1894,7 +1907,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAnomalyCorrelationGroupOverview property value. The user experience analytics anomaly correlation group overview entity contains the information for each correlation group of an anomaly.
-     * @return a userExperienceAnalyticsAnomalyCorrelationGroupOverview
+     * @return a java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupOverview>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomalyCorrelationGroupOverview> getUserExperienceAnalyticsAnomalyCorrelationGroupOverview() {
@@ -1902,7 +1915,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAnomalyDevice property value. The user experience analytics anomaly entity contains device details.
-     * @return a userExperienceAnalyticsAnomalyDevice
+     * @return a java.util.List<UserExperienceAnalyticsAnomalyDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAnomalyDevice> getUserExperienceAnalyticsAnomalyDevice() {
@@ -1910,7 +1923,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAnomalySeverityOverview property value. The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
-     * @return a userExperienceAnalyticsAnomalySeverityOverview
+     * @return a UserExperienceAnalyticsAnomalySeverityOverview
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalySeverityOverview getUserExperienceAnalyticsAnomalySeverityOverview() {
@@ -1918,7 +1931,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
-     * @return a userExperienceAnalyticsAppHealthApplicationPerformance
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> getUserExperienceAnalyticsAppHealthApplicationPerformance() {
@@ -1926,7 +1939,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion property value. User experience analytics appHealth Application Performance by App Version
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersion
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion() {
@@ -1934,7 +1947,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
@@ -1942,7 +1955,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
@@ -1950,7 +1963,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property value. User experience analytics appHealth Application Performance by OS Version
-     * @return a userExperienceAnalyticsAppHealthAppPerformanceByOSVersion
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> getUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
@@ -1958,7 +1971,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthDeviceModelPerformance property value. User experience analytics appHealth Model Performance
-     * @return a userExperienceAnalyticsAppHealthDeviceModelPerformance
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> getUserExperienceAnalyticsAppHealthDeviceModelPerformance() {
@@ -1966,7 +1979,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthDevicePerformance property value. User experience analytics appHealth Device Performance
-     * @return a userExperienceAnalyticsAppHealthDevicePerformance
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> getUserExperienceAnalyticsAppHealthDevicePerformance() {
@@ -1974,7 +1987,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthDevicePerformanceDetails property value. User experience analytics device performance details
-     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> getUserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
@@ -1982,7 +1995,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthOSVersionPerformance property value. User experience analytics appHealth OS version Performance
-     * @return a userExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> getUserExperienceAnalyticsAppHealthOSVersionPerformance() {
@@ -1990,7 +2003,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthOverview property value. User experience analytics appHealth overview
-     * @return a userExperienceAnalyticsCategory
+     * @return a UserExperienceAnalyticsCategory
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsCategory getUserExperienceAnalyticsAppHealthOverview() {
@@ -1998,7 +2011,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBaselines property value. User experience analytics baselines
-     * @return a userExperienceAnalyticsBaseline
+     * @return a java.util.List<UserExperienceAnalyticsBaseline>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBaseline> getUserExperienceAnalyticsBaselines() {
@@ -2006,7 +2019,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthAppImpact property value. User Experience Analytics Battery Health App Impact
-     * @return a userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact> getUserExperienceAnalyticsBatteryHealthAppImpact() {
@@ -2014,7 +2027,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthCapacityDetails property value. User Experience Analytics Battery Health Capacity Details
-     * @return a userExperienceAnalyticsBatteryHealthCapacityDetails
+     * @return a UserExperienceAnalyticsBatteryHealthCapacityDetails
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthCapacityDetails getUserExperienceAnalyticsBatteryHealthCapacityDetails() {
@@ -2022,7 +2035,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthDeviceAppImpact property value. User Experience Analytics Battery Health Device App Impact
-     * @return a userExperienceAnalyticsBatteryHealthDeviceAppImpact
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthDeviceAppImpact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> getUserExperienceAnalyticsBatteryHealthDeviceAppImpact() {
@@ -2030,7 +2043,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthDevicePerformance property value. User Experience Analytics Battery Health Device Performance
-     * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthDevicePerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthDevicePerformance> getUserExperienceAnalyticsBatteryHealthDevicePerformance() {
@@ -2038,7 +2051,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property value. User Experience Analytics Battery Health Device Runtime History
-     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> getUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
@@ -2046,7 +2059,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthModelPerformance property value. User Experience Analytics Battery Health Model Performance
-     * @return a userExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> getUserExperienceAnalyticsBatteryHealthModelPerformance() {
@@ -2054,7 +2067,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthOsPerformance property value. User Experience Analytics Battery Health Os Performance
-     * @return a userExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a java.util.List<UserExperienceAnalyticsBatteryHealthOsPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsBatteryHealthOsPerformance> getUserExperienceAnalyticsBatteryHealthOsPerformance() {
@@ -2062,7 +2075,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsBatteryHealthRuntimeDetails property value. User Experience Analytics Battery Health Runtime Details
-     * @return a userExperienceAnalyticsBatteryHealthRuntimeDetails
+     * @return a UserExperienceAnalyticsBatteryHealthRuntimeDetails
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthRuntimeDetails getUserExperienceAnalyticsBatteryHealthRuntimeDetails() {
@@ -2070,7 +2083,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsCategories property value. User experience analytics categories
-     * @return a userExperienceAnalyticsCategory
+     * @return a java.util.List<UserExperienceAnalyticsCategory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsCategory> getUserExperienceAnalyticsCategories() {
@@ -2078,7 +2091,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history
-     * @return a userExperienceAnalyticsMetricHistory
+     * @return a java.util.List<UserExperienceAnalyticsMetricHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsMetricHistory> getUserExperienceAnalyticsDeviceMetricHistory() {
@@ -2086,7 +2099,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDevicePerformance property value. User experience analytics device performance
-     * @return a userExperienceAnalyticsDevicePerformance
+     * @return a java.util.List<UserExperienceAnalyticsDevicePerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDevicePerformance> getUserExperienceAnalyticsDevicePerformance() {
@@ -2094,7 +2107,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceScope property value. The user experience analytics device scope entity endpoint to trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
-     * @return a userExperienceAnalyticsDeviceScope
+     * @return a UserExperienceAnalyticsDeviceScope
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsDeviceScope getUserExperienceAnalyticsDeviceScope() {
@@ -2102,7 +2115,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceScopes property value. The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.
-     * @return a userExperienceAnalyticsDeviceScope
+     * @return a java.util.List<UserExperienceAnalyticsDeviceScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceScope> getUserExperienceAnalyticsDeviceScopes() {
@@ -2110,7 +2123,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceScores property value. User experience analytics device scores
-     * @return a userExperienceAnalyticsDeviceScores
+     * @return a java.util.List<UserExperienceAnalyticsDeviceScores>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceScores> getUserExperienceAnalyticsDeviceScores() {
@@ -2118,7 +2131,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceStartupHistory property value. User experience analytics device Startup History
-     * @return a userExperienceAnalyticsDeviceStartupHistory
+     * @return a java.util.List<UserExperienceAnalyticsDeviceStartupHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceStartupHistory> getUserExperienceAnalyticsDeviceStartupHistory() {
@@ -2126,7 +2139,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceStartupProcesses property value. User experience analytics device Startup Processes
-     * @return a userExperienceAnalyticsDeviceStartupProcess
+     * @return a java.util.List<UserExperienceAnalyticsDeviceStartupProcess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceStartupProcess> getUserExperienceAnalyticsDeviceStartupProcesses() {
@@ -2134,7 +2147,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceStartupProcessPerformance property value. User experience analytics device Startup Process Performance
-     * @return a userExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a java.util.List<UserExperienceAnalyticsDeviceStartupProcessPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceStartupProcessPerformance> getUserExperienceAnalyticsDeviceStartupProcessPerformance() {
@@ -2142,7 +2155,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDevicesWithoutCloudIdentity property value. User experience analytics devices without cloud identity.
-     * @return a userExperienceAnalyticsDeviceWithoutCloudIdentity
+     * @return a java.util.List<UserExperienceAnalyticsDeviceWithoutCloudIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceWithoutCloudIdentity> getUserExperienceAnalyticsDevicesWithoutCloudIdentity() {
@@ -2150,7 +2163,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsDeviceTimelineEvent property value. The user experience analytics device events entity contains NRT device timeline event details.
-     * @return a userExperienceAnalyticsDeviceTimelineEvent
+     * @return a java.util.List<UserExperienceAnalyticsDeviceTimelineEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsDeviceTimelineEvent> getUserExperienceAnalyticsDeviceTimelineEvent() {
@@ -2158,7 +2171,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsImpactingProcess property value. User experience analytics impacting process
-     * @return a userExperienceAnalyticsImpactingProcess
+     * @return a java.util.List<UserExperienceAnalyticsImpactingProcess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsImpactingProcess> getUserExperienceAnalyticsImpactingProcess() {
@@ -2166,7 +2179,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsMetricHistory property value. User experience analytics metric history
-     * @return a userExperienceAnalyticsMetricHistory
+     * @return a java.util.List<UserExperienceAnalyticsMetricHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsMetricHistory> getUserExperienceAnalyticsMetricHistory() {
@@ -2174,7 +2187,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsModelScores property value. User experience analytics model scores
-     * @return a userExperienceAnalyticsModelScores
+     * @return a java.util.List<UserExperienceAnalyticsModelScores>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsModelScores> getUserExperienceAnalyticsModelScores() {
@@ -2182,7 +2195,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsNotAutopilotReadyDevice property value. User experience analytics devices not Windows Autopilot ready.
-     * @return a userExperienceAnalyticsNotAutopilotReadyDevice
+     * @return a java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice> getUserExperienceAnalyticsNotAutopilotReadyDevice() {
@@ -2190,7 +2203,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsOverview property value. User experience analytics overview
-     * @return a userExperienceAnalyticsOverview
+     * @return a UserExperienceAnalyticsOverview
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsOverview getUserExperienceAnalyticsOverview() {
@@ -2198,7 +2211,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
-     * @return a userExperienceAnalyticsRemoteConnection
+     * @return a java.util.List<UserExperienceAnalyticsRemoteConnection>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsRemoteConnection> getUserExperienceAnalyticsRemoteConnection() {
@@ -2206,7 +2219,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsResourcePerformance property value. User experience analytics resource performance
-     * @return a userExperienceAnalyticsResourcePerformance
+     * @return a java.util.List<UserExperienceAnalyticsResourcePerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsResourcePerformance> getUserExperienceAnalyticsResourcePerformance() {
@@ -2214,7 +2227,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsScoreHistory property value. User experience analytics device Startup Score History
-     * @return a userExperienceAnalyticsScoreHistory
+     * @return a java.util.List<UserExperienceAnalyticsScoreHistory>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsScoreHistory> getUserExperienceAnalyticsScoreHistory() {
@@ -2222,7 +2235,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsSettings property value. User experience analytics device settings
-     * @return a userExperienceAnalyticsSettings
+     * @return a UserExperienceAnalyticsSettings
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsSettings getUserExperienceAnalyticsSettings() {
@@ -2230,7 +2243,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property value. User experience analytics work from anywhere hardware readiness metrics.
-     * @return a userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
+     * @return a UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric getUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
@@ -2238,7 +2251,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsWorkFromAnywhereMetrics property value. User experience analytics work from anywhere metrics.
-     * @return a userExperienceAnalyticsWorkFromAnywhereMetric
+     * @return a java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> getUserExperienceAnalyticsWorkFromAnywhereMetrics() {
@@ -2246,7 +2259,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsWorkFromAnywhereModelPerformance property value. The user experience analytics work from anywhere model performance
-     * @return a userExperienceAnalyticsWorkFromAnywhereModelPerformance
+     * @return a java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> getUserExperienceAnalyticsWorkFromAnywhereModelPerformance() {
@@ -2254,7 +2267,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userPfxCertificates property value. Collection of PFX certificates associated with a user.
-     * @return a userPFXCertificate
+     * @return a java.util.List<UserPFXCertificate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserPFXCertificate> getUserPfxCertificates() {
@@ -2262,7 +2275,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the virtualEndpoint property value. The virtualEndpoint property
-     * @return a virtualEndpoint
+     * @return a VirtualEndpoint
      */
     @jakarta.annotation.Nullable
     public VirtualEndpoint getVirtualEndpoint() {
@@ -2270,7 +2283,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsAutopilotDeploymentProfiles property value. Windows auto pilot deployment profiles
-     * @return a windowsAutopilotDeploymentProfile
+     * @return a java.util.List<WindowsAutopilotDeploymentProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsAutopilotDeploymentProfile> getWindowsAutopilotDeploymentProfiles() {
@@ -2278,7 +2291,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsAutopilotDeviceIdentities property value. The Windows autopilot device identities contained collection.
-     * @return a windowsAutopilotDeviceIdentity
+     * @return a java.util.List<WindowsAutopilotDeviceIdentity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsAutopilotDeviceIdentity> getWindowsAutopilotDeviceIdentities() {
@@ -2286,7 +2299,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsAutopilotSettings property value. The Windows autopilot account settings.
-     * @return a windowsAutopilotSettings
+     * @return a WindowsAutopilotSettings
      */
     @jakarta.annotation.Nullable
     public WindowsAutopilotSettings getWindowsAutopilotSettings() {
@@ -2294,7 +2307,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsDriverUpdateProfiles property value. A collection of windows driver update profiles
-     * @return a windowsDriverUpdateProfile
+     * @return a java.util.List<WindowsDriverUpdateProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsDriverUpdateProfile> getWindowsDriverUpdateProfiles() {
@@ -2302,7 +2315,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsFeatureUpdateProfiles property value. A collection of windows feature update profiles
-     * @return a windowsFeatureUpdateProfile
+     * @return a java.util.List<WindowsFeatureUpdateProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsFeatureUpdateProfile> getWindowsFeatureUpdateProfiles() {
@@ -2310,7 +2323,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsInformationProtectionAppLearningSummaries property value. The windows information protection app learning summaries.
-     * @return a windowsInformationProtectionAppLearningSummary
+     * @return a java.util.List<WindowsInformationProtectionAppLearningSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionAppLearningSummary> getWindowsInformationProtectionAppLearningSummaries() {
@@ -2318,7 +2331,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsInformationProtectionNetworkLearningSummaries property value. The windows information protection network learning summaries.
-     * @return a windowsInformationProtectionNetworkLearningSummary
+     * @return a java.util.List<WindowsInformationProtectionNetworkLearningSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsInformationProtectionNetworkLearningSummary> getWindowsInformationProtectionNetworkLearningSummaries() {
@@ -2326,7 +2339,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsMalwareInformation property value. The list of affected malware in the tenant.
-     * @return a windowsMalwareInformation
+     * @return a java.util.List<WindowsMalwareInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsMalwareInformation> getWindowsMalwareInformation() {
@@ -2334,7 +2347,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsMalwareOverview property value. Malware overview for windows devices.
-     * @return a windowsMalwareOverview
+     * @return a WindowsMalwareOverview
      */
     @jakarta.annotation.Nullable
     public WindowsMalwareOverview getWindowsMalwareOverview() {
@@ -2342,7 +2355,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsQualityUpdateProfiles property value. A collection of windows quality update profiles
-     * @return a windowsQualityUpdateProfile
+     * @return a java.util.List<WindowsQualityUpdateProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsQualityUpdateProfile> getWindowsQualityUpdateProfiles() {
@@ -2350,7 +2363,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the windowsUpdateCatalogItems property value. A collection of windows update catalog items (fetaure updates item , quality updates item)
-     * @return a windowsUpdateCatalogItem
+     * @return a java.util.List<WindowsUpdateCatalogItem>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsUpdateCatalogItem> getWindowsUpdateCatalogItems() {
@@ -2358,7 +2371,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the zebraFotaArtifacts property value. The Collection of ZebraFotaArtifacts.
-     * @return a zebraFotaArtifact
+     * @return a java.util.List<ZebraFotaArtifact>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ZebraFotaArtifact> getZebraFotaArtifacts() {
@@ -2366,7 +2379,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the zebraFotaConnector property value. The singleton ZebraFotaConnector associated with account.
-     * @return a zebraFotaConnector
+     * @return a ZebraFotaConnector
      */
     @jakarta.annotation.Nullable
     public ZebraFotaConnector getZebraFotaConnector() {
@@ -2374,7 +2387,7 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the zebraFotaDeployments property value. Collection of ZebraFotaDeployments associated with account.
-     * @return a zebraFotaDeployment
+     * @return a java.util.List<ZebraFotaDeployment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ZebraFotaDeployment> getZebraFotaDeployments() {
@@ -2443,6 +2456,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("deviceProtectionOverview", this.getDeviceProtectionOverview());
         writer.writeCollectionOfObjectValues("deviceShellScripts", this.getDeviceShellScripts());
         writer.writeCollectionOfObjectValues("domainJoinConnectors", this.getDomainJoinConnectors());
+        writer.writeCollectionOfObjectValues("elevationRequests", this.getElevationRequests());
         writer.writeCollectionOfObjectValues("embeddedSIMActivationCodePools", this.getEmbeddedSIMActivationCodePools());
         writer.writeCollectionOfObjectValues("exchangeConnectors", this.getExchangeConnectors());
         writer.writeCollectionOfObjectValues("exchangeOnPremisesPolicies", this.getExchangeOnPremisesPolicies());
@@ -2962,6 +2976,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setDomainJoinConnectors(@jakarta.annotation.Nullable final java.util.List<DeviceManagementDomainJoinConnector> value) {
         this.domainJoinConnectors = value;
+    }
+    /**
+     * Sets the elevationRequests property value. List of elevation requests
+     * @param value Value to set for the elevationRequests property.
+     */
+    public void setElevationRequests(@jakarta.annotation.Nullable final java.util.List<PrivilegeManagementElevationRequest> value) {
+        this.elevationRequests = value;
     }
     /**
      * Sets the embeddedSIMActivationCodePools property value. The embedded SIM activation code pools created by this account.

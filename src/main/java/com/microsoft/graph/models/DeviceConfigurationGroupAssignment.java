@@ -24,7 +24,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      */
     private String targetGroupId;
     /**
-     * Instantiates a new deviceConfigurationGroupAssignment and sets the default values.
+     * Instantiates a new DeviceConfigurationGroupAssignment and sets the default values.
      */
     public DeviceConfigurationGroupAssignment() {
         super();
@@ -32,7 +32,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceConfigurationGroupAssignment
+     * @return a DeviceConfigurationGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceConfigurationGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the deviceConfiguration property value. The navigation link to the Device Configuration being targeted.
-     * @return a deviceConfiguration
+     * @return a DeviceConfiguration
      */
     @jakarta.annotation.Nullable
     public DeviceConfiguration getDeviceConfiguration() {
@@ -49,7 +49,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the excludeGroup property value. Indicates if this group is should be excluded. Defaults that the group should be included
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getExcludeGroup() {
@@ -69,7 +69,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
     }
     /**
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device configuration to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {

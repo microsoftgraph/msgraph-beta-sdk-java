@@ -13,7 +13,7 @@ public class JobResponseBaseCollectionResponse extends BaseCollectionPaginationC
      */
     private java.util.List<JobResponseBase> value;
     /**
-     * Instantiates a new jobResponseBaseCollectionResponse and sets the default values.
+     * Instantiates a new JobResponseBaseCollectionResponse and sets the default values.
      */
     public JobResponseBaseCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class JobResponseBaseCollectionResponse extends BaseCollectionPaginationC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a jobResponseBaseCollectionResponse
+     * @return a JobResponseBaseCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static JobResponseBaseCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class JobResponseBaseCollectionResponse extends BaseCollectionPaginationC
     }
     /**
      * Gets the value property value. The value property
-     * @return a jobResponseBase
+     * @return a java.util.List<JobResponseBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JobResponseBase> getValue() {

@@ -20,7 +20,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      */
     private String originalEntityTypeName;
     /**
-     * Instantiates a new unsupportedDeviceConfiguration and sets the default values.
+     * Instantiates a new UnsupportedDeviceConfiguration and sets the default values.
      */
     public UnsupportedDeviceConfiguration() {
         super();
@@ -29,7 +29,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unsupportedDeviceConfiguration
+     * @return a UnsupportedDeviceConfiguration
      */
     @jakarta.annotation.Nonnull
     public static UnsupportedDeviceConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the details property value. Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements.
-     * @return a unsupportedDeviceConfigurationDetail
+     * @return a java.util.List<UnsupportedDeviceConfigurationDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnsupportedDeviceConfigurationDetail> getDetails() {
@@ -57,7 +57,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     }
     /**
      * Gets the originalEntityTypeName property value. The type of entity that would be returned otherwise.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginalEntityTypeName() {

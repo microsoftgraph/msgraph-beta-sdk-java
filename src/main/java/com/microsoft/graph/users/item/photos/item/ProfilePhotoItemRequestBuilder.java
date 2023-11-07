@@ -45,17 +45,17 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/photos/{profilePhoto%2Did}{?%24select}", rawUrl);
     }
     /**
-     * Get photos from users
-     * @return a CompletableFuture of profilePhoto
+     * The collection of the user's profile photos in different sizes. Read-only.
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get() {
         return get(null);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of profilePhoto
+     * @return a CompletableFuture of ProfilePhoto
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<ProfilePhoto> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -66,7 +66,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendAsync(requestInfo, ProfilePhoto::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -74,17 +74,13 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -92,6 +88,10 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -105,7 +105,7 @@ public class ProfilePhotoItemRequestBuilder extends BaseRequestBuilder {
         return new ProfilePhotoItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get photos from users
+     * The collection of the user's profile photos in different sizes. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

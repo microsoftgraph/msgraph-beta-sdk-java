@@ -32,6 +32,26 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     private Boolean preSharedKeyIsSet;
     /**
+     * Specify the proxy server configuration script URL.
+     */
+    private String proxyAutomaticConfigurationUrl;
+    /**
+     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     */
+    private java.util.List<String> proxyExclusionList;
+    /**
+     * Specify the proxy server IP address. Both IPv4 and IPv6 addresses are supported. For example: 192.168.1.1.
+     */
+    private String proxyManualAddress;
+    /**
+     * Specify the proxy server port.
+     */
+    private Integer proxyManualPort;
+    /**
+     * Wi-Fi Proxy Settings.
+     */
+    private WiFiProxySetting proxySetting;
+    /**
      * This is the name of the Wi-Fi network that is broadcast to all devices.
      */
     private String ssid;
@@ -40,7 +60,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     private AospDeviceOwnerWiFiSecurityType wiFiSecurityType;
     /**
-     * Instantiates a new aospDeviceOwnerWiFiConfiguration and sets the default values.
+     * Instantiates a new AospDeviceOwnerWiFiConfiguration and sets the default values.
      */
     public AospDeviceOwnerWiFiConfiguration() {
         super();
@@ -49,7 +69,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a aospDeviceOwnerWiFiConfiguration
+     * @return a AospDeviceOwnerWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AospDeviceOwnerWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +85,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
@@ -73,7 +93,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
@@ -91,13 +111,18 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
         deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
         deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
         deserializerMap.put("preSharedKeyIsSet", (n) -> { this.setPreSharedKeyIsSet(n.getBooleanValue()); });
+        deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { this.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("proxyExclusionList", (n) -> { this.setProxyExclusionList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("proxyManualAddress", (n) -> { this.setProxyManualAddress(n.getStringValue()); });
+        deserializerMap.put("proxyManualPort", (n) -> { this.setProxyManualPort(n.getIntegerValue()); });
+        deserializerMap.put("proxySetting", (n) -> { this.setProxySetting(n.getEnumValue(WiFiProxySetting.class)); });
         deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
         deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(AospDeviceOwnerWiFiSecurityType.class)); });
         return deserializerMap;
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
@@ -105,7 +130,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the preSharedKey property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreSharedKey() {
@@ -113,15 +138,55 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the preSharedKeyIsSet property value. This is the pre-shared key for WPA Personal Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreSharedKeyIsSet() {
         return this.preSharedKeyIsSet;
     }
     /**
+     * Gets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getProxyAutomaticConfigurationUrl() {
+        return this.proxyAutomaticConfigurationUrl;
+    }
+    /**
+     * Gets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * @return a java.util.List<String>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getProxyExclusionList() {
+        return this.proxyExclusionList;
+    }
+    /**
+     * Gets the proxyManualAddress property value. Specify the proxy server IP address. Both IPv4 and IPv6 addresses are supported. For example: 192.168.1.1.
+     * @return a String
+     */
+    @jakarta.annotation.Nullable
+    public String getProxyManualAddress() {
+        return this.proxyManualAddress;
+    }
+    /**
+     * Gets the proxyManualPort property value. Specify the proxy server port.
+     * @return a Integer
+     */
+    @jakarta.annotation.Nullable
+    public Integer getProxyManualPort() {
+        return this.proxyManualPort;
+    }
+    /**
+     * Gets the proxySetting property value. Wi-Fi Proxy Settings.
+     * @return a WiFiProxySetting
+     */
+    @jakarta.annotation.Nullable
+    public WiFiProxySetting getProxySetting() {
+        return this.proxySetting;
+    }
+    /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
@@ -129,7 +194,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for AOSP Device Owner.
-     * @return a aospDeviceOwnerWiFiSecurityType
+     * @return a AospDeviceOwnerWiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public AospDeviceOwnerWiFiSecurityType getWiFiSecurityType() {
@@ -147,6 +212,11 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
         writer.writeStringValue("networkName", this.getNetworkName());
         writer.writeStringValue("preSharedKey", this.getPreSharedKey());
         writer.writeBooleanValue("preSharedKeyIsSet", this.getPreSharedKeyIsSet());
+        writer.writeStringValue("proxyAutomaticConfigurationUrl", this.getProxyAutomaticConfigurationUrl());
+        writer.writeCollectionOfPrimitiveValues("proxyExclusionList", this.getProxyExclusionList());
+        writer.writeStringValue("proxyManualAddress", this.getProxyManualAddress());
+        writer.writeIntegerValue("proxyManualPort", this.getProxyManualPort());
+        writer.writeEnumValue("proxySetting", this.getProxySetting());
         writer.writeStringValue("ssid", this.getSsid());
         writer.writeEnumValue("wiFiSecurityType", this.getWiFiSecurityType());
     }
@@ -184,6 +254,41 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     public void setPreSharedKeyIsSet(@jakarta.annotation.Nullable final Boolean value) {
         this.preSharedKeyIsSet = value;
+    }
+    /**
+     * Sets the proxyAutomaticConfigurationUrl property value. Specify the proxy server configuration script URL.
+     * @param value Value to set for the proxyAutomaticConfigurationUrl property.
+     */
+    public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
+        this.proxyAutomaticConfigurationUrl = value;
+    }
+    /**
+     * Sets the proxyExclusionList property value. List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     * @param value Value to set for the proxyExclusionList property.
+     */
+    public void setProxyExclusionList(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.proxyExclusionList = value;
+    }
+    /**
+     * Sets the proxyManualAddress property value. Specify the proxy server IP address. Both IPv4 and IPv6 addresses are supported. For example: 192.168.1.1.
+     * @param value Value to set for the proxyManualAddress property.
+     */
+    public void setProxyManualAddress(@jakarta.annotation.Nullable final String value) {
+        this.proxyManualAddress = value;
+    }
+    /**
+     * Sets the proxyManualPort property value. Specify the proxy server port.
+     * @param value Value to set for the proxyManualPort property.
+     */
+    public void setProxyManualPort(@jakarta.annotation.Nullable final Integer value) {
+        this.proxyManualPort = value;
+    }
+    /**
+     * Sets the proxySetting property value. Wi-Fi Proxy Settings.
+     * @param value Value to set for the proxySetting property.
+     */
+    public void setProxySetting(@jakarta.annotation.Nullable final WiFiProxySetting value) {
+        this.proxySetting = value;
     }
     /**
      * Sets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.

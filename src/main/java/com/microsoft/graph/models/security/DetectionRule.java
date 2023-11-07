@@ -25,7 +25,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
      */
     private RuleSchedule schedule;
     /**
-     * Instantiates a new detectionRule and sets the default values.
+     * Instantiates a new DetectionRule and sets the default values.
      */
     public DetectionRule() {
         super();
@@ -34,7 +34,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a detectionRule
+     * @return a DetectionRule
      */
     @jakarta.annotation.Nonnull
     public static DetectionRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     }
     /**
      * Gets the detectionAction property value. The detectionAction property
-     * @return a detectionAction
+     * @return a DetectionAction
      */
     @jakarta.annotation.Nullable
     public DetectionAction getDetectionAction() {
@@ -64,7 +64,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     }
     /**
      * Gets the lastRunDetails property value. The lastRunDetails property
-     * @return a runDetails
+     * @return a RunDetails
      */
     @jakarta.annotation.Nullable
     public RunDetails getLastRunDetails() {
@@ -72,7 +72,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     }
     /**
      * Gets the queryCondition property value. The queryCondition property
-     * @return a queryCondition
+     * @return a QueryCondition
      */
     @jakarta.annotation.Nullable
     public QueryCondition getQueryCondition() {
@@ -80,7 +80,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
     }
     /**
      * Gets the schedule property value. The schedule property
-     * @return a ruleSchedule
+     * @return a RuleSchedule
      */
     @jakarta.annotation.Nullable
     public RuleSchedule getSchedule() {

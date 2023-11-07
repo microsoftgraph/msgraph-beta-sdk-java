@@ -30,7 +30,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
      */
     private String title;
     /**
-     * Instantiates a new serviceAnnouncementBase and sets the default values.
+     * Instantiates a new ServiceAnnouncementBase and sets the default values.
      */
     public ServiceAnnouncementBase() {
         super();
@@ -38,7 +38,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceAnnouncementBase
+     * @return a ServiceAnnouncementBase
      */
     @jakarta.annotation.Nonnull
     public static ServiceAnnouncementBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the details property value. Extra details about service event. This property doesn't support filters.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getDetails() {
@@ -101,7 +101,7 @@ public class ServiceAnnouncementBase extends Entity implements Parsable {
     }
     /**
      * Gets the title property value. The title of the service event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {

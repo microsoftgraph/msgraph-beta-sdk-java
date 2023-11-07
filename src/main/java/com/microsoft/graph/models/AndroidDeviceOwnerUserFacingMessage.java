@@ -29,7 +29,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
      */
     private String odataType;
     /**
-     * Instantiates a new androidDeviceOwnerUserFacingMessage and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerUserFacingMessage and sets the default values.
      */
     public AndroidDeviceOwnerUserFacingMessage() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerUserFacingMessage
+     * @return a AndroidDeviceOwnerUserFacingMessage
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerUserFacingMessage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         return new AndroidDeviceOwnerUserFacingMessage();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     }
     /**
      * Gets the defaultMessage property value. The default message displayed if the user's locale doesn't match with any of the localized messages
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultMessage() {
@@ -74,7 +74,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     }
     /**
      * Gets the localizedMessages property value. The list of <locale, message> pairs. This collection can contain a maximum of 500 elements.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getLocalizedMessages() {
@@ -82,7 +82,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,8 +100,8 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

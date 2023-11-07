@@ -14,7 +14,7 @@ public class SubdomainCollectionResponse extends BaseCollectionPaginationCountRe
      */
     private java.util.List<Subdomain> value;
     /**
-     * Instantiates a new subdomainCollectionResponse and sets the default values.
+     * Instantiates a new SubdomainCollectionResponse and sets the default values.
      */
     public SubdomainCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class SubdomainCollectionResponse extends BaseCollectionPaginationCountRe
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a subdomainCollectionResponse
+     * @return a SubdomainCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SubdomainCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class SubdomainCollectionResponse extends BaseCollectionPaginationCountRe
     }
     /**
      * Gets the value property value. The value property
-     * @return a subdomain
+     * @return a java.util.List<Subdomain>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Subdomain> getValue() {

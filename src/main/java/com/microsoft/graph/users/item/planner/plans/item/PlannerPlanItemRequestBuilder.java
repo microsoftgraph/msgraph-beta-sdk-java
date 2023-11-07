@@ -4,6 +4,7 @@ import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.PlannerPlan;
 import com.microsoft.graph.users.item.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.users.item.planner.plans.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.users.item.planner.plans.item.movetocontainer.MoveToContainerRequestBuilder;
 import com.microsoft.graph.users.item.planner.plans.item.tasks.TasksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -36,6 +37,13 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the moveToContainer method.
+     */
+    @jakarta.annotation.Nonnull
+    public MoveToContainerRequestBuilder moveToContainer() {
+        return new MoveToContainerRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
@@ -81,7 +89,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get plans from users
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> get() {
@@ -90,7 +98,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -103,7 +111,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update the navigation property plans in users
      * @param body The request body
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> patch(@jakarta.annotation.Nonnull final PlannerPlan body) {
@@ -113,7 +121,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property plans in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of plannerPlan
+     * @return a CompletableFuture of PlannerPlan
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<PlannerPlan> patch(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -140,15 +148,16 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json, application/json");
         return requestInfo;
     }
     /**
@@ -167,10 +176,6 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -178,6 +183,10 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -199,17 +208,17 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

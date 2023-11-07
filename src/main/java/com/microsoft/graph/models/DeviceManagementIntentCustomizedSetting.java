@@ -33,7 +33,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
      */
     private String odataType;
     /**
-     * Instantiates a new deviceManagementIntentCustomizedSetting and sets the default values.
+     * Instantiates a new DeviceManagementIntentCustomizedSetting and sets the default values.
      */
     public DeviceManagementIntentCustomizedSetting() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentCustomizedSetting
+     * @return a DeviceManagementIntentCustomizedSetting
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentCustomizedSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +49,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
         return new DeviceManagementIntentCustomizedSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     }
     /**
      * Gets the customizedJson property value. JSON representation of the customized value, if different from default
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomizedJson() {
@@ -66,7 +66,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     }
     /**
      * Gets the defaultJson property value. JSON representation of the default value from the template
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultJson() {
@@ -74,7 +74,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     }
     /**
      * Gets the definitionId property value. The ID of the setting definition for this setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefinitionId() {
@@ -95,7 +95,7 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -114,8 +114,8 @@ public class DeviceManagementIntentCustomizedSetting implements AdditionalDataHo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

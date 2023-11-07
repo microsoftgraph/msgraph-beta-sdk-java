@@ -22,7 +22,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private String accessPackageId;
     /**
-     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
+     * Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
      */
     private AssignmentReviewSettings accessReviewSettings;
     /**
@@ -54,7 +54,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * The number of days in which assignments from this policy last until they are expired.
+     * The number of days in which assignments from this policy last until they're expired.
      */
     private Integer durationInDays;
     /**
@@ -82,11 +82,11 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     private RequestorSettings requestorSettings;
     /**
-     * Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     * Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
      */
     private VerifiableCredentialSettings verifiableCredentialSettings;
     /**
-     * Instantiates a new accessPackageAssignmentPolicy and sets the default values.
+     * Instantiates a new AccessPackageAssignmentPolicy and sets the default values.
      */
     public AccessPackageAssignmentPolicy() {
         super();
@@ -94,7 +94,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessPackageAssignmentPolicy
+     * @return a AccessPackageAssignmentPolicy
      */
     @jakarta.annotation.Nonnull
     public static AccessPackageAssignmentPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,7 +103,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackage property value. The access package with this policy. Read-only. Nullable. Supports $expand.
-     * @return a accessPackage
+     * @return a AccessPackage
      */
     @jakarta.annotation.Nullable
     public AccessPackage getAccessPackage() {
@@ -111,7 +111,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageCatalog property value. The accessPackageCatalog property
-     * @return a accessPackageCatalog
+     * @return a AccessPackageCatalog
      */
     @jakarta.annotation.Nullable
     public AccessPackageCatalog getAccessPackageCatalog() {
@@ -119,15 +119,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageId property value. Identifier of the access package.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccessPackageId() {
         return this.accessPackageId;
     }
     /**
-     * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
-     * @return a assignmentReviewSettings
+     * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
+     * @return a AssignmentReviewSettings
      */
     @jakarta.annotation.Nullable
     public AssignmentReviewSettings getAccessReviewSettings() {
@@ -135,7 +135,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the canExtend property value. Indicates whether a user can extend the access package assignment duration after approval.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getCanExtend() {
@@ -143,7 +143,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedBy() {
@@ -159,7 +159,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionHandlers property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a customExtensionHandler
+     * @return a java.util.List<CustomExtensionHandler>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionHandler> getCustomExtensionHandlers() {
@@ -167,7 +167,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the customExtensionStageSettings property value. The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
-     * @return a customExtensionStageSetting
+     * @return a java.util.List<CustomExtensionStageSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomExtensionStageSetting> getCustomExtensionStageSettings() {
@@ -175,7 +175,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -183,15 +183,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the policy. Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
     /**
-     * Gets the durationInDays property value. The number of days in which assignments from this policy last until they are expired.
-     * @return a integer
+     * Gets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDurationInDays() {
@@ -235,7 +235,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the modifiedBy property value. The modifiedBy property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModifiedBy() {
@@ -251,7 +251,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the questions property value. Questions that are posed to the  requestor.
-     * @return a accessPackageQuestion
+     * @return a java.util.List<AccessPackageQuestion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageQuestion> getQuestions() {
@@ -259,7 +259,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestApprovalSettings property value. Who must approve requests for access package in this policy.
-     * @return a approvalSettings
+     * @return a ApprovalSettings
      */
     @jakarta.annotation.Nullable
     public ApprovalSettings getRequestApprovalSettings() {
@@ -267,15 +267,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the requestorSettings property value. Who can request this access package from this policy.
-     * @return a requestorSettings
+     * @return a RequestorSettings
      */
     @jakarta.annotation.Nullable
     public RequestorSettings getRequestorSettings() {
         return this.requestorSettings;
     }
     /**
-     * Gets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
-     * @return a verifiableCredentialSettings
+     * Gets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     * @return a VerifiableCredentialSettings
      */
     @jakarta.annotation.Nullable
     public VerifiableCredentialSettings getVerifiableCredentialSettings() {
@@ -330,7 +330,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.accessPackageId = value;
     }
     /**
-     * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews are not required.
+     * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
      * @param value Value to set for the accessReviewSettings property.
      */
     public void setAccessReviewSettings(@jakarta.annotation.Nullable final AssignmentReviewSettings value) {
@@ -386,7 +386,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the durationInDays property value. The number of days in which assignments from this policy last until they are expired.
+     * Sets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
      * @param value Value to set for the durationInDays property.
      */
     public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {
@@ -435,7 +435,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.requestorSettings = value;
     }
     /**
-     * Sets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     * Sets the verifiableCredentialSettings property value. Settings for verifiable credentials set up through the Microsoft Entra Verified I D service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
      * @param value Value to set for the verifiableCredentialSettings property.
      */
     public void setVerifiableCredentialSettings(@jakarta.annotation.Nullable final VerifiableCredentialSettings value) {

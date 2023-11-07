@@ -25,7 +25,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
      */
     private EnumSet<Win32LobAppDetectionOperator> productVersionOperator;
     /**
-     * Instantiates a new win32LobAppProductCodeDetection and sets the default values.
+     * Instantiates a new Win32LobAppProductCodeDetection and sets the default values.
      */
     public Win32LobAppProductCodeDetection() {
         super();
@@ -34,7 +34,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppProductCodeDetection
+     * @return a Win32LobAppProductCodeDetection
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppProductCodeDetection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
     }
     /**
      * Gets the productCode property value. The product code of Win32 Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductCode() {
@@ -63,7 +63,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
     }
     /**
      * Gets the productVersion property value. The product version of Win32 Line of Business (LoB) app.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
@@ -71,7 +71,7 @@ public class Win32LobAppProductCodeDetection extends Win32LobAppDetection implem
     }
     /**
      * Gets the productVersionOperator property value. Contains properties for detection operator.
-     * @return a win32LobAppDetectionOperator
+     * @return a EnumSet<Win32LobAppDetectionOperator>
      */
     @jakarta.annotation.Nullable
     public EnumSet<Win32LobAppDetectionOperator> getProductVersionOperator() {

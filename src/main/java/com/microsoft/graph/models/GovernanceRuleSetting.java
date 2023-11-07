@@ -26,7 +26,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
      */
     private String setting;
     /**
-     * Instantiates a new governanceRuleSetting and sets the default values.
+     * Instantiates a new GovernanceRuleSetting and sets the default values.
      */
     public GovernanceRuleSetting() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRuleSetting
+     * @return a GovernanceRuleSetting
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRuleSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
         return new GovernanceRuleSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -71,7 +71,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleIdentifier property value. The id of the rule. For example, ExpirationRule and MfaRule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleIdentifier() {
@@ -79,7 +79,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
@@ -97,8 +97,8 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -13,7 +13,7 @@ public class CountryRegionCollectionResponse extends BaseCollectionPaginationCou
      */
     private java.util.List<CountryRegion> value;
     /**
-     * Instantiates a new countryRegionCollectionResponse and sets the default values.
+     * Instantiates a new CountryRegionCollectionResponse and sets the default values.
      */
     public CountryRegionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class CountryRegionCollectionResponse extends BaseCollectionPaginationCou
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a countryRegionCollectionResponse
+     * @return a CountryRegionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static CountryRegionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class CountryRegionCollectionResponse extends BaseCollectionPaginationCou
     }
     /**
      * Gets the value property value. The value property
-     * @return a countryRegion
+     * @return a java.util.List<CountryRegion>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CountryRegion> getValue() {

@@ -21,7 +21,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
      */
     private String uri;
     /**
-     * Instantiates a new printServiceEndpoint and sets the default values.
+     * Instantiates a new PrintServiceEndpoint and sets the default values.
      */
     public PrintServiceEndpoint() {
         super();
@@ -29,7 +29,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printServiceEndpoint
+     * @return a PrintServiceEndpoint
      */
     @jakarta.annotation.Nonnull
     public static PrintServiceEndpoint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. A human-readable display name for the endpoint.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -58,7 +58,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -66,7 +66,7 @@ public class PrintServiceEndpoint extends Entity implements Parsable {
     }
     /**
      * Gets the uri property value. The URI that can be used to access the service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUri() {

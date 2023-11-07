@@ -21,7 +21,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
      */
     private AttackSimulationOperationType type;
     /**
-     * Instantiates a new attackSimulationOperation and sets the default values.
+     * Instantiates a new AttackSimulationOperation and sets the default values.
      */
     public AttackSimulationOperation() {
         super();
@@ -29,7 +29,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attackSimulationOperation
+     * @return a AttackSimulationOperation
      */
     @jakarta.annotation.Nonnull
     public static AttackSimulationOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * Gets the percentageCompleted property value. Percentage of completion of the respective operation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageCompleted() {
@@ -58,7 +58,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * Gets the tenantId property value. Tenant identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -66,7 +66,7 @@ public class AttackSimulationOperation extends LongRunningOperation implements P
     }
     /**
      * Gets the type property value. The attack simulation operation type. Possible values are: createSimulation, updateSimulation, unknownFutureValue.
-     * @return a attackSimulationOperationType
+     * @return a AttackSimulationOperationType
      */
     @jakarta.annotation.Nullable
     public AttackSimulationOperationType getType() {

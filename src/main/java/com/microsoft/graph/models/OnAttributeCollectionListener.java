@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnAttributeCollectionListener extends AuthenticationEventListener implements Parsable {
     /**
-     * Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Required. Configuration for what to invoke if the event resolves to this listener.
      */
     private OnAttributeCollectionHandler handler;
     /**
-     * Instantiates a new onAttributeCollectionListener and sets the default values.
+     * Instantiates a new OnAttributeCollectionListener and sets the default values.
      */
     public OnAttributeCollectionListener() {
         super();
@@ -22,7 +22,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onAttributeCollectionListener
+     * @return a OnAttributeCollectionListener
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionListener createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,8 +40,8 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
         return deserializerMap;
     }
     /**
-     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
-     * @return a onAttributeCollectionHandler
+     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener.
+     * @return a OnAttributeCollectionHandler
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getHandler() {
@@ -57,7 +57,7 @@ public class OnAttributeCollectionListener extends AuthenticationEventListener i
         writer.writeObjectValue("handler", this.getHandler());
     }
     /**
-     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener.
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnAttributeCollectionHandler value) {

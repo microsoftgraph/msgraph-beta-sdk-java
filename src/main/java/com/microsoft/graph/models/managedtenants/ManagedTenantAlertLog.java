@@ -35,7 +35,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
      */
     private OffsetDateTime lastActionDateTime;
     /**
-     * Instantiates a new managedTenantAlertLog and sets the default values.
+     * Instantiates a new ManagedTenantAlertLog and sets the default values.
      */
     public ManagedTenantAlertLog() {
         super();
@@ -43,7 +43,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedTenantAlertLog
+     * @return a ManagedTenantAlertLog
      */
     @jakarta.annotation.Nonnull
     public static ManagedTenantAlertLog createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the alert property value. The alert property
-     * @return a managedTenantAlert
+     * @return a ManagedTenantAlert
      */
     @jakarta.annotation.Nullable
     public ManagedTenantAlert getAlert() {
@@ -60,7 +60,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content property
-     * @return a alertLogContent
+     * @return a AlertLogContent
      */
     @jakarta.annotation.Nullable
     public AlertLogContent getContent() {
@@ -68,7 +68,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -99,7 +99,7 @@ public class ManagedTenantAlertLog extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {

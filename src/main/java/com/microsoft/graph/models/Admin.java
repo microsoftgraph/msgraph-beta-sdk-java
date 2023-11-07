@@ -34,7 +34,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The people property
+     * Represents a setting to control people-related admin settings in the tenant.
      */
     private PeopleAdminSettings people;
     /**
@@ -58,7 +58,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      */
     private AdminWindows windows;
     /**
-     * Instantiates a new admin and sets the default values.
+     * Instantiates a new Admin and sets the default values.
      */
     public Admin() {
         this.setAdditionalData(new HashMap<>());
@@ -66,7 +66,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a admin
+     * @return a Admin
      */
     @jakarta.annotation.Nonnull
     public static Admin createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         return new Admin();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the appsAndServices property value. The appsAndServices property
-     * @return a adminAppsAndServices
+     * @return a AdminAppsAndServices
      */
     @jakarta.annotation.Nullable
     public AdminAppsAndServices getAppsAndServices() {
@@ -91,7 +91,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the dynamics property value. The dynamics property
-     * @return a adminDynamics
+     * @return a AdminDynamics
      */
     @jakarta.annotation.Nullable
     public AdminDynamics getDynamics() {
@@ -99,7 +99,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
-     * @return a edge
+     * @return a Edge
      */
     @jakarta.annotation.Nullable
     public Edge getEdge() {
@@ -127,7 +127,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the forms property value. The forms property
-     * @return a adminForms
+     * @return a AdminForms
      */
     @jakarta.annotation.Nullable
     public AdminForms getForms() {
@@ -135,15 +135,15 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the people property value. The people property
-     * @return a peopleAdminSettings
+     * Gets the people property value. Represents a setting to control people-related admin settings in the tenant.
+     * @return a PeopleAdminSettings
      */
     @jakarta.annotation.Nullable
     public PeopleAdminSettings getPeople() {
@@ -151,7 +151,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the reportSettings property value. A container for administrative resources to manage reports.
-     * @return a adminReportSettings
+     * @return a AdminReportSettings
      */
     @jakarta.annotation.Nullable
     public AdminReportSettings getReportSettings() {
@@ -159,7 +159,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the serviceAnnouncement property value. A container for service communications resources. Read-only.
-     * @return a serviceAnnouncement
+     * @return a ServiceAnnouncement
      */
     @jakarta.annotation.Nullable
     public ServiceAnnouncement getServiceAnnouncement() {
@@ -167,7 +167,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the sharepoint property value. The sharepoint property
-     * @return a sharepoint
+     * @return a Sharepoint
      */
     @jakarta.annotation.Nullable
     public Sharepoint getSharepoint() {
@@ -175,7 +175,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the todo property value. The todo property
-     * @return a adminTodo
+     * @return a AdminTodo
      */
     @jakarta.annotation.Nullable
     public AdminTodo getTodo() {
@@ -183,7 +183,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the windows property value. A container for all Windows administrator functionalities. Read-only.
-     * @return a adminWindows
+     * @return a AdminWindows
      */
     @jakarta.annotation.Nullable
     public AdminWindows getWindows() {
@@ -209,8 +209,8 @@ public class Admin implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -251,7 +251,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the people property value. The people property
+     * Sets the people property value. Represents a setting to control people-related admin settings in the tenant.
      * @param value Value to set for the people property.
      */
     public void setPeople(@jakarta.annotation.Nullable final PeopleAdminSettings value) {

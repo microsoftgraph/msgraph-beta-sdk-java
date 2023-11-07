@@ -45,7 +45,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     private Integer targetedDeviceCount;
     /**
-     * Instantiates a new configManagerPolicySummary and sets the default values.
+     * Instantiates a new ConfigManagerPolicySummary and sets the default values.
      */
     public ConfigManagerPolicySummary() {
         this.setAdditionalData(new HashMap<>());
@@ -53,7 +53,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configManagerPolicySummary
+     * @return a ConfigManagerPolicySummary
      */
     @jakarta.annotation.Nonnull
     public static ConfigManagerPolicySummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
         return new ConfigManagerPolicySummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the compliantDeviceCount property value. The number of devices evaluated to be compliant by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCompliantDeviceCount() {
@@ -78,7 +78,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the enforcedDeviceCount property value. The number of devices that have have been remediated by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEnforcedDeviceCount() {
@@ -86,7 +86,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the failedDeviceCount property value. The number of devices that failed to be evaluated by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedDeviceCount() {
@@ -110,7 +110,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNonCompliantDeviceCount() {
@@ -118,7 +118,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -126,7 +126,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the pendingDeviceCount property value. The number of devices that have acknowledged the policy but are pending evaluation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPendingDeviceCount() {
@@ -134,7 +134,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the targetedDeviceCount property value. The number of devices targeted by the policy.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTargetedDeviceCount() {
@@ -156,8 +156,8 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

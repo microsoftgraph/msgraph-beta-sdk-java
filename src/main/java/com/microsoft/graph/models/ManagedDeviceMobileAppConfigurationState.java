@@ -44,7 +44,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
      */
     private Integer version;
     /**
-     * Instantiates a new managedDeviceMobileAppConfigurationState and sets the default values.
+     * Instantiates a new ManagedDeviceMobileAppConfigurationState and sets the default values.
      */
     public ManagedDeviceMobileAppConfigurationState() {
         super();
@@ -52,7 +52,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedDeviceMobileAppConfigurationState
+     * @return a ManagedDeviceMobileAppConfigurationState
      */
     @jakarta.annotation.Nonnull
     public static ManagedDeviceMobileAppConfigurationState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the displayName property value. The name of the policy for this policyBase
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -86,7 +86,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a policyPlatformType
+     * @return a PolicyPlatformType
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
@@ -94,7 +94,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the settingCount property value. Count of how many setting a policy holds
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
@@ -102,7 +102,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the settingStates property value. The settingStates property
-     * @return a managedDeviceMobileAppConfigurationSettingState
+     * @return a java.util.List<ManagedDeviceMobileAppConfigurationSettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceMobileAppConfigurationSettingState> getSettingStates() {
@@ -110,7 +110,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -118,7 +118,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the userId property value. User unique identifier, must be Guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -126,7 +126,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -134,7 +134,7 @@ public class ManagedDeviceMobileAppConfigurationState extends Entity implements 
     }
     /**
      * Gets the version property value. The version of the policy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

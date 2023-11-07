@@ -28,7 +28,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new deviceManagementScriptUserState and sets the default values.
+     * Instantiates a new DeviceManagementScriptUserState and sets the default values.
      */
     public DeviceManagementScriptUserState() {
         super();
@@ -36,7 +36,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptUserState
+     * @return a DeviceManagementScriptUserState
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptUserState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the deviceRunStates property value. List of run states for this script across all devices of specific user.
-     * @return a deviceManagementScriptDeviceState
+     * @return a java.util.List<DeviceManagementScriptDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementScriptDeviceState> getDeviceRunStates() {
@@ -53,7 +53,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the errorDeviceCount property value. Error device count for specific user.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -74,7 +74,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the successDeviceCount property value. Success device count for specific user.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessDeviceCount() {
@@ -82,7 +82,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
     }
     /**
      * Gets the userPrincipalName property value. User principle name of specific user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

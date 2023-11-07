@@ -59,7 +59,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      */
     private Boolean persistEsimDataPlan;
     /**
-     * Instantiates a new executeActionPostRequestBody and sets the default values.
+     * Instantiates a new ExecuteActionPostRequestBody and sets the default values.
      */
     public ExecuteActionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -67,7 +67,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a executeActionPostRequestBody
+     * @return a ExecuteActionPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ExecuteActionPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -76,14 +76,14 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the actionName property value. The actionName property
-     * @return a managedDeviceRemoteAction
+     * @return a ManagedDeviceRemoteAction
      */
     @jakarta.annotation.Nullable
     public ManagedDeviceRemoteAction getActionName() {
         return this.actionName;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -92,7 +92,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the carrierUrl property value. The carrierUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCarrierUrl() {
@@ -100,7 +100,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deprovisionReason property value. The deprovisionReason property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeprovisionReason() {
@@ -108,7 +108,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceIds property value. The deviceIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeviceIds() {
@@ -116,7 +116,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the deviceName property value. The deviceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -144,7 +144,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the keepEnrollmentData property value. The keepEnrollmentData property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeepEnrollmentData() {
@@ -152,7 +152,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the keepUserData property value. The keepUserData property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getKeepUserData() {
@@ -160,7 +160,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the notificationBody property value. The notificationBody property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationBody() {
@@ -168,7 +168,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the notificationTitle property value. The notificationTitle property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotificationTitle() {
@@ -176,7 +176,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the organizationalUnitPath property value. The organizationalUnitPath property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrganizationalUnitPath() {
@@ -184,7 +184,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the persistEsimDataPlan property value. The persistEsimDataPlan property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPersistEsimDataPlan() {
@@ -217,8 +217,8 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
         this.actionName = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

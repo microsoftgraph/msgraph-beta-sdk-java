@@ -13,7 +13,7 @@ public class JournalLineCollectionResponse extends BaseCollectionPaginationCount
      */
     private java.util.List<JournalLine> value;
     /**
-     * Instantiates a new journalLineCollectionResponse and sets the default values.
+     * Instantiates a new JournalLineCollectionResponse and sets the default values.
      */
     public JournalLineCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class JournalLineCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a journalLineCollectionResponse
+     * @return a JournalLineCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static JournalLineCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class JournalLineCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a journalLine
+     * @return a java.util.List<JournalLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getValue() {

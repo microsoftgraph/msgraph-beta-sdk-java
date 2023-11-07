@@ -26,7 +26,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      */
     private Boolean isMandatory;
     /**
-     * Instantiates a new sensitivityPolicySettings and sets the default values.
+     * Instantiates a new SensitivityPolicySettings and sets the default values.
      */
     public SensitivityPolicySettings() {
         super();
@@ -34,7 +34,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitivityPolicySettings
+     * @return a SensitivityPolicySettings
      */
     @jakarta.annotation.Nonnull
     public static SensitivityPolicySettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the applicableTo property value. The applicableTo property
-     * @return a sensitivityLabelTarget
+     * @return a EnumSet<SensitivityLabelTarget>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitivityLabelTarget> getApplicableTo() {
@@ -51,7 +51,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the downgradeSensitivityRequiresJustification property value. The downgradeSensitivityRequiresJustification property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDowngradeSensitivityRequiresJustification() {
@@ -72,7 +72,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the helpWebUrl property value. The helpWebUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpWebUrl() {
@@ -80,7 +80,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     }
     /**
      * Gets the isMandatory property value. The isMandatory property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {

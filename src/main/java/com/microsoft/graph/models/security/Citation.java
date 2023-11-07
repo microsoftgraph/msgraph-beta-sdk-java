@@ -17,7 +17,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
      */
     private String citationUrl;
     /**
-     * Instantiates a new citation and sets the default values.
+     * Instantiates a new Citation and sets the default values.
      */
     public Citation() {
         super();
@@ -25,7 +25,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a citation
+     * @return a Citation
      */
     @jakarta.annotation.Nonnull
     public static Citation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     }
     /**
      * Gets the citationJurisdiction property value. Represents the jurisdiction or agency that published the citation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCitationJurisdiction() {
@@ -42,7 +42,7 @@ public class Citation extends FilePlanDescriptorBase implements Parsable {
     }
     /**
      * Gets the citationUrl property value. Represents the URL to the published citation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCitationUrl() {

@@ -61,7 +61,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get customers from financials
-     * @return a CompletableFuture of customerCollectionResponse
+     * @return a CompletableFuture of CustomerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerCollectionResponse> get() {
@@ -70,7 +70,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     /**
      * Get customers from financials
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customerCollectionResponse
+     * @return a CompletableFuture of CustomerCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<CustomerCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -83,7 +83,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to customers for financials
      * @param body The request body
-     * @return a CompletableFuture of customer
+     * @return a CompletableFuture of Customer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Customer> post(@jakarta.annotation.Nonnull final Customer body) {
@@ -93,7 +93,7 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to customers for financials
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of customer
+     * @return a CompletableFuture of Customer
      */
     @jakarta.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<Customer> post(@jakarta.annotation.Nonnull final Customer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -120,10 +120,6 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -131,6 +127,10 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
         return requestInfo;
     }
     /**
@@ -152,23 +152,23 @@ public class CustomersRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Customer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json;q=1");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a customersRequestBuilder
+     * @return a CustomersRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CustomersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

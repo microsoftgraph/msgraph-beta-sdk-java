@@ -34,7 +34,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
      */
     private String text;
     /**
-     * Instantiates a new textClassificationRequest and sets the default values.
+     * Instantiates a new TextClassificationRequest and sets the default values.
      */
     public TextClassificationRequest() {
         super();
@@ -42,7 +42,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a textClassificationRequest
+     * @return a TextClassificationRequest
      */
     @jakarta.annotation.Nonnull
     public static TextClassificationRequest createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the contentMetaData property value. The contentMetaData property
-     * @return a classificationRequestContentMetaData
+     * @return a ClassificationRequestContentMetaData
      */
     @jakarta.annotation.Nullable
     public ClassificationRequestContentMetaData getContentMetaData() {
@@ -74,7 +74,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the fileExtension property value. The fileExtension property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFileExtension() {
@@ -82,7 +82,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the matchTolerancesToInclude property value. The matchTolerancesToInclude property
-     * @return a mlClassificationMatchTolerance
+     * @return a EnumSet<MlClassificationMatchTolerance>
      */
     @jakarta.annotation.Nullable
     public EnumSet<MlClassificationMatchTolerance> getMatchTolerancesToInclude() {
@@ -90,7 +90,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the scopesToRun property value. The scopesToRun property
-     * @return a sensitiveTypeScope
+     * @return a EnumSet<SensitiveTypeScope>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SensitiveTypeScope> getScopesToRun() {
@@ -98,7 +98,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSensitiveTypeIds() {
@@ -106,7 +106,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     }
     /**
      * Gets the text property value. The text property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {

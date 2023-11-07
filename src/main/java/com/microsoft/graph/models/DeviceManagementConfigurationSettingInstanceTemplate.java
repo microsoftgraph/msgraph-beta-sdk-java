@@ -33,7 +33,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
      */
     private String settingInstanceTemplateId;
     /**
-     * Instantiates a new deviceManagementConfigurationSettingInstanceTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingInstanceTemplate and sets the default values.
      */
     public DeviceManagementConfigurationSettingInstanceTemplate() {
         this.setAdditionalData(new HashMap<>());
@@ -41,7 +41,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingInstanceTemplate
+     * @return a DeviceManagementConfigurationSettingInstanceTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingInstanceTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         return new DeviceManagementConfigurationSettingInstanceTemplate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -83,7 +83,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the isRequired property value. Indicates if a policy must specify this setting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRequired() {
@@ -91,7 +91,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -99,7 +99,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the settingDefinitionId property value. Setting Definition Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingDefinitionId() {
@@ -107,7 +107,7 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
     }
     /**
      * Gets the settingInstanceTemplateId property value. Setting Instance Template Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingInstanceTemplateId() {
@@ -126,8 +126,8 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
