@@ -140,6 +140,15 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     public java.util.List<String> managedUniversalLinks;
 
     /**
+     * The Messaging Redirect App Url Scheme.
+     * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app url redirect schemes which are allowed to be used.
+     */
+    @SerializedName(value = "messagingRedirectAppUrlScheme", alternate = {"MessagingRedirectAppUrlScheme"})
+    @Expose
+	@Nullable
+    public String messagingRedirectAppUrlScheme;
+
+    /**
      * The Minimum Required Sdk Version.
      * Versions less than the specified version will block the managed app from accessing company data.
      */

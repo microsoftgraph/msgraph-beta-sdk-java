@@ -31,7 +31,7 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Azure ADJoin.
-     * Specifies the authorization policy for controlling registration of new devices using Azure AD Join within your organization. Required. For more information, see What is a device identity?.
+     * Specifies the authorization policy for controlling registration of new devices using Microsoft Entra join within your organization. Required. For more information, see What is a device identity?.
      */
     @SerializedName(value = "azureADJoin", alternate = {"AzureADJoin"})
     @Expose
@@ -40,7 +40,7 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Azure ADRegistration.
-     * Specifies the authorization policy for controlling registration of new devices using Azure AD registered within your organization. Required. For more information, see What is a device identity?.
+     * Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registered within your organization. Required. For more information, see What is a device identity?.
      */
     @SerializedName(value = "azureADRegistration", alternate = {"AzureADRegistration"})
     @Expose
@@ -49,7 +49,7 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Description.
-     * The description of the device registration policy. It is always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+     * The description of the device registration policy. It's always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Display Name.
-     * The name of the device registration policy. It is always set to Device Registration Policy. Read-only.
+     * The name of the device registration policy. It's always set to Device Registration Policy. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -76,7 +76,7 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The Multi Factor Auth Configuration.
-     * Specifies the authentication policy for a user to complete registration using Azure AD Join or Azure AD registered within your organization. The possible values are: 0 (meaning notRequired), 1 (meaning required), and 2 (meaning unknownFutureValue). The default value is 0.
+     * Specifies the authentication policy for a user to complete registration using Microsoft Entra join or Microsoft Entra registered within your organization. The possible values are: 0 (meaning notRequired), 1 (meaning required), and 2 (meaning unknownFutureValue). The default value is 0.
      */
     @SerializedName(value = "multiFactorAuthConfiguration", alternate = {"MultiFactorAuthConfiguration"})
     @Expose
@@ -85,7 +85,7 @@ public class DeviceRegistrationPolicy extends Entity implements IJsonBackedObjec
 
     /**
      * The User Device Quota.
-     * Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property is not specified during the policy update operation, it is automatically reset to 0 to indicate that users are not allowed to join any devices.
+     * Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
      */
     @SerializedName(value = "userDeviceQuota", alternate = {"UserDeviceQuota"})
     @Expose

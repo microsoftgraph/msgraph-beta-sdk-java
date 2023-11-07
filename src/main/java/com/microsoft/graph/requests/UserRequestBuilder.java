@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.User;
+import com.microsoft.graph.models.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AttendeeBase;
 import com.microsoft.graph.models.LocationConstraint;
@@ -35,6 +36,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.UserDeletePasswordSingleSignOnCredentialsParameterSet;
 import com.microsoft.graph.models.UserAssignLicenseParameterSet;
 import com.microsoft.graph.models.UserChangePasswordParameterSet;
 import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
@@ -1506,6 +1508,16 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     }
 
     /**
+     * Gets the request builder for UserVirtualEventsRoot
+     *
+     * @return the UserVirtualEventsRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserVirtualEventsRootRequestBuilder virtualEvents() {
+        return new com.microsoft.graph.requests.UserVirtualEventsRootRequestBuilder(getRequestUrlWithAdditionalSegment("virtualEvents"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for Authentication
      *
      * @return the AuthenticationRequestBuilder instance
@@ -1603,6 +1615,25 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     @Nonnull
     public com.microsoft.graph.requests.EmployeeExperienceUserRequestBuilder employeeExperience() {
         return new com.microsoft.graph.requests.EmployeeExperienceUserRequestBuilder(getRequestUrlWithAdditionalSegment("employeeExperience"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public UserDeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials(@Nonnull final UserDeletePasswordSingleSignOnCredentialsParameterSet parameters) {
+        return new UserDeletePasswordSingleSignOnCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.deletePasswordSingleSignOnCredentials"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public UserGetPasswordSingleSignOnCredentialsCollectionRequestBuilder getPasswordSingleSignOnCredentials() {
+        return new UserGetPasswordSingleSignOnCredentialsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getPasswordSingleSignOnCredentials"), getClient(), null);
     }
 
     /**

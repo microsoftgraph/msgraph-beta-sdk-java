@@ -156,7 +156,7 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
 
     /**
      * The Settings.
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * Represents the settings that control the behavior of Microsoft Entra entitlement management.
      */
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose

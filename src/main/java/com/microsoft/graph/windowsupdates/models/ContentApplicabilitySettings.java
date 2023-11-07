@@ -50,7 +50,7 @@ public class ContentApplicabilitySettings implements IJsonBackedObject {
 
     /**
      * The Safeguard.
-     * Settings for governing safeguard holds on offering content.
+     * Settings for governing safeguard-holds on offering content.
      */
     @SerializedName(value = "safeguard", alternate = {"Safeguard"})
     @Expose

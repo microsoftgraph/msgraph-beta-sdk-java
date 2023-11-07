@@ -130,7 +130,7 @@ public class CompanySubscription extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of this subscription. Possible values are: Enabled, Expired, Suspended, Warning, LockedOut.
+     * The status of this subscription. Possible values are: Enabled, Deleted, Suspended, Warning, LockedOut.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

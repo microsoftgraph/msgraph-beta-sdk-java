@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ConfigurationManagerClientInformation;
 import com.microsoft.graph.models.DeviceActionResult;
 import com.microsoft.graph.models.DeviceEnrollmentType;
 import com.microsoft.graph.models.DeviceHealthAttestationState;
+import com.microsoft.graph.models.DeviceIdentityAttestationDetail;
 import com.microsoft.graph.models.DeviceRegistrationState;
 import com.microsoft.graph.models.DeviceType;
 import com.microsoft.graph.models.DeviceManagementExchangeAccessState;
@@ -250,6 +251,15 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public DeviceHealthAttestationState deviceHealthAttestationState;
+
+    /**
+     * The Device Identity Attestation Detail.
+     * Indicates the attestation status of the managed device. And in which way. Default: Unknown.
+     */
+    @SerializedName(value = "deviceIdentityAttestationDetail", alternate = {"DeviceIdentityAttestationDetail"})
+    @Expose
+	@Nullable
+    public DeviceIdentityAttestationDetail deviceIdentityAttestationDetail;
 
     /**
      * The Device Name.

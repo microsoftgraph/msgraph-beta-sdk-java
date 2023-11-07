@@ -52,7 +52,6 @@ import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationMan
 import com.microsoft.graph.models.DeviceManagementReportsGetMobileApplicationManagementAppRegistrationSummaryReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetConfigManagerDevicePolicyStatusReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet;
-import com.microsoft.graph.models.DeviceManagementReportsGetAutopilotDeploymentDeviceInformationParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCachedReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceReportParameterSet;
 import com.microsoft.graph.models.DeviceManagementReportsGetCompliancePolicyNonComplianceSummaryReportParameterSet;
@@ -546,16 +545,6 @@ public class DeviceManagementReportsRequestBuilder extends BaseRequestBuilder<De
     @Nonnull
     public DeviceManagementReportsGetRemoteAssistanceSessionsReportRequestBuilder getRemoteAssistanceSessionsReport(@Nonnull final DeviceManagementReportsGetRemoteAssistanceSessionsReportParameterSet parameters) {
         return new DeviceManagementReportsGetRemoteAssistanceSessionsReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRemoteAssistanceSessionsReport"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public DeviceManagementReportsGetAutopilotDeploymentDeviceInformationRequestBuilder getAutopilotDeploymentDeviceInformation(@Nonnull final DeviceManagementReportsGetAutopilotDeploymentDeviceInformationParameterSet parameters) {
-        return new DeviceManagementReportsGetAutopilotDeploymentDeviceInformationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getAutopilotDeploymentDeviceInformation"), getClient(), null, parameters);
     }
 
     /**

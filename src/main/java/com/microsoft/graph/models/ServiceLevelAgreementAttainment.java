@@ -48,7 +48,7 @@ public class ServiceLevelAgreementAttainment implements IJsonBackedObject {
 
     /**
      * The Score.
-     * The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Azure Active Directory SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
+     * The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Microsoft Entra SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
      */
     @SerializedName(value = "score", alternate = {"Score"})
     @Expose

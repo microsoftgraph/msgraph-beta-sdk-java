@@ -47,7 +47,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Alternate Url.
-     * If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.
+     * If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
      */
     @SerializedName(value = "alternateUrl", alternate = {"AlternateUrl"})
     @Expose
@@ -56,7 +56,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Application Server Timeout.
-     * The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+     * The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
      */
     @SerializedName(value = "applicationServerTimeout", alternate = {"ApplicationServerTimeout"})
     @Expose
@@ -74,7 +74,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The External Authentication Type.
-     * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Passthru does not require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
      */
     @SerializedName(value = "externalAuthenticationType", alternate = {"ExternalAuthenticationType"})
     @Expose
@@ -110,12 +110,21 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Is Backend Certificate Validation Enabled.
-     * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
+     * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property is set to true by default. For all existing apps, the property is set to false.
      */
     @SerializedName(value = "isBackendCertificateValidationEnabled", alternate = {"IsBackendCertificateValidationEnabled"})
     @Expose
 	@Nullable
     public Boolean isBackendCertificateValidationEnabled;
+
+    /**
+     * The Is Dns Resolution Enabled.
+     * 
+     */
+    @SerializedName(value = "isDnsResolutionEnabled", alternate = {"IsDnsResolutionEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isDnsResolutionEnabled;
 
     /**
      * The Is Http Only Cookie Enabled.
@@ -128,7 +137,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Is On Prem Publishing Enabled.
-     * Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
+     * Indicates if the application is currently being published via Application Proxy or not. This is preset by the system. Read-only.
      */
     @SerializedName(value = "isOnPremPublishingEnabled", alternate = {"IsOnPremPublishingEnabled"})
     @Expose
@@ -137,7 +146,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Is Persistent Cookie Enabled.
-     * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.
+     * Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
      */
     @SerializedName(value = "isPersistentCookieEnabled", alternate = {"IsPersistentCookieEnabled"})
     @Expose
@@ -164,7 +173,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Is Translate Host Header Enabled.
-     * Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
+     * Indicates if the application should translate urls in the response headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
      */
     @SerializedName(value = "isTranslateHostHeaderEnabled", alternate = {"IsTranslateHostHeaderEnabled"})
     @Expose
@@ -193,7 +202,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Segments Configuration.
-     * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
+     * Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
      */
     @SerializedName(value = "segmentsConfiguration", alternate = {"SegmentsConfiguration"})
     @Expose

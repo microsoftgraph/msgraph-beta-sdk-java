@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CurrentLabel;
+import com.microsoft.graph.models.DiscoveredSensitiveType;
 import com.microsoft.graph.models.ContentProperties;
 
 
@@ -34,6 +36,15 @@ public class AttachmentContentProperties extends ContentProperties implements IJ
     @Expose
 	@Nullable
     public CurrentLabel currentLabel;
+
+    /**
+     * The Discovered Sensitive Types.
+     * 
+     */
+    @SerializedName(value = "discoveredSensitiveTypes", alternate = {"DiscoveredSensitiveTypes"})
+    @Expose
+	@Nullable
+    public java.util.List<DiscoveredSensitiveType> discoveredSensitiveTypes;
 
 
     /**

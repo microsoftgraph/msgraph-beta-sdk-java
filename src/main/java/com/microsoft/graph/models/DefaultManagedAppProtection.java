@@ -341,6 +341,33 @@ public class DefaultManagedAppProtection extends ManagedAppProtection implements
     public Boolean fingerprintAndBiometricEnabled;
 
     /**
+     * The Messaging Redirect App Display Name.
+     * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app name which are allowed to be used.
+     */
+    @SerializedName(value = "messagingRedirectAppDisplayName", alternate = {"MessagingRedirectAppDisplayName"})
+    @Expose
+	@Nullable
+    public String messagingRedirectAppDisplayName;
+
+    /**
+     * The Messaging Redirect App Package Id.
+     * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app package ids which are allowed to be used.
+     */
+    @SerializedName(value = "messagingRedirectAppPackageId", alternate = {"MessagingRedirectAppPackageId"})
+    @Expose
+	@Nullable
+    public String messagingRedirectAppPackageId;
+
+    /**
+     * The Messaging Redirect App Url Scheme.
+     * When a specific app redirection is enforced by protectedMessagingRedirectAppType in an App Protection Policy, this value defines the app url redirect schemes which are allowed to be used.
+     */
+    @SerializedName(value = "messagingRedirectAppUrlScheme", alternate = {"MessagingRedirectAppUrlScheme"})
+    @Expose
+	@Nullable
+    public String messagingRedirectAppUrlScheme;
+
+    /**
      * The Minimum Required Company Portal Version.
      * Minimum version of the Company portal that must be installed on the device or app access will be blocked
      */

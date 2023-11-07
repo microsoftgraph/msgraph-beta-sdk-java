@@ -114,7 +114,7 @@ public class BookingService extends BookingNamedEntity implements IJsonBackedObj
 
     /**
      * The Is Hidden From Customers.
-     * True means this service is not available to customers for booking.
+     * True means this service isn't available to customers for booking.
      */
     @SerializedName(value = "isHiddenFromCustomers", alternate = {"IsHiddenFromCustomers"})
     @Expose

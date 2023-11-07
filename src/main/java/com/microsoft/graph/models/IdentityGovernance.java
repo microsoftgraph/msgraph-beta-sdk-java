@@ -13,6 +13,8 @@ import com.microsoft.graph.models.AccessReviewSet;
 import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.TermsOfUseContainer;
 import com.microsoft.graph.models.EntitlementManagement;
+import com.microsoft.graph.models.PermissionsAnalyticsAggregation;
+import com.microsoft.graph.models.PermissionsManagement;
 import com.microsoft.graph.models.PrivilegedAccessRoot;
 import com.microsoft.graph.models.RoleManagementAlert;
 
@@ -88,6 +90,24 @@ public class IdentityGovernance implements IJsonBackedObject {
     @Expose
 	@Nullable
     public EntitlementManagement entitlementManagement;
+
+    /**
+     * The Permissions Analytics.
+     * 
+     */
+    @SerializedName(value = "permissionsAnalytics", alternate = {"PermissionsAnalytics"})
+    @Expose
+	@Nullable
+    public PermissionsAnalyticsAggregation permissionsAnalytics;
+
+    /**
+     * The Permissions Management.
+     * 
+     */
+    @SerializedName(value = "permissionsManagement", alternate = {"PermissionsManagement"})
+    @Expose
+	@Nullable
+    public PermissionsManagement permissionsManagement;
 
     /**
      * The Privileged Access.

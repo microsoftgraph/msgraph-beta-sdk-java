@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.PrivilegeManagementElevationType;
+import com.microsoft.graph.models.PrivilegeManagementProcessType;
 import com.microsoft.graph.models.PrivilegeManagementEndUserType;
 import com.microsoft.graph.models.Entity;
 
@@ -136,6 +137,42 @@ public class PrivilegeManagementElevation extends Entity implements IJsonBackedO
     public String justification;
 
     /**
+     * The Parent Process Name.
+     * The name of parent process associated with the elevated process. This is always populated for both parent and child process types
+     */
+    @SerializedName(value = "parentProcessName", alternate = {"ParentProcessName"})
+    @Expose
+	@Nullable
+    public String parentProcessName;
+
+    /**
+     * The Policy Id.
+     * Unique Identifier of the policy configured to run the application with elevated access
+     */
+    @SerializedName(value = "policyId", alternate = {"PolicyId"})
+    @Expose
+	@Nullable
+    public String policyId;
+
+    /**
+     * The Policy Name.
+     * The name of the policy configured to run the application in elevated access
+     */
+    @SerializedName(value = "policyName", alternate = {"PolicyName"})
+    @Expose
+	@Nullable
+    public String policyName;
+
+    /**
+     * The Process Type.
+     * Indicates the type of process that is elevated. Possible values are `undefined`, `parent` and `child`
+     */
+    @SerializedName(value = "processType", alternate = {"ProcessType"})
+    @Expose
+	@Nullable
+    public PrivilegeManagementProcessType processType;
+
+    /**
      * The Product Name.
      * The product name of the application. This value is set by the creator of the application. Example: `Visual Studio`
      */
@@ -152,6 +189,15 @@ public class PrivilegeManagementElevation extends Entity implements IJsonBackedO
     @Expose
 	@Nullable
     public Integer result;
+
+    /**
+     * The Rule Id.
+     * Unique identifier of the rule configured to run the application with elevated access
+     */
+    @SerializedName(value = "ruleId", alternate = {"RuleId"})
+    @Expose
+	@Nullable
+    public String ruleId;
 
     /**
      * The Upn.

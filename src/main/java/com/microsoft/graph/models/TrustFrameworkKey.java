@@ -40,7 +40,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The D.
-     * RSA Key - private exponent. Field cannot be read back.
+     * RSA Key - private exponent. Field can't be read back.
      */
     @SerializedName(value = "d", alternate = {"D"})
     @Expose
@@ -49,7 +49,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Dp.
-     * RSA Key - first exponent. Field cannot be read back.
+     * RSA Key - first exponent. Field can't be read back.
      */
     @SerializedName(value = "dp", alternate = {"Dp"})
     @Expose
@@ -58,7 +58,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Dq.
-     * RSA Key - second exponent. Field cannot be read back.
+     * RSA Key - second exponent. Field can't be read back.
      */
     @SerializedName(value = "dq", alternate = {"Dq"})
     @Expose
@@ -85,7 +85,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The K.
-     * Symmetric Key for oct key type. Field cannot be read back.
+     * Symmetric Key for oct key type. Field can't be read back.
      */
     @SerializedName(value = "k", alternate = {"K"})
     @Expose
@@ -130,7 +130,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The P.
-     * RSA Key - first prime. Field cannot be read back.
+     * RSA Key - first prime. Field can't be read back.
      */
     @SerializedName(value = "p", alternate = {"P"})
     @Expose
@@ -139,7 +139,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Q.
-     * RSA Key - second prime. Field cannot be read back.
+     * RSA Key - second prime. Field can't be read back.
      */
     @SerializedName(value = "q", alternate = {"Q"})
     @Expose
@@ -148,7 +148,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The Qi.
-     * RSA Key - Coefficient. Field cannot be read back.
+     * RSA Key - Coefficient. Field can't be read back.
      */
     @SerializedName(value = "qi", alternate = {"Qi"})
     @Expose
@@ -175,7 +175,7 @@ public class TrustFrameworkKey implements IJsonBackedObject {
 
     /**
      * The X5t.
-     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (a.k.a. digest) of the DER encoding of an X.509 certificate RFC 5280.
+     * The x5t (X.509 certificate SHA-1 thumbprint) parameter is a base64url-encoded SHA-1 thumbprint (also known as digest) of the DER encoding of an X.509 certificate RFC 5280.
      */
     @SerializedName(value = "x5t", alternate = {"X5t"})
     @Expose

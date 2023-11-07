@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.User;
+import com.microsoft.graph.models.PasswordSingleSignOnCredentialSet;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.AttendeeBase;
 import com.microsoft.graph.models.LocationConstraint;
@@ -46,6 +47,7 @@ import com.microsoft.graph.requests.DirectoryObjectGetUserOwnedObjectsRequestBui
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
+import com.microsoft.graph.models.UserDeletePasswordSingleSignOnCredentialsParameterSet;
 import com.microsoft.graph.models.UserAssignLicenseParameterSet;
 import com.microsoft.graph.models.UserChangePasswordParameterSet;
 import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;

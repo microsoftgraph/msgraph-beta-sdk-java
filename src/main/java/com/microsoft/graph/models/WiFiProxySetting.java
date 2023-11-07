@@ -24,6 +24,10 @@ public enum WiFiProxySetting
     */
     AUTOMATIC,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For WiFiProxySetting values that were not expected from the service
     */
     UNEXPECTED_VALUE

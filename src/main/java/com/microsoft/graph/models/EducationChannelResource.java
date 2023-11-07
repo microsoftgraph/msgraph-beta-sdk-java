@@ -27,7 +27,7 @@ public class EducationChannelResource extends EducationResource implements IJson
 
     /**
      * The Url.
-     * 
+     * URL of the channel resource.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

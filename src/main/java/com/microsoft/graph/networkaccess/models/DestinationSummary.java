@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.networkaccess.models.TrafficType;
 
 
 import com.google.gson.JsonObject;
@@ -54,6 +55,15 @@ public class DestinationSummary implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String destination;
+
+    /**
+     * The Traffic Type.
+     * 
+     */
+    @SerializedName(value = "trafficType", alternate = {"TrafficType"})
+    @Expose
+	@Nullable
+    public TrafficType trafficType;
 
 
     /**

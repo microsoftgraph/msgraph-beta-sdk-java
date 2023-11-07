@@ -37,7 +37,7 @@ public class AuthenticationListener extends Entity implements IJsonBackedObject 
 
     /**
      * The Source Filter.
-     * Filter based on the source of the authentication that is used to determine whether the listener is evaluated. This is currently limited to evaluations based on application the user is authenticating to.
+     * Filter based on the source of the authentication that is used to determine whether the listener is evaluated, and is currently limited to evaluations based on application the user is authenticating to.
      */
     @SerializedName(value = "sourceFilter", alternate = {"SourceFilter"})
     @Expose

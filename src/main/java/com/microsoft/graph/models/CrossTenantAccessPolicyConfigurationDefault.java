@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.InboundOutboundPolicyConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
+import com.microsoft.graph.models.DefaultInvitationRedemptionIdentityProviderConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
 import com.microsoft.graph.models.Entity;
 
@@ -31,7 +32,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The Automatic User Consent Settings.
-     * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
+     * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and can't be updated in the default configuration. Read-only.
      */
     @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
     @Expose
@@ -40,7 +41,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The B2b Collaboration Inbound.
-     * Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
+     * Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationInbound", alternate = {"B2bCollaborationInbound"})
     @Expose
@@ -49,7 +50,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The B2b Collaboration Outbound.
-     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
+     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration.
      */
     @SerializedName(value = "b2bCollaborationOutbound", alternate = {"B2bCollaborationOutbound"})
     @Expose
@@ -58,7 +59,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The B2b Direct Connect Inbound.
-     * Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
+     * Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectInbound", alternate = {"B2bDirectConnectInbound"})
     @Expose
@@ -67,7 +68,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The B2b Direct Connect Outbound.
-     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
+     * Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect.
      */
     @SerializedName(value = "b2bDirectConnectOutbound", alternate = {"B2bDirectConnectOutbound"})
     @Expose
@@ -76,7 +77,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
 
     /**
      * The Inbound Trust.
-     * Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
+     * Determines the default configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.
      */
     @SerializedName(value = "inboundTrust", alternate = {"InboundTrust"})
     @Expose
@@ -84,8 +85,17 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
     public CrossTenantAccessPolicyInboundTrust inboundTrust;
 
     /**
+     * The Invitation Redemption Identity Provider Configuration.
+     * Defines the priority order based on which an identity provider is selected during invitation redemption for a guest user.
+     */
+    @SerializedName(value = "invitationRedemptionIdentityProviderConfiguration", alternate = {"InvitationRedemptionIdentityProviderConfiguration"})
+    @Expose
+	@Nullable
+    public DefaultInvitationRedemptionIdentityProviderConfiguration invitationRedemptionIdentityProviderConfiguration;
+
+    /**
      * The Is Service Default.
-     * If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
+     * If true, the default configuration is set to the system default configuration. If false, the default settings are customized.
      */
     @SerializedName(value = "isServiceDefault", alternate = {"IsServiceDefault"})
     @Expose

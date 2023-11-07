@@ -28,7 +28,7 @@ public class EducationModuleResource extends Entity implements IJsonBackedObject
 
     /**
      * The Resource.
-     * 
+     * Resource object that has been associated with this module.
      */
     @SerializedName(value = "resource", alternate = {"Resource"})
     @Expose

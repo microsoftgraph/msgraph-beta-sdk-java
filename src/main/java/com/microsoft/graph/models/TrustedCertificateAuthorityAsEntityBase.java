@@ -29,7 +29,7 @@ public class TrustedCertificateAuthorityAsEntityBase extends DirectoryObject imp
 
     /**
      * The Trusted Certificate Authorities.
-     * 
+     * Collection of trusted certificate authorities.
      */
     @SerializedName(value = "trustedCertificateAuthorities", alternate = {"TrustedCertificateAuthorities"})
     @Expose

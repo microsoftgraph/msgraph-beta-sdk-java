@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Group;
+import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.Event;
 import com.microsoft.graph.models.TimeSlot;
 import com.microsoft.graph.models.Recipient;
@@ -38,7 +38,7 @@ import com.microsoft.graph.models.EventTentativelyAcceptParameterSet;
 public class EventCollectionRequestBuilder extends BaseCollectionRequestBuilder<Event, EventRequestBuilder, EventCollectionResponse, EventCollectionPage, EventCollectionRequest> {
 
     /**
-     * The request builder for this collection of Group
+     * The request builder for this collection of User
      *
      * @param requestUrl     the request URL
      * @param client         the service client

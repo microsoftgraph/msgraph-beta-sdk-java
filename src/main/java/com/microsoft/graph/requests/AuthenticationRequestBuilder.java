@@ -217,6 +217,26 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder<Authenticat
         return new com.microsoft.graph.requests.PhoneAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("phoneMethods") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the PlatformCredentialAuthenticationMethod collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodCollectionRequestBuilder platformCredentialMethods() {
+        return new com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("platformCredentialMethods"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PlatformCredentialAuthenticationMethod item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodRequestBuilder platformCredentialMethods(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PlatformCredentialAuthenticationMethodRequestBuilder(getRequestUrlWithAdditionalSegment("platformCredentialMethods") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the SoftwareOathAuthenticationMethod collection
      *
      * @return the collection request builder

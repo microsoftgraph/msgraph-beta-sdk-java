@@ -2346,6 +2346,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.WindowsAutopilotSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("windowsAutopilotSettings"), getClient(), null);
     }
     /**
+     *  Gets a request builder for the PrivilegeManagementElevationRequest collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegeManagementElevationRequestCollectionRequestBuilder elevationRequests() {
+        return new com.microsoft.graph.requests.PrivilegeManagementElevationRequestCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("elevationRequests"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PrivilegeManagementElevationRequest item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegeManagementElevationRequestRequestBuilder elevationRequests(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegeManagementElevationRequestRequestBuilder(getRequestUrlWithAdditionalSegment("elevationRequests") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ZebraFotaArtifact collection
      *
      * @return the collection request builder

@@ -47,7 +47,7 @@ public class ExternalGroup extends Entity implements IJsonBackedObject {
 
     /**
      * The Members.
-     * A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or other externalGroups as members.
+     * A member added to an externalGroup. You can add Microsoft Entra users, Microsoft Entra groups, or other externalGroups as members.
      */
     @SerializedName(value = "members", alternate = {"Members"})
     @Expose

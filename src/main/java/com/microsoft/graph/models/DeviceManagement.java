@@ -137,6 +137,7 @@ import com.microsoft.graph.requests.ImportedDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.ImportedWindowsAutopilotDeviceIdentityCollectionPage;
 import com.microsoft.graph.requests.WindowsAutopilotDeploymentProfileCollectionPage;
 import com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage;
+import com.microsoft.graph.requests.PrivilegeManagementElevationRequestCollectionPage;
 import com.microsoft.graph.requests.ZebraFotaArtifactCollectionPage;
 import com.microsoft.graph.requests.ZebraFotaDeploymentCollectionPage;
 import com.microsoft.graph.requests.GroupPolicyMigrationReportCollectionPage;
@@ -1475,6 +1476,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsAutopilotSettings windowsAutopilotSettings;
 
     /**
+     * The Elevation Requests.
+     * List of elevation requests
+     */
+    @SerializedName(value = "elevationRequests", alternate = {"ElevationRequests"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PrivilegeManagementElevationRequestCollectionPage elevationRequests;
+
+    /**
      * The Zebra Fota Artifacts.
      * The Collection of ZebraFotaArtifacts.
      */
@@ -2227,6 +2237,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("windowsAutopilotDeviceIdentities")) {
             windowsAutopilotDeviceIdentities = serializer.deserializeObject(json.get("windowsAutopilotDeviceIdentities"), com.microsoft.graph.requests.WindowsAutopilotDeviceIdentityCollectionPage.class);
+        }
+
+        if (json.has("elevationRequests")) {
+            elevationRequests = serializer.deserializeObject(json.get("elevationRequests"), com.microsoft.graph.requests.PrivilegeManagementElevationRequestCollectionPage.class);
         }
 
         if (json.has("zebraFotaArtifacts")) {

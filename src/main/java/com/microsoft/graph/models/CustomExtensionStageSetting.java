@@ -38,7 +38,7 @@ public class CustomExtensionStageSetting extends Entity implements IJsonBackedOb
 
     /**
      * The Custom Extension.
-     * Indicates the custom workflow extension that will be executed at this stage. Nullable. Supports $expand.
+     * Indicates the custom workflow extension that is executed at this stage. Nullable. Supports $expand.
      */
     @SerializedName(value = "customExtension", alternate = {"CustomExtension"})
     @Expose

@@ -40,6 +40,7 @@ import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDevicePa
 import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
 import com.microsoft.graph.models.ManagedDeviceInitiateOnDemandProactiveRemediationParameterSet;
+import com.microsoft.graph.models.ManagedDevicePauseConfigurationRefreshParameterSet;
 import com.microsoft.graph.models.ManagedDevicePlayLostModeSoundParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
@@ -293,7 +294,9 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
         return new ManagedDeviceReprovisionCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reprovisionCloudPc"), getClient(), null);
@@ -303,7 +306,9 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceResizeCloudPcRequestBuilder resizeCloudPc(@Nonnull final ManagedDeviceResizeCloudPcParameterSet parameters) {
         return new ManagedDeviceResizeCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resizeCloudPc"), getClient(), null, parameters);
@@ -313,7 +318,9 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
      * Gets a builder to execute the method
      * @return the request builder
      * @param parameters the parameters for the service method
+     * @deprecated The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead
      */
+    @Deprecated
     @Nonnull
     public ManagedDeviceRestoreCloudPcRequestBuilder restoreCloudPc(@Nonnull final ManagedDeviceRestoreCloudPcParameterSet parameters) {
         return new ManagedDeviceRestoreCloudPcRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restoreCloudPc"), getClient(), null, parameters);
@@ -470,6 +477,16 @@ public class ManagedDeviceRequestBuilder extends BaseRequestBuilder<ManagedDevic
     @Nonnull
     public ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
         return new ManagedDeviceLogoutSharedAppleDeviceActiveUserRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.logoutSharedAppleDeviceActiveUser"), getClient(), null);
+    }
+
+    /**
+     * Initiates a command to pause config refresh for the device.
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDevicePauseConfigurationRefreshRequestBuilder pauseConfigurationRefresh(@Nonnull final ManagedDevicePauseConfigurationRefreshParameterSet parameters) {
+        return new ManagedDevicePauseConfigurationRefreshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pauseConfigurationRefresh"), getClient(), null, parameters);
     }
 
     /**

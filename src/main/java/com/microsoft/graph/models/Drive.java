@@ -35,7 +35,7 @@ public class Drive extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Drive Type.
-     * Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
+     * Describes the type of drive represented by this resource. OneDrive personal drives return personal. OneDrive for Business returns business. SharePoint document libraries return documentLibrary. Read-only.
      */
     @SerializedName(value = "driveType", alternate = {"DriveType"})
     @Expose

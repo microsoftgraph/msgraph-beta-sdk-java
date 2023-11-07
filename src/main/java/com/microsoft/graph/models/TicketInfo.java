@@ -38,6 +38,15 @@ public class TicketInfo implements IJsonBackedObject {
     }
 
     /**
+     * The Ticket Approver Identity Id.
+     * 
+     */
+    @SerializedName(value = "ticketApproverIdentityId", alternate = {"TicketApproverIdentityId"})
+    @Expose
+	@Nullable
+    public String ticketApproverIdentityId;
+
+    /**
      * The Ticket Number.
      * The ticket number.
      */
@@ -45,6 +54,15 @@ public class TicketInfo implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String ticketNumber;
+
+    /**
+     * The Ticket Submitter Identity Id.
+     * 
+     */
+    @SerializedName(value = "ticketSubmitterIdentityId", alternate = {"TicketSubmitterIdentityId"})
+    @Expose
+	@Nullable
+    public String ticketSubmitterIdentityId;
 
     /**
      * The Ticket System.

@@ -39,7 +39,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Brand.
-     * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
+     * The branch of a payload. Possible values are: unknown, other, americanExpress, capitalOne, dhl, docuSign, dropbox, facebook, firstAmerican, microsoft, netflix, scotiabank, sendGrid, stewartTitle, tesco, wellsFargo, syrinxCloud, adobe, teams, zoom, unknownFutureValue.
      */
     @SerializedName(value = "brand", alternate = {"Brand"})
     @Expose
@@ -48,7 +48,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Complexity.
-     * The complexity of a payload.Possible values are: unknown, low, medium, high, unknownFutureValue
+     * The complexity of a payload. Possible values are: unknown, low, medium, high, unknownFutureValue.
      */
     @SerializedName(value = "complexity", alternate = {"Complexity"})
     @Expose
@@ -66,7 +66,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * Date and time when the attack simulation and training campaign payload.
+     * Date and time when the attack simulation and training campaign payload. The timestamp represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -156,7 +156,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * Date and time when the attack simulation and training campaign payload was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Date and time when the attack simulation and training campaign payload was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -201,7 +201,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Source.
-     * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, tenant, global, unknownFutureValue. Inherited from simulation.
+     * Simulation content source. Supports $filter and $orderby. Possible values are: unknown, global, tenant, unknownFutureValue.
      */
     @SerializedName(value = "source", alternate = {"Source"})
     @Expose
@@ -210,7 +210,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue. Inherited from simulation.
+     * Simulation content status. Supports $filter and $orderby. Possible values are: unknown, draft, ready, archive, delete, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -219,7 +219,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Technique.
-     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
+     * The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
      */
     @SerializedName(value = "technique", alternate = {"Technique"})
     @Expose
@@ -228,7 +228,7 @@ public class Payload extends Entity implements IJsonBackedObject {
 
     /**
      * The Theme.
-     * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
+     * The theme of a payload. Possible values are: unknown, other, accountActivation, accountVerification, billing, cleanUpMail, controversial, documentReceived, expense, fax, financeReport, incomingMessages, invoice, itemReceived, loginAlert, mailReceived, password, payment, payroll, personalizedOffer, quarantine, remoteWork, reviewMessage, securityUpdate, serviceSuspended, signatureRequired, upgradeMailboxStorage, verifyMailbox, voicemail, advertisement, employeeEngagement, unknownFutureValue.
      */
     @SerializedName(value = "theme", alternate = {"Theme"})
     @Expose
