@@ -32,7 +32,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Alert Rule Template.
-     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
+     * The rule template of the alert event. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, cloudPcInGracePeriodScenario, cloudPcFrontlineInsufficientLicensesScenario, cloudPcInaccessibleScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      */
     @SerializedName(value = "alertRuleTemplate", alternate = {"AlertRuleTemplate"})
     @Expose
@@ -68,7 +68,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Is System Rule.
-     * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
+     * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom-defined rule and can be edited. System rules are built in and only a few properties can be edited.
      */
     @SerializedName(value = "isSystemRule", alternate = {"IsSystemRule"})
     @Expose
@@ -95,7 +95,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Threshold.
-     * The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
+     * The conditions that determine when to send alerts. For example, you can configure a condition to send an alert when provisioning fails for six or more Cloud PCs. This property is deprecated. Use conditions instead.
      */
     @SerializedName(value = "threshold", alternate = {"Threshold"})
     @Expose

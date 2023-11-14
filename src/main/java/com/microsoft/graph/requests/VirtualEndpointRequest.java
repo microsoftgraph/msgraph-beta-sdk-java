@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.VirtualEndpoint;
+import com.microsoft.graph.models.CloudPcScopedPermission;
+import com.microsoft.graph.models.CloudPcTenantEncryptionSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

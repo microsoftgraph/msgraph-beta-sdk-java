@@ -50,7 +50,7 @@ public class ProfileCardAnnotation implements IJsonBackedObject {
 
     /**
      * The Localizations.
-     * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
+     * Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a nb-NO client gets 'Kostnadssenter' as the attribute label, rather than 'Cost Center.'
      */
     @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose

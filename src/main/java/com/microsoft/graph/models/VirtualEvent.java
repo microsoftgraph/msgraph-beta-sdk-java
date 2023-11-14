@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CommunicationsIdentitySet;
+import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.DateTimeTimeZone;
 import com.microsoft.graph.models.VirtualEventStatus;
 import com.microsoft.graph.models.Entity;
@@ -47,7 +48,7 @@ public class VirtualEvent extends Entity implements IJsonBackedObject {
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
 	@Nullable
-    public String description;
+    public ItemBody description;
 
     /**
      * The Display Name.

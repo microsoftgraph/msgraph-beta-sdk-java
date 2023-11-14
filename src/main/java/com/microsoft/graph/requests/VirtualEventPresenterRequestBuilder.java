@@ -56,4 +56,34 @@ public class VirtualEventPresenterRequestBuilder extends BaseRequestBuilder<Virt
     }
 
 
+    /**
+     *  Gets a request builder for the VirtualEventSession collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventSessionCollectionWithReferencesRequestBuilder sessions() {
+        return new com.microsoft.graph.requests.VirtualEventSessionCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("sessions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the VirtualEventSession item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.VirtualEventSessionWithReferenceRequestBuilder sessions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventSessionWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("sessions") + "/" + id, getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for profilePhoto
+     *
+     * @return the VirtualEventPresenterProfilePhotoStreamRequestBuilder instance
+     */
+    @Nonnull
+    public VirtualEventPresenterProfilePhotoStreamRequestBuilder profilePhoto() {
+        return new VirtualEventPresenterProfilePhotoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("profilePhoto"), getClient(), null);
+    }
 }

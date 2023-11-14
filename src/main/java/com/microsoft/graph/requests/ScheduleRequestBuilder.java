@@ -58,6 +58,26 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder<Schedule> {
 
 
     /**
+     *  Gets a request builder for the DayNote collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DayNoteCollectionRequestBuilder dayNotes() {
+        return new com.microsoft.graph.requests.DayNoteCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("dayNotes"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DayNote item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DayNoteRequestBuilder dayNotes(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DayNoteRequestBuilder(getRequestUrlWithAdditionalSegment("dayNotes") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the OfferShiftRequest collection
      *
      * @return the collection request builder

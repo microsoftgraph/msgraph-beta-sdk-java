@@ -15,6 +15,7 @@ import com.microsoft.graph.models.AndroidDeviceOwnerDefaultAppPermissionPolicyTy
 import com.microsoft.graph.models.AppListItem;
 import com.microsoft.graph.models.AndroidDeviceOwnerCrossProfileDataSharing;
 import com.microsoft.graph.models.AndroidDeviceOwnerUserFacingMessage;
+import com.microsoft.graph.models.AndroidDeviceOwnerLocationMode;
 import com.microsoft.graph.models.AndroidDeviceOwnerEnrollmentProfileType;
 import com.microsoft.graph.models.AndroidDeviceOwnerGlobalProxy;
 import com.microsoft.graph.models.AndroidDeviceOwnerKioskCustomizationStatusBar;
@@ -215,6 +216,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public AndroidDeviceOwnerUserFacingMessage detailedHelpText;
+
+    /**
+     * The Device Location Mode.
+     * Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE)
+     */
+    @SerializedName(value = "deviceLocationMode", alternate = {"DeviceLocationMode"})
+    @Expose
+	@Nullable
+    public AndroidDeviceOwnerLocationMode deviceLocationMode;
 
     /**
      * The Device Owner Lock Screen Message.
@@ -1016,6 +1026,15 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @Expose
 	@Nullable
     public Boolean securityRequireVerifyApps;
+
+    /**
+     * The Share Device Location Disabled.
+     * Indicates whether or not location sharing is disabled for fully managed devices (COBO), and corporate owned devices with a work profile (COPE)
+     */
+    @SerializedName(value = "shareDeviceLocationDisabled", alternate = {"ShareDeviceLocationDisabled"})
+    @Expose
+	@Nullable
+    public Boolean shareDeviceLocationDisabled;
 
     /**
      * The Short Help Text.

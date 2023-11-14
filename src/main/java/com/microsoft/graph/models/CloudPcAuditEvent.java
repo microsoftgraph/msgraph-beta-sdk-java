@@ -78,7 +78,7 @@ public class CloudPcAuditEvent extends Entity implements IJsonBackedObject {
 
     /**
      * The Actor.
-     * Azure AD user and application associated with the audit event. Read-only.
+     * Microsoft Entra user and application associated with the audit event. Read-only.
      */
     @SerializedName(value = "actor", alternate = {"Actor"})
     @Expose

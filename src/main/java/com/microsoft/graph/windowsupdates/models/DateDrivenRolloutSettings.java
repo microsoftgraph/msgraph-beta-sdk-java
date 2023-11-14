@@ -27,7 +27,7 @@ public class DateDrivenRolloutSettings extends GradualRolloutSettings implements
 
     /**
      * The End Date Time.
-     * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime is not set, all devices in the deployment are offered content at the same time.
+     * Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn't set, all devices in the deployment are offered content at the same time.
      */
     @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
     @Expose

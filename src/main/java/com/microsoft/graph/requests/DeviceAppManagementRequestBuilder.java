@@ -177,24 +177,244 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
         return new com.microsoft.graph.requests.MobileAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the MobileLobApp collection
+     *  Gets a request builder for the AndroidForWorkApp collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.MobileLobAppCollectionRequestBuilder mobileAppsAsMobileLobApp() {
-        return new com.microsoft.graph.requests.MobileLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.mobileLobApp", getClient(), null);
+    public com.microsoft.graph.requests.AndroidForWorkAppCollectionRequestBuilder mobileAppsAsAndroidForWorkApp() {
+        return new com.microsoft.graph.requests.AndroidForWorkAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.androidForWorkApp", getClient(), null);
     }
 
     /**
-     * Gets a request builder for the MobileLobApp item
+     * Gets a request builder for the AndroidForWorkApp item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.MobileLobAppRequestBuilder mobileAppsAsMobileLobApp(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.MobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.mobileLobApp", getClient(), null);
+    public com.microsoft.graph.requests.AndroidForWorkAppRequestBuilder mobileAppsAsAndroidForWorkApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AndroidForWorkAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.androidForWorkApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AndroidLobApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AndroidLobAppCollectionRequestBuilder mobileAppsAsAndroidLobApp() {
+        return new com.microsoft.graph.requests.AndroidLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.androidLobApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AndroidLobApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AndroidLobAppRequestBuilder mobileAppsAsAndroidLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.androidLobApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AndroidManagedStoreApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AndroidManagedStoreAppCollectionRequestBuilder mobileAppsAsAndroidManagedStoreApp() {
+        return new com.microsoft.graph.requests.AndroidManagedStoreAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.androidManagedStoreApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AndroidManagedStoreApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AndroidManagedStoreAppRequestBuilder mobileAppsAsAndroidManagedStoreApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AndroidManagedStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.androidManagedStoreApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the AndroidStoreApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AndroidStoreAppCollectionRequestBuilder mobileAppsAsAndroidStoreApp() {
+        return new com.microsoft.graph.requests.AndroidStoreAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.androidStoreApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AndroidStoreApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AndroidStoreAppRequestBuilder mobileAppsAsAndroidStoreApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AndroidStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.androidStoreApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IosLobApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IosLobAppCollectionRequestBuilder mobileAppsAsIosLobApp() {
+        return new com.microsoft.graph.requests.IosLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.iosLobApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IosLobApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IosLobAppRequestBuilder mobileAppsAsIosLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IosLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.iosLobApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IosStoreApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IosStoreAppCollectionRequestBuilder mobileAppsAsIosStoreApp() {
+        return new com.microsoft.graph.requests.IosStoreAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.iosStoreApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IosStoreApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IosStoreAppRequestBuilder mobileAppsAsIosStoreApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IosStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.iosStoreApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the IosVppApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IosVppAppCollectionRequestBuilder mobileAppsAsIosVppApp() {
+        return new com.microsoft.graph.requests.IosVppAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.iosVppApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the IosVppApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.IosVppAppRequestBuilder mobileAppsAsIosVppApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.IosVppAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.iosVppApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MacOSDmgApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MacOSDmgAppCollectionRequestBuilder mobileAppsAsMacOSDmgApp() {
+        return new com.microsoft.graph.requests.MacOSDmgAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.macOSDmgApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MacOSDmgApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MacOSDmgAppRequestBuilder mobileAppsAsMacOSDmgApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MacOSDmgAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.macOSDmgApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MacOSLobApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MacOSLobAppCollectionRequestBuilder mobileAppsAsMacOSLobApp() {
+        return new com.microsoft.graph.requests.MacOSLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.macOSLobApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MacOSLobApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MacOSLobAppRequestBuilder mobileAppsAsMacOSLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MacOSLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.macOSLobApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MacOSPkgApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MacOSPkgAppCollectionRequestBuilder mobileAppsAsMacOSPkgApp() {
+        return new com.microsoft.graph.requests.MacOSPkgAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.macOSPkgApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MacOSPkgApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MacOSPkgAppRequestBuilder mobileAppsAsMacOSPkgApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MacOSPkgAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.macOSPkgApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedAndroidLobApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ManagedAndroidLobAppCollectionRequestBuilder mobileAppsAsManagedAndroidLobApp() {
+        return new com.microsoft.graph.requests.ManagedAndroidLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.managedAndroidLobApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedAndroidLobApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ManagedAndroidLobAppRequestBuilder mobileAppsAsManagedAndroidLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedAndroidLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedAndroidLobApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagedIOSLobApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ManagedIOSLobAppCollectionRequestBuilder mobileAppsAsManagedIOSLobApp() {
+        return new com.microsoft.graph.requests.ManagedIOSLobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.managedIOSLobApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagedIOSLobApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ManagedIOSLobAppRequestBuilder mobileAppsAsManagedIOSLobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ManagedIOSLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedIOSLobApp", getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedMobileLobApp collection
@@ -215,6 +435,166 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
     @Nonnull
     public com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder mobileAppsAsManagedMobileLobApp(@Nonnull final String id) {
         return new com.microsoft.graph.requests.ManagedMobileLobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.managedMobileLobApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the MicrosoftStoreForBusinessApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MicrosoftStoreForBusinessAppCollectionRequestBuilder mobileAppsAsMicrosoftStoreForBusinessApp() {
+        return new com.microsoft.graph.requests.MicrosoftStoreForBusinessAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.microsoftStoreForBusinessApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the MicrosoftStoreForBusinessApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.MicrosoftStoreForBusinessAppRequestBuilder mobileAppsAsMicrosoftStoreForBusinessApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.MicrosoftStoreForBusinessAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.microsoftStoreForBusinessApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Win32LobApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.Win32LobAppCollectionRequestBuilder mobileAppsAsWin32LobApp() {
+        return new com.microsoft.graph.requests.Win32LobAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.win32LobApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Win32LobApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.Win32LobAppRequestBuilder mobileAppsAsWin32LobApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.Win32LobAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.win32LobApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsAppX collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsAppXCollectionRequestBuilder mobileAppsAsWindowsAppX() {
+        return new com.microsoft.graph.requests.WindowsAppXCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.windowsAppX", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsAppX item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsAppXRequestBuilder mobileAppsAsWindowsAppX(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsAppXRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.windowsAppX", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsMobileMSI collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsMobileMSICollectionRequestBuilder mobileAppsAsWindowsMobileMSI() {
+        return new com.microsoft.graph.requests.WindowsMobileMSICollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.windowsMobileMSI", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsMobileMSI item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsMobileMSIRequestBuilder mobileAppsAsWindowsMobileMSI(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsMobileMSIRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.windowsMobileMSI", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsStoreApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsStoreAppCollectionRequestBuilder mobileAppsAsWindowsStoreApp() {
+        return new com.microsoft.graph.requests.WindowsStoreAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.windowsStoreApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsStoreApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsStoreAppRequestBuilder mobileAppsAsWindowsStoreApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsStoreAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.windowsStoreApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsUniversalAppX collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsUniversalAppXCollectionRequestBuilder mobileAppsAsWindowsUniversalAppX() {
+        return new com.microsoft.graph.requests.WindowsUniversalAppXCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.windowsUniversalAppX", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsUniversalAppX item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsUniversalAppXRequestBuilder mobileAppsAsWindowsUniversalAppX(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsUniversalAppXRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.windowsUniversalAppX", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WindowsWebApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsWebAppCollectionRequestBuilder mobileAppsAsWindowsWebApp() {
+        return new com.microsoft.graph.requests.WindowsWebAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.windowsWebApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WindowsWebApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WindowsWebAppRequestBuilder mobileAppsAsWindowsWebApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WindowsWebAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.windowsWebApp", getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the WinGetApp collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WinGetAppCollectionRequestBuilder mobileAppsAsWinGetApp() {
+        return new com.microsoft.graph.requests.WinGetAppCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/microsoft.graph.winGetApp", getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the WinGetApp item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.WinGetAppRequestBuilder mobileAppsAsWinGetApp(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.WinGetAppRequestBuilder(getRequestUrlWithAdditionalSegment("mobileApps") + "/" + id + "/microsoft.graph.winGetApp", getClient(), null);
     }
 
     /**

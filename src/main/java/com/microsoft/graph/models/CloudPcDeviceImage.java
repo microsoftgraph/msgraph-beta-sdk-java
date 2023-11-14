@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcDeviceImageOsStatus;
 import com.microsoft.graph.models.CloudPcDeviceImageStatus;
 import com.microsoft.graph.models.CloudPcDeviceImageStatusDetails;
@@ -81,6 +82,15 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public CloudPcDeviceImageOsStatus osStatus;
+
+    /**
+     * The Scope Ids.
+     * 
+     */
+    @SerializedName(value = "scopeIds", alternate = {"ScopeIds"})
+    @Expose
+	@Nullable
+    public java.util.List<String> scopeIds;
 
     /**
      * The Source Image Resource Id.

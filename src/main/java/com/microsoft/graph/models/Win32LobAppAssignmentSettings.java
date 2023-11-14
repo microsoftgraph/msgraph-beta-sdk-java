@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.Win32LobAppAutoUpdateSettings;
 import com.microsoft.graph.models.Win32LobAppDeliveryOptimizationPriority;
 import com.microsoft.graph.models.MobileAppInstallTimeSettings;
 import com.microsoft.graph.models.Win32LobAppNotification;
@@ -28,6 +29,15 @@ import javax.annotation.Nonnull;
  */
 public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implements IJsonBackedObject {
 
+
+    /**
+     * The Auto Update Settings.
+     * The auto-update settings to apply for this app assignment.
+     */
+    @SerializedName(value = "autoUpdateSettings", alternate = {"AutoUpdateSettings"})
+    @Expose
+	@Nullable
+    public Win32LobAppAutoUpdateSettings autoUpdateSettings;
 
     /**
      * The Delivery Optimization Priority.

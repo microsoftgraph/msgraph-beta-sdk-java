@@ -20,6 +20,14 @@ public enum CloudPcPartnerAgentName
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * v Mware
+    */
+    V_MWARE,
+    /**
+    * hp
+    */
+    HP,
+    /**
     * For CloudPcPartnerAgentName values that were not expected from the service
     */
     UNEXPECTED_VALUE

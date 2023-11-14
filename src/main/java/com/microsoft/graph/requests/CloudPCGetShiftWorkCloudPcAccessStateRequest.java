@@ -19,7 +19,7 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Cloud PCGet Shift Work Cloud Pc Access State Request.
- * @deprecated The waitlisted value is deprecated and will stop returning on May 17, 2023.
+ * @deprecated The getShiftWorkCloudPcAccessState API is deprecated and will stop returning data on Dec 31, 2023. Please use the new getFrontlineCloudPcAccessState API
  */
 @Deprecated
 public class CloudPCGetShiftWorkCloudPcAccessStateRequest extends BaseRequest<ShiftWorkCloudPcAccessState> {

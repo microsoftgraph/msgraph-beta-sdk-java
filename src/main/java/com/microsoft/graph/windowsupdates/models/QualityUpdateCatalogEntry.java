@@ -8,8 +8,12 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.windowsupdates.models.QualityUpdateCveSeverityInformation;
+import com.microsoft.graph.windowsupdates.models.QualityUpdateCadence;
 import com.microsoft.graph.windowsupdates.models.QualityUpdateClassification;
 import com.microsoft.graph.windowsupdates.models.SoftwareUpdateCatalogEntry;
+import com.microsoft.graph.windowsupdates.requests.ProductRevisionCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -27,6 +31,24 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 
 
     /**
+     * The Catalog Name.
+     * The catalog name of the content. Read-only.
+     */
+    @SerializedName(value = "catalogName", alternate = {"CatalogName"})
+    @Expose
+	@Nullable
+    public String catalogName;
+
+    /**
+     * The Cve Severity Information.
+     * Severity information of the Common Vulnerabilities and Exposures associated with the content.
+     */
+    @SerializedName(value = "cveSeverityInformation", alternate = {"CveSeverityInformation"})
+    @Expose
+	@Nullable
+    public QualityUpdateCveSeverityInformation cveSeverityInformation;
+
+    /**
      * The Is Expeditable.
      * Indicates whether the content can be deployed as an expedited quality update. Read-only.
      */
@@ -34,6 +56,15 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     @Expose
 	@Nullable
     public Boolean isExpeditable;
+
+    /**
+     * The Quality Update Cadence.
+     * The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
+     */
+    @SerializedName(value = "qualityUpdateCadence", alternate = {"QualityUpdateCadence"})
+    @Expose
+	@Nullable
+    public QualityUpdateCadence qualityUpdateCadence;
 
     /**
      * The Quality Update Classification.
@@ -44,6 +75,24 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
 	@Nullable
     public QualityUpdateClassification qualityUpdateClassification;
 
+    /**
+     * The Short Name.
+     * The short name of the content. Read-only.
+     */
+    @SerializedName(value = "shortName", alternate = {"ShortName"})
+    @Expose
+	@Nullable
+    public String shortName;
+
+    /**
+     * The Product Revisions.
+     * The operating system product revisions that are released as part of this quality update.
+     */
+    @SerializedName(value = "productRevisions", alternate = {"ProductRevisions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.windowsupdates.requests.ProductRevisionCollectionPage productRevisions;
+
 
     /**
      * Sets the raw JSON object
@@ -53,5 +102,9 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("productRevisions")) {
+            productRevisions = serializer.deserializeObject(json.get("productRevisions"), com.microsoft.graph.windowsupdates.requests.ProductRevisionCollectionPage.class);
+        }
     }
 }

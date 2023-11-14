@@ -87,7 +87,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Preferred Display Name.
-     * 
+     * The participant's preferred display name that overrides the original display name.
      */
     @SerializedName(value = "preferredDisplayName", alternate = {"PreferredDisplayName"})
     @Expose

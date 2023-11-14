@@ -42,7 +42,7 @@ public class AssignmentReviewSettings implements IJsonBackedObject {
 
     /**
      * The Access Review Timeout Behavior.
-     * The default decision to apply if the request is not reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
+     * The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      */
     @SerializedName(value = "accessReviewTimeoutBehavior", alternate = {"AccessReviewTimeoutBehavior"})
     @Expose

@@ -152,6 +152,10 @@ public enum RemoteAction
     */
     REMOVE_DEVICE_FIRMWARE_CONFIGURATION_INTERFACE_MANAGEMENT,
     /**
+    * pause Configuration Refresh
+    */
+    PAUSE_CONFIGURATION_REFRESH,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

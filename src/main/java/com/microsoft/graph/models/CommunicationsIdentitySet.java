@@ -65,7 +65,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Endpoint Type.
-     * Type of endpoint the participant is using. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+     * Type of endpoint the participant uses. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      */
     @SerializedName(value = "endpointType", alternate = {"EndpointType"})
     @Expose
@@ -83,7 +83,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The On Premises.
-     * The Skype for Business On-Premises user associated with this action.
+     * The Skype for Business on-premises user associated with this action.
      */
     @SerializedName(value = "onPremises", alternate = {"OnPremises"})
     @Expose
@@ -92,7 +92,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements IJsonBacke
 
     /**
      * The Phone.
-     * Inherited from identitySet. The phone user associated with this action.
+     * The phone user associated with this action.
      */
     @SerializedName(value = "phone", alternate = {"Phone"})
     @Expose

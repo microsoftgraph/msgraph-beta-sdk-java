@@ -73,7 +73,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
 
     /**
      * The Export Options.
-     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
+     * The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30, 2023. Going forward, the summary and load file are always included.
      */
     @SerializedName(value = "exportOptions", alternate = {"ExportOptions"})
     @Expose
@@ -82,7 +82,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
 
     /**
      * The Export Structure.
-     * The options provided that specify the structure of the export. For more details, see reviewSet: export. Possible values are: none, directory, pst.
+     * The options provided that specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
      */
     @SerializedName(value = "exportStructure", alternate = {"ExportStructure"})
     @Expose
@@ -120,7 +120,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
 
     /**
      * The Review Set Query.
-     * The review set query which is used to filter the documents for export.
+     * The review set query that is used to filter the documents for export.
      */
     @SerializedName(value = "reviewSetQuery", alternate = {"ReviewSetQuery"})
     @Expose

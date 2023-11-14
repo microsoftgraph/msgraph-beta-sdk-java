@@ -15,6 +15,7 @@ import com.microsoft.graph.security.requests.ArticleCollectionPage;
 import com.microsoft.graph.security.requests.HostComponentCollectionPage;
 import com.microsoft.graph.security.requests.HostCookieCollectionPage;
 import com.microsoft.graph.security.requests.HostPairCollectionPage;
+import com.microsoft.graph.security.requests.HostPortCollectionPage;
 import com.microsoft.graph.security.requests.HostCollectionPage;
 import com.microsoft.graph.security.requests.HostSslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.HostTrackerCollectionPage;
@@ -24,6 +25,7 @@ import com.microsoft.graph.security.requests.PassiveDnsRecordCollectionPage;
 import com.microsoft.graph.security.requests.SslCertificateCollectionPage;
 import com.microsoft.graph.security.requests.SubdomainCollectionPage;
 import com.microsoft.graph.security.requests.VulnerabilityCollectionPage;
+import com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage;
 import com.microsoft.graph.security.requests.WhoisRecordCollectionPage;
 
 
@@ -43,7 +45,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Article Indicators.
-     * Refers to indicators of threat or compromise highlighted in an microsoft.graph.security.article.Note: List retrieval is not yet supported.
+     * Refers to indicators of threat or compromise highlighted in an article.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "articleIndicators", alternate = {"ArticleIndicators"})
     @Expose
@@ -61,7 +63,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Host Components.
-     * Retrieve details about microsoft.graph.security.hostComponent objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostComponent objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "hostComponents", alternate = {"HostComponents"})
     @Expose
@@ -70,7 +72,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Host Cookies.
-     * Retrieve details about microsoft.graph.security.hostCookie objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostCookie objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "hostCookies", alternate = {"HostCookies"})
     @Expose
@@ -79,7 +81,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Host Pairs.
-     * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "hostPairs", alternate = {"HostPairs"})
     @Expose
@@ -87,8 +89,17 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.HostPairCollectionPage hostPairs;
 
     /**
+     * The Host Ports.
+     * Retrieve details about hostPort objects.Note: List retrieval is not yet supported.
+     */
+    @SerializedName(value = "hostPorts", alternate = {"HostPorts"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.HostPortCollectionPage hostPorts;
+
+    /**
      * The Hosts.
-     * Refers to microsoft.graph.security.host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
+     * Refers to host objects that Microsoft Threat Intelligence has observed.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "hosts", alternate = {"Hosts"})
     @Expose
@@ -97,7 +108,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Host Ssl Certificates.
-     * 
+     * Retrieve details about hostSslCertificate objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "hostSslCertificates", alternate = {"HostSslCertificates"})
     @Expose
@@ -106,7 +117,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Host Trackers.
-     * Retrieve details about microsoft.graph.security.hostTracker objects.Note: List retrieval is not yet supported.
+     * Retrieve details about hostTracker objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "hostTrackers", alternate = {"HostTrackers"})
     @Expose
@@ -133,7 +144,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Passive Dns Records.
-     * Retrieve details about microsoft.graph.security.passiveDnsRecord objects.Note: List retrieval is not yet supported.
+     * Retrieve details about passiveDnsRecord objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "passiveDnsRecords", alternate = {"PassiveDnsRecords"})
     @Expose
@@ -142,7 +153,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Ssl Certificates.
-     * 
+     * Retrieve details about sslCertificate objects.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "sslCertificates", alternate = {"SslCertificates"})
     @Expose
@@ -151,7 +162,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Subdomains.
-     * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+     * Retrieve details about the subdomain.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "subdomains", alternate = {"Subdomains"})
     @Expose
@@ -160,7 +171,7 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
     /**
      * The Vulnerabilities.
-     * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
+     * Retrieve details about vulnerabilities.Note: List retrieval is not yet supported.
      */
     @SerializedName(value = "vulnerabilities", alternate = {"Vulnerabilities"})
     @Expose
@@ -168,8 +179,17 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.security.requests.VulnerabilityCollectionPage vulnerabilities;
 
     /**
+     * The Whois History Records.
+     * Retrieve details about whoisHistoryRecord objects.Note: List retrieval is not yet supported.
+     */
+    @SerializedName(value = "whoisHistoryRecords", alternate = {"WhoisHistoryRecords"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage whoisHistoryRecords;
+
+    /**
      * The Whois Records.
-     * 
+     * A list of whoisRecord objects.
      */
     @SerializedName(value = "whoisRecords", alternate = {"WhoisRecords"})
     @Expose
@@ -206,6 +226,10 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
             hostPairs = serializer.deserializeObject(json.get("hostPairs"), com.microsoft.graph.security.requests.HostPairCollectionPage.class);
         }
 
+        if (json.has("hostPorts")) {
+            hostPorts = serializer.deserializeObject(json.get("hostPorts"), com.microsoft.graph.security.requests.HostPortCollectionPage.class);
+        }
+
         if (json.has("hosts")) {
             hosts = serializer.deserializeObject(json.get("hosts"), com.microsoft.graph.security.requests.HostCollectionPage.class);
         }
@@ -240,6 +264,10 @@ public class ThreatIntelligence extends Entity implements IJsonBackedObject {
 
         if (json.has("vulnerabilities")) {
             vulnerabilities = serializer.deserializeObject(json.get("vulnerabilities"), com.microsoft.graph.security.requests.VulnerabilityCollectionPage.class);
+        }
+
+        if (json.has("whoisHistoryRecords")) {
+            whoisHistoryRecords = serializer.deserializeObject(json.get("whoisHistoryRecords"), com.microsoft.graph.security.requests.WhoisHistoryRecordCollectionPage.class);
         }
 
         if (json.has("whoisRecords")) {

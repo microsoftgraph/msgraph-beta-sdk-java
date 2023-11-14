@@ -60,6 +60,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     AD_JOIN_CHECK_ACCOUNT_QUOTA_EXCEEDED,
     /**
+    * ad Join Check Server Not Operational
+    */
+    AD_JOIN_CHECK_SERVER_NOT_OPERATIONAL,
+    /**
     * ad Join Check Unknown Error
     */
     AD_JOIN_CHECK_UNKNOWN_ERROR,
@@ -191,6 +195,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     * resource Availability Check Intune Custom Windows Restriction Violation
     */
     RESOURCE_AVAILABILITY_CHECK_INTUNE_CUSTOM_WINDOWS_RESTRICTION_VIOLATION,
+    /**
+    * resource Availability Check Deployment Quota Limit Reached
+    */
+    RESOURCE_AVAILABILITY_CHECK_DEPLOYMENT_QUOTA_LIMIT_REACHED,
     /**
     * resource Availability Check Transient Service Error
     */

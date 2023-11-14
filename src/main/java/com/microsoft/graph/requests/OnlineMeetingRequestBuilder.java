@@ -10,6 +10,8 @@ import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.OnlineMeeting;
 import com.microsoft.graph.models.ChatInfo;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.CallRecording;
+import com.microsoft.graph.models.CallTranscript;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -58,16 +60,6 @@ public class OnlineMeetingRequestBuilder extends BaseRequestBuilder<OnlineMeetin
     }
 
 
-
-    /**
-     * Gets the request builder for VirtualAppointment
-     *
-     * @return the VirtualAppointmentRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.VirtualAppointmentRequestBuilder virtualAppointment() {
-        return new com.microsoft.graph.requests.VirtualAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("virtualAppointment"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the MeetingAttendanceReport collection
      *

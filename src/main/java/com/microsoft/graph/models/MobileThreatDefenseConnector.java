@@ -136,7 +136,7 @@ public class MobileThreatDefenseConnector extends Entity implements IJsonBackedO
 
     /**
      * The Partner State.
-     * Mobile Threat Defense partner state for this account. Possible values are: unavailable, available, enabled, unresponsive.
+     * Mobile Threat Defense partner state for this account. Possible values are: unavailable, available, enabled, unresponsive, notSetUp, error, unknownFutureValue.
      */
     @SerializedName(value = "partnerState", alternate = {"PartnerState"})
     @Expose

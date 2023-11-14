@@ -56,6 +56,16 @@ public class BranchSiteRequestBuilder extends BaseRequestBuilder<BranchSite> {
     }
 
 
+
+    /**
+     * Gets the request builder for BranchConnectivityConfiguration
+     *
+     * @return the BranchConnectivityConfigurationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.networkaccess.requests.BranchConnectivityConfigurationRequestBuilder connectivityConfiguration() {
+        return new com.microsoft.graph.networkaccess.requests.BranchConnectivityConfigurationRequestBuilder(getRequestUrlWithAdditionalSegment("connectivityConfiguration"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the DeviceLink collection
      *

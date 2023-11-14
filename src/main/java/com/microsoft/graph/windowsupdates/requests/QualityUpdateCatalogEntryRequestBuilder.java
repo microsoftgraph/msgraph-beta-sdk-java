@@ -56,4 +56,24 @@ public class QualityUpdateCatalogEntryRequestBuilder extends BaseRequestBuilder<
     }
 
 
+    /**
+     *  Gets a request builder for the ProductRevision collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.windowsupdates.requests.ProductRevisionCollectionRequestBuilder productRevisions() {
+        return new com.microsoft.graph.windowsupdates.requests.ProductRevisionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("productRevisions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ProductRevision item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.windowsupdates.requests.ProductRevisionRequestBuilder productRevisions(@Nonnull final String id) {
+        return new com.microsoft.graph.windowsupdates.requests.ProductRevisionRequestBuilder(getRequestUrlWithAdditionalSegment("productRevisions") + "/" + id, getClient(), null);
+    }
 }

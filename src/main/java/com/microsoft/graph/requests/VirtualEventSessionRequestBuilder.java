@@ -8,9 +8,6 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.VirtualEventSession;
-import com.microsoft.graph.models.ChatInfo;
-import com.microsoft.graph.models.MeetingParticipants;
-import com.microsoft.graph.models.OnlineMeeting;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -59,16 +56,6 @@ public class VirtualEventSessionRequestBuilder extends BaseRequestBuilder<Virtua
     }
 
 
-
-    /**
-     * Gets the request builder for VirtualAppointment
-     *
-     * @return the VirtualAppointmentRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.VirtualAppointmentRequestBuilder virtualAppointment() {
-        return new com.microsoft.graph.requests.VirtualAppointmentRequestBuilder(getRequestUrlWithAdditionalSegment("virtualAppointment"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the MeetingAttendanceReport collection
      *
@@ -89,73 +76,44 @@ public class VirtualEventSessionRequestBuilder extends BaseRequestBuilder<Virtua
     public com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder attendanceReports(@Nonnull final String id) {
         return new com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("attendanceReports") + "/" + id, getClient(), null);
     }
-
     /**
-     * Gets the request builder for MeetingAttendanceReport
-     *
-     * @return the MeetingAttendanceReportRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder meetingAttendanceReport() {
-        return new com.microsoft.graph.requests.MeetingAttendanceReportRequestBuilder(getRequestUrlWithAdditionalSegment("meetingAttendanceReport"), getClient(), null);
-    }
-
-    /**
-     * Gets the request builder for MeetingRegistration
-     *
-     * @return the MeetingRegistrationRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.MeetingRegistrationRequestBuilder registration() {
-        return new com.microsoft.graph.requests.MeetingRegistrationRequestBuilder(getRequestUrlWithAdditionalSegment("registration"), getClient(), null);
-    }
-    /**
-     *  Gets a request builder for the CallRecording collection
+     *  Gets a request builder for the VirtualEventPresenter collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.CallRecordingCollectionRequestBuilder recordings() {
-        return new com.microsoft.graph.requests.CallRecordingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("recordings"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventPresenterCollectionWithReferencesRequestBuilder presenters() {
+        return new com.microsoft.graph.requests.VirtualEventPresenterCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("presenters"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the CallRecording item
+     * Gets a request builder for the VirtualEventPresenter item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.CallRecordingRequestBuilder recordings(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.CallRecordingRequestBuilder(getRequestUrlWithAdditionalSegment("recordings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventPresenterWithReferenceRequestBuilder presenters(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventPresenterWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("presenters") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the CallTranscript collection
+     *  Gets a request builder for the VirtualEventRegistration collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder transcripts() {
-        return new com.microsoft.graph.requests.CallTranscriptCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrationCollectionWithReferencesRequestBuilder registrations() {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("registrations"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the CallTranscript item
+     * Gets a request builder for the VirtualEventRegistration item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.CallTranscriptRequestBuilder transcripts(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.CallTranscriptRequestBuilder(getRequestUrlWithAdditionalSegment("transcripts") + "/" + id, getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public OnlineMeetingGetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
-        return new OnlineMeetingGetVirtualAppointmentJoinWebUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getVirtualAppointmentJoinWebUrl"), getClient(), null);
+    public com.microsoft.graph.requests.VirtualEventRegistrationWithReferenceRequestBuilder registrations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.VirtualEventRegistrationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("registrations") + "/" + id, getClient(), null);
     }
 }

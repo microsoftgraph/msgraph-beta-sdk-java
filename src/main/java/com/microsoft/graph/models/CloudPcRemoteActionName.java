@@ -52,6 +52,22 @@ public enum CloudPcRemoteActionName
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * create Snapshot
+    */
+    CREATE_SNAPSHOT,
+    /**
+    * power On
+    */
+    POWER_ON,
+    /**
+    * power Off
+    */
+    POWER_OFF,
+    /**
+    * move Region
+    */
+    MOVE_REGION,
+    /**
     * For CloudPcRemoteActionName values that were not expected from the service
     */
     UNEXPECTED_VALUE

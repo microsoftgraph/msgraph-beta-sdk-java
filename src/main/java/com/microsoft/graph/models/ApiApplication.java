@@ -51,7 +51,7 @@ public class ApiApplication implements IJsonBackedObject {
 
     /**
      * The Known Client Applications.
-     * Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
+     * Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Microsoft Entra ID knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.
      */
     @SerializedName(value = "knownClientApplications", alternate = {"KnownClientApplications"})
     @Expose
@@ -69,7 +69,7 @@ public class ApiApplication implements IJsonBackedObject {
 
     /**
      * The Pre Authorized Applications.
-     * Lists the client applications that are pre-authorized with the specified delegated permissions to access this application's APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
+     * Lists the client applications that are preauthorized with the specified delegated permissions to access this application's APIs. Users aren't required to consent to any preauthorized application (for the permissions specified). However, any other permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.
      */
     @SerializedName(value = "preAuthorizedApplications", alternate = {"PreAuthorizedApplications"})
     @Expose

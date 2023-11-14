@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.callrecords.models.UserIdentity;
 import com.microsoft.graph.callrecords.models.UserFeedback;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.callrecords.models.Endpoint;
@@ -26,6 +27,15 @@ import javax.annotation.Nonnull;
  */
 public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
 
+
+    /**
+     * The Associated Identity.
+     * Identity associated with the endpoint.
+     */
+    @SerializedName(value = "associatedIdentity", alternate = {"AssociatedIdentity"})
+    @Expose
+	@Nullable
+    public UserIdentity associatedIdentity;
 
     /**
      * The Cpu Cores Count.
@@ -65,8 +75,10 @@ public class ParticipantEndpoint extends Endpoint implements IJsonBackedObject {
 
     /**
      * The Identity.
-     * Identity associated with the endpoint.
+     * 
+     * @deprecated This property is deprecated and will be removed in a future version. Use associatedIdentity instead.
      */
+    @Deprecated
     @SerializedName(value = "identity", alternate = {"Identity"})
     @Expose
 	@Nullable

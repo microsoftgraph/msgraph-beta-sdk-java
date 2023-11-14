@@ -108,7 +108,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
+     * The Microsoft Entra tenant identifier for the managed tenant. Required. Read-only.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
@@ -117,7 +117,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements IJsonB
 
     /**
      * The Tenant License Type.
-     * 
+     * The license type associated with the tenant; for example, AADFree, AADPremium1, AADPremium2.
      */
     @SerializedName(value = "tenantLicenseType", alternate = {"TenantLicenseType"})
     @Expose

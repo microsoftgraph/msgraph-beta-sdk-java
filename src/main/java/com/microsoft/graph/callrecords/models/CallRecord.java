@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.callrecords.models.Modality;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.callrecords.models.CallType;
+import com.microsoft.graph.callrecords.models.Organizer;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.callrecords.requests.ParticipantCollectionPage;
 import com.microsoft.graph.callrecords.requests.SessionCollectionPage;
 
 
@@ -68,8 +70,10 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Organizer.
-     * The organizing party's identity.
+     * 
+     * @deprecated This property is deprecated and will be removed in a future version. Use organizer_v2 instead.
      */
+    @Deprecated
     @SerializedName(value = "organizer", alternate = {"Organizer"})
     @Expose
 	@Nullable
@@ -77,8 +81,10 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Participants.
-     * List of distinct identities involved in the call.
+     * 
+     * @deprecated This property is deprecated and will be removed in a future version. Use participants_v2 instead.
      */
+    @Deprecated
     @SerializedName(value = "participants", alternate = {"Participants"})
     @Expose
 	@Nullable
@@ -104,12 +110,30 @@ public class CallRecord extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * Monotonically increasing version of the call record. Higher version call records with the same ID includes additional data compared to the lower version.
+     * Monotonically increasing version of the call record. Higher version call records with the same ID include additional data compared to the lower version.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose
 	@Nullable
     public Long version;
+
+    /**
+     * The Organizer_v2.
+     * Identity of the organizer of the call. This relationship is expanded by default in callRecord methods.
+     */
+    @SerializedName(value = "organizer_v2", alternate = {"Organizer_v2"})
+    @Expose
+	@Nullable
+    public Organizer organizer_v2;
+
+    /**
+     * The Participants_v2.
+     * List of distinct participants in the call.
+     */
+    @SerializedName(value = "participants_v2", alternate = {"Participants_v2"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.callrecords.requests.ParticipantCollectionPage participants_v2;
 
     /**
      * The Sessions.
@@ -129,6 +153,10 @@ public class CallRecord extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("participants_v2")) {
+            participants_v2 = serializer.deserializeObject(json.get("participants_v2"), com.microsoft.graph.callrecords.requests.ParticipantCollectionPage.class);
+        }
 
         if (json.has("sessions")) {
             sessions = serializer.deserializeObject(json.get("sessions"), com.microsoft.graph.callrecords.requests.SessionCollectionPage.class);

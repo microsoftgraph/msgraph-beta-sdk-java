@@ -29,7 +29,7 @@ public class ItemRetentionLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Label Applied Explicitly.
-     * 
+     * Specifies whether the label is applied explicitly on the item. True indicates that the label is applied explicitly; otherwise, the label is inherited from its parent. Read-only.
      */
     @SerializedName(value = "isLabelAppliedExplicitly", alternate = {"IsLabelAppliedExplicitly"})
     @Expose
@@ -38,7 +38,7 @@ public class ItemRetentionLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Label Applied By.
-     * 
+     * Identity of the user who applied the label. Read-only.
      */
     @SerializedName(value = "labelAppliedBy", alternate = {"LabelAppliedBy"})
     @Expose
@@ -47,7 +47,7 @@ public class ItemRetentionLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Label Applied Date Time.
-     * 
+     * The date and time when the label was applied on the item. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      */
     @SerializedName(value = "labelAppliedDateTime", alternate = {"LabelAppliedDateTime"})
     @Expose
@@ -56,7 +56,7 @@ public class ItemRetentionLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * The retention label on the document. Read-write.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -65,7 +65,7 @@ public class ItemRetentionLabel extends Entity implements IJsonBackedObject {
 
     /**
      * The Retention Settings.
-     * 
+     * The retention settings enforced on the item. Read-write.
      */
     @SerializedName(value = "retentionSettings", alternate = {"RetentionSettings"})
     @Expose

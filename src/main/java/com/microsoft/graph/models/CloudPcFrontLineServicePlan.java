@@ -27,7 +27,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * 
+     * The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements IJsonBackedOb
 
     /**
      * The Total Count.
-     * 
+     * The total number of front-line service plans purchased by the customer.
      */
     @SerializedName(value = "totalCount", alternate = {"TotalCount"})
     @Expose
@@ -45,7 +45,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements IJsonBackedOb
 
     /**
      * The Used Count.
-     * 
+     * The number of service plans that have been used for the account.
      */
     @SerializedName(value = "usedCount", alternate = {"UsedCount"})
     @Expose

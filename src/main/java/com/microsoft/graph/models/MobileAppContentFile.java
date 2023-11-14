@@ -117,6 +117,24 @@ public class MobileAppContentFile extends Entity implements IJsonBackedObject {
     public Long sizeEncrypted;
 
     /**
+     * The Size Encrypted In Bytes.
+     * Indicates the size of the file after encryption, in bytes.
+     */
+    @SerializedName(value = "sizeEncryptedInBytes", alternate = {"SizeEncryptedInBytes"})
+    @Expose
+	@Nullable
+    public Long sizeEncryptedInBytes;
+
+    /**
+     * The Size In Bytes.
+     * Indicates the original size of the file, in bytes.
+     */
+    @SerializedName(value = "sizeInBytes", alternate = {"SizeInBytes"})
+    @Expose
+	@Nullable
+    public Long sizeInBytes;
+
+    /**
      * The Upload State.
      * The state of the current upload request. Possible values are: success, transientError, error, unknown, azureStorageUriRequestSuccess, azureStorageUriRequestPending, azureStorageUriRequestFailed, azureStorageUriRequestTimedOut, azureStorageUriRenewalSuccess, azureStorageUriRenewalPending, azureStorageUriRenewalFailed, azureStorageUriRenewalTimedOut, commitFileSuccess, commitFilePending, commitFileFailed, commitFileTimedOut.
      */

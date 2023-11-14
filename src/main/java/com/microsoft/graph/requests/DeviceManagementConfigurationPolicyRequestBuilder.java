@@ -130,4 +130,13 @@ public class DeviceManagementConfigurationPolicyRequestBuilder extends BaseReque
     public DeviceManagementConfigurationPolicyReorderRequestBuilder reorder(@Nonnull final DeviceManagementConfigurationPolicyReorderParameterSet parameters) {
         return new DeviceManagementConfigurationPolicyReorderRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.reorder"), getClient(), null, parameters);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public DeviceManagementConfigurationPolicyRetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder retrieveLatestUpgradeDefaultBaselinePolicy() {
+        return new DeviceManagementConfigurationPolicyRetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy"), getClient(), null);
+    }
 }

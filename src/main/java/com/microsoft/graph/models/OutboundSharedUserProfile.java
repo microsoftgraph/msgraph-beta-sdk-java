@@ -50,7 +50,7 @@ public class OutboundSharedUserProfile implements IJsonBackedObject {
 
     /**
      * The Tenants.
-     * The collection of external Azure AD tenants that the user has shared profile data with. Read-only.
+     * The collection of external Microsoft Entra tenants that the user has shared profile data with. Read-only.
      */
     @SerializedName(value = "tenants", alternate = {"Tenants"})
     @Expose

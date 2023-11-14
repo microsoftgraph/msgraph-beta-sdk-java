@@ -87,7 +87,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements IJso
 
     /**
      * The Label.
-     * The label of the attribute field that will be displayed to end user, unless overridden.
+     * The label of the attribute field that is displayed to end user, unless overridden.
      */
     @SerializedName(value = "label", alternate = {"Label"})
     @Expose
@@ -123,7 +123,7 @@ public class AuthenticationAttributeCollectionInputConfiguration implements IJso
 
     /**
      * The Write To Directory.
-     * Whether the value collected will be stored.
+     * Whether the value collected is stored.
      */
     @SerializedName(value = "writeToDirectory", alternate = {"WriteToDirectory"})
     @Expose

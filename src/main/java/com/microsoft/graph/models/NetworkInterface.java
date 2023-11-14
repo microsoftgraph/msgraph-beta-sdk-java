@@ -39,7 +39,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Description of the NIC (e.g. Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
+     * Description of the NIC (for example, Ethernet adapter, Wireless LAN adapter Local Area Connection, and so on).
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -57,7 +57,7 @@ public class NetworkInterface implements IJsonBackedObject {
 
     /**
      * The Ip V6Address.
-     * Last Public (aka global) IPv6 address associated with this NIC.
+     * Last Public (also known as global) IPv6 address associated with this NIC.
      */
     @SerializedName(value = "ipV6Address", alternate = {"IpV6Address"})
     @Expose

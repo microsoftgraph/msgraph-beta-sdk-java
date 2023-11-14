@@ -39,7 +39,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The App Id.
-     * Refers to the unique identifier representing Application Id in the Azure Active Directory.
+     * Refers to the unique identifier representing Application Id in the Microsoft Entra ID.
      */
     @SerializedName(value = "appId", alternate = {"AppId"})
     @Expose
@@ -48,7 +48,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Refers to the Application Name displayed in the Azure Portal.
+     * Refers to the application name displayed in the Microsoft Entra admin center.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class AppIdentity implements IJsonBackedObject {
 
     /**
      * The Service Principal Id.
-     * Refers to the unique identifier indicating Service Principal Id in Azure Active Directory for the corresponding App.
+     * Refers to the unique identifier indicating Service Principal Id in Microsoft Entra ID for the corresponding App.
      */
     @SerializedName(value = "servicePrincipalId", alternate = {"ServicePrincipalId"})
     @Expose

@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.WiFiProxySetting;
 import com.microsoft.graph.models.AospDeviceOwnerWiFiSecurityType;
 import com.microsoft.graph.models.DeviceConfiguration;
 
@@ -70,6 +72,51 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
     @Expose
 	@Nullable
     public Boolean preSharedKeyIsSet;
+
+    /**
+     * The Proxy Automatic Configuration Url.
+     * Specify the proxy server configuration script URL.
+     */
+    @SerializedName(value = "proxyAutomaticConfigurationUrl", alternate = {"ProxyAutomaticConfigurationUrl"})
+    @Expose
+	@Nullable
+    public String proxyAutomaticConfigurationUrl;
+
+    /**
+     * The Proxy Exclusion List.
+     * List of hosts to exclude using the proxy on connections for. These hosts can use wildcards such as *.example.com.
+     */
+    @SerializedName(value = "proxyExclusionList", alternate = {"ProxyExclusionList"})
+    @Expose
+	@Nullable
+    public java.util.List<String> proxyExclusionList;
+
+    /**
+     * The Proxy Manual Address.
+     * Specify the proxy server IP address. Both IPv4 and IPv6 addresses are supported. For example: 192.168.1.1.
+     */
+    @SerializedName(value = "proxyManualAddress", alternate = {"ProxyManualAddress"})
+    @Expose
+	@Nullable
+    public String proxyManualAddress;
+
+    /**
+     * The Proxy Manual Port.
+     * Specify the proxy server port.
+     */
+    @SerializedName(value = "proxyManualPort", alternate = {"ProxyManualPort"})
+    @Expose
+	@Nullable
+    public Integer proxyManualPort;
+
+    /**
+     * The Proxy Setting.
+     * Specify the proxy setting for Wi-Fi configuration. Possible values include none, manual, and automatic.
+     */
+    @SerializedName(value = "proxySetting", alternate = {"ProxySetting"})
+    @Expose
+	@Nullable
+    public WiFiProxySetting proxySetting;
 
     /**
      * The Ssid.

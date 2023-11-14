@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.VirtualEndpoint;
+import com.microsoft.graph.models.CloudPcScopedPermission;
+import com.microsoft.graph.models.CloudPcTenantEncryptionSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -374,5 +376,23 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
     @Nonnull
     public VirtualEndpointGetEffectivePermissionsCollectionRequestBuilder getEffectivePermissions() {
         return new VirtualEndpointGetEffectivePermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEffectivePermissions"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public VirtualEndpointRetrieveScopedPermissionsCollectionRequestBuilder retrieveScopedPermissions() {
+        return new VirtualEndpointRetrieveScopedPermissionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retrieveScopedPermissions"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public VirtualEndpointRetrieveTenantEncryptionSettingRequestBuilder retrieveTenantEncryptionSetting() {
+        return new VirtualEndpointRetrieveTenantEncryptionSettingRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retrieveTenantEncryptionSetting"), getClient(), null);
     }
 }

@@ -99,7 +99,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Front Line Service Plans.
-     * 
+     * Front-line service plans for a Cloud PC.
      */
     @SerializedName(value = "frontLineServicePlans", alternate = {"FrontLineServicePlans"})
     @Expose
@@ -164,7 +164,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Shared Use Service Plans.
-     * Cloud PC shared-use service plans.
+     * 
      * @deprecated The sharedUseServicePlans property is deprecated and will not be supported starting Oct 8, 2023. This property will not be included as part of the API response.
      */
     @Deprecated

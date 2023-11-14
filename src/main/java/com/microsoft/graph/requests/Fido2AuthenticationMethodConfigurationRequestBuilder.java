@@ -56,24 +56,4 @@ public class Fido2AuthenticationMethodConfigurationRequestBuilder extends BaseRe
     }
 
 
-    /**
-     *  Gets a request builder for the AuthenticationMethodTarget collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.AuthenticationMethodTargetCollectionRequestBuilder includeTargets() {
-        return new com.microsoft.graph.requests.AuthenticationMethodTargetCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the AuthenticationMethodTarget item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.AuthenticationMethodTargetRequestBuilder includeTargets(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.AuthenticationMethodTargetRequestBuilder(getRequestUrlWithAdditionalSegment("includeTargets") + "/" + id, getClient(), null);
-    }
 }

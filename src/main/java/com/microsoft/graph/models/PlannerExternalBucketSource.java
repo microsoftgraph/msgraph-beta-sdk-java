@@ -36,7 +36,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
 
     /**
      * The External Context Id.
-     * Nullable. The id of the external entity's containing entity or context.
+     * Nullable. The ID of the external entity's containing entity or context.
      */
     @SerializedName(value = "externalContextId", alternate = {"ExternalContextId"})
     @Expose
@@ -45,7 +45,7 @@ public class PlannerExternalBucketSource extends PlannerBucketCreation implement
 
     /**
      * The External Object Id.
-     * Nullable. The id of the entity that an external service associates with a bucket.
+     * Nullable. The ID of the entity that an external service associates with a bucket.
      */
     @SerializedName(value = "externalObjectId", alternate = {"ExternalObjectId"})
     @Expose

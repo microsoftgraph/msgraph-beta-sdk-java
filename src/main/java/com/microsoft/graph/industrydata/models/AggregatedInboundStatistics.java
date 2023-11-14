@@ -59,7 +59,7 @@ public class AggregatedInboundStatistics implements IJsonBackedObject {
 
     /**
      * The Matched People By Role.
-     * The aggregate count of active people matched to an Azure Active Directory user, by role.
+     * The aggregate count of active people matched to a Microsoft Entra user, by role.
      */
     @SerializedName(value = "matchedPeopleByRole", alternate = {"MatchedPeopleByRole"})
     @Expose
@@ -95,7 +95,7 @@ public class AggregatedInboundStatistics implements IJsonBackedObject {
 
     /**
      * The Unmatched People By Role.
-     * The aggregate count of active people not matched to an Azure Active Directory user, by role.
+     * The aggregate count of active people not matched to a Microsoft Entra user, by role.
      */
     @SerializedName(value = "unmatchedPeopleByRole", alternate = {"UnmatchedPeopleByRole"})
     @Expose

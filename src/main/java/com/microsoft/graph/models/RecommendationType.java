@@ -140,6 +140,26 @@ public enum RecommendationType
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * long Lived Credentials
+    */
+    LONG_LIVED_CREDENTIALS,
+    /**
+    * aad Connect Deprecated
+    */
+    AAD_CONNECT_DEPRECATED,
+    /**
+    * adal To Msal Migration
+    */
+    ADAL_TO_MSAL_MIGRATION,
+    /**
+    * ownerless Apps
+    */
+    OWNERLESS_APPS,
+    /**
+    * inactive Guests
+    */
+    INACTIVE_GUESTS,
+    /**
     * For RecommendationType values that were not expected from the service
     */
     UNEXPECTED_VALUE

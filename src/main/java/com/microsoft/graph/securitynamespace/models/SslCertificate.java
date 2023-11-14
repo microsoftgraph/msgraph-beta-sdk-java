@@ -30,7 +30,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Expiration Date Time.
-     * 
+     * The date and time when a certificate expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Fingerprint.
-     * 
+     * A hash of the certificate calculated on the data and signature.
      */
     @SerializedName(value = "fingerprint", alternate = {"Fingerprint"})
     @Expose
@@ -48,7 +48,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The First Seen Date Time.
-     * 
+     * The first date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "firstSeenDateTime", alternate = {"FirstSeenDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Issue Date Time.
-     * 
+     * The date and time when a certificate was issued. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "issueDateTime", alternate = {"IssueDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Issuer.
-     * 
+     * The entity that grants this certificate.
      */
     @SerializedName(value = "issuer", alternate = {"Issuer"})
     @Expose
@@ -75,7 +75,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Last Seen Date Time.
-     * 
+     * The most recent date and time when this sslCertificate was observed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastSeenDateTime", alternate = {"LastSeenDateTime"})
     @Expose
@@ -84,7 +84,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Serial Number.
-     * 
+     * The serial number associated with an SSL certificate.
      */
     @SerializedName(value = "serialNumber", alternate = {"SerialNumber"})
     @Expose
@@ -93,7 +93,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Sha1.
-     * 
+     * A SHA-1 hash of the certificate. Note: This is not the signature.
      */
     @SerializedName(value = "sha1", alternate = {"Sha1"})
     @Expose
@@ -102,7 +102,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Subject.
-     * 
+     * The person, site, machine, and so on, this certificate is for.
      */
     @SerializedName(value = "subject", alternate = {"Subject"})
     @Expose
@@ -111,7 +111,7 @@ public class SslCertificate extends Artifact implements IJsonBackedObject {
 
     /**
      * The Related Hosts.
-     * 
+     * The hosts related with this sslCertificate.
      */
 	@Nullable
     public com.microsoft.graph.security.requests.HostCollectionPage relatedHosts;

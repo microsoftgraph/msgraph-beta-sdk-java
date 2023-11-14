@@ -106,4 +106,13 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder<Acce
     public com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder accessPackageResourceScopes(@Nonnull final String id) {
         return new com.microsoft.graph.requests.AccessPackageResourceScopeRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageResourceScopes") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public AccessPackageResourceRefreshRequestBuilder refresh() {
+        return new AccessPackageResourceRefreshRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.refresh"), getClient(), null);
+    }
 }

@@ -29,7 +29,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements IJsonBacked
 
     /**
      * The Pre Fetch Media.
-     * The list of media to pre-fetch.
+     * The list of media to prefetch.
      */
     @SerializedName(value = "preFetchMedia", alternate = {"PreFetchMedia"})
     @Expose

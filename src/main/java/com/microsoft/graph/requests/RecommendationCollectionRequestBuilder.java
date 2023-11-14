@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.Directory;
 import com.microsoft.graph.models.Recommendation;
+import com.microsoft.graph.models.TenantSecureScore;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -17,6 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.RecommendationCollectionRequestBuilder;
 import com.microsoft.graph.requests.RecommendationRequestBuilder;
 import com.microsoft.graph.requests.RecommendationCollectionRequest;
+import com.microsoft.graph.requests.RecommendationTenantSecureScoresCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -41,6 +43,15 @@ public class RecommendationCollectionRequestBuilder extends BaseCollectionReques
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public RecommendationTenantSecureScoresCollectionRequestBuilder tenantSecureScores() {
+        return new RecommendationTenantSecureScoresCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.tenantSecureScores"), getClient(), null);
+    }
 
     /**
      * Gets the raw count request for the collection

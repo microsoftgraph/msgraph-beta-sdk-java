@@ -52,7 +52,7 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
 
     /**
      * The Is Enabled.
-     * Represents if Azure AD Application Proxy is enabled for the tenant.
+     * Represents if Microsoft Entra application proxy is enabled for the tenant.
      */
     @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
     @Expose

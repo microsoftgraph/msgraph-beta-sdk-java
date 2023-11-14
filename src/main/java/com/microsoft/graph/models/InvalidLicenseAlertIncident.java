@@ -27,7 +27,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
 
     /**
      * The Tenant License Status.
-     * Status of the tenant's Azure AD Premium P2 license.
+     * Status of the tenant's Microsoft Entra ID P2 license.
      */
     @SerializedName(value = "tenantLicenseStatus", alternate = {"TenantLicenseStatus"})
     @Expose

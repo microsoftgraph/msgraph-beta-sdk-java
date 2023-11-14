@@ -40,7 +40,7 @@ public class CloudPcResizeValidationResult implements IJsonBackedObject {
 
     /**
      * The Cloud Pc Id.
-     * The cloudPC id that corresponds to its unique identifier.
+     * The cloudPC ID that corresponds to its unique identifier.
      */
     @SerializedName(value = "cloudPcId", alternate = {"CloudPcId"})
     @Expose

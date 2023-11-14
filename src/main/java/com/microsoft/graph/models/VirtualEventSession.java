@@ -8,7 +8,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.OnlineMeeting;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.DateTimeTimeZone;
+import com.microsoft.graph.models.OnlineMeetingBase;
+import com.microsoft.graph.requests.VirtualEventPresenterCollectionPage;
+import com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -22,8 +26,40 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Virtual Event Session.
  */
-public class VirtualEventSession extends OnlineMeeting implements IJsonBackedObject {
+public class VirtualEventSession extends OnlineMeetingBase implements IJsonBackedObject {
 
+
+    /**
+     * The End Date Time.
+     * 
+     */
+    @SerializedName(value = "endDateTime", alternate = {"EndDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone endDateTime;
+
+    /**
+     * The Start Date Time.
+     * 
+     */
+    @SerializedName(value = "startDateTime", alternate = {"StartDateTime"})
+    @Expose
+	@Nullable
+    public DateTimeTimeZone startDateTime;
+
+    /**
+     * The Presenters.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventPresenterCollectionPage presenters;
+
+    /**
+     * The Registrations.
+     * Registration records of this virtual event session.
+     */
+	@Nullable
+    public com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage registrations;
 
 
     /**
@@ -34,5 +70,13 @@ public class VirtualEventSession extends OnlineMeeting implements IJsonBackedObj
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("presenters")) {
+            presenters = serializer.deserializeObject(json.get("presenters"), com.microsoft.graph.requests.VirtualEventPresenterCollectionPage.class);
+        }
+
+        if (json.has("registrations")) {
+            registrations = serializer.deserializeObject(json.get("registrations"), com.microsoft.graph.requests.VirtualEventRegistrationCollectionPage.class);
+        }
     }
 }

@@ -41,7 +41,7 @@ public class CloudPcDomainJoinConfiguration implements IJsonBackedObject {
 
     /**
      * The On Premises Connection Id.
-     * The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Azure AD joined. If you enter an onPremisesConnectionId, leave regionName as empty.
+     * The Azure network connection ID that matches the virtual network IT admins want the provisioning policy to use when they create Cloud PCs. You can use this property in both domain join types: Azure AD joined or Hybrid Microsoft Entra joined. If you enter an onPremisesConnectionId, leave regionName as empty.
      */
     @SerializedName(value = "onPremisesConnectionId", alternate = {"OnPremisesConnectionId"})
     @Expose
@@ -59,7 +59,7 @@ public class CloudPcDomainJoinConfiguration implements IJsonBackedObject {
 
     /**
      * The Region Name.
-     * The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Azure AD joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty.
+     * The supported Azure region where the IT admin wants the provisioning policy to create Cloud PCs. The underlying virtual network will be created and managed by the Windows 365 service. This can only be entered if the IT admin chooses Microsoft Entra joined as the domain join type. If you enter a regionName, leave onPremisesConnectionId as empty.
      */
     @SerializedName(value = "regionName", alternate = {"RegionName"})
     @Expose
@@ -68,7 +68,7 @@ public class CloudPcDomainJoinConfiguration implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Specifies how the provisioned Cloud PC will be joined to Azure AD. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
+     * Specifies how the provisioned Cloud PC will be joined to Microsoft Entra ID. If you choose the hybridAzureADJoin type, only provide a value for the onPremisesConnectionId property and leave regionName as empty. If you choose the azureADJoin type, provide a value for either onPremisesConnectionId or regionName. The possible values are: azureADJoin, hybridAzureADJoin, unknownFutureValue.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

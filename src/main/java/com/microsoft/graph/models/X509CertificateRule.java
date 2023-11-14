@@ -59,7 +59,7 @@ public class X509CertificateRule implements IJsonBackedObject {
 
     /**
      * The X509Certificate Rule Type.
-     * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue. Required.
+     * The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
      */
     @SerializedName(value = "x509CertificateRuleType", alternate = {"X509CertificateRuleType"})
     @Expose

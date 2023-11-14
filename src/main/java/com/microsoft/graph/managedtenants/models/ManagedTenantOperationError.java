@@ -48,7 +48,7 @@ public class ManagedTenantOperationError implements IJsonBackedObject {
 
     /**
      * The Tenant Id.
-     * The Azure Active Directory tenant identifier for the managed tenant.
+     * The Microsoft Entra tenant identifier for the managed tenant.
      */
     @SerializedName(value = "tenantId", alternate = {"TenantId"})
     @Expose
