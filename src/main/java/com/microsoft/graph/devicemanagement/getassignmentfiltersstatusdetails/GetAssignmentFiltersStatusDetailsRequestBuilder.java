@@ -38,26 +38,26 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
     /**
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body The request body
-     * @return a CompletableFuture of assignmentFilterStatusDetails
+     * @return a AssignmentFilterStatusDetails
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public AssignmentFilterStatusDetails post(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body) {
         return post(body, null);
     }
     /**
      * Invoke action getAssignmentFiltersStatusDetails
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of assignmentFilterStatusDetails
+     * @return a AssignmentFilterStatusDetails
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<AssignmentFilterStatusDetails> post(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public AssignmentFilterStatusDetails post(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, AssignmentFilterStatusDetails::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, AssignmentFilterStatusDetails::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action getAssignmentFiltersStatusDetails
@@ -78,23 +78,23 @@ public class GetAssignmentFiltersStatusDetailsRequestBuilder extends BaseRequest
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GetAssignmentFiltersStatusDetailsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getAssignmentFiltersStatusDetailsRequestBuilder
+     * @return a GetAssignmentFiltersStatusDetailsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAssignmentFiltersStatusDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

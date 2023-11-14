@@ -4,9 +4,6 @@ import com.microsoft.graph.models.GroupCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.users.item.joinedgroups.delta.DeltaRequestBuilder;
 import com.microsoft.graph.users.item.joinedgroups.evaluatedynamicmembership.EvaluateDynamicMembershipRequestBuilder;
-import com.microsoft.graph.users.item.joinedgroups.getbyids.GetByIdsRequestBuilder;
-import com.microsoft.graph.users.item.joinedgroups.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
-import com.microsoft.graph.users.item.joinedgroups.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -40,27 +37,6 @@ public class JoinedGroupsRequestBuilder extends BaseRequestBuilder {
         return new EvaluateDynamicMembershipRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getByIds method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetByIdsRequestBuilder getByIds() {
-        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getUserOwnedObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
-        return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the validateProperties method.
-     */
-    @jakarta.annotation.Nonnull
-    public ValidatePropertiesRequestBuilder validateProperties() {
-        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Instantiates a new JoinedGroupsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -78,24 +54,24 @@ public class JoinedGroupsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get joinedGroups from users
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a GroupCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public GroupCollectionResponse get() {
         return get(null);
     }
     /**
      * Get joinedGroups from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupCollectionResponse
+     * @return a GroupCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get joinedGroups from users
@@ -113,10 +89,6 @@ public class JoinedGroupsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -124,12 +96,16 @@ public class JoinedGroupsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a joinedGroupsRequestBuilder
+     * @return a JoinedGroupsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public JoinedGroupsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -20,6 +20,7 @@ import com.microsoft.graph.sites.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.sites.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.sites.item.pages.PagesRequestBuilder;
 import com.microsoft.graph.sites.item.permissions.PermissionsRequestBuilder;
+import com.microsoft.graph.sites.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.sites.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.sites.item.termstore.TermStoreRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -146,6 +147,13 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return new PermissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the recycleBin property of the microsoft.graph.site entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RecycleBinRequestBuilder recycleBin() {
+        return new RecycleBinRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the sites property of the microsoft.graph.site entity.
      */
     @jakarta.annotation.Nonnull
@@ -177,33 +185,33 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
-     * @return a CompletableFuture of site
+     * @return a Site
      * @see <a href="https://learn.microsoft.com/graph/api/site-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> get() {
+    @jakarta.annotation.Nullable
+    public Site get() {
         return get(null);
     }
     /**
      * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a Site
      * @see <a href="https://learn.microsoft.com/graph/api/site-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Site get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getActivitiesByInterval method.
      * @param endDateTime Usage: endDateTime='{endDateTime}'
      * @param interval Usage: interval='{interval}'
      * @param startDateTime Usage: startDateTime='{startDateTime}'
-     * @return a getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return a GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(@jakarta.annotation.Nonnull final String endDateTime, @jakarta.annotation.Nonnull final String interval, @jakarta.annotation.Nonnull final String startDateTime) {
@@ -215,7 +223,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
      * @param listId Usage: listId='{listId}'
-     * @return a getApplicableContentTypesForListWithListIdRequestBuilder
+     * @return a GetApplicableContentTypesForListWithListIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
@@ -225,7 +233,7 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getByPath method.
      * @param path Usage: path='{path}'
-     * @return a getByPathWithPathRequestBuilder
+     * @return a GetByPathWithPathRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetByPathWithPathRequestBuilder getByPathWithPath(@jakarta.annotation.Nonnull final String path) {
@@ -235,26 +243,26 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Update entity in sites
      * @param body The request body
-     * @return a CompletableFuture of site
+     * @return a Site
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body) {
+    @jakarta.annotation.Nullable
+    public Site patch(@jakarta.annotation.Nonnull final Site body) {
         return patch(body, null);
     }
     /**
      * Update entity in sites
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of site
+     * @return a Site
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Site> patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Site patch(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Site::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Retrieve properties and relationships for a [site][] resource.A site resource represents a team site in SharePoint.
@@ -272,10 +280,6 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -283,6 +287,10 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -304,17 +312,17 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

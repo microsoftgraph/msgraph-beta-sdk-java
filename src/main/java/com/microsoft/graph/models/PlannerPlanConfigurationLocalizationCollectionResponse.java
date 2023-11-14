@@ -13,7 +13,7 @@ public class PlannerPlanConfigurationLocalizationCollectionResponse extends Base
      */
     private java.util.List<PlannerPlanConfigurationLocalization> value;
     /**
-     * Instantiates a new plannerPlanConfigurationLocalizationCollectionResponse and sets the default values.
+     * Instantiates a new PlannerPlanConfigurationLocalizationCollectionResponse and sets the default values.
      */
     public PlannerPlanConfigurationLocalizationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class PlannerPlanConfigurationLocalizationCollectionResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerPlanConfigurationLocalizationCollectionResponse
+     * @return a PlannerPlanConfigurationLocalizationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PlannerPlanConfigurationLocalizationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class PlannerPlanConfigurationLocalizationCollectionResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a plannerPlanConfigurationLocalization
+     * @return a java.util.List<PlannerPlanConfigurationLocalization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlannerPlanConfigurationLocalization> getValue() {

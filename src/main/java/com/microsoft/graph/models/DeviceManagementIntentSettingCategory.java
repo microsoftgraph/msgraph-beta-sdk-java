@@ -16,7 +16,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
      */
     private java.util.List<DeviceManagementSettingInstance> settings;
     /**
-     * Instantiates a new deviceManagementIntentSettingCategory and sets the default values.
+     * Instantiates a new DeviceManagementIntentSettingCategory and sets the default values.
      */
     public DeviceManagementIntentSettingCategory() {
         super();
@@ -24,7 +24,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementIntentSettingCategory
+     * @return a DeviceManagementIntentSettingCategory
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementIntentSettingCategory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
     }
     /**
      * Gets the settings property value. The settings this category contains
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {

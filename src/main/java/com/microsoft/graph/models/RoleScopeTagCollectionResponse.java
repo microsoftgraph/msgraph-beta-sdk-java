@@ -13,7 +13,7 @@ public class RoleScopeTagCollectionResponse extends BaseCollectionPaginationCoun
      */
     private java.util.List<RoleScopeTag> value;
     /**
-     * Instantiates a new roleScopeTagCollectionResponse and sets the default values.
+     * Instantiates a new RoleScopeTagCollectionResponse and sets the default values.
      */
     public RoleScopeTagCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class RoleScopeTagCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleScopeTagCollectionResponse
+     * @return a RoleScopeTagCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static RoleScopeTagCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class RoleScopeTagCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a roleScopeTag
+     * @return a java.util.List<RoleScopeTag>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTag> getValue() {

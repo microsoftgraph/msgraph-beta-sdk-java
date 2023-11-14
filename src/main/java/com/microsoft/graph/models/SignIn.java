@@ -11,15 +11,15 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SignIn extends Entity implements Parsable {
     /**
-     * The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
+     * The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
      */
     private String appDisplayName;
     /**
-     * The application identifier in Azure Active Directory.  Supports $filter (eq).
+     * The application identifier in Microsoft Entra ID.  Supports $filter (eq).
      */
     private String appId;
     /**
-     * A list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * A list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      */
     private java.util.List<AppliedConditionalAccessPolicy> appliedConditionalAccessPolicies;
     /**
@@ -31,11 +31,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private TokenProtectionStatus appTokenProtectionStatus;
     /**
-     * Provides details about the app and device used during an Azure AD authentication step.
+     * Provides details about the app and device used during a Microsoft Entra authentication step.
      */
     private AuthenticationAppDeviceDetails authenticationAppDeviceDetails;
     /**
-     * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+     * Provides details of the Microsoft Entra policies applied to a user and client authentication app during an authentication step.
      */
     private java.util.List<AuthenticationAppPolicyDetails> authenticationAppPolicyEvaluationDetails;
     /**
@@ -51,11 +51,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private java.util.List<String> authenticationMethodsUsed;
     /**
-     * Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
+     * More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
      */
     private java.util.List<KeyValue> authenticationProcessingDetails;
     /**
-     * Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
+     * Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that do not have a specific value in that list.
      */
     private EnumSet<ProtocolType> authenticationProtocol;
     /**
@@ -79,7 +79,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String clientAppUsed;
     /**
-     * Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+     * Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
      */
     private ClientCredentialType clientCredentialType;
     /**
@@ -115,11 +115,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private String homeTenantId;
     /**
-     * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
+     * For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
      */
     private String homeTenantName;
     /**
-     * Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      */
     private EnumSet<IncomingTokenType> incomingTokenType;
     /**
@@ -131,11 +131,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private String ipAddressFromResourceProvider;
     /**
-     * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
      */
     private Boolean isInteractive;
     /**
-     * Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
+     * Shows whether the sign in event was subject to a Microsoft Entra tenant restriction policy.
      */
     private Boolean isTenantRestricted;
     /**
@@ -163,7 +163,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private OriginalTransferMethods originalTransferMethod;
     /**
-     * Contains information about the Azure AD Private Link policy that is associated with the sign in event.
+     * Contains information about the Microsoft Entra Private Link policy that is associated with the sign in event.
      */
     private PrivateLinkDetails privateLinkDetails;
     /**
@@ -187,7 +187,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private String resourceTenantId;
     /**
-     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      */
     private RiskDetail riskDetail;
     /**
@@ -195,11 +195,11 @@ public class SignIn extends Entity implements Parsable {
      */
     private java.util.List<String> riskEventTypesV2;
     /**
-     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      */
     private RiskLevel riskLevelAggregated;
     /**
-     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      */
     private RiskLevel riskLevelDuringSignIn;
     /**
@@ -255,7 +255,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private TokenIssuerType tokenIssuerType;
     /**
-     * A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
+     * A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
      */
     private String uniqueTokenIdentifier;
     /**
@@ -279,7 +279,7 @@ public class SignIn extends Entity implements Parsable {
      */
     private SignInUserType userType;
     /**
-     * Instantiates a new signIn and sets the default values.
+     * Instantiates a new SignIn and sets the default values.
      */
     public SignIn() {
         super();
@@ -287,7 +287,7 @@ public class SignIn extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a signIn
+     * @return a SignIn
      */
     @jakarta.annotation.Nonnull
     public static SignIn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -295,24 +295,24 @@ public class SignIn extends Entity implements Parsable {
         return new SignIn();
     }
     /**
-     * Gets the appDisplayName property value. The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
-     * @return a string
+     * Gets the appDisplayName property value. The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
         return this.appDisplayName;
     }
     /**
-     * Gets the appId property value. The application identifier in Azure Active Directory.  Supports $filter (eq).
-     * @return a string
+     * Gets the appId property value. The application identifier in Microsoft Entra ID.  Supports $filter (eq).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
         return this.appId;
     }
     /**
-     * Gets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity.
-     * @return a appliedConditionalAccessPolicy
+     * Gets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
+     * @return a java.util.List<AppliedConditionalAccessPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppliedConditionalAccessPolicy> getAppliedConditionalAccessPolicies() {
@@ -320,7 +320,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the appliedEventListeners property value. Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
-     * @return a appliedAuthenticationEventListener
+     * @return a java.util.List<AppliedAuthenticationEventListener>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppliedAuthenticationEventListener> getAppliedEventListeners() {
@@ -328,23 +328,23 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the appTokenProtectionStatus property value. The appTokenProtectionStatus property
-     * @return a tokenProtectionStatus
+     * @return a TokenProtectionStatus
      */
     @jakarta.annotation.Nullable
     public TokenProtectionStatus getAppTokenProtectionStatus() {
         return this.appTokenProtectionStatus;
     }
     /**
-     * Gets the authenticationAppDeviceDetails property value. Provides details about the app and device used during an Azure AD authentication step.
-     * @return a authenticationAppDeviceDetails
+     * Gets the authenticationAppDeviceDetails property value. Provides details about the app and device used during a Microsoft Entra authentication step.
+     * @return a AuthenticationAppDeviceDetails
      */
     @jakarta.annotation.Nullable
     public AuthenticationAppDeviceDetails getAuthenticationAppDeviceDetails() {
         return this.authenticationAppDeviceDetails;
     }
     /**
-     * Gets the authenticationAppPolicyEvaluationDetails property value. Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
-     * @return a authenticationAppPolicyDetails
+     * Gets the authenticationAppPolicyEvaluationDetails property value. Provides details of the Microsoft Entra policies applied to a user and client authentication app during an authentication step.
+     * @return a java.util.List<AuthenticationAppPolicyDetails>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationAppPolicyDetails> getAuthenticationAppPolicyEvaluationDetails() {
@@ -352,7 +352,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
-     * @return a authenticationContext
+     * @return a java.util.List<AuthenticationContext>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationContext> getAuthenticationContextClassReferences() {
@@ -360,7 +360,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationDetails property value. The result of the authentication attempt and more details on the authentication method.
-     * @return a authenticationDetail
+     * @return a java.util.List<AuthenticationDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationDetail> getAuthenticationDetails() {
@@ -368,23 +368,23 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethodsUsed property value. The authentication methods used. Possible values: SMS, Authenticator App, App Verification code, Password, FIDO, PTA, or PHS.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAuthenticationMethodsUsed() {
         return this.authenticationMethodsUsed;
     }
     /**
-     * Gets the authenticationProcessingDetails property value. Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
-     * @return a keyValue
+     * Gets the authenticationProcessingDetails property value. More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getAuthenticationProcessingDetails() {
         return this.authenticationProcessingDetails;
     }
     /**
-     * Gets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
-     * @return a protocolType
+     * Gets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that do not have a specific value in that list.
+     * @return a EnumSet<ProtocolType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<ProtocolType> getAuthenticationProtocol() {
@@ -392,7 +392,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationRequirement property value. This holds the highest level of authentication needed through all the sign-in steps, for sign-in to succeed.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAuthenticationRequirement() {
@@ -400,7 +400,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationRequirementPolicies property value. Sources of authentication requirement, such as conditional access, per-user MFA, identity protection, and security defaults.
-     * @return a authenticationRequirementPolicy
+     * @return a java.util.List<AuthenticationRequirementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationRequirementPolicy> getAuthenticationRequirementPolicies() {
@@ -408,7 +408,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the autonomousSystemNumber property value. The Autonomous System Number (ASN) of the network used by the actor.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAutonomousSystemNumber() {
@@ -416,7 +416,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the azureResourceId property value. Contains a fully qualified Azure Resource Manager ID of an Azure resource accessed during the sign-in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureResourceId() {
@@ -424,15 +424,15 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the clientAppUsed property value. The legacy client used for sign-in activity. For example: Browser, Exchange ActiveSync, Modern clients, IMAP, MAPI, SMTP, or POP.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientAppUsed() {
         return this.clientAppUsed;
     }
     /**
-     * Gets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
-     * @return a clientCredentialType
+     * Gets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+     * @return a ClientCredentialType
      */
     @jakarta.annotation.Nullable
     public ClientCredentialType getClientCredentialType() {
@@ -440,7 +440,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccessStatus property value. The status of the conditional access policy triggered. Possible values: success, failure, notApplied, or unknownFutureValue.  Supports $filter (eq).
-     * @return a conditionalAccessStatus
+     * @return a ConditionalAccessStatus
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessStatus getConditionalAccessStatus() {
@@ -448,7 +448,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the correlationId property value. The identifier that's sent from the client when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -464,7 +464,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue. If the sign in didn't cross tenant boundaries, the value is none.
-     * @return a signInAccessType
+     * @return a EnumSet<SignInAccessType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<SignInAccessType> getCrossTenantAccessType() {
@@ -472,7 +472,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDetail property value. The device information from where the sign-in occurred. Includes information such as deviceId, OS, and browser.  Supports $filter (eq, startsWith) on browser and operatingSystem properties.
-     * @return a deviceDetail
+     * @return a DeviceDetail
      */
     @jakarta.annotation.Nullable
     public DeviceDetail getDeviceDetail() {
@@ -480,7 +480,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the federatedCredentialId property value. Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFederatedCredentialId() {
@@ -564,7 +564,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the flaggedForReview property value. During a failed sign in, a user may select a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFlaggedForReview() {
@@ -572,23 +572,23 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the homeTenantId property value. The tenant identifier of the user initiating the sign in. Not applicable in Managed Identity or service principal sign ins.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHomeTenantId() {
         return this.homeTenantId;
     }
     /**
-     * Gets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
-     * @return a string
+     * Gets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHomeTenantName() {
         return this.homeTenantName;
     }
     /**
-     * Gets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
-     * @return a incomingTokenType
+     * Gets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * @return a EnumSet<IncomingTokenType>
      */
     @jakarta.annotation.Nullable
     public EnumSet<IncomingTokenType> getIncomingTokenType() {
@@ -596,7 +596,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddress property value. The IP address of the client from where the sign-in occurred.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddress() {
@@ -604,23 +604,23 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the ipAddressFromResourceProvider property value. The IP address a user used to reach a resource provider, used to determine Conditional Access compliance for some policies. For example, when a user interacts with Exchange Online, the IP address Exchange receives from the user may be recorded here. This value is often null.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIpAddressFromResourceProvider() {
         return this.ipAddressFromResourceProvider;
     }
     /**
-     * Gets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
-     * @return a boolean
+     * Gets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInteractive() {
         return this.isInteractive;
     }
     /**
-     * Gets the isTenantRestricted property value. Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
-     * @return a boolean
+     * Gets the isTenantRestricted property value. Shows whether the sign in event was subject to a Microsoft Entra tenant restriction policy.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsTenantRestricted() {
@@ -628,7 +628,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the location property value. The city, state, and two letter country code from where the sign-in occurred.  Supports $filter (eq, startsWith) on city, state, and countryOrRegion properties.
-     * @return a signInLocation
+     * @return a SignInLocation
      */
     @jakarta.annotation.Nullable
     public SignInLocation getLocation() {
@@ -636,7 +636,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the managedServiceIdentity property value. Contains information about the managed identity used for the sign in, including its type, associated Azure Resource Manager (ARM) resource ID, and federated token information.
-     * @return a managedIdentity
+     * @return a ManagedIdentity
      */
     @jakarta.annotation.Nullable
     public ManagedIdentity getManagedServiceIdentity() {
@@ -644,7 +644,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the mfaDetail property value. The mfaDetail property
-     * @return a mfaDetail
+     * @return a MfaDetail
      */
     @jakarta.annotation.Nullable
     public MfaDetail getMfaDetail() {
@@ -652,7 +652,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the networkLocationDetails property value. The network location details including the type of network used and its names.
-     * @return a networkLocationDetail
+     * @return a java.util.List<NetworkLocationDetail>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NetworkLocationDetail> getNetworkLocationDetails() {
@@ -660,7 +660,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the originalRequestId property value. The request identifier of the first request in the authentication sequence.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOriginalRequestId() {
@@ -668,15 +668,15 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the originalTransferMethod property value. Transfer method used to initiate a session throughout all subsequent request. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
-     * @return a originalTransferMethods
+     * @return a OriginalTransferMethods
      */
     @jakarta.annotation.Nullable
     public OriginalTransferMethods getOriginalTransferMethod() {
         return this.originalTransferMethod;
     }
     /**
-     * Gets the privateLinkDetails property value. Contains information about the Azure AD Private Link policy that is associated with the sign in event.
-     * @return a privateLinkDetails
+     * Gets the privateLinkDetails property value. Contains information about the Microsoft Entra Private Link policy that is associated with the sign in event.
+     * @return a PrivateLinkDetails
      */
     @jakarta.annotation.Nullable
     public PrivateLinkDetails getPrivateLinkDetails() {
@@ -684,7 +684,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the processingTimeInMilliseconds property value. The request processing time in milliseconds in AD STS.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getProcessingTimeInMilliseconds() {
@@ -692,7 +692,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the resourceDisplayName property value. The name of the resource that the user signed in to.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceDisplayName() {
@@ -700,7 +700,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the resourceId property value. The identifier of the resource that the user signed in to.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
@@ -708,7 +708,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the resourceServicePrincipalId property value. The identifier of the service principal representing the target resource in the sign-in event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceServicePrincipalId() {
@@ -716,15 +716,15 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the resourceTenantId property value. The tenant identifier of the resource referenced in the sign in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceTenantId() {
         return this.resourceTenantId;
     }
     /**
-     * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
-     * @return a riskDetail
+     * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * @return a RiskDetail
      */
     @jakarta.annotation.Nullable
     public RiskDetail getRiskDetail() {
@@ -732,23 +732,23 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRiskEventTypesV2() {
         return this.riskEventTypesV2;
     }
     /**
-     * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
-     * @return a riskLevel
+     * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevelAggregated() {
         return this.riskLevelAggregated;
     }
     /**
-     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
-     * @return a riskLevel
+     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * @return a RiskLevel
      */
     @jakarta.annotation.Nullable
     public RiskLevel getRiskLevelDuringSignIn() {
@@ -756,7 +756,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the riskState property value. The risk state of a risky user, sign-in, or a risk event. Possible values: none, confirmedSafe, remediated, dismissed, atRisk, confirmedCompromised, or unknownFutureValue.  Supports $filter (eq).
-     * @return a riskState
+     * @return a RiskState
      */
     @jakarta.annotation.Nullable
     public RiskState getRiskState() {
@@ -764,7 +764,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalCredentialKeyId property value. The unique identifier of the key credential used by the service principal to authenticate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalCredentialKeyId() {
@@ -772,7 +772,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalCredentialThumbprint property value. The certificate thumbprint of the certificate used by the service principal to authenticate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalCredentialThumbprint() {
@@ -780,7 +780,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalId() {
@@ -788,7 +788,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServicePrincipalName() {
@@ -796,7 +796,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the sessionLifetimePolicies property value. Any conditional access session management policies that were applied during the sign-in event.
-     * @return a sessionLifetimePolicy
+     * @return a java.util.List<SessionLifetimePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SessionLifetimePolicy> getSessionLifetimePolicies() {
@@ -804,7 +804,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne).
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSignInEventTypes() {
@@ -812,7 +812,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the signInIdentifier property value. The identification that the user provided to sign in. It may be the userPrincipalName but it's also populated when a user signs in using other identifiers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignInIdentifier() {
@@ -820,7 +820,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
-     * @return a signInIdentifierType
+     * @return a SignInIdentifierType
      */
     @jakarta.annotation.Nullable
     public SignInIdentifierType getSignInIdentifierType() {
@@ -828,7 +828,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
-     * @return a tokenProtectionStatus
+     * @return a TokenProtectionStatus
      */
     @jakarta.annotation.Nullable
     public TokenProtectionStatus getSignInTokenProtectionStatus() {
@@ -836,7 +836,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The sign-in status. Includes the error code and description of the error (for a sign-in failure).  Supports $filter (eq) on errorCode property.
-     * @return a signInStatus
+     * @return a SignInStatus
      */
     @jakarta.annotation.Nullable
     public SignInStatus getStatus() {
@@ -844,7 +844,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerName property value. The name of the identity provider. For example, sts.microsoft.com.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTokenIssuerName() {
@@ -852,15 +852,15 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the tokenIssuerType property value. The type of identity provider. The possible values are: AzureAD, ADFederationServices, UnknownFutureValue, AzureADBackupAuth, ADFederationServicesMFAAdapter, NPSExtension. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: AzureADBackupAuth , ADFederationServicesMFAAdapter , NPSExtension.
-     * @return a tokenIssuerType
+     * @return a TokenIssuerType
      */
     @jakarta.annotation.Nullable
     public TokenIssuerType getTokenIssuerType() {
         return this.tokenIssuerType;
     }
     /**
-     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
-     * @return a string
+     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniqueTokenIdentifier() {
@@ -868,7 +868,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the userAgent property value. The user agent information related to sign-in.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserAgent() {
@@ -876,7 +876,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the userDisplayName property value. The display name of the user.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
@@ -884,7 +884,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. The identifier of the user.  Supports $filter (eq).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -892,7 +892,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. The UPN of the user.  Supports $filter (eq, startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -900,7 +900,7 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
-     * @return a signInUserType
+     * @return a SignInUserType
      */
     @jakarta.annotation.Nullable
     public SignInUserType getUserType() {
@@ -982,21 +982,21 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("userType", this.getUserType());
     }
     /**
-     * Sets the appDisplayName property value. The application name displayed in the Azure portal.  Supports $filter (eq, startsWith).
+     * Sets the appDisplayName property value. The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
      * @param value Value to set for the appDisplayName property.
      */
     public void setAppDisplayName(@jakarta.annotation.Nullable final String value) {
         this.appDisplayName = value;
     }
     /**
-     * Sets the appId property value. The application identifier in Azure Active Directory.  Supports $filter (eq).
+     * Sets the appId property value. The application identifier in Microsoft Entra ID.  Supports $filter (eq).
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.appId = value;
     }
     /**
-     * Sets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity.
+     * Sets the appliedConditionalAccessPolicies property value. A list of conditional access policies that are triggered by the corresponding sign-in activity. Apps need additional Conditional Access-related privileges to read the details of this property. For more information, see Viewing applied conditional access (CA) policies in sign-ins.
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      */
     public void setAppliedConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
@@ -1017,14 +1017,14 @@ public class SignIn extends Entity implements Parsable {
         this.appTokenProtectionStatus = value;
     }
     /**
-     * Sets the authenticationAppDeviceDetails property value. Provides details about the app and device used during an Azure AD authentication step.
+     * Sets the authenticationAppDeviceDetails property value. Provides details about the app and device used during a Microsoft Entra authentication step.
      * @param value Value to set for the authenticationAppDeviceDetails property.
      */
     public void setAuthenticationAppDeviceDetails(@jakarta.annotation.Nullable final AuthenticationAppDeviceDetails value) {
         this.authenticationAppDeviceDetails = value;
     }
     /**
-     * Sets the authenticationAppPolicyEvaluationDetails property value. Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
+     * Sets the authenticationAppPolicyEvaluationDetails property value. Provides details of the Microsoft Entra policies applied to a user and client authentication app during an authentication step.
      * @param value Value to set for the authenticationAppPolicyEvaluationDetails property.
      */
     public void setAuthenticationAppPolicyEvaluationDetails(@jakarta.annotation.Nullable final java.util.List<AuthenticationAppPolicyDetails> value) {
@@ -1052,14 +1052,14 @@ public class SignIn extends Entity implements Parsable {
         this.authenticationMethodsUsed = value;
     }
     /**
-     * Sets the authenticationProcessingDetails property value. Extra authentication processing details, such as the agent name for PTA/PHS or Server/farm name for federated authentication.
+     * Sets the authenticationProcessingDetails property value. More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
      * @param value Value to set for the authenticationProcessingDetails property.
      */
     public void setAuthenticationProcessingDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
         this.authenticationProcessingDetails = value;
     }
     /**
-     * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue. For authentications that use protocols other than the possible values listed, the protocol type is listed as none.
+     * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, and none. Use none for all authentications that do not have a specific value in that list.
      * @param value Value to set for the authenticationProtocol property.
      */
     public void setAuthenticationProtocol(@jakarta.annotation.Nullable final EnumSet<ProtocolType> value) {
@@ -1101,7 +1101,7 @@ public class SignIn extends Entity implements Parsable {
         this.clientAppUsed = value;
     }
     /**
-     * Sets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Azure AD to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
+     * Sets the clientCredentialType property value. Describes the credential type that a user client or service principal provided to Microsoft Entra ID to authenticate itself. You may wish to review clientCredentialType to track and eliminate less secure credential types or to watch for clients and service principals using anomalous credential types. The possible values are: none, clientSecret, clientAssertion, federatedIdentityCredential, managedIdentity, certificate, unknownFutureValue.
      * @param value Value to set for the clientCredentialType property.
      */
     public void setClientCredentialType(@jakarta.annotation.Nullable final ClientCredentialType value) {
@@ -1164,14 +1164,14 @@ public class SignIn extends Entity implements Parsable {
         this.homeTenantId = value;
     }
     /**
-     * Sets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Azure AD to show the tenant content.
+     * Sets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
      * @param value Value to set for the homeTenantName property.
      */
     public void setHomeTenantName(@jakarta.annotation.Nullable final String value) {
         this.homeTenantName = value;
     }
     /**
-     * Sets the incomingTokenType property value. Indicates the token types that were presented to Azure AD to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Azure AD may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
+     * Sets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken.  NOTE Microsoft Entra ID may have also used token types not listed in this Enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Also, please note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: remoteDesktopToken.
      * @param value Value to set for the incomingTokenType property.
      */
     public void setIncomingTokenType(@jakarta.annotation.Nullable final EnumSet<IncomingTokenType> value) {
@@ -1192,14 +1192,14 @@ public class SignIn extends Entity implements Parsable {
         this.ipAddressFromResourceProvider = value;
     }
     /**
-     * Sets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Azure AD. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Azure AD or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * Sets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
      * @param value Value to set for the isInteractive property.
      */
     public void setIsInteractive(@jakarta.annotation.Nullable final Boolean value) {
         this.isInteractive = value;
     }
     /**
-     * Sets the isTenantRestricted property value. Shows whether the sign in event was subject to an Azure AD tenant restriction policy.
+     * Sets the isTenantRestricted property value. Shows whether the sign in event was subject to a Microsoft Entra tenant restriction policy.
      * @param value Value to set for the isTenantRestricted property.
      */
     public void setIsTenantRestricted(@jakarta.annotation.Nullable final Boolean value) {
@@ -1248,7 +1248,7 @@ public class SignIn extends Entity implements Parsable {
         this.originalTransferMethod = value;
     }
     /**
-     * Sets the privateLinkDetails property value. Contains information about the Azure AD Private Link policy that is associated with the sign in event.
+     * Sets the privateLinkDetails property value. Contains information about the Microsoft Entra Private Link policy that is associated with the sign in event.
      * @param value Value to set for the privateLinkDetails property.
      */
     public void setPrivateLinkDetails(@jakarta.annotation.Nullable final PrivateLinkDetails value) {
@@ -1290,7 +1290,7 @@ public class SignIn extends Entity implements Parsable {
         this.resourceTenantId = value;
     }
     /**
-     * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. Possible values: none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, or unknownFutureValue. The value none means that no action has been performed on the user or sign-in so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
@@ -1304,14 +1304,14 @@ public class SignIn extends Entity implements Parsable {
         this.riskEventTypesV2 = value;
     }
     /**
-     * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in was not enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelAggregated property.
      */
     public void setRiskLevelAggregated(@jakarta.annotation.Nullable final RiskLevel value) {
         this.riskLevelAggregated = value;
     }
     /**
-     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Azure AD Identity Protection.  Supports $filter (eq). Note: Details for this property are only available for Azure AD Premium P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      */
     public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final RiskLevel value) {
@@ -1409,7 +1409,7 @@ public class SignIn extends Entity implements Parsable {
         this.tokenIssuerType = value;
     }
     /**
-     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Azure AD as they're redeemed at resource providers.
+     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
      * @param value Value to set for the uniqueTokenIdentifier property.
      */
     public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {

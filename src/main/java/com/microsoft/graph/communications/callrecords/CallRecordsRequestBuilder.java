@@ -65,31 +65,33 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/callRecords{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
-     * @return a CompletableFuture of callRecordCollectionResponse
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
+     * @return a CallRecordCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-callrecord-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CallRecordCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public CallRecordCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callRecordCollectionResponse
+     * @return a CallRecordCollectionResponse
+     * @see <a href="https://learn.microsoft.com/graph/api/callrecords-callrecord-list?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CallRecordCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CallRecordCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CallRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CallRecordCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getDirectRoutingCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -101,7 +103,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getPstnBlockedUsersLog method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -113,7 +115,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getPstnCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -125,7 +127,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getPstnOnlineMeetingDialoutReport method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -137,7 +139,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getSmsLog method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a microsoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder
+     * @return a MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
@@ -148,29 +150,29 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
     /**
      * Create new navigation property to callRecords for communications
      * @param body The request body
-     * @return a CompletableFuture of callRecord
+     * @return a CallRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CallRecord> post(@jakarta.annotation.Nonnull final CallRecord body) {
+    @jakarta.annotation.Nullable
+    public CallRecord post(@jakarta.annotation.Nonnull final CallRecord body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to callRecords for communications
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of callRecord
+     * @return a CallRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CallRecord> post(@jakarta.annotation.Nonnull final CallRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CallRecord post(@jakarta.annotation.Nonnull final CallRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CallRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CallRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -178,17 +180,13 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -196,6 +194,10 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -217,23 +219,23 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CallRecord body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a callRecordsRequestBuilder
+     * @return a CallRecordsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CallRecordsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -241,7 +243,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return new CallRecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a callRecord object. There are two ways to get the id of a callRecord: You can use the $expand query parameter to optionally include session and segment details, as shown in the Get full details example. When you expand session details, the maximum page size is 60 sessions.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

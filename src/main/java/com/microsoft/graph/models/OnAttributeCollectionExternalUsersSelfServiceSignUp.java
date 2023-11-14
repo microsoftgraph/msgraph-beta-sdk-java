@@ -17,7 +17,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
      */
     private java.util.List<IdentityUserFlowAttribute> attributes;
     /**
-     * Instantiates a new onAttributeCollectionExternalUsersSelfServiceSignUp and sets the default values.
+     * Instantiates a new OnAttributeCollectionExternalUsersSelfServiceSignUp and sets the default values.
      */
     public OnAttributeCollectionExternalUsersSelfServiceSignUp() {
         super();
@@ -26,7 +26,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onAttributeCollectionExternalUsersSelfServiceSignUp
+     * @return a OnAttributeCollectionExternalUsersSelfServiceSignUp
      */
     @jakarta.annotation.Nonnull
     public static OnAttributeCollectionExternalUsersSelfServiceSignUp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
     }
     /**
      * Gets the attributeCollectionPage property value. Required. The configuration for how attributes are displayed in the sign up experience defined by a user flow, like the externalUsersSelfServiceSignupEventsFlow, specifically on the attribute collection page.
-     * @return a authenticationAttributeCollectionPage
+     * @return a AuthenticationAttributeCollectionPage
      */
     @jakarta.annotation.Nullable
     public AuthenticationAttributeCollectionPage getAttributeCollectionPage() {
@@ -43,7 +43,7 @@ public class OnAttributeCollectionExternalUsersSelfServiceSignUp extends OnAttri
     }
     /**
      * Gets the attributes property value. The attributes property
-     * @return a identityUserFlowAttribute
+     * @return a java.util.List<IdentityUserFlowAttribute>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlowAttribute> getAttributes() {

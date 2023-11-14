@@ -10,7 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class WorkforceIntegration extends ChangeTrackedEntity implements Parsable {
     /**
-     * API version for the call back URL. Start with 1.
+     * API version for the callback URL. Start with 1.
      */
     private Integer apiVersion;
     /**
@@ -30,11 +30,11 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      */
     private Boolean isActive;
     /**
-     * This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
+     * This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      */
     private EnumSet<WorkforceIntegrationSupportedEntities> supportedEntities;
     /**
-     * The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
+     * The Shifts entities supported for synchronous change notifications. Shifts make a callback to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      */
     private EnumSet<WorkforceIntegrationSupportedEntities> supports;
     /**
@@ -42,7 +42,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
      */
     private String url;
     /**
-     * Instantiates a new workforceIntegration and sets the default values.
+     * Instantiates a new WorkforceIntegration and sets the default values.
      */
     public WorkforceIntegration() {
         super();
@@ -51,7 +51,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workforceIntegration
+     * @return a WorkforceIntegration
      */
     @jakarta.annotation.Nonnull
     public static WorkforceIntegration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,8 +59,8 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         return new WorkforceIntegration();
     }
     /**
-     * Gets the apiVersion property value. API version for the call back URL. Start with 1.
-     * @return a integer
+     * Gets the apiVersion property value. API version for the callback URL. Start with 1.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getApiVersion() {
@@ -68,7 +68,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     }
     /**
      * Gets the displayName property value. Name of the workforce integration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -76,7 +76,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     }
     /**
      * Gets the eligibilityFilteringEnabledEntities property value. The eligibilityFilteringEnabledEntities property
-     * @return a eligibilityFilteringEnabledEntities
+     * @return a EnumSet<EligibilityFilteringEnabledEntities>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EligibilityFilteringEnabledEntities> getEligibilityFilteringEnabledEntities() {
@@ -84,7 +84,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     }
     /**
      * Gets the encryption property value. The workforce integration encryption resource.
-     * @return a workforceIntegrationEncryption
+     * @return a WorkforceIntegrationEncryption
      */
     @jakarta.annotation.Nullable
     public WorkforceIntegrationEncryption getEncryption() {
@@ -109,23 +109,23 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     }
     /**
      * Gets the isActive property value. Indicates whether this workforce integration is currently active and available.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsActive() {
         return this.isActive;
     }
     /**
-     * Gets the supportedEntities property value. This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
-     * @return a workforceIntegrationSupportedEntities
+     * Gets the supportedEntities property value. This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
+     * @return a EnumSet<WorkforceIntegrationSupportedEntities>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WorkforceIntegrationSupportedEntities> getSupportedEntities() {
         return this.supportedEntities;
     }
     /**
-     * Gets the supports property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
-     * @return a workforceIntegrationSupportedEntities
+     * Gets the supports property value. The Shifts entities supported for synchronous change notifications. Shifts make a callback to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
+     * @return a EnumSet<WorkforceIntegrationSupportedEntities>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WorkforceIntegrationSupportedEntities> getSupports() {
@@ -133,7 +133,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
     }
     /**
      * Gets the url property value. Workforce Integration URL for callbacks from the Shifts service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUrl() {
@@ -156,7 +156,7 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         writer.writeStringValue("url", this.getUrl());
     }
     /**
-     * Sets the apiVersion property value. API version for the call back URL. Start with 1.
+     * Sets the apiVersion property value. API version for the callback URL. Start with 1.
      * @param value Value to set for the apiVersion property.
      */
     public void setApiVersion(@jakarta.annotation.Nullable final Integer value) {
@@ -191,14 +191,14 @@ public class WorkforceIntegration extends ChangeTrackedEntity implements Parsabl
         this.isActive = value;
     }
     /**
-     * Sets the supportedEntities property value. This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
+     * Sets the supportedEntities property value. This property has replaced supports in v1.0. We recommend that you use this property instead of supports. The supports property is still supported in beta for the time being. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      * @param value Value to set for the supportedEntities property.
      */
     public void setSupportedEntities(@jakarta.annotation.Nullable final EnumSet<WorkforceIntegrationSupportedEntities> value) {
         this.supportedEntities = value;
     }
     /**
-     * Sets the supports property value. The Shifts entities supported for synchronous change notifications. Shifts will make a call back to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
+     * Sets the supports property value. The Shifts entities supported for synchronous change notifications. Shifts make a callback to the url provided on client changes on those entities added here. By default, no entities are supported for change notifications. The possible values are: none, shift, swapRequest, openshift, openShiftRequest, userShiftPreferences, offerShiftRequest, unknownFutureValue, timeCard, timeOffReason, timeOff, timeOffRequest. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: timeCard, timeOffReason, timeOff, timeOffRequest. If selecting more than one value, all values must start with the first letter in uppercase.
      * @param value Value to set for the supports property.
      */
     public void setSupports(@jakarta.annotation.Nullable final EnumSet<WorkforceIntegrationSupportedEntities> value) {

@@ -16,7 +16,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
      */
     private java.util.List<WindowsPackageInformation> appXPackageInformationList;
     /**
-     * Instantiates a new windowsPhone81AppXBundle and sets the default values.
+     * Instantiates a new WindowsPhone81AppXBundle and sets the default values.
      */
     public WindowsPhone81AppXBundle() {
         super();
@@ -25,7 +25,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhone81AppXBundle
+     * @return a WindowsPhone81AppXBundle
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81AppXBundle createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class WindowsPhone81AppXBundle extends WindowsPhone81AppX implements Pars
     }
     /**
      * Gets the appXPackageInformationList property value. The list of AppX Package Information.
-     * @return a windowsPackageInformation
+     * @return a java.util.List<WindowsPackageInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WindowsPackageInformation> getAppXPackageInformationList() {

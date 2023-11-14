@@ -56,7 +56,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
      */
     private String subjectNameFormatString;
     /**
-     * Instantiates a new androidDeviceOwnerPkcsCertificateProfile and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerPkcsCertificateProfile and sets the default values.
      */
     public AndroidDeviceOwnerPkcsCertificateProfile() {
         super();
@@ -65,7 +65,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerPkcsCertificateProfile
+     * @return a AndroidDeviceOwnerPkcsCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerPkcsCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -74,7 +74,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
-     * @return a androidDeviceOwnerCertificateAccessType
+     * @return a AndroidDeviceOwnerCertificateAccessType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateAccessType getCertificateAccessType() {
@@ -82,7 +82,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateStore property value. CertificateStore types
-     * @return a certificateStore
+     * @return a CertificateStore
      */
     @jakarta.annotation.Nullable
     public CertificateStore getCertificateStore() {
@@ -90,7 +90,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateTemplateName() {
@@ -98,7 +98,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthority() {
@@ -106,7 +106,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationAuthorityName() {
@@ -114,7 +114,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the certificationAuthorityType property value. Device Management Certification Authority Types.
-     * @return a deviceManagementCertificationAuthority
+     * @return a DeviceManagementCertificationAuthority
      */
     @jakarta.annotation.Nullable
     public DeviceManagementCertificationAuthority getCertificationAuthorityType() {
@@ -122,7 +122,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
-     * @return a customSubjectAlternativeName
+     * @return a java.util.List<CustomSubjectAlternativeName>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
@@ -150,7 +150,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -158,7 +158,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the silentCertificateAccessDetails property value. Certificate access information. This collection can contain a maximum of 50 elements.
-     * @return a androidDeviceOwnerSilentCertificateAccess
+     * @return a java.util.List<AndroidDeviceOwnerSilentCertificateAccess>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerSilentCertificateAccess> getSilentCertificateAccessDetails() {
@@ -166,7 +166,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -174,7 +174,7 @@ public class AndroidDeviceOwnerPkcsCertificateProfile extends AndroidDeviceOwner
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

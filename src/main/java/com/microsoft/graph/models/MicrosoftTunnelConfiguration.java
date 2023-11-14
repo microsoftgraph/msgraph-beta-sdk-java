@@ -73,7 +73,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
      */
     private java.util.List<String> splitDNS;
     /**
-     * Instantiates a new microsoftTunnelConfiguration and sets the default values.
+     * Instantiates a new MicrosoftTunnelConfiguration and sets the default values.
      */
     public MicrosoftTunnelConfiguration() {
         super();
@@ -81,7 +81,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a microsoftTunnelConfiguration
+     * @return a MicrosoftTunnelConfiguration
      */
     @jakarta.annotation.Nonnull
     public static MicrosoftTunnelConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +90,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the advancedSettings property value. Additional settings that may be applied to the server
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getAdvancedSettings() {
@@ -98,7 +98,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the defaultDomainSuffix property value. The Default Domain appendix that will be used by the clients
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainSuffix() {
@@ -106,7 +106,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The configuration's description (optional)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -114,7 +114,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the disableUdpConnections property value. When DisableUdpConnections is set, the clients and VPN server will not use DTLS connections to transfer data.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableUdpConnections() {
@@ -122,7 +122,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the server configuration. This property is required when a server is created.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -130,7 +130,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the dnsServers property value. The DNS servers that will be used by the clients
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDnsServers() {
@@ -170,7 +170,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the listenPort property value. The port that both TCP and UPD will listen over on the server
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getListenPort() {
@@ -178,7 +178,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the network property value. The subnet that will be used to allocate virtual address for the clients
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetwork() {
@@ -186,7 +186,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -194,7 +194,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the routeExcludes property value. Subsets of the routes that will not be routed by the server
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRouteExcludes() {
@@ -202,7 +202,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the routeIncludes property value. The routes that will be routed by the server
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRouteIncludes() {
@@ -210,7 +210,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoutesExclude() {
@@ -218,7 +218,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoutesInclude() {
@@ -226,7 +226,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the splitDNS property value. The domains that will be resolved using the provided dns servers
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSplitDNS() {

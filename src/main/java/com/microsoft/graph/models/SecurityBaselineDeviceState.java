@@ -33,7 +33,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new securityBaselineDeviceState and sets the default values.
+     * Instantiates a new SecurityBaselineDeviceState and sets the default values.
      */
     public SecurityBaselineDeviceState() {
         super();
@@ -41,7 +41,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityBaselineDeviceState
+     * @return a SecurityBaselineDeviceState
      */
     @jakarta.annotation.Nonnull
     public static SecurityBaselineDeviceState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the deviceDisplayName property value. Display name of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceDisplayName() {
@@ -80,7 +80,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the managedDeviceId property value. Intune device id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
@@ -88,7 +88,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Security Baseline Compliance State
-     * @return a securityBaselineComplianceState
+     * @return a SecurityBaselineComplianceState
      */
     @jakarta.annotation.Nullable
     public SecurityBaselineComplianceState getState() {
@@ -96,7 +96,7 @@ public class SecurityBaselineDeviceState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

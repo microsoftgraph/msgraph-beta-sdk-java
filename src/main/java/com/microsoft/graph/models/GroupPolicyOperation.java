@@ -29,7 +29,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
      */
     private String statusDetails;
     /**
-     * Instantiates a new groupPolicyOperation and sets the default values.
+     * Instantiates a new GroupPolicyOperation and sets the default values.
      */
     public GroupPolicyOperation() {
         super();
@@ -37,7 +37,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyOperation
+     * @return a GroupPolicyOperation
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationStatus property value. Type of Group Policy operation status.
-     * @return a groupPolicyOperationStatus
+     * @return a GroupPolicyOperationStatus
      */
     @jakarta.annotation.Nullable
     public GroupPolicyOperationStatus getOperationStatus() {
@@ -75,7 +75,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the operationType property value. Type of Group Policy operation.
-     * @return a groupPolicyOperationType
+     * @return a GroupPolicyOperationType
      */
     @jakarta.annotation.Nullable
     public GroupPolicyOperationType getOperationType() {
@@ -83,7 +83,7 @@ public class GroupPolicyOperation extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. The group policy operation status detail.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatusDetails() {

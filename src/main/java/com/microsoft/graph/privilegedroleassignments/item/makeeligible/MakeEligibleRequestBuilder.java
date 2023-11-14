@@ -37,24 +37,24 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke action makeEligible
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a PrivilegedRoleAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post() {
+    @jakarta.annotation.Nullable
+    public PrivilegedRoleAssignment post() {
         return post(null);
     }
     /**
      * Invoke action makeEligible
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of privilegedRoleAssignment
+     * @return a PrivilegedRoleAssignment
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PrivilegedRoleAssignment> post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PrivilegedRoleAssignment post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PrivilegedRoleAssignment::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PrivilegedRoleAssignment::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke action makeEligible
@@ -72,22 +72,22 @@ public class MakeEligibleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a makeEligibleRequestBuilder
+     * @return a MakeEligibleRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public MakeEligibleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

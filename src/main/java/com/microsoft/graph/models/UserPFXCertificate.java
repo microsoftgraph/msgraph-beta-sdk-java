@@ -61,7 +61,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new userPFXCertificate and sets the default values.
+     * Instantiates a new UserPFXCertificate and sets the default values.
      */
     public UserPFXCertificate() {
         super();
@@ -69,7 +69,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userPFXCertificate
+     * @return a UserPFXCertificate
      */
     @jakarta.annotation.Nonnull
     public static UserPFXCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -86,7 +86,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the encryptedPfxBlob property value. Encrypted PFX blob.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getEncryptedPfxBlob() {
@@ -94,7 +94,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the encryptedPfxPassword property value. Encrypted PFX password.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEncryptedPfxPassword() {
@@ -131,7 +131,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
-     * @return a userPfxIntendedPurpose
+     * @return a UserPfxIntendedPurpose
      */
     @jakarta.annotation.Nullable
     public UserPfxIntendedPurpose getIntendedPurpose() {
@@ -139,7 +139,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the keyName property value. Name of the key (within the provider) used to encrypt the blob.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getKeyName() {
@@ -155,7 +155,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the paddingScheme property value. Supported values for the padding scheme used by encryption provider.
-     * @return a userPfxPaddingScheme
+     * @return a UserPfxPaddingScheme
      */
     @jakarta.annotation.Nullable
     public UserPfxPaddingScheme getPaddingScheme() {
@@ -163,7 +163,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the providerName property value. Crypto provider used to encrypt this blob.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProviderName() {
@@ -179,7 +179,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the thumbprint property value. SHA-1 thumbprint of the PFX certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getThumbprint() {
@@ -187,7 +187,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name of the PFX certificate.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

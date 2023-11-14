@@ -17,7 +17,7 @@ public class VerticalSection extends Entity implements Parsable {
      */
     private java.util.List<WebPart> webparts;
     /**
-     * Instantiates a new verticalSection and sets the default values.
+     * Instantiates a new VerticalSection and sets the default values.
      */
     public VerticalSection() {
         super();
@@ -25,7 +25,7 @@ public class VerticalSection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a verticalSection
+     * @return a VerticalSection
      */
     @jakarta.annotation.Nonnull
     public static VerticalSection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * Gets the emphasis property value. Enumeration value that indicates the emphasis of the section background. The possible values are: none, netural, soft, strong, unknownFutureValue.
-     * @return a sectionEmphasisType
+     * @return a SectionEmphasisType
      */
     @jakarta.annotation.Nullable
     public SectionEmphasisType getEmphasis() {
@@ -53,7 +53,7 @@ public class VerticalSection extends Entity implements Parsable {
     }
     /**
      * Gets the webparts property value. The set of web parts in this section.
-     * @return a webPart
+     * @return a java.util.List<WebPart>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WebPart> getWebparts() {

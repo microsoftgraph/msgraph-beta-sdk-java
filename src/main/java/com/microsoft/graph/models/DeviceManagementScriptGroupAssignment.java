@@ -16,7 +16,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      */
     private String targetGroupId;
     /**
-     * Instantiates a new deviceManagementScriptGroupAssignment and sets the default values.
+     * Instantiates a new DeviceManagementScriptGroupAssignment and sets the default values.
      */
     public DeviceManagementScriptGroupAssignment() {
         super();
@@ -24,7 +24,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptGroupAssignment
+     * @return a DeviceManagementScriptGroupAssignment
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptGroupAssignment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
     }
     /**
      * Gets the targetGroupId property value. The Id of the Azure Active Directory group we are targeting the script to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetGroupId() {

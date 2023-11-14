@@ -28,7 +28,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
      */
     private Integer successUserCount;
     /**
-     * Instantiates a new deviceManagementScriptRunSummary and sets the default values.
+     * Instantiates a new DeviceManagementScriptRunSummary and sets the default values.
      */
     public DeviceManagementScriptRunSummary() {
         super();
@@ -36,7 +36,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementScriptRunSummary
+     * @return a DeviceManagementScriptRunSummary
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementScriptRunSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the errorDeviceCount property value. Error device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorDeviceCount() {
@@ -53,7 +53,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the errorUserCount property value. Error user count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorUserCount() {
@@ -74,7 +74,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the successDeviceCount property value. Success device count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessDeviceCount() {
@@ -82,7 +82,7 @@ public class DeviceManagementScriptRunSummary extends Entity implements Parsable
     }
     /**
      * Gets the successUserCount property value. Success user count.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessUserCount() {

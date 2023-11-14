@@ -37,28 +37,28 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
-     * @return a CompletableFuture of team
+     * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
+     * @return a Team
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Team> get() {
+    @jakarta.annotation.Nullable
+    public Team get() {
         return get(null);
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of team
+     * @return a Team
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Team> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Team get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Team::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Team::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,17 +66,13 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -97,7 +97,7 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         return new TeamItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
+     * The Microsoft Teams teams the user is a member of. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

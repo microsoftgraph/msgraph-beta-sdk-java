@@ -80,7 +80,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
      */
     private Boolean securityRequireCompanyPortalAppIntegrity;
     /**
-     * An enum representing the Android SafetyNet attestation evaluation types.
+     * An enum representing the Android Play Integrity API evaluation types.
      */
     private AndroidSafetyNetEvaluationType securityRequiredAndroidSafetyNetEvaluationType;
     /**
@@ -108,7 +108,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
      */
     private Boolean storageRequireEncryption;
     /**
-     * Instantiates a new androidForWorkCompliancePolicy and sets the default values.
+     * Instantiates a new AndroidForWorkCompliancePolicy and sets the default values.
      */
     public AndroidForWorkCompliancePolicy() {
         super();
@@ -117,7 +117,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidForWorkCompliancePolicy
+     * @return a AndroidForWorkCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static AndroidForWorkCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -126,7 +126,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
@@ -134,7 +134,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -175,7 +175,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
@@ -183,7 +183,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Android version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -191,7 +191,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Android version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -199,7 +199,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -207,7 +207,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -215,7 +215,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -223,7 +223,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordBlockCount() {
@@ -231,7 +231,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -239,7 +239,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordRequiredType property value. Android required password type.
-     * @return a androidRequiredPasswordType
+     * @return a AndroidRequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordType getPasswordRequiredType() {
@@ -247,7 +247,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign-in failures allowed before factory reset. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
@@ -255,7 +255,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
-     * @return a androidRequiredPasswordComplexity
+     * @return a AndroidRequiredPasswordComplexity
      */
     @jakarta.annotation.Nullable
     public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
@@ -263,7 +263,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
@@ -271,7 +271,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityDisableUsbDebugging() {
@@ -279,7 +279,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityPreventInstallAppsFromUnknownSources() {
@@ -287,15 +287,15 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireCompanyPortalAppIntegrity() {
         return this.securityRequireCompanyPortalAppIntegrity;
     }
     /**
-     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android SafetyNet attestation evaluation types.
-     * @return a androidSafetyNetEvaluationType
+     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android Play Integrity API evaluation types.
+     * @return a AndroidSafetyNetEvaluationType
      */
     @jakarta.annotation.Nullable
     public AndroidSafetyNetEvaluationType getSecurityRequiredAndroidSafetyNetEvaluationType() {
@@ -303,7 +303,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireGooglePlayServices() {
@@ -311,7 +311,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationBasicIntegrity() {
@@ -319,7 +319,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationCertifiedDevice() {
@@ -327,7 +327,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireUpToDateSecurityProviders() {
@@ -335,7 +335,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireVerifyApps() {
@@ -343,7 +343,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
@@ -501,7 +501,7 @@ public class AndroidForWorkCompliancePolicy extends DeviceCompliancePolicy imple
         this.securityRequireCompanyPortalAppIntegrity = value;
     }
     /**
-     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android SafetyNet attestation evaluation types.
+     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. An enum representing the Android Play Integrity API evaluation types.
      * @param value Value to set for the securityRequiredAndroidSafetyNetEvaluationType property.
      */
     public void setSecurityRequiredAndroidSafetyNetEvaluationType(@jakarta.annotation.Nullable final AndroidSafetyNetEvaluationType value) {

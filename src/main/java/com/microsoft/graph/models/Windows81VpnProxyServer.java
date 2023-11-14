@@ -20,7 +20,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
      */
     private Boolean bypassProxyServerForLocalAddress;
     /**
-     * Instantiates a new windows81VpnProxyServer and sets the default values.
+     * Instantiates a new Windows81VpnProxyServer and sets the default values.
      */
     public Windows81VpnProxyServer() {
         super();
@@ -29,7 +29,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81VpnProxyServer
+     * @return a Windows81VpnProxyServer
      */
     @jakarta.annotation.Nonnull
     public static Windows81VpnProxyServer createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
     }
     /**
      * Gets the automaticallyDetectProxySettings property value. Automatically detect proxy settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutomaticallyDetectProxySettings() {
@@ -46,7 +46,7 @@ public class Windows81VpnProxyServer extends VpnProxyServer implements Parsable 
     }
     /**
      * Gets the bypassProxyServerForLocalAddress property value. Bypass proxy server for local address.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBypassProxyServerForLocalAddress() {

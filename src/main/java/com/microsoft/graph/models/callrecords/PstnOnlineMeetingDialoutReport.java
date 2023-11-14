@@ -47,15 +47,15 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
      */
     private String userDisplayName;
     /**
-     * The unique identifier (GUID) of the user in Azure Active Directory.
+     * The unique identifier (GUID) of the user in Microsoft Entra ID.
      */
     private String userId;
     /**
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new pstnOnlineMeetingDialoutReport and sets the default values.
+     * Instantiates a new PstnOnlineMeetingDialoutReport and sets the default values.
      */
     public PstnOnlineMeetingDialoutReport() {
         this.setAdditionalData(new HashMap<>());
@@ -63,7 +63,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pstnOnlineMeetingDialoutReport
+     * @return a PstnOnlineMeetingDialoutReport
      */
     @jakarta.annotation.Nonnull
     public static PstnOnlineMeetingDialoutReport createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,7 +71,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
         return new PstnOnlineMeetingDialoutReport();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -80,7 +80,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the currency property value. Currency used to calculate the cost of the call. For details, see ISO 4217.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrency() {
@@ -88,7 +88,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationContext() {
@@ -115,7 +115,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -123,7 +123,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the totalCallCharge property value. Total costs of all the calls within the selected time range, including call charges and connection fees.
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalCallCharge() {
@@ -131,7 +131,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the totalCalls property value. Total number of dial-out calls within the selected time range.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCalls() {
@@ -139,7 +139,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the totalCallSeconds property value. Total duration of all the calls within the selected time range, in seconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalCallSeconds() {
@@ -147,7 +147,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the usageLocation property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsageLocation() {
@@ -155,23 +155,23 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory.
-     * @return a string
+     * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a string
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -196,8 +196,8 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -259,14 +259,14 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Par
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory.
+     * Sets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

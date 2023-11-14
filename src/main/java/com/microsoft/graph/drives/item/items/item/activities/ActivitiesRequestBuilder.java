@@ -59,24 +59,24 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of recent activities that took place on this item.
-     * @return a CompletableFuture of itemActivityOLDCollectionResponse
+     * @return a ItemActivityOLDCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityOLDCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ItemActivityOLDCollectionResponse get() {
         return get(null);
     }
     /**
      * The list of recent activities that took place on this item.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of itemActivityOLDCollectionResponse
+     * @return a ItemActivityOLDCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ItemActivityOLDCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ItemActivityOLDCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ItemActivityOLDCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ItemActivityOLDCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The list of recent activities that took place on this item.
@@ -94,10 +94,6 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -105,12 +101,16 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a activitiesRequestBuilder
+     * @return a ActivitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

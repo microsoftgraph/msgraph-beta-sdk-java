@@ -2,16 +2,11 @@ package com.microsoft.graph.users.item.devices.item;
 
 import com.microsoft.graph.models.Device;
 import com.microsoft.graph.models.odataerrors.ODataError;
-import com.microsoft.graph.users.item.devices.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
-import com.microsoft.graph.users.item.devices.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.commands.CommandsRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.extensions.ExtensionsRequestBuilder;
-import com.microsoft.graph.users.item.devices.item.getmembergroups.GetMemberGroupsRequestBuilder;
-import com.microsoft.graph.users.item.devices.item.getmemberobjects.GetMemberObjectsRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.registeredusers.RegisteredUsersRequestBuilder;
-import com.microsoft.graph.users.item.devices.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.transitivememberof.TransitiveMemberOfRequestBuilder;
 import com.microsoft.graph.users.item.devices.item.usagerights.UsageRightsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -33,20 +28,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to call the checkMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
-        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the checkMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
-        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the commands property of the microsoft.graph.device entity.
      */
     @jakarta.annotation.Nonnull
@@ -59,20 +40,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberGroups method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberGroupsRequestBuilder getMemberGroups() {
-        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getMemberObjects method.
-     */
-    @jakarta.annotation.Nonnull
-    public GetMemberObjectsRequestBuilder getMemberObjects() {
-        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
@@ -94,13 +61,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RegisteredUsersRequestBuilder registeredUsers() {
         return new RegisteredUsersRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the restore method.
-     */
-    @jakarta.annotation.Nonnull
-    public RestoreRequestBuilder restore() {
-        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
@@ -135,66 +95,64 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property devices for users
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property devices for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
      * Get devices from users
-     * @return a CompletableFuture of device
+     * @return a Device
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Device> get() {
+    @jakarta.annotation.Nullable
+    public Device get() {
         return get(null);
     }
     /**
      * Get devices from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a Device
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Device> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Device get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update the navigation property devices in users
      * @param body The request body
-     * @return a CompletableFuture of device
+     * @return a Device
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Device> patch(@jakarta.annotation.Nonnull final Device body) {
+    @jakarta.annotation.Nullable
+    public Device patch(@jakarta.annotation.Nonnull final Device body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property devices in users
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of device
+     * @return a Device
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Device> patch(@jakarta.annotation.Nonnull final Device body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Device patch(@jakarta.annotation.Nonnull final Device body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Device::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property devices for users
@@ -212,15 +170,16 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
         if (requestConfiguration != null) {
             final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.DELETE;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -239,10 +198,6 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -250,6 +205,10 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -271,17 +230,17 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Device body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

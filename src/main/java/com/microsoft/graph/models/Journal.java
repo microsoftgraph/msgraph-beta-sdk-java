@@ -52,7 +52,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new journal and sets the default values.
+     * Instantiates a new Journal and sets the default values.
      */
     public Journal() {
         this.setAdditionalData(new HashMap<>());
@@ -60,7 +60,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a journal
+     * @return a Journal
      */
     @jakarta.annotation.Nonnull
     public static Journal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,14 +69,14 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the account property value. The account property
-     * @return a account
+     * @return a Account
      */
     @jakarta.annotation.Nullable
     public Account getAccount() {
         return this.account;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the balancingAccountNumber property value. The balancingAccountNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBalancingAccountNumber() {
@@ -101,7 +101,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the code property value. The code property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCode() {
@@ -109,7 +109,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -143,7 +143,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the journalLines property value. The journalLines property
-     * @return a journalLine
+     * @return a java.util.List<JournalLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<JournalLine> getJournalLines() {
@@ -159,7 +159,7 @@ public class Journal implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -190,8 +190,8 @@ public class Journal implements AdditionalDataHolder, Parsable {
         this.account = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

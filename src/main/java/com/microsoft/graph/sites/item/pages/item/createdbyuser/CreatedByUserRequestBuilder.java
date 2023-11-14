@@ -3,6 +3,7 @@ package com.microsoft.graph.sites.item.pages.item.createdbyuser;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.graph.sites.item.pages.item.createdbyuser.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.sites.item.pages.item.createdbyuser.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -29,6 +30,13 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new CreatedByUserRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -46,24 +54,24 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get createdByUser from sites
-     * @return a CompletableFuture of user
+     * @return a User
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> get() {
+    @jakarta.annotation.Nullable
+    public User get() {
         return get(null);
     }
     /**
      * Get createdByUser from sites
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a User
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get createdByUser from sites
@@ -81,10 +89,6 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -92,12 +96,16 @@ public class CreatedByUserRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a createdByUserRequestBuilder
+     * @return a CreatedByUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

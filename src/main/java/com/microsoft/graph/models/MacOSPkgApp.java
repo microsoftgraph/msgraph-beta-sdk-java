@@ -24,6 +24,14 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
      */
     private MacOSMinimumOperatingSystem minimumSupportedOperatingSystem;
     /**
+     * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     */
+    private MacOSAppScript postInstallScript;
+    /**
+     * ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     */
+    private MacOSAppScript preInstallScript;
+    /**
      * The primary CFBundleIdentifier of the .pkg.
      */
     private String primaryBundleId;
@@ -32,7 +40,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
      */
     private String primaryBundleVersion;
     /**
-     * Instantiates a new macOSPkgApp and sets the default values.
+     * Instantiates a new MacOSPkgApp and sets the default values.
      */
     public MacOSPkgApp() {
         super();
@@ -41,7 +49,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSPkgApp
+     * @return a MacOSPkgApp
      */
     @jakarta.annotation.Nonnull
     public static MacOSPkgApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,13 +66,15 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         deserializerMap.put("ignoreVersionDetection", (n) -> { this.setIgnoreVersionDetection(n.getBooleanValue()); });
         deserializerMap.put("includedApps", (n) -> { this.setIncludedApps(n.getCollectionOfObjectValues(MacOSIncludedApp::createFromDiscriminatorValue)); });
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(MacOSMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("postInstallScript", (n) -> { this.setPostInstallScript(n.getObjectValue(MacOSAppScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("preInstallScript", (n) -> { this.setPreInstallScript(n.getObjectValue(MacOSAppScript::createFromDiscriminatorValue)); });
         deserializerMap.put("primaryBundleId", (n) -> { this.setPrimaryBundleId(n.getStringValue()); });
         deserializerMap.put("primaryBundleVersion", (n) -> { this.setPrimaryBundleVersion(n.getStringValue()); });
         return deserializerMap;
     }
     /**
      * Gets the ignoreVersionDetection property value. A value indicating whether the app's version will be used to detect the app after it is installed on a device. Set this to true for apps that use a self-update feature. Set this to false to install the app when it is not already installed on the device, or if the deploying app's version number does not match the version that's already installed on the device. The default value is false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
@@ -72,7 +82,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the includedApps property value. The list of apps expected to be installed by the .pkg.
-     * @return a macOSIncludedApp
+     * @return a java.util.List<MacOSIncludedApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MacOSIncludedApp> getIncludedApps() {
@@ -80,15 +90,31 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a macOSMinimumOperatingSystem
+     * @return a MacOSMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public MacOSMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
         return this.minimumSupportedOperatingSystem;
     }
     /**
+     * Gets the postInstallScript property value. ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     * @return a MacOSAppScript
+     */
+    @jakarta.annotation.Nullable
+    public MacOSAppScript getPostInstallScript() {
+        return this.postInstallScript;
+    }
+    /**
+     * Gets the preInstallScript property value. ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     * @return a MacOSAppScript
+     */
+    @jakarta.annotation.Nullable
+    public MacOSAppScript getPreInstallScript() {
+        return this.preInstallScript;
+    }
+    /**
      * Gets the primaryBundleId property value. The primary CFBundleIdentifier of the .pkg.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryBundleId() {
@@ -96,7 +122,7 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
     }
     /**
      * Gets the primaryBundleVersion property value. The primary CFBundleVersion of the .pkg.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrimaryBundleVersion() {
@@ -112,6 +138,8 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
         writer.writeBooleanValue("ignoreVersionDetection", this.getIgnoreVersionDetection());
         writer.writeCollectionOfObjectValues("includedApps", this.getIncludedApps());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
+        writer.writeObjectValue("postInstallScript", this.getPostInstallScript());
+        writer.writeObjectValue("preInstallScript", this.getPreInstallScript());
         writer.writeStringValue("primaryBundleId", this.getPrimaryBundleId());
         writer.writeStringValue("primaryBundleVersion", this.getPrimaryBundleVersion());
     }
@@ -135,6 +163,20 @@ public class MacOSPkgApp extends MobileLobApp implements Parsable {
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final MacOSMinimumOperatingSystem value) {
         this.minimumSupportedOperatingSystem = value;
+    }
+    /**
+     * Sets the postInstallScript property value. ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     * @param value Value to set for the postInstallScript property.
+     */
+    public void setPostInstallScript(@jakarta.annotation.Nullable final MacOSAppScript value) {
+        this.postInstallScript = value;
+    }
+    /**
+     * Sets the preInstallScript property value. ComplexType macOSAppScript the contains the post-install script for the app. This will execute on the macOS device after the app is installed.
+     * @param value Value to set for the preInstallScript property.
+     */
+    public void setPreInstallScript(@jakarta.annotation.Nullable final MacOSAppScript value) {
+        this.preInstallScript = value;
     }
     /**
      * Sets the primaryBundleId property value. The primary CFBundleIdentifier of the .pkg.

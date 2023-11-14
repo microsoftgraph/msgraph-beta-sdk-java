@@ -34,7 +34,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     private CloudPcSnapshotStatus status;
     /**
-     * Instantiates a new cloudPcSnapshot and sets the default values.
+     * Instantiates a new CloudPcSnapshot and sets the default values.
      */
     public CloudPcSnapshot() {
         super();
@@ -42,7 +42,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcSnapshot
+     * @return a CloudPcSnapshot
      */
     @jakarta.annotation.Nonnull
     public static CloudPcSnapshot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPcId property value. The unique identifier for the Cloud PC.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcId() {
@@ -98,7 +98,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     }
     /**
      * Gets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
-     * @return a cloudPcSnapshotType
+     * @return a CloudPcSnapshotType
      */
     @jakarta.annotation.Nullable
     public CloudPcSnapshotType getSnapshotType() {
@@ -106,7 +106,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the Cloud PC snapshot. The possible values are: ready, unknownFutureValue.
-     * @return a cloudPcSnapshotStatus
+     * @return a CloudPcSnapshotStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcSnapshotStatus getStatus() {

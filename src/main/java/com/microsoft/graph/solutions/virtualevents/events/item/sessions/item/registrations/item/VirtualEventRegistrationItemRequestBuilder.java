@@ -37,28 +37,28 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/events/{virtualEvent%2Did}/sessions/{virtualEventSession%2Did}/registrations/{virtualEventRegistration%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get registrations from solutions
-     * @return a CompletableFuture of virtualEventRegistration
+     * Registration records of this virtual event session.
+     * @return a VirtualEventRegistration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventRegistration> get() {
+    @jakarta.annotation.Nullable
+    public VirtualEventRegistration get() {
         return get(null);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of virtualEventRegistration
+     * @return a VirtualEventRegistration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<VirtualEventRegistration> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public VirtualEventRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, VirtualEventRegistration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, VirtualEventRegistration::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -66,17 +66,13 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -97,7 +97,7 @@ public class VirtualEventRegistrationItemRequestBuilder extends BaseRequestBuild
         return new VirtualEventRegistrationItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get registrations from solutions
+     * Registration records of this virtual event session.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

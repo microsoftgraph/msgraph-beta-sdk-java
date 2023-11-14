@@ -30,7 +30,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
      */
     private String temporaryAccessPass;
     /**
-     * Instantiates a new temporaryAccessPassAuthenticationMethod and sets the default values.
+     * Instantiates a new TemporaryAccessPassAuthenticationMethod and sets the default values.
      */
     public TemporaryAccessPassAuthenticationMethod() {
         super();
@@ -39,7 +39,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a temporaryAccessPassAuthenticationMethod
+     * @return a TemporaryAccessPassAuthenticationMethod
      */
     @jakarta.annotation.Nonnull
     public static TemporaryAccessPassAuthenticationMethod createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +70,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     }
     /**
      * Gets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsableOnce() {
@@ -78,7 +78,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     }
     /**
      * Gets the lifetimeInMinutes property value. The lifetime of the Temporary Access Pass in minutes starting at startDateTime. Must be between 10 and 43200 inclusive (equivalent to 30 days).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLifetimeInMinutes() {
@@ -94,7 +94,7 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     }
     /**
      * Gets the temporaryAccessPass property value. The Temporary Access Pass used to authenticate. Returned only on creation of a new temporaryAccessPassAuthenticationMethod object; Hidden in subsequent read operations and returned as null with GET.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemporaryAccessPass() {

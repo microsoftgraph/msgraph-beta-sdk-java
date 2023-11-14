@@ -43,7 +43,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new retentionLabelSettings and sets the default values.
+     * Instantiates a new RetentionLabelSettings and sets the default values.
      */
     public RetentionLabelSettings() {
         this.setAdditionalData(new HashMap<>());
@@ -51,7 +51,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a retentionLabelSettings
+     * @return a RetentionLabelSettings
      */
     @jakarta.annotation.Nonnull
     public static RetentionLabelSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,7 +59,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         return new RetentionLabelSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the behaviorDuringRetentionPeriod property value. Describes the item behavior during retention period. Possible values are: doNotRetain, retain, retainAsRecord, retainAsRegulatoryRecord, unknownFutureValue. Read-only.
-     * @return a behaviorDuringRetentionPeriod
+     * @return a BehaviorDuringRetentionPeriod
      */
     @jakarta.annotation.Nullable
     public BehaviorDuringRetentionPeriod getBehaviorDuringRetentionPeriod() {
@@ -92,7 +92,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isContentUpdateAllowed property value. Specifies whether updates to document content are allowed. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsContentUpdateAllowed() {
@@ -100,7 +100,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isDeleteAllowed property value. Specifies whether the document deletion is allowed. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeleteAllowed() {
@@ -108,7 +108,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isLabelUpdateAllowed property value. Specifies whether you're allowed to change the retention label on the document. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLabelUpdateAllowed() {
@@ -116,7 +116,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isMetadataUpdateAllowed property value. Specifies whether updates to the item metadata (for example, the Title field) are blocked. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMetadataUpdateAllowed() {
@@ -124,7 +124,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isRecordLocked property value. Specifies whether the item is locked. Read-write.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordLocked() {
@@ -132,7 +132,7 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -154,8 +154,8 @@ public class RetentionLabelSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

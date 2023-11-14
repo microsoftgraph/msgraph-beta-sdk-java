@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      */
     private String templateId;
     /**
-     * Instantiates a new deviceManagementConfigurationPolicyTemplateReference and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicyTemplateReference and sets the default values.
      */
     public DeviceManagementConfigurationPolicyTemplateReference() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicyTemplateReference
+     * @return a DeviceManagementConfigurationPolicyTemplateReference
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplateReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
         return new DeviceManagementConfigurationPolicyTemplateReference();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Gets the templateDisplayName property value. Template Display Name of the referenced template. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateDisplayName() {
@@ -92,7 +92,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Gets the templateDisplayVersion property value. Template Display Version of the referenced Template. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateDisplayVersion() {
@@ -100,7 +100,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
-     * @return a deviceManagementConfigurationTemplateFamily
+     * @return a DeviceManagementConfigurationTemplateFamily
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTemplateFamily getTemplateFamily() {
@@ -108,7 +108,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Gets the templateId property value. Template id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
@@ -126,8 +126,8 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

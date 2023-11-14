@@ -25,7 +25,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
      */
     private OnUserCreateStartHandler onUserCreateStart;
     /**
-     * Instantiates a new externalUsersSelfServiceSignUpEventsFlow and sets the default values.
+     * Instantiates a new ExternalUsersSelfServiceSignUpEventsFlow and sets the default values.
      */
     public ExternalUsersSelfServiceSignUpEventsFlow() {
         super();
@@ -34,7 +34,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a externalUsersSelfServiceSignUpEventsFlow
+     * @return a ExternalUsersSelfServiceSignUpEventsFlow
      */
     @jakarta.annotation.Nonnull
     public static ExternalUsersSelfServiceSignUpEventsFlow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAttributeCollection property value. The configuration for what to invoke when attributes are ready to be collected from the user.
-     * @return a onAttributeCollectionHandler
+     * @return a OnAttributeCollectionHandler
      */
     @jakarta.annotation.Nullable
     public OnAttributeCollectionHandler getOnAttributeCollection() {
@@ -64,7 +64,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
-     * @return a onAuthenticationMethodLoadStartHandler
+     * @return a OnAuthenticationMethodLoadStartHandler
      */
     @jakarta.annotation.Nullable
     public OnAuthenticationMethodLoadStartHandler getOnAuthenticationMethodLoadStart() {
@@ -72,7 +72,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onInteractiveAuthFlowStart property value. Required. The configuration for what to invoke when an authentication flow is ready to be initiated.
-     * @return a onInteractiveAuthFlowStartHandler
+     * @return a OnInteractiveAuthFlowStartHandler
      */
     @jakarta.annotation.Nullable
     public OnInteractiveAuthFlowStartHandler getOnInteractiveAuthFlowStart() {
@@ -80,7 +80,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
     }
     /**
      * Gets the onUserCreateStart property value. The configuration for what to invoke during user creation.
-     * @return a onUserCreateStartHandler
+     * @return a OnUserCreateStartHandler
      */
     @jakarta.annotation.Nullable
     public OnUserCreateStartHandler getOnUserCreateStart() {

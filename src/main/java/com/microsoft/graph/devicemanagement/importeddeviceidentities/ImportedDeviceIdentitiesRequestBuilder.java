@@ -76,48 +76,48 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The imported device identities.
-     * @return a CompletableFuture of importedDeviceIdentityCollectionResponse
+     * @return a ImportedDeviceIdentityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedDeviceIdentityCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ImportedDeviceIdentityCollectionResponse get() {
         return get(null);
     }
     /**
      * The imported device identities.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedDeviceIdentityCollectionResponse
+     * @return a ImportedDeviceIdentityCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedDeviceIdentityCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImportedDeviceIdentityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportedDeviceIdentityCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImportedDeviceIdentityCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to importedDeviceIdentities for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of importedDeviceIdentity
+     * @return a ImportedDeviceIdentity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body) {
+    @jakarta.annotation.Nullable
+    public ImportedDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to importedDeviceIdentities for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of importedDeviceIdentity
+     * @return a ImportedDeviceIdentity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ImportedDeviceIdentity> post(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ImportedDeviceIdentity post(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ImportedDeviceIdentity::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ImportedDeviceIdentity::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The imported device identities.
@@ -135,10 +135,6 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -146,6 +142,10 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -167,23 +167,23 @@ public class ImportedDeviceIdentitiesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ImportedDeviceIdentity body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a importedDeviceIdentitiesRequestBuilder
+     * @return a ImportedDeviceIdentitiesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ImportedDeviceIdentitiesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

@@ -37,24 +37,24 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Invoke function getCloudPcLaunchInfo
-     * @return a CompletableFuture of cloudPcLaunchInfo
+     * @return a CloudPcLaunchInfo
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CloudPcLaunchInfo> get() {
+    @jakarta.annotation.Nullable
+    public CloudPcLaunchInfo get() {
         return get(null);
     }
     /**
      * Invoke function getCloudPcLaunchInfo
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcLaunchInfo
+     * @return a CloudPcLaunchInfo
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<CloudPcLaunchInfo> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public CloudPcLaunchInfo get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CloudPcLaunchInfo::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CloudPcLaunchInfo::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getCloudPcLaunchInfo
@@ -72,22 +72,22 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getCloudPcLaunchInfoRequestBuilder
+     * @return a GetCloudPcLaunchInfoRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCloudPcLaunchInfoRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

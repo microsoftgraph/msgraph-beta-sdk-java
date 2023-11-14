@@ -35,6 +35,10 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     private CloudPcDeviceImageOsStatus osStatus;
     /**
+     * The scopeIds property
+     */
+    private java.util.List<String> scopeIds;
+    /**
      * The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
      */
     private String sourceImageResourceId;
@@ -51,7 +55,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new cloudPcDeviceImage and sets the default values.
+     * Instantiates a new CloudPcDeviceImage and sets the default values.
      */
     public CloudPcDeviceImage() {
         super();
@@ -59,7 +63,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcDeviceImage
+     * @return a CloudPcDeviceImage
      */
     @jakarta.annotation.Nonnull
     public static CloudPcDeviceImage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +72,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name of the image.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -95,6 +99,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
         deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
         deserializerMap.put("osStatus", (n) -> { this.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus.class)); });
+        deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("sourceImageResourceId", (n) -> { this.setSourceImageResourceId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcDeviceImageStatus.class)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getEnumValue(CloudPcDeviceImageStatusDetails.class)); });
@@ -111,7 +116,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the operatingSystem property value. The operating system of the image. For example, Windows 10 Enterprise.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
@@ -119,7 +124,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsBuildNumber() {
@@ -127,15 +132,23 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
-     * @return a cloudPcDeviceImageOsStatus
+     * @return a CloudPcDeviceImageOsStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
         return this.osStatus;
     }
     /**
+     * Gets the scopeIds property value. The scopeIds property
+     * @return a java.util.List<String>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getScopeIds() {
+        return this.scopeIds;
+    }
+    /**
      * Gets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceImageResourceId() {
@@ -143,7 +156,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
-     * @return a cloudPcDeviceImageStatus
+     * @return a CloudPcDeviceImageStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatus getStatus() {
@@ -151,7 +164,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the statusDetails property value. The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
-     * @return a cloudPcDeviceImageStatusDetails
+     * @return a CloudPcDeviceImageStatusDetails
      */
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageStatusDetails getStatusDetails() {
@@ -159,7 +172,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The image version. For example, 0.0.1 and 1.5.13.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
@@ -178,6 +191,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeStringValue("osBuildNumber", this.getOsBuildNumber());
         writer.writeEnumValue("osStatus", this.getOsStatus());
+        writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeStringValue("sourceImageResourceId", this.getSourceImageResourceId());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeEnumValue("statusDetails", this.getStatusDetails());
@@ -224,6 +238,13 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     public void setOsStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
         this.osStatus = value;
+    }
+    /**
+     * Sets the scopeIds property value. The scopeIds property
+     * @param value Value to set for the scopeIds property.
+     */
+    public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.scopeIds = value;
     }
     /**
      * Sets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.

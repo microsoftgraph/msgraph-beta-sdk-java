@@ -14,7 +14,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
      */
     private String email;
     /**
-     * Instantiates a new submissionUserIdentity and sets the default values.
+     * Instantiates a new SubmissionUserIdentity and sets the default values.
      */
     public SubmissionUserIdentity() {
         super();
@@ -23,7 +23,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a submissionUserIdentity
+     * @return a SubmissionUserIdentity
      */
     @jakarta.annotation.Nonnull
     public static SubmissionUserIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -32,7 +32,7 @@ public class SubmissionUserIdentity extends Identity implements Parsable {
     }
     /**
      * Gets the email property value. The email of user who is making the submission when logged in (delegated token case).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {

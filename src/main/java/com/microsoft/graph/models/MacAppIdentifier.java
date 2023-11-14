@@ -16,7 +16,7 @@ public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
      */
     private String bundleId;
     /**
-     * Instantiates a new macAppIdentifier and sets the default values.
+     * Instantiates a new MacAppIdentifier and sets the default values.
      */
     public MacAppIdentifier() {
         super();
@@ -25,7 +25,7 @@ public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macAppIdentifier
+     * @return a MacAppIdentifier
      */
     @jakarta.annotation.Nonnull
     public static MacAppIdentifier createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class MacAppIdentifier extends MobileAppIdentifier implements Parsable {
     }
     /**
      * Gets the bundleId property value. The identifier for an app, as specified in the app store.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBundleId() {

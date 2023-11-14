@@ -13,7 +13,7 @@ public class EducationSynchronizationErrorCollectionResponse extends BaseCollect
      */
     private java.util.List<EducationSynchronizationError> value;
     /**
-     * Instantiates a new educationSynchronizationErrorCollectionResponse and sets the default values.
+     * Instantiates a new EducationSynchronizationErrorCollectionResponse and sets the default values.
      */
     public EducationSynchronizationErrorCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class EducationSynchronizationErrorCollectionResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSynchronizationErrorCollectionResponse
+     * @return a EducationSynchronizationErrorCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static EducationSynchronizationErrorCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class EducationSynchronizationErrorCollectionResponse extends BaseCollect
     }
     /**
      * Gets the value property value. The value property
-     * @return a educationSynchronizationError
+     * @return a java.util.List<EducationSynchronizationError>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSynchronizationError> getValue() {

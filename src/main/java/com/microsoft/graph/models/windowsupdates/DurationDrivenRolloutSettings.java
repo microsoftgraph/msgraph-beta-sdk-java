@@ -14,7 +14,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
      */
     private PeriodAndDuration durationUntilDeploymentEnd;
     /**
-     * Instantiates a new durationDrivenRolloutSettings and sets the default values.
+     * Instantiates a new DurationDrivenRolloutSettings and sets the default values.
      */
     public DurationDrivenRolloutSettings() {
         super();
@@ -23,7 +23,7 @@ public class DurationDrivenRolloutSettings extends GradualRolloutSettings implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a durationDrivenRolloutSettings
+     * @return a DurationDrivenRolloutSettings
      */
     @jakarta.annotation.Nonnull
     public static DurationDrivenRolloutSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

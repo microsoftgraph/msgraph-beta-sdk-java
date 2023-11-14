@@ -29,7 +29,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
      */
     private String odataType;
     /**
-     * Instantiates a new deviceAndAppManagementAssignmentTarget and sets the default values.
+     * Instantiates a new DeviceAndAppManagementAssignmentTarget and sets the default values.
      */
     public DeviceAndAppManagementAssignmentTarget() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceAndAppManagementAssignmentTarget
+     * @return a DeviceAndAppManagementAssignmentTarget
      */
     @jakarta.annotation.Nonnull
     public static DeviceAndAppManagementAssignmentTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,12 +52,13 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
                 case "#microsoft.graph.configurationManagerCollectionAssignmentTarget": return new ConfigurationManagerCollectionAssignmentTarget();
                 case "#microsoft.graph.exclusionGroupAssignmentTarget": return new ExclusionGroupAssignmentTarget();
                 case "#microsoft.graph.groupAssignmentTarget": return new GroupAssignmentTarget();
+                case "#microsoft.graph.scopeTagGroupAssignmentTarget": return new ScopeTagGroupAssignmentTarget();
             }
         }
         return new DeviceAndAppManagementAssignmentTarget();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +67,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the deviceAndAppManagementAssignmentFilterId property value. The Id of the filter for the target assignment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceAndAppManagementAssignmentFilterId() {
@@ -74,7 +75,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the deviceAndAppManagementAssignmentFilterType property value. Represents type of the assignment filter.
-     * @return a deviceAndAppManagementAssignmentFilterType
+     * @return a DeviceAndAppManagementAssignmentFilterType
      */
     @jakarta.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilterType getDeviceAndAppManagementAssignmentFilterType() {
@@ -94,7 +95,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -112,8 +113,8 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

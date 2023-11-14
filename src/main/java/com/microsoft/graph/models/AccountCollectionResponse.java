@@ -13,7 +13,7 @@ public class AccountCollectionResponse extends BaseCollectionPaginationCountResp
      */
     private java.util.List<Account> value;
     /**
-     * Instantiates a new accountCollectionResponse and sets the default values.
+     * Instantiates a new AccountCollectionResponse and sets the default values.
      */
     public AccountCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class AccountCollectionResponse extends BaseCollectionPaginationCountResp
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accountCollectionResponse
+     * @return a AccountCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AccountCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class AccountCollectionResponse extends BaseCollectionPaginationCountResp
     }
     /**
      * Gets the value property value. The value property
-     * @return a account
+     * @return a java.util.List<Account>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Account> getValue() {

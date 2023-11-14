@@ -1,6 +1,7 @@
 package com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.item.taskprocessingresults.item.subject;
 
 import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.item.taskprocessingresults.item.subject.mailboxsettings.MailboxSettingsRequestBuilder;
+import com.microsoft.graph.identitygovernance.lifecycleworkflows.workflows.item.taskreports.item.taskprocessingresults.item.subject.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.User;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,13 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
         return new MailboxSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new SubjectRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -45,28 +53,28 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/taskReports/{taskReport%2Did}/taskProcessingResults/{taskProcessingResult%2Did}/subject{?%24select,%24expand}", rawUrl);
     }
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
-     * @return a CompletableFuture of user
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * @return a User
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> get() {
+    @jakarta.annotation.Nullable
+    public User get() {
         return get(null);
     }
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of user
+     * @return a User
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<User> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public User get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, User::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, User::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -74,17 +82,13 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -92,12 +96,16 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a subjectRequestBuilder
+     * @return a SubjectRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public SubjectRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -105,7 +113,7 @@ public class SubjectRequestBuilder extends BaseRequestBuilder {
         return new SubjectRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The unique identifier of the Azure AD user targeted for the task execution.Supports $filter(eq, ne) and $expand.
+     * The unique identifier of the Microsoft Entra user targeted for the task execution.Supports $filter(eq, ne) and $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

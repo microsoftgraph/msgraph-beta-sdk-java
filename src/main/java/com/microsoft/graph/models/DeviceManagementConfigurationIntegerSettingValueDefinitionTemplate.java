@@ -29,7 +29,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
      */
     private String odataType;
     /**
-     * Instantiates a new deviceManagementConfigurationIntegerSettingValueDefinitionTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate and sets the default values.
      */
     public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
@@ -37,7 +37,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationIntegerSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
         return new DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +66,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the maxValue property value. Integer Setting Maximum Value. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaxValue() {
@@ -74,7 +74,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the minValue property value. Integer Setting Minimum Value. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinValue() {
@@ -82,7 +82,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -100,8 +100,8 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -34,7 +34,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
      */
     private DeviceManagementApplicabilityRuleType ruleType;
     /**
-     * Instantiates a new deviceManagementApplicabilityRuleOsVersion and sets the default values.
+     * Instantiates a new DeviceManagementApplicabilityRuleOsVersion and sets the default values.
      */
     public DeviceManagementApplicabilityRuleOsVersion() {
         this.setAdditionalData(new HashMap<>());
@@ -42,7 +42,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementApplicabilityRuleOsVersion
+     * @return a DeviceManagementApplicabilityRuleOsVersion
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementApplicabilityRuleOsVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         return new DeviceManagementApplicabilityRuleOsVersion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     }
     /**
      * Gets the maxOSVersion property value. Max OS version for Applicability Rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaxOSVersion() {
@@ -81,7 +81,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     }
     /**
      * Gets the minOSVersion property value. Min OS version for Applicability Rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinOSVersion() {
@@ -89,7 +89,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     }
     /**
      * Gets the name property value. Name for object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -97,7 +97,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -105,7 +105,7 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
     }
     /**
      * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
-     * @return a deviceManagementApplicabilityRuleType
+     * @return a DeviceManagementApplicabilityRuleType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleType getRuleType() {
@@ -125,8 +125,8 @@ public class DeviceManagementApplicabilityRuleOsVersion implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

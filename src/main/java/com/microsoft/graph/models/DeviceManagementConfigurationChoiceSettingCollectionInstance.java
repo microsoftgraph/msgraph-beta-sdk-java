@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
      */
     private java.util.List<DeviceManagementConfigurationChoiceSettingValue> choiceSettingCollectionValue;
     /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstance and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingCollectionInstance() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingCollectionInstance
+     * @return a DeviceManagementConfigurationChoiceSettingCollectionInstance
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingCollectionInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,7 +34,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstance extend
     }
     /**
      * Gets the choiceSettingCollectionValue property value. Choice setting collection value
-     * @return a deviceManagementConfigurationChoiceSettingValue
+     * @return a java.util.List<DeviceManagementConfigurationChoiceSettingValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationChoiceSettingValue> getChoiceSettingCollectionValue() {

@@ -65,7 +65,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new mobileAppInstallStatus and sets the default values.
+     * Instantiates a new MobileAppInstallStatus and sets the default values.
      */
     public MobileAppInstallStatus() {
         super();
@@ -73,7 +73,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobileAppInstallStatus
+     * @return a MobileAppInstallStatus
      */
     @jakarta.annotation.Nonnull
     public static MobileAppInstallStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the app property value. The navigation link to the mobile app.
-     * @return a mobileApp
+     * @return a MobileApp
      */
     @jakarta.annotation.Nullable
     public MobileApp getApp() {
@@ -90,7 +90,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceId property value. Device ID
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -98,7 +98,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the deviceName property value. Device name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -106,7 +106,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the displayVersion property value. Human readable version of the application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayVersion() {
@@ -114,7 +114,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the errorCode property value. The error code for install or uninstall failures.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
@@ -144,7 +144,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the installState property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
-     * @return a resultantAppState
+     * @return a ResultantAppState
      */
     @jakarta.annotation.Nullable
     public ResultantAppState getInstallState() {
@@ -152,7 +152,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the installStateDetail property value. Enum indicating additional details regarding why an application has a particular install state.
-     * @return a resultantAppStateDetail
+     * @return a ResultantAppStateDetail
      */
     @jakarta.annotation.Nullable
     public ResultantAppStateDetail getInstallStateDetail() {
@@ -168,7 +168,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the mobileAppInstallStatusValue property value. A list of possible states for application status on an individual device. When devices contact the Intune service and find targeted application enforcement intent, the status of the enforcement is recorded and becomes accessible in the Graph API. Since the application status is identified during device interaction with the Intune service, status records do not immediately appear upon application group assignment; it is created only after the assignment is evaluated in the service and devices start receiving the policy during check-ins.
-     * @return a resultantAppState
+     * @return a ResultantAppState
      */
     @jakarta.annotation.Nullable
     public ResultantAppState getMobileAppInstallStatusValue() {
@@ -176,7 +176,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the osDescription property value. OS Description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsDescription() {
@@ -184,7 +184,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the osVersion property value. OS Version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
@@ -192,7 +192,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userName property value. Device User Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
@@ -200,7 +200,7 @@ public class MobileAppInstallStatus extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

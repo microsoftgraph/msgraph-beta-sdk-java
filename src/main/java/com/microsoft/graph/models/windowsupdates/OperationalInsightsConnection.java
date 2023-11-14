@@ -21,7 +21,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
      */
     private String workspaceName;
     /**
-     * Instantiates a new operationalInsightsConnection and sets the default values.
+     * Instantiates a new OperationalInsightsConnection and sets the default values.
      */
     public OperationalInsightsConnection() {
         super();
@@ -30,7 +30,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a operationalInsightsConnection
+     * @return a OperationalInsightsConnection
      */
     @jakarta.annotation.Nonnull
     public static OperationalInsightsConnection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
     }
     /**
      * Gets the azureResourceGroupName property value. The name of the Azure resource group that contains the Log Analytics workspace.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureResourceGroupName() {
@@ -47,7 +47,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
     }
     /**
      * Gets the azureSubscriptionId property value. The Azure subscription ID that contains the Log Analytics workspace.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
@@ -67,7 +67,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
     }
     /**
      * Gets the workspaceName property value. The name of the Log Analytics workspace.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWorkspaceName() {

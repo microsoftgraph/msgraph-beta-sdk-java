@@ -33,7 +33,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
      */
     private java.util.List<ConditionalAccessTemplate> templates;
     /**
-     * Instantiates a new conditionalAccessRoot and sets the default values.
+     * Instantiates a new ConditionalAccessRoot and sets the default values.
      */
     public ConditionalAccessRoot() {
         super();
@@ -41,7 +41,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a conditionalAccessRoot
+     * @return a ConditionalAccessRoot
      */
     @jakarta.annotation.Nonnull
     public static ConditionalAccessRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationContextClassReferences property value. Read-only. Nullable. Returns a collection of the specified authentication context class references.
-     * @return a authenticationContextClassReference
+     * @return a java.util.List<AuthenticationContextClassReference>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationContextClassReference> getAuthenticationContextClassReferences() {
@@ -58,7 +58,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationStrength property value. Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy.
-     * @return a authenticationStrengthRoot
+     * @return a AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthRoot getAuthenticationStrength() {
@@ -66,7 +66,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationStrengths property value. The authenticationStrengths property
-     * @return a authenticationStrengthRoot
+     * @return a AuthenticationStrengthRoot
      */
     @jakarta.annotation.Nullable
     public AuthenticationStrengthRoot getAuthenticationStrengths() {
@@ -89,7 +89,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
-     * @return a namedLocation
+     * @return a java.util.List<NamedLocation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<NamedLocation> getNamedLocations() {
@@ -97,7 +97,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
-     * @return a conditionalAccessPolicy
+     * @return a java.util.List<ConditionalAccessPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getPolicies() {
@@ -105,7 +105,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the templates property value. Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
-     * @return a conditionalAccessTemplate
+     * @return a java.util.List<ConditionalAccessTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessTemplate> getTemplates() {

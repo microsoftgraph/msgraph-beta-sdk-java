@@ -34,7 +34,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      */
     private java.util.List<UserSource> userSources;
     /**
-     * Instantiates a new custodian and sets the default values.
+     * Instantiates a new Custodian and sets the default values.
      */
     public Custodian() {
         super();
@@ -43,7 +43,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a custodian
+     * @return a Custodian
      */
     @jakarta.annotation.Nonnull
     public static Custodian createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     }
     /**
      * Gets the applyHoldToSources property value. Identifies whether a custodian's sources were placed on hold during creation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplyHoldToSources() {
@@ -68,7 +68,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     }
     /**
      * Gets the email property value. Email address of the custodian.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
@@ -91,7 +91,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     }
     /**
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
-     * @return a siteSource
+     * @return a java.util.List<SiteSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SiteSource> getSiteSources() {
@@ -99,7 +99,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     }
     /**
      * Gets the unifiedGroupSources property value. Data source entity for groups associated with the custodian.
-     * @return a unifiedGroupSource
+     * @return a java.util.List<UnifiedGroupSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedGroupSource> getUnifiedGroupSources() {
@@ -107,7 +107,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
     }
     /**
      * Gets the userSources property value. Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
-     * @return a userSource
+     * @return a java.util.List<UserSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserSource> getUserSources() {

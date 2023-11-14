@@ -1,5 +1,9 @@
 package com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp;
 
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp.categories.CategoriesRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp.contentversions.ContentVersionsRequestBuilder;
+import com.microsoft.graph.deviceappmanagement.mobileapps.item.graphioslobapp.relationships.RelationshipsRequestBuilder;
 import com.microsoft.graph.models.IosLobApp;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +25,34 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public AssignmentsRequestBuilder assignments() {
+        return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the categories property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the contentVersions property of the microsoft.graph.mobileLobApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ContentVersionsRequestBuilder contentVersions() {
+        return new ContentVersionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the relationships property of the microsoft.graph.mobileApp entity.
+     */
+    @jakarta.annotation.Nonnull
+    public RelationshipsRequestBuilder relationships() {
+        return new RelationshipsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GraphIosLobAppRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,24 +70,24 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
-     * @return a CompletableFuture of iosLobApp
+     * @return a IosLobApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> get() {
+    @jakarta.annotation.Nullable
+    public IosLobApp get() {
         return get(null);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of iosLobApp
+     * @return a IosLobApp
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IosLobApp> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IosLobApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IosLobApp::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IosLobApp::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get the item of type microsoft.graph.mobileApp as microsoft.graph.iosLobApp
@@ -73,10 +105,6 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,12 +112,16 @@ public class GraphIosLobAppRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a graphIosLobAppRequestBuilder
+     * @return a GraphIosLobAppRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GraphIosLobAppRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

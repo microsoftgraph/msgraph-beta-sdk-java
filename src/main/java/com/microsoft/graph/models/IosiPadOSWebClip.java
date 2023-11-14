@@ -36,7 +36,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
      */
     private Boolean useManagedBrowser;
     /**
-     * Instantiates a new iosiPadOSWebClip and sets the default values.
+     * Instantiates a new IosiPadOSWebClip and sets the default values.
      */
     public IosiPadOSWebClip() {
         super();
@@ -45,7 +45,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosiPadOSWebClip
+     * @return a IosiPadOSWebClip
      */
     @jakarta.annotation.Nonnull
     public static IosiPadOSWebClip createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppUrl() {
@@ -77,7 +77,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the fullScreenEnabled property value. Whether or not to open the web clip as a full-screen web app. Defaults to false. If TRUE, opens the web clip as a full-screen web app. If FALSE, the web clip opens inside of another app, such as Safari or the app specified with targetApplicationBundleIdentifier.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getFullScreenEnabled() {
@@ -85,7 +85,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the ignoreManifestScope property value. Whether or not a full screen web clip can navigate to an external web site without showing the Safari UI. Defaults to false. If FALSE, the Safari UI appears when navigating away. If TRUE, the Safari UI will not be shown.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIgnoreManifestScope() {
@@ -93,7 +93,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreComposedIconEnabled() {
@@ -101,7 +101,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the targetApplicationBundleIdentifier property value. Specifies the application bundle identifier which opens the URL. Available in iOS 14 and later.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTargetApplicationBundleIdentifier() {
@@ -109,7 +109,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
     }
     /**
      * Gets the useManagedBrowser property value. Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseManagedBrowser() {

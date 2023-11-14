@@ -38,7 +38,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     private AccessReviewHistoryStatus status;
     /**
-     * Instantiates a new accessReviewHistoryInstance and sets the default values.
+     * Instantiates a new AccessReviewHistoryInstance and sets the default values.
      */
     public AccessReviewHistoryInstance() {
         super();
@@ -46,7 +46,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a accessReviewHistoryInstance
+     * @return a AccessReviewHistoryInstance
      */
     @jakarta.annotation.Nonnull
     public static AccessReviewHistoryInstance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     }
     /**
      * Gets the downloadUri property value. Uri that can be used to retrieve review history data. This URI will be active for 24 hours after being generated. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDownloadUri() {
@@ -119,7 +119,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue. Once the status has been marked as done, a link can be generated to retrieve the instance's data by calling generateDownloadUri method.
-     * @return a accessReviewHistoryStatus
+     * @return a AccessReviewHistoryStatus
      */
     @jakarta.annotation.Nullable
     public AccessReviewHistoryStatus getStatus() {

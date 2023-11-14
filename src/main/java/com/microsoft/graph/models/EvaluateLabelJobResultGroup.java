@@ -26,7 +26,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
      */
     private EvaluateLabelJobResult recommended;
     /**
-     * Instantiates a new evaluateLabelJobResultGroup and sets the default values.
+     * Instantiates a new EvaluateLabelJobResultGroup and sets the default values.
      */
     public EvaluateLabelJobResultGroup() {
         this.setAdditionalData(new HashMap<>());
@@ -34,7 +34,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateLabelJobResultGroup
+     * @return a EvaluateLabelJobResultGroup
      */
     @jakarta.annotation.Nonnull
     public static EvaluateLabelJobResultGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
         return new EvaluateLabelJobResultGroup();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -51,7 +51,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the automatic property value. The automatic property
-     * @return a evaluateLabelJobResult
+     * @return a EvaluateLabelJobResult
      */
     @jakarta.annotation.Nullable
     public EvaluateLabelJobResult getAutomatic() {
@@ -71,7 +71,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -79,7 +79,7 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the recommended property value. The recommended property
-     * @return a evaluateLabelJobResult
+     * @return a EvaluateLabelJobResult
      */
     @jakarta.annotation.Nullable
     public EvaluateLabelJobResult getRecommended() {
@@ -97,8 +97,8 @@ public class EvaluateLabelJobResultGroup implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

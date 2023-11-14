@@ -13,7 +13,7 @@ public class UnsupportedGroupPolicyExtensionCollectionResponse extends BaseColle
      */
     private java.util.List<UnsupportedGroupPolicyExtension> value;
     /**
-     * Instantiates a new unsupportedGroupPolicyExtensionCollectionResponse and sets the default values.
+     * Instantiates a new UnsupportedGroupPolicyExtensionCollectionResponse and sets the default values.
      */
     public UnsupportedGroupPolicyExtensionCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class UnsupportedGroupPolicyExtensionCollectionResponse extends BaseColle
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unsupportedGroupPolicyExtensionCollectionResponse
+     * @return a UnsupportedGroupPolicyExtensionCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UnsupportedGroupPolicyExtensionCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class UnsupportedGroupPolicyExtensionCollectionResponse extends BaseColle
     }
     /**
      * Gets the value property value. The value property
-     * @return a unsupportedGroupPolicyExtension
+     * @return a java.util.List<UnsupportedGroupPolicyExtension>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnsupportedGroupPolicyExtension> getValue() {

@@ -50,7 +50,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      */
     private Long yammer;
     /**
-     * Instantiates a new office365ActiveUserCounts and sets the default values.
+     * Instantiates a new Office365ActiveUserCounts and sets the default values.
      */
     public Office365ActiveUserCounts() {
         super();
@@ -58,7 +58,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a office365ActiveUserCounts
+     * @return a Office365ActiveUserCounts
      */
     @jakarta.annotation.Nonnull
     public static Office365ActiveUserCounts createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the exchange property value. The number of active users in Exchange. Any user who can read and send email is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExchange() {
@@ -94,7 +94,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the office365 property value. The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOffice365() {
@@ -102,7 +102,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the oneDrive property value. The number of active users in OneDrive. Any user who viewed or edited files, shared files internally or externally, or synced files is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getOneDrive() {
@@ -118,7 +118,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReportPeriod() {
@@ -134,7 +134,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the sharePoint property value. The number of active users in SharePoint. Any user who viewed or edited files, shared files internally or externally, synced files, or viewed SharePoint pages is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSharePoint() {
@@ -142,7 +142,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the skypeForBusiness property value. The number of active users in Skype For Business. Any user who organized or participated in conferences, or joined peer-to-peer sessions is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSkypeForBusiness() {
@@ -150,7 +150,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the teams property value. The number of active users in Microsoft Teams. Any user who posted messages in team channels, sent messages in private chat sessions, or participated in meetings or calls is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTeams() {
@@ -158,7 +158,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
     }
     /**
      * Gets the yammer property value. The number of active users in Yammer. Any user who can post, read, or like messages is considered an active user.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getYammer() {

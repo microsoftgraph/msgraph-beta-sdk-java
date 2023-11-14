@@ -19,7 +19,7 @@ public class UpdateSettingsPostRequestBody implements AdditionalDataHolder, Pars
      */
     private java.util.List<DeviceManagementSettingInstance> settings;
     /**
-     * Instantiates a new updateSettingsPostRequestBody and sets the default values.
+     * Instantiates a new UpdateSettingsPostRequestBody and sets the default values.
      */
     public UpdateSettingsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -27,7 +27,7 @@ public class UpdateSettingsPostRequestBody implements AdditionalDataHolder, Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updateSettingsPostRequestBody
+     * @return a UpdateSettingsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UpdateSettingsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class UpdateSettingsPostRequestBody implements AdditionalDataHolder, Pars
         return new UpdateSettingsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -54,7 +54,7 @@ public class UpdateSettingsPostRequestBody implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the settings property value. The settings property
-     * @return a deviceManagementSettingInstance
+     * @return a java.util.List<DeviceManagementSettingInstance>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementSettingInstance> getSettings() {
@@ -70,8 +70,8 @@ public class UpdateSettingsPostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

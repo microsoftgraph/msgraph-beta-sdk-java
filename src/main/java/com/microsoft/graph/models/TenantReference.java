@@ -18,11 +18,11 @@ public class TenantReference implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * The identifier of the Azure AD tenant. Read-only. Key.
+     * The identifier of the Microsoft Entra tenant. Read-only. Key.
      */
     private String tenantId;
     /**
-     * Instantiates a new tenantReference and sets the default values.
+     * Instantiates a new TenantReference and sets the default values.
      */
     public TenantReference() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class TenantReference implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantReference
+     * @return a TenantReference
      */
     @jakarta.annotation.Nonnull
     public static TenantReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class TenantReference implements AdditionalDataHolder, Parsable {
         return new TenantReference();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,15 +58,15 @@ public class TenantReference implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.odataType;
     }
     /**
-     * Gets the tenantId property value. The identifier of the Azure AD tenant. Read-only. Key.
-     * @return a string
+     * Gets the tenantId property value. The identifier of the Microsoft Entra tenant. Read-only. Key.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -83,8 +83,8 @@ public class TenantReference implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -97,7 +97,7 @@ public class TenantReference implements AdditionalDataHolder, Parsable {
         this.odataType = value;
     }
     /**
-     * Sets the tenantId property value. The identifier of the Azure AD tenant. Read-only. Key.
+     * Sets the tenantId property value. The identifier of the Microsoft Entra tenant. Read-only. Key.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

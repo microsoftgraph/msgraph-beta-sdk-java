@@ -69,7 +69,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
      */
     private String vendorNumber;
     /**
-     * Instantiates a new agedAccountsPayable and sets the default values.
+     * Instantiates a new AgedAccountsPayable and sets the default values.
      */
     public AgedAccountsPayable() {
         this.setAdditionalData(new HashMap<>());
@@ -77,7 +77,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a agedAccountsPayable
+     * @return a AgedAccountsPayable
      */
     @jakarta.annotation.Nonnull
     public static AgedAccountsPayable createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -85,7 +85,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
         return new AgedAccountsPayable();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -102,7 +102,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the balanceDue property value. The balanceDue property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getBalanceDue() {
@@ -110,7 +110,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
@@ -118,7 +118,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currentAmount property value. The currentAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCurrentAmount() {
@@ -156,7 +156,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -164,7 +164,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -172,7 +172,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the period1Amount property value. The period1Amount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getPeriod1Amount() {
@@ -180,7 +180,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the period2Amount property value. The period2Amount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getPeriod2Amount() {
@@ -188,7 +188,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the period3Amount property value. The period3Amount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getPeriod3Amount() {
@@ -196,7 +196,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the periodLengthFilter property value. The periodLengthFilter property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPeriodLengthFilter() {
@@ -204,7 +204,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vendorId property value. The vendorId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorId() {
@@ -212,7 +212,7 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the vendorNumber property value. The vendorNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorNumber() {
@@ -240,8 +240,8 @@ public class AgedAccountsPayable implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

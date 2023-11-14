@@ -22,7 +22,7 @@ public class PlannerChecklistRequirement implements AdditionalDataHolder, Parsab
      */
     private java.util.List<String> requiredChecklistItemIds;
     /**
-     * Instantiates a new plannerChecklistRequirement and sets the default values.
+     * Instantiates a new PlannerChecklistRequirement and sets the default values.
      */
     public PlannerChecklistRequirement() {
         this.setAdditionalData(new HashMap<>());
@@ -30,7 +30,7 @@ public class PlannerChecklistRequirement implements AdditionalDataHolder, Parsab
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerChecklistRequirement
+     * @return a PlannerChecklistRequirement
      */
     @jakarta.annotation.Nonnull
     public static PlannerChecklistRequirement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class PlannerChecklistRequirement implements AdditionalDataHolder, Parsab
         return new PlannerChecklistRequirement();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -58,7 +58,7 @@ public class PlannerChecklistRequirement implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -66,7 +66,7 @@ public class PlannerChecklistRequirement implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the requiredChecklistItemIds property value. A collection of required plannerChecklistItems identifiers to complete the plannerTask.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRequiredChecklistItemIds() {
@@ -83,8 +83,8 @@ public class PlannerChecklistRequirement implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

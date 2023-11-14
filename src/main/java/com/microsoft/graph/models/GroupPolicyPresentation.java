@@ -25,7 +25,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new groupPolicyPresentation and sets the default values.
+     * Instantiates a new GroupPolicyPresentation and sets the default values.
      */
     public GroupPolicyPresentation() {
         super();
@@ -33,7 +33,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentation
+     * @return a GroupPolicyPresentation
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     }
     /**
      * Gets the definition property value. The group policy definition associated with the presentation.
-     * @return a groupPolicyDefinition
+     * @return a GroupPolicyDefinition
      */
     @jakarta.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
@@ -78,7 +78,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     }
     /**
      * Gets the label property value. Localized text label for any presentation entity. The default value is empty.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {

@@ -1,5 +1,6 @@
 package com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityscheduleinstances.item.group;
 
+import com.microsoft.graph.identitygovernance.privilegedaccess.group.eligibilityscheduleinstances.item.group.serviceprovisioningerrors.ServiceProvisioningErrorsRequestBuilder;
 import com.microsoft.graph.models.Group;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +22,13 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupRequestBuilder extends BaseRequestBuilder {
     /**
+     * The serviceProvisioningErrors property
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceProvisioningErrorsRequestBuilder serviceProvisioningErrors() {
+        return new ServiceProvisioningErrorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new GroupRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -38,24 +46,24 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
-     * @return a CompletableFuture of group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> get() {
+    @jakarta.annotation.Nullable
+    public Group get() {
         return get(null);
     }
     /**
      * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of group
+     * @return a Group
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Group> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Group get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Group::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * References the group that is the scope of the membership or ownership eligibility through PIM for groups. Supports $expand.
@@ -73,10 +81,6 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,12 +88,16 @@ public class GroupRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupRequestBuilder
+     * @return a GroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

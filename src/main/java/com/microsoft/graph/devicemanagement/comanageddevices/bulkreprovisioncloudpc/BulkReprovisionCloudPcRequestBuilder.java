@@ -36,39 +36,39 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/bulkReprovisionCloudPc", rawUrl);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CloudPcBulkRemoteActionResult
      * @deprecated
      * The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkReprovisionCloudPc on 2023-05-24 and will be removed 2023-09-24
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkreprovisioncloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@jakarta.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body) {
+    public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of cloudPcBulkRemoteActionResult
+     * @return a CloudPcBulkRemoteActionResult
      * @deprecated
      * The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkReprovisionCloudPc on 2023-05-24 and will be removed 2023-09-24
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkreprovisioncloudpc?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
+    @jakarta.annotation.Nullable
     @Deprecated
-    public java.util.concurrent.CompletableFuture<CloudPcBulkRemoteActionResult> post(@jakarta.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      * @deprecated
@@ -80,7 +80,7 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs.
+     * Bulk reprovision a set of Cloud PC devices with Intune managed device IDs. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -92,23 +92,23 @@ public class BulkReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BulkReprovisionCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a bulkReprovisionCloudPcRequestBuilder
+     * @return a BulkReprovisionCloudPcRequestBuilder
      * @deprecated
      * The bulkReprovisionCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkReprovisionCloudPc on 2023-05-24 and will be removed 2023-09-24
      */

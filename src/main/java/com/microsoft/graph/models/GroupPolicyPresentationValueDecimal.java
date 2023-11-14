@@ -16,7 +16,7 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
      */
     private Long value;
     /**
-     * Instantiates a new groupPolicyPresentationValueDecimal and sets the default values.
+     * Instantiates a new GroupPolicyPresentationValueDecimal and sets the default values.
      */
     public GroupPolicyPresentationValueDecimal() {
         super();
@@ -24,7 +24,7 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyPresentationValueDecimal
+     * @return a GroupPolicyPresentationValueDecimal
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyPresentationValueDecimal createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,7 +43,7 @@ public class GroupPolicyPresentationValueDecimal extends GroupPolicyPresentation
     }
     /**
      * Gets the value property value. An unsigned integer value for the associated presentation.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getValue() {

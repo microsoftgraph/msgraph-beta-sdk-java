@@ -23,7 +23,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
      */
     private CloudPcReviewStatus reviewStatus;
     /**
-     * Instantiates a new bulkSetCloudPcReviewStatusPostRequestBody and sets the default values.
+     * Instantiates a new BulkSetCloudPcReviewStatusPostRequestBody and sets the default values.
      */
     public BulkSetCloudPcReviewStatusPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -31,7 +31,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bulkSetCloudPcReviewStatusPostRequestBody
+     * @return a BulkSetCloudPcReviewStatusPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static BulkSetCloudPcReviewStatusPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
         return new BulkSetCloudPcReviewStatusPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -59,7 +59,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the managedDeviceIds property value. The managedDeviceIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getManagedDeviceIds() {
@@ -67,7 +67,7 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
     }
     /**
      * Gets the reviewStatus property value. The reviewStatus property
-     * @return a cloudPcReviewStatus
+     * @return a CloudPcReviewStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcReviewStatus getReviewStatus() {
@@ -84,8 +84,8 @@ public class BulkSetCloudPcReviewStatusPostRequestBody implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

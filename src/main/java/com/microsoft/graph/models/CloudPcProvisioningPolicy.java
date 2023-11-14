@@ -14,7 +14,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     private String alternateResourceUrl;
     /**
-     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
+     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
      */
     private java.util.List<CloudPcProvisioningPolicyAssignment> assignments;
     /**
@@ -34,7 +34,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     private String displayName;
     /**
-     * Specifies how Cloud PCs will join Azure Active Directory.
+     * Specifies how Cloud PCs will join Microsoft Entra ID.
      */
     private CloudPcDomainJoinConfiguration domainJoinConfiguration;
     /**
@@ -42,7 +42,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     private java.util.List<CloudPcDomainJoinConfiguration> domainJoinConfigurations;
     /**
-     * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      */
     private Boolean enableSingleSignOn;
     /**
@@ -82,11 +82,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     private CloudPcProvisioningType provisioningType;
     /**
+     * The scopeIds property
+     */
+    private java.util.List<String> scopeIds;
+    /**
      * Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
      */
     private CloudPcWindowsSettings windowsSettings;
     /**
-     * Instantiates a new cloudPcProvisioningPolicy and sets the default values.
+     * Instantiates a new CloudPcProvisioningPolicy and sets the default values.
      */
     public CloudPcProvisioningPolicy() {
         super();
@@ -94,7 +98,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcProvisioningPolicy
+     * @return a CloudPcProvisioningPolicy
      */
     @jakarta.annotation.Nonnull
     public static CloudPcProvisioningPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -103,15 +107,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the alternateResourceUrl property value. The URL of the alternate resource that links to this provisioning policy. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlternateResourceUrl() {
         return this.alternateResourceUrl;
     }
     /**
-     * Gets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
-     * @return a cloudPcProvisioningPolicyAssignment
+     * Gets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
+     * @return a java.util.List<CloudPcProvisioningPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicyAssignment> getAssignments() {
@@ -119,7 +123,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcGroupDisplayName() {
@@ -127,7 +131,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the cloudPcNamingTemplate property value. The template used to name Cloud PCs provisioned using this policy. This can contain custom text and replacement tokens, including %USERNAME:x% and %RAND:x%, which represent the user's name and a randomly generated number, respectively. For example, 'CPC-%USERNAME:4%-%RAND:5%' means that the Cloud PC's name will start with 'CPC-', have a four-character username in the middle followed by a '-' character, and end with five random characters. The total length of the text generated by the template can be no more than 15 characters. Supports $filter, $select, $orderby.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCloudPcNamingTemplate() {
@@ -135,7 +139,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The provisioning policy description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -143,15 +147,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the provisioning policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.displayName;
     }
     /**
-     * Gets the domainJoinConfiguration property value. Specifies how Cloud PCs will join Azure Active Directory.
-     * @return a cloudPcDomainJoinConfiguration
+     * Gets the domainJoinConfiguration property value. Specifies how Cloud PCs will join Microsoft Entra ID.
+     * @return a CloudPcDomainJoinConfiguration
      */
     @jakarta.annotation.Nullable
     public CloudPcDomainJoinConfiguration getDomainJoinConfiguration() {
@@ -159,15 +163,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the domainJoinConfigurations property value. The domainJoinConfigurations property
-     * @return a cloudPcDomainJoinConfiguration
+     * @return a java.util.List<CloudPcDomainJoinConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcDomainJoinConfiguration> getDomainJoinConfigurations() {
         return this.domainJoinConfigurations;
     }
     /**
-     * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
-     * @return a boolean
+     * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSingleSignOn() {
@@ -198,12 +202,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType.class)); });
+        deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("windowsSettings", (n) -> { this.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the gracePeriodInHours property value. The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getGracePeriodInHours() {
@@ -211,7 +216,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the imageDisplayName property value. The display name for the OS image youre provisioning.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImageDisplayName() {
@@ -219,7 +224,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the imageId property value. The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisheroffersku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImageId() {
@@ -227,7 +232,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the imageType property value. The imageType property
-     * @return a cloudPcProvisioningPolicyImageType
+     * @return a CloudPcProvisioningPolicyImageType
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicyImageType getImageType() {
@@ -235,7 +240,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the localAdminEnabled property value. Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocalAdminEnabled() {
@@ -243,7 +248,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the managedBy property value. The managedBy property
-     * @return a cloudPcManagementService
+     * @return a EnumSet<CloudPcManagementService>
      */
     @jakarta.annotation.Nullable
     public EnumSet<CloudPcManagementService> getManagedBy() {
@@ -251,7 +256,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the microsoftManagedDesktop property value. The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
-     * @return a microsoftManagedDesktop
+     * @return a MicrosoftManagedDesktop
      */
     @jakarta.annotation.Nullable
     public MicrosoftManagedDesktop getMicrosoftManagedDesktop() {
@@ -259,7 +264,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnPremisesConnectionId() {
@@ -267,15 +272,23 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
-     * @return a cloudPcProvisioningType
+     * @return a CloudPcProvisioningType
      */
     @jakarta.annotation.Nullable
     public CloudPcProvisioningType getProvisioningType() {
         return this.provisioningType;
     }
     /**
+     * Gets the scopeIds property value. The scopeIds property
+     * @return a java.util.List<String>
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getScopeIds() {
+        return this.scopeIds;
+    }
+    /**
      * Gets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
-     * @return a cloudPcWindowsSettings
+     * @return a CloudPcWindowsSettings
      */
     @jakarta.annotation.Nullable
     public CloudPcWindowsSettings getWindowsSettings() {
@@ -306,6 +319,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
+        writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
     /**
@@ -316,7 +330,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.alternateResourceUrl = value;
     }
     /**
-     * Sets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
+     * Sets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Microsoft Entra ID that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
@@ -351,7 +365,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.displayName = value;
     }
     /**
-     * Sets the domainJoinConfiguration property value. Specifies how Cloud PCs will join Azure Active Directory.
+     * Sets the domainJoinConfiguration property value. Specifies how Cloud PCs will join Microsoft Entra ID.
      * @param value Value to set for the domainJoinConfiguration property.
      */
     public void setDomainJoinConfiguration(@jakarta.annotation.Nullable final CloudPcDomainJoinConfiguration value) {
@@ -365,7 +379,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.domainJoinConfigurations = value;
     }
     /**
-     * Sets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * Sets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      * @param value Value to set for the enableSingleSignOn property.
      */
     public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {
@@ -433,6 +447,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
         this.provisioningType = value;
+    }
+    /**
+     * Sets the scopeIds property value. The scopeIds property
+     * @param value Value to set for the scopeIds property.
+     */
+    public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.scopeIds = value;
     }
     /**
      * Sets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.

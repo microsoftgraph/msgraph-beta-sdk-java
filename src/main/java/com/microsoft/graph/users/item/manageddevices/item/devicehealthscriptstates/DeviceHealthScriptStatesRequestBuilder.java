@@ -48,48 +48,48 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
-     * @return a CompletableFuture of deviceHealthScriptPolicyStateCollectionResponse
+     * @return a DeviceHealthScriptPolicyStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyStateCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceHealthScriptPolicyStateCollectionResponse get() {
         return get(null);
     }
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptPolicyStateCollectionResponse
+     * @return a DeviceHealthScriptPolicyStateCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyStateCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceHealthScriptPolicyStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceHealthScriptPolicyStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceHealthScriptPolicyStateCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
-     * @return a CompletableFuture of deviceHealthScriptPolicyState
+     * @return a DeviceHealthScriptPolicyState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
+    @jakarta.annotation.Nullable
+    public DeviceHealthScriptPolicyState post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceHealthScriptPolicyState
+     * @return a DeviceHealthScriptPolicyState
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceHealthScriptPolicyState> post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceHealthScriptPolicyState post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceHealthScriptPolicyState::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceHealthScriptPolicyState::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
@@ -107,10 +107,6 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -118,6 +114,10 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -139,17 +139,17 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -169,7 +169,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceHealthScriptStatesRequestBuilder
+     * @return a DeviceHealthScriptStatesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceHealthScriptStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

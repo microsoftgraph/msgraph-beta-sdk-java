@@ -108,7 +108,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      */
     private Boolean zoomDisabled;
     /**
-     * Instantiates a new depEnrollmentProfile and sets the default values.
+     * Instantiates a new DepEnrollmentProfile and sets the default values.
      */
     public DepEnrollmentProfile() {
         super();
@@ -117,7 +117,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a depEnrollmentProfile
+     * @return a DepEnrollmentProfile
      */
     @jakarta.annotation.Nonnull
     public static DepEnrollmentProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -126,7 +126,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the appleIdDisabled property value. Indicates if Apple id setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppleIdDisabled() {
@@ -134,7 +134,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the applePayDisabled property value. Indicates if Apple pay setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getApplePayDisabled() {
@@ -142,7 +142,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the awaitDeviceConfiguredConfirmation property value. Indicates if the device will need to wait for configured confirmation
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAwaitDeviceConfiguredConfirmation() {
@@ -150,7 +150,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the diagnosticsDisabled property value. Indicates if diagnostics setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiagnosticsDisabled() {
@@ -158,7 +158,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the enableSharedIPad property value. This indicates whether the device is to be enrolled in a mode which enables multi user scenarios. Only applicable in shared iPads.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableSharedIPad() {
@@ -199,7 +199,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the isDefault property value. Indicates if this is the default profile
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
@@ -207,7 +207,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the isMandatory property value. Indicates if the profile is mandatory
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMandatory() {
@@ -215,7 +215,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the iTunesPairingMode property value. The iTunesPairingMode property
-     * @return a iTunesPairingMode
+     * @return a ITunesPairingMode
      */
     @jakarta.annotation.Nullable
     public ITunesPairingMode getITunesPairingMode() {
@@ -223,7 +223,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the locationDisabled property value. Indicates if Location service setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getLocationDisabled() {
@@ -231,7 +231,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the macOSFileVaultDisabled property value. Indicates if Mac OS file vault is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMacOSFileVaultDisabled() {
@@ -239,7 +239,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the macOSRegistrationDisabled property value. Indicates if Mac OS registration is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMacOSRegistrationDisabled() {
@@ -247,7 +247,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the managementCertificates property value. Management certificates for Apple Configurator
-     * @return a managementCertificateWithThumbprint
+     * @return a java.util.List<ManagementCertificateWithThumbprint>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementCertificateWithThumbprint> getManagementCertificates() {
@@ -255,7 +255,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the passCodeDisabled property value. Indicates if Passcode setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPassCodeDisabled() {
@@ -263,7 +263,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the profileRemovalDisabled property value. Indicates if the profile removal option is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getProfileRemovalDisabled() {
@@ -271,7 +271,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the restoreBlocked property value. Indicates if Restore setup pane is blocked
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRestoreBlocked() {
@@ -279,7 +279,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the restoreFromAndroidDisabled property value. Indicates if Restore from Android is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRestoreFromAndroidDisabled() {
@@ -287,7 +287,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the sharedIPadMaximumUserCount property value. This specifies the maximum number of users that can use a shared iPad. Only applicable in shared iPad mode.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSharedIPadMaximumUserCount() {
@@ -295,7 +295,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the siriDisabled property value. Indicates if siri setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSiriDisabled() {
@@ -303,7 +303,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSupervisedModeEnabled() {
@@ -311,7 +311,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the supportDepartment property value. Support department information
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportDepartment() {
@@ -319,7 +319,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the supportPhoneNumber property value. Support phone number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSupportPhoneNumber() {
@@ -327,7 +327,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the termsAndConditionsDisabled property value. Indicates if 'Terms and Conditions' setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTermsAndConditionsDisabled() {
@@ -335,7 +335,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the touchIdDisabled property value. Indicates if touch id setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTouchIdDisabled() {
@@ -343,7 +343,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     }
     /**
      * Gets the zoomDisabled property value. Indicates if zoom setup pane is disabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getZoomDisabled() {

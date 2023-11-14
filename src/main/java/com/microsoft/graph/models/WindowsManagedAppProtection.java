@@ -109,7 +109,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
      */
     private Boolean printBlocked;
     /**
-     * Instantiates a new windowsManagedAppProtection and sets the default values.
+     * Instantiates a new WindowsManagedAppProtection and sets the default values.
      */
     public WindowsManagedAppProtection() {
         super();
@@ -118,7 +118,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsManagedAppProtection
+     * @return a WindowsManagedAppProtection
      */
     @jakarta.annotation.Nonnull
     public static WindowsManagedAppProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -127,7 +127,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the allowedInboundDataTransferSources property value. Data can be transferred from/to these classes of apps
-     * @return a windowsManagedAppDataTransferLevel
+     * @return a WindowsManagedAppDataTransferLevel
      */
     @jakarta.annotation.Nullable
     public WindowsManagedAppDataTransferLevel getAllowedInboundDataTransferSources() {
@@ -135,7 +135,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
-     * @return a windowsManagedAppClipboardSharingLevel
+     * @return a WindowsManagedAppClipboardSharingLevel
      */
     @jakarta.annotation.Nullable
     public WindowsManagedAppClipboardSharingLevel getAllowedOutboundClipboardSharingLevel() {
@@ -143,7 +143,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the allowedOutboundDataTransferDestinations property value. Data can be transferred from/to these classes of apps
-     * @return a windowsManagedAppDataTransferLevel
+     * @return a WindowsManagedAppDataTransferLevel
      */
     @jakarta.annotation.Nullable
     public WindowsManagedAppDataTransferLevel getAllowedOutboundDataTransferDestinations() {
@@ -151,7 +151,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the appActionIfUnableToAuthenticateUser property value. If set, it will specify what action to take in the case where the user is unable to checkin because their authentication token is invalid. This happens when the user is deleted or disabled in AAD. Some possible values are block or wipe. If this property is not set, no action will be taken. Possible values are: block, wipe, warn.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getAppActionIfUnableToAuthenticateUser() {
@@ -159,7 +159,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the apps property value. List of apps to which the policy is deployed.
-     * @return a managedMobileApp
+     * @return a java.util.List<ManagedMobileApp>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedMobileApp> getApps() {
@@ -167,7 +167,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the assignments property value. Navigation property to list of inclusion and exclusion groups to which the policy is deployed.
-     * @return a targetedManagedAppPolicyAssignment
+     * @return a java.util.List<TargetedManagedAppPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TargetedManagedAppPolicyAssignment> getAssignments() {
@@ -175,7 +175,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the deployedAppCount property value. Indicates the total number of applications for which the current policy is deployed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeployedAppCount() {
@@ -216,7 +216,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the isAssigned property value. When TRUE, indicates that the policy is deployed to some inclusion groups. When FALSE, indicates that the policy is not deployed to any inclusion groups. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsAssigned() {
@@ -224,7 +224,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the maximumAllowedDeviceThreatLevel property value. The maxium threat level allowed for an app to be compliant.
-     * @return a managedAppDeviceThreatLevel
+     * @return a ManagedAppDeviceThreatLevel
      */
     @jakarta.annotation.Nullable
     public ManagedAppDeviceThreatLevel getMaximumAllowedDeviceThreatLevel() {
@@ -232,7 +232,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumRequiredOsVersion() {
@@ -240,7 +240,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumWarningOsVersion() {
@@ -248,7 +248,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMaximumWipeOsVersion() {
@@ -256,7 +256,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredAppVersion() {
@@ -264,7 +264,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredOsVersion() {
@@ -272,7 +272,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumRequiredSdkVersion() {
@@ -280,7 +280,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningAppVersion() {
@@ -288,7 +288,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWarningOsVersion() {
@@ -296,7 +296,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeAppVersion() {
@@ -304,7 +304,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeOsVersion() {
@@ -312,7 +312,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinimumWipeSdkVersion() {
@@ -320,7 +320,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
-     * @return a managedAppRemediationAction
+     * @return a ManagedAppRemediationAction
      */
     @jakarta.annotation.Nullable
     public ManagedAppRemediationAction getMobileThreatDefenseRemediationAction() {
@@ -344,7 +344,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
     }
     /**
      * Gets the printBlocked property value. When TRUE, indicates that printing is blocked from managed apps. When FALSE, indicates that printing is allowed from managed apps. Default value is FALSE.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPrintBlocked() {

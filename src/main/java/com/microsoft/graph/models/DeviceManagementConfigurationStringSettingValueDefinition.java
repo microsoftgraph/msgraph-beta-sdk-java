@@ -16,7 +16,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      */
     private java.util.List<String> fileTypes;
     /**
-     * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+     * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      */
     private DeviceManagementConfigurationStringFormat format;
     /**
@@ -28,15 +28,15 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
      */
     private Boolean isSecret;
     /**
-     * Maximum length of string
+     * Maximum length of string. Valid values 0 to 87516
      */
     private Long maximumLength;
     /**
-     * Minimum length of string
+     * Minimum length of string. Valid values 0 to 87516
      */
     private Long minimumLength;
     /**
-     * Instantiates a new deviceManagementConfigurationStringSettingValueDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationStringSettingValueDefinition and sets the default values.
      */
     public DeviceManagementConfigurationStringSettingValueDefinition() {
         super();
@@ -45,7 +45,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationStringSettingValueDefinition
+     * @return a DeviceManagementConfigurationStringSettingValueDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationStringSettingValueDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -69,15 +69,15 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     }
     /**
      * Gets the fileTypes property value. Supported file types for this setting.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFileTypes() {
         return this.fileTypes;
     }
     /**
-     * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
-     * @return a deviceManagementConfigurationStringFormat
+     * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
+     * @return a DeviceManagementConfigurationStringFormat
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationStringFormat getFormat() {
@@ -85,7 +85,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     }
     /**
      * Gets the inputValidationSchema property value. Regular expression or any xml or json schema that the input string should match
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInputValidationSchema() {
@@ -93,23 +93,23 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
     }
     /**
      * Gets the isSecret property value. Specifies whether the setting needs to be treated as a secret. Settings marked as yes will be encrypted in transit and at rest and will be displayed as asterisks when represented in the UX.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSecret() {
         return this.isSecret;
     }
     /**
-     * Gets the maximumLength property value. Maximum length of string
-     * @return a int64
+     * Gets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMaximumLength() {
         return this.maximumLength;
     }
     /**
-     * Gets the minimumLength property value. Minimum length of string
-     * @return a int64
+     * Gets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getMinimumLength() {
@@ -137,7 +137,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.fileTypes = value;
     }
     /**
-     * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
+     * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {
@@ -158,14 +158,14 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.isSecret = value;
     }
     /**
-     * Sets the maximumLength property value. Maximum length of string
+     * Sets the maximumLength property value. Maximum length of string. Valid values 0 to 87516
      * @param value Value to set for the maximumLength property.
      */
     public void setMaximumLength(@jakarta.annotation.Nullable final Long value) {
         this.maximumLength = value;
     }
     /**
-     * Sets the minimumLength property value. Minimum length of string
+     * Sets the minimumLength property value. Minimum length of string. Valid values 0 to 87516
      * @param value Value to set for the minimumLength property.
      */
     public void setMinimumLength(@jakarta.annotation.Nullable final Long value) {

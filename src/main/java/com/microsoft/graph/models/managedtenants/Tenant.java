@@ -27,7 +27,7 @@ public class Tenant extends Entity implements Parsable {
      */
     private OffsetDateTime lastUpdatedDateTime;
     /**
-     * The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      */
     private String tenantId;
     /**
@@ -35,7 +35,7 @@ public class Tenant extends Entity implements Parsable {
      */
     private TenantStatusInformation tenantStatusInformation;
     /**
-     * Instantiates a new tenant and sets the default values.
+     * Instantiates a new Tenant and sets the default values.
      */
     public Tenant() {
         super();
@@ -43,7 +43,7 @@ public class Tenant extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenant
+     * @return a Tenant
      */
     @jakarta.annotation.Nonnull
     public static Tenant createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -52,7 +52,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the contract property value. The relationship details for the tenant with the managing entity.
-     * @return a tenantContract
+     * @return a TenantContract
      */
     @jakarta.annotation.Nullable
     public TenantContract getContract() {
@@ -68,7 +68,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The display name for the tenant. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -98,8 +98,8 @@ public class Tenant extends Entity implements Parsable {
         return this.lastUpdatedDateTime;
     }
     /**
-     * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
-     * @return a string
+     * Gets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
@@ -107,7 +107,7 @@ public class Tenant extends Entity implements Parsable {
     }
     /**
      * Gets the tenantStatusInformation property value. The onboarding status information for the tenant. Optional. Read-only.
-     * @return a tenantStatusInformation
+     * @return a TenantStatusInformation
      */
     @jakarta.annotation.Nullable
     public TenantStatusInformation getTenantStatusInformation() {
@@ -156,7 +156,7 @@ public class Tenant extends Entity implements Parsable {
         this.lastUpdatedDateTime = value;
     }
     /**
-     * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
+     * Sets the tenantId property value. The Microsoft Entra tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

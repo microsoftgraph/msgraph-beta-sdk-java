@@ -124,15 +124,15 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      */
     private String userId;
     /**
-     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new pstnCallLogRow and sets the default values.
+     * Instantiates a new PstnCallLogRow and sets the default values.
      */
     public PstnCallLogRow() {
         this.setAdditionalData(new HashMap<>());
@@ -140,7 +140,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pstnCallLogRow
+     * @return a PstnCallLogRow
      */
     @jakarta.annotation.Nonnull
     public static PstnCallLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -148,7 +148,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         return new PstnCallLogRow();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callDurationSource property value. The source of the call duration data. If the call uses a third-party telecommunications operator via the Operator Connect Program, the operator may provide their own call duration data. In this case, the property value is operator. Otherwise, the value is microsoft.
-     * @return a pstnCallDurationSource
+     * @return a PstnCallDurationSource
      */
     @jakarta.annotation.Nullable
     public PstnCallDurationSource getCallDurationSource() {
@@ -165,7 +165,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
@@ -173,7 +173,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callerNumber property value. Number of the user or bot who made the call (E.164).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
@@ -181,7 +181,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callId property value. Call identifier. Not guaranteed to be unique.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallId() {
@@ -189,7 +189,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callType property value. Indicates whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
@@ -197,7 +197,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the charge property value. Amount of money or cost of the call that is charged to your account.
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getCharge() {
@@ -205,7 +205,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the clientLocalIpV4Address property value. Local IPv4 of the client that is retrieved from the operating system of the client.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientLocalIpV4Address() {
@@ -213,7 +213,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the clientLocalIpV6Address property value. Local IPv6 of the client that is retrieved from the operating system of the client.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientLocalIpV6Address() {
@@ -221,7 +221,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the clientPublicIpV4Address property value. Public IPv4 of the client that can be used to determine the location of the client.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientPublicIpV4Address() {
@@ -229,7 +229,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the clientPublicIpV6Address property value. Public IPv6 of the client that can be used to determine the location of the client.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientPublicIpV6Address() {
@@ -237,7 +237,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the conferenceId property value. ID of the audio conference.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConferenceId() {
@@ -245,7 +245,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the connectionCharge property value. Connection fee price.
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getConnectionCharge() {
@@ -253,7 +253,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the currency property value. Type of currency used to calculate the cost of the call (ISO 4217).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrency() {
@@ -261,7 +261,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationContext() {
@@ -269,7 +269,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the destinationName property value. Country or region dialed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationName() {
@@ -277,7 +277,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duration property value. How long the call was connected, in seconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
@@ -331,7 +331,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique call identifier (GUID).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -339,7 +339,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inventoryType property value. User's phone number type, such as a service of toll-free number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInventoryType() {
@@ -347,7 +347,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the licenseCapability property value. The license used for the call.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLicenseCapability() {
@@ -355,7 +355,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -363,7 +363,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the operator property value. The telecommunications operator that provided PSTN services for this call. This may be Microsoft, or it may be a third-party operator via the Operator Connect Program.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperator() {
@@ -371,7 +371,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOtherPartyCountryCode() {
@@ -387,7 +387,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the tenantCountryCode property value. Country code of the tenant. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantCountryCode() {
@@ -395,7 +395,7 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the usageCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUsageCountryCode() {
@@ -403,23 +403,23 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
-     * @return a string
+     * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a string
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -463,8 +463,8 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -659,14 +659,14 @@ public class PstnCallLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucapin, ucapout).
+     * Sets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info will be null/empty for bot call types (ucapin, ucapout).
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

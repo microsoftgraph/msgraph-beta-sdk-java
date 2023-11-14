@@ -57,7 +57,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     private java.util.List<ConnectedOrganization> connectedOrganizations;
     /**
-     * Represents the settings that control the behavior of Azure AD entitlement management.
+     * Represents the settings that control the behavior of Microsoft Entra entitlement management.
      */
     private EntitlementManagementSettings settings;
     /**
@@ -65,7 +65,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     private java.util.List<AccessPackageSubject> subjects;
     /**
-     * Instantiates a new entitlementManagement and sets the default values.
+     * Instantiates a new EntitlementManagement and sets the default values.
      */
     public EntitlementManagement() {
         super();
@@ -73,7 +73,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a entitlementManagement
+     * @return a EntitlementManagement
      */
     @jakarta.annotation.Nonnull
     public static EntitlementManagement createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -82,7 +82,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentApprovals property value. The accessPackageAssignmentApprovals property
-     * @return a approval
+     * @return a java.util.List<Approval>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Approval> getAccessPackageAssignmentApprovals() {
@@ -90,7 +90,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentPolicies property value. Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
-     * @return a accessPackageAssignmentPolicy
+     * @return a java.util.List<AccessPackageAssignmentPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentPolicy> getAccessPackageAssignmentPolicies() {
@@ -98,7 +98,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentRequests property value. Represents access package assignment requests created by or on behalf of a user.
-     * @return a accessPackageAssignmentRequest
+     * @return a java.util.List<AccessPackageAssignmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentRequest> getAccessPackageAssignmentRequests() {
@@ -106,7 +106,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignmentResourceRoles property value. Represents the resource-specific role which a subject has been assigned through an access package assignment.
-     * @return a accessPackageAssignmentResourceRole
+     * @return a java.util.List<AccessPackageAssignmentResourceRole>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignmentResourceRole> getAccessPackageAssignmentResourceRoles() {
@@ -114,7 +114,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageAssignments property value. The assignment of an access package to a subject for a period of time.
-     * @return a accessPackageAssignment
+     * @return a java.util.List<AccessPackageAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAccessPackageAssignments() {
@@ -122,7 +122,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageCatalogs property value. A container of access packages.
-     * @return a accessPackageCatalog
+     * @return a java.util.List<AccessPackageCatalog>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageCatalog> getAccessPackageCatalogs() {
@@ -130,7 +130,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceEnvironments property value. A reference to the geolocation environment in which a resource is located.
-     * @return a accessPackageResourceEnvironment
+     * @return a java.util.List<AccessPackageResourceEnvironment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceEnvironment> getAccessPackageResourceEnvironments() {
@@ -138,7 +138,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceRequests property value. Represents a request to add or remove a resource to or from a catalog respectively.
-     * @return a accessPackageResourceRequest
+     * @return a java.util.List<AccessPackageResourceRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRequest> getAccessPackageResourceRequests() {
@@ -146,7 +146,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResourceRoleScopes property value. A reference to both a scope within a resource, and a role in that resource for that scope.
-     * @return a accessPackageResourceRoleScope
+     * @return a java.util.List<AccessPackageResourceRoleScope>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResourceRoleScope> getAccessPackageResourceRoleScopes() {
@@ -154,7 +154,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackageResources property value. A reference to a resource associated with an access package catalog.
-     * @return a accessPackageResource
+     * @return a java.util.List<AccessPackageResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageResource> getAccessPackageResources() {
@@ -162,7 +162,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the accessPackages property value. Represents access package objects.
-     * @return a accessPackage
+     * @return a java.util.List<AccessPackage>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackage> getAccessPackages() {
@@ -170,7 +170,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the connectedOrganizations property value. Represents references to a directory or domain of another organization whose users can request access.
-     * @return a connectedOrganization
+     * @return a java.util.List<ConnectedOrganization>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectedOrganization> getConnectedOrganizations() {
@@ -200,8 +200,8 @@ public class EntitlementManagement extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
-     * @return a entitlementManagementSettings
+     * Gets the settings property value. Represents the settings that control the behavior of Microsoft Entra entitlement management.
+     * @return a EntitlementManagementSettings
      */
     @jakarta.annotation.Nullable
     public EntitlementManagementSettings getSettings() {
@@ -209,7 +209,7 @@ public class EntitlementManagement extends Entity implements Parsable {
     }
     /**
      * Gets the subjects property value. Represents the subjects within entitlement management.
-     * @return a accessPackageSubject
+     * @return a java.util.List<AccessPackageSubject>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AccessPackageSubject> getSubjects() {
@@ -322,7 +322,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.connectedOrganizations = value;
     }
     /**
-     * Sets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
+     * Sets the settings property value. Represents the settings that control the behavior of Microsoft Entra entitlement management.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final EntitlementManagementSettings value) {

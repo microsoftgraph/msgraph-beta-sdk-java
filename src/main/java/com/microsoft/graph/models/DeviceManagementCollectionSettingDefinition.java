@@ -16,7 +16,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      */
     private String elementDefinitionId;
     /**
-     * Instantiates a new deviceManagementCollectionSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementCollectionSettingDefinition and sets the default values.
      */
     public DeviceManagementCollectionSettingDefinition() {
         super();
@@ -24,7 +24,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCollectionSettingDefinition
+     * @return a DeviceManagementCollectionSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCollectionSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -33,7 +33,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
     }
     /**
      * Gets the elementDefinitionId property value. The Setting Definition ID that describes what each element of the collection looks like
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getElementDefinitionId() {

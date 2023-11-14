@@ -50,7 +50,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     private String ruleName;
     /**
-     * Instantiates a new matchingDlpRule and sets the default values.
+     * Instantiates a new MatchingDlpRule and sets the default values.
      */
     public MatchingDlpRule() {
         this.setAdditionalData(new HashMap<>());
@@ -58,7 +58,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a matchingDlpRule
+     * @return a MatchingDlpRule
      */
     @jakarta.annotation.Nonnull
     public static MatchingDlpRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,14 +67,14 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the actions property value. The actions property
-     * @return a dlpActionInfo
+     * @return a java.util.List<DlpActionInfo>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DlpActionInfo> getActions() {
         return this.actions;
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -101,7 +101,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isMostRestrictive property value. The isMostRestrictive property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsMostRestrictive() {
@@ -109,7 +109,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -117,7 +117,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the policyId property value. The policyId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
@@ -125,7 +125,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the policyName property value. The policyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
@@ -133,7 +133,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the priority property value. The priority property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
@@ -141,7 +141,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleId property value. The ruleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleId() {
@@ -149,7 +149,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleMode property value. The ruleMode property
-     * @return a ruleMode
+     * @return a RuleMode
      */
     @jakarta.annotation.Nullable
     public RuleMode getRuleMode() {
@@ -157,7 +157,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the ruleName property value. The ruleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleName() {
@@ -188,8 +188,8 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
         this.actions = value;
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

@@ -21,7 +21,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      */
     private String decryptionRightsManagementTemplateId;
     /**
-     * Instantiates a new encryptWithUserDefinedRights and sets the default values.
+     * Instantiates a new EncryptWithUserDefinedRights and sets the default values.
      */
     public EncryptWithUserDefinedRights() {
         super();
@@ -30,7 +30,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a encryptWithUserDefinedRights
+     * @return a EncryptWithUserDefinedRights
      */
     @jakarta.annotation.Nonnull
     public static EncryptWithUserDefinedRights createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,7 +39,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the allowAdHocPermissions property value. The allowAdHocPermissions property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowAdHocPermissions() {
@@ -47,7 +47,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the allowMailForwarding property value. The allowMailForwarding property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowMailForwarding() {
@@ -55,7 +55,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     }
     /**
      * Gets the decryptionRightsManagementTemplateId property value. The decryptionRightsManagementTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDecryptionRightsManagementTemplateId() {

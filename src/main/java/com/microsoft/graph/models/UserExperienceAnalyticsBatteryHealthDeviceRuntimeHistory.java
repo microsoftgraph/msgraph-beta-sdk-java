@@ -24,7 +24,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
      */
     private String runtimeDateTime;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
         super();
@@ -32,7 +32,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
+     * @return a UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the deviceId property value. The unique identifier of the device, Intune DeviceID or SCCM device id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the estimatedRuntimeInMinutes property value. The estimated runtime of the device when the battery is fully charged. Unit in minutes. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEstimatedRuntimeInMinutes() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory extends En
     }
     /**
      * Gets the runtimeDateTime property value. The datetime for the instance of runtime history.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuntimeDateTime() {

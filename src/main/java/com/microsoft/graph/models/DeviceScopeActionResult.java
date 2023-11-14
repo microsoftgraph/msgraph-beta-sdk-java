@@ -37,7 +37,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
      */
     private DeviceScopeActionStatus status;
     /**
-     * Instantiates a new deviceScopeActionResult and sets the default values.
+     * Instantiates a new DeviceScopeActionResult and sets the default values.
      */
     public DeviceScopeActionResult() {
         this.setAdditionalData(new HashMap<>());
@@ -45,7 +45,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceScopeActionResult
+     * @return a DeviceScopeActionResult
      */
     @jakarta.annotation.Nonnull
     public static DeviceScopeActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         return new DeviceScopeActionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -62,7 +62,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceScopeAction property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeAction() {
@@ -70,7 +70,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the deviceScopeId property value. The unique identifier of the device scope the action was triggered on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeId() {
@@ -78,7 +78,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the failedMessage property value. The message indicates the reason the device scope action failed to trigger.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailedMessage() {
@@ -100,7 +100,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -108,7 +108,7 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the status property value. Indicates the status of the attempted device scope action
-     * @return a deviceScopeActionStatus
+     * @return a DeviceScopeActionStatus
      */
     @jakarta.annotation.Nullable
     public DeviceScopeActionStatus getStatus() {
@@ -128,8 +128,8 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

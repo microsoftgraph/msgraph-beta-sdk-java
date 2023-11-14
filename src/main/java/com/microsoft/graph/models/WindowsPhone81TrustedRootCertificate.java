@@ -20,7 +20,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
      */
     private byte[] trustedRootCertificate;
     /**
-     * Instantiates a new windowsPhone81TrustedRootCertificate and sets the default values.
+     * Instantiates a new WindowsPhone81TrustedRootCertificate and sets the default values.
      */
     public WindowsPhone81TrustedRootCertificate() {
         super();
@@ -29,7 +29,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPhone81TrustedRootCertificate
+     * @return a WindowsPhone81TrustedRootCertificate
      */
     @jakarta.annotation.Nonnull
     public static WindowsPhone81TrustedRootCertificate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,7 +38,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     }
     /**
      * Gets the certFileName property value. File name to display in UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertFileName() {
@@ -57,7 +57,7 @@ public class WindowsPhone81TrustedRootCertificate extends DeviceConfiguration im
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getTrustedRootCertificate() {

@@ -24,7 +24,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
      */
     private String profileName;
     /**
-     * Instantiates a new windows81WifiImportConfiguration and sets the default values.
+     * Instantiates a new Windows81WifiImportConfiguration and sets the default values.
      */
     public Windows81WifiImportConfiguration() {
         super();
@@ -33,7 +33,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows81WifiImportConfiguration
+     * @return a Windows81WifiImportConfiguration
      */
     @jakarta.annotation.Nonnull
     public static Windows81WifiImportConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array). This is the XML file saved on the device you used to connect to the Wi-Fi endpoint.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getPayload() {
@@ -62,7 +62,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the payloadFileName property value. Payload file name (.xml).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadFileName() {
@@ -70,7 +70,7 @@ public class Windows81WifiImportConfiguration extends DeviceConfiguration implem
     }
     /**
      * Gets the profileName property value. Profile name displayed in the UI.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {

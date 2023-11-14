@@ -44,7 +44,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
      */
     private Integer version;
     /**
-     * Instantiates a new deviceCompliancePolicyState and sets the default values.
+     * Instantiates a new DeviceCompliancePolicyState and sets the default values.
      */
     public DeviceCompliancePolicyState() {
         super();
@@ -52,7 +52,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicyState
+     * @return a DeviceCompliancePolicyState
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicyState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -61,7 +61,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The name of the policy for this policyBase
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -86,7 +86,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
-     * @return a policyPlatformType
+     * @return a PolicyPlatformType
      */
     @jakarta.annotation.Nullable
     public PolicyPlatformType getPlatformType() {
@@ -94,7 +94,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the settingCount property value. Count of how many setting a policy holds
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingCount() {
@@ -102,7 +102,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the settingStates property value. The settingStates property
-     * @return a deviceCompliancePolicySettingState
+     * @return a java.util.List<DeviceCompliancePolicySettingState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceCompliancePolicySettingState> getSettingStates() {
@@ -110,7 +110,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
@@ -118,7 +118,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the userId property value. User unique identifier, must be Guid
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
@@ -126,7 +126,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -134,7 +134,7 @@ public class DeviceCompliancePolicyState extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The version of the policy
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

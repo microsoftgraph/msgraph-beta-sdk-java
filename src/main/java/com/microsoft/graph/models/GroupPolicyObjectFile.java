@@ -38,7 +38,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
      */
     private java.util.List<String> roleScopeTagIds;
     /**
-     * Instantiates a new groupPolicyObjectFile and sets the default values.
+     * Instantiates a new GroupPolicyObjectFile and sets the default values.
      */
     public GroupPolicyObjectFile() {
         super();
@@ -46,7 +46,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a groupPolicyObjectFile
+     * @return a GroupPolicyObjectFile
      */
     @jakarta.annotation.Nonnull
     public static GroupPolicyObjectFile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The Group Policy Object file content.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContent() {
@@ -102,7 +102,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the ouDistinguishedName property value. The distinguished name of the OU.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOuDistinguishedName() {
@@ -110,7 +110,7 @@ public class GroupPolicyObjectFile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. The list of scope tags for the configuration.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {

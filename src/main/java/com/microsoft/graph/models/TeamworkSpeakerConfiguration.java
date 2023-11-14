@@ -38,7 +38,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      */
     private java.util.List<TeamworkPeripheral> speakers;
     /**
-     * Instantiates a new teamworkSpeakerConfiguration and sets the default values.
+     * Instantiates a new TeamworkSpeakerConfiguration and sets the default values.
      */
     public TeamworkSpeakerConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -46,7 +46,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkSpeakerConfiguration
+     * @return a TeamworkSpeakerConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSpeakerConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
         return new TeamworkSpeakerConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the defaultCommunicationSpeaker property value. The defaultCommunicationSpeaker property
-     * @return a teamworkPeripheral
+     * @return a TeamworkPeripheral
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultCommunicationSpeaker() {
@@ -71,7 +71,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the defaultSpeaker property value. The defaultSpeaker property
-     * @return a teamworkPeripheral
+     * @return a TeamworkPeripheral
      */
     @jakarta.annotation.Nullable
     public TeamworkPeripheral getDefaultSpeaker() {
@@ -94,7 +94,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isCommunicationSpeakerOptional property value. True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCommunicationSpeakerOptional() {
@@ -102,7 +102,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isSpeakerOptional property value. True if the configured speaker is optional. Used to compute the health state if the speaker is not optional.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSpeakerOptional() {
@@ -110,7 +110,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -118,7 +118,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the speakers property value. The speakers property
-     * @return a teamworkPeripheral
+     * @return a java.util.List<TeamworkPeripheral>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkPeripheral> getSpeakers() {
@@ -139,8 +139,8 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

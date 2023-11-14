@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InvalidLicenseAlertConfiguration extends UnifiedRoleManagementAlertConfiguration implements Parsable {
     /**
-     * Instantiates a new invalidLicenseAlertConfiguration and sets the default values.
+     * Instantiates a new InvalidLicenseAlertConfiguration and sets the default values.
      */
     public InvalidLicenseAlertConfiguration() {
         super();
@@ -18,7 +18,7 @@ public class InvalidLicenseAlertConfiguration extends UnifiedRoleManagementAlert
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a invalidLicenseAlertConfiguration
+     * @return a InvalidLicenseAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static InvalidLicenseAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

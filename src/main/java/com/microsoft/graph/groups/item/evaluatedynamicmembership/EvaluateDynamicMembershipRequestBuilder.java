@@ -36,33 +36,33 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/evaluateDynamicMembership", rawUrl);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a EvaluateDynamicMembershipResult
      * @see <a href="https://learn.microsoft.com/graph/api/group-evaluatedynamicmembership?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@jakarta.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public EvaluateDynamicMembershipResult post(@jakarta.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of evaluateDynamicMembershipResult
+     * @return a EvaluateDynamicMembershipResult
      * @see <a href="https://learn.microsoft.com/graph/api/group-evaluatedynamicmembership?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<EvaluateDynamicMembershipResult> post(@jakarta.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public EvaluateDynamicMembershipResult post(@jakarta.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, EvaluateDynamicMembershipResult::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
         return toPostRequestInformation(body, null);
     }
     /**
-     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways:
+     * Evaluate whether a user or device is or would be a member of a dynamic group. The membership rule is returned along with other details that were used in the evaluation. You can complete this operation in the following ways: This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -80,23 +80,23 @@ public class EvaluateDynamicMembershipRequestBuilder extends BaseRequestBuilder 
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EvaluateDynamicMembershipPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a evaluateDynamicMembershipRequestBuilder
+     * @return a EvaluateDynamicMembershipRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public EvaluateDynamicMembershipRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

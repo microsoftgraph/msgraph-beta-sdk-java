@@ -36,7 +36,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     private AndroidProfileApplicability profileApplicability;
     /**
-     * Instantiates a new androidManagedStoreAppConfiguration and sets the default values.
+     * Instantiates a new AndroidManagedStoreAppConfiguration and sets the default values.
      */
     public AndroidManagedStoreAppConfiguration() {
         super();
@@ -45,7 +45,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreAppConfiguration
+     * @return a AndroidManagedStoreAppConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreAppConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     }
     /**
      * Gets the appSupportsOemConfig property value. Whether or not this AppConfig is an OEMConfig policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAppSupportsOemConfig() {
@@ -62,7 +62,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     }
     /**
      * Gets the connectedAppsEnabled property value. Setting to specify whether to allow ConnectedApps experience for this app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectedAppsEnabled() {
@@ -85,7 +85,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     }
     /**
      * Gets the packageId property value. Android Enterprise app configuration package id.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
@@ -93,7 +93,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     }
     /**
      * Gets the payloadJson property value. Android Enterprise app configuration JSON payload.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadJson() {
@@ -101,7 +101,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     }
     /**
      * Gets the permissionActions property value. List of Android app permissions and corresponding permission actions.
-     * @return a androidPermissionAction
+     * @return a java.util.List<AndroidPermissionAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidPermissionAction> getPermissionActions() {
@@ -109,7 +109,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
     }
     /**
      * Gets the profileApplicability property value. Android profile applicability
-     * @return a androidProfileApplicability
+     * @return a AndroidProfileApplicability
      */
     @jakarta.annotation.Nullable
     public AndroidProfileApplicability getProfileApplicability() {

@@ -13,7 +13,7 @@ public class ServicePrincipalCreationConditionSetCollectionResponse extends Base
      */
     private java.util.List<ServicePrincipalCreationConditionSet> value;
     /**
-     * Instantiates a new servicePrincipalCreationConditionSetCollectionResponse and sets the default values.
+     * Instantiates a new ServicePrincipalCreationConditionSetCollectionResponse and sets the default values.
      */
     public ServicePrincipalCreationConditionSetCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ServicePrincipalCreationConditionSetCollectionResponse extends Base
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a servicePrincipalCreationConditionSetCollectionResponse
+     * @return a ServicePrincipalCreationConditionSetCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ServicePrincipalCreationConditionSetCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ServicePrincipalCreationConditionSetCollectionResponse extends Base
     }
     /**
      * Gets the value property value. The value property
-     * @return a servicePrincipalCreationConditionSet
+     * @return a java.util.List<ServicePrincipalCreationConditionSet>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getValue() {

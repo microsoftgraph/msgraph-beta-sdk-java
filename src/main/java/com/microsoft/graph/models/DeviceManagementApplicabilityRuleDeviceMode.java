@@ -30,7 +30,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      */
     private DeviceManagementApplicabilityRuleType ruleType;
     /**
-     * Instantiates a new deviceManagementApplicabilityRuleDeviceMode and sets the default values.
+     * Instantiates a new DeviceManagementApplicabilityRuleDeviceMode and sets the default values.
      */
     public DeviceManagementApplicabilityRuleDeviceMode() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementApplicabilityRuleDeviceMode
+     * @return a DeviceManagementApplicabilityRuleDeviceMode
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementApplicabilityRuleDeviceMode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         return new DeviceManagementApplicabilityRuleDeviceMode();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the deviceMode property value. Windows 10 Device Mode type.
-     * @return a windows10DeviceModeType
+     * @return a Windows10DeviceModeType
      */
     @jakarta.annotation.Nullable
     public Windows10DeviceModeType getDeviceMode() {
@@ -76,7 +76,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the name property value. Name for object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -84,7 +84,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
     }
     /**
      * Gets the ruleType property value. Supported Applicability rule types for Device Configuration
-     * @return a deviceManagementApplicabilityRuleType
+     * @return a DeviceManagementApplicabilityRuleType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementApplicabilityRuleType getRuleType() {
@@ -111,8 +111,8 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

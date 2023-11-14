@@ -78,7 +78,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      */
     private SecurityVendorInformation vendorInformation;
     /**
-     * Instantiates a new cloudAppSecurityProfile and sets the default values.
+     * Instantiates a new CloudAppSecurityProfile and sets the default values.
      */
     public CloudAppSecurityProfile() {
         super();
@@ -86,7 +86,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudAppSecurityProfile
+     * @return a CloudAppSecurityProfile
      */
     @jakarta.annotation.Nonnull
     public static CloudAppSecurityProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -95,7 +95,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureSubscriptionId() {
@@ -103,7 +103,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
@@ -119,7 +119,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the deploymentPackageUrl property value. The deploymentPackageUrl property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeploymentPackageUrl() {
@@ -127,7 +127,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the destinationServiceName property value. The destinationServiceName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationServiceName() {
@@ -161,7 +161,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isSigned property value. The isSigned property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSigned() {
@@ -177,7 +177,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the manifest property value. The manifest property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManifest() {
@@ -185,7 +185,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. The name property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -193,7 +193,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the permissionsRequired property value. The permissionsRequired property
-     * @return a applicationPermissionsRequired
+     * @return a ApplicationPermissionsRequired
      */
     @jakarta.annotation.Nullable
     public ApplicationPermissionsRequired getPermissionsRequired() {
@@ -201,7 +201,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlatform() {
@@ -209,7 +209,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the policyName property value. The policyName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
@@ -217,7 +217,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the publisher property value. The publisher property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
@@ -225,7 +225,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the riskScore property value. The riskScore property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRiskScore() {
@@ -233,7 +233,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the tags property value. The tags property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
@@ -241,7 +241,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
@@ -249,7 +249,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {

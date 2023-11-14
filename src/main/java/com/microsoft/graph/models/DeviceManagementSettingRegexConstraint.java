@@ -16,7 +16,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
      */
     private String regex;
     /**
-     * Instantiates a new deviceManagementSettingRegexConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingRegexConstraint and sets the default values.
      */
     public DeviceManagementSettingRegexConstraint() {
         super();
@@ -25,7 +25,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingRegexConstraint
+     * @return a DeviceManagementSettingRegexConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingRegexConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class DeviceManagementSettingRegexConstraint extends DeviceManagementCons
     }
     /**
      * Gets the regex property value. The RegEx pattern to match against
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRegex() {

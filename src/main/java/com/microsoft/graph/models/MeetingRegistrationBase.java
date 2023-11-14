@@ -17,7 +17,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      */
     private java.util.List<MeetingRegistrantBase> registrants;
     /**
-     * Instantiates a new meetingRegistrationBase and sets the default values.
+     * Instantiates a new MeetingRegistrationBase and sets the default values.
      */
     public MeetingRegistrationBase() {
         super();
@@ -25,7 +25,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a meetingRegistrationBase
+     * @return a MeetingRegistrationBase
      */
     @jakarta.annotation.Nonnull
     public static MeetingRegistrationBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,7 +42,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowedRegistrant property value. Specifies who can register for the meeting.
-     * @return a meetingAudience
+     * @return a MeetingAudience
      */
     @jakarta.annotation.Nullable
     public MeetingAudience getAllowedRegistrant() {
@@ -61,7 +61,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     }
     /**
      * Gets the registrants property value. Registrants of the online meeting.
-     * @return a meetingRegistrantBase
+     * @return a java.util.List<MeetingRegistrantBase>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MeetingRegistrantBase> getRegistrants() {

@@ -81,7 +81,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
      */
     private String subject;
     /**
-     * Instantiates a new outlookTask and sets the default values.
+     * Instantiates a new OutlookTask and sets the default values.
      */
     public OutlookTask() {
         super();
@@ -90,7 +90,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookTask
+     * @return a OutlookTask
      */
     @jakarta.annotation.Nonnull
     public static OutlookTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -99,7 +99,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the assignedTo property value. The name of the person who has been assigned the task in Outlook. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignedTo() {
@@ -107,7 +107,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the attachments property value. The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.
-     * @return a attachment
+     * @return a java.util.List<Attachment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
@@ -115,7 +115,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the body property value. The task body that typically contains information about the task. Note that only HTML type is supported.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getBody() {
@@ -123,7 +123,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the completedDateTime property value. The date in the specified time zone that the task was finished.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getCompletedDateTime() {
@@ -131,7 +131,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the dueDateTime property value. The date in the specified time zone that the task is to be finished.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getDueDateTime() {
@@ -166,7 +166,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the hasAttachments property value. Set to true if the task has attachments.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasAttachments() {
@@ -174,7 +174,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the importance property value. The importance property
-     * @return a importance
+     * @return a Importance
      */
     @jakarta.annotation.Nullable
     public Importance getImportance() {
@@ -182,7 +182,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the isReminderOn property value. The isReminderOn property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsReminderOn() {
@@ -190,7 +190,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the task. Read-only. Nullable.
-     * @return a multiValueLegacyExtendedProperty
+     * @return a java.util.List<MultiValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
@@ -198,7 +198,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the owner property value. The owner property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOwner() {
@@ -206,7 +206,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the parentFolderId property value. The parentFolderId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentFolderId() {
@@ -214,7 +214,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the recurrence property value. The recurrence property
-     * @return a patternedRecurrence
+     * @return a PatternedRecurrence
      */
     @jakarta.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
@@ -222,7 +222,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the reminderDateTime property value. The reminderDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getReminderDateTime() {
@@ -230,7 +230,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the sensitivity property value. The sensitivity property
-     * @return a sensitivity
+     * @return a Sensitivity
      */
     @jakarta.annotation.Nullable
     public Sensitivity getSensitivity() {
@@ -238,7 +238,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the task. Read-only. Nullable.
-     * @return a singleValueLegacyExtendedProperty
+     * @return a java.util.List<SingleValueLegacyExtendedProperty>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
@@ -246,7 +246,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -254,7 +254,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the status property value. The status property
-     * @return a taskStatus
+     * @return a TaskStatus
      */
     @jakarta.annotation.Nullable
     public TaskStatus getStatus() {
@@ -262,7 +262,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {

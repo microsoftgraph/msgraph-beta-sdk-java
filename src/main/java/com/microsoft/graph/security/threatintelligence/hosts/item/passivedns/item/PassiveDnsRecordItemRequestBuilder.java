@@ -38,24 +38,24 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Passive DNS retrieval about this host.
-     * @return a CompletableFuture of passiveDnsRecord
+     * @return a PassiveDnsRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PassiveDnsRecord> get() {
+    @jakarta.annotation.Nullable
+    public PassiveDnsRecord get() {
         return get(null);
     }
     /**
      * Passive DNS retrieval about this host.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of passiveDnsRecord
+     * @return a PassiveDnsRecord
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<PassiveDnsRecord> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public PassiveDnsRecord get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, PassiveDnsRecord::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, PassiveDnsRecord::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Passive DNS retrieval about this host.
@@ -73,10 +73,6 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class PassiveDnsRecordItemRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

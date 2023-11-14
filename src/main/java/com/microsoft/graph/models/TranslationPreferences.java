@@ -30,7 +30,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      */
     private java.util.List<String> untranslatedLanguages;
     /**
-     * Instantiates a new translationPreferences and sets the default values.
+     * Instantiates a new TranslationPreferences and sets the default values.
      */
     public TranslationPreferences() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a translationPreferences
+     * @return a TranslationPreferences
      */
     @jakarta.annotation.Nonnull
     public static TranslationPreferences createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
         return new TranslationPreferences();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the languageOverrides property value. Translation override behavior for languages, if any.Returned by default.
-     * @return a translationLanguageOverride
+     * @return a java.util.List<TranslationLanguageOverride>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TranslationLanguageOverride> getLanguageOverrides() {
@@ -76,7 +76,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -84,7 +84,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
-     * @return a translationBehavior
+     * @return a TranslationBehavior
      */
     @jakarta.annotation.Nullable
     public TranslationBehavior getTranslationBehavior() {
@@ -92,7 +92,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getUntranslatedLanguages() {
@@ -111,8 +111,8 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

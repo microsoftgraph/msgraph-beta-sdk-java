@@ -141,9 +141,11 @@ import com.microsoft.graph.reports.monthlyprintusagebyuser.MonthlyPrintUsageByUs
 import com.microsoft.graph.reports.monthlyprintusagesummariesbyprinter.MonthlyPrintUsageSummariesByPrinterRequestBuilder;
 import com.microsoft.graph.reports.monthlyprintusagesummariesbyuser.MonthlyPrintUsageSummariesByUserRequestBuilder;
 import com.microsoft.graph.reports.security.SecurityRequestBuilder;
+import com.microsoft.graph.reports.serviceactivity.ServiceActivityRequestBuilder;
 import com.microsoft.graph.reports.serviceprincipalsigninactivities.ServicePrincipalSignInActivitiesRequestBuilder;
 import com.microsoft.graph.reports.sla.SlaRequestBuilder;
 import com.microsoft.graph.reports.usercredentialusagedetails.UserCredentialUsageDetailsRequestBuilder;
+import com.microsoft.graph.reports.userinsights.UserInsightsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -347,6 +349,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new SecurityRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the serviceActivity property of the microsoft.graph.reportRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ServiceActivityRequestBuilder serviceActivity() {
+        return new ServiceActivityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the servicePrincipalSignInActivities property of the microsoft.graph.reportRoot entity.
      */
     @jakarta.annotation.Nonnull
@@ -368,6 +377,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new UserCredentialUsageDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the userInsights property of the microsoft.graph.reportRoot entity.
+     */
+    @jakarta.annotation.Nonnull
+    public UserInsightsRequestBuilder userInsights() {
+        return new UserInsightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new ReportsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -385,29 +401,29 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get reports
-     * @return a CompletableFuture of reportRoot
+     * @return a ReportRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> get() {
+    @jakarta.annotation.Nullable
+    public ReportRoot get() {
         return get(null);
     }
     /**
      * Get reports
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reportRoot
+     * @return a ReportRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ReportRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getAzureADApplicationSignInSummary method.
      * @param period Usage: period='{period}'
-     * @return a getAzureADApplicationSignInSummaryWithPeriodRequestBuilder
+     * @return a GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder getAzureADApplicationSignInSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -417,7 +433,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getBrowserDistributionUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getBrowserDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetBrowserDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetBrowserDistributionUserCountsWithPeriodRequestBuilder getBrowserDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -427,7 +443,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getBrowserUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getBrowserUserCountsWithPeriodRequestBuilder
+     * @return a GetBrowserUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetBrowserUserCountsWithPeriodRequestBuilder getBrowserUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -437,7 +453,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getBrowserUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getBrowserUserDetailWithPeriodRequestBuilder
+     * @return a GetBrowserUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetBrowserUserDetailWithPeriodRequestBuilder getBrowserUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -447,7 +463,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCredentialUsageSummary method.
      * @param period Usage: period='{period}'
-     * @return a getCredentialUsageSummaryWithPeriodRequestBuilder
+     * @return a GetCredentialUsageSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetCredentialUsageSummaryWithPeriodRequestBuilder getCredentialUsageSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -457,7 +473,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getEmailActivityCountsWithPeriodRequestBuilder
+     * @return a GetEmailActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailActivityCountsWithPeriodRequestBuilder getEmailActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -467,7 +483,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getEmailActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetEmailActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailActivityUserCountsWithPeriodRequestBuilder getEmailActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -477,7 +493,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getEmailActivityUserDetailWithDateRequestBuilder
+     * @return a GetEmailActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailActivityUserDetailWithDateRequestBuilder getEmailActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -487,7 +503,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getEmailActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetEmailActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailActivityUserDetailWithPeriodRequestBuilder getEmailActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -497,7 +513,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailAppUsageAppsUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getEmailAppUsageAppsUserCountsWithPeriodRequestBuilder
+     * @return a GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder getEmailAppUsageAppsUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -507,7 +523,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailAppUsageUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getEmailAppUsageUserCountsWithPeriodRequestBuilder
+     * @return a GetEmailAppUsageUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailAppUsageUserCountsWithPeriodRequestBuilder getEmailAppUsageUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -517,7 +533,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailAppUsageUserDetail method.
      * @param date Usage: date={date}
-     * @return a getEmailAppUsageUserDetailWithDateRequestBuilder
+     * @return a GetEmailAppUsageUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailAppUsageUserDetailWithDateRequestBuilder getEmailAppUsageUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -527,7 +543,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailAppUsageUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getEmailAppUsageUserDetailWithPeriodRequestBuilder
+     * @return a GetEmailAppUsageUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailAppUsageUserDetailWithPeriodRequestBuilder getEmailAppUsageUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -537,7 +553,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getEmailAppUsageVersionsUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder
+     * @return a GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder getEmailAppUsageVersionsUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -547,7 +563,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFormsUserActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getFormsUserActivityCountsWithPeriodRequestBuilder
+     * @return a GetFormsUserActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFormsUserActivityCountsWithPeriodRequestBuilder getFormsUserActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -557,7 +573,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFormsUserActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getFormsUserActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetFormsUserActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFormsUserActivityUserCountsWithPeriodRequestBuilder getFormsUserActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -567,7 +583,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFormsUserActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getFormsUserActivityUserDetailWithDateRequestBuilder
+     * @return a GetFormsUserActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFormsUserActivityUserDetailWithDateRequestBuilder getFormsUserActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -577,7 +593,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFormsUserActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getFormsUserActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetFormsUserActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetFormsUserActivityUserDetailWithPeriodRequestBuilder getFormsUserActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -589,7 +605,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param groupId Usage: groupId='{groupId}'
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final String groupId, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -601,7 +617,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getM365AppPlatformUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getM365AppPlatformUserCountsWithPeriodRequestBuilder
+     * @return a GetM365AppPlatformUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetM365AppPlatformUserCountsWithPeriodRequestBuilder getM365AppPlatformUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -611,7 +627,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getM365AppUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getM365AppUserCountsWithPeriodRequestBuilder
+     * @return a GetM365AppUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetM365AppUserCountsWithPeriodRequestBuilder getM365AppUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -621,7 +637,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getM365AppUserDetail method.
      * @param date Usage: date={date}
-     * @return a getM365AppUserDetailWithDateRequestBuilder
+     * @return a GetM365AppUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetM365AppUserDetailWithDateRequestBuilder getM365AppUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -631,7 +647,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getM365AppUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getM365AppUserDetailWithPeriodRequestBuilder
+     * @return a GetM365AppUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetM365AppUserDetailWithPeriodRequestBuilder getM365AppUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -641,7 +657,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMailboxUsageDetail method.
      * @param period Usage: period='{period}'
-     * @return a getMailboxUsageDetailWithPeriodRequestBuilder
+     * @return a GetMailboxUsageDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMailboxUsageDetailWithPeriodRequestBuilder getMailboxUsageDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -651,7 +667,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMailboxUsageMailboxCounts method.
      * @param period Usage: period='{period}'
-     * @return a getMailboxUsageMailboxCountsWithPeriodRequestBuilder
+     * @return a GetMailboxUsageMailboxCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMailboxUsageMailboxCountsWithPeriodRequestBuilder getMailboxUsageMailboxCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -661,7 +677,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMailboxUsageQuotaStatusMailboxCounts method.
      * @param period Usage: period='{period}'
-     * @return a getMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder
+     * @return a GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder getMailboxUsageQuotaStatusMailboxCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -671,7 +687,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMailboxUsageStorage method.
      * @param period Usage: period='{period}'
-     * @return a getMailboxUsageStorageWithPeriodRequestBuilder
+     * @return a GetMailboxUsageStorageWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetMailboxUsageStorageWithPeriodRequestBuilder getMailboxUsageStorageWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -681,7 +697,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365ActiveUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365ActiveUserCountsWithPeriodRequestBuilder
+     * @return a GetOffice365ActiveUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ActiveUserCountsWithPeriodRequestBuilder getOffice365ActiveUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -691,7 +707,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365ActiveUserDetail method.
      * @param date Usage: date={date}
-     * @return a getOffice365ActiveUserDetailWithDateRequestBuilder
+     * @return a GetOffice365ActiveUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ActiveUserDetailWithDateRequestBuilder getOffice365ActiveUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -701,7 +717,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365ActiveUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365ActiveUserDetailWithPeriodRequestBuilder
+     * @return a GetOffice365ActiveUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ActiveUserDetailWithPeriodRequestBuilder getOffice365ActiveUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -711,7 +727,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365GroupsActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365GroupsActivityCountsWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityCountsWithPeriodRequestBuilder getOffice365GroupsActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -721,7 +737,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365GroupsActivityDetail method.
      * @param date Usage: date={date}
-     * @return a getOffice365GroupsActivityDetailWithDateRequestBuilder
+     * @return a GetOffice365GroupsActivityDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityDetailWithDateRequestBuilder getOffice365GroupsActivityDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -731,7 +747,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365GroupsActivityDetail method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365GroupsActivityDetailWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityDetailWithPeriodRequestBuilder getOffice365GroupsActivityDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -741,7 +757,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365GroupsActivityFileCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365GroupsActivityFileCountsWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder getOffice365GroupsActivityFileCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -751,7 +767,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365GroupsActivityGroupCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder getOffice365GroupsActivityGroupCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -761,7 +777,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365GroupsActivityStorage method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365GroupsActivityStorageWithPeriodRequestBuilder
+     * @return a GetOffice365GroupsActivityStorageWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365GroupsActivityStorageWithPeriodRequestBuilder getOffice365GroupsActivityStorageWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -771,7 +787,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOffice365ServicesUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOffice365ServicesUserCountsWithPeriodRequestBuilder
+     * @return a GetOffice365ServicesUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOffice365ServicesUserCountsWithPeriodRequestBuilder getOffice365ServicesUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -781,7 +797,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveActivityFileCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveActivityFileCountsWithPeriodRequestBuilder
+     * @return a GetOneDriveActivityFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveActivityFileCountsWithPeriodRequestBuilder getOneDriveActivityFileCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -791,7 +807,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetOneDriveActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveActivityUserCountsWithPeriodRequestBuilder getOneDriveActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -801,7 +817,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getOneDriveActivityUserDetailWithDateRequestBuilder
+     * @return a GetOneDriveActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveActivityUserDetailWithDateRequestBuilder getOneDriveActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -811,7 +827,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetOneDriveActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveActivityUserDetailWithPeriodRequestBuilder getOneDriveActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -821,7 +837,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveUsageAccountCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveUsageAccountCountsWithPeriodRequestBuilder
+     * @return a GetOneDriveUsageAccountCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveUsageAccountCountsWithPeriodRequestBuilder getOneDriveUsageAccountCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -831,7 +847,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveUsageAccountDetail method.
      * @param date Usage: date={date}
-     * @return a getOneDriveUsageAccountDetailWithDateRequestBuilder
+     * @return a GetOneDriveUsageAccountDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveUsageAccountDetailWithDateRequestBuilder getOneDriveUsageAccountDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -841,7 +857,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveUsageAccountDetail method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveUsageAccountDetailWithPeriodRequestBuilder
+     * @return a GetOneDriveUsageAccountDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveUsageAccountDetailWithPeriodRequestBuilder getOneDriveUsageAccountDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -851,7 +867,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveUsageFileCounts method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveUsageFileCountsWithPeriodRequestBuilder
+     * @return a GetOneDriveUsageFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveUsageFileCountsWithPeriodRequestBuilder getOneDriveUsageFileCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -861,7 +877,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getOneDriveUsageStorage method.
      * @param period Usage: period='{period}'
-     * @return a getOneDriveUsageStorageWithPeriodRequestBuilder
+     * @return a GetOneDriveUsageStorageWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetOneDriveUsageStorageWithPeriodRequestBuilder getOneDriveUsageStorageWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -873,7 +889,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param printerId Usage: printerId='{printerId}'
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final String printerId, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
@@ -885,7 +901,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRelyingPartyDetailedSummary method.
      * @param period Usage: period='{period}'
-     * @return a getRelyingPartyDetailedSummaryWithPeriodRequestBuilder
+     * @return a GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder getRelyingPartyDetailedSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -895,7 +911,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointActivityFileCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointActivityFileCountsWithPeriodRequestBuilder
+     * @return a GetSharePointActivityFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointActivityFileCountsWithPeriodRequestBuilder getSharePointActivityFileCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -905,7 +921,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointActivityPages method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointActivityPagesWithPeriodRequestBuilder
+     * @return a GetSharePointActivityPagesWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointActivityPagesWithPeriodRequestBuilder getSharePointActivityPagesWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -915,7 +931,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetSharePointActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointActivityUserCountsWithPeriodRequestBuilder getSharePointActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -925,7 +941,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getSharePointActivityUserDetailWithDateRequestBuilder
+     * @return a GetSharePointActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointActivityUserDetailWithDateRequestBuilder getSharePointActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -935,7 +951,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetSharePointActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointActivityUserDetailWithPeriodRequestBuilder getSharePointActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -945,7 +961,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointSiteUsageDetail method.
      * @param date Usage: date={date}
-     * @return a getSharePointSiteUsageDetailWithDateRequestBuilder
+     * @return a GetSharePointSiteUsageDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsageDetailWithDateRequestBuilder getSharePointSiteUsageDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -955,7 +971,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointSiteUsageDetail method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointSiteUsageDetailWithPeriodRequestBuilder
+     * @return a GetSharePointSiteUsageDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsageDetailWithPeriodRequestBuilder getSharePointSiteUsageDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -965,7 +981,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointSiteUsageFileCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointSiteUsageFileCountsWithPeriodRequestBuilder
+     * @return a GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder getSharePointSiteUsageFileCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -975,7 +991,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointSiteUsagePages method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointSiteUsagePagesWithPeriodRequestBuilder
+     * @return a GetSharePointSiteUsagePagesWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsagePagesWithPeriodRequestBuilder getSharePointSiteUsagePagesWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -985,7 +1001,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointSiteUsageSiteCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointSiteUsageSiteCountsWithPeriodRequestBuilder
+     * @return a GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder getSharePointSiteUsageSiteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -995,7 +1011,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSharePointSiteUsageStorage method.
      * @param period Usage: period='{period}'
-     * @return a getSharePointSiteUsageStorageWithPeriodRequestBuilder
+     * @return a GetSharePointSiteUsageStorageWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSharePointSiteUsageStorageWithPeriodRequestBuilder getSharePointSiteUsageStorageWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1005,7 +1021,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessActivityCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder getSkypeForBusinessActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1015,7 +1031,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1025,7 +1041,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getSkypeForBusinessActivityUserDetailWithDateRequestBuilder
+     * @return a GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder getSkypeForBusinessActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1035,7 +1051,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder getSkypeForBusinessActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1045,7 +1061,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageDistributionUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1055,7 +1071,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder getSkypeForBusinessDeviceUsageUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1065,7 +1081,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageUserDetail method.
      * @param date Usage: date={date}
-     * @return a getSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder
+     * @return a GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder getSkypeForBusinessDeviceUsageUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1075,7 +1091,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder getSkypeForBusinessDeviceUsageUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1085,7 +1101,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder getSkypeForBusinessOrganizerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1095,7 +1111,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityMinuteCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1105,7 +1121,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessOrganizerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1115,7 +1131,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder getSkypeForBusinessParticipantActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1125,7 +1141,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityMinuteCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder getSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1135,7 +1151,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessParticipantActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1145,7 +1161,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder getSkypeForBusinessPeerToPeerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1155,7 +1171,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityMinuteCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1165,7 +1181,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1175,7 +1191,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsDeviceUsageDistributionTotalUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder getTeamsDeviceUsageDistributionTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1185,7 +1201,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsDeviceUsageDistributionUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder getTeamsDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1195,7 +1211,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsDeviceUsageTotalUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsDeviceUsageTotalUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsDeviceUsageTotalUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsDeviceUsageTotalUserCountsWithPeriodRequestBuilder getTeamsDeviceUsageTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1205,7 +1221,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsDeviceUsageUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsDeviceUsageUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder getTeamsDeviceUsageUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1215,7 +1231,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsDeviceUsageUserDetail method.
      * @param date Usage: date={date}
-     * @return a getTeamsDeviceUsageUserDetailWithDateRequestBuilder
+     * @return a GetTeamsDeviceUsageUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsDeviceUsageUserDetailWithDateRequestBuilder getTeamsDeviceUsageUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1225,7 +1241,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsDeviceUsageUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsDeviceUsageUserDetailWithPeriodRequestBuilder
+     * @return a GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder getTeamsDeviceUsageUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1235,7 +1251,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsTeamActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsTeamActivityCountsWithPeriodRequestBuilder
+     * @return a GetTeamsTeamActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsTeamActivityCountsWithPeriodRequestBuilder getTeamsTeamActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1245,7 +1261,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsTeamActivityDetail method.
      * @param date Usage: date={date}
-     * @return a getTeamsTeamActivityDetailWithDateRequestBuilder
+     * @return a GetTeamsTeamActivityDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsTeamActivityDetailWithDateRequestBuilder getTeamsTeamActivityDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1255,7 +1271,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsTeamActivityDetail method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsTeamActivityDetailWithPeriodRequestBuilder
+     * @return a GetTeamsTeamActivityDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsTeamActivityDetailWithPeriodRequestBuilder getTeamsTeamActivityDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1265,7 +1281,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsTeamActivityDistributionCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder
+     * @return a GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder getTeamsTeamActivityDistributionCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1275,7 +1291,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsTeamCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsTeamCountsWithPeriodRequestBuilder
+     * @return a GetTeamsTeamCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsTeamCountsWithPeriodRequestBuilder getTeamsTeamCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1285,7 +1301,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityCountsWithPeriodRequestBuilder getTeamsUserActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1295,7 +1311,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityDistributionTotalUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder getTeamsUserActivityDistributionTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1305,7 +1321,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityDistributionUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder getTeamsUserActivityDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1315,7 +1331,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityTotalCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityTotalCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityTotalCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityTotalCountsWithPeriodRequestBuilder getTeamsUserActivityTotalCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1325,7 +1341,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityTotalDistributionCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder getTeamsUserActivityTotalDistributionCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1335,7 +1351,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityTotalUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityTotalUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityTotalUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityTotalUserCountsWithPeriodRequestBuilder getTeamsUserActivityTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1345,7 +1361,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityUserCountsWithPeriodRequestBuilder getTeamsUserActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1355,7 +1371,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getTeamsUserActivityUserDetailWithDateRequestBuilder
+     * @return a GetTeamsUserActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityUserDetailWithDateRequestBuilder getTeamsUserActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1365,7 +1381,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getTeamsUserActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetTeamsUserActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetTeamsUserActivityUserDetailWithPeriodRequestBuilder getTeamsUserActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1377,7 +1393,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
      * @param userId Usage: userId='{userId}'
-     * @return a getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
+     * @return a GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime, @jakarta.annotation.Nonnull final String userId) {
@@ -1389,7 +1405,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getYammerActivityCountsWithPeriodRequestBuilder
+     * @return a GetYammerActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerActivityCountsWithPeriodRequestBuilder getYammerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1399,7 +1415,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerActivityUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getYammerActivityUserCountsWithPeriodRequestBuilder
+     * @return a GetYammerActivityUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerActivityUserCountsWithPeriodRequestBuilder getYammerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1409,7 +1425,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerActivityUserDetail method.
      * @param date Usage: date={date}
-     * @return a getYammerActivityUserDetailWithDateRequestBuilder
+     * @return a GetYammerActivityUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerActivityUserDetailWithDateRequestBuilder getYammerActivityUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1419,7 +1435,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerActivityUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getYammerActivityUserDetailWithPeriodRequestBuilder
+     * @return a GetYammerActivityUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerActivityUserDetailWithPeriodRequestBuilder getYammerActivityUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1429,7 +1445,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerDeviceUsageDistributionUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
+     * @return a GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder getYammerDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1439,7 +1455,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerDeviceUsageUserCounts method.
      * @param period Usage: period='{period}'
-     * @return a getYammerDeviceUsageUserCountsWithPeriodRequestBuilder
+     * @return a GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder getYammerDeviceUsageUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1449,7 +1465,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerDeviceUsageUserDetail method.
      * @param date Usage: date={date}
-     * @return a getYammerDeviceUsageUserDetailWithDateRequestBuilder
+     * @return a GetYammerDeviceUsageUserDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerDeviceUsageUserDetailWithDateRequestBuilder getYammerDeviceUsageUserDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1459,7 +1475,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerDeviceUsageUserDetail method.
      * @param period Usage: period='{period}'
-     * @return a getYammerDeviceUsageUserDetailWithPeriodRequestBuilder
+     * @return a GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder getYammerDeviceUsageUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1469,7 +1485,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerGroupsActivityCounts method.
      * @param period Usage: period='{period}'
-     * @return a getYammerGroupsActivityCountsWithPeriodRequestBuilder
+     * @return a GetYammerGroupsActivityCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerGroupsActivityCountsWithPeriodRequestBuilder getYammerGroupsActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1479,7 +1495,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerGroupsActivityDetail method.
      * @param date Usage: date={date}
-     * @return a getYammerGroupsActivityDetailWithDateRequestBuilder
+     * @return a GetYammerGroupsActivityDetailWithDateRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerGroupsActivityDetailWithDateRequestBuilder getYammerGroupsActivityDetailWithDate(@jakarta.annotation.Nonnull final LocalDate date) {
@@ -1489,7 +1505,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerGroupsActivityDetail method.
      * @param period Usage: period='{period}'
-     * @return a getYammerGroupsActivityDetailWithPeriodRequestBuilder
+     * @return a GetYammerGroupsActivityDetailWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerGroupsActivityDetailWithPeriodRequestBuilder getYammerGroupsActivityDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1499,7 +1515,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerGroupsActivityGroupCounts method.
      * @param period Usage: period='{period}'
-     * @return a getYammerGroupsActivityGroupCountsWithPeriodRequestBuilder
+     * @return a GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder getYammerGroupsActivityGroupCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1512,7 +1528,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken='{skipToken}'
      * @param top Usage: top={top}
-     * @return a managedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
+     * @return a ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder managedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
@@ -1528,7 +1544,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken='{skipToken}'
      * @param top Usage: top={top}
-     * @return a managedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
+     * @return a ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder managedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
@@ -1544,7 +1560,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken='{skipToken}'
      * @param top Usage: top={top}
-     * @return a managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
+     * @return a ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
@@ -1557,7 +1573,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the managedDeviceEnrollmentTopFailures method.
      * @param period Usage: period='{period}'
-     * @return a managedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder
+     * @return a ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder managedDeviceEnrollmentTopFailuresWithPeriod(@jakarta.annotation.Nonnull final String period) {
@@ -1567,26 +1583,26 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Update reports
      * @param body The request body
-     * @return a CompletableFuture of reportRoot
+     * @return a ReportRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> patch(@jakarta.annotation.Nonnull final ReportRoot body) {
+    @jakarta.annotation.Nullable
+    public ReportRoot patch(@jakarta.annotation.Nonnull final ReportRoot body) {
         return patch(body, null);
     }
     /**
      * Update reports
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of reportRoot
+     * @return a ReportRoot
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ReportRoot> patch(@jakarta.annotation.Nonnull final ReportRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ReportRoot patch(@jakarta.annotation.Nonnull final ReportRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ReportRoot::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get reports
@@ -1604,10 +1620,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -1615,6 +1627,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -1636,23 +1652,23 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ReportRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a reportsRequestBuilder
+     * @return a ReportsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

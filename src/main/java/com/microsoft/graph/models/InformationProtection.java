@@ -33,7 +33,7 @@ public class InformationProtection extends Entity implements Parsable {
      */
     private java.util.List<ThreatAssessmentRequest> threatAssessmentRequests;
     /**
-     * Instantiates a new informationProtection and sets the default values.
+     * Instantiates a new InformationProtection and sets the default values.
      */
     public InformationProtection() {
         super();
@@ -41,7 +41,7 @@ public class InformationProtection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtection
+     * @return a InformationProtection
      */
     @jakarta.annotation.Nonnull
     public static InformationProtection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,7 +50,7 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the bitlocker property value. The bitlocker property
-     * @return a bitlocker
+     * @return a Bitlocker
      */
     @jakarta.annotation.Nullable
     public Bitlocker getBitlocker() {
@@ -58,7 +58,7 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the dataLossPreventionPolicies property value. The dataLossPreventionPolicies property
-     * @return a dataLossPreventionPolicy
+     * @return a java.util.List<DataLossPreventionPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DataLossPreventionPolicy> getDataLossPreventionPolicies() {
@@ -81,7 +81,7 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the policy property value. The policy property
-     * @return a informationProtectionPolicy
+     * @return a InformationProtectionPolicy
      */
     @jakarta.annotation.Nullable
     public InformationProtectionPolicy getPolicy() {
@@ -89,7 +89,7 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the sensitivityLabels property value. The sensitivityLabels property
-     * @return a sensitivityLabel
+     * @return a java.util.List<SensitivityLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitivityLabel> getSensitivityLabels() {
@@ -97,7 +97,7 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the sensitivityPolicySettings property value. The sensitivityPolicySettings property
-     * @return a sensitivityPolicySettings
+     * @return a SensitivityPolicySettings
      */
     @jakarta.annotation.Nullable
     public SensitivityPolicySettings getSensitivityPolicySettings() {
@@ -105,7 +105,7 @@ public class InformationProtection extends Entity implements Parsable {
     }
     /**
      * Gets the threatAssessmentRequests property value. The threatAssessmentRequests property
-     * @return a threatAssessmentRequest
+     * @return a java.util.List<ThreatAssessmentRequest>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThreatAssessmentRequest> getThreatAssessmentRequests() {

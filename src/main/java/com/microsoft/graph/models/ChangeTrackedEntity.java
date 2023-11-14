@@ -26,7 +26,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
      */
     private OffsetDateTime lastModifiedDateTime;
     /**
-     * Instantiates a new changeTrackedEntity and sets the default values.
+     * Instantiates a new ChangeTrackedEntity and sets the default values.
      */
     public ChangeTrackedEntity() {
         super();
@@ -34,7 +34,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a changeTrackedEntity
+     * @return a ChangeTrackedEntity
      */
     @jakarta.annotation.Nonnull
     public static ChangeTrackedEntity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,6 +43,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.dayNote": return new DayNote();
                 case "#microsoft.graph.offerShiftRequest": return new OfferShiftRequest();
                 case "#microsoft.graph.openShift": return new OpenShift();
                 case "#microsoft.graph.openShiftChangeRequest": return new OpenShiftChangeRequest();
@@ -62,7 +63,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The createdBy property
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -91,7 +92,7 @@ public class ChangeTrackedEntity extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the person who last modified the entity.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {

@@ -18,7 +18,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
      */
     private EnumSet<FileEntityIdentifier> identifier;
     /**
-     * Instantiates a new blockFileResponseAction and sets the default values.
+     * Instantiates a new BlockFileResponseAction and sets the default values.
      */
     public BlockFileResponseAction() {
         super();
@@ -27,7 +27,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a blockFileResponseAction
+     * @return a BlockFileResponseAction
      */
     @jakarta.annotation.Nonnull
     public static BlockFileResponseAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -36,7 +36,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
     }
     /**
      * Gets the deviceGroupNames property value. The deviceGroupNames property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDeviceGroupNames() {
@@ -55,7 +55,7 @@ public class BlockFileResponseAction extends ResponseAction implements Parsable 
     }
     /**
      * Gets the identifier property value. The identifier property
-     * @return a fileEntityIdentifier
+     * @return a EnumSet<FileEntityIdentifier>
      */
     @jakarta.annotation.Nullable
     public EnumSet<FileEntityIdentifier> getIdentifier() {

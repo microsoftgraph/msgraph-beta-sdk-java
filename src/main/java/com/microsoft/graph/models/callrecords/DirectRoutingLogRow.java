@@ -103,15 +103,15 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
      */
     private String userDisplayName;
     /**
-     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
+     * The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
      */
     private String userId;
     /**
-     * The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new directRoutingLogRow and sets the default values.
+     * Instantiates a new DirectRoutingLogRow and sets the default values.
      */
     public DirectRoutingLogRow() {
         this.setAdditionalData(new HashMap<>());
@@ -119,7 +119,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a directRoutingLogRow
+     * @return a DirectRoutingLogRow
      */
     @jakarta.annotation.Nonnull
     public static DirectRoutingLogRow createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -127,7 +127,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         return new DirectRoutingLogRow();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +136,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the calleeNumber property value. Number of the user or bot who received the call (E.164 format, but may include more data).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCalleeNumber() {
@@ -144,7 +144,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callEndSubReason property value. In addition to the SIP codes, Microsoft has own subcodes that indicate the specific issue.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCallEndSubReason() {
@@ -152,7 +152,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callerNumber property value. Number of the user or bot who made the call (E.164 format, but may include more data).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallerNumber() {
@@ -160,7 +160,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the callType property value. Call type and direction.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCallType() {
@@ -168,7 +168,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the correlationId property value. Identifier (GUID) for the call that you can use when calling Microsoft Support.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCorrelationId() {
@@ -176,7 +176,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duration property value. Duration of the call in seconds.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDuration() {
@@ -233,7 +233,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the finalSipCode property value. The code with which the call ended (RFC 3261).
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFinalSipCode() {
@@ -241,7 +241,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the finalSipCodePhrase property value. Description of the SIP code and Microsoft subcode.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFinalSipCodePhrase() {
@@ -249,7 +249,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. Unique call identifier (GUID).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
@@ -265,7 +265,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mediaBypassEnabled property value. Indicates if the trunk was enabled for media bypass or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMediaBypassEnabled() {
@@ -273,7 +273,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mediaPathLocation property value. The data center used for media path in non-bypass call.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMediaPathLocation() {
@@ -281,7 +281,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -289,7 +289,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the otherPartyCountryCode property value. Country code of the caller for an incoming call, or callee for an outgoing call. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOtherPartyCountryCode() {
@@ -297,7 +297,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the signalingLocation property value. The data center used for signaling for both bypass and non-bypass calls.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSignalingLocation() {
@@ -313,7 +313,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the successfulCall property value. Success or attempt.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSuccessfulCall() {
@@ -321,7 +321,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the trunkFullyQualifiedDomainName property value. Fully qualified domain name of the session border controller.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTrunkFullyQualifiedDomainName() {
@@ -329,7 +329,7 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userCountryCode property value. Country code of the user. For details, see ISO 3166-1 alpha-2.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserCountryCode() {
@@ -337,23 +337,23 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the userDisplayName property value. Display name of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserDisplayName() {
         return this.userDisplayName;
     }
     /**
-     * Gets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
-     * @return a string
+     * Gets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
         return this.userId;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
-     * @return a string
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
@@ -392,8 +392,8 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -553,14 +553,14 @@ public class DirectRoutingLogRow implements AdditionalDataHolder, Parsable {
         this.userDisplayName = value;
     }
     /**
-     * Sets the userId property value. The unique identifier (GUID) of the user in Azure Active Directory. This and other user info is null/empty for bot call types.
+     * Sets the userId property value. The unique identifier (GUID) of the user in Microsoft Entra ID. This and other user info is null/empty for bot call types.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.userId = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Azure Active Directory, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID, is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

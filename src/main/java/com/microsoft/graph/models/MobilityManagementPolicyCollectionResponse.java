@@ -13,7 +13,7 @@ public class MobilityManagementPolicyCollectionResponse extends BaseCollectionPa
      */
     private java.util.List<MobilityManagementPolicy> value;
     /**
-     * Instantiates a new mobilityManagementPolicyCollectionResponse and sets the default values.
+     * Instantiates a new MobilityManagementPolicyCollectionResponse and sets the default values.
      */
     public MobilityManagementPolicyCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class MobilityManagementPolicyCollectionResponse extends BaseCollectionPa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mobilityManagementPolicyCollectionResponse
+     * @return a MobilityManagementPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static MobilityManagementPolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class MobilityManagementPolicyCollectionResponse extends BaseCollectionPa
     }
     /**
      * Gets the value property value. The value property
-     * @return a mobilityManagementPolicy
+     * @return a java.util.List<MobilityManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getValue() {

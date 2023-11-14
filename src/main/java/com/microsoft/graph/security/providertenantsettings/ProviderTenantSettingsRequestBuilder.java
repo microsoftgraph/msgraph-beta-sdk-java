@@ -60,48 +60,48 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get providerTenantSettings from security
-     * @return a CompletableFuture of providerTenantSettingCollectionResponse
+     * @return a ProviderTenantSettingCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProviderTenantSettingCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public ProviderTenantSettingCollectionResponse get() {
         return get(null);
     }
     /**
      * Get providerTenantSettings from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of providerTenantSettingCollectionResponse
+     * @return a ProviderTenantSettingCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProviderTenantSettingCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProviderTenantSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProviderTenantSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProviderTenantSettingCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to providerTenantSettings for security
      * @param body The request body
-     * @return a CompletableFuture of providerTenantSetting
+     * @return a ProviderTenantSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProviderTenantSetting> post(@jakarta.annotation.Nonnull final ProviderTenantSetting body) {
+    @jakarta.annotation.Nullable
+    public ProviderTenantSetting post(@jakarta.annotation.Nonnull final ProviderTenantSetting body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to providerTenantSettings for security
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of providerTenantSetting
+     * @return a ProviderTenantSetting
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ProviderTenantSetting> post(@jakarta.annotation.Nonnull final ProviderTenantSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ProviderTenantSetting post(@jakarta.annotation.Nonnull final ProviderTenantSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ProviderTenantSetting::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ProviderTenantSetting::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get providerTenantSettings from security
@@ -119,10 +119,6 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class ProviderTenantSettingsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ProviderTenantSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a providerTenantSettingsRequestBuilder
+     * @return a ProviderTenantSettingsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ProviderTenantSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

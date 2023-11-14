@@ -9,11 +9,11 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /**
-     * Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
+     * Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
      */
     private Boolean isUsableForSignIn;
     /**
-     * Instantiates a new smsAuthenticationMethodTarget and sets the default values.
+     * Instantiates a new SmsAuthenticationMethodTarget and sets the default values.
      */
     public SmsAuthenticationMethodTarget() {
         super();
@@ -21,7 +21,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a smsAuthenticationMethodTarget
+     * @return a SmsAuthenticationMethodTarget
      */
     @jakarta.annotation.Nonnull
     public static SmsAuthenticationMethodTarget createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,8 +39,8 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
         return deserializerMap;
     }
     /**
-     * Gets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
-     * @return a boolean
+     * Gets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsUsableForSignIn() {
@@ -56,7 +56,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
         writer.writeBooleanValue("isUsableForSignIn", this.getIsUsableForSignIn());
     }
     /**
-     * Sets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Azure AD. true if users can use this method for primary authentication, otherwise false.
+     * Sets the isUsableForSignIn property value. Determines if users can use this authentication method to sign in to Microsoft Entra ID. true if users can use this method for primary authentication, otherwise false.
      * @param value Value to set for the isUsableForSignIn property.
      */
     public void setIsUsableForSignIn(@jakarta.annotation.Nullable final Boolean value) {

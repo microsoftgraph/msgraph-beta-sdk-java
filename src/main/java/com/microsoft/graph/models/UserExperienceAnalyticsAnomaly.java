@@ -65,7 +65,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
      */
     private UserExperienceAnalyticsAnomalyState state;
     /**
-     * Instantiates a new userExperienceAnalyticsAnomaly and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAnomaly and sets the default values.
      */
     public UserExperienceAnalyticsAnomaly() {
         super();
@@ -73,7 +73,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAnomaly
+     * @return a UserExperienceAnalyticsAnomaly
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomaly createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -90,7 +90,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the anomalyId property value. The unique identifier of the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnomalyId() {
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the anomalyName property value. The name of the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnomalyName() {
@@ -114,7 +114,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the anomalyType property value. Indicates the category of the anomaly. Eg: anomaly type can be device, application, stop error, driver or other.
-     * @return a userExperienceAnalyticsAnomalyType
+     * @return a UserExperienceAnalyticsAnomalyType
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyType getAnomalyType() {
@@ -122,7 +122,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the assetName property value. The name of the application or module that caused the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetName() {
@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the assetPublisher property value. The publisher of the application or module that caused the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetPublisher() {
@@ -138,7 +138,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the assetVersion property value. The version of the application or module that caused the anomaly.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssetVersion() {
@@ -146,7 +146,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the detectionModelId property value. The unique identifier of the anomaly detection model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDetectionModelId() {
@@ -154,7 +154,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the deviceImpactedCount property value. The number of devices impacted by the anomaly. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceImpactedCount() {
@@ -184,7 +184,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the issueId property value. The unique identifier of the anomaly detection model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIssueId() {
@@ -192,7 +192,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. Indicates the severity of the anomaly. Eg: anomaly severity can be high, medium, low, informational or other.
-     * @return a userExperienceAnalyticsAnomalySeverity
+     * @return a UserExperienceAnalyticsAnomalySeverity
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalySeverity getSeverity() {
@@ -200,7 +200,7 @@ public class UserExperienceAnalyticsAnomaly extends Entity implements Parsable {
     }
     /**
      * Gets the state property value. Indicates the state of the anomaly. Eg: anomaly severity can be new, active, disabled, removed or other.
-     * @return a userExperienceAnalyticsAnomalyState
+     * @return a UserExperienceAnalyticsAnomalyState
      */
     @jakarta.annotation.Nullable
     public UserExperienceAnalyticsAnomalyState getState() {

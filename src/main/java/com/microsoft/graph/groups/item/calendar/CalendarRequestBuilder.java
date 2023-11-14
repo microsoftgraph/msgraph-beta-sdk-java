@@ -56,12 +56,12 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
      * @param User Usage: User='{User}'
-     * @return a allowedCalendarSharingRolesWithUserRequestBuilder
+     * @return a AllowedCalendarSharingRolesWithUserRequestBuilder
      */
     @jakarta.annotation.Nonnull
-    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String user) {
-        Objects.requireNonNull(user);
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, user);
+    public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String User) {
+        Objects.requireNonNull(User);
+        return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, User);
     }
     /**
      * Instantiates a new CalendarRequestBuilder and sets the default values.
@@ -81,24 +81,24 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The group's calendar. Read-only.
-     * @return a CompletableFuture of calendar
+     * @return a Calendar
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> get() {
+    @jakarta.annotation.Nullable
+    public Calendar get() {
         return get(null);
     }
     /**
      * The group's calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of calendar
+     * @return a Calendar
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Calendar> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Calendar get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Calendar::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The group's calendar. Read-only.
@@ -116,10 +116,6 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -127,12 +123,16 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a calendarRequestBuilder
+     * @return a CalendarRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public CalendarRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

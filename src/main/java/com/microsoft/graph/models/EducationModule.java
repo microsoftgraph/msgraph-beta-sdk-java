@@ -50,7 +50,7 @@ public class EducationModule extends Entity implements Parsable {
      */
     private EducationModuleStatus status;
     /**
-     * Instantiates a new educationModule and sets the default values.
+     * Instantiates a new EducationModule and sets the default values.
      */
     public EducationModule() {
         super();
@@ -58,7 +58,7 @@ public class EducationModule extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationModule
+     * @return a EducationModule
      */
     @jakarta.annotation.Nonnull
     public static EducationModule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. The display name of the user that created the module.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
@@ -83,7 +83,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the module.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -91,7 +91,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Name of the module.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -118,7 +118,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the isPinned property value. Indicates whether the module is pinned or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPinned() {
@@ -126,7 +126,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedBy property value. The last user that modified the module.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
@@ -142,7 +142,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the resources property value. Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
-     * @return a educationModuleResource
+     * @return a java.util.List<EducationModuleResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationModuleResource> getResources() {
@@ -150,7 +150,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the resourcesFolderUrl property value. Folder URL where all the file resources for this module are stored.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourcesFolderUrl() {
@@ -158,7 +158,7 @@ public class EducationModule extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
-     * @return a educationModuleStatus
+     * @return a EducationModuleStatus
      */
     @jakarta.annotation.Nullable
     public EducationModuleStatus getStatus() {

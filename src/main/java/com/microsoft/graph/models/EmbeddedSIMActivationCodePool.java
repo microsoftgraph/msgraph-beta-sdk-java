@@ -41,7 +41,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      */
     private OffsetDateTime modifiedDateTime;
     /**
-     * Instantiates a new embeddedSIMActivationCodePool and sets the default values.
+     * Instantiates a new EmbeddedSIMActivationCodePool and sets the default values.
      */
     public EmbeddedSIMActivationCodePool() {
         super();
@@ -49,7 +49,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a embeddedSIMActivationCodePool
+     * @return a EmbeddedSIMActivationCodePool
      */
     @jakarta.annotation.Nonnull
     public static EmbeddedSIMActivationCodePool createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     }
     /**
      * Gets the activationCodeCount property value. The total count of activation codes which belong to this pool.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActivationCodeCount() {
@@ -66,7 +66,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     }
     /**
      * Gets the activationCodes property value. The activation codes which belong to this pool. This navigation property is used to post activation codes to Intune but cannot be used to read activation codes from Intune.
-     * @return a embeddedSIMActivationCode
+     * @return a java.util.List<EmbeddedSIMActivationCode>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMActivationCode> getActivationCodes() {
@@ -74,7 +74,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. Navigational property to a list of targets to which this pool is assigned.
-     * @return a embeddedSIMActivationCodePoolAssignment
+     * @return a java.util.List<EmbeddedSIMActivationCodePoolAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMActivationCodePoolAssignment> getAssignments() {
@@ -90,7 +90,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     }
     /**
      * Gets the deviceStates property value. Navigational property to a list of device states for this pool.
-     * @return a embeddedSIMDeviceState
+     * @return a java.util.List<EmbeddedSIMDeviceState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EmbeddedSIMDeviceState> getDeviceStates() {
@@ -98,7 +98,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The admin defined name of the embedded SIM activation code pool.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {

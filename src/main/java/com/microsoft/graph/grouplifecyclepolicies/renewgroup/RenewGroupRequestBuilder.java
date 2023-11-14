@@ -35,33 +35,33 @@ public class RenewGroupRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groupLifecyclePolicies/renewGroup", rawUrl);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of renewGroupResponse
+     * @return a RenewGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-renewgroup?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@jakarta.annotation.Nonnull final RenewGroupPostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public RenewGroupPostResponse post(@jakarta.annotation.Nonnull final RenewGroupPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of renewGroupResponse
+     * @return a RenewGroupPostResponse
      * @see <a href="https://learn.microsoft.com/graph/api/grouplifecyclepolicy-renewgroup?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<RenewGroupResponse> post(@jakarta.annotation.Nonnull final RenewGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public RenewGroupPostResponse post(@jakarta.annotation.Nonnull final RenewGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, RenewGroupResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, RenewGroupPostResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -70,7 +70,7 @@ public class RenewGroupRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
+     * Renew a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -79,23 +79,23 @@ public class RenewGroupRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RenewGroupPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a renewGroupRequestBuilder
+     * @return a RenewGroupRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RenewGroupRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

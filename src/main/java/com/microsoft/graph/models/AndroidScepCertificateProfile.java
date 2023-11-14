@@ -41,7 +41,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
      */
     private String subjectNameFormatString;
     /**
-     * Instantiates a new androidScepCertificateProfile and sets the default values.
+     * Instantiates a new AndroidScepCertificateProfile and sets the default values.
      */
     public AndroidScepCertificateProfile() {
         super();
@@ -50,7 +50,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidScepCertificateProfile
+     * @return a AndroidScepCertificateProfile
      */
     @jakarta.annotation.Nonnull
     public static AndroidScepCertificateProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,7 +75,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the hashAlgorithm property value. Hash Algorithm Options.
-     * @return a hashAlgorithms
+     * @return a EnumSet<HashAlgorithms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<HashAlgorithms> getHashAlgorithm() {
@@ -83,7 +83,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the keySize property value. Key Size Options.
-     * @return a keySize
+     * @return a KeySize
      */
     @jakarta.annotation.Nullable
     public KeySize getKeySize() {
@@ -91,7 +91,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the keyUsage property value. Key Usage Options.
-     * @return a keyUsages
+     * @return a EnumSet<KeyUsages>
      */
     @jakarta.annotation.Nullable
     public EnumSet<KeyUsages> getKeyUsage() {
@@ -99,7 +99,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
-     * @return a managedDeviceCertificateState
+     * @return a java.util.List<ManagedDeviceCertificateState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
@@ -107,7 +107,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the scepServerUrls property value. SCEP Server Url(s)
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScepServerUrls() {
@@ -115,7 +115,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
@@ -123,7 +123,7 @@ public class AndroidScepCertificateProfile extends AndroidCertificateProfileBase
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubjectNameFormatString() {

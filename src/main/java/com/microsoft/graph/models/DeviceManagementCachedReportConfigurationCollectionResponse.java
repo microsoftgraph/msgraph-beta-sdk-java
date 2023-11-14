@@ -13,7 +13,7 @@ public class DeviceManagementCachedReportConfigurationCollectionResponse extends
      */
     private java.util.List<DeviceManagementCachedReportConfiguration> value;
     /**
-     * Instantiates a new deviceManagementCachedReportConfigurationCollectionResponse and sets the default values.
+     * Instantiates a new DeviceManagementCachedReportConfigurationCollectionResponse and sets the default values.
      */
     public DeviceManagementCachedReportConfigurationCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class DeviceManagementCachedReportConfigurationCollectionResponse extends
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementCachedReportConfigurationCollectionResponse
+     * @return a DeviceManagementCachedReportConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementCachedReportConfigurationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class DeviceManagementCachedReportConfigurationCollectionResponse extends
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceManagementCachedReportConfiguration
+     * @return a java.util.List<DeviceManagementCachedReportConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementCachedReportConfiguration> getValue() {

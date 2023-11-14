@@ -5,6 +5,7 @@ import com.microsoft.graph.directory.attributesets.AttributeSetsRequestBuilder;
 import com.microsoft.graph.directory.certificateauthorities.CertificateAuthoritiesRequestBuilder;
 import com.microsoft.graph.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
 import com.microsoft.graph.directory.deleteditems.DeletedItemsRequestBuilder;
+import com.microsoft.graph.directory.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.directory.featurerolloutpolicies.FeatureRolloutPoliciesRequestBuilder;
 import com.microsoft.graph.directory.federationconfigurations.FederationConfigurationsRequestBuilder;
 import com.microsoft.graph.directory.impactedresources.ImpactedResourcesRequestBuilder;
@@ -68,6 +69,13 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceLocalCredentials property of the microsoft.graph.directory entity.
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceLocalCredentialsRequestBuilder deviceLocalCredentials() {
+        return new DeviceLocalCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.directory entity.
@@ -150,48 +158,48 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get directory
-     * @return a CompletableFuture of directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> get() {
+    @jakarta.annotation.Nullable
+    public Directory get() {
         return get(null);
     }
     /**
      * Get directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Directory get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Update directory
      * @param body The request body
-     * @return a CompletableFuture of directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> patch(@jakarta.annotation.Nonnull final Directory body) {
+    @jakarta.annotation.Nullable
+    public Directory patch(@jakarta.annotation.Nonnull final Directory body) {
         return patch(body, null);
     }
     /**
      * Update directory
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of directory
+     * @return a Directory
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Directory> patch(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public Directory patch(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, Directory::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Get directory
@@ -209,10 +217,6 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -220,6 +224,10 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -241,23 +249,23 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Directory body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a directoryRequestBuilder
+     * @return a DirectoryRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

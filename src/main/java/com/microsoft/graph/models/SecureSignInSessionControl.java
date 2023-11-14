@@ -9,7 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureSignInSessionControl extends ConditionalAccessSessionControl implements Parsable {
     /**
-     * Instantiates a new secureSignInSessionControl and sets the default values.
+     * Instantiates a new SecureSignInSessionControl and sets the default values.
      */
     public SecureSignInSessionControl() {
         super();
@@ -18,7 +18,7 @@ public class SecureSignInSessionControl extends ConditionalAccessSessionControl 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureSignInSessionControl
+     * @return a SecureSignInSessionControl
      */
     @jakarta.annotation.Nonnull
     public static SecureSignInSessionControl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {

@@ -19,15 +19,15 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
      */
     private HostComponent component;
     /**
-     * The firstSeenDateTime property
+     * The first date and time when Microsoft Defender Threat Intelligence observed the hostPortComponent. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime firstSeenDateTime;
     /**
-     * The isRecent property
+     * Indicates whether this hostPortComponent is recent, which is determined by whether the hostPortComponent was observed either at the same time or after the latest hostPortBanner in the scan history, or within two days of the latest scan of the hostPort when there are no hostPortBanners in the scan history.
      */
     private Boolean isRecent;
     /**
-     * The lastSeenDateTime property
+     * The last date and time when Microsoft Defender Threat Intelligence observed the hostPortComponent. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      */
     private OffsetDateTime lastSeenDateTime;
     /**
@@ -35,7 +35,7 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
      */
     private String odataType;
     /**
-     * Instantiates a new hostPortComponent and sets the default values.
+     * Instantiates a new HostPortComponent and sets the default values.
      */
     public HostPortComponent() {
         this.setAdditionalData(new HashMap<>());
@@ -43,7 +43,7 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hostPortComponent
+     * @return a HostPortComponent
      */
     @jakarta.annotation.Nonnull
     public static HostPortComponent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,7 +51,7 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
         return new HostPortComponent();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -60,7 +60,7 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the component property value. The component property
-     * @return a hostComponent
+     * @return a HostComponent
      */
     @jakarta.annotation.Nullable
     public HostComponent getComponent() {
@@ -81,7 +81,7 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Gets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPortComponent. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -89,15 +89,15 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
         return this.firstSeenDateTime;
     }
     /**
-     * Gets the isRecent property value. The isRecent property
-     * @return a boolean
+     * Gets the isRecent property value. Indicates whether this hostPortComponent is recent, which is determined by whether the hostPortComponent was observed either at the same time or after the latest hostPortBanner in the scan history, or within two days of the latest scan of the hostPort when there are no hostPortBanners in the scan history.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecent() {
         return this.isRecent;
     }
     /**
-     * Gets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Gets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPortComponent. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -126,8 +126,8 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;
@@ -140,21 +140,21 @@ public class HostPortComponent implements AdditionalDataHolder, Parsable {
         this.component = value;
     }
     /**
-     * Sets the firstSeenDateTime property value. The firstSeenDateTime property
+     * Sets the firstSeenDateTime property value. The first date and time when Microsoft Defender Threat Intelligence observed the hostPortComponent. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstSeenDateTime property.
      */
     public void setFirstSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.firstSeenDateTime = value;
     }
     /**
-     * Sets the isRecent property value. The isRecent property
+     * Sets the isRecent property value. Indicates whether this hostPortComponent is recent, which is determined by whether the hostPortComponent was observed either at the same time or after the latest hostPortBanner in the scan history, or within two days of the latest scan of the hostPort when there are no hostPortBanners in the scan history.
      * @param value Value to set for the isRecent property.
      */
     public void setIsRecent(@jakarta.annotation.Nullable final Boolean value) {
         this.isRecent = value;
     }
     /**
-     * Sets the lastSeenDateTime property value. The lastSeenDateTime property
+     * Sets the lastSeenDateTime property value. The last date and time when Microsoft Defender Threat Intelligence observed the hostPortComponent. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSeenDateTime property.
      */
     public void setLastSeenDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

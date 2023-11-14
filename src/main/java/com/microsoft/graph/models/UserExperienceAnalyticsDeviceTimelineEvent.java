@@ -37,7 +37,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
      */
     private String eventSource;
     /**
-     * Instantiates a new userExperienceAnalyticsDeviceTimelineEvent and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsDeviceTimelineEvent and sets the default values.
      */
     public UserExperienceAnalyticsDeviceTimelineEvent() {
         super();
@@ -45,7 +45,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsDeviceTimelineEvent
+     * @return a UserExperienceAnalyticsDeviceTimelineEvent
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceTimelineEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +54,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the deviceId property value. The id of the device where the event occurred.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventDetails property value. The details provided by the event, format depends on event type.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventDetails() {
@@ -78,7 +78,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventLevel property value. Indicates device event level. Possible values are: None, Verbose, Information, Warning, Error, Critical
-     * @return a deviceEventLevel
+     * @return a DeviceEventLevel
      */
     @jakarta.annotation.Nullable
     public DeviceEventLevel getEventLevel() {
@@ -86,7 +86,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventName property value. The name of the event. Examples include: BootEvent, LogonEvent, AppCrashEvent, AppHangEvent.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventName() {
@@ -94,7 +94,7 @@ public class UserExperienceAnalyticsDeviceTimelineEvent extends Entity implement
     }
     /**
      * Gets the eventSource property value. The source of the event. Examples include: Intune, Sccm.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventSource() {

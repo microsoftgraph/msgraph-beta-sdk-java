@@ -43,7 +43,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
      */
     private java.util.List<YearTimePeriodDefinition> years;
     /**
-     * Instantiates a new industryDataRoot and sets the default values.
+     * Instantiates a new IndustryDataRoot and sets the default values.
      */
     public IndustryDataRoot() {
         super();
@@ -51,7 +51,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a industryDataRoot
+     * @return a IndustryDataRoot
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,7 +60,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the dataConnectors property value. Set of connectors for importing data from source systems.
-     * @return a industryDataConnector
+     * @return a java.util.List<IndustryDataConnector>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataConnector> getDataConnectors() {
@@ -85,7 +85,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the inboundFlows property value. Set of data import flow activities to bring data into the canonical store via a connector.
-     * @return a inboundFlow
+     * @return a java.util.List<InboundFlow>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InboundFlow> getInboundFlows() {
@@ -93,7 +93,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the operations property value. Set of ephemeral operations that the system runs currently. Read-only.
-     * @return a longRunningOperation
+     * @return a java.util.List<LongRunningOperation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LongRunningOperation> getOperations() {
@@ -101,7 +101,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the referenceDefinitions property value. Set of user modifiable system picker types.
-     * @return a referenceDefinition
+     * @return a java.util.List<ReferenceDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ReferenceDefinition> getReferenceDefinitions() {
@@ -109,7 +109,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the roleGroups property value. Set of groups of individual roles that makes role-based admin simpler.
-     * @return a roleGroup
+     * @return a java.util.List<RoleGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<RoleGroup> getRoleGroups() {
@@ -117,7 +117,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the runs property value. Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
-     * @return a industryDataRun
+     * @return a java.util.List<IndustryDataRun>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataRun> getRuns() {
@@ -125,7 +125,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the sourceSystems property value. Set of source definitions that represents real-world external systems.
-     * @return a sourceSystemDefinition
+     * @return a java.util.List<SourceSystemDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SourceSystemDefinition> getSourceSystems() {
@@ -133,7 +133,7 @@ public class IndustryDataRoot extends Entity implements Parsable {
     }
     /**
      * Gets the years property value. Set of years represented in the system.
-     * @return a yearTimePeriodDefinition
+     * @return a java.util.List<YearTimePeriodDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<YearTimePeriodDefinition> getYears() {

@@ -22,7 +22,7 @@ public class CallTranscript extends Entity implements Parsable {
      */
     private String meetingId;
     /**
-     * The meetingOrganizer property
+     * The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
      */
     private IdentitySet meetingOrganizer;
     /**
@@ -38,7 +38,7 @@ public class CallTranscript extends Entity implements Parsable {
      */
     private String transcriptContentUrl;
     /**
-     * Instantiates a new callTranscript and sets the default values.
+     * Instantiates a new CallTranscript and sets the default values.
      */
     public CallTranscript() {
         super();
@@ -46,7 +46,7 @@ public class CallTranscript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a callTranscript
+     * @return a CallTranscript
      */
     @jakarta.annotation.Nonnull
     public static CallTranscript createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the content property value. The content of the transcript. Read-only.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getContent() {
@@ -87,15 +87,15 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the meetingId property value. The unique identifier of the online meeting related to this transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingId() {
         return this.meetingId;
     }
     /**
-     * Gets the meetingOrganizer property value. The meetingOrganizer property
-     * @return a identitySet
+     * Gets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
@@ -103,7 +103,7 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMeetingOrganizerId() {
@@ -111,7 +111,7 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getMetadataContent() {
@@ -119,7 +119,7 @@ public class CallTranscript extends Entity implements Parsable {
     }
     /**
      * Gets the transcriptContentUrl property value. The URL which can be used to access the content of the transcript. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTranscriptContentUrl() {
@@ -162,7 +162,7 @@ public class CallTranscript extends Entity implements Parsable {
         this.meetingId = value;
     }
     /**
-     * Sets the meetingOrganizer property value. The meetingOrganizer property
+     * Sets the meetingOrganizer property value. The identity information of the organizer of the onlineMeeting related to this transcript. Read-only.
      * @param value Value to set for the meetingOrganizer property.
      */
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {

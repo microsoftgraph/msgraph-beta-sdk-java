@@ -38,24 +38,24 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
     }
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
-     * @return a CompletableFuture of intelligenceProfileIndicator
+     * @return a IntelligenceProfileIndicator
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> get() {
+    @jakarta.annotation.Nullable
+    public IntelligenceProfileIndicator get() {
         return get(null);
     }
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of intelligenceProfileIndicator
+     * @return a IntelligenceProfileIndicator
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<IntelligenceProfileIndicator> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public IntelligenceProfileIndicator get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, IntelligenceProfileIndicator::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, IntelligenceProfileIndicator::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Includes an assemblage of high-fidelity network indicators of compromise.
@@ -73,10 +73,6 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -84,6 +80,10 @@ public class IntelligenceProfileIndicatorItemRequestBuilder extends BaseRequestB
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

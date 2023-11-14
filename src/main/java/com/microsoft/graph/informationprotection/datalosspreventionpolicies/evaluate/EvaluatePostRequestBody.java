@@ -28,7 +28,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     private String target;
     /**
-     * Instantiates a new evaluatePostRequestBody and sets the default values.
+     * Instantiates a new EvaluatePostRequestBody and sets the default values.
      */
     public EvaluatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
@@ -36,7 +36,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluatePostRequestBody
+     * @return a EvaluatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static EvaluatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,7 +44,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
         return new EvaluatePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the evaluationInput property value. The evaluationInput property
-     * @return a dlpEvaluationInput
+     * @return a DlpEvaluationInput
      */
     @jakarta.annotation.Nullable
     public DlpEvaluationInput getEvaluationInput() {
@@ -73,7 +73,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the notificationInfo property value. The notificationInfo property
-     * @return a dlpNotification
+     * @return a DlpNotification
      */
     @jakarta.annotation.Nullable
     public DlpNotification getNotificationInfo() {
@@ -81,7 +81,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the target property value. The target property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
@@ -99,8 +99,8 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

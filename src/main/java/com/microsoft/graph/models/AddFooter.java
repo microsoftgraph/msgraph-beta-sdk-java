@@ -17,7 +17,7 @@ public class AddFooter extends MarkContent implements Parsable {
      */
     private Integer margin;
     /**
-     * Instantiates a new addFooter and sets the default values.
+     * Instantiates a new AddFooter and sets the default values.
      */
     public AddFooter() {
         super();
@@ -26,7 +26,7 @@ public class AddFooter extends MarkContent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addFooter
+     * @return a AddFooter
      */
     @jakarta.annotation.Nonnull
     public static AddFooter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,7 +35,7 @@ public class AddFooter extends MarkContent implements Parsable {
     }
     /**
      * Gets the alignment property value. The alignment property
-     * @return a alignment
+     * @return a Alignment
      */
     @jakarta.annotation.Nullable
     public Alignment getAlignment() {
@@ -54,7 +54,7 @@ public class AddFooter extends MarkContent implements Parsable {
     }
     /**
      * Gets the margin property value. The margin property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMargin() {

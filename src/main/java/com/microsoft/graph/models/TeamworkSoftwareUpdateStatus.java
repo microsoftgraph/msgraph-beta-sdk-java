@@ -30,7 +30,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      */
     private TeamworkSoftwareFreshness softwareFreshness;
     /**
-     * Instantiates a new teamworkSoftwareUpdateStatus and sets the default values.
+     * Instantiates a new TeamworkSoftwareUpdateStatus and sets the default values.
      */
     public TeamworkSoftwareUpdateStatus() {
         this.setAdditionalData(new HashMap<>());
@@ -38,7 +38,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSoftwareUpdateStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +46,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
         return new TeamworkSoftwareUpdateStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -55,7 +55,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the availableVersion property value. The available software version to update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailableVersion() {
@@ -63,7 +63,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the currentVersion property value. The current software version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrentVersion() {
@@ -84,7 +84,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -92,7 +92,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the softwareFreshness property value. The update status of the software. The possible values are: unknown, latest, updateAvailable, unknownFutureValue.
-     * @return a teamworkSoftwareFreshness
+     * @return a TeamworkSoftwareFreshness
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareFreshness getSoftwareFreshness() {
@@ -111,8 +111,8 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

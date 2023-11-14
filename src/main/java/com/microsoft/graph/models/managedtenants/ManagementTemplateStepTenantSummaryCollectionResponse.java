@@ -14,7 +14,7 @@ public class ManagementTemplateStepTenantSummaryCollectionResponse extends BaseC
      */
     private java.util.List<ManagementTemplateStepTenantSummary> value;
     /**
-     * Instantiates a new managementTemplateStepTenantSummaryCollectionResponse and sets the default values.
+     * Instantiates a new ManagementTemplateStepTenantSummaryCollectionResponse and sets the default values.
      */
     public ManagementTemplateStepTenantSummaryCollectionResponse() {
         super();
@@ -22,7 +22,7 @@ public class ManagementTemplateStepTenantSummaryCollectionResponse extends BaseC
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateStepTenantSummaryCollectionResponse
+     * @return a ManagementTemplateStepTenantSummaryCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateStepTenantSummaryCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,7 +41,7 @@ public class ManagementTemplateStepTenantSummaryCollectionResponse extends BaseC
     }
     /**
      * Gets the value property value. The value property
-     * @return a managementTemplateStepTenantSummary
+     * @return a java.util.List<ManagementTemplateStepTenantSummary>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplateStepTenantSummary> getValue() {

@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      */
     private Boolean isForegroundApp;
     /**
-     * Instantiates a new userExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
      */
     public UserExperienceAnalyticsBatteryHealthAppImpact() {
         super();
@@ -44,7 +44,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsBatteryHealthAppImpact
+     * @return a UserExperienceAnalyticsBatteryHealthAppImpact
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthAppImpact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +53,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the activeDevices property value. Number of active devices for using that app over a 14-day period. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveDevices() {
@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the appDisplayName property value. User friendly display name for the app. Eg: Outlook
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppDisplayName() {
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the appName property value. App name. Eg: oltk.exe
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppName() {
@@ -77,7 +77,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the appPublisher property value. App publisher. Eg: Microsoft Corporation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppPublisher() {
@@ -85,7 +85,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the batteryUsagePercentage property value. The percent of total battery power used by this application when the device was not plugged into AC power, over 14 days computed across all devices in the tenant. Unit in percentage. Valid values 0 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getBatteryUsagePercentage() {
@@ -108,7 +108,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     }
     /**
      * Gets the isForegroundApp property value. true if the user had active interaction with the app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsForegroundApp() {

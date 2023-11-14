@@ -39,7 +39,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     private java.util.List<ManagementTemplate> managementTemplates;
     /**
-     * Instantiates a new managementTemplateCollection and sets the default values.
+     * Instantiates a new ManagementTemplateCollection and sets the default values.
      */
     public ManagementTemplateCollection() {
         super();
@@ -47,7 +47,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateCollection
+     * @return a ManagementTemplateCollection
      */
     @jakarta.annotation.Nonnull
     public static ManagementTemplateCollection createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -56,7 +56,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
     }
     /**
      * Gets the createdByUserId property value. The createdByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCreatedByUserId() {
@@ -72,7 +72,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. The description property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -80,7 +80,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -104,7 +104,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLastActionByUserId() {
@@ -120,7 +120,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
     }
     /**
      * Gets the managementTemplates property value. The managementTemplates property
-     * @return a managementTemplate
+     * @return a java.util.List<ManagementTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ManagementTemplate> getManagementTemplates() {

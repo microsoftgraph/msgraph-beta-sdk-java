@@ -33,7 +33,7 @@ public class DeviceSetupConfiguration extends Entity implements Parsable {
      */
     private Integer version;
     /**
-     * Instantiates a new deviceSetupConfiguration and sets the default values.
+     * Instantiates a new DeviceSetupConfiguration and sets the default values.
      */
     public DeviceSetupConfiguration() {
         super();
@@ -41,7 +41,7 @@ public class DeviceSetupConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceSetupConfiguration
+     * @return a DeviceSetupConfiguration
      */
     @jakarta.annotation.Nonnull
     public static DeviceSetupConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class DeviceSetupConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Admin provided description of the Device Configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -66,7 +66,7 @@ public class DeviceSetupConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Admin provided name of the device configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -96,7 +96,7 @@ public class DeviceSetupConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. Version of the device configuration.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

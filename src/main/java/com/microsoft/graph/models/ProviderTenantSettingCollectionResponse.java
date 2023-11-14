@@ -13,7 +13,7 @@ public class ProviderTenantSettingCollectionResponse extends BaseCollectionPagin
      */
     private java.util.List<ProviderTenantSetting> value;
     /**
-     * Instantiates a new providerTenantSettingCollectionResponse and sets the default values.
+     * Instantiates a new ProviderTenantSettingCollectionResponse and sets the default values.
      */
     public ProviderTenantSettingCollectionResponse() {
         super();
@@ -21,7 +21,7 @@ public class ProviderTenantSettingCollectionResponse extends BaseCollectionPagin
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a providerTenantSettingCollectionResponse
+     * @return a ProviderTenantSettingCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static ProviderTenantSettingCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,7 +40,7 @@ public class ProviderTenantSettingCollectionResponse extends BaseCollectionPagin
     }
     /**
      * Gets the value property value. The value property
-     * @return a providerTenantSetting
+     * @return a java.util.List<ProviderTenantSetting>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProviderTenantSetting> getValue() {

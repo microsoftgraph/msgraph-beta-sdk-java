@@ -42,7 +42,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      */
     private String settingName;
     /**
-     * Instantiates a new deviceComplianceScriptRule and sets the default values.
+     * Instantiates a new DeviceComplianceScriptRule and sets the default values.
      */
     public DeviceComplianceScriptRule() {
         this.setAdditionalData(new HashMap<>());
@@ -50,7 +50,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceComplianceScriptRule
+     * @return a DeviceComplianceScriptRule
      */
     @jakarta.annotation.Nonnull
     public static DeviceComplianceScriptRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +58,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         return new DeviceComplianceScriptRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the dataType property value. Data types for rules.
-     * @return a dataType
+     * @return a DataType
      */
     @jakarta.annotation.Nullable
     public DataType getDataType() {
@@ -75,7 +75,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the deviceComplianceScriptRuleDataType property value. Data types for rules.
-     * @return a deviceComplianceScriptRuleDataType
+     * @return a DeviceComplianceScriptRuleDataType
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceScriptRuleDataType getDeviceComplianceScriptRuleDataType() {
@@ -83,7 +83,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the deviceComplianceScriptRulOperator property value. Operator for rules.
-     * @return a deviceComplianceScriptRulOperator
+     * @return a DeviceComplianceScriptRulOperator
      */
     @jakarta.annotation.Nullable
     public DeviceComplianceScriptRulOperator getDeviceComplianceScriptRulOperator() {
@@ -107,7 +107,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -115,7 +115,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the operand property value. Operand specified in the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperand() {
@@ -123,7 +123,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the operator property value. Operator for rules.
-     * @return a operator
+     * @return a Operator
      */
     @jakarta.annotation.Nullable
     public Operator getOperator() {
@@ -131,7 +131,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the settingName property value. Setting name specified in the rule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
@@ -153,8 +153,8 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

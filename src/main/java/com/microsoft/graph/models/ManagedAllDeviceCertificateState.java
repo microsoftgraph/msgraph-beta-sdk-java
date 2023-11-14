@@ -58,7 +58,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      */
     private String userPrincipalName;
     /**
-     * Instantiates a new managedAllDeviceCertificateState and sets the default values.
+     * Instantiates a new ManagedAllDeviceCertificateState and sets the default values.
      */
     public ManagedAllDeviceCertificateState() {
         super();
@@ -66,7 +66,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managedAllDeviceCertificateState
+     * @return a ManagedAllDeviceCertificateState
      */
     @jakarta.annotation.Nonnull
     public static ManagedAllDeviceCertificateState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,7 +83,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateExtendedKeyUsages property value. Enhanced Key Usage
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateExtendedKeyUsages() {
@@ -99,7 +99,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateIssuerName property value. Issuer
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateIssuerName() {
@@ -107,7 +107,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateKeyUsages property value. Key Usage
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCertificateKeyUsages() {
@@ -115,7 +115,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateRevokeStatus property value. Certificate Revocation Status.
-     * @return a certificateRevocationStatus
+     * @return a CertificateRevocationStatus
      */
     @jakarta.annotation.Nullable
     public CertificateRevocationStatus getCertificateRevokeStatus() {
@@ -131,7 +131,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateSerialNumber property value. Serial number
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateSerialNumber() {
@@ -139,7 +139,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateSubjectName property value. Certificate subject name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateSubjectName() {
@@ -147,7 +147,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the certificateThumbprint property value. Thumbprint
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificateThumbprint() {
@@ -176,7 +176,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the managedDeviceDisplayName property value. Device display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceDisplayName() {
@@ -184,7 +184,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     }
     /**
      * Gets the userPrincipalName property value. User principal name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {

@@ -15,7 +15,7 @@ public class VirtualEvent extends Entity implements Parsable {
     /**
      * Description of the virtual event.
      */
-    private String description;
+    private ItemBody description;
     /**
      * Display name of the virtual event
      */
@@ -41,7 +41,7 @@ public class VirtualEvent extends Entity implements Parsable {
      */
     private VirtualEventStatus status;
     /**
-     * Instantiates a new virtualEvent and sets the default values.
+     * Instantiates a new VirtualEvent and sets the default values.
      */
     public VirtualEvent() {
         super();
@@ -49,7 +49,7 @@ public class VirtualEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEvent
+     * @return a VirtualEvent
      */
     @jakarta.annotation.Nonnull
     public static VirtualEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,6 +58,7 @@ public class VirtualEvent extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.virtualEventTownhall": return new VirtualEventTownhall();
                 case "#microsoft.graph.virtualEventWebinar": return new VirtualEventWebinar();
             }
         }
@@ -65,7 +66,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the createdBy property value. Identity information of who created the virtual event. Inherited from virtualEvent.
-     * @return a communicationsIdentitySet
+     * @return a CommunicationsIdentitySet
      */
     @jakarta.annotation.Nullable
     public CommunicationsIdentitySet getCreatedBy() {
@@ -73,15 +74,15 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description of the virtual event.
-     * @return a string
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
-    public String getDescription() {
+    public ItemBody getDescription() {
         return this.description;
     }
     /**
      * Gets the displayName property value. Display name of the virtual event
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -89,7 +90,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the endDateTime property value. End time of the virtual event.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
@@ -103,7 +104,7 @@ public class VirtualEvent extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(CommunicationsIdentitySet::createFromDiscriminatorValue)); });
-        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
@@ -114,7 +115,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the presenters property value. Presenters' information of the virtual event.
-     * @return a virtualEventPresenter
+     * @return a java.util.List<VirtualEventPresenter>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventPresenter> getPresenters() {
@@ -122,7 +123,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the sessions property value. Sessions of the virtual event.
-     * @return a virtualEventSession
+     * @return a java.util.List<VirtualEventSession>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventSession> getSessions() {
@@ -130,7 +131,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the startDateTime property value. Start time of the virtual event.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
@@ -138,7 +139,7 @@ public class VirtualEvent extends Entity implements Parsable {
     }
     /**
      * Gets the status property value. Status of the virtual event. The possible values are: draft, published, canceled, unknownFutureValue.
-     * @return a virtualEventStatus
+     * @return a VirtualEventStatus
      */
     @jakarta.annotation.Nullable
     public VirtualEventStatus getStatus() {
@@ -152,7 +153,7 @@ public class VirtualEvent extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeStringValue("description", this.getDescription());
+        writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
@@ -171,7 +172,7 @@ public class VirtualEvent extends Entity implements Parsable {
      * Sets the description property value. Description of the virtual event.
      * @param value Value to set for the description property.
      */
-    public void setDescription(@jakarta.annotation.Nullable final String value) {
+    public void setDescription(@jakarta.annotation.Nullable final ItemBody value) {
         this.description = value;
     }
     /**

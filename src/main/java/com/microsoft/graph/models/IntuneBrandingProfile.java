@@ -149,7 +149,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
      */
     private MimeContent themeColorLogo;
     /**
-     * Instantiates a new intuneBrandingProfile and sets the default values.
+     * Instantiates a new IntuneBrandingProfile and sets the default values.
      */
     public IntuneBrandingProfile() {
         super();
@@ -157,7 +157,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a intuneBrandingProfile
+     * @return a IntuneBrandingProfile
      */
     @jakarta.annotation.Nonnull
     public static IntuneBrandingProfile createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -166,7 +166,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the assignments property value. The list of group assignments for the branding profile
-     * @return a intuneBrandingProfileAssignment
+     * @return a java.util.List<IntuneBrandingProfileAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IntuneBrandingProfileAssignment> getAssignments() {
@@ -174,7 +174,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the companyPortalBlockedActions property value. Collection of blocked actions on the company portal as per platform and device ownership types.
-     * @return a companyPortalBlockedAction
+     * @return a java.util.List<CompanyPortalBlockedAction>
      */
     @jakarta.annotation.Nullable
     public java.util.List<CompanyPortalBlockedAction> getCompanyPortalBlockedActions() {
@@ -182,7 +182,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the contactITEmailAddress property value. E-mail address of the person/organization responsible for IT support
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContactITEmailAddress() {
@@ -190,7 +190,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the contactITName property value. Name of the person/organization responsible for IT support
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContactITName() {
@@ -198,7 +198,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the contactITNotes property value. Text comments regarding the person/organization responsible for IT support
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContactITNotes() {
@@ -206,7 +206,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the contactITPhoneNumber property value. Phone number of the person/organization responsible for IT support
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getContactITPhoneNumber() {
@@ -222,7 +222,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the customCanSeePrivacyMessage property value. Text comments regarding what the admin has access to on the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomCanSeePrivacyMessage() {
@@ -230,7 +230,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the customCantSeePrivacyMessage property value. Text comments regarding what the admin doesn't have access to on the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomCantSeePrivacyMessage() {
@@ -238,7 +238,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the customPrivacyMessage property value. Text comments regarding what the admin doesn't have access to on the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomPrivacyMessage() {
@@ -246,7 +246,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the disableClientTelemetry property value. Applies to telemetry sent from all clients to the Intune service. When disabled, all proactive troubleshooting and issue warnings within the client are turned off, and telemetry settings appear inactive or hidden to the device user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableClientTelemetry() {
@@ -254,7 +254,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the disableDeviceCategorySelection property value. Boolean that indicates if Device Category Selection will be shown in Company Portal
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableDeviceCategorySelection() {
@@ -262,7 +262,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the displayName property value. Company/organization name that is displayed to end users
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -270,7 +270,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the enrollmentAvailability property value. Options available for enrollment flow customization
-     * @return a enrollmentAvailabilityOptions
+     * @return a EnrollmentAvailabilityOptions
      */
     @jakarta.annotation.Nullable
     public EnrollmentAvailabilityOptions getEnrollmentAvailability() {
@@ -321,7 +321,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isDefaultProfile property value. Boolean that represents whether the profile is used as default or not
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefaultProfile() {
@@ -329,7 +329,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFactoryResetDisabled() {
@@ -337,7 +337,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRemoveDeviceDisabled() {
@@ -345,7 +345,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the landingPageCustomizedImage property value. Customized image displayed in Company Portal apps landing page
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getLandingPageCustomizedImage() {
@@ -361,7 +361,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the lightBackgroundLogo property value. Logo image displayed in Company Portal apps which have a light background behind the logo
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getLightBackgroundLogo() {
@@ -369,7 +369,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnlineSupportSiteName() {
@@ -377,7 +377,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnlineSupportSiteUrl() {
@@ -385,7 +385,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the privacyUrl property value. URL to the company/organizations privacy policy
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPrivacyUrl() {
@@ -393,7 +393,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the profileDescription property value. Description of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileDescription() {
@@ -401,7 +401,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the profileName property value. Name of the profile
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProfileName() {
@@ -409,7 +409,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the roleScopeTagIds property value. List of scope tags assigned to the branding profile
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
@@ -417,7 +417,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the sendDeviceOwnershipChangePushNotification property value. Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSendDeviceOwnershipChangePushNotification() {
@@ -425,7 +425,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the showAzureADEnterpriseApps property value. Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowAzureADEnterpriseApps() {
@@ -433,7 +433,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the showConfigurationManagerApps property value. Boolean that indicates if Configuration Manager Apps will be shown in Company Portal
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowConfigurationManagerApps() {
@@ -441,7 +441,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image or not
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowDisplayNameNextToLogo() {
@@ -449,7 +449,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the showLogo property value. Boolean that represents whether the administrator-supplied logo images are shown or not
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowLogo() {
@@ -457,7 +457,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the showOfficeWebApps property value. Boolean that indicates if Office WebApps will be shown in Company Portal
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getShowOfficeWebApps() {
@@ -465,7 +465,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the themeColor property value. Primary theme color used in the Company Portal applications and web portal
-     * @return a rgbColor
+     * @return a RgbColor
      */
     @jakarta.annotation.Nullable
     public RgbColor getThemeColor() {
@@ -473,7 +473,7 @@ public class IntuneBrandingProfile extends Entity implements Parsable {
     }
     /**
      * Gets the themeColorLogo property value. Logo image displayed in Company Portal apps which have a theme color background behind the logo
-     * @return a mimeContent
+     * @return a MimeContent
      */
     @jakarta.annotation.Nullable
     public MimeContent getThemeColorLogo() {

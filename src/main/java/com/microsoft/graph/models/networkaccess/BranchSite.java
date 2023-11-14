@@ -51,7 +51,7 @@ public class BranchSite extends Entity implements Parsable {
      */
     private String version;
     /**
-     * Instantiates a new branchSite and sets the default values.
+     * Instantiates a new BranchSite and sets the default values.
      */
     public BranchSite() {
         super();
@@ -59,7 +59,7 @@ public class BranchSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a branchSite
+     * @return a BranchSite
      */
     @jakarta.annotation.Nonnull
     public static BranchSite createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,7 +68,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the bandwidthCapacity property value. Determines the maximum allowed Mbps (megabits per second) bandwidth from a branch site. The possible values are:250,500,750,1000.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getBandwidthCapacity() {
@@ -76,7 +76,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityConfiguration property value. The connectivityConfiguration property
-     * @return a branchConnectivityConfiguration
+     * @return a BranchConnectivityConfiguration
      */
     @jakarta.annotation.Nullable
     public BranchConnectivityConfiguration getConnectivityConfiguration() {
@@ -84,7 +84,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the connectivityState property value. Determines the branch site status. The possible values are: pending, connected, inactive, error.
-     * @return a connectivityState
+     * @return a ConnectivityState
      */
     @jakarta.annotation.Nullable
     public ConnectivityState getConnectivityState() {
@@ -92,7 +92,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the country property value. The branch site is created in the specified country.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountry() {
@@ -100,7 +100,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the deviceLinks property value. Each unique CPE device associated with a branch is specified. Supports $expand.
-     * @return a deviceLink
+     * @return a java.util.List<DeviceLink>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceLink> getDeviceLinks() {
@@ -127,7 +127,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the forwardingProfiles property value. Each forwarding profile associated with a branch site is specified. Supports $expand.
-     * @return a forwardingProfile
+     * @return a java.util.List<ForwardingProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingProfile> getForwardingProfiles() {
@@ -143,7 +143,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
@@ -151,7 +151,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the region property value. The region property
-     * @return a region
+     * @return a Region
      */
     @jakarta.annotation.Nullable
     public Region getRegion() {
@@ -159,7 +159,7 @@ public class BranchSite extends Entity implements Parsable {
     }
     /**
      * Gets the version property value. The branch version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {

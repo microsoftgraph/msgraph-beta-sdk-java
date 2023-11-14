@@ -61,7 +61,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      */
     private Integer version;
     /**
-     * Instantiates a new deviceManagementConfigurationPolicyTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicyTemplate and sets the default values.
      */
     public DeviceManagementConfigurationPolicyTemplate() {
         super();
@@ -69,7 +69,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicyTemplate
+     * @return a DeviceManagementConfigurationPolicyTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -78,7 +78,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the allowUnmanagedSettings property value. Allow unmanaged setting templates
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUnmanagedSettings() {
@@ -86,7 +86,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the baseId property value. Template base identifier
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBaseId() {
@@ -94,7 +94,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the description property value. Template description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
@@ -102,7 +102,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the displayName property value. Template display name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
@@ -110,7 +110,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the displayVersion property value. Description of template version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayVersion() {
@@ -139,7 +139,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the lifecycleState property value. Describes current lifecycle state of a template
-     * @return a deviceManagementTemplateLifecycleState
+     * @return a DeviceManagementTemplateLifecycleState
      */
     @jakarta.annotation.Nullable
     public DeviceManagementTemplateLifecycleState getLifecycleState() {
@@ -147,7 +147,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the platforms property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatforms() {
@@ -155,7 +155,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the settingTemplateCount property value. Number of setting templates. Valid values 0 to 2147483647. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSettingTemplateCount() {
@@ -163,7 +163,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the settingTemplates property value. Setting templates
-     * @return a deviceManagementConfigurationSettingTemplate
+     * @return a java.util.List<DeviceManagementConfigurationSettingTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationSettingTemplate> getSettingTemplates() {
@@ -171,7 +171,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
@@ -179,7 +179,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
-     * @return a deviceManagementConfigurationTemplateFamily
+     * @return a DeviceManagementConfigurationTemplateFamily
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTemplateFamily getTemplateFamily() {
@@ -187,7 +187,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
     }
     /**
      * Gets the version property value. Template version. Valid values 1 to 2147483647. This property is read-only.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getVersion() {

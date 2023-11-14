@@ -84,6 +84,10 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      */
     private AndroidDeviceOwnerRequiredPasswordType passwordRequiredType;
     /**
+     * Require device to have no pending Android system updates.
+     */
+    private Boolean requireNoPendingSystemUpdates;
+    /**
      * If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.
      */
     private Boolean securityRequireIntuneAppIntegrity;
@@ -100,7 +104,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      */
     private Boolean storageRequireEncryption;
     /**
-     * Instantiates a new androidDeviceOwnerCompliancePolicy and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerCompliancePolicy and sets the default values.
      */
     public AndroidDeviceOwnerCompliancePolicy() {
         super();
@@ -109,7 +113,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerCompliancePolicy
+     * @return a AndroidDeviceOwnerCompliancePolicy
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerCompliancePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -118,7 +122,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the advancedThreatProtectionRequiredSecurityLevel property value. MDATP Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getAdvancedThreatProtectionRequiredSecurityLevel() {
@@ -126,7 +130,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
@@ -134,7 +138,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Require Mobile Threat Protection minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet.
-     * @return a deviceThreatProtectionLevel
+     * @return a DeviceThreatProtectionLevel
      */
     @jakarta.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
@@ -165,6 +169,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         deserializerMap.put("passwordPreviousPasswordCountToBlock", (n) -> { this.setPasswordPreviousPasswordCountToBlock(n.getIntegerValue()); });
         deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
         deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType.class)); });
+        deserializerMap.put("requireNoPendingSystemUpdates", (n) -> { this.setRequireNoPendingSystemUpdates(n.getBooleanValue()); });
         deserializerMap.put("securityRequireIntuneAppIntegrity", (n) -> { this.setSecurityRequireIntuneAppIntegrity(n.getBooleanValue()); });
         deserializerMap.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { this.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
         deserializerMap.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { this.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
@@ -173,7 +178,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMinAndroidSecurityPatchLevel() {
@@ -181,7 +186,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Android version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMaximumVersion() {
@@ -189,7 +194,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the osMinimumVersion property value. Minimum Android version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsMinimumVersion() {
@@ -197,7 +202,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordExpirationDays() {
@@ -205,7 +210,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLength() {
@@ -213,7 +218,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumLetterCharacters property value. Indicates the minimum number of letter characters required for device password. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLetterCharacters() {
@@ -221,7 +226,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumLowerCaseCharacters property value. Indicates the minimum number of lower case characters required for device password. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumLowerCaseCharacters() {
@@ -229,7 +234,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumNonLetterCharacters property value. Indicates the minimum number of non-letter characters required for device password. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumNonLetterCharacters() {
@@ -237,7 +242,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumNumericCharacters property value. Indicates the minimum number of numeric characters required for device password. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumNumericCharacters() {
@@ -245,7 +250,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumSymbolCharacters property value. Indicates the minimum number of symbol characters required for device password. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumSymbolCharacters() {
@@ -253,7 +258,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinimumUpperCaseCharacters property value. Indicates the minimum number of upper case letter characters required for device password. Valid values 1 to 16
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinimumUpperCaseCharacters() {
@@ -261,7 +266,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordMinutesOfInactivityBeforeLock() {
@@ -269,7 +274,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordPreviousPasswordCountToBlock property value. Number of previous passwords to block. Valid values 1 to 24
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPasswordPreviousPasswordCountToBlock() {
@@ -277,7 +282,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordRequired property value. Require a password to unlock device.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPasswordRequired() {
@@ -285,15 +290,23 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
-     * @return a androidDeviceOwnerRequiredPasswordType
+     * @return a AndroidDeviceOwnerRequiredPasswordType
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerRequiredPasswordType getPasswordRequiredType() {
         return this.passwordRequiredType;
     }
     /**
+     * Gets the requireNoPendingSystemUpdates property value. Require device to have no pending Android system updates.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getRequireNoPendingSystemUpdates() {
+        return this.requireNoPendingSystemUpdates;
+    }
+    /**
      * Gets the securityRequireIntuneAppIntegrity property value. If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireIntuneAppIntegrity() {
@@ -301,7 +314,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationBasicIntegrity() {
@@ -309,7 +322,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSecurityRequireSafetyNetAttestationCertifiedDevice() {
@@ -317,7 +330,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
     }
     /**
      * Gets the storageRequireEncryption property value. Require encryption on Android devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getStorageRequireEncryption() {
@@ -348,6 +361,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         writer.writeIntegerValue("passwordPreviousPasswordCountToBlock", this.getPasswordPreviousPasswordCountToBlock());
         writer.writeBooleanValue("passwordRequired", this.getPasswordRequired());
         writer.writeEnumValue("passwordRequiredType", this.getPasswordRequiredType());
+        writer.writeBooleanValue("requireNoPendingSystemUpdates", this.getRequireNoPendingSystemUpdates());
         writer.writeBooleanValue("securityRequireIntuneAppIntegrity", this.getSecurityRequireIntuneAppIntegrity());
         writer.writeBooleanValue("securityRequireSafetyNetAttestationBasicIntegrity", this.getSecurityRequireSafetyNetAttestationBasicIntegrity());
         writer.writeBooleanValue("securityRequireSafetyNetAttestationCertifiedDevice", this.getSecurityRequireSafetyNetAttestationCertifiedDevice());
@@ -478,6 +492,13 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this.passwordRequiredType = value;
+    }
+    /**
+     * Sets the requireNoPendingSystemUpdates property value. Require device to have no pending Android system updates.
+     * @param value Value to set for the requireNoPendingSystemUpdates property.
+     */
+    public void setRequireNoPendingSystemUpdates(@jakarta.annotation.Nullable final Boolean value) {
+        this.requireNoPendingSystemUpdates = value;
     }
     /**
      * Sets the securityRequireIntuneAppIntegrity property value. If setting is set to true, checks that the Intune app installed on fully managed, dedicated, or corporate-owned work profile Android Enterprise enrolled devices, is the one provided by Microsoft from the Managed Google Playstore. If the check fails, the device will be reported as non-compliant.

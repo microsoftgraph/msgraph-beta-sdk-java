@@ -60,48 +60,48 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyCollectionResponse
+     * @return a DeviceManagementConfigurationPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagementConfigurationPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicyCollectionResponse
+     * @return a DeviceManagementConfigurationPolicyCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicyCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementConfigurationPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementConfigurationPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementConfigurationPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagementConfigurationPolicy
+     * @return a DeviceManagementConfigurationPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicy> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementConfigurationPolicy post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to referencingConfigurationPolicies for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagementConfigurationPolicy
+     * @return a DeviceManagementConfigurationPolicy
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagementConfigurationPolicy> post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagementConfigurationPolicy post(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagementConfigurationPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagementConfigurationPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.
@@ -119,10 +119,6 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -130,6 +126,10 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -151,23 +151,23 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementConfigurationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a referencingConfigurationPoliciesRequestBuilder
+     * @return a ReferencingConfigurationPoliciesRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ReferencingConfigurationPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

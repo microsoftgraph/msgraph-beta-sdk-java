@@ -64,7 +64,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      */
     private Integer ramSpikeTimeScore;
     /**
-     * Instantiates a new userExperienceAnalyticsResourcePerformance and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsResourcePerformance and sets the default values.
      */
     public UserExperienceAnalyticsResourcePerformance() {
         super();
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsResourcePerformance
+     * @return a UserExperienceAnalyticsResourcePerformance
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsResourcePerformance createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the averageSpikeTimeScore property value. AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAverageSpikeTimeScore() {
@@ -89,7 +89,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimePercentage property value. CPU spike time in percentage. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCpuSpikeTimePercentage() {
@@ -97,7 +97,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimePercentageThreshold property value. Threshold of cpuSpikeTimeScore. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getCpuSpikeTimePercentageThreshold() {
@@ -105,7 +105,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimeScore property value. The user experience analytics device CPU spike time score. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCpuSpikeTimeScore() {
@@ -113,7 +113,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceCount property value. User experience analytics summarized device count.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getDeviceCount() {
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceId property value. The id of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
@@ -129,7 +129,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceName property value. The name of the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
@@ -137,7 +137,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the deviceResourcePerformanceScore property value. Resource performance score of a specific device. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDeviceResourcePerformanceScore() {
@@ -167,7 +167,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the manufacturer property value. The user experience analytics device manufacturer.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManufacturer() {
@@ -175,7 +175,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the model property value. The user experience analytics device model.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getModel() {
@@ -183,7 +183,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimePercentage property value. RAM spike time in percentage. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getRamSpikeTimePercentage() {
@@ -191,7 +191,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimePercentageThreshold property value. Threshold of ramSpikeTimeScore. Valid values 0 to 100
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getRamSpikeTimePercentageThreshold() {
@@ -199,7 +199,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimeScore property value. The user experience analytics device RAM spike time score. Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRamSpikeTimeScore() {

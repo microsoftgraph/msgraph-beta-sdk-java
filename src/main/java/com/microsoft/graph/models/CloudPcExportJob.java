@@ -30,7 +30,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      */
     private String format;
     /**
-     * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, inaccessibleCloudPcReports. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, inaccessibleCloudPcReports.
+     * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports.
      */
     private CloudPcReportName reportName;
     /**
@@ -42,7 +42,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
      */
     private java.util.List<String> select;
     /**
-     * Instantiates a new cloudPcExportJob and sets the default values.
+     * Instantiates a new CloudPcExportJob and sets the default values.
      */
     public CloudPcExportJob() {
         super();
@@ -50,7 +50,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcExportJob
+     * @return a CloudPcExportJob
      */
     @jakarta.annotation.Nonnull
     public static CloudPcExportJob createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,7 +67,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the exportJobStatus property value. The status of the export job. The possible values are: notStarted, inProgress, completed, unknownFutureValue. Read-only.
-     * @return a cloudPcExportJobStatus
+     * @return a CloudPcExportJobStatus
      */
     @jakarta.annotation.Nullable
     public CloudPcExportJobStatus getExportJobStatus() {
@@ -75,7 +75,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the exportUrl property value. The storage account URL of the exported report. It can be used to download the file.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExportUrl() {
@@ -100,7 +100,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the filter property value. The filter applied on the report.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFilter() {
@@ -108,15 +108,15 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the format property value. The format of the exported report.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFormat() {
         return this.format;
     }
     /**
-     * Gets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, inaccessibleCloudPcReports. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, inaccessibleCloudPcReports.
-     * @return a cloudPcReportName
+     * Gets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports.
+     * @return a CloudPcReportName
      */
     @jakarta.annotation.Nullable
     public CloudPcReportName getReportName() {
@@ -132,7 +132,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
     }
     /**
      * Gets the select property value. The selected columns of the report.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSelect() {
@@ -190,7 +190,7 @@ public class CloudPcExportJob extends Entity implements Parsable {
         this.format = value;
     }
     /**
-     * Sets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, inaccessibleCloudPcReports. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, inaccessibleCloudPcReports.
+     * Sets the reportName property value. The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, unknownFutureValue,  noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport,  remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports. You must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: noLicenseAvailableConnectivityFailureReport, frontlineLicenseUsageReport, frontlineLicenseUsageRealTimeReport, remoteConnectionQualityReports, inaccessibleCloudPcReports, rawRemoteConnectionReports.
      * @param value Value to set for the reportName property.
      */
     public void setReportName(@jakarta.annotation.Nullable final CloudPcReportName value) {

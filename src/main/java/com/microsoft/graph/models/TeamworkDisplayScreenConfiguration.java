@@ -39,7 +39,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
      */
     private PeriodAndDuration screensaverTimeout;
     /**
-     * Instantiates a new teamworkDisplayScreenConfiguration and sets the default values.
+     * Instantiates a new TeamworkDisplayScreenConfiguration and sets the default values.
      */
     public TeamworkDisplayScreenConfiguration() {
         this.setAdditionalData(new HashMap<>());
@@ -47,7 +47,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDisplayScreenConfiguration
+     * @return a TeamworkDisplayScreenConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDisplayScreenConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +55,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
         return new TeamworkDisplayScreenConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Gets the backlightBrightness property value. The brightness level on the device (0-100). Not applicable for Microsoft Teams Rooms devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBacklightBrightness() {
@@ -95,7 +95,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Gets the isHighContrastEnabled property value. True if high contrast mode is enabled. Not applicable for Teams Rooms devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHighContrastEnabled() {
@@ -103,7 +103,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Gets the isScreensaverEnabled property value. True if screensaver is enabled. Not applicable for Teams Rooms devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScreensaverEnabled() {
@@ -111,7 +111,7 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
@@ -140,8 +140,8 @@ public class TeamworkDisplayScreenConfiguration implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.additionalData = value;

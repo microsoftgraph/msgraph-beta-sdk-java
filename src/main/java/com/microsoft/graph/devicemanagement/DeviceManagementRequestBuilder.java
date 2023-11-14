@@ -51,6 +51,7 @@ import com.microsoft.graph.devicemanagement.devicemanagementpartners.DeviceManag
 import com.microsoft.graph.devicemanagement.devicemanagementscripts.DeviceManagementScriptsRequestBuilder;
 import com.microsoft.graph.devicemanagement.deviceshellscripts.DeviceShellScriptsRequestBuilder;
 import com.microsoft.graph.devicemanagement.domainjoinconnectors.DomainJoinConnectorsRequestBuilder;
+import com.microsoft.graph.devicemanagement.elevationrequests.ElevationRequestsRequestBuilder;
 import com.microsoft.graph.devicemanagement.embeddedsimactivationcodepools.EmbeddedSIMActivationCodePoolsRequestBuilder;
 import com.microsoft.graph.devicemanagement.enableandroiddeviceadministratorenrollment.EnableAndroidDeviceAdministratorEnrollmentRequestBuilder;
 import com.microsoft.graph.devicemanagement.enablelegacypcmanagement.EnableLegacyPcManagementRequestBuilder;
@@ -555,6 +556,13 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DomainJoinConnectorsRequestBuilder domainJoinConnectors() {
         return new DomainJoinConnectorsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the elevationRequests property of the microsoft.graph.deviceManagement entity.
+     */
+    @jakarta.annotation.Nonnull
+    public ElevationRequestsRequestBuilder elevationRequests() {
+        return new ElevationRequestsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the embeddedSIMActivationCodePools property of the microsoft.graph.deviceManagement entity.
@@ -1428,29 +1436,29 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get deviceManagement
-     * @return a CompletableFuture of deviceManagement
+     * @return a DeviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> get() {
+    @jakarta.annotation.Nullable
+    public DeviceManagement get() {
         return get(null);
     }
     /**
      * Get deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagement
+     * @return a DeviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the getEffectivePermissions method.
      * @param scope Usage: scope='{scope}'
-     * @return a getEffectivePermissionsWithScopeRequestBuilder
+     * @return a GetEffectivePermissionsWithScopeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetEffectivePermissionsWithScopeRequestBuilder getEffectivePermissionsWithScope(@jakarta.annotation.Nonnull final String scope) {
@@ -1460,7 +1468,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRoleScopeTagsByIds method.
      * @param ids Usage: ids={ids}
-     * @return a getRoleScopeTagsByIdsWithIdsRequestBuilder
+     * @return a GetRoleScopeTagsByIdsWithIdsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRoleScopeTagsByIdsWithIdsRequestBuilder getRoleScopeTagsByIdsWithIds(@jakarta.annotation.Nonnull final String ids) {
@@ -1470,7 +1478,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRoleScopeTagsByResource method.
      * @param resource Usage: resource='{resource}'
-     * @return a getRoleScopeTagsByResourceWithResourceRequestBuilder
+     * @return a GetRoleScopeTagsByResourceWithResourceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRoleScopeTagsByResourceWithResourceRequestBuilder getRoleScopeTagsByResourceWithResource(@jakarta.annotation.Nonnull final String resource) {
@@ -1480,7 +1488,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSuggestedEnrollmentLimit method.
      * @param enrollmentType Usage: enrollmentType='{enrollmentType}'
-     * @return a getSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder
+     * @return a GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder getSuggestedEnrollmentLimitWithEnrollmentType(@jakarta.annotation.Nonnull final String enrollmentType) {
@@ -1490,31 +1498,31 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Update deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of deviceManagement
+     * @return a DeviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
+    @jakarta.annotation.Nullable
+    public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body) {
         return patch(body, null);
     }
     /**
      * Update deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of deviceManagement
+     * @return a DeviceManagement
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DeviceManagement> patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DeviceManagement patch(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DeviceManagement::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Provides operations to call the scopedForResource method.
      * @param resource Usage: resource='{resource}'
-     * @return a scopedForResourceWithResourceRequestBuilder
+     * @return a ScopedForResourceWithResourceRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ScopedForResourceWithResourceRequestBuilder scopedForResourceWithResource(@jakarta.annotation.Nonnull final String resource) {
@@ -1537,10 +1545,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
             final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
@@ -1548,6 +1552,10 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -1569,23 +1577,23 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final DeviceManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
             final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
             requestConfiguration.accept(requestConfig);
             requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
      * @param domainName Usage: domainName='{domainName}'
-     * @return a verifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
+     * @return a VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder verifyWindowsEnrollmentAutoDiscoveryWithDomainName(@jakarta.annotation.Nonnull final String domainName) {
@@ -1595,7 +1603,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a deviceManagementRequestBuilder
+     * @return a DeviceManagementRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DeviceManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
