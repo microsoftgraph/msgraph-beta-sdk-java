@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Parsable {
+public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Movies rating labels in United Kingdom
-     */
-    private RatingUnitedKingdomMoviesType movieRating;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * TV content rating labels in United Kingdom
-     */
-    private RatingUnitedKingdomTelevisionType tvRating;
-    /**
-     * Instantiates a new mediaContentRatingUnitedKingdom and sets the default values.
+     * Instantiates a new MediaContentRatingUnitedKingdom and sets the default values.
      */
     public MediaContentRatingUnitedKingdom() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a mediaContentRatingUnitedKingdom
+     * @return a MediaContentRatingUnitedKingdom
      */
     @jakarta.annotation.Nonnull
     public static MediaContentRatingUnitedKingdom createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,17 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
         return new MediaContentRatingUnitedKingdom();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +61,27 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the movieRating property value. Movies rating labels in United Kingdom
-     * @return a ratingUnitedKingdomMoviesType
+     * @return a RatingUnitedKingdomMoviesType
      */
     @jakarta.annotation.Nullable
     public RatingUnitedKingdomMoviesType getMovieRating() {
-        return this.movieRating;
+        return this.backingStore.get("movieRating");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tvRating property value. TV content rating labels in United Kingdom
-     * @return a ratingUnitedKingdomTelevisionType
+     * @return a RatingUnitedKingdomTelevisionType
      */
     @jakarta.annotation.Nullable
     public RatingUnitedKingdomTelevisionType getTvRating() {
-        return this.tvRating;
+        return this.backingStore.get("tvRating");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class MediaContentRatingUnitedKingdom implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the movieRating property value. Movies rating labels in United Kingdom
      * @param value Value to set for the movieRating property.
      */
     public void setMovieRating(@jakarta.annotation.Nullable final RatingUnitedKingdomMoviesType value) {
-        this.movieRating = value;
+        this.backingStore.set("movieRating", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tvRating property value. TV content rating labels in United Kingdom
      * @param value Value to set for the tvRating property.
      */
     public void setTvRating(@jakarta.annotation.Nullable final RatingUnitedKingdomTelevisionType value) {
-        this.tvRating = value;
+        this.backingStore.set("tvRating", value);
     }
 }

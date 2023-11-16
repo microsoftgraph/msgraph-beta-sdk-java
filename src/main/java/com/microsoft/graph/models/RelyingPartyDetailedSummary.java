@@ -9,51 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /**
-     * Number of failed sign in on Active Directory Federation Service in the period specified.
-     */
-    private Long failedSignInCount;
-    /**
-     * The migrationStatus property
-     */
-    private MigrationStatus migrationStatus;
-    /**
-     * Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
-     */
-    private java.util.List<KeyValuePair> migrationValidationDetails;
-    /**
-     * This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
-     */
-    private String relyingPartyId;
-    /**
-     * Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
-     */
-    private String relyingPartyName;
-    /**
-     * Specifies where the relying party expects to receive the token.
-     */
-    private java.util.List<String> replyUrls;
-    /**
-     * Uniquely identifies the Active Directory forest.
-     */
-    private String serviceId;
-    /**
-     * Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
-     */
-    private Double signInSuccessRate;
-    /**
-     * Number of successful sign ins on Active Directory Federation Service.
-     */
-    private Long successfulSignInCount;
-    /**
-     * Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
-     */
-    private Long totalSignInCount;
-    /**
-     * Number of unique users that have signed into the application.
-     */
-    private Long uniqueUserCount;
-    /**
-     * Instantiates a new relyingPartyDetailedSummary and sets the default values.
+     * Instantiates a new RelyingPartyDetailedSummary and sets the default values.
      */
     public RelyingPartyDetailedSummary() {
         super();
@@ -61,7 +17,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a relyingPartyDetailedSummary
+     * @return a RelyingPartyDetailedSummary
      */
     @jakarta.annotation.Nonnull
     public static RelyingPartyDetailedSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,11 +26,11 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the failedSignInCount property value. Number of failed sign in on Active Directory Federation Service in the period specified.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFailedSignInCount() {
-        return this.failedSignInCount;
+        return this.backingStore.get("failedSignInCount");
     }
     /**
      * The deserialization information for the current model
@@ -98,83 +54,83 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     }
     /**
      * Gets the migrationStatus property value. The migrationStatus property
-     * @return a migrationStatus
+     * @return a MigrationStatus
      */
     @jakarta.annotation.Nullable
     public MigrationStatus getMigrationStatus() {
-        return this.migrationStatus;
+        return this.backingStore.get("migrationStatus");
     }
     /**
-     * Gets the migrationValidationDetails property value. Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
-     * @return a keyValuePair
+     * Gets the migrationValidationDetails property value. Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Microsoft Entra ID.
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getMigrationValidationDetails() {
-        return this.migrationValidationDetails;
+        return this.backingStore.get("migrationValidationDetails");
     }
     /**
      * Gets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRelyingPartyId() {
-        return this.relyingPartyId;
+        return this.backingStore.get("relyingPartyId");
     }
     /**
      * Gets the relyingPartyName property value. Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRelyingPartyName() {
-        return this.relyingPartyName;
+        return this.backingStore.get("relyingPartyName");
     }
     /**
      * Gets the replyUrls property value. Specifies where the relying party expects to receive the token.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReplyUrls() {
-        return this.replyUrls;
+        return this.backingStore.get("replyUrls");
     }
     /**
      * Gets the serviceId property value. Uniquely identifies the Active Directory forest.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceId() {
-        return this.serviceId;
+        return this.backingStore.get("serviceId");
     }
     /**
      * Gets the signInSuccessRate property value. Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSignInSuccessRate() {
-        return this.signInSuccessRate;
+        return this.backingStore.get("signInSuccessRate");
     }
     /**
      * Gets the successfulSignInCount property value. Number of successful sign ins on Active Directory Federation Service.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getSuccessfulSignInCount() {
-        return this.successfulSignInCount;
+        return this.backingStore.get("successfulSignInCount");
     }
     /**
      * Gets the totalSignInCount property value. Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTotalSignInCount() {
-        return this.totalSignInCount;
+        return this.backingStore.get("totalSignInCount");
     }
     /**
      * Gets the uniqueUserCount property value. Number of unique users that have signed into the application.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUniqueUserCount() {
-        return this.uniqueUserCount;
+        return this.backingStore.get("uniqueUserCount");
     }
     /**
      * Serializes information the current object
@@ -200,76 +156,76 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the failedSignInCount property.
      */
     public void setFailedSignInCount(@jakarta.annotation.Nullable final Long value) {
-        this.failedSignInCount = value;
+        this.backingStore.set("failedSignInCount", value);
     }
     /**
      * Sets the migrationStatus property value. The migrationStatus property
      * @param value Value to set for the migrationStatus property.
      */
     public void setMigrationStatus(@jakarta.annotation.Nullable final MigrationStatus value) {
-        this.migrationStatus = value;
+        this.backingStore.set("migrationStatus", value);
     }
     /**
-     * Sets the migrationValidationDetails property value. Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Azure AD.
+     * Sets the migrationValidationDetails property value. Specifies all the validations check done on applications configuration details to evaluate if the application is ready to be moved to Microsoft Entra ID.
      * @param value Value to set for the migrationValidationDetails property.
      */
     public void setMigrationValidationDetails(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.migrationValidationDetails = value;
+        this.backingStore.set("migrationValidationDetails", value);
     }
     /**
      * Sets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It is used when issuing claims to the relying party.
      * @param value Value to set for the relyingPartyId property.
      */
     public void setRelyingPartyId(@jakarta.annotation.Nullable final String value) {
-        this.relyingPartyId = value;
+        this.backingStore.set("relyingPartyId", value);
     }
     /**
      * Sets the relyingPartyName property value. Name of application or other entity on the internet that uses an identity provider to authenticate a user who wants to log in.
      * @param value Value to set for the relyingPartyName property.
      */
     public void setRelyingPartyName(@jakarta.annotation.Nullable final String value) {
-        this.relyingPartyName = value;
+        this.backingStore.set("relyingPartyName", value);
     }
     /**
      * Sets the replyUrls property value. Specifies where the relying party expects to receive the token.
      * @param value Value to set for the replyUrls property.
      */
     public void setReplyUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.replyUrls = value;
+        this.backingStore.set("replyUrls", value);
     }
     /**
      * Sets the serviceId property value. Uniquely identifies the Active Directory forest.
      * @param value Value to set for the serviceId property.
      */
     public void setServiceId(@jakarta.annotation.Nullable final String value) {
-        this.serviceId = value;
+        this.backingStore.set("serviceId", value);
     }
     /**
      * Sets the signInSuccessRate property value. Number of successful / (number of successful + number of failed sign ins) on Active Directory Federation Service in the period specified.
      * @param value Value to set for the signInSuccessRate property.
      */
     public void setSignInSuccessRate(@jakarta.annotation.Nullable final Double value) {
-        this.signInSuccessRate = value;
+        this.backingStore.set("signInSuccessRate", value);
     }
     /**
      * Sets the successfulSignInCount property value. Number of successful sign ins on Active Directory Federation Service.
      * @param value Value to set for the successfulSignInCount property.
      */
     public void setSuccessfulSignInCount(@jakarta.annotation.Nullable final Long value) {
-        this.successfulSignInCount = value;
+        this.backingStore.set("successfulSignInCount", value);
     }
     /**
      * Sets the totalSignInCount property value. Number of successful + failed sign ins failed sign ins on Active Directory Federation Service in the period specified.
      * @param value Value to set for the totalSignInCount property.
      */
     public void setTotalSignInCount(@jakarta.annotation.Nullable final Long value) {
-        this.totalSignInCount = value;
+        this.backingStore.set("totalSignInCount", value);
     }
     /**
      * Sets the uniqueUserCount property value. Number of unique users that have signed into the application.
      * @param value Value to set for the uniqueUserCount property.
      */
     public void setUniqueUserCount(@jakarta.annotation.Nullable final Long value) {
-        this.uniqueUserCount = value;
+        this.backingStore.set("uniqueUserCount", value);
     }
 }

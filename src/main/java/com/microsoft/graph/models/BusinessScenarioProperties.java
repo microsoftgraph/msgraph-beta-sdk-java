@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BusinessScenarioProperties implements AdditionalDataHolder, Parsable {
+public class BusinessScenarioProperties implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
-     */
-    private String externalBucketId;
-    /**
-     * The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
-     */
-    private String externalContextId;
-    /**
-     * Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
-     */
-    private String externalObjectId;
-    /**
-     * Application-specific version of the task. Optional.
-     */
-    private String externalObjectVersion;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The URL to the application-specific experience for this task. Optional.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new businessScenarioProperties and sets the default values.
+     * Instantiates a new BusinessScenarioProperties and sets the default values.
      */
     public BusinessScenarioProperties() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a businessScenarioProperties
+     * @return a BusinessScenarioProperties
      */
     @jakarta.annotation.Nonnull
     public static BusinessScenarioProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,44 +35,49 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
         return new BusinessScenarioProperties();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the externalBucketId property value. The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalBucketId() {
-        return this.externalBucketId;
+        return this.backingStore.get("externalBucketId");
     }
     /**
      * Gets the externalContextId property value. The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalContextId() {
-        return this.externalContextId;
+        return this.backingStore.get("externalContextId");
     }
     /**
      * Gets the externalObjectId property value. Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectId() {
-        return this.externalObjectId;
+        return this.backingStore.get("externalObjectId");
     }
     /**
      * Gets the externalObjectVersion property value. Application-specific version of the task. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalObjectVersion() {
-        return this.externalObjectVersion;
+        return this.backingStore.get("externalObjectVersion");
     }
     /**
      * The deserialization information for the current model
@@ -110,19 +96,19 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the webUrl property value. The URL to the application-specific experience for this task. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -139,52 +125,52 @@ public class BusinessScenarioProperties implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the externalBucketId property value. The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
      * @param value Value to set for the externalBucketId property.
      */
     public void setExternalBucketId(@jakarta.annotation.Nullable final String value) {
-        this.externalBucketId = value;
+        this.backingStore.set("externalBucketId", value);
     }
     /**
      * Sets the externalContextId property value. The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
      * @param value Value to set for the externalContextId property.
      */
     public void setExternalContextId(@jakarta.annotation.Nullable final String value) {
-        this.externalContextId = value;
+        this.backingStore.set("externalContextId", value);
     }
     /**
      * Sets the externalObjectId property value. Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
      * @param value Value to set for the externalObjectId property.
      */
     public void setExternalObjectId(@jakarta.annotation.Nullable final String value) {
-        this.externalObjectId = value;
+        this.backingStore.set("externalObjectId", value);
     }
     /**
      * Sets the externalObjectVersion property value. Application-specific version of the task. Optional.
      * @param value Value to set for the externalObjectVersion property.
      */
     public void setExternalObjectVersion(@jakarta.annotation.Nullable final String value) {
-        this.externalObjectVersion = value;
+        this.backingStore.set("externalObjectVersion", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the webUrl property value. The URL to the application-specific experience for this task. Optional.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

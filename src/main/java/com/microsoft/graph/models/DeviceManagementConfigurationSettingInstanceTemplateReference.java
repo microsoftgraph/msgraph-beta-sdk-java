@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,29 +14,23 @@ import java.util.Objects;
  * Setting instance template reference information
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationSettingInstanceTemplateReference implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationSettingInstanceTemplateReference implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Setting instance template id
-     */
-    private String settingInstanceTemplateId;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingInstanceTemplateReference and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingInstanceTemplateReference and sets the default values.
      */
     public DeviceManagementConfigurationSettingInstanceTemplateReference() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingInstanceTemplateReference
+     * @return a DeviceManagementConfigurationSettingInstanceTemplateReference
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingInstanceTemplateReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,12 +38,17 @@ public class DeviceManagementConfigurationSettingInstanceTemplateReference imple
         return new DeviceManagementConfigurationSettingInstanceTemplateReference();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -61,19 +63,19 @@ public class DeviceManagementConfigurationSettingInstanceTemplateReference imple
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the settingInstanceTemplateId property value. Setting instance template id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingInstanceTemplateId() {
-        return this.settingInstanceTemplateId;
+        return this.backingStore.get("settingInstanceTemplateId");
     }
     /**
      * Serializes information the current object
@@ -86,24 +88,24 @@ public class DeviceManagementConfigurationSettingInstanceTemplateReference imple
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the settingInstanceTemplateId property value. Setting instance template id
      * @param value Value to set for the settingInstanceTemplateId property.
      */
     public void setSettingInstanceTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.settingInstanceTemplateId = value;
+        this.backingStore.set("settingInstanceTemplateId", value);
     }
 }

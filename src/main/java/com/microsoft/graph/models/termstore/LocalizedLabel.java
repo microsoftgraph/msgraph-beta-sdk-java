@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LocalizedLabel implements AdditionalDataHolder, Parsable {
+public class LocalizedLabel implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Indicates whether the label is the default label.
-     */
-    private Boolean isDefault;
-    /**
-     * The language tag for the label.
-     */
-    private String languageTag;
-    /**
-     * The name of the label.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new localizedLabel and sets the default values.
+     * Instantiates a new LocalizedLabel and sets the default values.
      */
     public LocalizedLabel() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a localizedLabel
+     * @return a LocalizedLabel
      */
     @jakarta.annotation.Nonnull
     public static LocalizedLabel createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
         return new LocalizedLabel();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isDefault property value. Indicates whether the label is the default label.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
-        return this.isDefault;
+        return this.backingStore.get("isDefault");
     }
     /**
      * Gets the languageTag property value. The language tag for the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the name property value. The name of the label.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class LocalizedLabel implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the isDefault property value. Indicates whether the label is the default label.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDefault = value;
+        this.backingStore.set("isDefault", value);
     }
     /**
      * Sets the languageTag property value. The language tag for the label.
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the name property value. The name of the label.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

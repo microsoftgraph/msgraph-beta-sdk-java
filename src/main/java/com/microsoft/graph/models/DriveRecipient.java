@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DriveRecipient implements AdditionalDataHolder, Parsable {
+public class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
-     */
-    private String alias;
-    /**
-     * The email address for the recipient, if the recipient has an associated email address.
-     */
-    private String email;
-    /**
-     * The unique identifier for the recipient in the directory.
-     */
-    private String objectId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new driveRecipient and sets the default values.
+     * Instantiates a new DriveRecipient and sets the default values.
      */
     public DriveRecipient() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveRecipient
+     * @return a DriveRecipient
      */
     @jakarta.annotation.Nonnull
     public static DriveRecipient createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +35,33 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
         return new DriveRecipient();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlias() {
-        return this.alias;
+        return this.backingStore.get("alias");
     }
     /**
      * Gets the email property value. The email address for the recipient, if the recipient has an associated email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.backingStore.get("email");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +78,19 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the objectId property value. The unique identifier for the recipient in the directory.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getObjectId() {
-        return this.objectId;
+        return this.backingStore.get("objectId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
      * @param value Value to set for the alias property.
      */
     public void setAlias(@jakarta.annotation.Nullable final String value) {
-        this.alias = value;
+        this.backingStore.set("alias", value);
     }
     /**
      * Sets the email property value. The email address for the recipient, if the recipient has an associated email address.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.backingStore.set("email", value);
     }
     /**
      * Sets the objectId property value. The unique identifier for the recipient in the directory.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
-        this.objectId = value;
+        this.backingStore.set("objectId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

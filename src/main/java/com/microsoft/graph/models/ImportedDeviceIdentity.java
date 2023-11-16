@@ -13,39 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
-     * Created Date Time of the device
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * The description of the device
-     */
-    private String description;
-    /**
-     * The enrollmentState property
-     */
-    private EnrollmentState enrollmentState;
-    /**
-     * Imported Device Identifier
-     */
-    private String importedDeviceIdentifier;
-    /**
-     * The importedDeviceIdentityType property
-     */
-    private ImportedDeviceIdentityType importedDeviceIdentityType;
-    /**
-     * Last Contacted Date Time of the device
-     */
-    private OffsetDateTime lastContactedDateTime;
-    /**
-     * Last Modified DateTime of the description
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The platform property
-     */
-    private Platform platform;
-    /**
-     * Instantiates a new importedDeviceIdentity and sets the default values.
+     * Instantiates a new ImportedDeviceIdentity and sets the default values.
      */
     public ImportedDeviceIdentity() {
         super();
@@ -53,7 +21,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a importedDeviceIdentity
+     * @return a ImportedDeviceIdentity
      */
     @jakarta.annotation.Nonnull
     public static ImportedDeviceIdentity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,23 +41,23 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the description property value. The description of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the enrollmentState property value. The enrollmentState property
-     * @return a enrollmentState
+     * @return a EnrollmentState
      */
     @jakarta.annotation.Nullable
     public EnrollmentState getEnrollmentState() {
-        return this.enrollmentState;
+        return this.backingStore.get("enrollmentState");
     }
     /**
      * The deserialization information for the current model
@@ -110,19 +78,19 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     }
     /**
      * Gets the importedDeviceIdentifier property value. Imported Device Identifier
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getImportedDeviceIdentifier() {
-        return this.importedDeviceIdentifier;
+        return this.backingStore.get("importedDeviceIdentifier");
     }
     /**
      * Gets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
-     * @return a importedDeviceIdentityType
+     * @return a ImportedDeviceIdentityType
      */
     @jakarta.annotation.Nullable
     public ImportedDeviceIdentityType getImportedDeviceIdentityType() {
-        return this.importedDeviceIdentityType;
+        return this.backingStore.get("importedDeviceIdentityType");
     }
     /**
      * Gets the lastContactedDateTime property value. Last Contacted Date Time of the device
@@ -130,7 +98,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastContactedDateTime() {
-        return this.lastContactedDateTime;
+        return this.backingStore.get("lastContactedDateTime");
     }
     /**
      * Gets the lastModifiedDateTime property value. Last Modified DateTime of the description
@@ -138,15 +106,15 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the platform property value. The platform property
-     * @return a platform
+     * @return a Platform
      */
     @jakarta.annotation.Nullable
     public Platform getPlatform() {
-        return this.platform;
+        return this.backingStore.get("platform");
     }
     /**
      * Serializes information the current object
@@ -169,55 +137,55 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The description of the device
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the enrollmentState property value. The enrollmentState property
      * @param value Value to set for the enrollmentState property.
      */
     public void setEnrollmentState(@jakarta.annotation.Nullable final EnrollmentState value) {
-        this.enrollmentState = value;
+        this.backingStore.set("enrollmentState", value);
     }
     /**
      * Sets the importedDeviceIdentifier property value. Imported Device Identifier
      * @param value Value to set for the importedDeviceIdentifier property.
      */
     public void setImportedDeviceIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.importedDeviceIdentifier = value;
+        this.backingStore.set("importedDeviceIdentifier", value);
     }
     /**
      * Sets the importedDeviceIdentityType property value. The importedDeviceIdentityType property
      * @param value Value to set for the importedDeviceIdentityType property.
      */
     public void setImportedDeviceIdentityType(@jakarta.annotation.Nullable final ImportedDeviceIdentityType value) {
-        this.importedDeviceIdentityType = value;
+        this.backingStore.set("importedDeviceIdentityType", value);
     }
     /**
      * Sets the lastContactedDateTime property value. Last Contacted Date Time of the device
      * @param value Value to set for the lastContactedDateTime property.
      */
     public void setLastContactedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastContactedDateTime = value;
+        this.backingStore.set("lastContactedDateTime", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Last Modified DateTime of the description
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the platform property value. The platform property
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final Platform value) {
-        this.platform = value;
+        this.backingStore.set("platform", value);
     }
 }

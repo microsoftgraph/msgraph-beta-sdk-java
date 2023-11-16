@@ -12,99 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Parsable {
     /**
-     * Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
-     */
-    private Boolean allowDefaultChildSecurityAssociationParameters;
-    /**
-     * Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
-     */
-    private Boolean allowDefaultSecurityAssociationParameters;
-    /**
-     * AlwaysOn Configuration
-     */
-    private AppleVpnAlwaysOnConfiguration alwaysOnConfiguration;
-    /**
-     * Child Security Association Parameters
-     */
-    private IosVpnSecurityAssociationParameters childSecurityAssociationParameters;
-    /**
-     * The type of VPN client authentication type
-     */
-    private VpnClientAuthenticationType clientAuthenticationType;
-    /**
-     * Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
-     */
-    private VpnDeadPeerDetectionRate deadPeerDetectionRate;
-    /**
-     * Disable MOBIKE
-     */
-    private Boolean disableMobilityAndMultihoming;
-    /**
-     * Disable Redirect
-     */
-    private Boolean disableRedirect;
-    /**
-     * Determines if Always on VPN is enabled
-     */
-    private Boolean enableAlwaysOnConfiguration;
-    /**
-     * Enables a best-effort revocation check; server response timeouts will not cause it to fail
-     */
-    private Boolean enableCertificateRevocationCheck;
-    /**
-     * Enables EAP only authentication
-     */
-    private Boolean enableEAP;
-    /**
-     * Enable Perfect Forward Secrecy (PFS).
-     */
-    private Boolean enablePerfectForwardSecrecy;
-    /**
-     * Enable Use Internal Subnet Attributes.
-     */
-    private Boolean enableUseInternalSubnetAttributes;
-    /**
-     * The type of VPN local identifier
-     */
-    private VpnLocalIdentifier localIdentifier;
-    /**
-     * Maximum transmission unit. Valid values 1280 to 1400
-     */
-    private Integer mtuSizeInBytes;
-    /**
-     * Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
-     */
-    private String remoteIdentifier;
-    /**
-     * Security Association Parameters
-     */
-    private IosVpnSecurityAssociationParameters securityAssociationParameters;
-    /**
-     * Common name of the IKEv2 Server Certificate used in Server Authentication
-     */
-    private String serverCertificateCommonName;
-    /**
-     * Issuer Common name of the IKEv2 Server Certificate issuer used in Authentication
-     */
-    private String serverCertificateIssuerCommonName;
-    /**
-     * The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
-     */
-    private VpnServerCertificateType serverCertificateType;
-    /**
-     * Used when Shared Secret Authentication is selected
-     */
-    private String sharedSecret;
-    /**
-     * The maximum TLS version to be used with EAP-TLS authentication
-     */
-    private String tlsMaximumVersion;
-    /**
-     * The minimum TLS version to be used with EAP-TLS authentication
-     */
-    private String tlsMinimumVersion;
-    /**
-     * Instantiates a new iosikEv2VpnConfiguration and sets the default values.
+     * Instantiates a new IosikEv2VpnConfiguration and sets the default values.
      */
     public IosikEv2VpnConfiguration() {
         super();
@@ -113,7 +21,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosikEv2VpnConfiguration
+     * @return a IosikEv2VpnConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosikEv2VpnConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -122,107 +30,107 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the allowDefaultChildSecurityAssociationParameters property value. Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDefaultChildSecurityAssociationParameters() {
-        return this.allowDefaultChildSecurityAssociationParameters;
+        return this.backingStore.get("allowDefaultChildSecurityAssociationParameters");
     }
     /**
      * Gets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDefaultSecurityAssociationParameters() {
-        return this.allowDefaultSecurityAssociationParameters;
+        return this.backingStore.get("allowDefaultSecurityAssociationParameters");
     }
     /**
      * Gets the alwaysOnConfiguration property value. AlwaysOn Configuration
-     * @return a appleVpnAlwaysOnConfiguration
+     * @return a AppleVpnAlwaysOnConfiguration
      */
     @jakarta.annotation.Nullable
     public AppleVpnAlwaysOnConfiguration getAlwaysOnConfiguration() {
-        return this.alwaysOnConfiguration;
+        return this.backingStore.get("alwaysOnConfiguration");
     }
     /**
      * Gets the childSecurityAssociationParameters property value. Child Security Association Parameters
-     * @return a iosVpnSecurityAssociationParameters
+     * @return a IosVpnSecurityAssociationParameters
      */
     @jakarta.annotation.Nullable
     public IosVpnSecurityAssociationParameters getChildSecurityAssociationParameters() {
-        return this.childSecurityAssociationParameters;
+        return this.backingStore.get("childSecurityAssociationParameters");
     }
     /**
      * Gets the clientAuthenticationType property value. The type of VPN client authentication type
-     * @return a vpnClientAuthenticationType
+     * @return a VpnClientAuthenticationType
      */
     @jakarta.annotation.Nullable
     public VpnClientAuthenticationType getClientAuthenticationType() {
-        return this.clientAuthenticationType;
+        return this.backingStore.get("clientAuthenticationType");
     }
     /**
      * Gets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
-     * @return a vpnDeadPeerDetectionRate
+     * @return a VpnDeadPeerDetectionRate
      */
     @jakarta.annotation.Nullable
     public VpnDeadPeerDetectionRate getDeadPeerDetectionRate() {
-        return this.deadPeerDetectionRate;
+        return this.backingStore.get("deadPeerDetectionRate");
     }
     /**
      * Gets the disableMobilityAndMultihoming property value. Disable MOBIKE
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableMobilityAndMultihoming() {
-        return this.disableMobilityAndMultihoming;
+        return this.backingStore.get("disableMobilityAndMultihoming");
     }
     /**
      * Gets the disableRedirect property value. Disable Redirect
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDisableRedirect() {
-        return this.disableRedirect;
+        return this.backingStore.get("disableRedirect");
     }
     /**
      * Gets the enableAlwaysOnConfiguration property value. Determines if Always on VPN is enabled
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableAlwaysOnConfiguration() {
-        return this.enableAlwaysOnConfiguration;
+        return this.backingStore.get("enableAlwaysOnConfiguration");
     }
     /**
      * Gets the enableCertificateRevocationCheck property value. Enables a best-effort revocation check; server response timeouts will not cause it to fail
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableCertificateRevocationCheck() {
-        return this.enableCertificateRevocationCheck;
+        return this.backingStore.get("enableCertificateRevocationCheck");
     }
     /**
      * Gets the enableEAP property value. Enables EAP only authentication
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableEAP() {
-        return this.enableEAP;
+        return this.backingStore.get("enableEAP");
     }
     /**
      * Gets the enablePerfectForwardSecrecy property value. Enable Perfect Forward Secrecy (PFS).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnablePerfectForwardSecrecy() {
-        return this.enablePerfectForwardSecrecy;
+        return this.backingStore.get("enablePerfectForwardSecrecy");
     }
     /**
      * Gets the enableUseInternalSubnetAttributes property value. Enable Use Internal Subnet Attributes.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEnableUseInternalSubnetAttributes() {
-        return this.enableUseInternalSubnetAttributes;
+        return this.backingStore.get("enableUseInternalSubnetAttributes");
     }
     /**
      * The deserialization information for the current model
@@ -258,83 +166,83 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
     }
     /**
      * Gets the localIdentifier property value. The type of VPN local identifier
-     * @return a vpnLocalIdentifier
+     * @return a VpnLocalIdentifier
      */
     @jakarta.annotation.Nullable
     public VpnLocalIdentifier getLocalIdentifier() {
-        return this.localIdentifier;
+        return this.backingStore.get("localIdentifier");
     }
     /**
      * Gets the mtuSizeInBytes property value. Maximum transmission unit. Valid values 1280 to 1400
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMtuSizeInBytes() {
-        return this.mtuSizeInBytes;
+        return this.backingStore.get("mtuSizeInBytes");
     }
     /**
      * Gets the remoteIdentifier property value. Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemoteIdentifier() {
-        return this.remoteIdentifier;
+        return this.backingStore.get("remoteIdentifier");
     }
     /**
      * Gets the securityAssociationParameters property value. Security Association Parameters
-     * @return a iosVpnSecurityAssociationParameters
+     * @return a IosVpnSecurityAssociationParameters
      */
     @jakarta.annotation.Nullable
     public IosVpnSecurityAssociationParameters getSecurityAssociationParameters() {
-        return this.securityAssociationParameters;
+        return this.backingStore.get("securityAssociationParameters");
     }
     /**
      * Gets the serverCertificateCommonName property value. Common name of the IKEv2 Server Certificate used in Server Authentication
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServerCertificateCommonName() {
-        return this.serverCertificateCommonName;
+        return this.backingStore.get("serverCertificateCommonName");
     }
     /**
      * Gets the serverCertificateIssuerCommonName property value. Issuer Common name of the IKEv2 Server Certificate issuer used in Authentication
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServerCertificateIssuerCommonName() {
-        return this.serverCertificateIssuerCommonName;
+        return this.backingStore.get("serverCertificateIssuerCommonName");
     }
     /**
      * Gets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
-     * @return a vpnServerCertificateType
+     * @return a VpnServerCertificateType
      */
     @jakarta.annotation.Nullable
     public VpnServerCertificateType getServerCertificateType() {
-        return this.serverCertificateType;
+        return this.backingStore.get("serverCertificateType");
     }
     /**
      * Gets the sharedSecret property value. Used when Shared Secret Authentication is selected
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSharedSecret() {
-        return this.sharedSecret;
+        return this.backingStore.get("sharedSecret");
     }
     /**
      * Gets the tlsMaximumVersion property value. The maximum TLS version to be used with EAP-TLS authentication
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTlsMaximumVersion() {
-        return this.tlsMaximumVersion;
+        return this.backingStore.get("tlsMaximumVersion");
     }
     /**
      * Gets the tlsMinimumVersion property value. The minimum TLS version to be used with EAP-TLS authentication
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTlsMinimumVersion() {
-        return this.tlsMinimumVersion;
+        return this.backingStore.get("tlsMinimumVersion");
     }
     /**
      * Serializes information the current object
@@ -372,160 +280,160 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
      * @param value Value to set for the allowDefaultChildSecurityAssociationParameters property.
      */
     public void setAllowDefaultChildSecurityAssociationParameters(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDefaultChildSecurityAssociationParameters = value;
+        this.backingStore.set("allowDefaultChildSecurityAssociationParameters", value);
     }
     /**
      * Sets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
      * @param value Value to set for the allowDefaultSecurityAssociationParameters property.
      */
     public void setAllowDefaultSecurityAssociationParameters(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDefaultSecurityAssociationParameters = value;
+        this.backingStore.set("allowDefaultSecurityAssociationParameters", value);
     }
     /**
      * Sets the alwaysOnConfiguration property value. AlwaysOn Configuration
      * @param value Value to set for the alwaysOnConfiguration property.
      */
     public void setAlwaysOnConfiguration(@jakarta.annotation.Nullable final AppleVpnAlwaysOnConfiguration value) {
-        this.alwaysOnConfiguration = value;
+        this.backingStore.set("alwaysOnConfiguration", value);
     }
     /**
      * Sets the childSecurityAssociationParameters property value. Child Security Association Parameters
      * @param value Value to set for the childSecurityAssociationParameters property.
      */
     public void setChildSecurityAssociationParameters(@jakarta.annotation.Nullable final IosVpnSecurityAssociationParameters value) {
-        this.childSecurityAssociationParameters = value;
+        this.backingStore.set("childSecurityAssociationParameters", value);
     }
     /**
      * Sets the clientAuthenticationType property value. The type of VPN client authentication type
      * @param value Value to set for the clientAuthenticationType property.
      */
     public void setClientAuthenticationType(@jakarta.annotation.Nullable final VpnClientAuthenticationType value) {
-        this.clientAuthenticationType = value;
+        this.backingStore.set("clientAuthenticationType", value);
     }
     /**
      * Sets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
      * @param value Value to set for the deadPeerDetectionRate property.
      */
     public void setDeadPeerDetectionRate(@jakarta.annotation.Nullable final VpnDeadPeerDetectionRate value) {
-        this.deadPeerDetectionRate = value;
+        this.backingStore.set("deadPeerDetectionRate", value);
     }
     /**
      * Sets the disableMobilityAndMultihoming property value. Disable MOBIKE
      * @param value Value to set for the disableMobilityAndMultihoming property.
      */
     public void setDisableMobilityAndMultihoming(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableMobilityAndMultihoming = value;
+        this.backingStore.set("disableMobilityAndMultihoming", value);
     }
     /**
      * Sets the disableRedirect property value. Disable Redirect
      * @param value Value to set for the disableRedirect property.
      */
     public void setDisableRedirect(@jakarta.annotation.Nullable final Boolean value) {
-        this.disableRedirect = value;
+        this.backingStore.set("disableRedirect", value);
     }
     /**
      * Sets the enableAlwaysOnConfiguration property value. Determines if Always on VPN is enabled
      * @param value Value to set for the enableAlwaysOnConfiguration property.
      */
     public void setEnableAlwaysOnConfiguration(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableAlwaysOnConfiguration = value;
+        this.backingStore.set("enableAlwaysOnConfiguration", value);
     }
     /**
      * Sets the enableCertificateRevocationCheck property value. Enables a best-effort revocation check; server response timeouts will not cause it to fail
      * @param value Value to set for the enableCertificateRevocationCheck property.
      */
     public void setEnableCertificateRevocationCheck(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableCertificateRevocationCheck = value;
+        this.backingStore.set("enableCertificateRevocationCheck", value);
     }
     /**
      * Sets the enableEAP property value. Enables EAP only authentication
      * @param value Value to set for the enableEAP property.
      */
     public void setEnableEAP(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableEAP = value;
+        this.backingStore.set("enableEAP", value);
     }
     /**
      * Sets the enablePerfectForwardSecrecy property value. Enable Perfect Forward Secrecy (PFS).
      * @param value Value to set for the enablePerfectForwardSecrecy property.
      */
     public void setEnablePerfectForwardSecrecy(@jakarta.annotation.Nullable final Boolean value) {
-        this.enablePerfectForwardSecrecy = value;
+        this.backingStore.set("enablePerfectForwardSecrecy", value);
     }
     /**
      * Sets the enableUseInternalSubnetAttributes property value. Enable Use Internal Subnet Attributes.
      * @param value Value to set for the enableUseInternalSubnetAttributes property.
      */
     public void setEnableUseInternalSubnetAttributes(@jakarta.annotation.Nullable final Boolean value) {
-        this.enableUseInternalSubnetAttributes = value;
+        this.backingStore.set("enableUseInternalSubnetAttributes", value);
     }
     /**
      * Sets the localIdentifier property value. The type of VPN local identifier
      * @param value Value to set for the localIdentifier property.
      */
     public void setLocalIdentifier(@jakarta.annotation.Nullable final VpnLocalIdentifier value) {
-        this.localIdentifier = value;
+        this.backingStore.set("localIdentifier", value);
     }
     /**
      * Sets the mtuSizeInBytes property value. Maximum transmission unit. Valid values 1280 to 1400
      * @param value Value to set for the mtuSizeInBytes property.
      */
     public void setMtuSizeInBytes(@jakarta.annotation.Nullable final Integer value) {
-        this.mtuSizeInBytes = value;
+        this.backingStore.set("mtuSizeInBytes", value);
     }
     /**
      * Sets the remoteIdentifier property value. Address of the IKEv2 server. Must be a FQDN, UserFQDN, network address, or ASN1DN
      * @param value Value to set for the remoteIdentifier property.
      */
     public void setRemoteIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.remoteIdentifier = value;
+        this.backingStore.set("remoteIdentifier", value);
     }
     /**
      * Sets the securityAssociationParameters property value. Security Association Parameters
      * @param value Value to set for the securityAssociationParameters property.
      */
     public void setSecurityAssociationParameters(@jakarta.annotation.Nullable final IosVpnSecurityAssociationParameters value) {
-        this.securityAssociationParameters = value;
+        this.backingStore.set("securityAssociationParameters", value);
     }
     /**
      * Sets the serverCertificateCommonName property value. Common name of the IKEv2 Server Certificate used in Server Authentication
      * @param value Value to set for the serverCertificateCommonName property.
      */
     public void setServerCertificateCommonName(@jakarta.annotation.Nullable final String value) {
-        this.serverCertificateCommonName = value;
+        this.backingStore.set("serverCertificateCommonName", value);
     }
     /**
      * Sets the serverCertificateIssuerCommonName property value. Issuer Common name of the IKEv2 Server Certificate issuer used in Authentication
      * @param value Value to set for the serverCertificateIssuerCommonName property.
      */
     public void setServerCertificateIssuerCommonName(@jakarta.annotation.Nullable final String value) {
-        this.serverCertificateIssuerCommonName = value;
+        this.backingStore.set("serverCertificateIssuerCommonName", value);
     }
     /**
      * Sets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
      * @param value Value to set for the serverCertificateType property.
      */
     public void setServerCertificateType(@jakarta.annotation.Nullable final VpnServerCertificateType value) {
-        this.serverCertificateType = value;
+        this.backingStore.set("serverCertificateType", value);
     }
     /**
      * Sets the sharedSecret property value. Used when Shared Secret Authentication is selected
      * @param value Value to set for the sharedSecret property.
      */
     public void setSharedSecret(@jakarta.annotation.Nullable final String value) {
-        this.sharedSecret = value;
+        this.backingStore.set("sharedSecret", value);
     }
     /**
      * Sets the tlsMaximumVersion property value. The maximum TLS version to be used with EAP-TLS authentication
      * @param value Value to set for the tlsMaximumVersion property.
      */
     public void setTlsMaximumVersion(@jakarta.annotation.Nullable final String value) {
-        this.tlsMaximumVersion = value;
+        this.backingStore.set("tlsMaximumVersion", value);
     }
     /**
      * Sets the tlsMinimumVersion property value. The minimum TLS version to be used with EAP-TLS authentication
      * @param value Value to set for the tlsMinimumVersion property.
      */
     public void setTlsMinimumVersion(@jakarta.annotation.Nullable final String value) {
-        this.tlsMinimumVersion = value;
+        this.backingStore.set("tlsMinimumVersion", value);
     }
 }

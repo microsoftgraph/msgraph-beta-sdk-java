@@ -4,46 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkloadStatus implements AdditionalDataHolder, Parsable {
+public class WorkloadStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The display name for the workload. Required. Read-only.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The date and time the workload was offboarded. Optional. Read-only.
-     */
-    private OffsetDateTime offboardedDateTime;
-    /**
-     * The date and time the workload was onboarded. Optional. Read-only.
-     */
-    private OffsetDateTime onboardedDateTime;
-    /**
-     * The onboardingStatus property
-     */
-    private WorkloadOnboardingStatus onboardingStatus;
-    /**
-     * Instantiates a new workloadStatus and sets the default values.
+     * Instantiates a new WorkloadStatus and sets the default values.
      */
     public WorkloadStatus() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workloadStatus
+     * @return a WorkloadStatus
      */
     @jakarta.annotation.Nonnull
     public static WorkloadStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,20 +36,25 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
         return new WorkloadStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the displayName property value. The display name for the workload. Required. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -82,11 +72,11 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the offboardedDateTime property value. The date and time the workload was offboarded. Optional. Read-only.
@@ -94,7 +84,7 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOffboardedDateTime() {
-        return this.offboardedDateTime;
+        return this.backingStore.get("offboardedDateTime");
     }
     /**
      * Gets the onboardedDateTime property value. The date and time the workload was onboarded. Optional. Read-only.
@@ -102,15 +92,15 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnboardedDateTime() {
-        return this.onboardedDateTime;
+        return this.backingStore.get("onboardedDateTime");
     }
     /**
      * Gets the onboardingStatus property value. The onboardingStatus property
-     * @return a workloadOnboardingStatus
+     * @return a WorkloadOnboardingStatus
      */
     @jakarta.annotation.Nullable
     public WorkloadOnboardingStatus getOnboardingStatus() {
-        return this.onboardingStatus;
+        return this.backingStore.get("onboardingStatus");
     }
     /**
      * Serializes information the current object
@@ -126,45 +116,45 @@ public class WorkloadStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the displayName property value. The display name for the workload. Required. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the offboardedDateTime property value. The date and time the workload was offboarded. Optional. Read-only.
      * @param value Value to set for the offboardedDateTime property.
      */
     public void setOffboardedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.offboardedDateTime = value;
+        this.backingStore.set("offboardedDateTime", value);
     }
     /**
      * Sets the onboardedDateTime property value. The date and time the workload was onboarded. Optional. Read-only.
      * @param value Value to set for the onboardedDateTime property.
      */
     public void setOnboardedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.onboardedDateTime = value;
+        this.backingStore.set("onboardedDateTime", value);
     }
     /**
      * Sets the onboardingStatus property value. The onboardingStatus property
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final WorkloadOnboardingStatus value) {
-        this.onboardingStatus = value;
+        this.backingStore.set("onboardingStatus", value);
     }
 }

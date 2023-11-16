@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * The result of the triggered device scope action.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
+public class DeviceScopeActionResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
-     */
-    private String deviceScopeAction;
-    /**
-     * The unique identifier of the device scope the action was triggered on.
-     */
-    private String deviceScopeId;
-    /**
-     * The message indicates the reason the device scope action failed to trigger.
-     */
-    private String failedMessage;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the status of the attempted device scope action
-     */
-    private DeviceScopeActionStatus status;
-    /**
-     * Instantiates a new deviceScopeActionResult and sets the default values.
+     * Instantiates a new DeviceScopeActionResult and sets the default values.
      */
     public DeviceScopeActionResult() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceScopeActionResult
+     * @return a DeviceScopeActionResult
      */
     @jakarta.annotation.Nonnull
     public static DeviceScopeActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,36 +38,41 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         return new DeviceScopeActionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the deviceScopeAction property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeAction() {
-        return this.deviceScopeAction;
+        return this.backingStore.get("deviceScopeAction");
     }
     /**
      * Gets the deviceScopeId property value. The unique identifier of the device scope the action was triggered on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceScopeId() {
-        return this.deviceScopeId;
+        return this.backingStore.get("deviceScopeId");
     }
     /**
      * Gets the failedMessage property value. The message indicates the reason the device scope action failed to trigger.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFailedMessage() {
-        return this.failedMessage;
+        return this.backingStore.get("failedMessage");
     }
     /**
      * The deserialization information for the current model
@@ -100,19 +90,19 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the status property value. Indicates the status of the attempted device scope action
-     * @return a deviceScopeActionStatus
+     * @return a DeviceScopeActionStatus
      */
     @jakarta.annotation.Nullable
     public DeviceScopeActionStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -128,45 +118,45 @@ public class DeviceScopeActionResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the deviceScopeAction property value. Trigger on the service to either START or STOP computing metrics data based on a device scope configuration.
      * @param value Value to set for the deviceScopeAction property.
      */
     public void setDeviceScopeAction(@jakarta.annotation.Nullable final String value) {
-        this.deviceScopeAction = value;
+        this.backingStore.set("deviceScopeAction", value);
     }
     /**
      * Sets the deviceScopeId property value. The unique identifier of the device scope the action was triggered on.
      * @param value Value to set for the deviceScopeId property.
      */
     public void setDeviceScopeId(@jakarta.annotation.Nullable final String value) {
-        this.deviceScopeId = value;
+        this.backingStore.set("deviceScopeId", value);
     }
     /**
      * Sets the failedMessage property value. The message indicates the reason the device scope action failed to trigger.
      * @param value Value to set for the failedMessage property.
      */
     public void setFailedMessage(@jakarta.annotation.Nullable final String value) {
-        this.failedMessage = value;
+        this.backingStore.set("failedMessage", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the status property value. Indicates the status of the attempted device scope action
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final DeviceScopeActionStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,77 +14,23 @@ import java.util.Objects;
  * Device Compilance Policy Setting State for a given device.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Parsable {
+public class DeviceCompliancePolicySettingState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Current value of setting on device
-     */
-    private String currentValue;
-    /**
-     * Error code for the setting
-     */
-    private Long errorCode;
-    /**
-     * Error description
-     */
-    private String errorDescription;
-    /**
-     * Name of setting instance that is being reported.
-     */
-    private String instanceDisplayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The setting that is being reported
-     */
-    private String setting;
-    /**
-     * SettingInstanceId
-     */
-    private String settingInstanceId;
-    /**
-     * Localized/user friendly setting name that is being reported
-     */
-    private String settingName;
-    /**
-     * Contributing policies
-     */
-    private java.util.List<SettingSource> sources;
-    /**
-     * The state property
-     */
-    private ComplianceStatus state;
-    /**
-     * UserEmail
-     */
-    private String userEmail;
-    /**
-     * UserId
-     */
-    private String userId;
-    /**
-     * UserName
-     */
-    private String userName;
-    /**
-     * UserPrincipalName.
-     */
-    private String userPrincipalName;
-    /**
-     * Instantiates a new deviceCompliancePolicySettingState and sets the default values.
+     * Instantiates a new DeviceCompliancePolicySettingState and sets the default values.
      */
     public DeviceCompliancePolicySettingState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceCompliancePolicySettingState
+     * @return a DeviceCompliancePolicySettingState
      */
     @jakarta.annotation.Nonnull
     public static DeviceCompliancePolicySettingState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,36 +38,41 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         return new DeviceCompliancePolicySettingState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the currentValue property value. Current value of setting on device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrentValue() {
-        return this.currentValue;
+        return this.backingStore.get("currentValue");
     }
     /**
      * Gets the errorCode property value. Error code for the setting
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * Gets the errorDescription property value. Error description
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getErrorDescription() {
-        return this.errorDescription;
+        return this.backingStore.get("errorDescription");
     }
     /**
      * The deserialization information for the current model
@@ -145,91 +99,91 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
     }
     /**
      * Gets the instanceDisplayName property value. Name of setting instance that is being reported.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInstanceDisplayName() {
-        return this.instanceDisplayName;
+        return this.backingStore.get("instanceDisplayName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the setting property value. The setting that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
-        return this.setting;
+        return this.backingStore.get("setting");
     }
     /**
      * Gets the settingInstanceId property value. SettingInstanceId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingInstanceId() {
-        return this.settingInstanceId;
+        return this.backingStore.get("settingInstanceId");
     }
     /**
      * Gets the settingName property value. Localized/user friendly setting name that is being reported
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingName() {
-        return this.settingName;
+        return this.backingStore.get("settingName");
     }
     /**
      * Gets the sources property value. Contributing policies
-     * @return a settingSource
+     * @return a java.util.List<SettingSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SettingSource> getSources() {
-        return this.sources;
+        return this.backingStore.get("sources");
     }
     /**
      * Gets the state property value. The state property
-     * @return a complianceStatus
+     * @return a ComplianceStatus
      */
     @jakarta.annotation.Nullable
     public ComplianceStatus getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Gets the userEmail property value. UserEmail
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserEmail() {
-        return this.userEmail;
+        return this.backingStore.get("userEmail");
     }
     /**
      * Gets the userId property value. UserId
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userName property value. UserName
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Gets the userPrincipalName property value. UserPrincipalName.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserPrincipalName() {
-        return this.userPrincipalName;
+        return this.backingStore.get("userPrincipalName");
     }
     /**
      * Serializes information the current object
@@ -254,108 +208,108 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the currentValue property value. Current value of setting on device
      * @param value Value to set for the currentValue property.
      */
     public void setCurrentValue(@jakarta.annotation.Nullable final String value) {
-        this.currentValue = value;
+        this.backingStore.set("currentValue", value);
     }
     /**
      * Sets the errorCode property value. Error code for the setting
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Long value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the errorDescription property value. Error description
      * @param value Value to set for the errorDescription property.
      */
     public void setErrorDescription(@jakarta.annotation.Nullable final String value) {
-        this.errorDescription = value;
+        this.backingStore.set("errorDescription", value);
     }
     /**
      * Sets the instanceDisplayName property value. Name of setting instance that is being reported.
      * @param value Value to set for the instanceDisplayName property.
      */
     public void setInstanceDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.instanceDisplayName = value;
+        this.backingStore.set("instanceDisplayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the setting property value. The setting that is being reported
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final String value) {
-        this.setting = value;
+        this.backingStore.set("setting", value);
     }
     /**
      * Sets the settingInstanceId property value. SettingInstanceId
      * @param value Value to set for the settingInstanceId property.
      */
     public void setSettingInstanceId(@jakarta.annotation.Nullable final String value) {
-        this.settingInstanceId = value;
+        this.backingStore.set("settingInstanceId", value);
     }
     /**
      * Sets the settingName property value. Localized/user friendly setting name that is being reported
      * @param value Value to set for the settingName property.
      */
     public void setSettingName(@jakarta.annotation.Nullable final String value) {
-        this.settingName = value;
+        this.backingStore.set("settingName", value);
     }
     /**
      * Sets the sources property value. Contributing policies
      * @param value Value to set for the sources property.
      */
     public void setSources(@jakarta.annotation.Nullable final java.util.List<SettingSource> value) {
-        this.sources = value;
+        this.backingStore.set("sources", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ComplianceStatus value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
     /**
      * Sets the userEmail property value. UserEmail
      * @param value Value to set for the userEmail property.
      */
     public void setUserEmail(@jakarta.annotation.Nullable final String value) {
-        this.userEmail = value;
+        this.backingStore.set("userEmail", value);
     }
     /**
      * Sets the userId property value. UserId
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userName property value. UserName
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.userPrincipalName = value;
+        this.backingStore.set("userPrincipalName", value);
     }
 }

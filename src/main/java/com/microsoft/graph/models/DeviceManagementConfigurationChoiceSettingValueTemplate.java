@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * Choice Setting Value Template
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationChoiceSettingValueTemplate implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationChoiceSettingValueTemplate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Choice Setting Value Default Template.
-     */
-    private DeviceManagementConfigurationChoiceSettingValueDefaultTemplate defaultValue;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Recommended definition override.
-     */
-    private DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate recommendedValueDefinition;
-    /**
-     * Required definition override.
-     */
-    private DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate requiredValueDefinition;
-    /**
-     * Setting Value Template Id
-     */
-    private String settingValueTemplateId;
-    /**
-     * Instantiates a new deviceManagementConfigurationChoiceSettingValueTemplate and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationChoiceSettingValueTemplate and sets the default values.
      */
     public DeviceManagementConfigurationChoiceSettingValueTemplate() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationChoiceSettingValueTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueTemplate
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationChoiceSettingValueTemplate createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,20 +38,25 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
         return new DeviceManagementConfigurationChoiceSettingValueTemplate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the defaultValue property value. Choice Setting Value Default Template.
-     * @return a deviceManagementConfigurationChoiceSettingValueDefaultTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueDefaultTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefaultTemplate getDefaultValue() {
-        return this.defaultValue;
+        return this.backingStore.get("defaultValue");
     }
     /**
      * The deserialization information for the current model
@@ -84,35 +74,35 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recommendedValueDefinition property value. Recommended definition override.
-     * @return a deviceManagementConfigurationChoiceSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate getRecommendedValueDefinition() {
-        return this.recommendedValueDefinition;
+        return this.backingStore.get("recommendedValueDefinition");
     }
     /**
      * Gets the requiredValueDefinition property value. Required definition override.
-     * @return a deviceManagementConfigurationChoiceSettingValueDefinitionTemplate
+     * @return a DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate getRequiredValueDefinition() {
-        return this.requiredValueDefinition;
+        return this.backingStore.get("requiredValueDefinition");
     }
     /**
      * Gets the settingValueTemplateId property value. Setting Value Template Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSettingValueTemplateId() {
-        return this.settingValueTemplateId;
+        return this.backingStore.get("settingValueTemplateId");
     }
     /**
      * Serializes information the current object
@@ -128,45 +118,45 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the defaultValue property value. Choice Setting Value Default Template.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefaultTemplate value) {
-        this.defaultValue = value;
+        this.backingStore.set("defaultValue", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recommendedValueDefinition property value. Recommended definition override.
      * @param value Value to set for the recommendedValueDefinition property.
      */
     public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate value) {
-        this.recommendedValueDefinition = value;
+        this.backingStore.set("recommendedValueDefinition", value);
     }
     /**
      * Sets the requiredValueDefinition property value. Required definition override.
      * @param value Value to set for the requiredValueDefinition property.
      */
     public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate value) {
-        this.requiredValueDefinition = value;
+        this.backingStore.set("requiredValueDefinition", value);
     }
     /**
      * Sets the settingValueTemplateId property value. Setting Value Template Id
      * @param value Value to set for the settingValueTemplateId property.
      */
     public void setSettingValueTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.settingValueTemplateId = value;
+        this.backingStore.set("settingValueTemplateId", value);
     }
 }

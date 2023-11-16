@@ -5,29 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TimevaluePostRequestBody implements AdditionalDataHolder, Parsable {
+public class TimevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The timeText property
-     */
-    private Json timeText;
-    /**
-     * Instantiates a new timevaluePostRequestBody and sets the default values.
+     * Instantiates a new TimevaluePostRequestBody and sets the default values.
      */
     public TimevaluePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timevaluePostRequestBody
+     * @return a TimevaluePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static TimevaluePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,12 +36,17 @@ public class TimevaluePostRequestBody implements AdditionalDataHolder, Parsable 
         return new TimevaluePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +64,7 @@ public class TimevaluePostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getTimeText() {
-        return this.timeText;
+        return this.backingStore.get("timeText");
     }
     /**
      * Serializes information the current object
@@ -70,17 +76,17 @@ public class TimevaluePostRequestBody implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the timeText property value. The timeText property
      * @param value Value to set for the timeText property.
      */
     public void setTimeText(@jakarta.annotation.Nullable final Json value) {
-        this.timeText = value;
+        this.backingStore.set("timeText", value);
     }
 }

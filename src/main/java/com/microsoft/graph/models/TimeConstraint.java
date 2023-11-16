@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TimeConstraint implements AdditionalDataHolder, Parsable {
+public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Stores model information.
      */
-    private ActivityDomain activityDomain;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The timeSlots property
-     */
-    private java.util.List<TimeSlot> timeSlots;
-    /**
-     * Instantiates a new timeConstraint and sets the default values.
+     * Instantiates a new TimeConstraint and sets the default values.
      */
     public TimeConstraint() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a timeConstraint
+     * @return a TimeConstraint
      */
     @jakarta.annotation.Nonnull
     public static TimeConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,19 +36,24 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
-     * @return a activityDomain
+     * @return a ActivityDomain
      */
     @jakarta.annotation.Nullable
     public ActivityDomain getActivityDomain() {
-        return this.activityDomain;
+        return this.backingStore.get("activityDomain");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +69,19 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the timeSlots property value. The timeSlots property
-     * @return a timeSlot
+     * @return a java.util.List<TimeSlot>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TimeSlot> getTimeSlots() {
-        return this.timeSlots;
+        return this.backingStore.get("timeSlots");
     }
     /**
      * Serializes information the current object
@@ -101,27 +99,27 @@ public class TimeConstraint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the activityDomain property.
      */
     public void setActivityDomain(@jakarta.annotation.Nullable final ActivityDomain value) {
-        this.activityDomain = value;
+        this.backingStore.set("activityDomain", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the timeSlots property value. The timeSlots property
      * @param value Value to set for the timeSlots property.
      */
     public void setTimeSlots(@jakarta.annotation.Nullable final java.util.List<TimeSlot> value) {
-        this.timeSlots = value;
+        this.backingStore.set("timeSlots", value);
     }
 }

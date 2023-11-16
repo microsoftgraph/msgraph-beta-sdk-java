@@ -12,35 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration implements Parsable {
     /**
-     * Exchange Active Sync authentication method.
-     */
-    private EasAuthenticationMethod authenticationMethod;
-    /**
-     * Possible values for email sync duration.
-     */
-    private EmailSyncDuration durationOfEmailToSync;
-    /**
-     * Possible values for username source or email source.
-     */
-    private UserEmailSource emailAddressSource;
-    /**
-     * Exchange location (URL) that the mail app connects to.
-     */
-    private String hostName;
-    /**
-     * Identity certificate.
-     */
-    private AndroidWorkProfileCertificateProfileBase identityCertificate;
-    /**
-     * Indicates whether or not to use SSL.
-     */
-    private Boolean requireSsl;
-    /**
-     * Android username source.
-     */
-    private AndroidUsernameSource usernameSource;
-    /**
-     * Instantiates a new androidWorkProfileEasEmailProfileBase and sets the default values.
+     * Instantiates a new AndroidWorkProfileEasEmailProfileBase and sets the default values.
      */
     public AndroidWorkProfileEasEmailProfileBase() {
         super();
@@ -49,7 +21,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWorkProfileEasEmailProfileBase
+     * @return a AndroidWorkProfileEasEmailProfileBase
      */
     @jakarta.annotation.Nonnull
     public static AndroidWorkProfileEasEmailProfileBase createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,27 +38,27 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the authenticationMethod property value. Exchange Active Sync authentication method.
-     * @return a easAuthenticationMethod
+     * @return a EasAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.backingStore.get("authenticationMethod");
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
-        return this.durationOfEmailToSync;
+        return this.backingStore.get("durationOfEmailToSync");
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
-        return this.emailAddressSource;
+        return this.backingStore.get("emailAddressSource");
     }
     /**
      * The deserialization information for the current model
@@ -106,35 +78,35 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     }
     /**
      * Gets the hostName property value. Exchange location (URL) that the mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
-        return this.hostName;
+        return this.backingStore.get("hostName");
     }
     /**
      * Gets the identityCertificate property value. Identity certificate.
-     * @return a androidWorkProfileCertificateProfileBase
+     * @return a AndroidWorkProfileCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public AndroidWorkProfileCertificateProfileBase getIdentityCertificate() {
-        return this.identityCertificate;
+        return this.backingStore.get("identityCertificate");
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
-        return this.requireSsl;
+        return this.backingStore.get("requireSsl");
     }
     /**
      * Gets the usernameSource property value. Android username source.
-     * @return a androidUsernameSource
+     * @return a AndroidUsernameSource
      */
     @jakarta.annotation.Nullable
     public AndroidUsernameSource getUsernameSource() {
-        return this.usernameSource;
+        return this.backingStore.get("usernameSource");
     }
     /**
      * Serializes information the current object
@@ -156,48 +128,48 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.backingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      */
     public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
-        this.durationOfEmailToSync = value;
+        this.backingStore.set("durationOfEmailToSync", value);
     }
     /**
      * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      */
     public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
-        this.emailAddressSource = value;
+        this.backingStore.set("emailAddressSource", value);
     }
     /**
      * Sets the hostName property value. Exchange location (URL) that the mail app connects to.
      * @param value Value to set for the hostName property.
      */
     public void setHostName(@jakarta.annotation.Nullable final String value) {
-        this.hostName = value;
+        this.backingStore.set("hostName", value);
     }
     /**
      * Sets the identityCertificate property value. Identity certificate.
      * @param value Value to set for the identityCertificate property.
      */
     public void setIdentityCertificate(@jakarta.annotation.Nullable final AndroidWorkProfileCertificateProfileBase value) {
-        this.identityCertificate = value;
+        this.backingStore.set("identityCertificate", value);
     }
     /**
      * Sets the requireSsl property value. Indicates whether or not to use SSL.
      * @param value Value to set for the requireSsl property.
      */
     public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireSsl = value;
+        this.backingStore.set("requireSsl", value);
     }
     /**
      * Sets the usernameSource property value. Android username source.
      * @param value Value to set for the usernameSource property.
      */
     public void setUsernameSource(@jakarta.annotation.Nullable final AndroidUsernameSource value) {
-        this.usernameSource = value;
+        this.backingStore.set("usernameSource", value);
     }
 }

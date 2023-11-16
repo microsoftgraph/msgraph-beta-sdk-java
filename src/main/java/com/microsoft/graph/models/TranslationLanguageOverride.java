@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TranslationLanguageOverride implements AdditionalDataHolder, Parsable {
+public class TranslationLanguageOverride implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The language to apply the override.Returned by default. Not nullable.
-     */
-    private String languageTag;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The translation override behavior for the language, if any.Returned by default. Not nullable.
-     */
-    private TranslationBehavior translationBehavior;
-    /**
-     * Instantiates a new translationLanguageOverride and sets the default values.
+     * Instantiates a new TranslationLanguageOverride and sets the default values.
      */
     public TranslationLanguageOverride() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a translationLanguageOverride
+     * @return a TranslationLanguageOverride
      */
     @jakarta.annotation.Nonnull
     public static TranslationLanguageOverride createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,17 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
         return new TranslationLanguageOverride();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +61,27 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the languageTag property value. The language to apply the override.Returned by default. Not nullable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the translationBehavior property value. The translation override behavior for the language, if any.Returned by default. Not nullable.
-     * @return a translationBehavior
+     * @return a TranslationBehavior
      */
     @jakarta.annotation.Nullable
     public TranslationBehavior getTranslationBehavior() {
-        return this.translationBehavior;
+        return this.backingStore.get("translationBehavior");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the languageTag property value. The language to apply the override.Returned by default. Not nullable.
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the translationBehavior property value. The translation override behavior for the language, if any.Returned by default. Not nullable.
      * @param value Value to set for the translationBehavior property.
      */
     public void setTranslationBehavior(@jakarta.annotation.Nullable final TranslationBehavior value) {
-        this.translationBehavior = value;
+        this.backingStore.set("translationBehavior", value);
     }
 }

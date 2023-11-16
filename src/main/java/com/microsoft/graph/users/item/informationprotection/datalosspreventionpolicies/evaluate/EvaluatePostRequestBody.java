@@ -6,37 +6,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
+public class EvaluatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The evaluationInput property
-     */
-    private DlpEvaluationInput evaluationInput;
-    /**
-     * The notificationInfo property
-     */
-    private DlpNotification notificationInfo;
-    /**
-     * The target property
-     */
-    private String target;
-    /**
-     * Instantiates a new evaluatePostRequestBody and sets the default values.
+     * Instantiates a new EvaluatePostRequestBody and sets the default values.
      */
     public EvaluatePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluatePostRequestBody
+     * @return a EvaluatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static EvaluatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,20 +37,25 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
         return new EvaluatePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the evaluationInput property value. The evaluationInput property
-     * @return a dlpEvaluationInput
+     * @return a DlpEvaluationInput
      */
     @jakarta.annotation.Nullable
     public DlpEvaluationInput getEvaluationInput() {
-        return this.evaluationInput;
+        return this.backingStore.get("evaluationInput");
     }
     /**
      * The deserialization information for the current model
@@ -73,19 +71,19 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the notificationInfo property value. The notificationInfo property
-     * @return a dlpNotification
+     * @return a DlpNotification
      */
     @jakarta.annotation.Nullable
     public DlpNotification getNotificationInfo() {
-        return this.notificationInfo;
+        return this.backingStore.get("notificationInfo");
     }
     /**
      * Gets the target property value. The target property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTarget() {
-        return this.target;
+        return this.backingStore.get("target");
     }
     /**
      * Serializes information the current object
@@ -99,31 +97,31 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the evaluationInput property value. The evaluationInput property
      * @param value Value to set for the evaluationInput property.
      */
     public void setEvaluationInput(@jakarta.annotation.Nullable final DlpEvaluationInput value) {
-        this.evaluationInput = value;
+        this.backingStore.set("evaluationInput", value);
     }
     /**
      * Sets the notificationInfo property value. The notificationInfo property
      * @param value Value to set for the notificationInfo property.
      */
     public void setNotificationInfo(@jakarta.annotation.Nullable final DlpNotification value) {
-        this.notificationInfo = value;
+        this.backingStore.set("notificationInfo", value);
     }
     /**
      * Sets the target property value. The target property
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {
-        this.target = value;
+        this.backingStore.set("target", value);
     }
 }

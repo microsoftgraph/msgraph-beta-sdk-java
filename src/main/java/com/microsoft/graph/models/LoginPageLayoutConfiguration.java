@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsable {
+public class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Option to show the footer on the sign-in page.
-     */
-    private Boolean isFooterShown;
-    /**
-     * Option to show the header on the sign-in page.
-     */
-    private Boolean isHeaderShown;
-    /**
-     * Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
-     */
-    private LayoutTemplateType layoutTemplateType;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new loginPageLayoutConfiguration and sets the default values.
+     * Instantiates a new LoginPageLayoutConfiguration and sets the default values.
      */
     public LoginPageLayoutConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a loginPageLayoutConfiguration
+     * @return a LoginPageLayoutConfiguration
      */
     @jakarta.annotation.Nonnull
     public static LoginPageLayoutConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         return new LoginPageLayoutConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the isFooterShown property value. Option to show the footer on the sign-in page.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsFooterShown() {
-        return this.isFooterShown;
+        return this.backingStore.get("isFooterShown");
     }
     /**
      * Gets the isHeaderShown property value. Option to show the header on the sign-in page.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsHeaderShown() {
-        return this.isHeaderShown;
+        return this.backingStore.get("isHeaderShown");
     }
     /**
      * Gets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
-     * @return a layoutTemplateType
+     * @return a LayoutTemplateType
      */
     @jakarta.annotation.Nullable
     public LayoutTemplateType getLayoutTemplateType() {
-        return this.layoutTemplateType;
+        return this.backingStore.get("layoutTemplateType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class LoginPageLayoutConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the isFooterShown property value. Option to show the footer on the sign-in page.
      * @param value Value to set for the isFooterShown property.
      */
     public void setIsFooterShown(@jakarta.annotation.Nullable final Boolean value) {
-        this.isFooterShown = value;
+        this.backingStore.set("isFooterShown", value);
     }
     /**
      * Sets the isHeaderShown property value. Option to show the header on the sign-in page.
      * @param value Value to set for the isHeaderShown property.
      */
     public void setIsHeaderShown(@jakarta.annotation.Nullable final Boolean value) {
-        this.isHeaderShown = value;
+        this.backingStore.set("isHeaderShown", value);
     }
     /**
      * Sets the layoutTemplateType property value. Represents the layout template to be displayed on the login page for a tenant. The possible values are  default - Represents the default Microsoft layout with a centered lightbox.  verticalSplit - Represents a layout with a background on the left side and a full-height lightbox to the right.  unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @param value Value to set for the layoutTemplateType property.
      */
     public void setLayoutTemplateType(@jakarta.annotation.Nullable final LayoutTemplateType value) {
-        this.layoutTemplateType = value;
+        this.backingStore.set("layoutTemplateType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

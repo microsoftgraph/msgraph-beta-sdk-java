@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,37 +15,23 @@ import java.util.Objects;
  * Windows 10 force update schedule for Apps
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, Parsable {
+public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Possible values for App update on Windows10 recurrence.
-     */
-    private Windows10AppsUpdateRecurrence recurrence;
-    /**
-     * If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
-     */
-    private Boolean runImmediatelyIfAfterStartDateTime;
-    /**
-     * The start time for the force restart.
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Instantiates a new windows10AppsForceUpdateSchedule and sets the default values.
+     * Instantiates a new Windows10AppsForceUpdateSchedule and sets the default values.
      */
     public Windows10AppsForceUpdateSchedule() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows10AppsForceUpdateSchedule
+     * @return a Windows10AppsForceUpdateSchedule
      */
     @jakarta.annotation.Nonnull
     public static Windows10AppsForceUpdateSchedule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +39,17 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
         return new Windows10AppsForceUpdateSchedule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -72,27 +66,27 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recurrence property value. Possible values for App update on Windows10 recurrence.
-     * @return a windows10AppsUpdateRecurrence
+     * @return a Windows10AppsUpdateRecurrence
      */
     @jakarta.annotation.Nullable
     public Windows10AppsUpdateRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.backingStore.get("recurrence");
     }
     /**
      * Gets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRunImmediatelyIfAfterStartDateTime() {
-        return this.runImmediatelyIfAfterStartDateTime;
+        return this.backingStore.get("runImmediatelyIfAfterStartDateTime");
     }
     /**
      * Gets the startDateTime property value. The start time for the force restart.
@@ -100,7 +94,7 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Serializes information the current object
@@ -115,38 +109,38 @@ public class Windows10AppsForceUpdateSchedule implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recurrence property value. Possible values for App update on Windows10 recurrence.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final Windows10AppsUpdateRecurrence value) {
-        this.recurrence = value;
+        this.backingStore.set("recurrence", value);
     }
     /**
      * Sets the runImmediatelyIfAfterStartDateTime property value. If true, runs the task immediately if StartDateTime is in the past, else, runs at the next recurrence.
      * @param value Value to set for the runImmediatelyIfAfterStartDateTime property.
      */
     public void setRunImmediatelyIfAfterStartDateTime(@jakarta.annotation.Nullable final Boolean value) {
-        this.runImmediatelyIfAfterStartDateTime = value;
+        this.backingStore.set("runImmediatelyIfAfterStartDateTime", value);
     }
     /**
      * Sets the startDateTime property value. The start time for the force restart.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
 }

@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, Parsable {
+public class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Users and groups of users that are excluded from being prompted to set up the authentication method.
-     */
-    private java.util.List<ExcludeTarget> excludeTargets;
-    /**
-     * Users and groups of users that are prompted to set up the authentication method.
-     */
-    private java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> includeTargets;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0'  The user is prompted during every MFA attempt.
-     */
-    private Integer snoozeDurationInDays;
-    /**
-     * The state property
-     */
-    private AdvancedConfigState state;
-    /**
-     * Instantiates a new authenticationMethodsRegistrationCampaign and sets the default values.
+     * Instantiates a new AuthenticationMethodsRegistrationCampaign and sets the default values.
      */
     public AuthenticationMethodsRegistrationCampaign() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodsRegistrationCampaign
+     * @return a AuthenticationMethodsRegistrationCampaign
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodsRegistrationCampaign createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,20 +35,33 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return new AuthenticationMethodsRegistrationCampaign();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the enforceRegistrationAfterAllowedSnoozes property value. Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+     * @return a Boolean
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getEnforceRegistrationAfterAllowedSnoozes() {
+        return this.backingStore.get("enforceRegistrationAfterAllowedSnoozes");
     }
     /**
      * Gets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
-     * @return a excludeTarget
+     * @return a java.util.List<ExcludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ExcludeTarget> getExcludeTargets() {
-        return this.excludeTargets;
+        return this.backingStore.get("excludeTargets");
     }
     /**
      * The deserialization information for the current model
@@ -71,7 +69,8 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("enforceRegistrationAfterAllowedSnoozes", (n) -> { this.setEnforceRegistrationAfterAllowedSnoozes(n.getBooleanValue()); });
         deserializerMap.put("excludeTargets", (n) -> { this.setExcludeTargets(n.getCollectionOfObjectValues(ExcludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodsRegistrationCampaignIncludeTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -81,35 +80,35 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
     }
     /**
      * Gets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
-     * @return a authenticationMethodsRegistrationCampaignIncludeTarget
+     * @return a java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> getIncludeTargets() {
-        return this.includeTargets;
+        return this.backingStore.get("includeTargets");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0'  The user is prompted during every MFA attempt.
-     * @return a integer
+     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSnoozeDurationInDays() {
-        return this.snoozeDurationInDays;
+        return this.backingStore.get("snoozeDurationInDays");
     }
     /**
      * Gets the state property value. The state property
-     * @return a advancedConfigState
+     * @return a AdvancedConfigState
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -117,6 +116,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("enforceRegistrationAfterAllowedSnoozes", this.getEnforceRegistrationAfterAllowedSnoozes());
         writer.writeCollectionOfObjectValues("excludeTargets", this.getExcludeTargets());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -125,45 +125,52 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the enforceRegistrationAfterAllowedSnoozes property value. Specifies whether a user is required to perform registration after snoozing 3 times. If true, the user is required to register after 3 snoozes. If false, the user can snooze indefinitely. The default value is true.
+     * @param value Value to set for the enforceRegistrationAfterAllowedSnoozes property.
+     */
+    public void setEnforceRegistrationAfterAllowedSnoozes(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("enforceRegistrationAfterAllowedSnoozes", value);
     }
     /**
      * Sets the excludeTargets property value. Users and groups of users that are excluded from being prompted to set up the authentication method.
      * @param value Value to set for the excludeTargets property.
      */
     public void setExcludeTargets(@jakarta.annotation.Nullable final java.util.List<ExcludeTarget> value) {
-        this.excludeTargets = value;
+        this.backingStore.set("excludeTargets", value);
     }
     /**
      * Sets the includeTargets property value. Users and groups of users that are prompted to set up the authentication method.
      * @param value Value to set for the includeTargets property.
      */
     public void setIncludeTargets(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodsRegistrationCampaignIncludeTarget> value) {
-        this.includeTargets = value;
+        this.backingStore.set("includeTargets", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is '0'  The user is prompted during every MFA attempt.
+     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
      * @param value Value to set for the snoozeDurationInDays property.
      */
     public void setSnoozeDurationInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.snoozeDurationInDays = value;
+        this.backingStore.set("snoozeDurationInDays", value);
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

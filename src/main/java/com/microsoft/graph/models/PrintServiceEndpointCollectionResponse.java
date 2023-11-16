@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrintServiceEndpointCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<PrintServiceEndpoint> value;
-    /**
-     * Instantiates a new printServiceEndpointCollectionResponse and sets the default values.
+     * Instantiates a new PrintServiceEndpointCollectionResponse and sets the default values.
      */
     public PrintServiceEndpointCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class PrintServiceEndpointCollectionResponse extends BaseCollectionPagina
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printServiceEndpointCollectionResponse
+     * @return a PrintServiceEndpointCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static PrintServiceEndpointCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PrintServiceEndpointCollectionResponse extends BaseCollectionPagina
     }
     /**
      * Gets the value property value. The value property
-     * @return a printServiceEndpoint
+     * @return a java.util.List<PrintServiceEndpoint>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PrintServiceEndpoint> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PrintServiceEndpointCollectionResponse extends BaseCollectionPagina
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<PrintServiceEndpoint> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

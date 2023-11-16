@@ -4,50 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SubmissionResult implements AdditionalDataHolder, Parsable {
+public class SubmissionResult implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
-     */
-    private SubmissionResultCategory category;
-    /**
-     * Specifies the extra details provided by Microsoft to substantiate their analysis result.
-     */
-    private SubmissionResultDetail detail;
-    /**
-     * Specifies the files detected by Microsoft in the submitted emails.
-     */
-    private java.util.List<SubmissionDetectedFile> detectedFiles;
-    /**
-     * Specifies the URLs detected by Microsoft in the submitted email.
-     */
-    private java.util.List<String> detectedUrls;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Specifies the setting for user mailbox denoted by a comma-separated string.
-     */
-    private EnumSet<UserMailboxSetting> userMailboxSetting;
-    /**
-     * Instantiates a new submissionResult and sets the default values.
+     * Instantiates a new SubmissionResult and sets the default values.
      */
     public SubmissionResult() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a submissionResult
+     * @return a SubmissionResult
      */
     @jakarta.annotation.Nonnull
     public static SubmissionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,44 +36,49 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         return new SubmissionResult();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
-     * @return a submissionResultCategory
+     * @return a SubmissionResultCategory
      */
     @jakarta.annotation.Nullable
     public SubmissionResultCategory getCategory() {
-        return this.category;
+        return this.backingStore.get("category");
     }
     /**
      * Gets the detail property value. Specifies the extra details provided by Microsoft to substantiate their analysis result.
-     * @return a submissionResultDetail
+     * @return a SubmissionResultDetail
      */
     @jakarta.annotation.Nullable
     public SubmissionResultDetail getDetail() {
-        return this.detail;
+        return this.backingStore.get("detail");
     }
     /**
      * Gets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
-     * @return a submissionDetectedFile
+     * @return a java.util.List<SubmissionDetectedFile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SubmissionDetectedFile> getDetectedFiles() {
-        return this.detectedFiles;
+        return this.backingStore.get("detectedFiles");
     }
     /**
      * Gets the detectedUrls property value. Specifies the URLs detected by Microsoft in the submitted email.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getDetectedUrls() {
-        return this.detectedUrls;
+        return this.backingStore.get("detectedUrls");
     }
     /**
      * The deserialization information for the current model
@@ -111,19 +97,19 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
-     * @return a userMailboxSetting
+     * @return a EnumSet<UserMailboxSetting>
      */
     @jakarta.annotation.Nullable
     public EnumSet<UserMailboxSetting> getUserMailboxSetting() {
-        return this.userMailboxSetting;
+        return this.backingStore.get("userMailboxSetting");
     }
     /**
      * Serializes information the current object
@@ -140,52 +126,52 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the category property value. The submission result category. The possible values are: notJunk, spam, phishing, malware, allowedByPolicy, blockedByPolicy, spoof, unknown, noResultAvailable and unkownFutureValue.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final SubmissionResultCategory value) {
-        this.category = value;
+        this.backingStore.set("category", value);
     }
     /**
      * Sets the detail property value. Specifies the extra details provided by Microsoft to substantiate their analysis result.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final SubmissionResultDetail value) {
-        this.detail = value;
+        this.backingStore.set("detail", value);
     }
     /**
      * Sets the detectedFiles property value. Specifies the files detected by Microsoft in the submitted emails.
      * @param value Value to set for the detectedFiles property.
      */
     public void setDetectedFiles(@jakarta.annotation.Nullable final java.util.List<SubmissionDetectedFile> value) {
-        this.detectedFiles = value;
+        this.backingStore.set("detectedFiles", value);
     }
     /**
      * Sets the detectedUrls property value. Specifies the URLs detected by Microsoft in the submitted email.
      * @param value Value to set for the detectedUrls property.
      */
     public void setDetectedUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.detectedUrls = value;
+        this.backingStore.set("detectedUrls", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the userMailboxSetting property value. Specifies the setting for user mailbox denoted by a comma-separated string.
      * @param value Value to set for the userMailboxSetting property.
      */
     public void setUserMailboxSetting(@jakarta.annotation.Nullable final EnumSet<UserMailboxSetting> value) {
-        this.userMailboxSetting = value;
+        this.backingStore.set("userMailboxSetting", value);
     }
 }

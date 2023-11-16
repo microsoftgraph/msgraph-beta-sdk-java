@@ -4,53 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Media implements AdditionalDataHolder, Parsable {
+public class Media implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Device information associated with the callee endpoint of this media.
-     */
-    private DeviceInfo calleeDevice;
-    /**
-     * Network information associated with the callee endpoint of this media.
-     */
-    private NetworkInfo calleeNetwork;
-    /**
-     * Device information associated with the caller endpoint of this media.
-     */
-    private DeviceInfo callerDevice;
-    /**
-     * Network information associated with the caller endpoint of this media.
-     */
-    private NetworkInfo callerNetwork;
-    /**
-     * How the media was identified during media negotiation stage.
-     */
-    private String label;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Network streams associated with this media.
-     */
-    private java.util.List<MediaStream> streams;
-    /**
-     * Instantiates a new media and sets the default values.
+     * Instantiates a new Media and sets the default values.
      */
     public Media() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a media
+     * @return a Media
      */
     @jakarta.annotation.Nonnull
     public static Media createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,44 +35,49 @@ public class Media implements AdditionalDataHolder, Parsable {
         return new Media();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the calleeDevice property value. Device information associated with the callee endpoint of this media.
-     * @return a deviceInfo
+     * @return a DeviceInfo
      */
     @jakarta.annotation.Nullable
     public DeviceInfo getCalleeDevice() {
-        return this.calleeDevice;
+        return this.backingStore.get("calleeDevice");
     }
     /**
      * Gets the calleeNetwork property value. Network information associated with the callee endpoint of this media.
-     * @return a networkInfo
+     * @return a NetworkInfo
      */
     @jakarta.annotation.Nullable
     public NetworkInfo getCalleeNetwork() {
-        return this.calleeNetwork;
+        return this.backingStore.get("calleeNetwork");
     }
     /**
      * Gets the callerDevice property value. Device information associated with the caller endpoint of this media.
-     * @return a deviceInfo
+     * @return a DeviceInfo
      */
     @jakarta.annotation.Nullable
     public DeviceInfo getCallerDevice() {
-        return this.callerDevice;
+        return this.backingStore.get("callerDevice");
     }
     /**
      * Gets the callerNetwork property value. Network information associated with the caller endpoint of this media.
-     * @return a networkInfo
+     * @return a NetworkInfo
      */
     @jakarta.annotation.Nullable
     public NetworkInfo getCallerNetwork() {
-        return this.callerNetwork;
+        return this.backingStore.get("callerNetwork");
     }
     /**
      * The deserialization information for the current model
@@ -115,27 +97,27 @@ public class Media implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the label property value. How the media was identified during media negotiation stage.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
-        return this.label;
+        return this.backingStore.get("label");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the streams property value. Network streams associated with this media.
-     * @return a mediaStream
+     * @return a java.util.List<MediaStream>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MediaStream> getStreams() {
-        return this.streams;
+        return this.backingStore.get("streams");
     }
     /**
      * Serializes information the current object
@@ -153,59 +135,59 @@ public class Media implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the calleeDevice property value. Device information associated with the callee endpoint of this media.
      * @param value Value to set for the calleeDevice property.
      */
     public void setCalleeDevice(@jakarta.annotation.Nullable final DeviceInfo value) {
-        this.calleeDevice = value;
+        this.backingStore.set("calleeDevice", value);
     }
     /**
      * Sets the calleeNetwork property value. Network information associated with the callee endpoint of this media.
      * @param value Value to set for the calleeNetwork property.
      */
     public void setCalleeNetwork(@jakarta.annotation.Nullable final NetworkInfo value) {
-        this.calleeNetwork = value;
+        this.backingStore.set("calleeNetwork", value);
     }
     /**
      * Sets the callerDevice property value. Device information associated with the caller endpoint of this media.
      * @param value Value to set for the callerDevice property.
      */
     public void setCallerDevice(@jakarta.annotation.Nullable final DeviceInfo value) {
-        this.callerDevice = value;
+        this.backingStore.set("callerDevice", value);
     }
     /**
      * Sets the callerNetwork property value. Network information associated with the caller endpoint of this media.
      * @param value Value to set for the callerNetwork property.
      */
     public void setCallerNetwork(@jakarta.annotation.Nullable final NetworkInfo value) {
-        this.callerNetwork = value;
+        this.backingStore.set("callerNetwork", value);
     }
     /**
      * Sets the label property value. How the media was identified during media negotiation stage.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
-        this.label = value;
+        this.backingStore.set("label", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the streams property value. Network streams associated with this media.
      * @param value Value to set for the streams property.
      */
     public void setStreams(@jakarta.annotation.Nullable final java.util.List<MediaStream> value) {
-        this.streams = value;
+        this.backingStore.set("streams", value);
     }
 }

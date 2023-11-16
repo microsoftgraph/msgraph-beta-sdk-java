@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHolder, Parsable {
+public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The status of the role assignment request. The value can be InProgress or Closed.
-     */
-    private String status;
-    /**
-     * The details of the status of the role assignment request. It represents the evaluation results of different rules.
-     */
-    private java.util.List<KeyValue> statusDetails;
-    /**
-     * The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
-     */
-    private String subStatus;
-    /**
-     * Instantiates a new governanceRoleAssignmentRequestStatus and sets the default values.
+     * Instantiates a new GovernanceRoleAssignmentRequestStatus and sets the default values.
      */
     public GovernanceRoleAssignmentRequestStatus() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRoleAssignmentRequestStatus
+     * @return a GovernanceRoleAssignmentRequestStatus
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRoleAssignmentRequestStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
         return new GovernanceRoleAssignmentRequestStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the status property value. The status of the role assignment request. The value can be InProgress or Closed.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the statusDetails property value. The details of the status of the role assignment request. It represents the evaluation results of different rules.
-     * @return a keyValue
+     * @return a java.util.List<KeyValue>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValue> getStatusDetails() {
-        return this.statusDetails;
+        return this.backingStore.get("statusDetails");
     }
     /**
      * Gets the subStatus property value. The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubStatus() {
-        return this.subStatus;
+        return this.backingStore.get("subStatus");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class GovernanceRoleAssignmentRequestStatus implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the status property value. The status of the role assignment request. The value can be InProgress or Closed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the statusDetails property value. The details of the status of the role assignment request. It represents the evaluation results of different rules.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
-        this.statusDetails = value;
+        this.backingStore.set("statusDetails", value);
     }
     /**
      * Sets the subStatus property value. The sub status of the role assignment request. The values can be Accepted, PendingEvaluation, Granted, Denied, PendingProvisioning, Provisioned, PendingRevocation, Revoked, Canceled, Failed, PendingApprovalProvisioning, PendingApproval, FailedAsResourceIsLocked, PendingAdminDecision, AdminApproved, AdminDenied, TimedOut, and ProvisioningStarted.
      * @param value Value to set for the subStatus property.
      */
     public void setSubStatus(@jakarta.annotation.Nullable final String value) {
-        this.subStatus = value;
+        this.backingStore.set("subStatus", value);
     }
 }

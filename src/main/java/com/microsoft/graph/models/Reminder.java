@@ -4,61 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Reminder implements AdditionalDataHolder, Parsable {
+public class Reminder implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
-     */
-    private String changeKey;
-    /**
-     * The date, time and time zone that the event ends.
-     */
-    private DateTimeTimeZone eventEndTime;
-    /**
-     * The unique ID of the event. Read only.
-     */
-    private String eventId;
-    /**
-     * The location of the event.
-     */
-    private Location eventLocation;
-    /**
-     * The date, time, and time zone that the event starts.
-     */
-    private DateTimeTimeZone eventStartTime;
-    /**
-     * The text of the event's subject line.
-     */
-    private String eventSubject;
-    /**
-     * The URL to open the event in Outlook on the web.The event opens in the browser if you're logged in to your mailbox via Outlook on the web. You're prompted to log in if you aren't already logged in with the browser.This URL can't be accessed from within an iFrame.
-     */
-    private String eventWebLink;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The date, time, and time zone that the reminder is set to occur.
-     */
-    private DateTimeTimeZone reminderFireTime;
-    /**
-     * Instantiates a new reminder and sets the default values.
+     * Instantiates a new Reminder and sets the default values.
      */
     public Reminder() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a reminder
+     * @return a Reminder
      */
     @jakarta.annotation.Nonnull
     public static Reminder createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,68 +35,73 @@ public class Reminder implements AdditionalDataHolder, Parsable {
         return new Reminder();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getChangeKey() {
-        return this.changeKey;
+        return this.backingStore.get("changeKey");
     }
     /**
      * Gets the eventEndTime property value. The date, time and time zone that the event ends.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEventEndTime() {
-        return this.eventEndTime;
+        return this.backingStore.get("eventEndTime");
     }
     /**
      * Gets the eventId property value. The unique ID of the event. Read only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventId() {
-        return this.eventId;
+        return this.backingStore.get("eventId");
     }
     /**
      * Gets the eventLocation property value. The location of the event.
-     * @return a location
+     * @return a Location
      */
     @jakarta.annotation.Nullable
     public Location getEventLocation() {
-        return this.eventLocation;
+        return this.backingStore.get("eventLocation");
     }
     /**
      * Gets the eventStartTime property value. The date, time, and time zone that the event starts.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getEventStartTime() {
-        return this.eventStartTime;
+        return this.backingStore.get("eventStartTime");
     }
     /**
      * Gets the eventSubject property value. The text of the event's subject line.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventSubject() {
-        return this.eventSubject;
+        return this.backingStore.get("eventSubject");
     }
     /**
      * Gets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you're logged in to your mailbox via Outlook on the web. You're prompted to log in if you aren't already logged in with the browser.This URL can't be accessed from within an iFrame.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEventWebLink() {
-        return this.eventWebLink;
+        return this.backingStore.get("eventWebLink");
     }
     /**
      * The deserialization information for the current model
@@ -149,19 +123,19 @@ public class Reminder implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
-     * @return a dateTimeTimeZone
+     * @return a DateTimeTimeZone
      */
     @jakarta.annotation.Nullable
     public DateTimeTimeZone getReminderFireTime() {
-        return this.reminderFireTime;
+        return this.backingStore.get("reminderFireTime");
     }
     /**
      * Serializes information the current object
@@ -181,73 +155,73 @@ public class Reminder implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the changeKey property value. Identifies the version of the reminder. Every time the reminder is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object.
      * @param value Value to set for the changeKey property.
      */
     public void setChangeKey(@jakarta.annotation.Nullable final String value) {
-        this.changeKey = value;
+        this.backingStore.set("changeKey", value);
     }
     /**
      * Sets the eventEndTime property value. The date, time and time zone that the event ends.
      * @param value Value to set for the eventEndTime property.
      */
     public void setEventEndTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.eventEndTime = value;
+        this.backingStore.set("eventEndTime", value);
     }
     /**
      * Sets the eventId property value. The unique ID of the event. Read only.
      * @param value Value to set for the eventId property.
      */
     public void setEventId(@jakarta.annotation.Nullable final String value) {
-        this.eventId = value;
+        this.backingStore.set("eventId", value);
     }
     /**
      * Sets the eventLocation property value. The location of the event.
      * @param value Value to set for the eventLocation property.
      */
     public void setEventLocation(@jakarta.annotation.Nullable final Location value) {
-        this.eventLocation = value;
+        this.backingStore.set("eventLocation", value);
     }
     /**
      * Sets the eventStartTime property value. The date, time, and time zone that the event starts.
      * @param value Value to set for the eventStartTime property.
      */
     public void setEventStartTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.eventStartTime = value;
+        this.backingStore.set("eventStartTime", value);
     }
     /**
      * Sets the eventSubject property value. The text of the event's subject line.
      * @param value Value to set for the eventSubject property.
      */
     public void setEventSubject(@jakarta.annotation.Nullable final String value) {
-        this.eventSubject = value;
+        this.backingStore.set("eventSubject", value);
     }
     /**
      * Sets the eventWebLink property value. The URL to open the event in Outlook on the web.The event opens in the browser if you're logged in to your mailbox via Outlook on the web. You're prompted to log in if you aren't already logged in with the browser.This URL can't be accessed from within an iFrame.
      * @param value Value to set for the eventWebLink property.
      */
     public void setEventWebLink(@jakarta.annotation.Nullable final String value) {
-        this.eventWebLink = value;
+        this.backingStore.set("eventWebLink", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the reminderFireTime property value. The date, time, and time zone that the reminder is set to occur.
      * @param value Value to set for the reminderFireTime property.
      */
     public void setReminderFireTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
-        this.reminderFireTime = value;
+        this.backingStore.set("reminderFireTime", value);
     }
 }

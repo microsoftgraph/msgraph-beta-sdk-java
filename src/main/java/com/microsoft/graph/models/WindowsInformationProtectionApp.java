@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,45 +14,23 @@ import java.util.Objects;
  * App for Windows information protection
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsInformationProtectionApp implements AdditionalDataHolder, Parsable {
+public class WindowsInformationProtectionApp implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * If true, app is denied protection or exemption.
-     */
-    private Boolean denied;
-    /**
-     * The app's description.
-     */
-    private String description;
-    /**
-     * App display name.
-     */
-    private String displayName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The product name.
-     */
-    private String productName;
-    /**
-     * The publisher name
-     */
-    private String publisherName;
-    /**
-     * Instantiates a new windowsInformationProtectionApp and sets the default values.
+     * Instantiates a new WindowsInformationProtectionApp and sets the default values.
      */
     public WindowsInformationProtectionApp() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsInformationProtectionApp
+     * @return a WindowsInformationProtectionApp
      */
     @jakarta.annotation.Nonnull
     public static WindowsInformationProtectionApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -65,36 +46,41 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
         return new WindowsInformationProtectionApp();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the denied property value. If true, app is denied protection or exemption.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDenied() {
-        return this.denied;
+        return this.backingStore.get("denied");
     }
     /**
      * Gets the description property value. The app's description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. App display name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -113,27 +99,27 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the productName property value. The product name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductName() {
-        return this.productName;
+        return this.backingStore.get("productName");
     }
     /**
      * Gets the publisherName property value. The publisher name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
-        return this.publisherName;
+        return this.backingStore.get("publisherName");
     }
     /**
      * Serializes information the current object
@@ -150,52 +136,52 @@ public class WindowsInformationProtectionApp implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the denied property value. If true, app is denied protection or exemption.
      * @param value Value to set for the denied property.
      */
     public void setDenied(@jakarta.annotation.Nullable final Boolean value) {
-        this.denied = value;
+        this.backingStore.set("denied", value);
     }
     /**
      * Sets the description property value. The app's description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. App display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the productName property value. The product name.
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
-        this.productName = value;
+        this.backingStore.set("productName", value);
     }
     /**
      * Sets the publisherName property value. The publisher name
      * @param value Value to set for the publisherName property.
      */
     public void setPublisherName(@jakarta.annotation.Nullable final String value) {
-        this.publisherName = value;
+        this.backingStore.set("publisherName", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,37 +15,23 @@ import java.util.Objects;
  * Configuration manager client health state
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConfigurationManagerClientHealthState implements AdditionalDataHolder, Parsable {
+public class ConfigurationManagerClientHealthState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Error code for failed state.
-     */
-    private Integer errorCode;
-    /**
-     * Datetime for last sync with configuration manager management point.
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Configuration manager client state
-     */
-    private ConfigurationManagerClientState state;
-    /**
-     * Instantiates a new configurationManagerClientHealthState and sets the default values.
+     * Instantiates a new ConfigurationManagerClientHealthState and sets the default values.
      */
     public ConfigurationManagerClientHealthState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configurationManagerClientHealthState
+     * @return a ConfigurationManagerClientHealthState
      */
     @jakarta.annotation.Nonnull
     public static ConfigurationManagerClientHealthState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,20 +39,25 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
         return new ConfigurationManagerClientHealthState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the errorCode property value. Error code for failed state.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -84,23 +78,23 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the state property value. Configuration manager client state
-     * @return a configurationManagerClientState
+     * @return a ConfigurationManagerClientState
      */
     @jakarta.annotation.Nullable
     public ConfigurationManagerClientState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -115,38 +109,38 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the errorCode property value. Error code for failed state.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the lastSyncDateTime property value. Datetime for last sync with configuration manager management point.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the state property value. Configuration manager client state
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ConfigurationManagerClientState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

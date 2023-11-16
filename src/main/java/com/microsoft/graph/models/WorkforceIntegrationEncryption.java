@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Parsable {
+public class WorkforceIntegrationEncryption implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Possible values are: sharedSecret, unknownFutureValue.
-     */
-    private WorkforceIntegrationEncryptionProtocol protocol;
-    /**
-     * Encryption shared secret.
-     */
-    private String secret;
-    /**
-     * Instantiates a new workforceIntegrationEncryption and sets the default values.
+     * Instantiates a new WorkforceIntegrationEncryption and sets the default values.
      */
     public WorkforceIntegrationEncryption() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a workforceIntegrationEncryption
+     * @return a WorkforceIntegrationEncryption
      */
     @jakarta.annotation.Nonnull
     public static WorkforceIntegrationEncryption createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,17 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Par
         return new WorkforceIntegrationEncryption();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +61,27 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Par
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
-     * @return a workforceIntegrationEncryptionProtocol
+     * @return a WorkforceIntegrationEncryptionProtocol
      */
     @jakarta.annotation.Nullable
     public WorkforceIntegrationEncryptionProtocol getProtocol() {
-        return this.protocol;
+        return this.backingStore.get("protocol");
     }
     /**
      * Gets the secret property value. Encryption shared secret.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecret() {
-        return this.secret;
+        return this.backingStore.get("secret");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class WorkforceIntegrationEncryption implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the protocol property value. Possible values are: sharedSecret, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final WorkforceIntegrationEncryptionProtocol value) {
-        this.protocol = value;
+        this.backingStore.set("protocol", value);
     }
     /**
      * Sets the secret property value. Encryption shared secret.
      * @param value Value to set for the secret property.
      */
     public void setSecret(@jakarta.annotation.Nullable final String value) {
-        this.secret = value;
+        this.backingStore.set("secret", value);
     }
 }

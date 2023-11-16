@@ -4,27 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable {
+public class BaseDeltaFunctionResponse implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataDeltaLink property
-     */
-    private String odataDeltaLink;
-    /**
-     * The OdataNextLink property
-     */
-    private String odataNextLink;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new BaseDeltaFunctionResponse and sets the default values.
      */
     public BaseDeltaFunctionResponse() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -38,12 +35,17 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
         return new BaseDeltaFunctionResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +60,19 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.deltaLink property value. The OdataDeltaLink property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataDeltaLink() {
-        return this.odataDeltaLink;
+        return this.backingStore.get("odataDeltaLink");
     }
     /**
      * Gets the @odata.nextLink property value. The OdataNextLink property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataNextLink() {
-        return this.odataNextLink;
+        return this.backingStore.get("odataNextLink");
     }
     /**
      * Serializes information the current object
@@ -83,24 +85,24 @@ public class BaseDeltaFunctionResponse implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.deltaLink property value. The OdataDeltaLink property
      * @param value Value to set for the @odata.deltaLink property.
      */
     public void setOdataDeltaLink(@jakarta.annotation.Nullable final String value) {
-        this.odataDeltaLink = value;
+        this.backingStore.set("odataDeltaLink", value);
     }
     /**
      * Sets the @odata.nextLink property value. The OdataNextLink property
      * @param value Value to set for the @odata.nextLink property.
      */
     public void setOdataNextLink(@jakarta.annotation.Nullable final String value) {
-        this.odataNextLink = value;
+        this.backingStore.set("odataNextLink", value);
     }
 }

@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RichLongRunningOperation extends LongRunningOperation implements Parsable {
     /**
-     * Error due to which the operation failed.
-     */
-    private PublicError error;
-    /**
-     * A value between 0 and 100 that indicates the progress of the operation.
-     */
-    private Integer percentageComplete;
-    /**
-     * A unique identifier for the result.
-     */
-    private String resourceId;
-    /**
-     * Type of the operation.
-     */
-    private String type;
-    /**
-     * Instantiates a new richLongRunningOperation and sets the default values.
+     * Instantiates a new RichLongRunningOperation and sets the default values.
      */
     public RichLongRunningOperation() {
         super();
@@ -33,7 +17,7 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a richLongRunningOperation
+     * @return a RichLongRunningOperation
      */
     @jakarta.annotation.Nonnull
     public static RichLongRunningOperation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,11 +26,11 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the error property value. Error due to which the operation failed.
-     * @return a publicError
+     * @return a PublicError
      */
     @jakarta.annotation.Nullable
     public PublicError getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +47,27 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
     }
     /**
      * Gets the percentageComplete property value. A value between 0 and 100 that indicates the progress of the operation.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentageComplete() {
-        return this.percentageComplete;
+        return this.backingStore.get("percentageComplete");
     }
     /**
      * Gets the resourceId property value. A unique identifier for the result.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getResourceId() {
-        return this.resourceId;
+        return this.backingStore.get("resourceId");
     }
     /**
      * Gets the type property value. Type of the operation.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -102,27 +86,27 @@ public class RichLongRunningOperation extends LongRunningOperation implements Pa
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the percentageComplete property value. A value between 0 and 100 that indicates the progress of the operation.
      * @param value Value to set for the percentageComplete property.
      */
     public void setPercentageComplete(@jakarta.annotation.Nullable final Integer value) {
-        this.percentageComplete = value;
+        this.backingStore.set("percentageComplete", value);
     }
     /**
      * Sets the resourceId property value. A unique identifier for the result.
      * @param value Value to set for the resourceId property.
      */
     public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.resourceId = value;
+        this.backingStore.set("resourceId", value);
     }
     /**
      * Sets the type property value. Type of the operation.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

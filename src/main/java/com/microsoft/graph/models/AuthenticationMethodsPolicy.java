@@ -10,47 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
-     * Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     */
-    private java.util.List<AuthenticationMethodConfiguration> authenticationMethodConfigurations;
-    /**
-     * A description of the policy.
-     */
-    private String description;
-    /**
-     * The name of the policy.
-     */
-    private String displayName;
-    /**
-     * The date and time of the last update to the policy.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
-     */
-    private AuthenticationMethodsPolicyMigrationState policyMigrationState;
-    /**
-     * The version of the policy in use.
-     */
-    private String policyVersion;
-    /**
-     * Days before the user will be asked to reconfirm their method.
-     */
-    private Integer reconfirmationInDays;
-    /**
-     * Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
-     */
-    private RegistrationEnforcement registrationEnforcement;
-    /**
-     * Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
-     */
-    private ReportSuspiciousActivitySettings reportSuspiciousActivitySettings;
-    /**
-     * Prompt users with their most-preferred credential for multifactor authentication.
-     */
-    private SystemCredentialPreferences systemCredentialPreferences;
-    /**
-     * Instantiates a new authenticationMethodsPolicy and sets the default values.
+     * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
      */
     public AuthenticationMethodsPolicy() {
         super();
@@ -58,7 +18,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodsPolicy
+     * @return a AuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodsPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -67,27 +27,27 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     }
     /**
      * Gets the authenticationMethodConfigurations property value. Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
-     * @return a authenticationMethodConfiguration
+     * @return a java.util.List<AuthenticationMethodConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationMethodConfiguration> getAuthenticationMethodConfigurations() {
-        return this.authenticationMethodConfigurations;
+        return this.backingStore.get("authenticationMethodConfigurations");
     }
     /**
      * Gets the description property value. A description of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The name of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -114,55 +74,55 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
-     * @return a authenticationMethodsPolicyMigrationState
+     * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
+     * @return a AuthenticationMethodsPolicyMigrationState
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicyMigrationState getPolicyMigrationState() {
-        return this.policyMigrationState;
+        return this.backingStore.get("policyMigrationState");
     }
     /**
      * Gets the policyVersion property value. The version of the policy in use.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyVersion() {
-        return this.policyVersion;
+        return this.backingStore.get("policyVersion");
     }
     /**
      * Gets the reconfirmationInDays property value. Days before the user will be asked to reconfirm their method.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReconfirmationInDays() {
-        return this.reconfirmationInDays;
+        return this.backingStore.get("reconfirmationInDays");
     }
     /**
      * Gets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
-     * @return a registrationEnforcement
+     * @return a RegistrationEnforcement
      */
     @jakarta.annotation.Nullable
     public RegistrationEnforcement getRegistrationEnforcement() {
-        return this.registrationEnforcement;
+        return this.backingStore.get("registrationEnforcement");
     }
     /**
      * Gets the reportSuspiciousActivitySettings property value. Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
-     * @return a reportSuspiciousActivitySettings
+     * @return a ReportSuspiciousActivitySettings
      */
     @jakarta.annotation.Nullable
     public ReportSuspiciousActivitySettings getReportSuspiciousActivitySettings() {
-        return this.reportSuspiciousActivitySettings;
+        return this.backingStore.get("reportSuspiciousActivitySettings");
     }
     /**
      * Gets the systemCredentialPreferences property value. Prompt users with their most-preferred credential for multifactor authentication.
-     * @return a systemCredentialPreferences
+     * @return a SystemCredentialPreferences
      */
     @jakarta.annotation.Nullable
     public SystemCredentialPreferences getSystemCredentialPreferences() {
-        return this.systemCredentialPreferences;
+        return this.backingStore.get("systemCredentialPreferences");
     }
     /**
      * Serializes information the current object
@@ -187,69 +147,69 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethodConfigurations property.
      */
     public void setAuthenticationMethodConfigurations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
-        this.authenticationMethodConfigurations = value;
+        this.backingStore.set("authenticationMethodConfigurations", value);
     }
     /**
      * Sets the description property value. A description of the policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The name of the policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
      * @param value Value to set for the policyMigrationState property.
      */
     public void setPolicyMigrationState(@jakarta.annotation.Nullable final AuthenticationMethodsPolicyMigrationState value) {
-        this.policyMigrationState = value;
+        this.backingStore.set("policyMigrationState", value);
     }
     /**
      * Sets the policyVersion property value. The version of the policy in use.
      * @param value Value to set for the policyVersion property.
      */
     public void setPolicyVersion(@jakarta.annotation.Nullable final String value) {
-        this.policyVersion = value;
+        this.backingStore.set("policyVersion", value);
     }
     /**
      * Sets the reconfirmationInDays property value. Days before the user will be asked to reconfirm their method.
      * @param value Value to set for the reconfirmationInDays property.
      */
     public void setReconfirmationInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.reconfirmationInDays = value;
+        this.backingStore.set("reconfirmationInDays", value);
     }
     /**
      * Sets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
      * @param value Value to set for the registrationEnforcement property.
      */
     public void setRegistrationEnforcement(@jakarta.annotation.Nullable final RegistrationEnforcement value) {
-        this.registrationEnforcement = value;
+        this.backingStore.set("registrationEnforcement", value);
     }
     /**
      * Sets the reportSuspiciousActivitySettings property value. Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
      * @param value Value to set for the reportSuspiciousActivitySettings property.
      */
     public void setReportSuspiciousActivitySettings(@jakarta.annotation.Nullable final ReportSuspiciousActivitySettings value) {
-        this.reportSuspiciousActivitySettings = value;
+        this.backingStore.set("reportSuspiciousActivitySettings", value);
     }
     /**
      * Sets the systemCredentialPreferences property value. Prompt users with their most-preferred credential for multifactor authentication.
      * @param value Value to set for the systemCredentialPreferences property.
      */
     public void setSystemCredentialPreferences(@jakarta.annotation.Nullable final SystemCredentialPreferences value) {
-        this.systemCredentialPreferences = value;
+        this.backingStore.set("systemCredentialPreferences", value);
     }
 }

@@ -4,65 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EducationalActivityDetail implements AdditionalDataHolder, Parsable {
+public class EducationalActivityDetail implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Shortened name of the degree or program (example: PhD, MBA)
+     * Stores model information.
      */
-    private String abbreviation;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Extracurricular activities undertaken alongside the program.
-     */
-    private java.util.List<String> activities;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Any awards or honors associated with the program.
-     */
-    private java.util.List<String> awards;
-    /**
-     * Short description of the program provided by the user.
-     */
-    private String description;
-    /**
-     * Long-form name of the program that the user has provided.
-     */
-    private String displayName;
-    /**
-     * Majors and minors associated with the program. (if applicable)
-     */
-    private java.util.List<String> fieldsOfStudy;
-    /**
-     * The final grade, class, GPA or score.
-     */
-    private String grade;
-    /**
-     * Additional notes the user has provided.
-     */
-    private String notes;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Link to the degree or program page.
-     */
-    private String webUrl;
-    /**
-     * Instantiates a new educationalActivityDetail and sets the default values.
+     * Instantiates a new EducationalActivityDetail and sets the default values.
      */
     public EducationalActivityDetail() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationalActivityDetail
+     * @return a EducationalActivityDetail
      */
     @jakarta.annotation.Nonnull
     public static EducationalActivityDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,51 +36,56 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the abbreviation property value. Shortened name of the degree or program (example: PhD, MBA)
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAbbreviation() {
-        return this.abbreviation;
+        return this.backingStore.get("abbreviation");
     }
     /**
      * Gets the activities property value. Extracurricular activities undertaken alongside the program.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getActivities() {
-        return this.activities;
+        return this.backingStore.get("activities");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the awards property value. Any awards or honors associated with the program.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAwards() {
-        return this.awards;
+        return this.backingStore.get("awards");
     }
     /**
      * Gets the description property value. Short description of the program provided by the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. Long-form name of the program that the user has provided.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -138,43 +108,43 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the fieldsOfStudy property value. Majors and minors associated with the program. (if applicable)
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getFieldsOfStudy() {
-        return this.fieldsOfStudy;
+        return this.backingStore.get("fieldsOfStudy");
     }
     /**
      * Gets the grade property value. The final grade, class, GPA or score.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGrade() {
-        return this.grade;
+        return this.backingStore.get("grade");
     }
     /**
      * Gets the notes property value. Additional notes the user has provided.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
-        return this.notes;
+        return this.backingStore.get("notes");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the webUrl property value. Link to the degree or program page.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebUrl() {
-        return this.webUrl;
+        return this.backingStore.get("webUrl");
     }
     /**
      * Serializes information the current object
@@ -199,76 +169,76 @@ public class EducationalActivityDetail implements AdditionalDataHolder, Parsable
      * @param value Value to set for the abbreviation property.
      */
     public void setAbbreviation(@jakarta.annotation.Nullable final String value) {
-        this.abbreviation = value;
+        this.backingStore.set("abbreviation", value);
     }
     /**
      * Sets the activities property value. Extracurricular activities undertaken alongside the program.
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.activities = value;
+        this.backingStore.set("activities", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the awards property value. Any awards or honors associated with the program.
      * @param value Value to set for the awards property.
      */
     public void setAwards(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.awards = value;
+        this.backingStore.set("awards", value);
     }
     /**
      * Sets the description property value. Short description of the program provided by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Long-form name of the program that the user has provided.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the fieldsOfStudy property value. Majors and minors associated with the program. (if applicable)
      * @param value Value to set for the fieldsOfStudy property.
      */
     public void setFieldsOfStudy(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.fieldsOfStudy = value;
+        this.backingStore.set("fieldsOfStudy", value);
     }
     /**
      * Sets the grade property value. The final grade, class, GPA or score.
      * @param value Value to set for the grade property.
      */
     public void setGrade(@jakarta.annotation.Nullable final String value) {
-        this.grade = value;
+        this.backingStore.set("grade", value);
     }
     /**
      * Sets the notes property value. Additional notes the user has provided.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
-        this.notes = value;
+        this.backingStore.set("notes", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the webUrl property value. Link to the degree or program page.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {
-        this.webUrl = value;
+        this.backingStore.set("webUrl", value);
     }
 }

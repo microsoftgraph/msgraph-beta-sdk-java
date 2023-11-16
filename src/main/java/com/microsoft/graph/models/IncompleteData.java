@@ -4,38 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IncompleteData implements AdditionalDataHolder, Parsable {
+public class IncompleteData implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The service doesn't have source data before the specified time.
-     */
-    private OffsetDateTime missingDataBeforeDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Some data wasn't recorded due to excessive activity.
-     */
-    private Boolean wasThrottled;
-    /**
-     * Instantiates a new incompleteData and sets the default values.
+     * Instantiates a new IncompleteData and sets the default values.
      */
     public IncompleteData() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a incompleteData
+     * @return a IncompleteData
      */
     @jakarta.annotation.Nonnull
     public static IncompleteData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +36,17 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
         return new IncompleteData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,23 +66,23 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getMissingDataBeforeDateTime() {
-        return this.missingDataBeforeDateTime;
+        return this.backingStore.get("missingDataBeforeDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the wasThrottled property value. Some data wasn't recorded due to excessive activity.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getWasThrottled() {
-        return this.wasThrottled;
+        return this.backingStore.get("wasThrottled");
     }
     /**
      * Serializes information the current object
@@ -98,31 +96,31 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the missingDataBeforeDateTime property value. The service doesn't have source data before the specified time.
      * @param value Value to set for the missingDataBeforeDateTime property.
      */
     public void setMissingDataBeforeDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.missingDataBeforeDateTime = value;
+        this.backingStore.set("missingDataBeforeDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the wasThrottled property value. Some data wasn't recorded due to excessive activity.
      * @param value Value to set for the wasThrottled property.
      */
     public void setWasThrottled(@jakarta.annotation.Nullable final Boolean value) {
-        this.wasThrottled = value;
+        this.backingStore.set("wasThrottled", value);
     }
 }

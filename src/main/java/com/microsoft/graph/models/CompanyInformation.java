@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
@@ -11,77 +14,23 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CompanyInformation implements AdditionalDataHolder, Parsable {
+public class CompanyInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The address property
-     */
-    private PostalAddressType address;
-    /**
-     * The currencyCode property
-     */
-    private String currencyCode;
-    /**
-     * The currentFiscalYearStartDate property
-     */
-    private LocalDate currentFiscalYearStartDate;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The email property
-     */
-    private String email;
-    /**
-     * The faxNumber property
-     */
-    private String faxNumber;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The industry property
-     */
-    private String industry;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The phoneNumber property
-     */
-    private String phoneNumber;
-    /**
-     * The picture property
-     */
-    private byte[] picture;
-    /**
-     * The taxRegistrationNumber property
-     */
-    private String taxRegistrationNumber;
-    /**
-     * The website property
-     */
-    private String website;
-    /**
-     * Instantiates a new companyInformation and sets the default values.
+     * Instantiates a new CompanyInformation and sets the default values.
      */
     public CompanyInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a companyInformation
+     * @return a CompanyInformation
      */
     @jakarta.annotation.Nonnull
     public static CompanyInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -89,28 +38,33 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
         return new CompanyInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. The address property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getAddress() {
-        return this.address;
+        return this.backingStore.get("address");
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
-        return this.currencyCode;
+        return this.backingStore.get("currencyCode");
     }
     /**
      * Gets the currentFiscalYearStartDate property value. The currentFiscalYearStartDate property
@@ -118,31 +72,31 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getCurrentFiscalYearStartDate() {
-        return this.currentFiscalYearStartDate;
+        return this.backingStore.get("currentFiscalYearStartDate");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the email property value. The email property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmail() {
-        return this.email;
+        return this.backingStore.get("email");
     }
     /**
      * Gets the faxNumber property value. The faxNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFaxNumber() {
-        return this.faxNumber;
+        return this.backingStore.get("faxNumber");
     }
     /**
      * The deserialization information for the current model
@@ -173,15 +127,15 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the industry property value. The industry property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIndustry() {
-        return this.industry;
+        return this.backingStore.get("industry");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -189,47 +143,47 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhoneNumber() {
-        return this.phoneNumber;
+        return this.backingStore.get("phoneNumber");
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a base64url
+     * @return a byte[]
      */
     @jakarta.annotation.Nullable
     public byte[] getPicture() {
-        return this.picture;
+        return this.backingStore.get("picture");
     }
     /**
      * Gets the taxRegistrationNumber property value. The taxRegistrationNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxRegistrationNumber() {
-        return this.taxRegistrationNumber;
+        return this.backingStore.get("taxRegistrationNumber");
     }
     /**
      * Gets the website property value. The website property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getWebsite() {
-        return this.website;
+        return this.backingStore.get("website");
     }
     /**
      * Serializes information the current object
@@ -254,108 +208,108 @@ public class CompanyInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the address property value. The address property
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
-        this.address = value;
+        this.backingStore.set("address", value);
     }
     /**
      * Sets the currencyCode property value. The currencyCode property
      * @param value Value to set for the currencyCode property.
      */
     public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
-        this.currencyCode = value;
+        this.backingStore.set("currencyCode", value);
     }
     /**
      * Sets the currentFiscalYearStartDate property value. The currentFiscalYearStartDate property
      * @param value Value to set for the currentFiscalYearStartDate property.
      */
     public void setCurrentFiscalYearStartDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.currentFiscalYearStartDate = value;
+        this.backingStore.set("currentFiscalYearStartDate", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
-        this.email = value;
+        this.backingStore.set("email", value);
     }
     /**
      * Sets the faxNumber property value. The faxNumber property
      * @param value Value to set for the faxNumber property.
      */
     public void setFaxNumber(@jakarta.annotation.Nullable final String value) {
-        this.faxNumber = value;
+        this.backingStore.set("faxNumber", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the industry property value. The industry property
      * @param value Value to set for the industry property.
      */
     public void setIndustry(@jakarta.annotation.Nullable final String value) {
-        this.industry = value;
+        this.backingStore.set("industry", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
      */
     public void setPhoneNumber(@jakarta.annotation.Nullable final String value) {
-        this.phoneNumber = value;
+        this.backingStore.set("phoneNumber", value);
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
      */
     public void setPicture(@jakarta.annotation.Nullable final byte[] value) {
-        this.picture = value;
+        this.backingStore.set("picture", value);
     }
     /**
      * Sets the taxRegistrationNumber property value. The taxRegistrationNumber property
      * @param value Value to set for the taxRegistrationNumber property.
      */
     public void setTaxRegistrationNumber(@jakarta.annotation.Nullable final String value) {
-        this.taxRegistrationNumber = value;
+        this.backingStore.set("taxRegistrationNumber", value);
     }
     /**
      * Sets the website property value. The website property
      * @param value Value to set for the website property.
      */
     public void setWebsite(@jakarta.annotation.Nullable final String value) {
-        this.website = value;
+        this.backingStore.set("website", value);
     }
 }

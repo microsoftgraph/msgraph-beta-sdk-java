@@ -5,77 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsable {
+public class TeamworkSystemConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The date and time configurations for a device.
-     */
-    private TeamworkDateTimeConfiguration dateTimeConfiguration;
-    /**
-     * The default password for the device. Write-Only.
-     */
-    private String defaultPassword;
-    /**
-     * The device lock timeout in seconds.
-     */
-    private PeriodAndDuration deviceLockTimeout;
-    /**
-     * True if the device lock is enabled.
-     */
-    private Boolean isDeviceLockEnabled;
-    /**
-     * True if logging is enabled.
-     */
-    private Boolean isLoggingEnabled;
-    /**
-     * True if power saving is enabled.
-     */
-    private Boolean isPowerSavingEnabled;
-    /**
-     * True if screen capture is enabled.
-     */
-    private Boolean isScreenCaptureEnabled;
-    /**
-     * True if silent mode is enabled.
-     */
-    private Boolean isSilentModeEnabled;
-    /**
-     * The language option for the device.
-     */
-    private String language;
-    /**
-     * The pin that unlocks the device. Write-Only.
-     */
-    private String lockPin;
-    /**
-     * The logging level for the device.
-     */
-    private String loggingLevel;
-    /**
-     * The network configuration for the device.
-     */
-    private TeamworkNetworkConfiguration networkConfiguration;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new teamworkSystemConfiguration and sets the default values.
+     * Instantiates a new TeamworkSystemConfiguration and sets the default values.
      */
     public TeamworkSystemConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkSystemConfiguration
+     * @return a TeamworkSystemConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSystemConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,28 +36,33 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         return new TeamworkSystemConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the dateTimeConfiguration property value. The date and time configurations for a device.
-     * @return a teamworkDateTimeConfiguration
+     * @return a TeamworkDateTimeConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDateTimeConfiguration getDateTimeConfiguration() {
-        return this.dateTimeConfiguration;
+        return this.backingStore.get("dateTimeConfiguration");
     }
     /**
      * Gets the defaultPassword property value. The default password for the device. Write-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultPassword() {
-        return this.defaultPassword;
+        return this.backingStore.get("defaultPassword");
     }
     /**
      * Gets the deviceLockTimeout property value. The device lock timeout in seconds.
@@ -112,7 +70,7 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getDeviceLockTimeout() {
-        return this.deviceLockTimeout;
+        return this.backingStore.get("deviceLockTimeout");
     }
     /**
      * The deserialization information for the current model
@@ -138,83 +96,83 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the isDeviceLockEnabled property value. True if the device lock is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceLockEnabled() {
-        return this.isDeviceLockEnabled;
+        return this.backingStore.get("isDeviceLockEnabled");
     }
     /**
      * Gets the isLoggingEnabled property value. True if logging is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsLoggingEnabled() {
-        return this.isLoggingEnabled;
+        return this.backingStore.get("isLoggingEnabled");
     }
     /**
      * Gets the isPowerSavingEnabled property value. True if power saving is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPowerSavingEnabled() {
-        return this.isPowerSavingEnabled;
+        return this.backingStore.get("isPowerSavingEnabled");
     }
     /**
      * Gets the isScreenCaptureEnabled property value. True if screen capture is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsScreenCaptureEnabled() {
-        return this.isScreenCaptureEnabled;
+        return this.backingStore.get("isScreenCaptureEnabled");
     }
     /**
      * Gets the isSilentModeEnabled property value. True if silent mode is enabled.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSilentModeEnabled() {
-        return this.isSilentModeEnabled;
+        return this.backingStore.get("isSilentModeEnabled");
     }
     /**
      * Gets the language property value. The language option for the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguage() {
-        return this.language;
+        return this.backingStore.get("language");
     }
     /**
      * Gets the lockPin property value. The pin that unlocks the device. Write-Only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLockPin() {
-        return this.lockPin;
+        return this.backingStore.get("lockPin");
     }
     /**
      * Gets the loggingLevel property value. The logging level for the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLoggingLevel() {
-        return this.loggingLevel;
+        return this.backingStore.get("loggingLevel");
     }
     /**
      * Gets the networkConfiguration property value. The network configuration for the device.
-     * @return a teamworkNetworkConfiguration
+     * @return a TeamworkNetworkConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkNetworkConfiguration getNetworkConfiguration() {
-        return this.networkConfiguration;
+        return this.backingStore.get("networkConfiguration");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -238,101 +196,101 @@ public class TeamworkSystemConfiguration implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the dateTimeConfiguration property value. The date and time configurations for a device.
      * @param value Value to set for the dateTimeConfiguration property.
      */
     public void setDateTimeConfiguration(@jakarta.annotation.Nullable final TeamworkDateTimeConfiguration value) {
-        this.dateTimeConfiguration = value;
+        this.backingStore.set("dateTimeConfiguration", value);
     }
     /**
      * Sets the defaultPassword property value. The default password for the device. Write-Only.
      * @param value Value to set for the defaultPassword property.
      */
     public void setDefaultPassword(@jakarta.annotation.Nullable final String value) {
-        this.defaultPassword = value;
+        this.backingStore.set("defaultPassword", value);
     }
     /**
      * Sets the deviceLockTimeout property value. The device lock timeout in seconds.
      * @param value Value to set for the deviceLockTimeout property.
      */
     public void setDeviceLockTimeout(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.deviceLockTimeout = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("deviceLockTimeout", value);
     }
     /**
      * Sets the isDeviceLockEnabled property value. True if the device lock is enabled.
      * @param value Value to set for the isDeviceLockEnabled property.
      */
     public void setIsDeviceLockEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDeviceLockEnabled = value;
+        this.backingStore.set("isDeviceLockEnabled", value);
     }
     /**
      * Sets the isLoggingEnabled property value. True if logging is enabled.
      * @param value Value to set for the isLoggingEnabled property.
      */
     public void setIsLoggingEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isLoggingEnabled = value;
+        this.backingStore.set("isLoggingEnabled", value);
     }
     /**
      * Sets the isPowerSavingEnabled property value. True if power saving is enabled.
      * @param value Value to set for the isPowerSavingEnabled property.
      */
     public void setIsPowerSavingEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPowerSavingEnabled = value;
+        this.backingStore.set("isPowerSavingEnabled", value);
     }
     /**
      * Sets the isScreenCaptureEnabled property value. True if screen capture is enabled.
      * @param value Value to set for the isScreenCaptureEnabled property.
      */
     public void setIsScreenCaptureEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isScreenCaptureEnabled = value;
+        this.backingStore.set("isScreenCaptureEnabled", value);
     }
     /**
      * Sets the isSilentModeEnabled property value. True if silent mode is enabled.
      * @param value Value to set for the isSilentModeEnabled property.
      */
     public void setIsSilentModeEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSilentModeEnabled = value;
+        this.backingStore.set("isSilentModeEnabled", value);
     }
     /**
      * Sets the language property value. The language option for the device.
      * @param value Value to set for the language property.
      */
     public void setLanguage(@jakarta.annotation.Nullable final String value) {
-        this.language = value;
+        this.backingStore.set("language", value);
     }
     /**
      * Sets the lockPin property value. The pin that unlocks the device. Write-Only.
      * @param value Value to set for the lockPin property.
      */
     public void setLockPin(@jakarta.annotation.Nullable final String value) {
-        this.lockPin = value;
+        this.backingStore.set("lockPin", value);
     }
     /**
      * Sets the loggingLevel property value. The logging level for the device.
      * @param value Value to set for the loggingLevel property.
      */
     public void setLoggingLevel(@jakarta.annotation.Nullable final String value) {
-        this.loggingLevel = value;
+        this.backingStore.set("loggingLevel", value);
     }
     /**
      * Sets the networkConfiguration property value. The network configuration for the device.
      * @param value Value to set for the networkConfiguration property.
      */
     public void setNetworkConfiguration(@jakarta.annotation.Nullable final TeamworkNetworkConfiguration value) {
-        this.networkConfiguration = value;
+        this.backingStore.set("networkConfiguration", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

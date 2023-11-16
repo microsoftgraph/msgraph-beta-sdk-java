@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * Represents an app in the list of managed applications
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AppListItem implements AdditionalDataHolder, Parsable {
+public class AppListItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The application or bundle identifier of the application
-     */
-    private String appId;
-    /**
-     * The Store URL of the application
-     */
-    private String appStoreUrl;
-    /**
-     * The application name
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The publisher of the application
-     */
-    private String publisher;
-    /**
-     * Instantiates a new appListItem and sets the default values.
+     * Instantiates a new AppListItem and sets the default values.
      */
     public AppListItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a appListItem
+     * @return a AppListItem
      */
     @jakarta.annotation.Nonnull
     public static AppListItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,28 +45,33 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
         return new AppListItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appId property value. The application or bundle identifier of the application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.backingStore.get("appId");
     }
     /**
      * Gets the appStoreUrl property value. The Store URL of the application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
-        return this.appStoreUrl;
+        return this.backingStore.get("appStoreUrl");
     }
     /**
      * The deserialization information for the current model
@@ -99,27 +89,27 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. The application name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the publisher property value. The publisher of the application
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisher() {
-        return this.publisher;
+        return this.backingStore.get("publisher");
     }
     /**
      * Serializes information the current object
@@ -135,45 +125,45 @@ public class AppListItem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the appId property value. The application or bundle identifier of the application
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.backingStore.set("appId", value);
     }
     /**
      * Sets the appStoreUrl property value. The Store URL of the application
      * @param value Value to set for the appStoreUrl property.
      */
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
-        this.appStoreUrl = value;
+        this.backingStore.set("appStoreUrl", value);
     }
     /**
      * Sets the name property value. The application name
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the publisher property value. The publisher of the application
      * @param value Value to set for the publisher property.
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
-        this.publisher = value;
+        this.backingStore.set("publisher", value);
     }
 }

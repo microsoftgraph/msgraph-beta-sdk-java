@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,33 +14,23 @@ import java.util.Objects;
  * Object representing a link to troubleshooting information, the link could be to the Azure Portal or a Microsoft doc.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementTroubleshootingErrorResource implements AdditionalDataHolder, Parsable {
+public class DeviceManagementTroubleshootingErrorResource implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}}
-     */
-    private String link;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Not yet documented
-     */
-    private String text;
-    /**
-     * Instantiates a new deviceManagementTroubleshootingErrorResource and sets the default values.
+     * Instantiates a new DeviceManagementTroubleshootingErrorResource and sets the default values.
      */
     public DeviceManagementTroubleshootingErrorResource() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementTroubleshootingErrorResource
+     * @return a DeviceManagementTroubleshootingErrorResource
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementTroubleshootingErrorResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,12 +38,17 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
         return new DeviceManagementTroubleshootingErrorResource();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -66,27 +64,27 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
     }
     /**
      * Gets the link property value. The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}}
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLink() {
-        return this.link;
+        return this.backingStore.get("link");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the text property value. Not yet documented
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getText() {
-        return this.text;
+        return this.backingStore.get("text");
     }
     /**
      * Serializes information the current object
@@ -100,31 +98,31 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the link property value. The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}}
      * @param value Value to set for the link property.
      */
     public void setLink(@jakarta.annotation.Nullable final String value) {
-        this.link = value;
+        this.backingStore.set("link", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the text property value. Not yet documented
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
-        this.text = value;
+        this.backingStore.set("text", value);
     }
 }

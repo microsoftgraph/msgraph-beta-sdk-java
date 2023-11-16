@@ -4,66 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
+public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     */
-    private String azureStorageAccountId;
-    /**
-     * The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     */
-    private String azureStorageAccountName;
-    /**
-     * The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
-     */
-    private String azureStorageContainerName;
-    /**
-     * True if the Cloud PC is set to in review by the administrator.
-     */
-    private Boolean inReview;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime restorePointDateTime;
-    /**
-     * The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime reviewStartDateTime;
-    /**
-     * The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
-     */
-    private String subscriptionId;
-    /**
-     * The name of the Azure subscription in which the Cloud PC snapshot is being saved.
-     */
-    private String subscriptionName;
-    /**
-     * The userAccessLevel property
-     */
-    private CloudPcUserAccessLevel userAccessLevel;
-    /**
-     * Instantiates a new cloudPcReviewStatus and sets the default values.
+     * Instantiates a new CloudPcReviewStatus and sets the default values.
      */
     public CloudPcReviewStatus() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a cloudPcReviewStatus
+     * @return a CloudPcReviewStatus
      */
     @jakarta.annotation.Nonnull
     public static CloudPcReviewStatus createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,36 +36,41 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         return new CloudPcReviewStatus();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageAccountId() {
-        return this.azureStorageAccountId;
+        return this.backingStore.get("azureStorageAccountId");
     }
     /**
      * Gets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageAccountName() {
-        return this.azureStorageAccountName;
+        return this.backingStore.get("azureStorageAccountName");
     }
     /**
      * Gets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureStorageContainerName() {
-        return this.azureStorageContainerName;
+        return this.backingStore.get("azureStorageContainerName");
     }
     /**
      * The deserialization information for the current model
@@ -123,19 +93,19 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the inReview property value. True if the Cloud PC is set to in review by the administrator.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getInReview() {
-        return this.inReview;
+        return this.backingStore.get("inReview");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
@@ -143,7 +113,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
-        return this.restorePointDateTime;
+        return this.backingStore.get("restorePointDateTime");
     }
     /**
      * Gets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
@@ -151,31 +121,31 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReviewStartDateTime() {
-        return this.reviewStartDateTime;
+        return this.backingStore.get("reviewStartDateTime");
     }
     /**
      * Gets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionId() {
-        return this.subscriptionId;
+        return this.backingStore.get("subscriptionId");
     }
     /**
      * Gets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubscriptionName() {
-        return this.subscriptionName;
+        return this.backingStore.get("subscriptionName");
     }
     /**
      * Gets the userAccessLevel property value. The userAccessLevel property
-     * @return a cloudPcUserAccessLevel
+     * @return a CloudPcUserAccessLevel
      */
     @jakarta.annotation.Nullable
     public CloudPcUserAccessLevel getUserAccessLevel() {
-        return this.userAccessLevel;
+        return this.backingStore.get("userAccessLevel");
     }
     /**
      * Serializes information the current object
@@ -196,80 +166,80 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the azureStorageAccountId property value. The resource ID of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageAccountId property.
      */
     public void setAzureStorageAccountId(@jakarta.annotation.Nullable final String value) {
-        this.azureStorageAccountId = value;
+        this.backingStore.set("azureStorageAccountId", value);
     }
     /**
      * Sets the azureStorageAccountName property value. The name of the Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageAccountName property.
      */
     public void setAzureStorageAccountName(@jakarta.annotation.Nullable final String value) {
-        this.azureStorageAccountName = value;
+        this.backingStore.set("azureStorageAccountName", value);
     }
     /**
      * Sets the azureStorageContainerName property value. The name of the container in an Azure Storage account in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the azureStorageContainerName property.
      */
     public void setAzureStorageContainerName(@jakarta.annotation.Nullable final String value) {
-        this.azureStorageContainerName = value;
+        this.backingStore.set("azureStorageContainerName", value);
     }
     /**
      * Sets the inReview property value. True if the Cloud PC is set to in review by the administrator.
      * @param value Value to set for the inReview property.
      */
     public void setInReview(@jakarta.annotation.Nullable final Boolean value) {
-        this.inReview = value;
+        this.backingStore.set("inReview", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the restorePointDateTime property value. The specific date and time of the Cloud PC snapshot that was taken and saved automatically, when the Cloud PC is set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the restorePointDateTime property.
      */
     public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.restorePointDateTime = value;
+        this.backingStore.set("restorePointDateTime", value);
     }
     /**
      * Sets the reviewStartDateTime property value. The specific date and time when the Cloud PC was set to in review. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      * @param value Value to set for the reviewStartDateTime property.
      */
     public void setReviewStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.reviewStartDateTime = value;
+        this.backingStore.set("reviewStartDateTime", value);
     }
     /**
      * Sets the subscriptionId property value. The ID of the Azure subscription in which the Cloud PC snapshot is being saved, in GUID format.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
-        this.subscriptionId = value;
+        this.backingStore.set("subscriptionId", value);
     }
     /**
      * Sets the subscriptionName property value. The name of the Azure subscription in which the Cloud PC snapshot is being saved.
      * @param value Value to set for the subscriptionName property.
      */
     public void setSubscriptionName(@jakarta.annotation.Nullable final String value) {
-        this.subscriptionName = value;
+        this.backingStore.set("subscriptionName", value);
     }
     /**
      * Sets the userAccessLevel property value. The userAccessLevel property
      * @param value Value to set for the userAccessLevel property.
      */
     public void setUserAccessLevel(@jakarta.annotation.Nullable final CloudPcUserAccessLevel value) {
-        this.userAccessLevel = value;
+        this.backingStore.set("userAccessLevel", value);
     }
 }

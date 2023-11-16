@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,33 +14,23 @@ import java.util.Objects;
  * An item in the list of app positions that sets the order of items on the Managed Home Screen
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDataHolder, Parsable {
+public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Represents an item on the Android Device Owner Managed Home Screen (application, weblink or folder
-     */
-    private AndroidDeviceOwnerKioskModeHomeScreenItem item;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Position of the item on the grid. Valid values 0 to 9999999
-     */
-    private Integer position;
-    /**
-     * Instantiates a new androidDeviceOwnerKioskModeAppPositionItem and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerKioskModeAppPositionItem and sets the default values.
      */
     public AndroidDeviceOwnerKioskModeAppPositionItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerKioskModeAppPositionItem
+     * @return a AndroidDeviceOwnerKioskModeAppPositionItem
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerKioskModeAppPositionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,12 +38,17 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
         return new AndroidDeviceOwnerKioskModeAppPositionItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -66,27 +64,27 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
     }
     /**
      * Gets the item property value. Represents an item on the Android Device Owner Managed Home Screen (application, weblink or folder
-     * @return a androidDeviceOwnerKioskModeHomeScreenItem
+     * @return a AndroidDeviceOwnerKioskModeHomeScreenItem
      */
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerKioskModeHomeScreenItem getItem() {
-        return this.item;
+        return this.backingStore.get("item");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the position property value. Position of the item on the grid. Valid values 0 to 9999999
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPosition() {
-        return this.position;
+        return this.backingStore.get("position");
     }
     /**
      * Serializes information the current object
@@ -100,31 +98,31 @@ public class AndroidDeviceOwnerKioskModeAppPositionItem implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the item property value. Represents an item on the Android Device Owner Managed Home Screen (application, weblink or folder
      * @param value Value to set for the item property.
      */
     public void setItem(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeHomeScreenItem value) {
-        this.item = value;
+        this.backingStore.set("item", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the position property value. Position of the item on the grid. Valid values 0 to 9999999
      * @param value Value to set for the position property.
      */
     public void setPosition(@jakarta.annotation.Nullable final Integer value) {
-        this.position = value;
+        this.backingStore.set("position", value);
     }
 }

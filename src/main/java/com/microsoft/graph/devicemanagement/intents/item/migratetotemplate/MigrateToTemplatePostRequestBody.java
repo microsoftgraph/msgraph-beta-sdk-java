@@ -4,33 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, Parsable {
+public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The newTemplateId property
-     */
-    private String newTemplateId;
-    /**
-     * The preserveCustomValues property
-     */
-    private Boolean preserveCustomValues;
-    /**
-     * Instantiates a new migrateToTemplatePostRequestBody and sets the default values.
+     * Instantiates a new MigrateToTemplatePostRequestBody and sets the default values.
      */
     public MigrateToTemplatePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a migrateToTemplatePostRequestBody
+     * @return a MigrateToTemplatePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static MigrateToTemplatePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,12 +35,17 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
         return new MigrateToTemplatePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +60,19 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
     }
     /**
      * Gets the newTemplateId property value. The newTemplateId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNewTemplateId() {
-        return this.newTemplateId;
+        return this.backingStore.get("newTemplateId");
     }
     /**
      * Gets the preserveCustomValues property value. The preserveCustomValues property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPreserveCustomValues() {
-        return this.preserveCustomValues;
+        return this.backingStore.get("preserveCustomValues");
     }
     /**
      * Serializes information the current object
@@ -83,24 +85,24 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the newTemplateId property value. The newTemplateId property
      * @param value Value to set for the newTemplateId property.
      */
     public void setNewTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.newTemplateId = value;
+        this.backingStore.set("newTemplateId", value);
     }
     /**
      * Sets the preserveCustomValues property value. The preserveCustomValues property
      * @param value Value to set for the preserveCustomValues property.
      */
     public void setPreserveCustomValues(@jakarta.annotation.Nullable final Boolean value) {
-        this.preserveCustomValues = value;
+        this.backingStore.set("preserveCustomValues", value);
     }
 }

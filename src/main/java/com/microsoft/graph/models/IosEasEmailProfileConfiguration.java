@@ -13,115 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosEasEmailProfileConfiguration extends EasEmailProfileConfigurationBase implements Parsable {
     /**
-     * Account name.
-     */
-    private String accountName;
-    /**
-     * Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
-     */
-    private EasAuthenticationMethod authenticationMethod;
-    /**
-     * Indicates whether or not to block moving messages to other email accounts.
-     */
-    private Boolean blockMovingMessagesToOtherEmailAccounts;
-    /**
-     * Indicates whether or not to block sending email from third party apps.
-     */
-    private Boolean blockSendingEmailFromThirdPartyApps;
-    /**
-     * Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
-     */
-    private Boolean blockSyncingRecentlyUsedEmailAddresses;
-    /**
-     * Tenant level settings for the Derived Credentials to be used for authentication.
-     */
-    private DeviceManagementDerivedCredentialSettings derivedCredentialSettings;
-    /**
-     * Possible values for email sync duration.
-     */
-    private EmailSyncDuration durationOfEmailToSync;
-    /**
-     * Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
-     */
-    private EnumSet<EasServices> easServices;
-    /**
-     * Allow users to change sync settings.
-     */
-    private Boolean easServicesUserOverrideEnabled;
-    /**
-     * Possible values for username source or email source.
-     */
-    private UserEmailSource emailAddressSource;
-    /**
-     * Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     */
-    private EmailCertificateType encryptionCertificateType;
-    /**
-     * Exchange location that (URL) that the native mail app connects to.
-     */
-    private String hostName;
-    /**
-     * Identity certificate.
-     */
-    private IosCertificateProfileBase identityCertificate;
-    /**
-     * Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
-     */
-    private String perAppVPNProfileId;
-    /**
-     * Indicates whether or not to use S/MIME certificate.
-     */
-    private Boolean requireSmime;
-    /**
-     * Indicates whether or not to use SSL.
-     */
-    private Boolean requireSsl;
-    /**
-     * Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     */
-    private EmailCertificateType signingCertificateType;
-    /**
-     * Indicates whether or not to allow unencrypted emails.
-     */
-    private Boolean smimeEnablePerMessageSwitch;
-    /**
-     * If set to true S/MIME encryption is enabled by default.
-     */
-    private Boolean smimeEncryptByDefaultEnabled;
-    /**
-     * If set to true, the user can toggle the encryption by default setting.
-     */
-    private Boolean smimeEncryptByDefaultUserOverrideEnabled;
-    /**
-     * S/MIME encryption certificate.
-     */
-    private IosCertificateProfile smimeEncryptionCertificate;
-    /**
-     * If set to true the user can select the S/MIME encryption identity.
-     */
-    private Boolean smimeEncryptionCertificateUserOverrideEnabled;
-    /**
-     * S/MIME signing certificate.
-     */
-    private IosCertificateProfile smimeSigningCertificate;
-    /**
-     * If set to true, the user can select the signing identity.
-     */
-    private Boolean smimeSigningCertificateUserOverrideEnabled;
-    /**
-     * If set to true S/MIME signing is enabled for this account
-     */
-    private Boolean smimeSigningEnabled;
-    /**
-     * If set to true, the user can toggle S/MIME signing on or off.
-     */
-    private Boolean smimeSigningUserOverrideEnabled;
-    /**
-     * Specifies whether the connection should use OAuth for authentication.
-     */
-    private Boolean useOAuth;
-    /**
-     * Instantiates a new iosEasEmailProfileConfiguration and sets the default values.
+     * Instantiates a new IosEasEmailProfileConfiguration and sets the default values.
      */
     public IosEasEmailProfileConfiguration() {
         super();
@@ -130,7 +22,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosEasEmailProfileConfiguration
+     * @return a IosEasEmailProfileConfiguration
      */
     @jakarta.annotation.Nonnull
     public static IosEasEmailProfileConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -139,91 +31,91 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the accountName property value. Account name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAccountName() {
-        return this.accountName;
+        return this.backingStore.get("accountName");
     }
     /**
      * Gets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
-     * @return a easAuthenticationMethod
+     * @return a EasAuthenticationMethod
      */
     @jakarta.annotation.Nullable
     public EasAuthenticationMethod getAuthenticationMethod() {
-        return this.authenticationMethod;
+        return this.backingStore.get("authenticationMethod");
     }
     /**
      * Gets the blockMovingMessagesToOtherEmailAccounts property value. Indicates whether or not to block moving messages to other email accounts.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMovingMessagesToOtherEmailAccounts() {
-        return this.blockMovingMessagesToOtherEmailAccounts;
+        return this.backingStore.get("blockMovingMessagesToOtherEmailAccounts");
     }
     /**
      * Gets the blockSendingEmailFromThirdPartyApps property value. Indicates whether or not to block sending email from third party apps.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSendingEmailFromThirdPartyApps() {
-        return this.blockSendingEmailFromThirdPartyApps;
+        return this.backingStore.get("blockSendingEmailFromThirdPartyApps");
     }
     /**
      * Gets the blockSyncingRecentlyUsedEmailAddresses property value. Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockSyncingRecentlyUsedEmailAddresses() {
-        return this.blockSyncingRecentlyUsedEmailAddresses;
+        return this.backingStore.get("blockSyncingRecentlyUsedEmailAddresses");
     }
     /**
      * Gets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
-     * @return a deviceManagementDerivedCredentialSettings
+     * @return a DeviceManagementDerivedCredentialSettings
      */
     @jakarta.annotation.Nullable
     public DeviceManagementDerivedCredentialSettings getDerivedCredentialSettings() {
-        return this.derivedCredentialSettings;
+        return this.backingStore.get("derivedCredentialSettings");
     }
     /**
      * Gets the durationOfEmailToSync property value. Possible values for email sync duration.
-     * @return a emailSyncDuration
+     * @return a EmailSyncDuration
      */
     @jakarta.annotation.Nullable
     public EmailSyncDuration getDurationOfEmailToSync() {
-        return this.durationOfEmailToSync;
+        return this.backingStore.get("durationOfEmailToSync");
     }
     /**
      * Gets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
-     * @return a easServices
+     * @return a EnumSet<EasServices>
      */
     @jakarta.annotation.Nullable
     public EnumSet<EasServices> getEasServices() {
-        return this.easServices;
+        return this.backingStore.get("easServices");
     }
     /**
      * Gets the easServicesUserOverrideEnabled property value. Allow users to change sync settings.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getEasServicesUserOverrideEnabled() {
-        return this.easServicesUserOverrideEnabled;
+        return this.backingStore.get("easServicesUserOverrideEnabled");
     }
     /**
      * Gets the emailAddressSource property value. Possible values for username source or email source.
-     * @return a userEmailSource
+     * @return a UserEmailSource
      */
     @jakarta.annotation.Nullable
     public UserEmailSource getEmailAddressSource() {
-        return this.emailAddressSource;
+        return this.backingStore.get("emailAddressSource");
     }
     /**
      * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     * @return a emailCertificateType
+     * @return a EmailCertificateType
      */
     @jakarta.annotation.Nullable
     public EmailCertificateType getEncryptionCertificateType() {
-        return this.encryptionCertificateType;
+        return this.backingStore.get("encryptionCertificateType");
     }
     /**
      * The deserialization information for the current model
@@ -263,131 +155,131 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHostName() {
-        return this.hostName;
+        return this.backingStore.get("hostName");
     }
     /**
      * Gets the identityCertificate property value. Identity certificate.
-     * @return a iosCertificateProfileBase
+     * @return a IosCertificateProfileBase
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificate() {
-        return this.identityCertificate;
+        return this.backingStore.get("identityCertificate");
     }
     /**
      * Gets the perAppVPNProfileId property value. Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPerAppVPNProfileId() {
-        return this.perAppVPNProfileId;
+        return this.backingStore.get("perAppVPNProfileId");
     }
     /**
      * Gets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSmime() {
-        return this.requireSmime;
+        return this.backingStore.get("requireSmime");
     }
     /**
      * Gets the requireSsl property value. Indicates whether or not to use SSL.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireSsl() {
-        return this.requireSsl;
+        return this.backingStore.get("requireSsl");
     }
     /**
      * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
-     * @return a emailCertificateType
+     * @return a EmailCertificateType
      */
     @jakarta.annotation.Nullable
     public EmailCertificateType getSigningCertificateType() {
-        return this.signingCertificateType;
+        return this.backingStore.get("signingCertificateType");
     }
     /**
      * Gets the smimeEnablePerMessageSwitch property value. Indicates whether or not to allow unencrypted emails.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEnablePerMessageSwitch() {
-        return this.smimeEnablePerMessageSwitch;
+        return this.backingStore.get("smimeEnablePerMessageSwitch");
     }
     /**
      * Gets the smimeEncryptByDefaultEnabled property value. If set to true S/MIME encryption is enabled by default.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultEnabled() {
-        return this.smimeEncryptByDefaultEnabled;
+        return this.backingStore.get("smimeEncryptByDefaultEnabled");
     }
     /**
      * Gets the smimeEncryptByDefaultUserOverrideEnabled property value. If set to true, the user can toggle the encryption by default setting.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptByDefaultUserOverrideEnabled() {
-        return this.smimeEncryptByDefaultUserOverrideEnabled;
+        return this.backingStore.get("smimeEncryptByDefaultUserOverrideEnabled");
     }
     /**
      * Gets the smimeEncryptionCertificate property value. S/MIME encryption certificate.
-     * @return a iosCertificateProfile
+     * @return a IosCertificateProfile
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfile getSmimeEncryptionCertificate() {
-        return this.smimeEncryptionCertificate;
+        return this.backingStore.get("smimeEncryptionCertificate");
     }
     /**
      * Gets the smimeEncryptionCertificateUserOverrideEnabled property value. If set to true the user can select the S/MIME encryption identity.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeEncryptionCertificateUserOverrideEnabled() {
-        return this.smimeEncryptionCertificateUserOverrideEnabled;
+        return this.backingStore.get("smimeEncryptionCertificateUserOverrideEnabled");
     }
     /**
      * Gets the smimeSigningCertificate property value. S/MIME signing certificate.
-     * @return a iosCertificateProfile
+     * @return a IosCertificateProfile
      */
     @jakarta.annotation.Nullable
     public IosCertificateProfile getSmimeSigningCertificate() {
-        return this.smimeSigningCertificate;
+        return this.backingStore.get("smimeSigningCertificate");
     }
     /**
      * Gets the smimeSigningCertificateUserOverrideEnabled property value. If set to true, the user can select the signing identity.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeSigningCertificateUserOverrideEnabled() {
-        return this.smimeSigningCertificateUserOverrideEnabled;
+        return this.backingStore.get("smimeSigningCertificateUserOverrideEnabled");
     }
     /**
      * Gets the smimeSigningEnabled property value. If set to true S/MIME signing is enabled for this account
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeSigningEnabled() {
-        return this.smimeSigningEnabled;
+        return this.backingStore.get("smimeSigningEnabled");
     }
     /**
      * Gets the smimeSigningUserOverrideEnabled property value. If set to true, the user can toggle S/MIME signing on or off.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmimeSigningUserOverrideEnabled() {
-        return this.smimeSigningUserOverrideEnabled;
+        return this.backingStore.get("smimeSigningUserOverrideEnabled");
     }
     /**
      * Gets the useOAuth property value. Specifies whether the connection should use OAuth for authentication.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getUseOAuth() {
-        return this.useOAuth;
+        return this.backingStore.get("useOAuth");
     }
     /**
      * Serializes information the current object
@@ -429,188 +321,188 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the accountName property.
      */
     public void setAccountName(@jakarta.annotation.Nullable final String value) {
-        this.accountName = value;
+        this.backingStore.set("accountName", value);
     }
     /**
      * Sets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
-        this.authenticationMethod = value;
+        this.backingStore.set("authenticationMethod", value);
     }
     /**
      * Sets the blockMovingMessagesToOtherEmailAccounts property value. Indicates whether or not to block moving messages to other email accounts.
      * @param value Value to set for the blockMovingMessagesToOtherEmailAccounts property.
      */
     public void setBlockMovingMessagesToOtherEmailAccounts(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockMovingMessagesToOtherEmailAccounts = value;
+        this.backingStore.set("blockMovingMessagesToOtherEmailAccounts", value);
     }
     /**
      * Sets the blockSendingEmailFromThirdPartyApps property value. Indicates whether or not to block sending email from third party apps.
      * @param value Value to set for the blockSendingEmailFromThirdPartyApps property.
      */
     public void setBlockSendingEmailFromThirdPartyApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockSendingEmailFromThirdPartyApps = value;
+        this.backingStore.set("blockSendingEmailFromThirdPartyApps", value);
     }
     /**
      * Sets the blockSyncingRecentlyUsedEmailAddresses property value. Indicates whether or not to block syncing recently used email addresses, for instance - when composing new email.
      * @param value Value to set for the blockSyncingRecentlyUsedEmailAddresses property.
      */
     public void setBlockSyncingRecentlyUsedEmailAddresses(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockSyncingRecentlyUsedEmailAddresses = value;
+        this.backingStore.set("blockSyncingRecentlyUsedEmailAddresses", value);
     }
     /**
      * Sets the derivedCredentialSettings property value. Tenant level settings for the Derived Credentials to be used for authentication.
      * @param value Value to set for the derivedCredentialSettings property.
      */
     public void setDerivedCredentialSettings(@jakarta.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
-        this.derivedCredentialSettings = value;
+        this.backingStore.set("derivedCredentialSettings", value);
     }
     /**
      * Sets the durationOfEmailToSync property value. Possible values for email sync duration.
      * @param value Value to set for the durationOfEmailToSync property.
      */
     public void setDurationOfEmailToSync(@jakarta.annotation.Nullable final EmailSyncDuration value) {
-        this.durationOfEmailToSync = value;
+        this.backingStore.set("durationOfEmailToSync", value);
     }
     /**
      * Sets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
      * @param value Value to set for the easServices property.
      */
     public void setEasServices(@jakarta.annotation.Nullable final EnumSet<EasServices> value) {
-        this.easServices = value;
+        this.backingStore.set("easServices", value);
     }
     /**
      * Sets the easServicesUserOverrideEnabled property value. Allow users to change sync settings.
      * @param value Value to set for the easServicesUserOverrideEnabled property.
      */
     public void setEasServicesUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.easServicesUserOverrideEnabled = value;
+        this.backingStore.set("easServicesUserOverrideEnabled", value);
     }
     /**
      * Sets the emailAddressSource property value. Possible values for username source or email source.
      * @param value Value to set for the emailAddressSource property.
      */
     public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {
-        this.emailAddressSource = value;
+        this.backingStore.set("emailAddressSource", value);
     }
     /**
      * Sets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the encryptionCertificateType property.
      */
     public void setEncryptionCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
-        this.encryptionCertificateType = value;
+        this.backingStore.set("encryptionCertificateType", value);
     }
     /**
      * Sets the hostName property value. Exchange location that (URL) that the native mail app connects to.
      * @param value Value to set for the hostName property.
      */
     public void setHostName(@jakarta.annotation.Nullable final String value) {
-        this.hostName = value;
+        this.backingStore.set("hostName", value);
     }
     /**
      * Sets the identityCertificate property value. Identity certificate.
      * @param value Value to set for the identityCertificate property.
      */
     public void setIdentityCertificate(@jakarta.annotation.Nullable final IosCertificateProfileBase value) {
-        this.identityCertificate = value;
+        this.backingStore.set("identityCertificate", value);
     }
     /**
      * Sets the perAppVPNProfileId property value. Profile ID of the Per-App VPN policy to be used to access emails from the native Mail client
      * @param value Value to set for the perAppVPNProfileId property.
      */
     public void setPerAppVPNProfileId(@jakarta.annotation.Nullable final String value) {
-        this.perAppVPNProfileId = value;
+        this.backingStore.set("perAppVPNProfileId", value);
     }
     /**
      * Sets the requireSmime property value. Indicates whether or not to use S/MIME certificate.
      * @param value Value to set for the requireSmime property.
      */
     public void setRequireSmime(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireSmime = value;
+        this.backingStore.set("requireSmime", value);
     }
     /**
      * Sets the requireSsl property value. Indicates whether or not to use SSL.
      * @param value Value to set for the requireSsl property.
      */
     public void setRequireSsl(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireSsl = value;
+        this.backingStore.set("requireSsl", value);
     }
     /**
      * Sets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the signingCertificateType property.
      */
     public void setSigningCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
-        this.signingCertificateType = value;
+        this.backingStore.set("signingCertificateType", value);
     }
     /**
      * Sets the smimeEnablePerMessageSwitch property value. Indicates whether or not to allow unencrypted emails.
      * @param value Value to set for the smimeEnablePerMessageSwitch property.
      */
     public void setSmimeEnablePerMessageSwitch(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeEnablePerMessageSwitch = value;
+        this.backingStore.set("smimeEnablePerMessageSwitch", value);
     }
     /**
      * Sets the smimeEncryptByDefaultEnabled property value. If set to true S/MIME encryption is enabled by default.
      * @param value Value to set for the smimeEncryptByDefaultEnabled property.
      */
     public void setSmimeEncryptByDefaultEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeEncryptByDefaultEnabled = value;
+        this.backingStore.set("smimeEncryptByDefaultEnabled", value);
     }
     /**
      * Sets the smimeEncryptByDefaultUserOverrideEnabled property value. If set to true, the user can toggle the encryption by default setting.
      * @param value Value to set for the smimeEncryptByDefaultUserOverrideEnabled property.
      */
     public void setSmimeEncryptByDefaultUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeEncryptByDefaultUserOverrideEnabled = value;
+        this.backingStore.set("smimeEncryptByDefaultUserOverrideEnabled", value);
     }
     /**
      * Sets the smimeEncryptionCertificate property value. S/MIME encryption certificate.
      * @param value Value to set for the smimeEncryptionCertificate property.
      */
     public void setSmimeEncryptionCertificate(@jakarta.annotation.Nullable final IosCertificateProfile value) {
-        this.smimeEncryptionCertificate = value;
+        this.backingStore.set("smimeEncryptionCertificate", value);
     }
     /**
      * Sets the smimeEncryptionCertificateUserOverrideEnabled property value. If set to true the user can select the S/MIME encryption identity.
      * @param value Value to set for the smimeEncryptionCertificateUserOverrideEnabled property.
      */
     public void setSmimeEncryptionCertificateUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeEncryptionCertificateUserOverrideEnabled = value;
+        this.backingStore.set("smimeEncryptionCertificateUserOverrideEnabled", value);
     }
     /**
      * Sets the smimeSigningCertificate property value. S/MIME signing certificate.
      * @param value Value to set for the smimeSigningCertificate property.
      */
     public void setSmimeSigningCertificate(@jakarta.annotation.Nullable final IosCertificateProfile value) {
-        this.smimeSigningCertificate = value;
+        this.backingStore.set("smimeSigningCertificate", value);
     }
     /**
      * Sets the smimeSigningCertificateUserOverrideEnabled property value. If set to true, the user can select the signing identity.
      * @param value Value to set for the smimeSigningCertificateUserOverrideEnabled property.
      */
     public void setSmimeSigningCertificateUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeSigningCertificateUserOverrideEnabled = value;
+        this.backingStore.set("smimeSigningCertificateUserOverrideEnabled", value);
     }
     /**
      * Sets the smimeSigningEnabled property value. If set to true S/MIME signing is enabled for this account
      * @param value Value to set for the smimeSigningEnabled property.
      */
     public void setSmimeSigningEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeSigningEnabled = value;
+        this.backingStore.set("smimeSigningEnabled", value);
     }
     /**
      * Sets the smimeSigningUserOverrideEnabled property value. If set to true, the user can toggle S/MIME signing on or off.
      * @param value Value to set for the smimeSigningUserOverrideEnabled property.
      */
     public void setSmimeSigningUserOverrideEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smimeSigningUserOverrideEnabled = value;
+        this.backingStore.set("smimeSigningUserOverrideEnabled", value);
     }
     /**
      * Sets the useOAuth property value. Specifies whether the connection should use OAuth for authentication.
      * @param value Value to set for the useOAuth property.
      */
     public void setUseOAuth(@jakarta.annotation.Nullable final Boolean value) {
-        this.useOAuth = value;
+        this.backingStore.set("useOAuth", value);
     }
 }

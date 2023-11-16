@@ -4,65 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
+public class RoleSuccessStatistics implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The permanentFail property
-     */
-    private Long permanentFail;
-    /**
-     * The permanentSuccess property
-     */
-    private Long permanentSuccess;
-    /**
-     * The removeFail property
-     */
-    private Long removeFail;
-    /**
-     * The removeSuccess property
-     */
-    private Long removeSuccess;
-    /**
-     * The roleId property
-     */
-    private String roleId;
-    /**
-     * The roleName property
-     */
-    private String roleName;
-    /**
-     * The temporaryFail property
-     */
-    private Long temporaryFail;
-    /**
-     * The temporarySuccess property
-     */
-    private Long temporarySuccess;
-    /**
-     * The unknownFail property
-     */
-    private Long unknownFail;
-    /**
-     * Instantiates a new roleSuccessStatistics and sets the default values.
+     * Instantiates a new RoleSuccessStatistics and sets the default values.
      */
     public RoleSuccessStatistics() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a roleSuccessStatistics
+     * @return a RoleSuccessStatistics
      */
     @jakarta.annotation.Nonnull
     public static RoleSuccessStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -70,12 +35,17 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
         return new RoleSuccessStatistics();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -98,83 +68,83 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the permanentFail property value. The permanentFail property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getPermanentFail() {
-        return this.permanentFail;
+        return this.backingStore.get("permanentFail");
     }
     /**
      * Gets the permanentSuccess property value. The permanentSuccess property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getPermanentSuccess() {
-        return this.permanentSuccess;
+        return this.backingStore.get("permanentSuccess");
     }
     /**
      * Gets the removeFail property value. The removeFail property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getRemoveFail() {
-        return this.removeFail;
+        return this.backingStore.get("removeFail");
     }
     /**
      * Gets the removeSuccess property value. The removeSuccess property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getRemoveSuccess() {
-        return this.removeSuccess;
+        return this.backingStore.get("removeSuccess");
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
-        return this.roleId;
+        return this.backingStore.get("roleId");
     }
     /**
      * Gets the roleName property value. The roleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleName() {
-        return this.roleName;
+        return this.backingStore.get("roleName");
     }
     /**
      * Gets the temporaryFail property value. The temporaryFail property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTemporaryFail() {
-        return this.temporaryFail;
+        return this.backingStore.get("temporaryFail");
     }
     /**
      * Gets the temporarySuccess property value. The temporarySuccess property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getTemporarySuccess() {
-        return this.temporarySuccess;
+        return this.backingStore.get("temporarySuccess");
     }
     /**
      * Gets the unknownFail property value. The unknownFail property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getUnknownFail() {
-        return this.unknownFail;
+        return this.backingStore.get("unknownFail");
     }
     /**
      * Serializes information the current object
@@ -195,80 +165,80 @@ public class RoleSuccessStatistics implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the permanentFail property value. The permanentFail property
      * @param value Value to set for the permanentFail property.
      */
     public void setPermanentFail(@jakarta.annotation.Nullable final Long value) {
-        this.permanentFail = value;
+        this.backingStore.set("permanentFail", value);
     }
     /**
      * Sets the permanentSuccess property value. The permanentSuccess property
      * @param value Value to set for the permanentSuccess property.
      */
     public void setPermanentSuccess(@jakarta.annotation.Nullable final Long value) {
-        this.permanentSuccess = value;
+        this.backingStore.set("permanentSuccess", value);
     }
     /**
      * Sets the removeFail property value. The removeFail property
      * @param value Value to set for the removeFail property.
      */
     public void setRemoveFail(@jakarta.annotation.Nullable final Long value) {
-        this.removeFail = value;
+        this.backingStore.set("removeFail", value);
     }
     /**
      * Sets the removeSuccess property value. The removeSuccess property
      * @param value Value to set for the removeSuccess property.
      */
     public void setRemoveSuccess(@jakarta.annotation.Nullable final Long value) {
-        this.removeSuccess = value;
+        this.backingStore.set("removeSuccess", value);
     }
     /**
      * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
      */
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
-        this.roleId = value;
+        this.backingStore.set("roleId", value);
     }
     /**
      * Sets the roleName property value. The roleName property
      * @param value Value to set for the roleName property.
      */
     public void setRoleName(@jakarta.annotation.Nullable final String value) {
-        this.roleName = value;
+        this.backingStore.set("roleName", value);
     }
     /**
      * Sets the temporaryFail property value. The temporaryFail property
      * @param value Value to set for the temporaryFail property.
      */
     public void setTemporaryFail(@jakarta.annotation.Nullable final Long value) {
-        this.temporaryFail = value;
+        this.backingStore.set("temporaryFail", value);
     }
     /**
      * Sets the temporarySuccess property value. The temporarySuccess property
      * @param value Value to set for the temporarySuccess property.
      */
     public void setTemporarySuccess(@jakarta.annotation.Nullable final Long value) {
-        this.temporarySuccess = value;
+        this.backingStore.set("temporarySuccess", value);
     }
     /**
      * Sets the unknownFail property value. The unknownFail property
      * @param value Value to set for the unknownFail property.
      */
     public void setUnknownFail(@jakarta.annotation.Nullable final Long value) {
-        this.unknownFail = value;
+        this.backingStore.set("unknownFail", value);
     }
 }

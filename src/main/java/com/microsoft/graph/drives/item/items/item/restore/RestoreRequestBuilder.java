@@ -36,33 +36,33 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/restore", rawUrl);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a driveItem that has been deleted and is currently in the recycle bin. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of driveItem
+     * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-restore?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> post(@jakarta.annotation.Nonnull final RestorePostRequestBody body) {
+    @jakarta.annotation.Nullable
+    public DriveItem post(@jakarta.annotation.Nonnull final RestorePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a driveItem that has been deleted and is currently in the recycle bin. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of driveItem
+     * @return a DriveItem
      * @see <a href="https://learn.microsoft.com/graph/api/driveitem-restore?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<DriveItem> post(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public DriveItem post(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, DriveItem::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a driveItem that has been deleted and is currently in the recycle bin. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -71,7 +71,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a driveItem that has been deleted and is currently in the recycle bin.
+     * Restore a driveItem that has been deleted and is currently in the recycle bin. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -79,24 +79,16 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a restoreRequestBuilder
+     * @return a RestoreRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

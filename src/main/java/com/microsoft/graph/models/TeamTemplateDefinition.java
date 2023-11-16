@@ -10,55 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TeamTemplateDefinition extends Entity implements Parsable {
     /**
-     * Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
-     */
-    private TeamTemplateAudience audience;
-    /**
-     * The assigned categories for the team template.
-     */
-    private java.util.List<String> categories;
-    /**
-     * A brief description of the team template as it will appear to the users in Microsoft Teams.
-     */
-    private String description;
-    /**
-     * The user defined name of the team template.
-     */
-    private String displayName;
-    /**
-     * The icon url for the team template.
-     */
-    private String iconUrl;
-    /**
-     * Language the template is available in.
-     */
-    private String languageTag;
-    /**
-     * The identity of the user who last modified the team template.
-     */
-    private IdentitySet lastModifiedBy;
-    /**
-     * The date time of when the team template was last modified.
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The templateId for the team template
-     */
-    private String parentTemplateId;
-    /**
-     * The organization which published the team template.
-     */
-    private String publisherName;
-    /**
-     * A short-description of the team template as it will appear to the users in Microsoft Teams.
-     */
-    private String shortDescription;
-    /**
-     * Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
-     */
-    private Team teamDefinition;
-    /**
-     * Instantiates a new teamTemplateDefinition and sets the default values.
+     * Instantiates a new TeamTemplateDefinition and sets the default values.
      */
     public TeamTemplateDefinition() {
         super();
@@ -66,7 +18,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamTemplateDefinition
+     * @return a TeamTemplateDefinition
      */
     @jakarta.annotation.Nonnull
     public static TeamTemplateDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -75,35 +27,35 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the audience property value. Describes the audience the team template is available to. The possible values are: organization, user, public, unknownFutureValue.
-     * @return a teamTemplateAudience
+     * @return a TeamTemplateAudience
      */
     @jakarta.annotation.Nullable
     public TeamTemplateAudience getAudience() {
-        return this.audience;
+        return this.backingStore.get("audience");
     }
     /**
      * Gets the categories property value. The assigned categories for the team template.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this.categories;
+        return this.backingStore.get("categories");
     }
     /**
      * Gets the description property value. A brief description of the team template as it will appear to the users in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The user defined name of the team template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -128,27 +80,27 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the iconUrl property value. The icon url for the team template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIconUrl() {
-        return this.iconUrl;
+        return this.backingStore.get("iconUrl");
     }
     /**
      * Gets the languageTag property value. Language the template is available in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLanguageTag() {
-        return this.languageTag;
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the user who last modified the team template.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this.lastModifiedBy;
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time of when the team template was last modified.
@@ -156,39 +108,39 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the parentTemplateId property value. The templateId for the team template
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getParentTemplateId() {
-        return this.parentTemplateId;
+        return this.backingStore.get("parentTemplateId");
     }
     /**
      * Gets the publisherName property value. The organization which published the team template.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPublisherName() {
-        return this.publisherName;
+        return this.backingStore.get("publisherName");
     }
     /**
      * Gets the shortDescription property value. A short-description of the team template as it will appear to the users in Microsoft Teams.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShortDescription() {
-        return this.shortDescription;
+        return this.backingStore.get("shortDescription");
     }
     /**
      * Gets the teamDefinition property value. Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
-     * @return a team
+     * @return a Team
      */
     @jakarta.annotation.Nullable
     public Team getTeamDefinition() {
-        return this.teamDefinition;
+        return this.backingStore.get("teamDefinition");
     }
     /**
      * Serializes information the current object
@@ -215,83 +167,83 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the audience property.
      */
     public void setAudience(@jakarta.annotation.Nullable final TeamTemplateAudience value) {
-        this.audience = value;
+        this.backingStore.set("audience", value);
     }
     /**
      * Sets the categories property value. The assigned categories for the team template.
      * @param value Value to set for the categories property.
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.categories = value;
+        this.backingStore.set("categories", value);
     }
     /**
      * Sets the description property value. A brief description of the team template as it will appear to the users in Microsoft Teams.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The user defined name of the team template.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the iconUrl property value. The icon url for the team template.
      * @param value Value to set for the iconUrl property.
      */
     public void setIconUrl(@jakarta.annotation.Nullable final String value) {
-        this.iconUrl = value;
+        this.backingStore.set("iconUrl", value);
     }
     /**
      * Sets the languageTag property value. Language the template is available in.
      * @param value Value to set for the languageTag property.
      */
     public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
-        this.languageTag = value;
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the lastModifiedBy property value. The identity of the user who last modified the team template.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.lastModifiedBy = value;
+        this.backingStore.set("lastModifiedBy", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date time of when the team template was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the parentTemplateId property value. The templateId for the team template
      * @param value Value to set for the parentTemplateId property.
      */
     public void setParentTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.parentTemplateId = value;
+        this.backingStore.set("parentTemplateId", value);
     }
     /**
      * Sets the publisherName property value. The organization which published the team template.
      * @param value Value to set for the publisherName property.
      */
     public void setPublisherName(@jakarta.annotation.Nullable final String value) {
-        this.publisherName = value;
+        this.backingStore.set("publisherName", value);
     }
     /**
      * Sets the shortDescription property value. A short-description of the team template as it will appear to the users in Microsoft Teams.
      * @param value Value to set for the shortDescription property.
      */
     public void setShortDescription(@jakarta.annotation.Nullable final String value) {
-        this.shortDescription = value;
+        this.backingStore.set("shortDescription", value);
     }
     /**
      * Sets the teamDefinition property value. Collection of channel objects. A channel represents a topic, and therefore a logical isolation of discussion, within a team.
      * @param value Value to set for the teamDefinition property.
      */
     public void setTeamDefinition(@jakarta.annotation.Nullable final Team value) {
-        this.teamDefinition = value;
+        this.backingStore.set("teamDefinition", value);
     }
 }

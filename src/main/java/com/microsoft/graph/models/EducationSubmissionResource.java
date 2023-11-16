@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EducationSubmissionResource extends Entity implements Parsable {
     /**
-     * Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
-     */
-    private String assignmentResourceUrl;
-    /**
-     * The dependentResources property
-     */
-    private java.util.List<EducationSubmissionResource> dependentResources;
-    /**
-     * Resource object.
-     */
-    private EducationResource resource;
-    /**
-     * Instantiates a new educationSubmissionResource and sets the default values.
+     * Instantiates a new EducationSubmissionResource and sets the default values.
      */
     public EducationSubmissionResource() {
         super();
@@ -29,7 +17,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a educationSubmissionResource
+     * @return a EducationSubmissionResource
      */
     @jakarta.annotation.Nonnull
     public static EducationSubmissionResource createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,19 +26,19 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     }
     /**
      * Gets the assignmentResourceUrl property value. Pointer to the assignment from which the resource was copied. If the value is null, the student uploaded the resource.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssignmentResourceUrl() {
-        return this.assignmentResourceUrl;
+        return this.backingStore.get("assignmentResourceUrl");
     }
     /**
      * Gets the dependentResources property value. The dependentResources property
-     * @return a educationSubmissionResource
+     * @return a java.util.List<EducationSubmissionResource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<EducationSubmissionResource> getDependentResources() {
-        return this.dependentResources;
+        return this.backingStore.get("dependentResources");
     }
     /**
      * The deserialization information for the current model
@@ -66,11 +54,11 @@ public class EducationSubmissionResource extends Entity implements Parsable {
     }
     /**
      * Gets the resource property value. Resource object.
-     * @return a educationResource
+     * @return a EducationResource
      */
     @jakarta.annotation.Nullable
     public EducationResource getResource() {
-        return this.resource;
+        return this.backingStore.get("resource");
     }
     /**
      * Serializes information the current object
@@ -88,20 +76,20 @@ public class EducationSubmissionResource extends Entity implements Parsable {
      * @param value Value to set for the assignmentResourceUrl property.
      */
     public void setAssignmentResourceUrl(@jakarta.annotation.Nullable final String value) {
-        this.assignmentResourceUrl = value;
+        this.backingStore.set("assignmentResourceUrl", value);
     }
     /**
      * Sets the dependentResources property value. The dependentResources property
      * @param value Value to set for the dependentResources property.
      */
     public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {
-        this.dependentResources = value;
+        this.backingStore.set("dependentResources", value);
     }
     /**
      * Sets the resource property value. Resource object.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {
-        this.resource = value;
+        this.backingStore.set("resource", value);
     }
 }

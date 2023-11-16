@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CalculatedColumn implements AdditionalDataHolder, Parsable {
+public class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
-     */
-    private String format;
-    /**
-     * The formula used to compute the value for this column.
-     */
-    private String formula;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
-     */
-    private String outputType;
-    /**
-     * Instantiates a new calculatedColumn and sets the default values.
+     * Instantiates a new CalculatedColumn and sets the default values.
      */
     public CalculatedColumn() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a calculatedColumn
+     * @return a CalculatedColumn
      */
     @jakarta.annotation.Nonnull
     public static CalculatedColumn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         return new CalculatedColumn();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFormat() {
-        return this.format;
+        return this.backingStore.get("format");
     }
     /**
      * Gets the formula property value. The formula used to compute the value for this column.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFormula() {
-        return this.formula;
+        return this.backingStore.get("formula");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOutputType() {
-        return this.outputType;
+        return this.backingStore.get("outputType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final String value) {
-        this.format = value;
+        this.backingStore.set("format", value);
     }
     /**
      * Sets the formula property value. The formula used to compute the value for this column.
      * @param value Value to set for the formula property.
      */
     public void setFormula(@jakarta.annotation.Nullable final String value) {
-        this.formula = value;
+        this.backingStore.set("formula", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      * @param value Value to set for the outputType property.
      */
     public void setOutputType(@jakarta.annotation.Nullable final String value) {
-        this.outputType = value;
+        this.backingStore.set("outputType", value);
     }
 }

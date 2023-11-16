@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,53 +15,23 @@ import java.util.Objects;
  * Contains properties for the package information for a Windows line of business app. Used as property within windowsPhone81AppXBundle object, which is also being deprecated. This complex type will be deprecated in February 2023.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsPackageInformation implements AdditionalDataHolder, Parsable {
+public class WindowsPackageInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Contains properties for Windows architecture.
-     */
-    private EnumSet<WindowsArchitecture> applicableArchitecture;
-    /**
-     * The Display Name.
-     */
-    private String displayName;
-    /**
-     * The Identity Name.
-     */
-    private String identityName;
-    /**
-     * The Identity Publisher.
-     */
-    private String identityPublisher;
-    /**
-     * The Identity Resource Identifier.
-     */
-    private String identityResourceIdentifier;
-    /**
-     * The Identity Version.
-     */
-    private String identityVersion;
-    /**
-     * The value for the minimum applicable operating system.
-     */
-    private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new windowsPackageInformation and sets the default values.
+     * Instantiates a new WindowsPackageInformation and sets the default values.
      */
     public WindowsPackageInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsPackageInformation
+     * @return a WindowsPackageInformation
      */
     @jakarta.annotation.Nonnull
     public static WindowsPackageInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,28 +39,33 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         return new WindowsPackageInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the applicableArchitecture property value. Contains properties for Windows architecture.
-     * @return a windowsArchitecture
+     * @return a EnumSet<WindowsArchitecture>
      */
     @jakarta.annotation.Nullable
     public EnumSet<WindowsArchitecture> getApplicableArchitecture() {
-        return this.applicableArchitecture;
+        return this.backingStore.get("applicableArchitecture");
     }
     /**
      * Gets the displayName property value. The Display Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -108,51 +86,51 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the identityName property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityName() {
-        return this.identityName;
+        return this.backingStore.get("identityName");
     }
     /**
      * Gets the identityPublisher property value. The Identity Publisher.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityPublisher() {
-        return this.identityPublisher;
+        return this.backingStore.get("identityPublisher");
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityResourceIdentifier() {
-        return this.identityResourceIdentifier;
+        return this.backingStore.get("identityResourceIdentifier");
     }
     /**
      * Gets the identityVersion property value. The Identity Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentityVersion() {
-        return this.identityVersion;
+        return this.backingStore.get("identityVersion");
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
-     * @return a windowsMinimumOperatingSystem
+     * @return a WindowsMinimumOperatingSystem
      */
     @jakarta.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this.minimumSupportedOperatingSystem;
+        return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -171,66 +149,66 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitecture property.
      */
     public void setApplicableArchitecture(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
-        this.applicableArchitecture = value;
+        this.backingStore.set("applicableArchitecture", value);
     }
     /**
      * Sets the displayName property value. The Display Name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the identityName property value. The Identity Name.
      * @param value Value to set for the identityName property.
      */
     public void setIdentityName(@jakarta.annotation.Nullable final String value) {
-        this.identityName = value;
+        this.backingStore.set("identityName", value);
     }
     /**
      * Sets the identityPublisher property value. The Identity Publisher.
      * @param value Value to set for the identityPublisher property.
      */
     public void setIdentityPublisher(@jakarta.annotation.Nullable final String value) {
-        this.identityPublisher = value;
+        this.backingStore.set("identityPublisher", value);
     }
     /**
      * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
      * @param value Value to set for the identityResourceIdentifier property.
      */
     public void setIdentityResourceIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.identityResourceIdentifier = value;
+        this.backingStore.set("identityResourceIdentifier", value);
     }
     /**
      * Sets the identityVersion property value. The Identity Version.
      * @param value Value to set for the identityVersion property.
      */
     public void setIdentityVersion(@jakarta.annotation.Nullable final String value) {
-        this.identityVersion = value;
+        this.backingStore.set("identityVersion", value);
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
-        this.minimumSupportedOperatingSystem = value;
+        this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

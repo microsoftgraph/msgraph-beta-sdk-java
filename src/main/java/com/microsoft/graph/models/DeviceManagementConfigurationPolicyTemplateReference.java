@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * Policy template reference information
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationPolicyTemplateReference implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationPolicyTemplateReference implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Template Display Name of the referenced template. This property is read-only.
-     */
-    private String templateDisplayName;
-    /**
-     * Template Display Version of the referenced Template. This property is read-only.
-     */
-    private String templateDisplayVersion;
-    /**
-     * Describes the TemplateFamily for the Template entity
-     */
-    private DeviceManagementConfigurationTemplateFamily templateFamily;
-    /**
-     * Template id
-     */
-    private String templateId;
-    /**
-     * Instantiates a new deviceManagementConfigurationPolicyTemplateReference and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationPolicyTemplateReference and sets the default values.
      */
     public DeviceManagementConfigurationPolicyTemplateReference() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationPolicyTemplateReference
+     * @return a DeviceManagementConfigurationPolicyTemplateReference
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationPolicyTemplateReference createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,12 +38,17 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
         return new DeviceManagementConfigurationPolicyTemplateReference();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -76,43 +66,43 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the templateDisplayName property value. Template Display Name of the referenced template. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateDisplayName() {
-        return this.templateDisplayName;
+        return this.backingStore.get("templateDisplayName");
     }
     /**
      * Gets the templateDisplayVersion property value. Template Display Version of the referenced Template. This property is read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateDisplayVersion() {
-        return this.templateDisplayVersion;
+        return this.backingStore.get("templateDisplayVersion");
     }
     /**
      * Gets the templateFamily property value. Describes the TemplateFamily for the Template entity
-     * @return a deviceManagementConfigurationTemplateFamily
+     * @return a DeviceManagementConfigurationTemplateFamily
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationTemplateFamily getTemplateFamily() {
-        return this.templateFamily;
+        return this.backingStore.get("templateFamily");
     }
     /**
      * Gets the templateId property value. Template id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.backingStore.get("templateId");
     }
     /**
      * Serializes information the current object
@@ -126,45 +116,45 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the templateDisplayName property value. Template Display Name of the referenced template. This property is read-only.
      * @param value Value to set for the templateDisplayName property.
      */
     public void setTemplateDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.templateDisplayName = value;
+        this.backingStore.set("templateDisplayName", value);
     }
     /**
      * Sets the templateDisplayVersion property value. Template Display Version of the referenced Template. This property is read-only.
      * @param value Value to set for the templateDisplayVersion property.
      */
     public void setTemplateDisplayVersion(@jakarta.annotation.Nullable final String value) {
-        this.templateDisplayVersion = value;
+        this.backingStore.set("templateDisplayVersion", value);
     }
     /**
      * Sets the templateFamily property value. Describes the TemplateFamily for the Template entity
      * @param value Value to set for the templateFamily property.
      */
     public void setTemplateFamily(@jakarta.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
-        this.templateFamily = value;
+        this.backingStore.set("templateFamily", value);
     }
     /**
      * Sets the templateId property value. Template id
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.backingStore.set("templateId", value);
     }
 }

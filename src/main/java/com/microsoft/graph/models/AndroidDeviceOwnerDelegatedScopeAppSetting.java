@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,33 +14,23 @@ import java.util.Objects;
  * Represents one item in the list of managed apps with app details and its associated delegated scope(s).
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AndroidDeviceOwnerDelegatedScopeAppSetting implements AdditionalDataHolder, Parsable {
+public class AndroidDeviceOwnerDelegatedScopeAppSetting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Represents an app in the list of managed applications
-     */
-    private AppListItem appDetail;
-    /**
-     * List of scopes an app has been assigned.
-     */
-    private java.util.List<AndroidDeviceOwnerDelegatedAppScopeType> appScopes;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new androidDeviceOwnerDelegatedScopeAppSetting and sets the default values.
+     * Instantiates a new AndroidDeviceOwnerDelegatedScopeAppSetting and sets the default values.
      */
     public AndroidDeviceOwnerDelegatedScopeAppSetting() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidDeviceOwnerDelegatedScopeAppSetting
+     * @return a AndroidDeviceOwnerDelegatedScopeAppSetting
      */
     @jakarta.annotation.Nonnull
     public static AndroidDeviceOwnerDelegatedScopeAppSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,28 +38,33 @@ public class AndroidDeviceOwnerDelegatedScopeAppSetting implements AdditionalDat
         return new AndroidDeviceOwnerDelegatedScopeAppSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the appDetail property value. Represents an app in the list of managed applications
-     * @return a appListItem
+     * @return a AppListItem
      */
     @jakarta.annotation.Nullable
     public AppListItem getAppDetail() {
-        return this.appDetail;
+        return this.backingStore.get("appDetail");
     }
     /**
      * Gets the appScopes property value. List of scopes an app has been assigned.
-     * @return a androidDeviceOwnerDelegatedAppScopeType
+     * @return a java.util.List<AndroidDeviceOwnerDelegatedAppScopeType>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerDelegatedAppScopeType> getAppScopes() {
-        return this.appScopes;
+        return this.backingStore.get("appScopes");
     }
     /**
      * The deserialization information for the current model
@@ -82,11 +80,11 @@ public class AndroidDeviceOwnerDelegatedScopeAppSetting implements AdditionalDat
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -100,31 +98,31 @@ public class AndroidDeviceOwnerDelegatedScopeAppSetting implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the appDetail property value. Represents an app in the list of managed applications
      * @param value Value to set for the appDetail property.
      */
     public void setAppDetail(@jakarta.annotation.Nullable final AppListItem value) {
-        this.appDetail = value;
+        this.backingStore.set("appDetail", value);
     }
     /**
      * Sets the appScopes property value. List of scopes an app has been assigned.
      * @param value Value to set for the appScopes property.
      */
     public void setAppScopes(@jakarta.annotation.Nullable final java.util.List<AndroidDeviceOwnerDelegatedAppScopeType> value) {
-        this.appScopes = value;
+        this.backingStore.set("appScopes", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
+public class GovernanceRuleSetting implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The id of the rule. For example, ExpirationRule and MfaRule.
-     */
-    private String ruleIdentifier;
-    /**
-     * The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
-     */
-    private String setting;
-    /**
-     * Instantiates a new governanceRuleSetting and sets the default values.
+     * Instantiates a new GovernanceRuleSetting and sets the default values.
      */
     public GovernanceRuleSetting() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceRuleSetting
+     * @return a GovernanceRuleSetting
      */
     @jakarta.annotation.Nonnull
     public static GovernanceRuleSetting createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,17 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
         return new GovernanceRuleSetting();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +61,27 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the ruleIdentifier property value. The id of the rule. For example, ExpirationRule and MfaRule.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRuleIdentifier() {
-        return this.ruleIdentifier;
+        return this.backingStore.get("ruleIdentifier");
     }
     /**
      * Gets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSetting() {
-        return this.setting;
+        return this.backingStore.get("setting");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the ruleIdentifier property value. The id of the rule. For example, ExpirationRule and MfaRule.
      * @param value Value to set for the ruleIdentifier property.
      */
     public void setRuleIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.ruleIdentifier = value;
+        this.backingStore.set("ruleIdentifier", value);
     }
     /**
      * Sets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final String value) {
-        this.setting = value;
+        this.backingStore.set("setting", value);
     }
 }

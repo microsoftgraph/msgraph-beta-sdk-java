@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationPolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<AuthorizationPolicy> value;
-    /**
-     * Instantiates a new authorizationPolicyCollectionResponse and sets the default values.
+     * Instantiates a new AuthorizationPolicyCollectionResponse and sets the default values.
      */
     public AuthorizationPolicyCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class AuthorizationPolicyCollectionResponse extends BaseCollectionPaginat
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authorizationPolicyCollectionResponse
+     * @return a AuthorizationPolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationPolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class AuthorizationPolicyCollectionResponse extends BaseCollectionPaginat
     }
     /**
      * Gets the value property value. The value property
-     * @return a authorizationPolicy
+     * @return a java.util.List<AuthorizationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationPolicy> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class AuthorizationPolicyCollectionResponse extends BaseCollectionPaginat
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<AuthorizationPolicy> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

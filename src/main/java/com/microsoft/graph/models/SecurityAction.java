@@ -10,63 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecurityAction extends Entity implements Parsable {
     /**
-     * Reason for invoking this action.
-     */
-    private String actionReason;
-    /**
-     * The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
-     */
-    private String appId;
-    /**
-     * Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
-     */
-    private String azureTenantId;
-    /**
-     * The clientContext property
-     */
-    private String clientContext;
-    /**
-     * Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Error info when the action fails.
-     */
-    private ResultInfo errorInfo;
-    /**
-     * Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     */
-    private OffsetDateTime lastActionDateTime;
-    /**
-     * Action name.
-     */
-    private String name;
-    /**
-     * Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
-     */
-    private java.util.List<KeyValuePair> parameters;
-    /**
-     * Collection of securityActionState to keep the history of an action.
-     */
-    private java.util.List<SecurityActionState> states;
-    /**
-     * Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
-     */
-    private OperationStatus status;
-    /**
-     * The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
-     */
-    private String user;
-    /**
-     * Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
-     */
-    private SecurityVendorInformation vendorInformation;
-    /**
-     * Instantiates a new securityAction and sets the default values.
+     * Instantiates a new SecurityAction and sets the default values.
      */
     public SecurityAction() {
         super();
@@ -74,7 +18,7 @@ public class SecurityAction extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a securityAction
+     * @return a SecurityAction
      */
     @jakarta.annotation.Nonnull
     public static SecurityAction createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,35 +27,35 @@ public class SecurityAction extends Entity implements Parsable {
     }
     /**
      * Gets the actionReason property value. Reason for invoking this action.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActionReason() {
-        return this.actionReason;
+        return this.backingStore.get("actionReason");
     }
     /**
      * Gets the appId property value. The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppId() {
-        return this.appId;
+        return this.backingStore.get("appId");
     }
     /**
      * Gets the azureTenantId property value. Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAzureTenantId() {
-        return this.azureTenantId;
+        return this.backingStore.get("azureTenantId");
     }
     /**
      * Gets the clientContext property value. The clientContext property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getClientContext() {
-        return this.clientContext;
+        return this.backingStore.get("clientContext");
     }
     /**
      * Gets the completedDateTime property value. Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -119,7 +63,7 @@ public class SecurityAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.backingStore.get("completedDateTime");
     }
     /**
      * Gets the createdDateTime property value. Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -127,15 +71,15 @@ public class SecurityAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the errorInfo property value. Error info when the action fails.
-     * @return a resultInfo
+     * @return a ResultInfo
      */
     @jakarta.annotation.Nullable
     public ResultInfo getErrorInfo() {
-        return this.errorInfo;
+        return this.backingStore.get("errorInfo");
     }
     /**
      * The deserialization information for the current model
@@ -166,55 +110,55 @@ public class SecurityAction extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this.lastActionDateTime;
+        return this.backingStore.get("lastActionDateTime");
     }
     /**
      * Gets the name property value. Action name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the parameters property value. Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
-     * @return a keyValuePair
+     * @return a java.util.List<KeyValuePair>
      */
     @jakarta.annotation.Nullable
     public java.util.List<KeyValuePair> getParameters() {
-        return this.parameters;
+        return this.backingStore.get("parameters");
     }
     /**
      * Gets the states property value. Collection of securityActionState to keep the history of an action.
-     * @return a securityActionState
+     * @return a java.util.List<SecurityActionState>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecurityActionState> getStates() {
-        return this.states;
+        return this.backingStore.get("states");
     }
     /**
      * Gets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
-     * @return a operationStatus
+     * @return a OperationStatus
      */
     @jakarta.annotation.Nullable
     public OperationStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the user property value. The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUser() {
-        return this.user;
+        return this.backingStore.get("user");
     }
     /**
      * Gets the vendorInformation property value. Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
-     * @return a securityVendorInformation
+     * @return a SecurityVendorInformation
      */
     @jakarta.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this.vendorInformation;
+        return this.backingStore.get("vendorInformation");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class SecurityAction extends Entity implements Parsable {
      * @param value Value to set for the actionReason property.
      */
     public void setActionReason(@jakarta.annotation.Nullable final String value) {
-        this.actionReason = value;
+        this.backingStore.set("actionReason", value);
     }
     /**
      * Sets the appId property value. The Application ID of the calling application that submitted (POST) the action. The appId should be extracted from the auth token and not entered manually by the calling application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
-        this.appId = value;
+        this.backingStore.set("appId", value);
     }
     /**
      * Sets the azureTenantId property value. Azure tenant ID of the entity to determine which tenant the entity belongs to (multi-tenancy support). The azureTenantId should be extracted from the auth token and not entered manually by the calling application.
      * @param value Value to set for the azureTenantId property.
      */
     public void setAzureTenantId(@jakarta.annotation.Nullable final String value) {
-        this.azureTenantId = value;
+        this.backingStore.set("azureTenantId", value);
     }
     /**
      * Sets the clientContext property value. The clientContext property
      * @param value Value to set for the clientContext property.
      */
     public void setClientContext(@jakarta.annotation.Nullable final String value) {
-        this.clientContext = value;
+        this.backingStore.set("clientContext", value);
     }
     /**
      * Sets the completedDateTime property value. Timestamp when the action was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.backingStore.set("completedDateTime", value);
     }
     /**
      * Sets the createdDateTime property value. Timestamp when the action is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the errorInfo property value. Error info when the action fails.
      * @param value Value to set for the errorInfo property.
      */
     public void setErrorInfo(@jakarta.annotation.Nullable final ResultInfo value) {
-        this.errorInfo = value;
+        this.backingStore.set("errorInfo", value);
     }
     /**
      * Sets the lastActionDateTime property value. Timestamp when this action was last updated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastActionDateTime = value;
+        this.backingStore.set("lastActionDateTime", value);
     }
     /**
      * Sets the name property value. Action name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the parameters property value. Collection of parameters (key-value pairs) necessary to invoke the action, for example, URL or fileHash to block.). Required.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this.parameters = value;
+        this.backingStore.set("parameters", value);
     }
     /**
      * Sets the states property value. Collection of securityActionState to keep the history of an action.
      * @param value Value to set for the states property.
      */
     public void setStates(@jakarta.annotation.Nullable final java.util.List<SecurityActionState> value) {
-        this.states = value;
+        this.backingStore.set("states", value);
     }
     /**
      * Sets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the user property value. The user principal name of the signed-in user that submitted  (POST) the action. The user should be extracted from the auth token and not entered manually by the calling application.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final String value) {
-        this.user = value;
+        this.backingStore.set("user", value);
     }
     /**
      * Sets the vendorInformation property value. Complex Type containing details about the Security product/service vendor, provider, and sub-provider (for example, vendor=Microsoft; provider=Windows Defender ATP; sub-provider=AppLocker).
      * @param value Value to set for the vendorInformation property.
      */
     public void setVendorInformation(@jakarta.annotation.Nullable final SecurityVendorInformation value) {
-        this.vendorInformation = value;
+        this.backingStore.set("vendorInformation", value);
     }
 }

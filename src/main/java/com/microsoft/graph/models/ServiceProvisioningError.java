@@ -4,42 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ServiceProvisioningError implements AdditionalDataHolder, Parsable {
+public class ServiceProvisioningError implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The date and time at which the error occurred.
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Indicates whether the Error has been attended to.
-     */
-    private Boolean isResolved;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
-     */
-    private String serviceInstance;
-    /**
-     * Instantiates a new serviceProvisioningError and sets the default values.
+     * Instantiates a new ServiceProvisioningError and sets the default values.
      */
     public ServiceProvisioningError() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceProvisioningError
+     * @return a ServiceProvisioningError
      */
     @jakarta.annotation.Nonnull
     public static ServiceProvisioningError createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,12 +44,17 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
         return new ServiceProvisioningError();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the createdDateTime property value. The date and time at which the error occurred.
@@ -68,7 +62,7 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,27 +79,27 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the isResolved property value. Indicates whether the Error has been attended to.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsResolved() {
-        return this.isResolved;
+        return this.backingStore.get("isResolved");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the serviceInstance property value. Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
-     * @return a string
+     * Gets the serviceInstance property value. Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getServiceInstance() {
-        return this.serviceInstance;
+        return this.backingStore.get("serviceInstance");
     }
     /**
      * Serializes information the current object
@@ -120,38 +114,38 @@ public class ServiceProvisioningError implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the createdDateTime property value. The date and time at which the error occurred.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the isResolved property value. Indicates whether the Error has been attended to.
      * @param value Value to set for the isResolved property.
      */
     public void setIsResolved(@jakarta.annotation.Nullable final Boolean value) {
-        this.isResolved = value;
+        this.backingStore.set("isResolved", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the serviceInstance property value. Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
+     * Sets the serviceInstance property value. Qualified service instance (for example, 'SharePoint/Dublin') that published the service error information.
      * @param value Value to set for the serviceInstance property.
      */
     public void setServiceInstance(@jakarta.annotation.Nullable final String value) {
-        this.serviceInstance = value;
+        this.backingStore.set("serviceInstance", value);
     }
 }

@@ -4,42 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Parsable {
+public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The end date for the calendar month for which SLA attainment is measured.
-     */
-    private LocalDate endDate;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Azure Active Directory SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
-     */
-    private Double score;
-    /**
-     * The start date for the calendar month for which SLA attainment is measured.
-     */
-    private LocalDate startDate;
-    /**
-     * Instantiates a new serviceLevelAgreementAttainment and sets the default values.
+     * Instantiates a new ServiceLevelAgreementAttainment and sets the default values.
      */
     public ServiceLevelAgreementAttainment() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceLevelAgreementAttainment
+     * @return a ServiceLevelAgreementAttainment
      */
     @jakarta.annotation.Nonnull
     public static ServiceLevelAgreementAttainment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -47,12 +36,17 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Pa
         return new ServiceLevelAgreementAttainment();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the endDate property value. The end date for the calendar month for which SLA attainment is measured.
@@ -60,7 +54,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public LocalDate getEndDate() {
-        return this.endDate;
+        return this.backingStore.get("endDate");
     }
     /**
      * The deserialization information for the current model
@@ -77,19 +71,19 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Pa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the score property value. The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Azure Active Directory SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
-     * @return a double
+     * Gets the score property value. The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Microsoft Entra SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getScore() {
-        return this.score;
+        return this.backingStore.get("score");
     }
     /**
      * Gets the startDate property value. The start date for the calendar month for which SLA attainment is measured.
@@ -97,7 +91,7 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Pa
      */
     @jakarta.annotation.Nullable
     public LocalDate getStartDate() {
-        return this.startDate;
+        return this.backingStore.get("startDate");
     }
     /**
      * Serializes information the current object
@@ -112,38 +106,38 @@ public class ServiceLevelAgreementAttainment implements AdditionalDataHolder, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the endDate property value. The end date for the calendar month for which SLA attainment is measured.
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.endDate = value;
+        this.backingStore.set("endDate", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the score property value. The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Azure Active Directory SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
+     * Sets the score property value. The level of SLA attainment achieved by the tenant for the calendar month identified, as described in Microsoft Entra SLA performance. Values are truncated, not rounded, so the actual value is always equal to or higher than the displayed value. Values are expressed as a percentage of availability for the tenant.
      * @param value Value to set for the score property.
      */
     public void setScore(@jakarta.annotation.Nullable final Double value) {
-        this.score = value;
+        this.backingStore.set("score", value);
     }
     /**
      * Sets the startDate property value. The start date for the calendar month for which SLA attainment is measured.
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.startDate = value;
+        this.backingStore.set("startDate", value);
     }
 }

@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SecureScoreCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<SecureScore> value;
-    /**
-     * Instantiates a new secureScoreCollectionResponse and sets the default values.
+     * Instantiates a new SecureScoreCollectionResponse and sets the default values.
      */
     public SecureScoreCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class SecureScoreCollectionResponse extends BaseCollectionPaginationCount
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a secureScoreCollectionResponse
+     * @return a SecureScoreCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static SecureScoreCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class SecureScoreCollectionResponse extends BaseCollectionPaginationCount
     }
     /**
      * Gets the value property value. The value property
-     * @return a secureScore
+     * @return a java.util.List<SecureScore>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SecureScore> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class SecureScoreCollectionResponse extends BaseCollectionPaginationCount
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<SecureScore> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

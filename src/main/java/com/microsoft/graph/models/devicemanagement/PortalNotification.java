@@ -4,61 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PortalNotification implements AdditionalDataHolder, Parsable {
+public class PortalNotification implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The associated alert impact.
-     */
-    private AlertImpact alertImpact;
-    /**
-     * The associated alert record ID.
-     */
-    private String alertRecordId;
-    /**
-     * The associated alert rule ID.
-     */
-    private String alertRuleId;
-    /**
-     * The associated alert rule name.
-     */
-    private String alertRuleName;
-    /**
-     * The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     */
-    private AlertRuleTemplate alertRuleTemplate;
-    /**
-     * The unique identifier for the portal notification.
-     */
-    private String id;
-    /**
-     * true if the portal notification has already been sent to the user; false otherwise.
-     */
-    private Boolean isPortalNotificationSent;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     */
-    private RuleSeverityType severity;
-    /**
-     * Instantiates a new portalNotification and sets the default values.
+     * Instantiates a new PortalNotification and sets the default values.
      */
     public PortalNotification() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a portalNotification
+     * @return a PortalNotification
      */
     @jakarta.annotation.Nonnull
     public static PortalNotification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -66,52 +35,57 @@ public class PortalNotification implements AdditionalDataHolder, Parsable {
         return new PortalNotification();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alertImpact property value. The associated alert impact.
-     * @return a alertImpact
+     * @return a AlertImpact
      */
     @jakarta.annotation.Nullable
     public AlertImpact getAlertImpact() {
-        return this.alertImpact;
+        return this.backingStore.get("alertImpact");
     }
     /**
      * Gets the alertRecordId property value. The associated alert record ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertRecordId() {
-        return this.alertRecordId;
+        return this.backingStore.get("alertRecordId");
     }
     /**
      * Gets the alertRuleId property value. The associated alert rule ID.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleId() {
-        return this.alertRuleId;
+        return this.backingStore.get("alertRuleId");
     }
     /**
      * Gets the alertRuleName property value. The associated alert rule name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertRuleName() {
-        return this.alertRuleName;
+        return this.backingStore.get("alertRuleName");
     }
     /**
      * Gets the alertRuleTemplate property value. The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
-     * @return a alertRuleTemplate
+     * @return a AlertRuleTemplate
      */
     @jakarta.annotation.Nullable
     public AlertRuleTemplate getAlertRuleTemplate() {
-        return this.alertRuleTemplate;
+        return this.backingStore.get("alertRuleTemplate");
     }
     /**
      * The deserialization information for the current model
@@ -133,35 +107,35 @@ public class PortalNotification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the id property value. The unique identifier for the portal notification.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the isPortalNotificationSent property value. true if the portal notification has already been sent to the user; false otherwise.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPortalNotificationSent() {
-        return this.isPortalNotificationSent;
+        return this.backingStore.get("isPortalNotificationSent");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the severity property value. The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
-     * @return a ruleSeverityType
+     * @return a RuleSeverityType
      */
     @jakarta.annotation.Nullable
     public RuleSeverityType getSeverity() {
-        return this.severity;
+        return this.backingStore.get("severity");
     }
     /**
      * Serializes information the current object
@@ -181,73 +155,73 @@ public class PortalNotification implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alertImpact property value. The associated alert impact.
      * @param value Value to set for the alertImpact property.
      */
     public void setAlertImpact(@jakarta.annotation.Nullable final AlertImpact value) {
-        this.alertImpact = value;
+        this.backingStore.set("alertImpact", value);
     }
     /**
      * Sets the alertRecordId property value. The associated alert record ID.
      * @param value Value to set for the alertRecordId property.
      */
     public void setAlertRecordId(@jakarta.annotation.Nullable final String value) {
-        this.alertRecordId = value;
+        this.backingStore.set("alertRecordId", value);
     }
     /**
      * Sets the alertRuleId property value. The associated alert rule ID.
      * @param value Value to set for the alertRuleId property.
      */
     public void setAlertRuleId(@jakarta.annotation.Nullable final String value) {
-        this.alertRuleId = value;
+        this.backingStore.set("alertRuleId", value);
     }
     /**
      * Sets the alertRuleName property value. The associated alert rule name.
      * @param value Value to set for the alertRuleName property.
      */
     public void setAlertRuleName(@jakarta.annotation.Nullable final String value) {
-        this.alertRuleName = value;
+        this.backingStore.set("alertRuleName", value);
     }
     /**
      * Sets the alertRuleTemplate property value. The associated alert rule template. The possible values are: cloudPcProvisionScenario, cloudPcImageUploadScenario, cloudPcOnPremiseNetworkConnectionCheckScenario, unknownFutureValue, cloudPcInGracePeriodScenario. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: cloudPcInGracePeriodScenario.
      * @param value Value to set for the alertRuleTemplate property.
      */
     public void setAlertRuleTemplate(@jakarta.annotation.Nullable final AlertRuleTemplate value) {
-        this.alertRuleTemplate = value;
+        this.backingStore.set("alertRuleTemplate", value);
     }
     /**
      * Sets the id property value. The unique identifier for the portal notification.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the isPortalNotificationSent property value. true if the portal notification has already been sent to the user; false otherwise.
      * @param value Value to set for the isPortalNotificationSent property.
      */
     public void setIsPortalNotificationSent(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPortalNotificationSent = value;
+        this.backingStore.set("isPortalNotificationSent", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the severity property value. The associated alert rule severity. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final RuleSeverityType value) {
-        this.severity = value;
+        this.backingStore.set("severity", value);
     }
 }

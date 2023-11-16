@@ -4,30 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Parsable {
+public class RemovePasswordPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The keyId property
-     */
-    private UUID keyId;
-    /**
-     * Instantiates a new removePasswordPostRequestBody and sets the default values.
+     * Instantiates a new RemovePasswordPostRequestBody and sets the default values.
      */
     public RemovePasswordPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a removePasswordPostRequestBody
+     * @return a RemovePasswordPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static RemovePasswordPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,12 +36,17 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
         return new RemovePasswordPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -58,7 +64,7 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public UUID getKeyId() {
-        return this.keyId;
+        return this.backingStore.get("keyId");
     }
     /**
      * Serializes information the current object
@@ -70,17 +76,17 @@ public class RemovePasswordPostRequestBody implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the keyId property value. The keyId property
      * @param value Value to set for the keyId property.
      */
     public void setKeyId(@jakarta.annotation.Nullable final UUID value) {
-        this.keyId = value;
+        this.backingStore.set("keyId", value);
     }
 }

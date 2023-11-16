@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
+public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
-     */
-    private AttendeeBase attendee;
-    /**
-     * The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     */
-    private FreeBusyStatus availability;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new attendeeAvailability and sets the default values.
+     * Instantiates a new AttendeeAvailability and sets the default values.
      */
     public AttendeeAvailability() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a attendeeAvailability
+     * @return a AttendeeAvailability
      */
     @jakarta.annotation.Nonnull
     public static AttendeeAvailability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,28 +35,33 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
         return new AttendeeAvailability();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
-     * @return a attendeeBase
+     * @return a AttendeeBase
      */
     @jakarta.annotation.Nullable
     public AttendeeBase getAttendee() {
-        return this.attendee;
+        return this.backingStore.get("attendee");
     }
     /**
      * Gets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     * @return a freeBusyStatus
+     * @return a FreeBusyStatus
      */
     @jakarta.annotation.Nullable
     public FreeBusyStatus getAvailability() {
-        return this.availability;
+        return this.backingStore.get("availability");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +77,11 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class AttendeeAvailability implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
      * @param value Value to set for the attendee property.
      */
     public void setAttendee(@jakarta.annotation.Nullable final AttendeeBase value) {
-        this.attendee = value;
+        this.backingStore.set("attendee", value);
     }
     /**
      * Sets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {
-        this.availability = value;
+        this.backingStore.set("availability", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

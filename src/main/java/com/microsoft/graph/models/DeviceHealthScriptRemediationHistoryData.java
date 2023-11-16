@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,41 +15,23 @@ import java.util.Objects;
  * The number of devices remediated by a device health script on a given date.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataHolder, Parsable {
+public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The date on which devices were remediated by the device health script.
-     */
-    private LocalDate date;
-    /**
-     * The number of devices for which the detection script found an issue.
-     */
-    private Integer detectFailedDeviceCount;
-    /**
-     * The number of devices that were found to have no issue by the device health script.
-     */
-    private Integer noIssueDeviceCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The number of devices remediated by the device health script.
-     */
-    private Integer remediatedDeviceCount;
-    /**
-     * Instantiates a new deviceHealthScriptRemediationHistoryData and sets the default values.
+     * Instantiates a new DeviceHealthScriptRemediationHistoryData and sets the default values.
      */
     public DeviceHealthScriptRemediationHistoryData() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptRemediationHistoryData
+     * @return a DeviceHealthScriptRemediationHistoryData
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptRemediationHistoryData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,12 +39,17 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
         return new DeviceHealthScriptRemediationHistoryData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the date property value. The date on which devices were remediated by the device health script.
@@ -67,15 +57,15 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      */
     @jakarta.annotation.Nullable
     public LocalDate getDate() {
-        return this.date;
+        return this.backingStore.get("date");
     }
     /**
      * Gets the detectFailedDeviceCount property value. The number of devices for which the detection script found an issue.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDetectFailedDeviceCount() {
-        return this.detectFailedDeviceCount;
+        return this.backingStore.get("detectFailedDeviceCount");
     }
     /**
      * The deserialization information for the current model
@@ -93,27 +83,27 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
     }
     /**
      * Gets the noIssueDeviceCount property value. The number of devices that were found to have no issue by the device health script.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNoIssueDeviceCount() {
-        return this.noIssueDeviceCount;
+        return this.backingStore.get("noIssueDeviceCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the remediatedDeviceCount property value. The number of devices remediated by the device health script.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRemediatedDeviceCount() {
-        return this.remediatedDeviceCount;
+        return this.backingStore.get("remediatedDeviceCount");
     }
     /**
      * Serializes information the current object
@@ -129,45 +119,45 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the date property value. The date on which devices were remediated by the device health script.
      * @param value Value to set for the date property.
      */
     public void setDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.date = value;
+        this.backingStore.set("date", value);
     }
     /**
      * Sets the detectFailedDeviceCount property value. The number of devices for which the detection script found an issue.
      * @param value Value to set for the detectFailedDeviceCount property.
      */
     public void setDetectFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.detectFailedDeviceCount = value;
+        this.backingStore.set("detectFailedDeviceCount", value);
     }
     /**
      * Sets the noIssueDeviceCount property value. The number of devices that were found to have no issue by the device health script.
      * @param value Value to set for the noIssueDeviceCount property.
      */
     public void setNoIssueDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.noIssueDeviceCount = value;
+        this.backingStore.set("noIssueDeviceCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the remediatedDeviceCount property value. The number of devices remediated by the device health script.
      * @param value Value to set for the remediatedDeviceCount property.
      */
     public void setRemediatedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.remediatedDeviceCount = value;
+        this.backingStore.set("remediatedDeviceCount", value);
     }
 }

@@ -11,63 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Run extends Entity implements Parsable {
     /**
-     * The date time that the run completed. Value is null if the workflow hasn't completed.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * The number of tasks that failed in the run execution.
-     */
-    private Integer failedTasksCount;
-    /**
-     * The number of users that failed in the run execution.
-     */
-    private Integer failedUsersCount;
-    /**
-     * The datetime that the run was last updated.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime lastUpdatedDateTime;
-    /**
-     * The processingStatus property
-     */
-    private LifecycleWorkflowProcessingStatus processingStatus;
-    /**
-     * The date time that the run is scheduled to be executed for a workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime scheduledDateTime;
-    /**
-     * The date time that the run execution started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
-     */
-    private OffsetDateTime startedDateTime;
-    /**
-     * The number of successfully completed users in the run.
-     */
-    private Integer successfulUsersCount;
-    /**
-     * The related taskProcessingResults.
-     */
-    private java.util.List<TaskProcessingResult> taskProcessingResults;
-    /**
-     * The totalTasksCount property
-     */
-    private Integer totalTasksCount;
-    /**
-     * The total number of unprocessed tasks in the run execution.
-     */
-    private Integer totalUnprocessedTasksCount;
-    /**
-     * The total number of users in the workflow execution.
-     */
-    private Integer totalUsersCount;
-    /**
-     * The associated individual user execution.
-     */
-    private java.util.List<UserProcessingResult> userProcessingResults;
-    /**
-     * The workflowExecutionType property
-     */
-    private WorkflowExecutionType workflowExecutionType;
-    /**
-     * Instantiates a new run and sets the default values.
+     * Instantiates a new Run and sets the default values.
      */
     public Run() {
         super();
@@ -75,7 +19,7 @@ public class Run extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a run
+     * @return a Run
      */
     @jakarta.annotation.Nonnull
     public static Run createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -88,23 +32,23 @@ public class Run extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.backingStore.get("completedDateTime");
     }
     /**
      * Gets the failedTasksCount property value. The number of tasks that failed in the run execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedTasksCount() {
-        return this.failedTasksCount;
+        return this.backingStore.get("failedTasksCount");
     }
     /**
      * Gets the failedUsersCount property value. The number of users that failed in the run execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFailedUsersCount() {
-        return this.failedUsersCount;
+        return this.backingStore.get("failedUsersCount");
     }
     /**
      * The deserialization information for the current model
@@ -135,15 +79,15 @@ public class Run extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this.lastUpdatedDateTime;
+        return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
-     * @return a lifecycleWorkflowProcessingStatus
+     * @return a LifecycleWorkflowProcessingStatus
      */
     @jakarta.annotation.Nullable
     public LifecycleWorkflowProcessingStatus getProcessingStatus() {
-        return this.processingStatus;
+        return this.backingStore.get("processingStatus");
     }
     /**
      * Gets the scheduledDateTime property value. The date time that the run is scheduled to be executed for a workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -151,7 +95,7 @@ public class Run extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getScheduledDateTime() {
-        return this.scheduledDateTime;
+        return this.backingStore.get("scheduledDateTime");
     }
     /**
      * Gets the startedDateTime property value. The date time that the run execution started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
@@ -159,63 +103,63 @@ public class Run extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartedDateTime() {
-        return this.startedDateTime;
+        return this.backingStore.get("startedDateTime");
     }
     /**
      * Gets the successfulUsersCount property value. The number of successfully completed users in the run.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSuccessfulUsersCount() {
-        return this.successfulUsersCount;
+        return this.backingStore.get("successfulUsersCount");
     }
     /**
      * Gets the taskProcessingResults property value. The related taskProcessingResults.
-     * @return a taskProcessingResult
+     * @return a java.util.List<TaskProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TaskProcessingResult> getTaskProcessingResults() {
-        return this.taskProcessingResults;
+        return this.backingStore.get("taskProcessingResults");
     }
     /**
      * Gets the totalTasksCount property value. The totalTasksCount property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalTasksCount() {
-        return this.totalTasksCount;
+        return this.backingStore.get("totalTasksCount");
     }
     /**
      * Gets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks in the run execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUnprocessedTasksCount() {
-        return this.totalUnprocessedTasksCount;
+        return this.backingStore.get("totalUnprocessedTasksCount");
     }
     /**
      * Gets the totalUsersCount property value. The total number of users in the workflow execution.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalUsersCount() {
-        return this.totalUsersCount;
+        return this.backingStore.get("totalUsersCount");
     }
     /**
      * Gets the userProcessingResults property value. The associated individual user execution.
-     * @return a userProcessingResult
+     * @return a java.util.List<UserProcessingResult>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UserProcessingResult> getUserProcessingResults() {
-        return this.userProcessingResults;
+        return this.backingStore.get("userProcessingResults");
     }
     /**
      * Gets the workflowExecutionType property value. The workflowExecutionType property
-     * @return a workflowExecutionType
+     * @return a WorkflowExecutionType
      */
     @jakarta.annotation.Nullable
     public WorkflowExecutionType getWorkflowExecutionType() {
-        return this.workflowExecutionType;
+        return this.backingStore.get("workflowExecutionType");
     }
     /**
      * Serializes information the current object
@@ -244,97 +188,97 @@ public class Run extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.backingStore.set("completedDateTime", value);
     }
     /**
      * Sets the failedTasksCount property value. The number of tasks that failed in the run execution.
      * @param value Value to set for the failedTasksCount property.
      */
     public void setFailedTasksCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedTasksCount = value;
+        this.backingStore.set("failedTasksCount", value);
     }
     /**
      * Sets the failedUsersCount property value. The number of users that failed in the run execution.
      * @param value Value to set for the failedUsersCount property.
      */
     public void setFailedUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.failedUsersCount = value;
+        this.backingStore.set("failedUsersCount", value);
     }
     /**
      * Sets the lastUpdatedDateTime property value. The datetime that the run was last updated.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastUpdatedDateTime = value;
+        this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
      * Sets the processingStatus property value. The processingStatus property
      * @param value Value to set for the processingStatus property.
      */
     public void setProcessingStatus(@jakarta.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
-        this.processingStatus = value;
+        this.backingStore.set("processingStatus", value);
     }
     /**
      * Sets the scheduledDateTime property value. The date time that the run is scheduled to be executed for a workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the scheduledDateTime property.
      */
     public void setScheduledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.scheduledDateTime = value;
+        this.backingStore.set("scheduledDateTime", value);
     }
     /**
      * Sets the startedDateTime property value. The date time that the run execution started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startedDateTime = value;
+        this.backingStore.set("startedDateTime", value);
     }
     /**
      * Sets the successfulUsersCount property value. The number of successfully completed users in the run.
      * @param value Value to set for the successfulUsersCount property.
      */
     public void setSuccessfulUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.successfulUsersCount = value;
+        this.backingStore.set("successfulUsersCount", value);
     }
     /**
      * Sets the taskProcessingResults property value. The related taskProcessingResults.
      * @param value Value to set for the taskProcessingResults property.
      */
     public void setTaskProcessingResults(@jakarta.annotation.Nullable final java.util.List<TaskProcessingResult> value) {
-        this.taskProcessingResults = value;
+        this.backingStore.set("taskProcessingResults", value);
     }
     /**
      * Sets the totalTasksCount property value. The totalTasksCount property
      * @param value Value to set for the totalTasksCount property.
      */
     public void setTotalTasksCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalTasksCount = value;
+        this.backingStore.set("totalTasksCount", value);
     }
     /**
      * Sets the totalUnprocessedTasksCount property value. The total number of unprocessed tasks in the run execution.
      * @param value Value to set for the totalUnprocessedTasksCount property.
      */
     public void setTotalUnprocessedTasksCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalUnprocessedTasksCount = value;
+        this.backingStore.set("totalUnprocessedTasksCount", value);
     }
     /**
      * Sets the totalUsersCount property value. The total number of users in the workflow execution.
      * @param value Value to set for the totalUsersCount property.
      */
     public void setTotalUsersCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalUsersCount = value;
+        this.backingStore.set("totalUsersCount", value);
     }
     /**
      * Sets the userProcessingResults property value. The associated individual user execution.
      * @param value Value to set for the userProcessingResults property.
      */
     public void setUserProcessingResults(@jakarta.annotation.Nullable final java.util.List<UserProcessingResult> value) {
-        this.userProcessingResults = value;
+        this.backingStore.set("userProcessingResults", value);
     }
     /**
      * Sets the workflowExecutionType property value. The workflowExecutionType property
      * @param value Value to set for the workflowExecutionType property.
      */
     public void setWorkflowExecutionType(@jakarta.annotation.Nullable final WorkflowExecutionType value) {
-        this.workflowExecutionType = value;
+        this.backingStore.set("workflowExecutionType", value);
     }
 }

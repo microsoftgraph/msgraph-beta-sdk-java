@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CustomerVoiceSettings implements AdditionalDataHolder, Parsable {
+public class CustomerVoiceSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
-     */
-    private Boolean isInOrgFormsPhishingScanEnabled;
-    /**
-     * Controls whether the names of users who fill out forms are recorded.
-     */
-    private Boolean isRecordIdentityByDefaultEnabled;
-    /**
-     * Controls whether only users inside your organization can submit a response.
-     */
-    private Boolean isRestrictedSurveyAccessEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new customerVoiceSettings and sets the default values.
+     * Instantiates a new CustomerVoiceSettings and sets the default values.
      */
     public CustomerVoiceSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a customerVoiceSettings
+     * @return a CustomerVoiceSettings
      */
     @jakarta.annotation.Nonnull
     public static CustomerVoiceSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class CustomerVoiceSettings implements AdditionalDataHolder, Parsable {
         return new CustomerVoiceSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class CustomerVoiceSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isInOrgFormsPhishingScanEnabled property value. Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInOrgFormsPhishingScanEnabled() {
-        return this.isInOrgFormsPhishingScanEnabled;
+        return this.backingStore.get("isInOrgFormsPhishingScanEnabled");
     }
     /**
      * Gets the isRecordIdentityByDefaultEnabled property value. Controls whether the names of users who fill out forms are recorded.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordIdentityByDefaultEnabled() {
-        return this.isRecordIdentityByDefaultEnabled;
+        return this.backingStore.get("isRecordIdentityByDefaultEnabled");
     }
     /**
      * Gets the isRestrictedSurveyAccessEnabled property value. Controls whether only users inside your organization can submit a response.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRestrictedSurveyAccessEnabled() {
-        return this.isRestrictedSurveyAccessEnabled;
+        return this.backingStore.get("isRestrictedSurveyAccessEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class CustomerVoiceSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the isInOrgFormsPhishingScanEnabled property value. Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
      * @param value Value to set for the isInOrgFormsPhishingScanEnabled property.
      */
     public void setIsInOrgFormsPhishingScanEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isInOrgFormsPhishingScanEnabled = value;
+        this.backingStore.set("isInOrgFormsPhishingScanEnabled", value);
     }
     /**
      * Sets the isRecordIdentityByDefaultEnabled property value. Controls whether the names of users who fill out forms are recorded.
      * @param value Value to set for the isRecordIdentityByDefaultEnabled property.
      */
     public void setIsRecordIdentityByDefaultEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRecordIdentityByDefaultEnabled = value;
+        this.backingStore.set("isRecordIdentityByDefaultEnabled", value);
     }
     /**
      * Sets the isRestrictedSurveyAccessEnabled property value. Controls whether only users inside your organization can submit a response.
      * @param value Value to set for the isRestrictedSurveyAccessEnabled property.
      */
     public void setIsRestrictedSurveyAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRestrictedSurveyAccessEnabled = value;
+        this.backingStore.set("isRestrictedSurveyAccessEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

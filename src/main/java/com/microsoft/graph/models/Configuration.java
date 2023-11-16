@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Configuration implements AdditionalDataHolder, Parsable {
+public class Configuration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The authorizedAppIds property
-     */
-    private java.util.List<String> authorizedAppIds;
-    /**
-     * The authorizedApps property
-     */
-    private java.util.List<String> authorizedApps;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new configuration and sets the default values.
+     * Instantiates a new Configuration and sets the default values.
      */
     public Configuration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a configuration
+     * @return a Configuration
      */
     @jakarta.annotation.Nonnull
     public static Configuration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,28 +35,33 @@ public class Configuration implements AdditionalDataHolder, Parsable {
         return new Configuration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the authorizedAppIds property value. The authorizedAppIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAuthorizedAppIds() {
-        return this.authorizedAppIds;
+        return this.backingStore.get("authorizedAppIds");
     }
     /**
      * Gets the authorizedApps property value. The authorizedApps property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAuthorizedApps() {
-        return this.authorizedApps;
+        return this.backingStore.get("authorizedApps");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +77,11 @@ public class Configuration implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class Configuration implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the authorizedAppIds property value. The authorizedAppIds property
      * @param value Value to set for the authorizedAppIds property.
      */
     public void setAuthorizedAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.authorizedAppIds = value;
+        this.backingStore.set("authorizedAppIds", value);
     }
     /**
      * Sets the authorizedApps property value. The authorizedApps property
      * @param value Value to set for the authorizedApps property.
      */
     public void setAuthorizedApps(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.authorizedApps = value;
+        this.backingStore.set("authorizedApps", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

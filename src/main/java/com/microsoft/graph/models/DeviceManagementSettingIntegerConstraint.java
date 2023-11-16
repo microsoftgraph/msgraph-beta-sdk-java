@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementSettingIntegerConstraint extends DeviceManagementConstraint implements Parsable {
     /**
-     * The maximum permitted value
-     */
-    private Integer maximumValue;
-    /**
-     * The minimum permitted value
-     */
-    private Integer minimumValue;
-    /**
-     * Instantiates a new deviceManagementSettingIntegerConstraint and sets the default values.
+     * Instantiates a new DeviceManagementSettingIntegerConstraint and sets the default values.
      */
     public DeviceManagementSettingIntegerConstraint() {
         super();
@@ -29,7 +21,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementSettingIntegerConstraint
+     * @return a DeviceManagementSettingIntegerConstraint
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementSettingIntegerConstraint createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,19 +41,19 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     }
     /**
      * Gets the maximumValue property value. The maximum permitted value
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMaximumValue() {
-        return this.maximumValue;
+        return this.backingStore.get("maximumValue");
     }
     /**
      * Gets the minimumValue property value. The minimum permitted value
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMinimumValue() {
-        return this.minimumValue;
+        return this.backingStore.get("minimumValue");
     }
     /**
      * Serializes information the current object
@@ -78,13 +70,13 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * @param value Value to set for the maximumValue property.
      */
     public void setMaximumValue(@jakarta.annotation.Nullable final Integer value) {
-        this.maximumValue = value;
+        this.backingStore.set("maximumValue", value);
     }
     /**
      * Sets the minimumValue property value. The minimum permitted value
      * @param value Value to set for the minimumValue property.
      */
     public void setMinimumValue(@jakarta.annotation.Nullable final Integer value) {
-        this.minimumValue = value;
+        this.backingStore.set("minimumValue", value);
     }
 }

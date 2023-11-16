@@ -130,6 +130,8 @@ import com.microsoft.kiota.serialization.ParseNodeFactoryRegistry;
 import com.microsoft.kiota.serialization.SerializationWriterFactoryRegistry;
 import com.microsoft.kiota.serialization.TextParseNodeFactory;
 import com.microsoft.kiota.serialization.TextSerializationWriterFactory;
+import com.microsoft.kiota.store.BackingStoreFactory;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Objects;
 /**
@@ -924,7 +926,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      * @param appId Alternate key of application
-     * @return a applicationsWithAppIdRequestBuilder
+     * @return a ApplicationsWithAppIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationsWithAppIdRequestBuilder applicationsWithAppId(@jakarta.annotation.Nonnull final String appId) {
@@ -934,7 +936,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of application entities.
      * @param uniqueName Alternate key of application
-     * @return a applicationsWithUniqueNameRequestBuilder
+     * @return a ApplicationsWithUniqueNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ApplicationsWithUniqueNameRequestBuilder applicationsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
@@ -943,9 +945,10 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     }
     /**
      * Instantiates a new BaseGraphServiceClient and sets the default values.
+     * @param backingStore The backing store to use for the models.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public BaseGraphServiceClient(@jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+    public BaseGraphServiceClient(@jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final BackingStoreFactory backingStore) {
         super(requestAdapter, "{+baseurl}");
         this.pathParameters = new HashMap<>();
         ApiClientBuilder.registerDefaultSerializer(JsonSerializationWriterFactory.class);
@@ -959,11 +962,12 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
             requestAdapter.setBaseUrl("https://graph.microsoft.com/beta");
         }
         pathParameters.put("baseurl", requestAdapter.getBaseUrl());
+        this.requestAdapter.enableBackingStore(backingStore);
     }
     /**
      * Provides operations to manage the collection of device entities.
      * @param deviceId Alternate key of device
-     * @return a devicesWithDeviceIdRequestBuilder
+     * @return a DevicesWithDeviceIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DevicesWithDeviceIdRequestBuilder devicesWithDeviceId(@jakarta.annotation.Nonnull final String deviceId) {
@@ -973,7 +977,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of directoryRole entities.
      * @param roleTemplateId Alternate key of directoryRole
-     * @return a directoryRolesWithRoleTemplateIdRequestBuilder
+     * @return a DirectoryRolesWithRoleTemplateIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public DirectoryRolesWithRoleTemplateIdRequestBuilder directoryRolesWithRoleTemplateId(@jakarta.annotation.Nonnull final String roleTemplateId) {
@@ -983,7 +987,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of group entities.
      * @param uniqueName Alternate key of group
-     * @return a groupsWithUniqueNameRequestBuilder
+     * @return a GroupsWithUniqueNameRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupsWithUniqueNameRequestBuilder groupsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
@@ -993,7 +997,7 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     /**
      * Provides operations to manage the collection of servicePrincipal entities.
      * @param appId Alternate key of servicePrincipal
-     * @return a servicePrincipalsWithAppIdRequestBuilder
+     * @return a ServicePrincipalsWithAppIdRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ServicePrincipalsWithAppIdRequestBuilder servicePrincipalsWithAppId(@jakarta.annotation.Nonnull final String appId) {

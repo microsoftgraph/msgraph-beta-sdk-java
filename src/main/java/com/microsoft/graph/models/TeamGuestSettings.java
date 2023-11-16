@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
+public class TeamGuestSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * If set to true, guests can add and update channels.
-     */
-    private Boolean allowCreateUpdateChannels;
-    /**
-     * If set to true, guests can delete channels.
-     */
-    private Boolean allowDeleteChannels;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new teamGuestSettings and sets the default values.
+     * Instantiates a new TeamGuestSettings and sets the default values.
      */
     public TeamGuestSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamGuestSettings
+     * @return a TeamGuestSettings
      */
     @jakarta.annotation.Nonnull
     public static TeamGuestSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,28 +35,33 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
         return new TeamGuestSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowCreateUpdateChannels property value. If set to true, guests can add and update channels.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowCreateUpdateChannels() {
-        return this.allowCreateUpdateChannels;
+        return this.backingStore.get("allowCreateUpdateChannels");
     }
     /**
      * Gets the allowDeleteChannels property value. If set to true, guests can delete channels.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowDeleteChannels() {
-        return this.allowDeleteChannels;
+        return this.backingStore.get("allowDeleteChannels");
     }
     /**
      * The deserialization information for the current model
@@ -79,11 +77,11 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class TeamGuestSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the allowCreateUpdateChannels property value. If set to true, guests can add and update channels.
      * @param value Value to set for the allowCreateUpdateChannels property.
      */
     public void setAllowCreateUpdateChannels(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowCreateUpdateChannels = value;
+        this.backingStore.set("allowCreateUpdateChannels", value);
     }
     /**
      * Sets the allowDeleteChannels property value. If set to true, guests can delete channels.
      * @param value Value to set for the allowDeleteChannels property.
      */
     public void setAllowDeleteChannels(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowDeleteChannels = value;
+        this.backingStore.set("allowDeleteChannels", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

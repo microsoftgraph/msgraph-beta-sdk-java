@@ -4,141 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PolicyRoot implements AdditionalDataHolder, Parsable {
+public class PolicyRoot implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The policy that contains directory-level access review settings.
+     * Stores model information.
      */
-    private AccessReviewPolicy accessReviewPolicy;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The policy that controls the idle time out for web sessions for applications.
-     */
-    private java.util.List<ActivityBasedTimeoutPolicy> activityBasedTimeoutPolicies;
-    /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The policy by which consent requests are created and managed for the entire tenant.
-     */
-    private AdminConsentRequestPolicy adminConsentRequestPolicy;
-    /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     */
-    private java.util.List<AppManagementPolicy> appManagementPolicies;
-    /**
-     * The policy configuration of the self-service sign-up experience of external users.
-     */
-    private AuthenticationFlowsPolicy authenticationFlowsPolicy;
-    /**
-     * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
-     */
-    private AuthenticationMethodsPolicy authenticationMethodsPolicy;
-    /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
-     */
-    private java.util.List<AuthenticationStrengthPolicy> authenticationStrengthPolicies;
-    /**
-     * The policy that controls Azure AD authorization settings.
-     */
-    private java.util.List<AuthorizationPolicy> authorizationPolicy;
-    /**
-     * The Azure AD B2C policies that define how end users register via local accounts.
-     */
-    private B2cAuthenticationMethodsPolicy b2cAuthenticationMethodsPolicy;
-    /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
-     */
-    private java.util.List<ClaimsMappingPolicy> claimsMappingPolicies;
-    /**
-     * The custom rules that define an access scenario.
-     */
-    private java.util.List<ConditionalAccessPolicy> conditionalAccessPolicies;
-    /**
-     * The custom rules that define an access scenario when interacting with external Azure AD tenants.
-     */
-    private CrossTenantAccessPolicy crossTenantAccessPolicy;
-    /**
-     * The tenant-wide policy that enforces app management restrictions for all applications and service principals.
-     */
-    private TenantAppManagementPolicy defaultAppManagementPolicy;
-    /**
-     * The deviceRegistrationPolicy property
-     */
-    private DeviceRegistrationPolicy deviceRegistrationPolicy;
-    /**
-     * The directoryRoleAccessReviewPolicy property
-     */
-    private DirectoryRoleAccessReviewPolicy directoryRoleAccessReviewPolicy;
-    /**
-     * Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
-     */
-    private ExternalIdentitiesPolicy externalIdentitiesPolicy;
-    /**
-     * The feature rollout policy associated with a directory object.
-     */
-    private java.util.List<FeatureRolloutPolicy> featureRolloutPolicies;
-    /**
-     * The federatedTokenValidationPolicy property
-     */
-    private FederatedTokenValidationPolicy federatedTokenValidationPolicy;
-    /**
-     * The policy to control Azure AD authentication behavior for federated users.
-     */
-    private java.util.List<HomeRealmDiscoveryPolicy> homeRealmDiscoveryPolicies;
-    /**
-     * The policy that represents the security defaults that protect against common attacks.
-     */
-    private IdentitySecurityDefaultsEnforcementPolicy identitySecurityDefaultsEnforcementPolicy;
-    /**
-     * The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
-     */
-    private java.util.List<MobilityManagementPolicy> mobileAppManagementPolicies;
-    /**
-     * The mobileDeviceManagementPolicies property
-     */
-    private java.util.List<MobilityManagementPolicy> mobileDeviceManagementPolicies;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The policy that specifies the conditions under which consent can be granted.
-     */
-    private java.util.List<PermissionGrantPolicy> permissionGrantPolicies;
-    /**
-     * Represents the role management policies.
-     */
-    private java.util.List<UnifiedRoleManagementPolicy> roleManagementPolicies;
-    /**
-     * Represents the role management policy assignments.
-     */
-    private java.util.List<UnifiedRoleManagementPolicyAssignment> roleManagementPolicyAssignments;
-    /**
-     * The servicePrincipalCreationPolicies property
-     */
-    private java.util.List<ServicePrincipalCreationPolicy> servicePrincipalCreationPolicies;
-    /**
-     * The policy that specifies the characteristics of SAML tokens issued by Azure AD.
-     */
-    private java.util.List<TokenIssuancePolicy> tokenIssuancePolicies;
-    /**
-     * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
-     */
-    private java.util.List<TokenLifetimePolicy> tokenLifetimePolicies;
-    /**
-     * Instantiates a new policyRoot and sets the default values.
+     * Instantiates a new PolicyRoot and sets the default values.
      */
     public PolicyRoot() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policyRoot
+     * @return a PolicyRoot
      */
     @jakarta.annotation.Nonnull
     public static PolicyRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -147,155 +36,160 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessReviewPolicy property value. The policy that contains directory-level access review settings.
-     * @return a accessReviewPolicy
+     * @return a AccessReviewPolicy
      */
     @jakarta.annotation.Nullable
     public AccessReviewPolicy getAccessReviewPolicy() {
-        return this.accessReviewPolicy;
+        return this.backingStore.get("accessReviewPolicy");
     }
     /**
-     * Gets the activityBasedTimeoutPolicies property value. The policy that controls the idle time out for web sessions for applications.
-     * @return a activityBasedTimeoutPolicy
+     * Gets the activityBasedTimeoutPolicies property value. The policy that controls the idle time-out for web sessions for applications.
+     * @return a java.util.List<ActivityBasedTimeoutPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ActivityBasedTimeoutPolicy> getActivityBasedTimeoutPolicies() {
-        return this.activityBasedTimeoutPolicies;
+        return this.backingStore.get("activityBasedTimeoutPolicies");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
-     * @return a adminConsentRequestPolicy
+     * @return a AdminConsentRequestPolicy
      */
     @jakarta.annotation.Nullable
     public AdminConsentRequestPolicy getAdminConsentRequestPolicy() {
-        return this.adminConsentRequestPolicy;
+        return this.backingStore.get("adminConsentRequestPolicy");
     }
     /**
      * Gets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     * @return a appManagementPolicy
+     * @return a java.util.List<AppManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AppManagementPolicy> getAppManagementPolicies() {
-        return this.appManagementPolicies;
+        return this.backingStore.get("appManagementPolicies");
     }
     /**
-     * Gets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
-     * @return a authenticationFlowsPolicy
+     * Gets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of guests.
+     * @return a AuthenticationFlowsPolicy
      */
     @jakarta.annotation.Nullable
     public AuthenticationFlowsPolicy getAuthenticationFlowsPolicy() {
-        return this.authenticationFlowsPolicy;
+        return this.backingStore.get("authenticationFlowsPolicy");
     }
     /**
-     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
-     * @return a authenticationMethodsPolicy
+     * Gets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
+     * @return a AuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nullable
     public AuthenticationMethodsPolicy getAuthenticationMethodsPolicy() {
-        return this.authenticationMethodsPolicy;
+        return this.backingStore.get("authenticationMethodsPolicy");
     }
     /**
-     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
-     * @return a authenticationStrengthPolicy
+     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
+     * @return a java.util.List<AuthenticationStrengthPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthenticationStrengthPolicy> getAuthenticationStrengthPolicies() {
-        return this.authenticationStrengthPolicies;
+        return this.backingStore.get("authenticationStrengthPolicies");
     }
     /**
-     * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
-     * @return a authorizationPolicy
+     * Gets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
+     * @return a java.util.List<AuthorizationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AuthorizationPolicy> getAuthorizationPolicy() {
-        return this.authorizationPolicy;
+        return this.backingStore.get("authorizationPolicy");
     }
     /**
      * Gets the b2cAuthenticationMethodsPolicy property value. The Azure AD B2C policies that define how end users register via local accounts.
-     * @return a b2cAuthenticationMethodsPolicy
+     * @return a B2cAuthenticationMethodsPolicy
      */
     @jakarta.annotation.Nullable
     public B2cAuthenticationMethodsPolicy getB2cAuthenticationMethodsPolicy() {
-        return this.b2cAuthenticationMethodsPolicy;
+        return this.backingStore.get("b2cAuthenticationMethodsPolicy");
     }
     /**
      * Gets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
-     * @return a claimsMappingPolicy
+     * @return a java.util.List<ClaimsMappingPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ClaimsMappingPolicy> getClaimsMappingPolicies() {
-        return this.claimsMappingPolicies;
+        return this.backingStore.get("claimsMappingPolicies");
     }
     /**
      * Gets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
-     * @return a conditionalAccessPolicy
+     * @return a java.util.List<ConditionalAccessPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConditionalAccessPolicy> getConditionalAccessPolicies() {
-        return this.conditionalAccessPolicies;
+        return this.backingStore.get("conditionalAccessPolicies");
     }
     /**
-     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
-     * @return a crossTenantAccessPolicy
+     * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
+     * @return a CrossTenantAccessPolicy
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicy getCrossTenantAccessPolicy() {
-        return this.crossTenantAccessPolicy;
+        return this.backingStore.get("crossTenantAccessPolicy");
     }
     /**
      * Gets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
-     * @return a tenantAppManagementPolicy
+     * @return a TenantAppManagementPolicy
      */
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy getDefaultAppManagementPolicy() {
-        return this.defaultAppManagementPolicy;
+        return this.backingStore.get("defaultAppManagementPolicy");
     }
     /**
      * Gets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
-     * @return a deviceRegistrationPolicy
+     * @return a DeviceRegistrationPolicy
      */
     @jakarta.annotation.Nullable
     public DeviceRegistrationPolicy getDeviceRegistrationPolicy() {
-        return this.deviceRegistrationPolicy;
+        return this.backingStore.get("deviceRegistrationPolicy");
     }
     /**
      * Gets the directoryRoleAccessReviewPolicy property value. The directoryRoleAccessReviewPolicy property
-     * @return a directoryRoleAccessReviewPolicy
+     * @return a DirectoryRoleAccessReviewPolicy
      */
     @jakarta.annotation.Nullable
     public DirectoryRoleAccessReviewPolicy getDirectoryRoleAccessReviewPolicy() {
-        return this.directoryRoleAccessReviewPolicy;
+        return this.backingStore.get("directoryRoleAccessReviewPolicy");
     }
     /**
-     * Gets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
-     * @return a externalIdentitiesPolicy
+     * Gets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether guests can leave a Microsoft Entra tenant via self-service controls.
+     * @return a ExternalIdentitiesPolicy
      */
     @jakarta.annotation.Nullable
     public ExternalIdentitiesPolicy getExternalIdentitiesPolicy() {
-        return this.externalIdentitiesPolicy;
+        return this.backingStore.get("externalIdentitiesPolicy");
     }
     /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
-     * @return a featureRolloutPolicy
+     * @return a java.util.List<FeatureRolloutPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
-        return this.featureRolloutPolicies;
+        return this.backingStore.get("featureRolloutPolicies");
     }
     /**
      * Gets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
-     * @return a federatedTokenValidationPolicy
+     * @return a FederatedTokenValidationPolicy
      */
     @jakarta.annotation.Nullable
     public FederatedTokenValidationPolicy getFederatedTokenValidationPolicy() {
-        return this.federatedTokenValidationPolicy;
+        return this.backingStore.get("federatedTokenValidationPolicy");
     }
     /**
      * The deserialization information for the current model
@@ -336,92 +230,92 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
-     * @return a homeRealmDiscoveryPolicy
+     * Gets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
+     * @return a java.util.List<HomeRealmDiscoveryPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<HomeRealmDiscoveryPolicy> getHomeRealmDiscoveryPolicies() {
-        return this.homeRealmDiscoveryPolicies;
+        return this.backingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
      * Gets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
-     * @return a identitySecurityDefaultsEnforcementPolicy
+     * @return a IdentitySecurityDefaultsEnforcementPolicy
      */
     @jakarta.annotation.Nullable
     public IdentitySecurityDefaultsEnforcementPolicy getIdentitySecurityDefaultsEnforcementPolicy() {
-        return this.identitySecurityDefaultsEnforcementPolicy;
+        return this.backingStore.get("identitySecurityDefaultsEnforcementPolicy");
     }
     /**
-     * Gets the mobileAppManagementPolicies property value. The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
-     * @return a mobilityManagementPolicy
+     * Gets the mobileAppManagementPolicies property value. The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
+     * @return a java.util.List<MobilityManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getMobileAppManagementPolicies() {
-        return this.mobileAppManagementPolicies;
+        return this.backingStore.get("mobileAppManagementPolicies");
     }
     /**
      * Gets the mobileDeviceManagementPolicies property value. The mobileDeviceManagementPolicies property
-     * @return a mobilityManagementPolicy
+     * @return a java.util.List<MobilityManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MobilityManagementPolicy> getMobileDeviceManagementPolicies() {
-        return this.mobileDeviceManagementPolicies;
+        return this.backingStore.get("mobileDeviceManagementPolicies");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
-     * @return a permissionGrantPolicy
+     * @return a java.util.List<PermissionGrantPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantPolicy> getPermissionGrantPolicies() {
-        return this.permissionGrantPolicies;
+        return this.backingStore.get("permissionGrantPolicies");
     }
     /**
      * Gets the roleManagementPolicies property value. Represents the role management policies.
-     * @return a unifiedRoleManagementPolicy
+     * @return a java.util.List<UnifiedRoleManagementPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicy> getRoleManagementPolicies() {
-        return this.roleManagementPolicies;
+        return this.backingStore.get("roleManagementPolicies");
     }
     /**
      * Gets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
-     * @return a unifiedRoleManagementPolicyAssignment
+     * @return a java.util.List<UnifiedRoleManagementPolicyAssignment>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleManagementPolicyAssignment> getRoleManagementPolicyAssignments() {
-        return this.roleManagementPolicyAssignments;
+        return this.backingStore.get("roleManagementPolicyAssignments");
     }
     /**
      * Gets the servicePrincipalCreationPolicies property value. The servicePrincipalCreationPolicies property
-     * @return a servicePrincipalCreationPolicy
+     * @return a java.util.List<ServicePrincipalCreationPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ServicePrincipalCreationPolicy> getServicePrincipalCreationPolicies() {
-        return this.servicePrincipalCreationPolicies;
+        return this.backingStore.get("servicePrincipalCreationPolicies");
     }
     /**
-     * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
-     * @return a tokenIssuancePolicy
+     * Gets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
+     * @return a java.util.List<TokenIssuancePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenIssuancePolicy> getTokenIssuancePolicies() {
-        return this.tokenIssuancePolicies;
+        return this.backingStore.get("tokenIssuancePolicies");
     }
     /**
-     * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
-     * @return a tokenLifetimePolicy
+     * Gets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
+     * @return a java.util.List<TokenLifetimePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TokenLifetimePolicy> getTokenLifetimePolicies() {
-        return this.tokenLifetimePolicies;
+        return this.backingStore.get("tokenLifetimePolicies");
     }
     /**
      * Serializes information the current object
@@ -465,209 +359,209 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessReviewPolicy property.
      */
     public void setAccessReviewPolicy(@jakarta.annotation.Nullable final AccessReviewPolicy value) {
-        this.accessReviewPolicy = value;
+        this.backingStore.set("accessReviewPolicy", value);
     }
     /**
-     * Sets the activityBasedTimeoutPolicies property value. The policy that controls the idle time out for web sessions for applications.
+     * Sets the activityBasedTimeoutPolicies property value. The policy that controls the idle time-out for web sessions for applications.
      * @param value Value to set for the activityBasedTimeoutPolicies property.
      */
     public void setActivityBasedTimeoutPolicies(@jakarta.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
-        this.activityBasedTimeoutPolicies = value;
+        this.backingStore.set("activityBasedTimeoutPolicies", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
      * @param value Value to set for the adminConsentRequestPolicy property.
      */
     public void setAdminConsentRequestPolicy(@jakarta.annotation.Nullable final AdminConsentRequestPolicy value) {
-        this.adminConsentRequestPolicy = value;
+        this.backingStore.set("adminConsentRequestPolicy", value);
     }
     /**
      * Sets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @param value Value to set for the appManagementPolicies property.
      */
     public void setAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
-        this.appManagementPolicies = value;
+        this.backingStore.set("appManagementPolicies", value);
     }
     /**
-     * Sets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
+     * Sets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of guests.
      * @param value Value to set for the authenticationFlowsPolicy property.
      */
     public void setAuthenticationFlowsPolicy(@jakarta.annotation.Nullable final AuthenticationFlowsPolicy value) {
-        this.authenticationFlowsPolicy = value;
+        this.backingStore.set("authenticationFlowsPolicy", value);
     }
     /**
-     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+     * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Microsoft Entra ID.
      * @param value Value to set for the authenticationMethodsPolicy property.
      */
     public void setAuthenticationMethodsPolicy(@jakarta.annotation.Nullable final AuthenticationMethodsPolicy value) {
-        this.authenticationMethodsPolicy = value;
+        this.backingStore.set("authenticationMethodsPolicy", value);
     }
     /**
-     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Microsoft Entra Conditional Access.
      * @param value Value to set for the authenticationStrengthPolicies property.
      */
     public void setAuthenticationStrengthPolicies(@jakarta.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
-        this.authenticationStrengthPolicies = value;
+        this.backingStore.set("authenticationStrengthPolicies", value);
     }
     /**
-     * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
+     * Sets the authorizationPolicy property value. The policy that controls Microsoft Entra authorization settings.
      * @param value Value to set for the authorizationPolicy property.
      */
     public void setAuthorizationPolicy(@jakarta.annotation.Nullable final java.util.List<AuthorizationPolicy> value) {
-        this.authorizationPolicy = value;
+        this.backingStore.set("authorizationPolicy", value);
     }
     /**
      * Sets the b2cAuthenticationMethodsPolicy property value. The Azure AD B2C policies that define how end users register via local accounts.
      * @param value Value to set for the b2cAuthenticationMethodsPolicy property.
      */
     public void setB2cAuthenticationMethodsPolicy(@jakarta.annotation.Nullable final B2cAuthenticationMethodsPolicy value) {
-        this.b2cAuthenticationMethodsPolicy = value;
+        this.backingStore.set("b2cAuthenticationMethodsPolicy", value);
     }
     /**
      * Sets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
      * @param value Value to set for the claimsMappingPolicies property.
      */
     public void setClaimsMappingPolicies(@jakarta.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
-        this.claimsMappingPolicies = value;
+        this.backingStore.set("claimsMappingPolicies", value);
     }
     /**
      * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
      * @param value Value to set for the conditionalAccessPolicies property.
      */
     public void setConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
-        this.conditionalAccessPolicies = value;
+        this.backingStore.set("conditionalAccessPolicies", value);
     }
     /**
-     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
+     * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @param value Value to set for the crossTenantAccessPolicy property.
      */
     public void setCrossTenantAccessPolicy(@jakarta.annotation.Nullable final CrossTenantAccessPolicy value) {
-        this.crossTenantAccessPolicy = value;
+        this.backingStore.set("crossTenantAccessPolicy", value);
     }
     /**
      * Sets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @param value Value to set for the defaultAppManagementPolicy property.
      */
     public void setDefaultAppManagementPolicy(@jakarta.annotation.Nullable final TenantAppManagementPolicy value) {
-        this.defaultAppManagementPolicy = value;
+        this.backingStore.set("defaultAppManagementPolicy", value);
     }
     /**
      * Sets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
      * @param value Value to set for the deviceRegistrationPolicy property.
      */
     public void setDeviceRegistrationPolicy(@jakarta.annotation.Nullable final DeviceRegistrationPolicy value) {
-        this.deviceRegistrationPolicy = value;
+        this.backingStore.set("deviceRegistrationPolicy", value);
     }
     /**
      * Sets the directoryRoleAccessReviewPolicy property value. The directoryRoleAccessReviewPolicy property
      * @param value Value to set for the directoryRoleAccessReviewPolicy property.
      */
     public void setDirectoryRoleAccessReviewPolicy(@jakarta.annotation.Nullable final DirectoryRoleAccessReviewPolicy value) {
-        this.directoryRoleAccessReviewPolicy = value;
+        this.backingStore.set("directoryRoleAccessReviewPolicy", value);
     }
     /**
-     * Sets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether external users can leave an Azure AD tenant via self-service controls.
+     * Sets the externalIdentitiesPolicy property value. Represents the tenant-wide policy that controls whether guests can leave a Microsoft Entra tenant via self-service controls.
      * @param value Value to set for the externalIdentitiesPolicy property.
      */
     public void setExternalIdentitiesPolicy(@jakarta.annotation.Nullable final ExternalIdentitiesPolicy value) {
-        this.externalIdentitiesPolicy = value;
+        this.backingStore.set("externalIdentitiesPolicy", value);
     }
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @param value Value to set for the featureRolloutPolicies property.
      */
     public void setFeatureRolloutPolicies(@jakarta.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
-        this.featureRolloutPolicies = value;
+        this.backingStore.set("featureRolloutPolicies", value);
     }
     /**
      * Sets the federatedTokenValidationPolicy property value. The federatedTokenValidationPolicy property
      * @param value Value to set for the federatedTokenValidationPolicy property.
      */
     public void setFederatedTokenValidationPolicy(@jakarta.annotation.Nullable final FederatedTokenValidationPolicy value) {
-        this.federatedTokenValidationPolicy = value;
+        this.backingStore.set("federatedTokenValidationPolicy", value);
     }
     /**
-     * Sets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
+     * Sets the homeRealmDiscoveryPolicies property value. The policy to control Microsoft Entra authentication behavior for federated users.
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      */
     public void setHomeRealmDiscoveryPolicies(@jakarta.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
-        this.homeRealmDiscoveryPolicies = value;
+        this.backingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
      * Sets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
      * @param value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
      */
     public void setIdentitySecurityDefaultsEnforcementPolicy(@jakarta.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
-        this.identitySecurityDefaultsEnforcementPolicy = value;
+        this.backingStore.set("identitySecurityDefaultsEnforcementPolicy", value);
     }
     /**
-     * Sets the mobileAppManagementPolicies property value. The policy that defines auto-enrollment configuration for a mobility management (MDM or MAM) application.
+     * Sets the mobileAppManagementPolicies property value. The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
      * @param value Value to set for the mobileAppManagementPolicies property.
      */
     public void setMobileAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
-        this.mobileAppManagementPolicies = value;
+        this.backingStore.set("mobileAppManagementPolicies", value);
     }
     /**
      * Sets the mobileDeviceManagementPolicies property value. The mobileDeviceManagementPolicies property
      * @param value Value to set for the mobileDeviceManagementPolicies property.
      */
     public void setMobileDeviceManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
-        this.mobileDeviceManagementPolicies = value;
+        this.backingStore.set("mobileDeviceManagementPolicies", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
      * @param value Value to set for the permissionGrantPolicies property.
      */
     public void setPermissionGrantPolicies(@jakarta.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
-        this.permissionGrantPolicies = value;
+        this.backingStore.set("permissionGrantPolicies", value);
     }
     /**
      * Sets the roleManagementPolicies property value. Represents the role management policies.
      * @param value Value to set for the roleManagementPolicies property.
      */
     public void setRoleManagementPolicies(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicy> value) {
-        this.roleManagementPolicies = value;
+        this.backingStore.set("roleManagementPolicies", value);
     }
     /**
      * Sets the roleManagementPolicyAssignments property value. Represents the role management policy assignments.
      * @param value Value to set for the roleManagementPolicyAssignments property.
      */
     public void setRoleManagementPolicyAssignments(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyAssignment> value) {
-        this.roleManagementPolicyAssignments = value;
+        this.backingStore.set("roleManagementPolicyAssignments", value);
     }
     /**
      * Sets the servicePrincipalCreationPolicies property value. The servicePrincipalCreationPolicies property
      * @param value Value to set for the servicePrincipalCreationPolicies property.
      */
     public void setServicePrincipalCreationPolicies(@jakarta.annotation.Nullable final java.util.List<ServicePrincipalCreationPolicy> value) {
-        this.servicePrincipalCreationPolicies = value;
+        this.backingStore.set("servicePrincipalCreationPolicies", value);
     }
     /**
-     * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
+     * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Microsoft Entra ID.
      * @param value Value to set for the tokenIssuancePolicies property.
      */
     public void setTokenIssuancePolicies(@jakarta.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
-        this.tokenIssuancePolicies = value;
+        this.backingStore.set("tokenIssuancePolicies", value);
     }
     /**
-     * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+     * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Microsoft Entra ID.
      * @param value Value to set for the tokenLifetimePolicies property.
      */
     public void setTokenLifetimePolicies(@jakarta.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
-        this.tokenLifetimePolicies = value;
+        this.backingStore.set("tokenLifetimePolicies", value);
     }
 }

@@ -4,105 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PrinterLocation implements AdditionalDataHolder, Parsable {
+public class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The altitude, in meters, that the printer is located at.
-     */
-    private Integer altitudeInMeters;
-    /**
-     * The building that the printer is located in.
-     */
-    private String building;
-    /**
-     * The city that the printer is located in.
-     */
-    private String city;
-    /**
-     * The country or region that the printer is located in.
-     */
-    private String countryOrRegion;
-    /**
-     * The floor that the printer is located on. Only numerical values are supported right now.
-     */
-    private String floor;
-    /**
-     * The description of the floor that the printer is located on.
-     */
-    private String floorDescription;
-    /**
-     * The floorNumber property
-     */
-    private Integer floorNumber;
-    /**
-     * The latitude that the printer is located at.
-     */
-    private Double latitude;
-    /**
-     * The longitude that the printer is located at.
-     */
-    private Double longitude;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
-     */
-    private java.util.List<String> organization;
-    /**
-     * The postal code that the printer is located in.
-     */
-    private String postalCode;
-    /**
-     * The description of the room that the printer is located in.
-     */
-    private String roomDescription;
-    /**
-     * The room that the printer is located in. Only numerical values are supported right now.
-     */
-    private String roomName;
-    /**
-     * The roomNumber property
-     */
-    private Integer roomNumber;
-    /**
-     * The site that the printer is located in.
-     */
-    private String site;
-    /**
-     * The state or province that the printer is located in.
-     */
-    private String stateOrProvince;
-    /**
-     * The street address where the printer is located.
-     */
-    private String streetAddress;
-    /**
-     * The subdivision that the printer is located in. The elements should be in hierarchical order.
-     */
-    private java.util.List<String> subdivision;
-    /**
-     * The subunit property
-     */
-    private java.util.List<String> subunit;
-    /**
-     * Instantiates a new printerLocation and sets the default values.
+     * Instantiates a new PrinterLocation and sets the default values.
      */
     public PrinterLocation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a printerLocation
+     * @return a PrinterLocation
      */
     @jakarta.annotation.Nonnull
     public static PrinterLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -110,44 +35,49 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
         return new PrinterLocation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getAltitudeInMeters() {
-        return this.altitudeInMeters;
+        return this.backingStore.get("altitudeInMeters");
     }
     /**
      * Gets the building property value. The building that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBuilding() {
-        return this.building;
+        return this.backingStore.get("building");
     }
     /**
      * Gets the city property value. The city that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCity() {
-        return this.city;
+        return this.backingStore.get("city");
     }
     /**
      * Gets the countryOrRegion property value. The country or region that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCountryOrRegion() {
-        return this.countryOrRegion;
+        return this.backingStore.get("countryOrRegion");
     }
     /**
      * The deserialization information for the current model
@@ -180,131 +110,131 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFloor() {
-        return this.floor;
+        return this.backingStore.get("floor");
     }
     /**
      * Gets the floorDescription property value. The description of the floor that the printer is located on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFloorDescription() {
-        return this.floorDescription;
+        return this.backingStore.get("floorDescription");
     }
     /**
      * Gets the floorNumber property value. The floorNumber property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
-        return this.floorNumber;
+        return this.backingStore.get("floorNumber");
     }
     /**
      * Gets the latitude property value. The latitude that the printer is located at.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
-        return this.latitude;
+        return this.backingStore.get("latitude");
     }
     /**
      * Gets the longitude property value. The longitude that the printer is located at.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
-        return this.longitude;
+        return this.backingStore.get("longitude");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrganization() {
-        return this.organization;
+        return this.backingStore.get("organization");
     }
     /**
      * Gets the postalCode property value. The postal code that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostalCode() {
-        return this.postalCode;
+        return this.backingStore.get("postalCode");
     }
     /**
      * Gets the roomDescription property value. The description of the room that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoomDescription() {
-        return this.roomDescription;
+        return this.backingStore.get("roomDescription");
     }
     /**
      * Gets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoomName() {
-        return this.roomName;
+        return this.backingStore.get("roomName");
     }
     /**
      * Gets the roomNumber property value. The roomNumber property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getRoomNumber() {
-        return this.roomNumber;
+        return this.backingStore.get("roomNumber");
     }
     /**
      * Gets the site property value. The site that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSite() {
-        return this.site;
+        return this.backingStore.get("site");
     }
     /**
      * Gets the stateOrProvince property value. The state or province that the printer is located in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStateOrProvince() {
-        return this.stateOrProvince;
+        return this.backingStore.get("stateOrProvince");
     }
     /**
      * Gets the streetAddress property value. The street address where the printer is located.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStreetAddress() {
-        return this.streetAddress;
+        return this.backingStore.get("streetAddress");
     }
     /**
      * Gets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubdivision() {
-        return this.subdivision;
+        return this.backingStore.get("subdivision");
     }
     /**
      * Gets the subunit property value. The subunit property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSubunit() {
-        return this.subunit;
+        return this.backingStore.get("subunit");
     }
     /**
      * Serializes information the current object
@@ -335,150 +265,150 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the altitudeInMeters property value. The altitude, in meters, that the printer is located at.
      * @param value Value to set for the altitudeInMeters property.
      */
     public void setAltitudeInMeters(@jakarta.annotation.Nullable final Integer value) {
-        this.altitudeInMeters = value;
+        this.backingStore.set("altitudeInMeters", value);
     }
     /**
      * Sets the building property value. The building that the printer is located in.
      * @param value Value to set for the building property.
      */
     public void setBuilding(@jakarta.annotation.Nullable final String value) {
-        this.building = value;
+        this.backingStore.set("building", value);
     }
     /**
      * Sets the city property value. The city that the printer is located in.
      * @param value Value to set for the city property.
      */
     public void setCity(@jakarta.annotation.Nullable final String value) {
-        this.city = value;
+        this.backingStore.set("city", value);
     }
     /**
      * Sets the countryOrRegion property value. The country or region that the printer is located in.
      * @param value Value to set for the countryOrRegion property.
      */
     public void setCountryOrRegion(@jakarta.annotation.Nullable final String value) {
-        this.countryOrRegion = value;
+        this.backingStore.set("countryOrRegion", value);
     }
     /**
      * Sets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
      * @param value Value to set for the floor property.
      */
     public void setFloor(@jakarta.annotation.Nullable final String value) {
-        this.floor = value;
+        this.backingStore.set("floor", value);
     }
     /**
      * Sets the floorDescription property value. The description of the floor that the printer is located on.
      * @param value Value to set for the floorDescription property.
      */
     public void setFloorDescription(@jakarta.annotation.Nullable final String value) {
-        this.floorDescription = value;
+        this.backingStore.set("floorDescription", value);
     }
     /**
      * Sets the floorNumber property value. The floorNumber property
      * @param value Value to set for the floorNumber property.
      */
     public void setFloorNumber(@jakarta.annotation.Nullable final Integer value) {
-        this.floorNumber = value;
+        this.backingStore.set("floorNumber", value);
     }
     /**
      * Sets the latitude property value. The latitude that the printer is located at.
      * @param value Value to set for the latitude property.
      */
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
-        this.latitude = value;
+        this.backingStore.set("latitude", value);
     }
     /**
      * Sets the longitude property value. The longitude that the printer is located at.
      * @param value Value to set for the longitude property.
      */
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
-        this.longitude = value;
+        this.backingStore.set("longitude", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the organization property value. The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
      * @param value Value to set for the organization property.
      */
     public void setOrganization(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.organization = value;
+        this.backingStore.set("organization", value);
     }
     /**
      * Sets the postalCode property value. The postal code that the printer is located in.
      * @param value Value to set for the postalCode property.
      */
     public void setPostalCode(@jakarta.annotation.Nullable final String value) {
-        this.postalCode = value;
+        this.backingStore.set("postalCode", value);
     }
     /**
      * Sets the roomDescription property value. The description of the room that the printer is located in.
      * @param value Value to set for the roomDescription property.
      */
     public void setRoomDescription(@jakarta.annotation.Nullable final String value) {
-        this.roomDescription = value;
+        this.backingStore.set("roomDescription", value);
     }
     /**
      * Sets the roomName property value. The room that the printer is located in. Only numerical values are supported right now.
      * @param value Value to set for the roomName property.
      */
     public void setRoomName(@jakarta.annotation.Nullable final String value) {
-        this.roomName = value;
+        this.backingStore.set("roomName", value);
     }
     /**
      * Sets the roomNumber property value. The roomNumber property
      * @param value Value to set for the roomNumber property.
      */
     public void setRoomNumber(@jakarta.annotation.Nullable final Integer value) {
-        this.roomNumber = value;
+        this.backingStore.set("roomNumber", value);
     }
     /**
      * Sets the site property value. The site that the printer is located in.
      * @param value Value to set for the site property.
      */
     public void setSite(@jakarta.annotation.Nullable final String value) {
-        this.site = value;
+        this.backingStore.set("site", value);
     }
     /**
      * Sets the stateOrProvince property value. The state or province that the printer is located in.
      * @param value Value to set for the stateOrProvince property.
      */
     public void setStateOrProvince(@jakarta.annotation.Nullable final String value) {
-        this.stateOrProvince = value;
+        this.backingStore.set("stateOrProvince", value);
     }
     /**
      * Sets the streetAddress property value. The street address where the printer is located.
      * @param value Value to set for the streetAddress property.
      */
     public void setStreetAddress(@jakarta.annotation.Nullable final String value) {
-        this.streetAddress = value;
+        this.backingStore.set("streetAddress", value);
     }
     /**
      * Sets the subdivision property value. The subdivision that the printer is located in. The elements should be in hierarchical order.
      * @param value Value to set for the subdivision property.
      */
     public void setSubdivision(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.subdivision = value;
+        this.backingStore.set("subdivision", value);
     }
     /**
      * Sets the subunit property value. The subunit property
      * @param value Value to set for the subunit property.
      */
     public void setSubunit(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.subunit = value;
+        this.backingStore.set("subunit", value);
     }
 }

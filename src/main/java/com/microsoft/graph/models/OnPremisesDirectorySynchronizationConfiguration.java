@@ -5,61 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesDirectorySynchronizationConfiguration implements AdditionalDataHolder, Parsable {
+public class OnPremisesDirectorySynchronizationConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Contains the accidental deletion prevention configuration for a tenant.
+     * Stores model information.
      */
-    private OnPremisesAccidentalDeletionPrevention accidentalDeletionPrevention;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The anchor attribute allows customers to customize the property used to create source anchors for synchronization enabled objects.
-     */
-    private String anchorAttribute;
-    /**
-     * The identifier of the on-premises directory synchronization client application that is configured for the tenant.
-     */
-    private String applicationId;
-    /**
-     * Data for the current export run.
-     */
-    private OnPremisesCurrentExportData currentExportData;
-    /**
-     * Interval of time that the customer requested the sync client waits between sync cycles.
-     */
-    private PeriodAndDuration customerRequestedSynchronizationInterval;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Indicates the version of the on-premises directory synchronization application.
-     */
-    private String synchronizationClientVersion;
-    /**
-     * Interval of time the sync client should honor between sync cycles
-     */
-    private PeriodAndDuration synchronizationInterval;
-    /**
-     * Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
-     */
-    private OnPremisesWritebackConfiguration writebackConfiguration;
-    /**
-     * Instantiates a new onPremisesDirectorySynchronizationConfiguration and sets the default values.
+     * Instantiates a new OnPremisesDirectorySynchronizationConfiguration and sets the default values.
      */
     public OnPremisesDirectorySynchronizationConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a onPremisesDirectorySynchronizationConfiguration
+     * @return a OnPremisesDirectorySynchronizationConfiguration
      */
     @jakarta.annotation.Nonnull
     public static OnPremisesDirectorySynchronizationConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -68,43 +37,48 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the accidentalDeletionPrevention property value. Contains the accidental deletion prevention configuration for a tenant.
-     * @return a onPremisesAccidentalDeletionPrevention
+     * @return a OnPremisesAccidentalDeletionPrevention
      */
     @jakarta.annotation.Nullable
     public OnPremisesAccidentalDeletionPrevention getAccidentalDeletionPrevention() {
-        return this.accidentalDeletionPrevention;
+        return this.backingStore.get("accidentalDeletionPrevention");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the anchorAttribute property value. The anchor attribute allows customers to customize the property used to create source anchors for synchronization enabled objects.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAnchorAttribute() {
-        return this.anchorAttribute;
+        return this.backingStore.get("anchorAttribute");
     }
     /**
      * Gets the applicationId property value. The identifier of the on-premises directory synchronization client application that is configured for the tenant.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getApplicationId() {
-        return this.applicationId;
+        return this.backingStore.get("applicationId");
     }
     /**
      * Gets the currentExportData property value. Data for the current export run.
-     * @return a onPremisesCurrentExportData
+     * @return a OnPremisesCurrentExportData
      */
     @jakarta.annotation.Nullable
     public OnPremisesCurrentExportData getCurrentExportData() {
-        return this.currentExportData;
+        return this.backingStore.get("currentExportData");
     }
     /**
      * Gets the customerRequestedSynchronizationInterval property value. Interval of time that the customer requested the sync client waits between sync cycles.
@@ -112,7 +86,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getCustomerRequestedSynchronizationInterval() {
-        return this.customerRequestedSynchronizationInterval;
+        return this.backingStore.get("customerRequestedSynchronizationInterval");
     }
     /**
      * The deserialization information for the current model
@@ -134,19 +108,19 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the synchronizationClientVersion property value. Indicates the version of the on-premises directory synchronization application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSynchronizationClientVersion() {
-        return this.synchronizationClientVersion;
+        return this.backingStore.get("synchronizationClientVersion");
     }
     /**
      * Gets the synchronizationInterval property value. Interval of time the sync client should honor between sync cycles
@@ -154,15 +128,15 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getSynchronizationInterval() {
-        return this.synchronizationInterval;
+        return this.backingStore.get("synchronizationInterval");
     }
     /**
      * Gets the writebackConfiguration property value. Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
-     * @return a onPremisesWritebackConfiguration
+     * @return a OnPremisesWritebackConfiguration
      */
     @jakarta.annotation.Nullable
     public OnPremisesWritebackConfiguration getWritebackConfiguration() {
-        return this.writebackConfiguration;
+        return this.backingStore.get("writebackConfiguration");
     }
     /**
      * Serializes information the current object
@@ -186,69 +160,69 @@ public class OnPremisesDirectorySynchronizationConfiguration implements Addition
      * @param value Value to set for the accidentalDeletionPrevention property.
      */
     public void setAccidentalDeletionPrevention(@jakarta.annotation.Nullable final OnPremisesAccidentalDeletionPrevention value) {
-        this.accidentalDeletionPrevention = value;
+        this.backingStore.set("accidentalDeletionPrevention", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the anchorAttribute property value. The anchor attribute allows customers to customize the property used to create source anchors for synchronization enabled objects.
      * @param value Value to set for the anchorAttribute property.
      */
     public void setAnchorAttribute(@jakarta.annotation.Nullable final String value) {
-        this.anchorAttribute = value;
+        this.backingStore.set("anchorAttribute", value);
     }
     /**
      * Sets the applicationId property value. The identifier of the on-premises directory synchronization client application that is configured for the tenant.
      * @param value Value to set for the applicationId property.
      */
     public void setApplicationId(@jakarta.annotation.Nullable final String value) {
-        this.applicationId = value;
+        this.backingStore.set("applicationId", value);
     }
     /**
      * Sets the currentExportData property value. Data for the current export run.
      * @param value Value to set for the currentExportData property.
      */
     public void setCurrentExportData(@jakarta.annotation.Nullable final OnPremisesCurrentExportData value) {
-        this.currentExportData = value;
+        this.backingStore.set("currentExportData", value);
     }
     /**
      * Sets the customerRequestedSynchronizationInterval property value. Interval of time that the customer requested the sync client waits between sync cycles.
      * @param value Value to set for the customerRequestedSynchronizationInterval property.
      */
     public void setCustomerRequestedSynchronizationInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.customerRequestedSynchronizationInterval = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("customerRequestedSynchronizationInterval", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the synchronizationClientVersion property value. Indicates the version of the on-premises directory synchronization application.
      * @param value Value to set for the synchronizationClientVersion property.
      */
     public void setSynchronizationClientVersion(@jakarta.annotation.Nullable final String value) {
-        this.synchronizationClientVersion = value;
+        this.backingStore.set("synchronizationClientVersion", value);
     }
     /**
      * Sets the synchronizationInterval property value. Interval of time the sync client should honor between sync cycles
      * @param value Value to set for the synchronizationInterval property.
      */
     public void setSynchronizationInterval(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.synchronizationInterval = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("synchronizationInterval", value);
     }
     /**
      * Sets the writebackConfiguration property value. Configuration to control how cloud created or owned objects are synchronized back to the on-premises directory.
      * @param value Value to set for the writebackConfiguration property.
      */
     public void setWritebackConfiguration(@jakarta.annotation.Nullable final OnPremisesWritebackConfiguration value) {
-        this.writebackConfiguration = value;
+        this.backingStore.set("writebackConfiguration", value);
     }
 }

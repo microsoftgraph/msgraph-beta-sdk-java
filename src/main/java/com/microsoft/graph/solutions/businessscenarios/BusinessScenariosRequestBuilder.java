@@ -59,56 +59,56 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
-     * @return a CompletableFuture of businessScenarioCollectionResponse
+     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
+     * @return a BusinessScenarioCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BusinessScenarioCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public BusinessScenarioCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of businessScenarioCollectionResponse
+     * @return a BusinessScenarioCollectionResponse
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-list-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BusinessScenarioCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BusinessScenarioCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BusinessScenarioCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BusinessScenarioCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Create a new businessScenario object.
+     * Create a new businessScenario object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of businessScenario
+     * @return a BusinessScenario
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-post-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BusinessScenario> post(@jakarta.annotation.Nonnull final BusinessScenario body) {
+    @jakarta.annotation.Nullable
+    public BusinessScenario post(@jakarta.annotation.Nonnull final BusinessScenario body) {
         return post(body, null);
     }
     /**
-     * Create a new businessScenario object.
+     * Create a new businessScenario object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of businessScenario
+     * @return a BusinessScenario
      * @see <a href="https://learn.microsoft.com/graph/api/solutionsroot-post-businessscenarios?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<BusinessScenario> post(@jakarta.annotation.Nonnull final BusinessScenario body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public BusinessScenario post(@jakarta.annotation.Nonnull final BusinessScenario body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, BusinessScenario::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, BusinessScenario::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -116,28 +116,19 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create a new businessScenario object.
+     * Create a new businessScenario object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -146,7 +137,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new businessScenario object.
+     * Create a new businessScenario object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -154,24 +145,16 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BusinessScenario body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a businessScenariosRequestBuilder
+     * @return a BusinessScenariosRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public BusinessScenariosRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -179,7 +162,7 @@ public class BusinessScenariosRequestBuilder extends BaseRequestBuilder {
         return new BusinessScenariosRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all businessScenario objects in an organization.
+     * Get a list of all businessScenario objects in an organization. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

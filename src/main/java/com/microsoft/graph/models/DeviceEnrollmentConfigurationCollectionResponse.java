@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentConfigurationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<DeviceEnrollmentConfiguration> value;
-    /**
-     * Instantiates a new deviceEnrollmentConfigurationCollectionResponse and sets the default values.
+     * Instantiates a new DeviceEnrollmentConfigurationCollectionResponse and sets the default values.
      */
     public DeviceEnrollmentConfigurationCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class DeviceEnrollmentConfigurationCollectionResponse extends BaseCollect
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceEnrollmentConfigurationCollectionResponse
+     * @return a DeviceEnrollmentConfigurationCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceEnrollmentConfigurationCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class DeviceEnrollmentConfigurationCollectionResponse extends BaseCollect
     }
     /**
      * Gets the value property value. The value property
-     * @return a deviceEnrollmentConfiguration
+     * @return a java.util.List<DeviceEnrollmentConfiguration>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceEnrollmentConfiguration> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class DeviceEnrollmentConfigurationCollectionResponse extends BaseCollect
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -14,47 +14,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
-     * The User Principal Name (UPN) of the user that enrolled the device.
-     */
-    private String enrolledByUser;
-    /**
-     * The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
-     */
-    private Long errorCode;
-    /**
-     * The DateTime of the expiration of the logs.
-     */
-    private OffsetDateTime expirationDateTimeUTC;
-    /**
-     * The UPN for who initiated the request.
-     */
-    private String initiatedByUserPrincipalName;
-    /**
-     * Indicates Intune device unique identifier.
-     */
-    private UUID managedDeviceId;
-    /**
-     * The DateTime the request was received.
-     */
-    private OffsetDateTime receivedDateTimeUTC;
-    /**
-     * The DateTime of the request.
-     */
-    private OffsetDateTime requestedDateTimeUTC;
-    /**
-     * The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double size;
-    /**
-     * The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     */
-    private Double sizeInKB;
-    /**
-     * AppLogUploadStatus
-     */
-    private AppLogUploadState status;
-    /**
-     * Instantiates a new deviceLogCollectionResponse and sets the default values.
+     * Instantiates a new DeviceLogCollectionResponse and sets the default values.
      */
     public DeviceLogCollectionResponse() {
         super();
@@ -62,7 +22,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceLogCollectionResponse
+     * @return a DeviceLogCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static DeviceLogCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,19 +31,19 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEnrolledByUser() {
-        return this.enrolledByUser;
+        return this.backingStore.get("enrolledByUser");
     }
     /**
      * Gets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * Gets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
@@ -91,7 +51,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTimeUTC() {
-        return this.expirationDateTimeUTC;
+        return this.backingStore.get("expirationDateTimeUTC");
     }
     /**
      * The deserialization information for the current model
@@ -114,11 +74,11 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getInitiatedByUserPrincipalName() {
-        return this.initiatedByUserPrincipalName;
+        return this.backingStore.get("initiatedByUserPrincipalName");
     }
     /**
      * Gets the managedDeviceId property value. Indicates Intune device unique identifier.
@@ -126,7 +86,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.backingStore.get("managedDeviceId");
     }
     /**
      * Gets the receivedDateTimeUTC property value. The DateTime the request was received.
@@ -134,7 +94,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTimeUTC() {
-        return this.receivedDateTimeUTC;
+        return this.backingStore.get("receivedDateTimeUTC");
     }
     /**
      * Gets the requestedDateTimeUTC property value. The DateTime of the request.
@@ -142,31 +102,31 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTimeUTC() {
-        return this.requestedDateTimeUTC;
+        return this.backingStore.get("requestedDateTimeUTC");
     }
     /**
      * Gets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getSizeInKB() {
-        return this.sizeInKB;
+        return this.backingStore.get("sizeInKB");
     }
     /**
      * Gets the status property value. AppLogUploadStatus
-     * @return a appLogUploadState
+     * @return a AppLogUploadState
      */
     @jakarta.annotation.Nullable
     public AppLogUploadState getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -191,69 +151,69 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the enrolledByUser property.
      */
     public void setEnrolledByUser(@jakarta.annotation.Nullable final String value) {
-        this.enrolledByUser = value;
+        this.backingStore.set("enrolledByUser", value);
     }
     /**
      * Sets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Long value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the expirationDateTimeUTC property value. The DateTime of the expiration of the logs.
      * @param value Value to set for the expirationDateTimeUTC property.
      */
     public void setExpirationDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTimeUTC = value;
+        this.backingStore.set("expirationDateTimeUTC", value);
     }
     /**
      * Sets the initiatedByUserPrincipalName property value. The UPN for who initiated the request.
      * @param value Value to set for the initiatedByUserPrincipalName property.
      */
     public void setInitiatedByUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.initiatedByUserPrincipalName = value;
+        this.backingStore.set("initiatedByUserPrincipalName", value);
     }
     /**
      * Sets the managedDeviceId property value. Indicates Intune device unique identifier.
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final UUID value) {
-        this.managedDeviceId = value;
+        this.backingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the receivedDateTimeUTC property value. The DateTime the request was received.
      * @param value Value to set for the receivedDateTimeUTC property.
      */
     public void setReceivedDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.receivedDateTimeUTC = value;
+        this.backingStore.set("receivedDateTimeUTC", value);
     }
     /**
      * Sets the requestedDateTimeUTC property value. The DateTime of the request.
      * @param value Value to set for the requestedDateTimeUTC property.
      */
     public void setRequestedDateTimeUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.requestedDateTimeUTC = value;
+        this.backingStore.set("requestedDateTimeUTC", value);
     }
     /**
      * Sets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Double value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the sizeInKB property.
      */
     public void setSizeInKB(@jakarta.annotation.Nullable final Double value) {
-        this.sizeInKB = value;
+        this.backingStore.set("sizeInKB", value);
     }
     /**
      * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AppLogUploadState value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

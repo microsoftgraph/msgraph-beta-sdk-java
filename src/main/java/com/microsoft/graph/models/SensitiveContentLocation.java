@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SensitiveContentLocation implements AdditionalDataHolder, Parsable {
+public class SensitiveContentLocation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The confidence property
-     */
-    private Integer confidence;
-    /**
-     * The evidences property
-     */
-    private java.util.List<SensitiveContentEvidence> evidences;
-    /**
-     * The idMatch property
-     */
-    private String idMatch;
-    /**
-     * The length property
-     */
-    private Integer length;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The offset property
-     */
-    private Integer offset;
-    /**
-     * Instantiates a new sensitiveContentLocation and sets the default values.
+     * Instantiates a new SensitiveContentLocation and sets the default values.
      */
     public SensitiveContentLocation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a sensitiveContentLocation
+     * @return a SensitiveContentLocation
      */
     @jakarta.annotation.Nonnull
     public static SensitiveContentLocation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +35,33 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
         return new SensitiveContentLocation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the confidence property value. The confidence property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getConfidence() {
-        return this.confidence;
+        return this.backingStore.get("confidence");
     }
     /**
      * Gets the evidences property value. The evidences property
-     * @return a sensitiveContentEvidence
+     * @return a java.util.List<SensitiveContentEvidence>
      */
     @jakarta.annotation.Nullable
     public java.util.List<SensitiveContentEvidence> getEvidences() {
-        return this.evidences;
+        return this.backingStore.get("evidences");
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +80,35 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the idMatch property value. The idMatch property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdMatch() {
-        return this.idMatch;
+        return this.backingStore.get("idMatch");
     }
     /**
      * Gets the length property value. The length property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLength() {
-        return this.length;
+        return this.backingStore.get("length");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the offset property value. The offset property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOffset() {
-        return this.offset;
+        return this.backingStore.get("offset");
     }
     /**
      * Serializes information the current object
@@ -139,52 +125,52 @@ public class SensitiveContentLocation implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the confidence property value. The confidence property
      * @param value Value to set for the confidence property.
      */
     public void setConfidence(@jakarta.annotation.Nullable final Integer value) {
-        this.confidence = value;
+        this.backingStore.set("confidence", value);
     }
     /**
      * Sets the evidences property value. The evidences property
      * @param value Value to set for the evidences property.
      */
     public void setEvidences(@jakarta.annotation.Nullable final java.util.List<SensitiveContentEvidence> value) {
-        this.evidences = value;
+        this.backingStore.set("evidences", value);
     }
     /**
      * Sets the idMatch property value. The idMatch property
      * @param value Value to set for the idMatch property.
      */
     public void setIdMatch(@jakarta.annotation.Nullable final String value) {
-        this.idMatch = value;
+        this.backingStore.set("idMatch", value);
     }
     /**
      * Sets the length property value. The length property
      * @param value Value to set for the length property.
      */
     public void setLength(@jakarta.annotation.Nullable final Integer value) {
-        this.length = value;
+        this.backingStore.set("length", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the offset property value. The offset property
      * @param value Value to set for the offset property.
      */
     public void setOffset(@jakarta.annotation.Nullable final Integer value) {
-        this.offset = value;
+        this.backingStore.set("offset", value);
     }
 }

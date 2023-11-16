@@ -10,63 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrivilegedOperationEvent extends Entity implements Parsable {
     /**
-     * The additionalInformation property
-     */
-    private String additionalInformation;
-    /**
-     * The creationDateTime property
-     */
-    private OffsetDateTime creationDateTime;
-    /**
-     * The expirationDateTime property
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The referenceKey property
-     */
-    private String referenceKey;
-    /**
-     * The referenceSystem property
-     */
-    private String referenceSystem;
-    /**
-     * The requestorId property
-     */
-    private String requestorId;
-    /**
-     * The requestorName property
-     */
-    private String requestorName;
-    /**
-     * The requestType property
-     */
-    private String requestType;
-    /**
-     * The roleId property
-     */
-    private String roleId;
-    /**
-     * The roleName property
-     */
-    private String roleName;
-    /**
-     * The tenantId property
-     */
-    private String tenantId;
-    /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * The userMail property
-     */
-    private String userMail;
-    /**
-     * The userName property
-     */
-    private String userName;
-    /**
-     * Instantiates a new privilegedOperationEvent and sets the default values.
+     * Instantiates a new PrivilegedOperationEvent and sets the default values.
      */
     public PrivilegedOperationEvent() {
         super();
@@ -74,7 +18,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedOperationEvent
+     * @return a PrivilegedOperationEvent
      */
     @jakarta.annotation.Nonnull
     public static PrivilegedOperationEvent createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -83,11 +27,11 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the additionalInformation property value. The additionalInformation property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdditionalInformation() {
-        return this.additionalInformation;
+        return this.backingStore.get("additionalInformation");
     }
     /**
      * Gets the creationDateTime property value. The creationDateTime property
@@ -95,7 +39,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this.creationDateTime;
+        return this.backingStore.get("creationDateTime");
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -103,7 +47,7 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -130,91 +74,91 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
     }
     /**
      * Gets the referenceKey property value. The referenceKey property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceKey() {
-        return this.referenceKey;
+        return this.backingStore.get("referenceKey");
     }
     /**
      * Gets the referenceSystem property value. The referenceSystem property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getReferenceSystem() {
-        return this.referenceSystem;
+        return this.backingStore.get("referenceSystem");
     }
     /**
      * Gets the requestorId property value. The requestorId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestorId() {
-        return this.requestorId;
+        return this.backingStore.get("requestorId");
     }
     /**
      * Gets the requestorName property value. The requestorName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestorName() {
-        return this.requestorName;
+        return this.backingStore.get("requestorName");
     }
     /**
      * Gets the requestType property value. The requestType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRequestType() {
-        return this.requestType;
+        return this.backingStore.get("requestType");
     }
     /**
      * Gets the roleId property value. The roleId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleId() {
-        return this.roleId;
+        return this.backingStore.get("roleId");
     }
     /**
      * Gets the roleName property value. The roleName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRoleName() {
-        return this.roleName;
+        return this.backingStore.get("roleName");
     }
     /**
      * Gets the tenantId property value. The tenantId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userMail property value. The userMail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserMail() {
-        return this.userMail;
+        return this.backingStore.get("userMail");
     }
     /**
      * Gets the userName property value. The userName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Serializes information the current object
@@ -243,97 +187,97 @@ public class PrivilegedOperationEvent extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final String value) {
-        this.additionalInformation = value;
+        this.backingStore.set("additionalInformation", value);
     }
     /**
      * Sets the creationDateTime property value. The creationDateTime property
      * @param value Value to set for the creationDateTime property.
      */
     public void setCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.creationDateTime = value;
+        this.backingStore.set("creationDateTime", value);
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the referenceKey property value. The referenceKey property
      * @param value Value to set for the referenceKey property.
      */
     public void setReferenceKey(@jakarta.annotation.Nullable final String value) {
-        this.referenceKey = value;
+        this.backingStore.set("referenceKey", value);
     }
     /**
      * Sets the referenceSystem property value. The referenceSystem property
      * @param value Value to set for the referenceSystem property.
      */
     public void setReferenceSystem(@jakarta.annotation.Nullable final String value) {
-        this.referenceSystem = value;
+        this.backingStore.set("referenceSystem", value);
     }
     /**
      * Sets the requestorId property value. The requestorId property
      * @param value Value to set for the requestorId property.
      */
     public void setRequestorId(@jakarta.annotation.Nullable final String value) {
-        this.requestorId = value;
+        this.backingStore.set("requestorId", value);
     }
     /**
      * Sets the requestorName property value. The requestorName property
      * @param value Value to set for the requestorName property.
      */
     public void setRequestorName(@jakarta.annotation.Nullable final String value) {
-        this.requestorName = value;
+        this.backingStore.set("requestorName", value);
     }
     /**
      * Sets the requestType property value. The requestType property
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final String value) {
-        this.requestType = value;
+        this.backingStore.set("requestType", value);
     }
     /**
      * Sets the roleId property value. The roleId property
      * @param value Value to set for the roleId property.
      */
     public void setRoleId(@jakarta.annotation.Nullable final String value) {
-        this.roleId = value;
+        this.backingStore.set("roleId", value);
     }
     /**
      * Sets the roleName property value. The roleName property
      * @param value Value to set for the roleName property.
      */
     public void setRoleName(@jakarta.annotation.Nullable final String value) {
-        this.roleName = value;
+        this.backingStore.set("roleName", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userMail property value. The userMail property
      * @param value Value to set for the userMail property.
      */
     public void setUserMail(@jakarta.annotation.Nullable final String value) {
-        this.userMail = value;
+        this.backingStore.set("userMail", value);
     }
     /**
      * Sets the userName property value. The userName property
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
 }

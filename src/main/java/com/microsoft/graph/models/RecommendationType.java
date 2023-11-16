@@ -36,7 +36,12 @@ public enum RecommendationType implements ValuedEnum {
     AppRoleAssignmentsUsers("appRoleAssignmentsUsers"),
     ManagedIdentity("managedIdentity"),
     OverprivilegedApps("overprivilegedApps"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    LongLivedCredentials("longLivedCredentials"),
+    AadConnectDeprecated("aadConnectDeprecated"),
+    AdalToMsalMigration("adalToMsalMigration"),
+    OwnerlessApps("ownerlessApps"),
+    InactiveGuests("inactiveGuests");
     public final String value;
     RecommendationType(final String value) {
         this.value = value;
@@ -79,6 +84,11 @@ public enum RecommendationType implements ValuedEnum {
             case "managedIdentity": return ManagedIdentity;
             case "overprivilegedApps": return OverprivilegedApps;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "longLivedCredentials": return LongLivedCredentials;
+            case "aadConnectDeprecated": return AadConnectDeprecated;
+            case "adalToMsalMigration": return AdalToMsalMigration;
+            case "ownerlessApps": return OwnerlessApps;
+            case "inactiveGuests": return InactiveGuests;
             default: return null;
         }
     }

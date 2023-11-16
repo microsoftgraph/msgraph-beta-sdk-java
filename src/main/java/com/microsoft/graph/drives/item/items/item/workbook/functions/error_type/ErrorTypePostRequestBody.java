@@ -5,23 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ErrorTypePostRequestBody implements AdditionalDataHolder, Parsable {
+public class ErrorTypePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The errorVal property
-     */
-    private Json errorVal;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ErrorTypePostRequestBody and sets the default values.
      */
     public ErrorTypePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -35,12 +36,17 @@ public class ErrorTypePostRequestBody implements AdditionalDataHolder, Parsable 
         return new ErrorTypePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the errorVal property value. The errorVal property
@@ -48,7 +54,7 @@ public class ErrorTypePostRequestBody implements AdditionalDataHolder, Parsable 
      */
     @jakarta.annotation.Nullable
     public Json getErrorVal() {
-        return this.errorVal;
+        return this.backingStore.get("errorVal");
     }
     /**
      * The deserialization information for the current model
@@ -70,17 +76,17 @@ public class ErrorTypePostRequestBody implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the errorVal property value. The errorVal property
      * @param value Value to set for the errorVal property.
      */
     public void setErrorVal(@jakarta.annotation.Nullable final Json value) {
-        this.errorVal = value;
+        this.backingStore.set("errorVal", value);
     }
 }

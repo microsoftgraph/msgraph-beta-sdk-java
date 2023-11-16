@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TenantInformation implements AdditionalDataHolder, Parsable {
+public class TenantInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Primary domain name of an Azure AD tenant.
-     */
-    private String defaultDomainName;
-    /**
-     * Display name of an Azure AD tenant.
-     */
-    private String displayName;
-    /**
-     * Name shown to users that sign in to an Azure AD tenant.
-     */
-    private String federationBrandName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Unique identifier of an Azure AD tenant.
-     */
-    private String tenantId;
-    /**
-     * Instantiates a new tenantInformation and sets the default values.
+     * Instantiates a new TenantInformation and sets the default values.
      */
     public TenantInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantInformation
+     * @return a TenantInformation
      */
     @jakarta.annotation.Nonnull
     public static TenantInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,36 +35,41 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         return new TenantInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
-     * @return a string
+     * Gets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDefaultDomainName() {
-        return this.defaultDomainName;
+        return this.backingStore.get("defaultDomainName");
     }
     /**
-     * Gets the displayName property value. Display name of an Azure AD tenant.
-     * @return a string
+     * Gets the displayName property value. Display name of a Microsoft Entra tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
-     * Gets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
-     * @return a string
+     * Gets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFederationBrandName() {
-        return this.federationBrandName;
+        return this.backingStore.get("federationBrandName");
     }
     /**
      * The deserialization information for the current model
@@ -97,19 +87,19 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the tenantId property value. Unique identifier of an Azure AD tenant.
-     * @return a string
+     * Gets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTenantId() {
-        return this.tenantId;
+        return this.backingStore.get("tenantId");
     }
     /**
      * Serializes information the current object
@@ -125,45 +115,45 @@ public class TenantInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the defaultDomainName property value. Primary domain name of an Azure AD tenant.
+     * Sets the defaultDomainName property value. Primary domain name of a Microsoft Entra tenant.
      * @param value Value to set for the defaultDomainName property.
      */
     public void setDefaultDomainName(@jakarta.annotation.Nullable final String value) {
-        this.defaultDomainName = value;
+        this.backingStore.set("defaultDomainName", value);
     }
     /**
-     * Sets the displayName property value. Display name of an Azure AD tenant.
+     * Sets the displayName property value. Display name of a Microsoft Entra tenant.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the federationBrandName property value. Name shown to users that sign in to an Azure AD tenant.
+     * Sets the federationBrandName property value. Name shown to users that sign in to a Microsoft Entra tenant.
      * @param value Value to set for the federationBrandName property.
      */
     public void setFederationBrandName(@jakarta.annotation.Nullable final String value) {
-        this.federationBrandName = value;
+        this.backingStore.set("federationBrandName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the tenantId property value. Unique identifier of an Azure AD tenant.
+     * Sets the tenantId property value. Unique identifier of a Microsoft Entra tenant.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
-        this.tenantId = value;
+        this.backingStore.set("tenantId", value);
     }
 }

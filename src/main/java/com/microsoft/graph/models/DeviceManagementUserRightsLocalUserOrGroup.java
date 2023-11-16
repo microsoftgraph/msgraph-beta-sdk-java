@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * Represents information for a local user or group used for user rights setting.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDataHolder, Parsable {
+public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Admins description of this local user or group.
-     */
-    private String description;
-    /**
-     * The name of this local user or group.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The security identifier of this local user or group (e.g. S-1-5-32-544).
-     */
-    private String securityIdentifier;
-    /**
-     * Instantiates a new deviceManagementUserRightsLocalUserOrGroup and sets the default values.
+     * Instantiates a new DeviceManagementUserRightsLocalUserOrGroup and sets the default values.
      */
     public DeviceManagementUserRightsLocalUserOrGroup() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementUserRightsLocalUserOrGroup
+     * @return a DeviceManagementUserRightsLocalUserOrGroup
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementUserRightsLocalUserOrGroup createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,20 +38,25 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
         return new DeviceManagementUserRightsLocalUserOrGroup();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the description property value. Admins description of this local user or group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -79,27 +73,27 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
     }
     /**
      * Gets the name property value. The name of this local user or group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the securityIdentifier property value. The security identifier of this local user or group (e.g. S-1-5-32-544).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSecurityIdentifier() {
-        return this.securityIdentifier;
+        return this.backingStore.get("securityIdentifier");
     }
     /**
      * Serializes information the current object
@@ -114,38 +108,38 @@ public class DeviceManagementUserRightsLocalUserOrGroup implements AdditionalDat
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the description property value. Admins description of this local user or group.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the name property value. The name of this local user or group.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the securityIdentifier property value. The security identifier of this local user or group (e.g. S-1-5-32-544).
      * @param value Value to set for the securityIdentifier property.
      */
     public void setSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.securityIdentifier = value;
+        this.backingStore.set("securityIdentifier", value);
     }
 }

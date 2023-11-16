@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Parsable {
+public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The software version for the admin agent running on the device.
-     */
-    private String adminAgentSoftwareVersion;
-    /**
-     * The software version for the firmware running on the device.
-     */
-    private String firmwareSoftwareVersion;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The software version for the operating system on the device.
-     */
-    private String operatingSystemSoftwareVersion;
-    /**
-     * The software version for the partner agent running on the device.
-     */
-    private String partnerAgentSoftwareVersion;
-    /**
-     * The software version for the Teams client running on the device.
-     */
-    private String teamsClientSoftwareVersion;
-    /**
-     * Instantiates a new teamworkDeviceSoftwareVersions and sets the default values.
+     * Instantiates a new TeamworkDeviceSoftwareVersions and sets the default values.
      */
     public TeamworkDeviceSoftwareVersions() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDeviceSoftwareVersions
+     * @return a TeamworkDeviceSoftwareVersions
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDeviceSoftwareVersions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,20 +35,25 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
         return new TeamworkDeviceSoftwareVersions();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the adminAgentSoftwareVersion property value. The software version for the admin agent running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAdminAgentSoftwareVersion() {
-        return this.adminAgentSoftwareVersion;
+        return this.backingStore.get("adminAgentSoftwareVersion");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +72,43 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
     }
     /**
      * Gets the firmwareSoftwareVersion property value. The software version for the firmware running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFirmwareSoftwareVersion() {
-        return this.firmwareSoftwareVersion;
+        return this.backingStore.get("firmwareSoftwareVersion");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOperatingSystemSoftwareVersion() {
-        return this.operatingSystemSoftwareVersion;
+        return this.backingStore.get("operatingSystemSoftwareVersion");
     }
     /**
      * Gets the partnerAgentSoftwareVersion property value. The software version for the partner agent running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPartnerAgentSoftwareVersion() {
-        return this.partnerAgentSoftwareVersion;
+        return this.backingStore.get("partnerAgentSoftwareVersion");
     }
     /**
      * Gets the teamsClientSoftwareVersion property value. The software version for the Teams client running on the device.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTeamsClientSoftwareVersion() {
-        return this.teamsClientSoftwareVersion;
+        return this.backingStore.get("teamsClientSoftwareVersion");
     }
     /**
      * Serializes information the current object
@@ -139,52 +125,52 @@ public class TeamworkDeviceSoftwareVersions implements AdditionalDataHolder, Par
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the adminAgentSoftwareVersion property value. The software version for the admin agent running on the device.
      * @param value Value to set for the adminAgentSoftwareVersion property.
      */
     public void setAdminAgentSoftwareVersion(@jakarta.annotation.Nullable final String value) {
-        this.adminAgentSoftwareVersion = value;
+        this.backingStore.set("adminAgentSoftwareVersion", value);
     }
     /**
      * Sets the firmwareSoftwareVersion property value. The software version for the firmware running on the device.
      * @param value Value to set for the firmwareSoftwareVersion property.
      */
     public void setFirmwareSoftwareVersion(@jakarta.annotation.Nullable final String value) {
-        this.firmwareSoftwareVersion = value;
+        this.backingStore.set("firmwareSoftwareVersion", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the operatingSystemSoftwareVersion property value. The software version for the operating system on the device.
      * @param value Value to set for the operatingSystemSoftwareVersion property.
      */
     public void setOperatingSystemSoftwareVersion(@jakarta.annotation.Nullable final String value) {
-        this.operatingSystemSoftwareVersion = value;
+        this.backingStore.set("operatingSystemSoftwareVersion", value);
     }
     /**
      * Sets the partnerAgentSoftwareVersion property value. The software version for the partner agent running on the device.
      * @param value Value to set for the partnerAgentSoftwareVersion property.
      */
     public void setPartnerAgentSoftwareVersion(@jakarta.annotation.Nullable final String value) {
-        this.partnerAgentSoftwareVersion = value;
+        this.backingStore.set("partnerAgentSoftwareVersion", value);
     }
     /**
      * Sets the teamsClientSoftwareVersion property value. The software version for the Teams client running on the device.
      * @param value Value to set for the teamsClientSoftwareVersion property.
      */
     public void setTeamsClientSoftwareVersion(@jakarta.annotation.Nullable final String value) {
-        this.teamsClientSoftwareVersion = value;
+        this.backingStore.set("teamsClientSoftwareVersion", value);
     }
 }

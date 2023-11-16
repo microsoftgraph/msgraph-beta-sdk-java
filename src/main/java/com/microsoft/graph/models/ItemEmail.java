@@ -9,19 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ItemEmail extends ItemFacet implements Parsable {
     /**
-     * The email address itself.
-     */
-    private String address;
-    /**
-     * The name or label a user has associated with a particular email address.
-     */
-    private String displayName;
-    /**
-     * The type property
-     */
-    private EmailType type;
-    /**
-     * Instantiates a new itemEmail and sets the default values.
+     * Instantiates a new ItemEmail and sets the default values.
      */
     public ItemEmail() {
         super();
@@ -30,7 +18,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a itemEmail
+     * @return a ItemEmail
      */
     @jakarta.annotation.Nonnull
     public static ItemEmail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,19 +27,19 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the address property value. The email address itself.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAddress() {
-        return this.address;
+        return this.backingStore.get("address");
     }
     /**
      * Gets the displayName property value. The name or label a user has associated with a particular email address.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -67,11 +55,11 @@ public class ItemEmail extends ItemFacet implements Parsable {
     }
     /**
      * Gets the type property value. The type property
-     * @return a emailType
+     * @return a EmailType
      */
     @jakarta.annotation.Nullable
     public EmailType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -89,20 +77,20 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final String value) {
-        this.address = value;
+        this.backingStore.set("address", value);
     }
     /**
      * Sets the displayName property value. The name or label a user has associated with a particular email address.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final EmailType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }

@@ -37,7 +37,9 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     /** Template Family for device configuration scripts */
     DeviceConfigurationScripts("deviceConfigurationScripts"),
     /** Template Family for device configuration policies */
-    DeviceConfigurationPolicies("deviceConfigurationPolicies");
+    DeviceConfigurationPolicies("deviceConfigurationPolicies"),
+    /** Template Family for Company Portal settings */
+    CompanyPortal("companyPortal");
     public final String value;
     DeviceManagementConfigurationTemplateFamily(final String value) {
         this.value = value;
@@ -63,6 +65,7 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "deviceConfigurationScripts": return DeviceConfigurationScripts;
             case "deviceConfigurationPolicies": return DeviceConfigurationPolicies;
+            case "companyPortal": return CompanyPortal;
             default: return null;
         }
     }

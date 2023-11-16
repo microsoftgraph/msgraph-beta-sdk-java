@@ -5,31 +5,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConfidenceTPostRequestBody implements AdditionalDataHolder, Parsable {
+public class ConfidenceTPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The alpha property
-     */
-    private Json alpha;
-    /**
-     * The size property
-     */
-    private Json size;
-    /**
-     * The standardDev property
-     */
-    private Json standardDev;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ConfidenceTPostRequestBody and sets the default values.
      */
     public ConfidenceTPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -43,12 +36,17 @@ public class ConfidenceTPostRequestBody implements AdditionalDataHolder, Parsabl
         return new ConfidenceTPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the alpha property value. The alpha property
@@ -56,7 +54,7 @@ public class ConfidenceTPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getAlpha() {
-        return this.alpha;
+        return this.backingStore.get("alpha");
     }
     /**
      * The deserialization information for the current model
@@ -76,7 +74,7 @@ public class ConfidenceTPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the standardDev property value. The standardDev property
@@ -84,7 +82,7 @@ public class ConfidenceTPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getStandardDev() {
-        return this.standardDev;
+        return this.backingStore.get("standardDev");
     }
     /**
      * Serializes information the current object
@@ -98,31 +96,31 @@ public class ConfidenceTPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the alpha property value. The alpha property
      * @param value Value to set for the alpha property.
      */
     public void setAlpha(@jakarta.annotation.Nullable final Json value) {
-        this.alpha = value;
+        this.backingStore.set("alpha", value);
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Json value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the standardDev property value. The standardDev property
      * @param value Value to set for the standardDev property.
      */
     public void setStandardDev(@jakarta.annotation.Nullable final Json value) {
-        this.standardDev = value;
+        this.backingStore.set("standardDev", value);
     }
 }

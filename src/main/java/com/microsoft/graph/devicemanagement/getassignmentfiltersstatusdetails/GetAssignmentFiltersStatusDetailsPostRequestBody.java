@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetAssignmentFiltersStatusDetailsPostRequestBody implements AdditionalDataHolder, Parsable {
+public class GetAssignmentFiltersStatusDetailsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The assignmentFilterIds property
-     */
-    private java.util.List<String> assignmentFilterIds;
-    /**
-     * The managedDeviceId property
-     */
-    private String managedDeviceId;
-    /**
-     * The payloadId property
-     */
-    private String payloadId;
-    /**
-     * The skip property
-     */
-    private Integer skip;
-    /**
-     * The top property
-     */
-    private Integer top;
-    /**
-     * The userId property
-     */
-    private String userId;
-    /**
-     * Instantiates a new getAssignmentFiltersStatusDetailsPostRequestBody and sets the default values.
+     * Instantiates a new GetAssignmentFiltersStatusDetailsPostRequestBody and sets the default values.
      */
     public GetAssignmentFiltersStatusDetailsPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a getAssignmentFiltersStatusDetailsPostRequestBody
+     * @return a GetAssignmentFiltersStatusDetailsPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static GetAssignmentFiltersStatusDetailsPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,20 +35,25 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
         return new GetAssignmentFiltersStatusDetailsPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentFilterIds property value. The assignmentFilterIds property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
-        return this.assignmentFilterIds;
+        return this.backingStore.get("assignmentFilterIds");
     }
     /**
      * The deserialization information for the current model
@@ -86,43 +72,43 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
     }
     /**
      * Gets the managedDeviceId property value. The managedDeviceId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getManagedDeviceId() {
-        return this.managedDeviceId;
+        return this.backingStore.get("managedDeviceId");
     }
     /**
      * Gets the payloadId property value. The payloadId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
-        return this.payloadId;
+        return this.backingStore.get("payloadId");
     }
     /**
      * Gets the skip property value. The skip property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSkip() {
-        return this.skip;
+        return this.backingStore.get("skip");
     }
     /**
      * Gets the top property value. The top property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTop() {
-        return this.top;
+        return this.backingStore.get("top");
     }
     /**
      * Gets the userId property value. The userId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserId() {
-        return this.userId;
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -139,52 +125,52 @@ public class GetAssignmentFiltersStatusDetailsPostRequestBody implements Additio
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignmentFilterIds property value. The assignmentFilterIds property
      * @param value Value to set for the assignmentFilterIds property.
      */
     public void setAssignmentFilterIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.assignmentFilterIds = value;
+        this.backingStore.set("assignmentFilterIds", value);
     }
     /**
      * Sets the managedDeviceId property value. The managedDeviceId property
      * @param value Value to set for the managedDeviceId property.
      */
     public void setManagedDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.managedDeviceId = value;
+        this.backingStore.set("managedDeviceId", value);
     }
     /**
      * Sets the payloadId property value. The payloadId property
      * @param value Value to set for the payloadId property.
      */
     public void setPayloadId(@jakarta.annotation.Nullable final String value) {
-        this.payloadId = value;
+        this.backingStore.set("payloadId", value);
     }
     /**
      * Sets the skip property value. The skip property
      * @param value Value to set for the skip property.
      */
     public void setSkip(@jakarta.annotation.Nullable final Integer value) {
-        this.skip = value;
+        this.backingStore.set("skip", value);
     }
     /**
      * Sets the top property value. The top property
      * @param value Value to set for the top property.
      */
     public void setTop(@jakarta.annotation.Nullable final Integer value) {
-        this.top = value;
+        this.backingStore.set("top", value);
     }
     /**
      * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.userId = value;
+        this.backingStore.set("userId", value);
     }
 }

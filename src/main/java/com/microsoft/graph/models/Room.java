@@ -9,59 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Room extends Place implements Parsable {
     /**
-     * Specifies the name of the audio device in the room.
-     */
-    private String audioDeviceName;
-    /**
-     * Type of room. Possible values are standard, and reserved.
-     */
-    private BookingType bookingType;
-    /**
-     * Specifies the building name or building number that the room is in.
-     */
-    private String building;
-    /**
-     * Specifies the capacity of the room.
-     */
-    private Integer capacity;
-    /**
-     * Specifies the name of the display device in the room.
-     */
-    private String displayDeviceName;
-    /**
-     * Email address of the room.
-     */
-    private String emailAddress;
-    /**
-     * Specifies a descriptive label for the floor, for example, P.
-     */
-    private String floorLabel;
-    /**
-     * Specifies the floor number that the room is on.
-     */
-    private Integer floorNumber;
-    /**
-     * Specifies whether the room is wheelchair accessible.
-     */
-    private Boolean isWheelChairAccessible;
-    /**
-     * Specifies a descriptive label for the room, for example, a number or name.
-     */
-    private String label;
-    /**
-     * Specifies a nickname for the room, for example, 'conf room'.
-     */
-    private String nickname;
-    /**
-     * Specifies additional features of the room, for example, details like the type of view or furniture type.
-     */
-    private java.util.List<String> tags;
-    /**
-     * Specifies the name of the video device in the room.
-     */
-    private String videoDeviceName;
-    /**
-     * Instantiates a new room and sets the default values.
+     * Instantiates a new Room and sets the default values.
      */
     public Room() {
         super();
@@ -70,7 +18,7 @@ public class Room extends Place implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a room
+     * @return a Room
      */
     @jakarta.annotation.Nonnull
     public static Room createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -79,51 +27,51 @@ public class Room extends Place implements Parsable {
     }
     /**
      * Gets the audioDeviceName property value. Specifies the name of the audio device in the room.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAudioDeviceName() {
-        return this.audioDeviceName;
+        return this.backingStore.get("audioDeviceName");
     }
     /**
      * Gets the bookingType property value. Type of room. Possible values are standard, and reserved.
-     * @return a bookingType
+     * @return a BookingType
      */
     @jakarta.annotation.Nullable
     public BookingType getBookingType() {
-        return this.bookingType;
+        return this.backingStore.get("bookingType");
     }
     /**
      * Gets the building property value. Specifies the building name or building number that the room is in.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBuilding() {
-        return this.building;
+        return this.backingStore.get("building");
     }
     /**
      * Gets the capacity property value. Specifies the capacity of the room.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getCapacity() {
-        return this.capacity;
+        return this.backingStore.get("capacity");
     }
     /**
      * Gets the displayDeviceName property value. Specifies the name of the display device in the room.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayDeviceName() {
-        return this.displayDeviceName;
+        return this.backingStore.get("displayDeviceName");
     }
     /**
      * Gets the emailAddress property value. Email address of the room.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -149,59 +97,59 @@ public class Room extends Place implements Parsable {
     }
     /**
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getFloorLabel() {
-        return this.floorLabel;
+        return this.backingStore.get("floorLabel");
     }
     /**
      * Gets the floorNumber property value. Specifies the floor number that the room is on.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getFloorNumber() {
-        return this.floorNumber;
+        return this.backingStore.get("floorNumber");
     }
     /**
      * Gets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsWheelChairAccessible() {
-        return this.isWheelChairAccessible;
+        return this.backingStore.get("isWheelChairAccessible");
     }
     /**
      * Gets the label property value. Specifies a descriptive label for the room, for example, a number or name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLabel() {
-        return this.label;
+        return this.backingStore.get("label");
     }
     /**
      * Gets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNickname() {
-        return this.nickname;
+        return this.backingStore.get("nickname");
     }
     /**
      * Gets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this.tags;
+        return this.backingStore.get("tags");
     }
     /**
      * Gets the videoDeviceName property value. Specifies the name of the video device in the room.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVideoDeviceName() {
-        return this.videoDeviceName;
+        return this.backingStore.get("videoDeviceName");
     }
     /**
      * Serializes information the current object
@@ -229,90 +177,90 @@ public class Room extends Place implements Parsable {
      * @param value Value to set for the audioDeviceName property.
      */
     public void setAudioDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.audioDeviceName = value;
+        this.backingStore.set("audioDeviceName", value);
     }
     /**
      * Sets the bookingType property value. Type of room. Possible values are standard, and reserved.
      * @param value Value to set for the bookingType property.
      */
     public void setBookingType(@jakarta.annotation.Nullable final BookingType value) {
-        this.bookingType = value;
+        this.backingStore.set("bookingType", value);
     }
     /**
      * Sets the building property value. Specifies the building name or building number that the room is in.
      * @param value Value to set for the building property.
      */
     public void setBuilding(@jakarta.annotation.Nullable final String value) {
-        this.building = value;
+        this.backingStore.set("building", value);
     }
     /**
      * Sets the capacity property value. Specifies the capacity of the room.
      * @param value Value to set for the capacity property.
      */
     public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
-        this.capacity = value;
+        this.backingStore.set("capacity", value);
     }
     /**
      * Sets the displayDeviceName property value. Specifies the name of the display device in the room.
      * @param value Value to set for the displayDeviceName property.
      */
     public void setDisplayDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.displayDeviceName = value;
+        this.backingStore.set("displayDeviceName", value);
     }
     /**
      * Sets the emailAddress property value. Email address of the room.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
      * @param value Value to set for the floorLabel property.
      */
     public void setFloorLabel(@jakarta.annotation.Nullable final String value) {
-        this.floorLabel = value;
+        this.backingStore.set("floorLabel", value);
     }
     /**
      * Sets the floorNumber property value. Specifies the floor number that the room is on.
      * @param value Value to set for the floorNumber property.
      */
     public void setFloorNumber(@jakarta.annotation.Nullable final Integer value) {
-        this.floorNumber = value;
+        this.backingStore.set("floorNumber", value);
     }
     /**
      * Sets the isWheelChairAccessible property value. Specifies whether the room is wheelchair accessible.
      * @param value Value to set for the isWheelChairAccessible property.
      */
     public void setIsWheelChairAccessible(@jakarta.annotation.Nullable final Boolean value) {
-        this.isWheelChairAccessible = value;
+        this.backingStore.set("isWheelChairAccessible", value);
     }
     /**
      * Sets the label property value. Specifies a descriptive label for the room, for example, a number or name.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
-        this.label = value;
+        this.backingStore.set("label", value);
     }
     /**
      * Sets the nickname property value. Specifies a nickname for the room, for example, 'conf room'.
      * @param value Value to set for the nickname property.
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
-        this.nickname = value;
+        this.backingStore.set("nickname", value);
     }
     /**
      * Sets the tags property value. Specifies additional features of the room, for example, details like the type of view or furniture type.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.tags = value;
+        this.backingStore.set("tags", value);
     }
     /**
      * Sets the videoDeviceName property value. Specifies the name of the video device in the room.
      * @param value Value to set for the videoDeviceName property.
      */
     public void setVideoDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.videoDeviceName = value;
+        this.backingStore.set("videoDeviceName", value);
     }
 }

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,37 +15,23 @@ import java.util.Objects;
  * A complex type to store the windows update rollout settings including offer start date time, offer end date time, and days between each set of offers.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsable {
+public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The feature update's ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
-     */
-    private OffsetDateTime offerEndDateTimeInUTC;
-    /**
-     * The number of day(s) between each set of offers to be set, updated, and displayed for a feature update profile, for example: if OfferStartDateTimeInUTC is 2020-06-09T10:00:00Z, and OfferIntervalInDays is 1, then the next two sets of offers will be made consecutively on 2020-06-10T10:00:00Z (next day at the same specified time) and 2020-06-11T10:00:00Z (next next day at the same specified time) with 1 day in between each set of offers.
-     */
-    private Integer offerIntervalInDays;
-    /**
-     * The feature update's starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
-     */
-    private OffsetDateTime offerStartDateTimeInUTC;
-    /**
-     * Instantiates a new windowsUpdateRolloutSettings and sets the default values.
+     * Instantiates a new WindowsUpdateRolloutSettings and sets the default values.
      */
     public WindowsUpdateRolloutSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windowsUpdateRolloutSettings
+     * @return a WindowsUpdateRolloutSettings
      */
     @jakarta.annotation.Nonnull
     public static WindowsUpdateRolloutSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,12 +39,17 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
         return new WindowsUpdateRolloutSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -72,11 +66,11 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the offerEndDateTimeInUTC property value. The feature update's ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
@@ -84,15 +78,15 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOfferEndDateTimeInUTC() {
-        return this.offerEndDateTimeInUTC;
+        return this.backingStore.get("offerEndDateTimeInUTC");
     }
     /**
      * Gets the offerIntervalInDays property value. The number of day(s) between each set of offers to be set, updated, and displayed for a feature update profile, for example: if OfferStartDateTimeInUTC is 2020-06-09T10:00:00Z, and OfferIntervalInDays is 1, then the next two sets of offers will be made consecutively on 2020-06-10T10:00:00Z (next day at the same specified time) and 2020-06-11T10:00:00Z (next next day at the same specified time) with 1 day in between each set of offers.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getOfferIntervalInDays() {
-        return this.offerIntervalInDays;
+        return this.backingStore.get("offerIntervalInDays");
     }
     /**
      * Gets the offerStartDateTimeInUTC property value. The feature update's starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
@@ -100,7 +94,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOfferStartDateTimeInUTC() {
-        return this.offerStartDateTimeInUTC;
+        return this.backingStore.get("offerStartDateTimeInUTC");
     }
     /**
      * Serializes information the current object
@@ -115,38 +109,38 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the offerEndDateTimeInUTC property value. The feature update's ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
      * @param value Value to set for the offerEndDateTimeInUTC property.
      */
     public void setOfferEndDateTimeInUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.offerEndDateTimeInUTC = value;
+        this.backingStore.set("offerEndDateTimeInUTC", value);
     }
     /**
      * Sets the offerIntervalInDays property value. The number of day(s) between each set of offers to be set, updated, and displayed for a feature update profile, for example: if OfferStartDateTimeInUTC is 2020-06-09T10:00:00Z, and OfferIntervalInDays is 1, then the next two sets of offers will be made consecutively on 2020-06-10T10:00:00Z (next day at the same specified time) and 2020-06-11T10:00:00Z (next next day at the same specified time) with 1 day in between each set of offers.
      * @param value Value to set for the offerIntervalInDays property.
      */
     public void setOfferIntervalInDays(@jakarta.annotation.Nullable final Integer value) {
-        this.offerIntervalInDays = value;
+        this.backingStore.set("offerIntervalInDays", value);
     }
     /**
      * Sets the offerStartDateTimeInUTC property value. The feature update's starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
      * @param value Value to set for the offerStartDateTimeInUTC property.
      */
     public void setOfferStartDateTimeInUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.offerStartDateTimeInUTC = value;
+        this.backingStore.set("offerStartDateTimeInUTC", value);
     }
 }

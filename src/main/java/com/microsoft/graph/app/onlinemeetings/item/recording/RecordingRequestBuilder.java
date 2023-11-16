@@ -36,52 +36,52 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/app/onlineMeetings/{onlineMeeting%2Did}/recording", rawUrl);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
-     * @return a CompletableFuture of InputStream
+     * Get recording for the navigation property onlineMeetings from app
+     * @return a InputStream
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get() {
+    @jakarta.annotation.Nullable
+    public InputStream get() {
         return get(null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property onlineMeetings from app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InputStream
+     * @return a InputStream
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+        return this.requestAdapter.sendPrimitive(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property onlineMeetings in app
      * @param body Binary request body
-     * @return a CompletableFuture of InputStream
+     * @return a InputStream
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body) {
+    @jakarta.annotation.Nullable
+    public InputStream put(@jakarta.annotation.Nonnull final InputStream body) {
         return put(body, null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property onlineMeetings in app
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InputStream
+     * @return a InputStream
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<InputStream> put(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public InputStream put(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+        return this.requestAdapter.sendPrimitive(requestInfo, InputStream.class, errorMapping);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property onlineMeetings from app
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -89,26 +89,19 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Get recording for the navigation property onlineMeetings from app
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json");
         return requestInfo;
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property onlineMeetings in app
      * @param body Binary request body
      * @return a RequestInformation
      */
@@ -117,7 +110,7 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * The content stream of the recording of a Teams live event. Read-only.
+     * Update recording for the navigation property onlineMeetings in app
      * @param body Binary request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -125,23 +118,16 @@ public class RecordingRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final InputStream body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PUT;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setStreamContent(body);
-        if (requestConfiguration != null) {
-            final PutRequestConfiguration requestConfig = new PutRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setStreamContent(body, "application/octet-stream");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a recordingRequestBuilder
+     * @return a RecordingRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public RecordingRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

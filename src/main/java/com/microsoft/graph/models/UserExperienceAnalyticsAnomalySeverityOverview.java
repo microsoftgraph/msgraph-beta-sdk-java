@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserExperienceAnalyticsAnomalySeverityOverview implements AdditionalDataHolder, Parsable {
+public class UserExperienceAnalyticsAnomalySeverityOverview implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     */
-    private Integer highSeverityAnomalyCount;
-    /**
-     * Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     */
-    private Integer informationalSeverityAnomalyCount;
-    /**
-     * Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     */
-    private Integer lowSeverityAnomalyCount;
-    /**
-     * Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     */
-    private Integer mediumSeverityAnomalyCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new userExperienceAnalyticsAnomalySeverityOverview and sets the default values.
+     * Instantiates a new UserExperienceAnalyticsAnomalySeverityOverview and sets the default values.
      */
     public UserExperienceAnalyticsAnomalySeverityOverview() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a userExperienceAnalyticsAnomalySeverityOverview
+     * @return a UserExperienceAnalyticsAnomalySeverityOverview
      */
     @jakarta.annotation.Nonnull
     public static UserExperienceAnalyticsAnomalySeverityOverview createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,12 +38,17 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
         return new UserExperienceAnalyticsAnomalySeverityOverview();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -76,43 +66,43 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
     }
     /**
      * Gets the highSeverityAnomalyCount property value. Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getHighSeverityAnomalyCount() {
-        return this.highSeverityAnomalyCount;
+        return this.backingStore.get("highSeverityAnomalyCount");
     }
     /**
      * Gets the informationalSeverityAnomalyCount property value. Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getInformationalSeverityAnomalyCount() {
-        return this.informationalSeverityAnomalyCount;
+        return this.backingStore.get("informationalSeverityAnomalyCount");
     }
     /**
      * Gets the lowSeverityAnomalyCount property value. Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getLowSeverityAnomalyCount() {
-        return this.lowSeverityAnomalyCount;
+        return this.backingStore.get("lowSeverityAnomalyCount");
     }
     /**
      * Gets the mediumSeverityAnomalyCount property value. Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getMediumSeverityAnomalyCount() {
-        return this.mediumSeverityAnomalyCount;
+        return this.backingStore.get("mediumSeverityAnomalyCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -128,45 +118,45 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements Additiona
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the highSeverityAnomalyCount property value. Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @param value Value to set for the highSeverityAnomalyCount property.
      */
     public void setHighSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
-        this.highSeverityAnomalyCount = value;
+        this.backingStore.set("highSeverityAnomalyCount", value);
     }
     /**
      * Sets the informationalSeverityAnomalyCount property value. Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @param value Value to set for the informationalSeverityAnomalyCount property.
      */
     public void setInformationalSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
-        this.informationalSeverityAnomalyCount = value;
+        this.backingStore.set("informationalSeverityAnomalyCount", value);
     }
     /**
      * Sets the lowSeverityAnomalyCount property value. Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @param value Value to set for the lowSeverityAnomalyCount property.
      */
     public void setLowSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
-        this.lowSeverityAnomalyCount = value;
+        this.backingStore.set("lowSeverityAnomalyCount", value);
     }
     /**
      * Sets the mediumSeverityAnomalyCount property value. Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      * @param value Value to set for the mediumSeverityAnomalyCount property.
      */
     public void setMediumSeverityAnomalyCount(@jakarta.annotation.Nullable final Integer value) {
-        this.mediumSeverityAnomalyCount = value;
+        this.backingStore.set("mediumSeverityAnomalyCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

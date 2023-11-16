@@ -9,31 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     /**
-     * The collection of checklist items on the task.
-     */
-    private PlannerChecklistItems checklist;
-    /**
-     * Contains detailed information about requirements on the task.
-     */
-    private PlannerTaskCompletionRequirementDetails completionRequirements;
-    /**
-     * Description of the task.
-     */
-    private String description;
-    /**
-     * Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field hasn't previously been set but 'description' has been, the existing description is synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
-     */
-    private ItemBody notes;
-    /**
-     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     */
-    private PlannerPreviewType previewType;
-    /**
-     * The collection of references on the task.
-     */
-    private PlannerExternalReferences references;
-    /**
-     * Instantiates a new plannerTaskDetails and sets the default values.
+     * Instantiates a new PlannerTaskDetails and sets the default values.
      */
     public PlannerTaskDetails() {
         super();
@@ -41,7 +17,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTaskDetails
+     * @return a PlannerTaskDetails
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +26,27 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the checklist property value. The collection of checklist items on the task.
-     * @return a plannerChecklistItems
+     * @return a PlannerChecklistItems
      */
     @jakarta.annotation.Nullable
     public PlannerChecklistItems getChecklist() {
-        return this.checklist;
+        return this.backingStore.get("checklist");
     }
     /**
      * Gets the completionRequirements property value. Contains detailed information about requirements on the task.
-     * @return a plannerTaskCompletionRequirementDetails
+     * @return a PlannerTaskCompletionRequirementDetails
      */
     @jakarta.annotation.Nullable
     public PlannerTaskCompletionRequirementDetails getCompletionRequirements() {
-        return this.completionRequirements;
+        return this.backingStore.get("completionRequirements");
     }
     /**
      * Gets the description property value. Description of the task.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +65,27 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field hasn't previously been set but 'description' has been, the existing description is synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
-     * @return a itemBody
+     * @return a ItemBody
      */
     @jakarta.annotation.Nullable
     public ItemBody getNotes() {
-        return this.notes;
+        return this.backingStore.get("notes");
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
-     * @return a plannerPreviewType
+     * @return a PlannerPreviewType
      */
     @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
-        return this.previewType;
+        return this.backingStore.get("previewType");
     }
     /**
      * Gets the references property value. The collection of references on the task.
-     * @return a plannerExternalReferences
+     * @return a PlannerExternalReferences
      */
     @jakarta.annotation.Nullable
     public PlannerExternalReferences getReferences() {
-        return this.references;
+        return this.backingStore.get("references");
     }
     /**
      * Serializes information the current object
@@ -130,41 +106,41 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the checklist property.
      */
     public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
-        this.checklist = value;
+        this.backingStore.set("checklist", value);
     }
     /**
      * Sets the completionRequirements property value. Contains detailed information about requirements on the task.
      * @param value Value to set for the completionRequirements property.
      */
     public void setCompletionRequirements(@jakarta.annotation.Nullable final PlannerTaskCompletionRequirementDetails value) {
-        this.completionRequirements = value;
+        this.backingStore.set("completionRequirements", value);
     }
     /**
      * Sets the description property value. Description of the task.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field hasn't previously been set but 'description' has been, the existing description is synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
-        this.notes = value;
+        this.backingStore.set("notes", value);
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
      */
     public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
-        this.previewType = value;
+        this.backingStore.set("previewType", value);
     }
     /**
      * Sets the references property value. The collection of references on the task.
      * @param value Value to set for the references property.
      */
     public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {
-        this.references = value;
+        this.backingStore.set("references", value);
     }
 }

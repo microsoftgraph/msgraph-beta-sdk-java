@@ -10,39 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MessageTrace extends Entity implements Parsable {
     /**
-     * The destinationIPAddress property
-     */
-    private String destinationIPAddress;
-    /**
-     * The messageId property
-     */
-    private String messageId;
-    /**
-     * The receivedDateTime property
-     */
-    private OffsetDateTime receivedDateTime;
-    /**
-     * The recipients property
-     */
-    private java.util.List<MessageRecipient> recipients;
-    /**
-     * The senderEmail property
-     */
-    private String senderEmail;
-    /**
-     * The size property
-     */
-    private Integer size;
-    /**
-     * The sourceIPAddress property
-     */
-    private String sourceIPAddress;
-    /**
-     * The subject property
-     */
-    private String subject;
-    /**
-     * Instantiates a new messageTrace and sets the default values.
+     * Instantiates a new MessageTrace and sets the default values.
      */
     public MessageTrace() {
         super();
@@ -50,7 +18,7 @@ public class MessageTrace extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a messageTrace
+     * @return a MessageTrace
      */
     @jakarta.annotation.Nonnull
     public static MessageTrace createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,11 +27,11 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the destinationIPAddress property value. The destinationIPAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDestinationIPAddress() {
-        return this.destinationIPAddress;
+        return this.backingStore.get("destinationIPAddress");
     }
     /**
      * The deserialization information for the current model
@@ -84,11 +52,11 @@ public class MessageTrace extends Entity implements Parsable {
     }
     /**
      * Gets the messageId property value. The messageId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMessageId() {
-        return this.messageId;
+        return this.backingStore.get("messageId");
     }
     /**
      * Gets the receivedDateTime property value. The receivedDateTime property
@@ -96,47 +64,47 @@ public class MessageTrace extends Entity implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
-        return this.receivedDateTime;
+        return this.backingStore.get("receivedDateTime");
     }
     /**
      * Gets the recipients property value. The recipients property
-     * @return a messageRecipient
+     * @return a java.util.List<MessageRecipient>
      */
     @jakarta.annotation.Nullable
     public java.util.List<MessageRecipient> getRecipients() {
-        return this.recipients;
+        return this.backingStore.get("recipients");
     }
     /**
      * Gets the senderEmail property value. The senderEmail property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSenderEmail() {
-        return this.senderEmail;
+        return this.backingStore.get("senderEmail");
     }
     /**
      * Gets the size property value. The size property
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getSize() {
-        return this.size;
+        return this.backingStore.get("size");
     }
     /**
      * Gets the sourceIPAddress property value. The sourceIPAddress property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSourceIPAddress() {
-        return this.sourceIPAddress;
+        return this.backingStore.get("sourceIPAddress");
     }
     /**
      * Gets the subject property value. The subject property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSubject() {
-        return this.subject;
+        return this.backingStore.get("subject");
     }
     /**
      * Serializes information the current object
@@ -159,55 +127,55 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the destinationIPAddress property.
      */
     public void setDestinationIPAddress(@jakarta.annotation.Nullable final String value) {
-        this.destinationIPAddress = value;
+        this.backingStore.set("destinationIPAddress", value);
     }
     /**
      * Sets the messageId property value. The messageId property
      * @param value Value to set for the messageId property.
      */
     public void setMessageId(@jakarta.annotation.Nullable final String value) {
-        this.messageId = value;
+        this.backingStore.set("messageId", value);
     }
     /**
      * Sets the receivedDateTime property value. The receivedDateTime property
      * @param value Value to set for the receivedDateTime property.
      */
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.receivedDateTime = value;
+        this.backingStore.set("receivedDateTime", value);
     }
     /**
      * Sets the recipients property value. The recipients property
      * @param value Value to set for the recipients property.
      */
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<MessageRecipient> value) {
-        this.recipients = value;
+        this.backingStore.set("recipients", value);
     }
     /**
      * Sets the senderEmail property value. The senderEmail property
      * @param value Value to set for the senderEmail property.
      */
     public void setSenderEmail(@jakarta.annotation.Nullable final String value) {
-        this.senderEmail = value;
+        this.backingStore.set("senderEmail", value);
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
-        this.size = value;
+        this.backingStore.set("size", value);
     }
     /**
      * Sets the sourceIPAddress property value. The sourceIPAddress property
      * @param value Value to set for the sourceIPAddress property.
      */
     public void setSourceIPAddress(@jakarta.annotation.Nullable final String value) {
-        this.sourceIPAddress = value;
+        this.backingStore.set("sourceIPAddress", value);
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
-        this.subject = value;
+        this.backingStore.set("subject", value);
     }
 }

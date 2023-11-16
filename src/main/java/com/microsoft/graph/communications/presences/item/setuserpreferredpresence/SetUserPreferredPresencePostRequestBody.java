@@ -5,37 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, Parsable {
+public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The activity property
+     * Stores model information.
      */
-    private String activity;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The availability property
-     */
-    private String availability;
-    /**
-     * The expirationDuration property
-     */
-    private PeriodAndDuration expirationDuration;
-    /**
-     * Instantiates a new setUserPreferredPresencePostRequestBody and sets the default values.
+     * Instantiates a new SetUserPreferredPresencePostRequestBody and sets the default values.
      */
     public SetUserPreferredPresencePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a setUserPreferredPresencePostRequestBody
+     * @return a SetUserPreferredPresencePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static SetUserPreferredPresencePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -44,27 +37,32 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
     }
     /**
      * Gets the activity property value. The activity property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getActivity() {
-        return this.activity;
+        return this.backingStore.get("activity");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the availability property value. The availability property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAvailability() {
-        return this.availability;
+        return this.backingStore.get("availability");
     }
     /**
      * Gets the expirationDuration property value. The expirationDuration property
@@ -72,7 +70,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      */
     @jakarta.annotation.Nullable
     public PeriodAndDuration getExpirationDuration() {
-        return this.expirationDuration;
+        return this.backingStore.get("expirationDuration");
     }
     /**
      * The deserialization information for the current model
@@ -102,27 +100,27 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final String value) {
-        this.activity = value;
+        this.backingStore.set("activity", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the availability property value. The availability property
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final String value) {
-        this.availability = value;
+        this.backingStore.set("availability", value);
     }
     /**
      * Sets the expirationDuration property value. The expirationDuration property
      * @param value Value to set for the expirationDuration property.
      */
     public void setExpirationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.expirationDuration = PeriodAndDuration.ofPeriodAndDuration(value);
+        this.backingStore.set("expirationDuration", value);
     }
 }

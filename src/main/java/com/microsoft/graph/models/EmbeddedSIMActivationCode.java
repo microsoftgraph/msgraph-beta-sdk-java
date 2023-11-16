@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * The embedded SIM activation code as provided by the mobile operator.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable {
+public class EmbeddedSIMActivationCode implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The Integrated Circuit Card Identifier (ICCID) for this embedded SIM activation code as provided by the mobile operator.
-     */
-    private String integratedCircuitCardIdentifier;
-    /**
-     * The MatchingIdentifier (MatchingID) as specified in the GSMA Association SGP.22 RSP Technical Specification section 4.1.
-     */
-    private String matchingIdentifier;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification.
-     */
-    private String smdpPlusServerAddress;
-    /**
-     * Instantiates a new embeddedSIMActivationCode and sets the default values.
+     * Instantiates a new EmbeddedSIMActivationCode and sets the default values.
      */
     public EmbeddedSIMActivationCode() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a embeddedSIMActivationCode
+     * @return a EmbeddedSIMActivationCode
      */
     @jakarta.annotation.Nonnull
     public static EmbeddedSIMActivationCode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,12 +38,17 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
         return new EmbeddedSIMActivationCode();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -71,35 +65,35 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the integratedCircuitCardIdentifier property value. The Integrated Circuit Card Identifier (ICCID) for this embedded SIM activation code as provided by the mobile operator.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIntegratedCircuitCardIdentifier() {
-        return this.integratedCircuitCardIdentifier;
+        return this.backingStore.get("integratedCircuitCardIdentifier");
     }
     /**
      * Gets the matchingIdentifier property value. The MatchingIdentifier (MatchingID) as specified in the GSMA Association SGP.22 RSP Technical Specification section 4.1.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMatchingIdentifier() {
-        return this.matchingIdentifier;
+        return this.backingStore.get("matchingIdentifier");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the smdpPlusServerAddress property value. The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSmdpPlusServerAddress() {
-        return this.smdpPlusServerAddress;
+        return this.backingStore.get("smdpPlusServerAddress");
     }
     /**
      * Serializes information the current object
@@ -114,38 +108,38 @@ public class EmbeddedSIMActivationCode implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the integratedCircuitCardIdentifier property value. The Integrated Circuit Card Identifier (ICCID) for this embedded SIM activation code as provided by the mobile operator.
      * @param value Value to set for the integratedCircuitCardIdentifier property.
      */
     public void setIntegratedCircuitCardIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.integratedCircuitCardIdentifier = value;
+        this.backingStore.set("integratedCircuitCardIdentifier", value);
     }
     /**
      * Sets the matchingIdentifier property value. The MatchingIdentifier (MatchingID) as specified in the GSMA Association SGP.22 RSP Technical Specification section 4.1.
      * @param value Value to set for the matchingIdentifier property.
      */
     public void setMatchingIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.matchingIdentifier = value;
+        this.backingStore.set("matchingIdentifier", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the smdpPlusServerAddress property value. The fully qualified domain name of the SM-DP+ server as specified in the GSM Association SPG .22 RSP Technical Specification.
      * @param value Value to set for the smdpPlusServerAddress property.
      */
     public void setSmdpPlusServerAddress(@jakarta.annotation.Nullable final String value) {
-        this.smdpPlusServerAddress = value;
+        this.backingStore.set("smdpPlusServerAddress", value);
     }
 }

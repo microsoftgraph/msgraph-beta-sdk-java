@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
-     * Represents details about the chat message that is pinned.
-     */
-    private ChatMessage message;
-    /**
-     * Instantiates a new pinnedChatMessageInfo and sets the default values.
+     * Instantiates a new PinnedChatMessageInfo and sets the default values.
      */
     public PinnedChatMessageInfo() {
         super();
@@ -21,7 +17,7 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a pinnedChatMessageInfo
+     * @return a PinnedChatMessageInfo
      */
     @jakarta.annotation.Nonnull
     public static PinnedChatMessageInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the message property value. Represents details about the chat message that is pinned.
-     * @return a chatMessage
+     * @return a ChatMessage
      */
     @jakarta.annotation.Nullable
     public ChatMessage getMessage() {
-        return this.message;
+        return this.backingStore.get("message");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class PinnedChatMessageInfo extends Entity implements Parsable {
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final ChatMessage value) {
-        this.message = value;
+        this.backingStore.set("message", value);
     }
 }

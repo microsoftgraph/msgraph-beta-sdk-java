@@ -12,43 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     /**
-     * The Identity Name.
-     */
-    private String appIdentifier;
-    /**
-     * The Play for Work Store app URL.
-     */
-    private String appStoreUrl;
-    /**
-     * The tracks that are visible to this enterprise.
-     */
-    private java.util.List<AndroidManagedStoreAppTrack> appTracks;
-    /**
-     * Indicates whether the app is only available to a given enterprise's users.
-     */
-    private Boolean isPrivate;
-    /**
-     * Indicates whether the app is a preinstalled system app.
-     */
-    private Boolean isSystemApp;
-    /**
-     * The package identifier.
-     */
-    private String packageId;
-    /**
-     * Whether this app supports OEMConfig policy.
-     */
-    private Boolean supportsOemConfig;
-    /**
-     * The total number of VPP licenses.
-     */
-    private Integer totalLicenseCount;
-    /**
-     * The number of VPP licenses in use.
-     */
-    private Integer usedLicenseCount;
-    /**
-     * Instantiates a new androidManagedStoreApp and sets the default values.
+     * Instantiates a new AndroidManagedStoreApp and sets the default values.
      */
     public AndroidManagedStoreApp() {
         super();
@@ -57,7 +21,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidManagedStoreApp
+     * @return a AndroidManagedStoreApp
      */
     @jakarta.annotation.Nonnull
     public static AndroidManagedStoreApp createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,27 +37,27 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the appIdentifier property value. The Identity Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppIdentifier() {
-        return this.appIdentifier;
+        return this.backingStore.get("appIdentifier");
     }
     /**
      * Gets the appStoreUrl property value. The Play for Work Store app URL.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAppStoreUrl() {
-        return this.appStoreUrl;
+        return this.backingStore.get("appStoreUrl");
     }
     /**
      * Gets the appTracks property value. The tracks that are visible to this enterprise.
-     * @return a androidManagedStoreAppTrack
+     * @return a java.util.List<AndroidManagedStoreAppTrack>
      */
     @jakarta.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppTrack> getAppTracks() {
-        return this.appTracks;
+        return this.backingStore.get("appTracks");
     }
     /**
      * The deserialization information for the current model
@@ -115,51 +79,51 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     }
     /**
      * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivate() {
-        return this.isPrivate;
+        return this.backingStore.get("isPrivate");
     }
     /**
      * Gets the isSystemApp property value. Indicates whether the app is a preinstalled system app.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsSystemApp() {
-        return this.isSystemApp;
+        return this.backingStore.get("isSystemApp");
     }
     /**
      * Gets the packageId property value. The package identifier.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPackageId() {
-        return this.packageId;
+        return this.backingStore.get("packageId");
     }
     /**
      * Gets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSupportsOemConfig() {
-        return this.supportsOemConfig;
+        return this.backingStore.get("supportsOemConfig");
     }
     /**
      * Gets the totalLicenseCount property value. The total number of VPP licenses.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this.totalLicenseCount;
+        return this.backingStore.get("totalLicenseCount");
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this.usedLicenseCount;
+        return this.backingStore.get("usedLicenseCount");
     }
     /**
      * Serializes information the current object
@@ -183,62 +147,62 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appIdentifier property.
      */
     public void setAppIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.appIdentifier = value;
+        this.backingStore.set("appIdentifier", value);
     }
     /**
      * Sets the appStoreUrl property value. The Play for Work Store app URL.
      * @param value Value to set for the appStoreUrl property.
      */
     public void setAppStoreUrl(@jakarta.annotation.Nullable final String value) {
-        this.appStoreUrl = value;
+        this.backingStore.set("appStoreUrl", value);
     }
     /**
      * Sets the appTracks property value. The tracks that are visible to this enterprise.
      * @param value Value to set for the appTracks property.
      */
     public void setAppTracks(@jakarta.annotation.Nullable final java.util.List<AndroidManagedStoreAppTrack> value) {
-        this.appTracks = value;
+        this.backingStore.set("appTracks", value);
     }
     /**
      * Sets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
      * @param value Value to set for the isPrivate property.
      */
     public void setIsPrivate(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPrivate = value;
+        this.backingStore.set("isPrivate", value);
     }
     /**
      * Sets the isSystemApp property value. Indicates whether the app is a preinstalled system app.
      * @param value Value to set for the isSystemApp property.
      */
     public void setIsSystemApp(@jakarta.annotation.Nullable final Boolean value) {
-        this.isSystemApp = value;
+        this.backingStore.set("isSystemApp", value);
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      */
     public void setPackageId(@jakarta.annotation.Nullable final String value) {
-        this.packageId = value;
+        this.backingStore.set("packageId", value);
     }
     /**
      * Sets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
      * @param value Value to set for the supportsOemConfig property.
      */
     public void setSupportsOemConfig(@jakarta.annotation.Nullable final Boolean value) {
-        this.supportsOemConfig = value;
+        this.backingStore.set("supportsOemConfig", value);
     }
     /**
      * Sets the totalLicenseCount property value. The total number of VPP licenses.
      * @param value Value to set for the totalLicenseCount property.
      */
     public void setTotalLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.totalLicenseCount = value;
+        this.backingStore.set("totalLicenseCount", value);
     }
     /**
      * Sets the usedLicenseCount property value. The number of VPP licenses in use.
      * @param value Value to set for the usedLicenseCount property.
      */
     public void setUsedLicenseCount(@jakarta.annotation.Nullable final Integer value) {
-        this.usedLicenseCount = value;
+        this.backingStore.set("usedLicenseCount", value);
     }
 }

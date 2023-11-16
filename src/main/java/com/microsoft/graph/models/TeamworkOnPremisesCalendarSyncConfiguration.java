@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDataHolder, Parsable {
+public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The fully qualified domain name (FQDN) of the Skype for Business Server. Use the Exchange domain if the Skype for Business SIP domain is different from the Exchange domain of the user.
-     */
-    private String domain;
-    /**
-     * The domain and username of the console device, for example, Seattle/RanierConf.
-     */
-    private String domainUserName;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
-     */
-    private String smtpAddress;
-    /**
-     * Instantiates a new teamworkOnPremisesCalendarSyncConfiguration and sets the default values.
+     * Instantiates a new TeamworkOnPremisesCalendarSyncConfiguration and sets the default values.
      */
     public TeamworkOnPremisesCalendarSyncConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkOnPremisesCalendarSyncConfiguration
+     * @return a TeamworkOnPremisesCalendarSyncConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkOnPremisesCalendarSyncConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,28 +35,33 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
         return new TeamworkOnPremisesCalendarSyncConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the domain property value. The fully qualified domain name (FQDN) of the Skype for Business Server. Use the Exchange domain if the Skype for Business SIP domain is different from the Exchange domain of the user.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomain() {
-        return this.domain;
+        return this.backingStore.get("domain");
     }
     /**
      * Gets the domainUserName property value. The domain and username of the console device, for example, Seattle/RanierConf.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDomainUserName() {
-        return this.domainUserName;
+        return this.backingStore.get("domainUserName");
     }
     /**
      * The deserialization information for the current model
@@ -84,19 +78,19 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the smtpAddress property value. The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSmtpAddress() {
-        return this.smtpAddress;
+        return this.backingStore.get("smtpAddress");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class TeamworkOnPremisesCalendarSyncConfiguration implements AdditionalDa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the domain property value. The fully qualified domain name (FQDN) of the Skype for Business Server. Use the Exchange domain if the Skype for Business SIP domain is different from the Exchange domain of the user.
      * @param value Value to set for the domain property.
      */
     public void setDomain(@jakarta.annotation.Nullable final String value) {
-        this.domain = value;
+        this.backingStore.set("domain", value);
     }
     /**
      * Sets the domainUserName property value. The domain and username of the console device, for example, Seattle/RanierConf.
      * @param value Value to set for the domainUserName property.
      */
     public void setDomainUserName(@jakarta.annotation.Nullable final String value) {
-        this.domainUserName = value;
+        this.backingStore.set("domainUserName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the smtpAddress property value. The Simple Mail Transfer Protocol (SMTP) address of the user account. This is only required if a different user principal name (UPN) is used to sign in to Exchange other than Microsoft Teams and Skype for Business. This is a common scenario in a hybrid environment where an on-premises Exchange server is used.
      * @param value Value to set for the smtpAddress property.
      */
     public void setSmtpAddress(@jakarta.annotation.Nullable final String value) {
-        this.smtpAddress = value;
+        this.backingStore.set("smtpAddress", value);
     }
 }

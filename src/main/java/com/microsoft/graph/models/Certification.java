@@ -4,50 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Certification implements AdditionalDataHolder, Parsable {
+public class Certification implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * URL that shows certification details for the application.
-     */
-    private String certificationDetailsUrl;
-    /**
-     * The timestamp when the current certification for the application will expire.
-     */
-    private OffsetDateTime certificationExpirationDateTime;
-    /**
-     * Indicates whether the application is certified by Microsoft.
-     */
-    private Boolean isCertifiedByMicrosoft;
-    /**
-     * Indicates whether the application has been self-attested by the application developer or the publisher.
-     */
-    private Boolean isPublisherAttested;
-    /**
-     * The timestamp when the certification for the application was most recently added or updated.
-     */
-    private OffsetDateTime lastCertificationDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new certification and sets the default values.
+     * Instantiates a new Certification and sets the default values.
      */
     public Certification() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a certification
+     * @return a Certification
      */
     @jakarta.annotation.Nonnull
     public static Certification createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,28 +36,33 @@ public class Certification implements AdditionalDataHolder, Parsable {
         return new Certification();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the certificationDetailsUrl property value. URL that shows certification details for the application.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCertificationDetailsUrl() {
-        return this.certificationDetailsUrl;
+        return this.backingStore.get("certificationDetailsUrl");
     }
     /**
-     * Gets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
+     * Gets the certificationExpirationDateTime property value. The timestamp when the current certification for the application expires.
      * @return a OffsetDateTime
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCertificationExpirationDateTime() {
-        return this.certificationExpirationDateTime;
+        return this.backingStore.get("certificationExpirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -95,19 +81,19 @@ public class Certification implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsCertifiedByMicrosoft() {
-        return this.isCertifiedByMicrosoft;
+        return this.backingStore.get("isCertifiedByMicrosoft");
     }
     /**
      * Gets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPublisherAttested() {
-        return this.isPublisherAttested;
+        return this.backingStore.get("isPublisherAttested");
     }
     /**
      * Gets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
@@ -115,15 +101,15 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastCertificationDateTime() {
-        return this.lastCertificationDateTime;
+        return this.backingStore.get("lastCertificationDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -138,52 +124,52 @@ public class Certification implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the certificationDetailsUrl property value. URL that shows certification details for the application.
      * @param value Value to set for the certificationDetailsUrl property.
      */
     public void setCertificationDetailsUrl(@jakarta.annotation.Nullable final String value) {
-        this.certificationDetailsUrl = value;
+        this.backingStore.set("certificationDetailsUrl", value);
     }
     /**
-     * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
+     * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application expires.
      * @param value Value to set for the certificationExpirationDateTime property.
      */
     public void setCertificationExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.certificationExpirationDateTime = value;
+        this.backingStore.set("certificationExpirationDateTime", value);
     }
     /**
      * Sets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
      * @param value Value to set for the isCertifiedByMicrosoft property.
      */
     public void setIsCertifiedByMicrosoft(@jakarta.annotation.Nullable final Boolean value) {
-        this.isCertifiedByMicrosoft = value;
+        this.backingStore.set("isCertifiedByMicrosoft", value);
     }
     /**
      * Sets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
      * @param value Value to set for the isPublisherAttested property.
      */
     public void setIsPublisherAttested(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPublisherAttested = value;
+        this.backingStore.set("isPublisherAttested", value);
     }
     /**
      * Sets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
      * @param value Value to set for the lastCertificationDateTime property.
      */
     public void setLastCertificationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastCertificationDateTime = value;
+        this.backingStore.set("lastCertificationDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

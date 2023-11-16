@@ -4,53 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WebPartData implements AdditionalDataHolder, Parsable {
+public class WebPartData implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
-     */
-    private java.util.List<String> audiences;
-    /**
-     * Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
-     */
-    private String dataVersion;
-    /**
-     * Description of the web part.
-     */
-    private String description;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Properties bag of the web part.
-     */
-    private Json properties;
-    /**
-     * Contains collections of data that can be processed by server side services like search index and link fixup.
-     */
-    private ServerProcessedContent serverProcessedContent;
-    /**
-     * Title of the web part.
-     */
-    private String title;
-    /**
-     * Instantiates a new webPartData and sets the default values.
+     * Instantiates a new WebPartData and sets the default values.
      */
     public WebPartData() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a webPartData
+     * @return a WebPartData
      */
     @jakarta.annotation.Nonnull
     public static WebPartData createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +35,41 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
         return new WebPartData();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the audiences property value. Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
-     * @return a string
+     * Gets the audiences property value. Audience information of the web part. By using this property, specific content is prioritized to specific audiences.
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAudiences() {
-        return this.audiences;
+        return this.backingStore.get("audiences");
     }
     /**
      * Gets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDataVersion() {
-        return this.dataVersion;
+        return this.backingStore.get("dataVersion");
     }
     /**
      * Gets the description property value. Description of the web part.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -107,11 +89,11 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the properties property value. Properties bag of the web part.
@@ -119,23 +101,23 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getProperties() {
-        return this.properties;
+        return this.backingStore.get("properties");
     }
     /**
      * Gets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
-     * @return a serverProcessedContent
+     * @return a ServerProcessedContent
      */
     @jakarta.annotation.Nullable
     public ServerProcessedContent getServerProcessedContent() {
-        return this.serverProcessedContent;
+        return this.backingStore.get("serverProcessedContent");
     }
     /**
      * Gets the title property value. Title of the web part.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -153,59 +135,59 @@ public class WebPartData implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the audiences property value. Audience information of the web part. By using this property, specific content will be prioritized to specific audiences.
+     * Sets the audiences property value. Audience information of the web part. By using this property, specific content is prioritized to specific audiences.
      * @param value Value to set for the audiences property.
      */
     public void setAudiences(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.audiences = value;
+        this.backingStore.set("audiences", value);
     }
     /**
      * Sets the dataVersion property value. Data version of the web part. The value is defined by the web part developer. Different dataVersions usually refers to a different property structure.
      * @param value Value to set for the dataVersion property.
      */
     public void setDataVersion(@jakarta.annotation.Nullable final String value) {
-        this.dataVersion = value;
+        this.backingStore.set("dataVersion", value);
     }
     /**
      * Sets the description property value. Description of the web part.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the properties property value. Properties bag of the web part.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final Json value) {
-        this.properties = value;
+        this.backingStore.set("properties", value);
     }
     /**
      * Sets the serverProcessedContent property value. Contains collections of data that can be processed by server side services like search index and link fixup.
      * @param value Value to set for the serverProcessedContent property.
      */
     public void setServerProcessedContent(@jakarta.annotation.Nullable final ServerProcessedContent value) {
-        this.serverProcessedContent = value;
+        this.backingStore.set("serverProcessedContent", value);
     }
     /**
      * Sets the title property value. Title of the web part.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
 }

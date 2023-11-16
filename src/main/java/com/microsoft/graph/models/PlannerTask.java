@@ -11,119 +11,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTask extends PlannerDelta implements Parsable {
     /**
-     * Number of checklist items with value set to false, representing incomplete items.
-     */
-    private Integer activeChecklistItemCount;
-    /**
-     * The categories to which the task has been applied. See applied Categories for possible values.
-     */
-    private PlannerAppliedCategories appliedCategories;
-    /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
-     */
-    private PlannerAssignedToTaskBoardTaskFormat assignedToTaskBoardFormat;
-    /**
-     * Hint used to order items of this type in a list view. The format is defined as outlined here.
-     */
-    private String assigneePriority;
-    /**
-     * The set of assignees the task is assigned to.
-     */
-    private PlannerAssignments assignments;
-    /**
-     * Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
-     */
-    private String bucketId;
-    /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
-     */
-    private PlannerBucketTaskBoardTaskFormat bucketTaskBoardFormat;
-    /**
-     * Number of checklist items that are present on the task.
-     */
-    private Integer checklistItemCount;
-    /**
-     * Identity of the user that completed the task.
-     */
-    private IdentitySet completedBy;
-    /**
-     * Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime completedDateTime;
-    /**
-     * Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-     */
-    private String conversationThreadId;
-    /**
-     * Identity of the user that created the task.
-     */
-    private IdentitySet createdBy;
-    /**
-     * Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime createdDateTime;
-    /**
-     * Contains information about the origin of the task.
-     */
-    private PlannerTaskCreation creationSource;
-    /**
-     * Read-only. Nullable. Additional details about the task.
-     */
-    private PlannerTaskDetails details;
-    /**
-     * Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime dueDateTime;
-    /**
-     * Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
-     */
-    private Boolean hasDescription;
-    /**
-     * Hint used to order items of this type in a list view. The format is defined as outlined here.
-     */
-    private String orderHint;
-    /**
-     * Percentage of task completion. When set to 100, the task is considered completed.
-     */
-    private Integer percentComplete;
-    /**
-     * Plan ID to which the task belongs.
-     */
-    private String planId;
-    /**
-     * This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
-     */
-    private PlannerPreviewType previewType;
-    /**
-     * Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
-     */
-    private Integer priority;
-    /**
-     * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
-     */
-    private PlannerProgressTaskBoardTaskFormat progressTaskBoardFormat;
-    /**
-     * Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
-     */
-    private PlannerTaskRecurrence recurrence;
-    /**
-     * Number of external references that exist on the task.
-     */
-    private Integer referenceCount;
-    /**
-     * Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
-     */
-    private EnumSet<PlannerTaskCompletionRequirements> specifiedCompletionRequirements;
-    /**
-     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     */
-    private OffsetDateTime startDateTime;
-    /**
-     * Title of the task.
-     */
-    private String title;
-    /**
-     * Instantiates a new plannerTask and sets the default values.
+     * Instantiates a new PlannerTask and sets the default values.
      */
     public PlannerTask() {
         super();
@@ -131,7 +19,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTask
+     * @return a PlannerTask
      */
     @jakarta.annotation.Nonnull
     public static PlannerTask createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -147,75 +35,75 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     }
     /**
      * Gets the activeChecklistItemCount property value. Number of checklist items with value set to false, representing incomplete items.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getActiveChecklistItemCount() {
-        return this.activeChecklistItemCount;
+        return this.backingStore.get("activeChecklistItemCount");
     }
     /**
      * Gets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
-     * @return a plannerAppliedCategories
+     * @return a PlannerAppliedCategories
      */
     @jakarta.annotation.Nullable
     public PlannerAppliedCategories getAppliedCategories() {
-        return this.appliedCategories;
+        return this.backingStore.get("appliedCategories");
     }
     /**
      * Gets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
-     * @return a plannerAssignedToTaskBoardTaskFormat
+     * @return a PlannerAssignedToTaskBoardTaskFormat
      */
     @jakarta.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat getAssignedToTaskBoardFormat() {
-        return this.assignedToTaskBoardFormat;
+        return this.backingStore.get("assignedToTaskBoardFormat");
     }
     /**
      * Gets the assigneePriority property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAssigneePriority() {
-        return this.assigneePriority;
+        return this.backingStore.get("assigneePriority");
     }
     /**
      * Gets the assignments property value. The set of assignees the task is assigned to.
-     * @return a plannerAssignments
+     * @return a PlannerAssignments
      */
     @jakarta.annotation.Nullable
     public PlannerAssignments getAssignments() {
-        return this.assignments;
+        return this.backingStore.get("assignments");
     }
     /**
      * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBucketId() {
-        return this.bucketId;
+        return this.backingStore.get("bucketId");
     }
     /**
      * Gets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
-     * @return a plannerBucketTaskBoardTaskFormat
+     * @return a PlannerBucketTaskBoardTaskFormat
      */
     @jakarta.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat getBucketTaskBoardFormat() {
-        return this.bucketTaskBoardFormat;
+        return this.backingStore.get("bucketTaskBoardFormat");
     }
     /**
      * Gets the checklistItemCount property value. Number of checklist items that are present on the task.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getChecklistItemCount() {
-        return this.checklistItemCount;
+        return this.backingStore.get("checklistItemCount");
     }
     /**
      * Gets the completedBy property value. Identity of the user that completed the task.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCompletedBy() {
-        return this.completedBy;
+        return this.backingStore.get("completedBy");
     }
     /**
      * Gets the completedDateTime property value. Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -223,23 +111,23 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this.completedDateTime;
+        return this.backingStore.get("completedDateTime");
     }
     /**
      * Gets the conversationThreadId property value. Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConversationThreadId() {
-        return this.conversationThreadId;
+        return this.backingStore.get("conversationThreadId");
     }
     /**
      * Gets the createdBy property value. Identity of the user that created the task.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this.createdBy;
+        return this.backingStore.get("createdBy");
     }
     /**
      * Gets the createdDateTime property value. Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -247,23 +135,23 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this.createdDateTime;
+        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the creationSource property value. Contains information about the origin of the task.
-     * @return a plannerTaskCreation
+     * @return a PlannerTaskCreation
      */
     @jakarta.annotation.Nullable
     public PlannerTaskCreation getCreationSource() {
-        return this.creationSource;
+        return this.backingStore.get("creationSource");
     }
     /**
      * Gets the details property value. Read-only. Nullable. Additional details about the task.
-     * @return a plannerTaskDetails
+     * @return a PlannerTaskDetails
      */
     @jakarta.annotation.Nullable
     public PlannerTaskDetails getDetails() {
-        return this.details;
+        return this.backingStore.get("details");
     }
     /**
      * Gets the dueDateTime property value. Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -271,7 +159,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getDueDateTime() {
-        return this.dueDateTime;
+        return this.backingStore.get("dueDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -311,84 +199,84 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
-     * @return a boolean
+     * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasDescription() {
-        return this.hasDescription;
+        return this.backingStore.get("hasDescription");
     }
     /**
      * Gets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOrderHint() {
-        return this.orderHint;
+        return this.backingStore.get("orderHint");
     }
     /**
      * Gets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPercentComplete() {
-        return this.percentComplete;
+        return this.backingStore.get("percentComplete");
     }
     /**
      * Gets the planId property value. Plan ID to which the task belongs.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPlanId() {
-        return this.planId;
+        return this.backingStore.get("planId");
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
-     * @return a plannerPreviewType
+     * @return a PlannerPreviewType
      */
     @jakarta.annotation.Nullable
     public PlannerPreviewType getPreviewType() {
-        return this.previewType;
+        return this.backingStore.get("previewType");
     }
     /**
      * Gets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getPriority() {
-        return this.priority;
+        return this.backingStore.get("priority");
     }
     /**
      * Gets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
-     * @return a plannerProgressTaskBoardTaskFormat
+     * @return a PlannerProgressTaskBoardTaskFormat
      */
     @jakarta.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat getProgressTaskBoardFormat() {
-        return this.progressTaskBoardFormat;
+        return this.backingStore.get("progressTaskBoardFormat");
     }
     /**
      * Gets the recurrence property value. Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
-     * @return a plannerTaskRecurrence
+     * @return a PlannerTaskRecurrence
      */
     @jakarta.annotation.Nullable
     public PlannerTaskRecurrence getRecurrence() {
-        return this.recurrence;
+        return this.backingStore.get("recurrence");
     }
     /**
      * Gets the referenceCount property value. Number of external references that exist on the task.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReferenceCount() {
-        return this.referenceCount;
+        return this.backingStore.get("referenceCount");
     }
     /**
      * Gets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
-     * @return a plannerTaskCompletionRequirements
+     * @return a EnumSet<PlannerTaskCompletionRequirements>
      */
     @jakarta.annotation.Nullable
     public EnumSet<PlannerTaskCompletionRequirements> getSpecifiedCompletionRequirements() {
-        return this.specifiedCompletionRequirements;
+        return this.backingStore.get("specifiedCompletionRequirements");
     }
     /**
      * Gets the startDateTime property value. Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -396,15 +284,15 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this.startDateTime;
+        return this.backingStore.get("startDateTime");
     }
     /**
      * Gets the title property value. Title of the task.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Serializes information the current object
@@ -447,195 +335,195 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the activeChecklistItemCount property.
      */
     public void setActiveChecklistItemCount(@jakarta.annotation.Nullable final Integer value) {
-        this.activeChecklistItemCount = value;
+        this.backingStore.set("activeChecklistItemCount", value);
     }
     /**
      * Sets the appliedCategories property value. The categories to which the task has been applied. See applied Categories for possible values.
      * @param value Value to set for the appliedCategories property.
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerAppliedCategories value) {
-        this.appliedCategories = value;
+        this.backingStore.set("appliedCategories", value);
     }
     /**
      * Sets the assignedToTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
      * @param value Value to set for the assignedToTaskBoardFormat property.
      */
     public void setAssignedToTaskBoardFormat(@jakarta.annotation.Nullable final PlannerAssignedToTaskBoardTaskFormat value) {
-        this.assignedToTaskBoardFormat = value;
+        this.backingStore.set("assignedToTaskBoardFormat", value);
     }
     /**
      * Sets the assigneePriority property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      * @param value Value to set for the assigneePriority property.
      */
     public void setAssigneePriority(@jakarta.annotation.Nullable final String value) {
-        this.assigneePriority = value;
+        this.backingStore.set("assigneePriority", value);
     }
     /**
      * Sets the assignments property value. The set of assignees the task is assigned to.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final PlannerAssignments value) {
-        this.assignments = value;
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the plan that the task is in. It is 28 characters long and case-sensitive. Format validation is done on the service.
      * @param value Value to set for the bucketId property.
      */
     public void setBucketId(@jakarta.annotation.Nullable final String value) {
-        this.bucketId = value;
+        this.backingStore.set("bucketId", value);
     }
     /**
      * Sets the bucketTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by bucket.
      * @param value Value to set for the bucketTaskBoardFormat property.
      */
     public void setBucketTaskBoardFormat(@jakarta.annotation.Nullable final PlannerBucketTaskBoardTaskFormat value) {
-        this.bucketTaskBoardFormat = value;
+        this.backingStore.set("bucketTaskBoardFormat", value);
     }
     /**
      * Sets the checklistItemCount property value. Number of checklist items that are present on the task.
      * @param value Value to set for the checklistItemCount property.
      */
     public void setChecklistItemCount(@jakarta.annotation.Nullable final Integer value) {
-        this.checklistItemCount = value;
+        this.backingStore.set("checklistItemCount", value);
     }
     /**
      * Sets the completedBy property value. Identity of the user that completed the task.
      * @param value Value to set for the completedBy property.
      */
     public void setCompletedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.completedBy = value;
+        this.backingStore.set("completedBy", value);
     }
     /**
      * Sets the completedDateTime property value. Read-only. Date and time at which the 'percentComplete' of the task is set to '100'. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.completedDateTime = value;
+        this.backingStore.set("completedDateTime", value);
     }
     /**
      * Sets the conversationThreadId property value. Thread ID of the conversation on the task. This is the ID of the conversation thread object created in the group.
      * @param value Value to set for the conversationThreadId property.
      */
     public void setConversationThreadId(@jakarta.annotation.Nullable final String value) {
-        this.conversationThreadId = value;
+        this.backingStore.set("conversationThreadId", value);
     }
     /**
      * Sets the createdBy property value. Identity of the user that created the task.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.createdBy = value;
+        this.backingStore.set("createdBy", value);
     }
     /**
      * Sets the createdDateTime property value. Read-only. Date and time at which the task is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.createdDateTime = value;
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the creationSource property value. Contains information about the origin of the task.
      * @param value Value to set for the creationSource property.
      */
     public void setCreationSource(@jakarta.annotation.Nullable final PlannerTaskCreation value) {
-        this.creationSource = value;
+        this.backingStore.set("creationSource", value);
     }
     /**
      * Sets the details property value. Read-only. Nullable. Additional details about the task.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final PlannerTaskDetails value) {
-        this.details = value;
+        this.backingStore.set("details", value);
     }
     /**
      * Sets the dueDateTime property value. Date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.dueDateTime = value;
+        this.backingStore.set("dueDateTime", value);
     }
     /**
-     * Sets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
+     * Sets the hasDescription property value. Read-only. Value is true if the details object of the task has a nonempty description and false otherwise.
      * @param value Value to set for the hasDescription property.
      */
     public void setHasDescription(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasDescription = value;
+        this.backingStore.set("hasDescription", value);
     }
     /**
      * Sets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
-        this.orderHint = value;
+        this.backingStore.set("orderHint", value);
     }
     /**
      * Sets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
      * @param value Value to set for the percentComplete property.
      */
     public void setPercentComplete(@jakarta.annotation.Nullable final Integer value) {
-        this.percentComplete = value;
+        this.backingStore.set("percentComplete", value);
     }
     /**
      * Sets the planId property value. Plan ID to which the task belongs.
      * @param value Value to set for the planId property.
      */
     public void setPlanId(@jakarta.annotation.Nullable final String value) {
-        this.planId = value;
+        this.backingStore.set("planId", value);
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference.
      * @param value Value to set for the previewType property.
      */
     public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {
-        this.previewType = value;
+        this.backingStore.set("previewType", value);
     }
     /**
      * Sets the priority property value. Priority of the task. Valid range of values is between 0 and 10 (inclusive), with increasing value being lower priority (0 has the highest priority and 10 has the lowest priority).  Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'.  Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
-        this.priority = value;
+        this.backingStore.set("priority", value);
     }
     /**
      * Sets the progressTaskBoardFormat property value. Read-only. Nullable. Used to render the task correctly in the task board view when grouped by progress.
      * @param value Value to set for the progressTaskBoardFormat property.
      */
     public void setProgressTaskBoardFormat(@jakarta.annotation.Nullable final PlannerProgressTaskBoardTaskFormat value) {
-        this.progressTaskBoardFormat = value;
+        this.backingStore.set("progressTaskBoardFormat", value);
     }
     /**
      * Sets the recurrence property value. Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PlannerTaskRecurrence value) {
-        this.recurrence = value;
+        this.backingStore.set("recurrence", value);
     }
     /**
      * Sets the referenceCount property value. Number of external references that exist on the task.
      * @param value Value to set for the referenceCount property.
      */
     public void setReferenceCount(@jakarta.annotation.Nullable final Integer value) {
-        this.referenceCount = value;
+        this.backingStore.set("referenceCount", value);
     }
     /**
      * Sets the specifiedCompletionRequirements property value. Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
      * @param value Value to set for the specifiedCompletionRequirements property.
      */
     public void setSpecifiedCompletionRequirements(@jakarta.annotation.Nullable final EnumSet<PlannerTaskCompletionRequirements> value) {
-        this.specifiedCompletionRequirements = value;
+        this.backingStore.set("specifiedCompletionRequirements", value);
     }
     /**
      * Sets the startDateTime property value. Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.startDateTime = value;
+        this.backingStore.set("startDateTime", value);
     }
     /**
      * Sets the title property value. Title of the task.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
 }

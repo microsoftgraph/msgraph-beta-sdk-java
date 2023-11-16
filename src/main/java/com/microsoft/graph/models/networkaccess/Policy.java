@@ -10,23 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Policy extends Entity implements Parsable {
     /**
-     * Description.
-     */
-    private String description;
-    /**
-     * Policy name.
-     */
-    private String name;
-    /**
-     * Represents the definition of the policy ruleset that makes up the core definition of a policy.
-     */
-    private java.util.List<PolicyRule> policyRules;
-    /**
-     * Version.
-     */
-    private String version;
-    /**
-     * Instantiates a new policy and sets the default values.
+     * Instantiates a new Policy and sets the default values.
      */
     public Policy() {
         super();
@@ -34,7 +18,7 @@ public class Policy extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a policy
+     * @return a Policy
      */
     @jakarta.annotation.Nonnull
     public static Policy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,11 +34,11 @@ public class Policy extends Entity implements Parsable {
     }
     /**
      * Gets the description property value. Description.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -71,27 +55,27 @@ public class Policy extends Entity implements Parsable {
     }
     /**
      * Gets the name property value. Policy name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the policyRules property value. Represents the definition of the policy ruleset that makes up the core definition of a policy.
-     * @return a policyRule
+     * @return a java.util.List<PolicyRule>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PolicyRule> getPolicyRules() {
-        return this.policyRules;
+        return this.backingStore.get("policyRules");
     }
     /**
      * Gets the version property value. Version.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -110,27 +94,27 @@ public class Policy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the name property value. Policy name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the policyRules property value. Represents the definition of the policy ruleset that makes up the core definition of a policy.
      * @param value Value to set for the policyRules property.
      */
     public void setPolicyRules(@jakarta.annotation.Nullable final java.util.List<PolicyRule> value) {
-        this.policyRules = value;
+        this.backingStore.set("policyRules", value);
     }
     /**
      * Sets the version property value. Version.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

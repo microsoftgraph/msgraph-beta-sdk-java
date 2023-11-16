@@ -4,53 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsable {
+public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The software update available for the admin agent.
-     */
-    private TeamworkSoftwareUpdateStatus adminAgentSoftwareUpdateStatus;
-    /**
-     * The software update available for the company portal.
-     */
-    private TeamworkSoftwareUpdateStatus companyPortalSoftwareUpdateStatus;
-    /**
-     * The software update available for the firmware.
-     */
-    private TeamworkSoftwareUpdateStatus firmwareSoftwareUpdateStatus;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The software update available for the operating system.
-     */
-    private TeamworkSoftwareUpdateStatus operatingSystemSoftwareUpdateStatus;
-    /**
-     * The software update available for the partner agent.
-     */
-    private TeamworkSoftwareUpdateStatus partnerAgentSoftwareUpdateStatus;
-    /**
-     * The software update available for the Teams client.
-     */
-    private TeamworkSoftwareUpdateStatus teamsClientSoftwareUpdateStatus;
-    /**
-     * Instantiates a new teamworkSoftwareUpdateHealth and sets the default values.
+     * Instantiates a new TeamworkSoftwareUpdateHealth and sets the default values.
      */
     public TeamworkSoftwareUpdateHealth() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkSoftwareUpdateHealth
+     * @return a TeamworkSoftwareUpdateHealth
      */
     @jakarta.annotation.Nonnull
     public static TeamworkSoftwareUpdateHealth createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,28 +35,33 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
         return new TeamworkSoftwareUpdateHealth();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the adminAgentSoftwareUpdateStatus property value. The software update available for the admin agent.
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getAdminAgentSoftwareUpdateStatus() {
-        return this.adminAgentSoftwareUpdateStatus;
+        return this.backingStore.get("adminAgentSoftwareUpdateStatus");
     }
     /**
      * Gets the companyPortalSoftwareUpdateStatus property value. The software update available for the company portal.
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getCompanyPortalSoftwareUpdateStatus() {
-        return this.companyPortalSoftwareUpdateStatus;
+        return this.backingStore.get("companyPortalSoftwareUpdateStatus");
     }
     /**
      * The deserialization information for the current model
@@ -99,43 +81,43 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the firmwareSoftwareUpdateStatus property value. The software update available for the firmware.
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getFirmwareSoftwareUpdateStatus() {
-        return this.firmwareSoftwareUpdateStatus;
+        return this.backingStore.get("firmwareSoftwareUpdateStatus");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the operatingSystemSoftwareUpdateStatus property value. The software update available for the operating system.
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getOperatingSystemSoftwareUpdateStatus() {
-        return this.operatingSystemSoftwareUpdateStatus;
+        return this.backingStore.get("operatingSystemSoftwareUpdateStatus");
     }
     /**
      * Gets the partnerAgentSoftwareUpdateStatus property value. The software update available for the partner agent.
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getPartnerAgentSoftwareUpdateStatus() {
-        return this.partnerAgentSoftwareUpdateStatus;
+        return this.backingStore.get("partnerAgentSoftwareUpdateStatus");
     }
     /**
      * Gets the teamsClientSoftwareUpdateStatus property value. The software update available for the Teams client.
-     * @return a teamworkSoftwareUpdateStatus
+     * @return a TeamworkSoftwareUpdateStatus
      */
     @jakarta.annotation.Nullable
     public TeamworkSoftwareUpdateStatus getTeamsClientSoftwareUpdateStatus() {
-        return this.teamsClientSoftwareUpdateStatus;
+        return this.backingStore.get("teamsClientSoftwareUpdateStatus");
     }
     /**
      * Serializes information the current object
@@ -153,59 +135,59 @@ public class TeamworkSoftwareUpdateHealth implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the adminAgentSoftwareUpdateStatus property value. The software update available for the admin agent.
      * @param value Value to set for the adminAgentSoftwareUpdateStatus property.
      */
     public void setAdminAgentSoftwareUpdateStatus(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
-        this.adminAgentSoftwareUpdateStatus = value;
+        this.backingStore.set("adminAgentSoftwareUpdateStatus", value);
     }
     /**
      * Sets the companyPortalSoftwareUpdateStatus property value. The software update available for the company portal.
      * @param value Value to set for the companyPortalSoftwareUpdateStatus property.
      */
     public void setCompanyPortalSoftwareUpdateStatus(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
-        this.companyPortalSoftwareUpdateStatus = value;
+        this.backingStore.set("companyPortalSoftwareUpdateStatus", value);
     }
     /**
      * Sets the firmwareSoftwareUpdateStatus property value. The software update available for the firmware.
      * @param value Value to set for the firmwareSoftwareUpdateStatus property.
      */
     public void setFirmwareSoftwareUpdateStatus(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
-        this.firmwareSoftwareUpdateStatus = value;
+        this.backingStore.set("firmwareSoftwareUpdateStatus", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the operatingSystemSoftwareUpdateStatus property value. The software update available for the operating system.
      * @param value Value to set for the operatingSystemSoftwareUpdateStatus property.
      */
     public void setOperatingSystemSoftwareUpdateStatus(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
-        this.operatingSystemSoftwareUpdateStatus = value;
+        this.backingStore.set("operatingSystemSoftwareUpdateStatus", value);
     }
     /**
      * Sets the partnerAgentSoftwareUpdateStatus property value. The software update available for the partner agent.
      * @param value Value to set for the partnerAgentSoftwareUpdateStatus property.
      */
     public void setPartnerAgentSoftwareUpdateStatus(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
-        this.partnerAgentSoftwareUpdateStatus = value;
+        this.backingStore.set("partnerAgentSoftwareUpdateStatus", value);
     }
     /**
      * Sets the teamsClientSoftwareUpdateStatus property value. The software update available for the Teams client.
      * @param value Value to set for the teamsClientSoftwareUpdateStatus property.
      */
     public void setTeamsClientSoftwareUpdateStatus(@jakarta.annotation.Nullable final TeamworkSoftwareUpdateStatus value) {
-        this.teamsClientSoftwareUpdateStatus = value;
+        this.backingStore.set("teamsClientSoftwareUpdateStatus", value);
     }
 }

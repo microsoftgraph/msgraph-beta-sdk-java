@@ -4,66 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
+public class TenantStatusInformation implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
-     */
-    private DelegatedPrivilegeStatus delegatedPrivilegeStatus;
-    /**
-     * The date and time the delegated admin privileges status was updated. Optional. Read-only.
-     */
-    private OffsetDateTime lastDelegatedPrivilegeRefreshDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The identifier for the account that offboarded the managed tenant. Optional. Read-only.
-     */
-    private String offboardedByUserId;
-    /**
-     * The date and time when the managed tenant was offboarded. Optional. Read-only.
-     */
-    private OffsetDateTime offboardedDateTime;
-    /**
-     * The identifier for the account that onboarded the managed tenant. Optional. Read-only.
-     */
-    private String onboardedByUserId;
-    /**
-     * The date and time when the managed tenant was onboarded. Optional. Read-only.
-     */
-    private OffsetDateTime onboardedDateTime;
-    /**
-     * The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
-     */
-    private TenantOnboardingStatus onboardingStatus;
-    /**
-     * Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
-     */
-    private TenantOnboardingEligibilityReason tenantOnboardingEligibilityReason;
-    /**
-     * The collection of workload statues for the managed tenant. Optional. Read-only.
-     */
-    private java.util.List<WorkloadStatus> workloadStatuses;
-    /**
-     * Instantiates a new tenantStatusInformation and sets the default values.
+     * Instantiates a new TenantStatusInformation and sets the default values.
      */
     public TenantStatusInformation() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a tenantStatusInformation
+     * @return a TenantStatusInformation
      */
     @jakarta.annotation.Nonnull
     public static TenantStatusInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,20 +36,25 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         return new TenantStatusInformation();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
-     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
-     * @return a delegatedPrivilegeStatus
+     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * @return a DelegatedPrivilegeStatus
      */
     @jakarta.annotation.Nullable
     public DelegatedPrivilegeStatus getDelegatedPrivilegeStatus() {
-        return this.delegatedPrivilegeStatus;
+        return this.backingStore.get("delegatedPrivilegeStatus");
     }
     /**
      * The deserialization information for the current model
@@ -111,23 +81,23 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastDelegatedPrivilegeRefreshDateTime() {
-        return this.lastDelegatedPrivilegeRefreshDateTime;
+        return this.backingStore.get("lastDelegatedPrivilegeRefreshDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the offboardedByUserId property value. The identifier for the account that offboarded the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOffboardedByUserId() {
-        return this.offboardedByUserId;
+        return this.backingStore.get("offboardedByUserId");
     }
     /**
      * Gets the offboardedDateTime property value. The date and time when the managed tenant was offboarded. Optional. Read-only.
@@ -135,15 +105,15 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOffboardedDateTime() {
-        return this.offboardedDateTime;
+        return this.backingStore.get("offboardedDateTime");
     }
     /**
      * Gets the onboardedByUserId property value. The identifier for the account that onboarded the managed tenant. Optional. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOnboardedByUserId() {
-        return this.onboardedByUserId;
+        return this.backingStore.get("onboardedByUserId");
     }
     /**
      * Gets the onboardedDateTime property value. The date and time when the managed tenant was onboarded. Optional. Read-only.
@@ -151,31 +121,31 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getOnboardedDateTime() {
-        return this.onboardedDateTime;
+        return this.backingStore.get("onboardedDateTime");
     }
     /**
      * Gets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
-     * @return a tenantOnboardingStatus
+     * @return a TenantOnboardingStatus
      */
     @jakarta.annotation.Nullable
     public TenantOnboardingStatus getOnboardingStatus() {
-        return this.onboardingStatus;
+        return this.backingStore.get("onboardingStatus");
     }
     /**
      * Gets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
-     * @return a tenantOnboardingEligibilityReason
+     * @return a TenantOnboardingEligibilityReason
      */
     @jakarta.annotation.Nullable
     public TenantOnboardingEligibilityReason getTenantOnboardingEligibilityReason() {
-        return this.tenantOnboardingEligibilityReason;
+        return this.backingStore.get("tenantOnboardingEligibilityReason");
     }
     /**
      * Gets the workloadStatuses property value. The collection of workload statues for the managed tenant. Optional. Read-only.
-     * @return a workloadStatus
+     * @return a java.util.List<WorkloadStatus>
      */
     @jakarta.annotation.Nullable
     public java.util.List<WorkloadStatus> getWorkloadStatuses() {
-        return this.workloadStatuses;
+        return this.backingStore.get("workloadStatuses");
     }
     /**
      * Serializes information the current object
@@ -196,80 +166,80 @@ public class TenantStatusInformation implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @param value Value to set for the delegatedPrivilegeStatus property.
      */
     public void setDelegatedPrivilegeStatus(@jakarta.annotation.Nullable final DelegatedPrivilegeStatus value) {
-        this.delegatedPrivilegeStatus = value;
+        this.backingStore.set("delegatedPrivilegeStatus", value);
     }
     /**
      * Sets the lastDelegatedPrivilegeRefreshDateTime property value. The date and time the delegated admin privileges status was updated. Optional. Read-only.
      * @param value Value to set for the lastDelegatedPrivilegeRefreshDateTime property.
      */
     public void setLastDelegatedPrivilegeRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastDelegatedPrivilegeRefreshDateTime = value;
+        this.backingStore.set("lastDelegatedPrivilegeRefreshDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the offboardedByUserId property value. The identifier for the account that offboarded the managed tenant. Optional. Read-only.
      * @param value Value to set for the offboardedByUserId property.
      */
     public void setOffboardedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.offboardedByUserId = value;
+        this.backingStore.set("offboardedByUserId", value);
     }
     /**
      * Sets the offboardedDateTime property value. The date and time when the managed tenant was offboarded. Optional. Read-only.
      * @param value Value to set for the offboardedDateTime property.
      */
     public void setOffboardedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.offboardedDateTime = value;
+        this.backingStore.set("offboardedDateTime", value);
     }
     /**
      * Sets the onboardedByUserId property value. The identifier for the account that onboarded the managed tenant. Optional. Read-only.
      * @param value Value to set for the onboardedByUserId property.
      */
     public void setOnboardedByUserId(@jakarta.annotation.Nullable final String value) {
-        this.onboardedByUserId = value;
+        this.backingStore.set("onboardedByUserId", value);
     }
     /**
      * Sets the onboardedDateTime property value. The date and time when the managed tenant was onboarded. Optional. Read-only.
      * @param value Value to set for the onboardedDateTime property.
      */
     public void setOnboardedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.onboardedDateTime = value;
+        this.backingStore.set("onboardedDateTime", value);
     }
     /**
      * Sets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final TenantOnboardingStatus value) {
-        this.onboardingStatus = value;
+        this.backingStore.set("onboardingStatus", value);
     }
     /**
      * Sets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the tenantOnboardingEligibilityReason property.
      */
     public void setTenantOnboardingEligibilityReason(@jakarta.annotation.Nullable final TenantOnboardingEligibilityReason value) {
-        this.tenantOnboardingEligibilityReason = value;
+        this.backingStore.set("tenantOnboardingEligibilityReason", value);
     }
     /**
      * Sets the workloadStatuses property value. The collection of workload statues for the managed tenant. Optional. Read-only.
      * @param value Value to set for the workloadStatuses property.
      */
     public void setWorkloadStatuses(@jakarta.annotation.Nullable final java.util.List<WorkloadStatus> value) {
-        this.workloadStatuses = value;
+        this.backingStore.set("workloadStatuses", value);
     }
 }

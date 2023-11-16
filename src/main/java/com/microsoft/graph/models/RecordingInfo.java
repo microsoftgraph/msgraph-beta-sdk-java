@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RecordingInfo implements AdditionalDataHolder, Parsable {
+public class RecordingInfo implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The participant who initiated the recording.
-     */
-    private ParticipantInfo initiatedBy;
-    /**
-     * The identities of recording initiator.
-     */
-    private IdentitySet initiator;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The recordingStatus property
-     */
-    private RecordingStatus recordingStatus;
-    /**
-     * Instantiates a new recordingInfo and sets the default values.
+     * Instantiates a new RecordingInfo and sets the default values.
      */
     public RecordingInfo() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a recordingInfo
+     * @return a RecordingInfo
      */
     @jakarta.annotation.Nonnull
     public static RecordingInfo createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         return new RecordingInfo();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the initiatedBy property value. The participant who initiated the recording.
-     * @return a participantInfo
+     * @return a ParticipantInfo
      */
     @jakarta.annotation.Nullable
     public ParticipantInfo getInitiatedBy() {
-        return this.initiatedBy;
+        return this.backingStore.get("initiatedBy");
     }
     /**
      * Gets the initiator property value. The identities of recording initiator.
-     * @return a identitySet
+     * @return a IdentitySet
      */
     @jakarta.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this.initiator;
+        return this.backingStore.get("initiator");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recordingStatus property value. The recordingStatus property
-     * @return a recordingStatus
+     * @return a RecordingStatus
      */
     @jakarta.annotation.Nullable
     public RecordingStatus getRecordingStatus() {
-        return this.recordingStatus;
+        return this.backingStore.get("recordingStatus");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the initiatedBy property value. The participant who initiated the recording.
      * @param value Value to set for the initiatedBy property.
      */
     public void setInitiatedBy(@jakarta.annotation.Nullable final ParticipantInfo value) {
-        this.initiatedBy = value;
+        this.backingStore.set("initiatedBy", value);
     }
     /**
      * Sets the initiator property value. The identities of recording initiator.
      * @param value Value to set for the initiator property.
      */
     public void setInitiator(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.initiator = value;
+        this.backingStore.set("initiator", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recordingStatus property value. The recordingStatus property
      * @param value Value to set for the recordingStatus property.
      */
     public void setRecordingStatus(@jakarta.annotation.Nullable final RecordingStatus value) {
-        this.recordingStatus = value;
+        this.backingStore.set("recordingStatus", value);
     }
 }

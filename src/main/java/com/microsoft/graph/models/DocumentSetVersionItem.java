@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
+public class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The unique identifier for the item.
-     */
-    private String itemId;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The title of the item.
-     */
-    private String title;
-    /**
-     * The version ID of the item.
-     */
-    private String versionId;
-    /**
-     * Instantiates a new documentSetVersionItem and sets the default values.
+     * Instantiates a new DocumentSetVersionItem and sets the default values.
      */
     public DocumentSetVersionItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a documentSetVersionItem
+     * @return a DocumentSetVersionItem
      */
     @jakarta.annotation.Nonnull
     public static DocumentSetVersionItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
         return new DocumentSetVersionItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the itemId property value. The unique identifier for the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemId() {
-        return this.itemId;
+        return this.backingStore.get("itemId");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the title property value. The title of the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTitle() {
-        return this.title;
+        return this.backingStore.get("title");
     }
     /**
      * Gets the versionId property value. The version ID of the item.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersionId() {
-        return this.versionId;
+        return this.backingStore.get("versionId");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class DocumentSetVersionItem implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the itemId property value. The unique identifier for the item.
      * @param value Value to set for the itemId property.
      */
     public void setItemId(@jakarta.annotation.Nullable final String value) {
-        this.itemId = value;
+        this.backingStore.set("itemId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the title property value. The title of the item.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
-        this.title = value;
+        this.backingStore.set("title", value);
     }
     /**
      * Sets the versionId property value. The version ID of the item.
      * @param value Value to set for the versionId property.
      */
     public void setVersionId(@jakarta.annotation.Nullable final String value) {
-        this.versionId = value;
+        this.backingStore.set("versionId", value);
     }
 }

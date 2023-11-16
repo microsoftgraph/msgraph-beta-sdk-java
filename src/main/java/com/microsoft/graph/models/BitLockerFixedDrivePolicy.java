@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,37 +14,23 @@ import java.util.Objects;
  * BitLocker Fixed Drive Policies.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable {
+public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     */
-    private BitLockerEncryptionMethod encryptionMethod;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.
-     */
-    private BitLockerRecoveryOptions recoveryOptions;
-    /**
-     * This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
-     */
-    private Boolean requireEncryptionForWriteAccess;
-    /**
-     * Instantiates a new bitLockerFixedDrivePolicy and sets the default values.
+     * Instantiates a new BitLockerFixedDrivePolicy and sets the default values.
      */
     public BitLockerFixedDrivePolicy() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bitLockerFixedDrivePolicy
+     * @return a BitLockerFixedDrivePolicy
      */
     @jakarta.annotation.Nonnull
     public static BitLockerFixedDrivePolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -49,20 +38,25 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
         return new BitLockerFixedDrivePolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the encryptionMethod property value. Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
-     * @return a bitLockerEncryptionMethod
+     * @return a BitLockerEncryptionMethod
      */
     @jakarta.annotation.Nullable
     public BitLockerEncryptionMethod getEncryptionMethod() {
-        return this.encryptionMethod;
+        return this.backingStore.get("encryptionMethod");
     }
     /**
      * The deserialization information for the current model
@@ -79,27 +73,27 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the recoveryOptions property value. This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.
-     * @return a bitLockerRecoveryOptions
+     * @return a BitLockerRecoveryOptions
      */
     @jakarta.annotation.Nullable
     public BitLockerRecoveryOptions getRecoveryOptions() {
-        return this.recoveryOptions;
+        return this.backingStore.get("recoveryOptions");
     }
     /**
      * Gets the requireEncryptionForWriteAccess property value. This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getRequireEncryptionForWriteAccess() {
-        return this.requireEncryptionForWriteAccess;
+        return this.backingStore.get("requireEncryptionForWriteAccess");
     }
     /**
      * Serializes information the current object
@@ -114,38 +108,38 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the encryptionMethod property value. Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
     public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {
-        this.encryptionMethod = value;
+        this.backingStore.set("encryptionMethod", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the recoveryOptions property value. This policy setting allows you to control how BitLocker-protected fixed data drives are recovered in the absence of the required credentials. This policy setting is applied when you turn on BitLocker.
      * @param value Value to set for the recoveryOptions property.
      */
     public void setRecoveryOptions(@jakarta.annotation.Nullable final BitLockerRecoveryOptions value) {
-        this.recoveryOptions = value;
+        this.backingStore.set("recoveryOptions", value);
     }
     /**
      * Sets the requireEncryptionForWriteAccess property value. This policy setting determines whether BitLocker protection is required for fixed data drives to be writable on a computer.
      * @param value Value to set for the requireEncryptionForWriteAccess property.
      */
     public void setRequireEncryptionForWriteAccess(@jakarta.annotation.Nullable final Boolean value) {
-        this.requireEncryptionForWriteAccess = value;
+        this.backingStore.set("requireEncryptionForWriteAccess", value);
     }
 }

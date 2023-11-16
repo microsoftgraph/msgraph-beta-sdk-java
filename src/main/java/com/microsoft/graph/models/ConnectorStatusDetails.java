@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,41 +15,23 @@ import java.util.Objects;
  * Represent connector status
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
+public class ConnectorStatusDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Connector Instance Id
-     */
-    private String connectorInstanceId;
-    /**
-     * Connectors name for connector status
-     */
-    private ConnectorName connectorName;
-    /**
-     * Event datetime
-     */
-    private OffsetDateTime eventDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Connector health state for connector status
-     */
-    private ConnectorHealthState status;
-    /**
-     * Instantiates a new connectorStatusDetails and sets the default values.
+     * Instantiates a new ConnectorStatusDetails and sets the default values.
      */
     public ConnectorStatusDetails() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectorStatusDetails
+     * @return a ConnectorStatusDetails
      */
     @jakarta.annotation.Nonnull
     public static ConnectorStatusDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +39,33 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
         return new ConnectorStatusDetails();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the connectorInstanceId property value. Connector Instance Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getConnectorInstanceId() {
-        return this.connectorInstanceId;
+        return this.backingStore.get("connectorInstanceId");
     }
     /**
      * Gets the connectorName property value. Connectors name for connector status
-     * @return a connectorName
+     * @return a ConnectorName
      */
     @jakarta.annotation.Nullable
     public ConnectorName getConnectorName() {
-        return this.connectorName;
+        return this.backingStore.get("connectorName");
     }
     /**
      * Gets the eventDateTime property value. Event datetime
@@ -83,7 +73,7 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getEventDateTime() {
-        return this.eventDateTime;
+        return this.backingStore.get("eventDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -101,19 +91,19 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the status property value. Connector health state for connector status
-     * @return a connectorHealthState
+     * @return a ConnectorHealthState
      */
     @jakarta.annotation.Nullable
     public ConnectorHealthState getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -129,45 +119,45 @@ public class ConnectorStatusDetails implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the connectorInstanceId property value. Connector Instance Id
      * @param value Value to set for the connectorInstanceId property.
      */
     public void setConnectorInstanceId(@jakarta.annotation.Nullable final String value) {
-        this.connectorInstanceId = value;
+        this.backingStore.set("connectorInstanceId", value);
     }
     /**
      * Sets the connectorName property value. Connectors name for connector status
      * @param value Value to set for the connectorName property.
      */
     public void setConnectorName(@jakarta.annotation.Nullable final ConnectorName value) {
-        this.connectorName = value;
+        this.backingStore.set("connectorName", value);
     }
     /**
      * Sets the eventDateTime property value. Event datetime
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.eventDateTime = value;
+        this.backingStore.set("eventDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the status property value. Connector health state for connector status
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectorHealthState value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

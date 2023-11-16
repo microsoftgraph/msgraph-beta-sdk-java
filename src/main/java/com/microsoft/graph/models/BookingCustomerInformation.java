@@ -9,43 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BookingCustomerInformation extends BookingCustomerInformationBase implements Parsable {
     /**
-     * The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
-     */
-    private String customerId;
-    /**
-     * It consists of the list of custom questions and answers given by the customer as part of the appointment.
-     */
-    private java.util.List<BookingQuestionAnswer> customQuestionAnswers;
-    /**
-     * The SMTP address of the bookingCustomer who is booking the appointment.
-     */
-    private String emailAddress;
-    /**
-     * Represents location information for thebookingCustomer who is booking the appointment.
-     */
-    private Location location;
-    /**
-     * The customer's name.
-     */
-    private String name;
-    /**
-     * Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
-     */
-    private String notes;
-    /**
-     * The customer's phone number.
-     */
-    private String phone;
-    /**
-     * Indicates if the SMS notifications will be sent to the customer for the appointment
-     */
-    private Boolean smsNotificationsEnabled;
-    /**
-     * The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     */
-    private String timeZone;
-    /**
-     * Instantiates a new bookingCustomerInformation and sets the default values.
+     * Instantiates a new BookingCustomerInformation and sets the default values.
      */
     public BookingCustomerInformation() {
         super();
@@ -54,7 +18,7 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a bookingCustomerInformation
+     * @return a BookingCustomerInformation
      */
     @jakarta.annotation.Nonnull
     public static BookingCustomerInformation createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -63,27 +27,27 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the customerId property value. The ID of the bookingCustomer for this appointment. If no ID is specified when an appointment is created, then a new bookingCustomer object is created. Once set, you should consider the customerId immutable.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCustomerId() {
-        return this.customerId;
+        return this.backingStore.get("customerId");
     }
     /**
      * Gets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment.
-     * @return a bookingQuestionAnswer
+     * @return a java.util.List<BookingQuestionAnswer>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BookingQuestionAnswer> getCustomQuestionAnswers() {
-        return this.customQuestionAnswers;
+        return this.backingStore.get("customQuestionAnswers");
     }
     /**
      * Gets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getEmailAddress() {
-        return this.emailAddress;
+        return this.backingStore.get("emailAddress");
     }
     /**
      * The deserialization information for the current model
@@ -105,51 +69,51 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
     }
     /**
      * Gets the location property value. Represents location information for thebookingCustomer who is booking the appointment.
-     * @return a location
+     * @return a Location
      */
     @jakarta.annotation.Nullable
     public Location getLocation() {
-        return this.location;
+        return this.backingStore.get("location");
     }
     /**
      * Gets the name property value. The customer's name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNotes() {
-        return this.notes;
+        return this.backingStore.get("notes");
     }
     /**
      * Gets the phone property value. The customer's phone number.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPhone() {
-        return this.phone;
+        return this.backingStore.get("phone");
     }
     /**
      * Gets the smsNotificationsEnabled property value. Indicates if the SMS notifications will be sent to the customer for the appointment
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getSmsNotificationsEnabled() {
-        return this.smsNotificationsEnabled;
+        return this.backingStore.get("smsNotificationsEnabled");
     }
     /**
      * Gets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTimeZone() {
-        return this.timeZone;
+        return this.backingStore.get("timeZone");
     }
     /**
      * Serializes information the current object
@@ -173,62 +137,62 @@ public class BookingCustomerInformation extends BookingCustomerInformationBase i
      * @param value Value to set for the customerId property.
      */
     public void setCustomerId(@jakarta.annotation.Nullable final String value) {
-        this.customerId = value;
+        this.backingStore.set("customerId", value);
     }
     /**
      * Sets the customQuestionAnswers property value. It consists of the list of custom questions and answers given by the customer as part of the appointment.
      * @param value Value to set for the customQuestionAnswers property.
      */
     public void setCustomQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<BookingQuestionAnswer> value) {
-        this.customQuestionAnswers = value;
+        this.backingStore.set("customQuestionAnswers", value);
     }
     /**
      * Sets the emailAddress property value. The SMTP address of the bookingCustomer who is booking the appointment.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.emailAddress = value;
+        this.backingStore.set("emailAddress", value);
     }
     /**
      * Sets the location property value. Represents location information for thebookingCustomer who is booking the appointment.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final Location value) {
-        this.location = value;
+        this.backingStore.set("location", value);
     }
     /**
      * Sets the name property value. The customer's name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the notes property value. Notes from the customer associated with this appointment. You can get the value only when reading this bookingAppointment by its ID. You can set this property only when initially creating an appointment with a new customer. After that point, the value is computed from the customer represented by the customerId.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {
-        this.notes = value;
+        this.backingStore.set("notes", value);
     }
     /**
      * Sets the phone property value. The customer's phone number.
      * @param value Value to set for the phone property.
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
-        this.phone = value;
+        this.backingStore.set("phone", value);
     }
     /**
      * Sets the smsNotificationsEnabled property value. Indicates if the SMS notifications will be sent to the customer for the appointment
      * @param value Value to set for the smsNotificationsEnabled property.
      */
     public void setSmsNotificationsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.smsNotificationsEnabled = value;
+        this.backingStore.set("smsNotificationsEnabled", value);
     }
     /**
      * Sets the timeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {
-        this.timeZone = value;
+        this.backingStore.set("timeZone", value);
     }
 }

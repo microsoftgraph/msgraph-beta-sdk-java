@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DevicesFilter implements AdditionalDataHolder, Parsable {
+public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
-     */
-    private CrossTenantAccessPolicyTargetConfigurationAccessType mode;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
-     */
-    private String rule;
-    /**
-     * Instantiates a new devicesFilter and sets the default values.
+     * Instantiates a new DevicesFilter and sets the default values.
      */
     public DevicesFilter() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a devicesFilter
+     * @return a DevicesFilter
      */
     @jakarta.annotation.Nonnull
     public static DevicesFilter createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,17 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         return new DevicesFilter();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +61,27 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
-     * @return a crossTenantAccessPolicyTargetConfigurationAccessType
+     * @return a CrossTenantAccessPolicyTargetConfigurationAccessType
      */
     @jakarta.annotation.Nullable
     public CrossTenantAccessPolicyTargetConfigurationAccessType getMode() {
-        return this.mode;
+        return this.backingStore.get("mode");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRule() {
-        return this.rule;
+        return this.backingStore.get("rule");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class DevicesFilter implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
      * @param value Value to set for the mode property.
      */
     public void setMode(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTargetConfigurationAccessType value) {
-        this.mode = value;
+        this.backingStore.set("mode", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the rule property value. Defines the rule to filter the devices. For example, device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation'.
      * @param value Value to set for the rule property.
      */
     public void setRule(@jakarta.annotation.Nullable final String value) {
-        this.rule = value;
+        this.backingStore.set("rule", value);
     }
 }

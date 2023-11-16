@@ -9,23 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /**
-     * The dataType property
-     */
-    private IdentityUserFlowAttributeDataType dataType;
-    /**
-     * The description of the user flow attribute that's shown to the user at the time of sign-up.
-     */
-    private String description;
-    /**
-     * The display name of the user flow attribute.
-     */
-    private String displayName;
-    /**
-     * The userFlowAttributeType property
-     */
-    private IdentityUserFlowAttributeType userFlowAttributeType;
-    /**
-     * Instantiates a new identityUserFlowAttribute and sets the default values.
+     * Instantiates a new IdentityUserFlowAttribute and sets the default values.
      */
     public IdentityUserFlowAttribute() {
         super();
@@ -33,7 +17,7 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a identityUserFlowAttribute
+     * @return a IdentityUserFlowAttribute
      */
     @jakarta.annotation.Nonnull
     public static IdentityUserFlowAttribute createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,27 +34,27 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     }
     /**
      * Gets the dataType property value. The dataType property
-     * @return a identityUserFlowAttributeDataType
+     * @return a IdentityUserFlowAttributeDataType
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeDataType getDataType() {
-        return this.dataType;
+        return this.backingStore.get("dataType");
     }
     /**
      * Gets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The display name of the user flow attribute.
-     * @return a string
+     * Gets the displayName property value. The display name of the user flow attribute.  Supports $filter (eq, ne).
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -87,11 +71,11 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
     }
     /**
      * Gets the userFlowAttributeType property value. The userFlowAttributeType property
-     * @return a identityUserFlowAttributeType
+     * @return a IdentityUserFlowAttributeType
      */
     @jakarta.annotation.Nullable
     public IdentityUserFlowAttributeType getUserFlowAttributeType() {
-        return this.userFlowAttributeType;
+        return this.backingStore.get("userFlowAttributeType");
     }
     /**
      * Serializes information the current object
@@ -110,27 +94,27 @@ public class IdentityUserFlowAttribute extends Entity implements Parsable {
      * @param value Value to set for the dataType property.
      */
     public void setDataType(@jakarta.annotation.Nullable final IdentityUserFlowAttributeDataType value) {
-        this.dataType = value;
+        this.backingStore.set("dataType", value);
     }
     /**
      * Sets the description property value. The description of the user flow attribute that's shown to the user at the time of sign-up.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The display name of the user flow attribute.
+     * Sets the displayName property value. The display name of the user flow attribute.  Supports $filter (eq, ne).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the userFlowAttributeType property value. The userFlowAttributeType property
      * @param value Value to set for the userFlowAttributeType property.
      */
     public void setUserFlowAttributeType(@jakarta.annotation.Nullable final IdentityUserFlowAttributeType value) {
-        this.userFlowAttributeType = value;
+        this.backingStore.set("userFlowAttributeType", value);
     }
 }

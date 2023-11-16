@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * A class containing the result of HasPayloadLinks action.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable {
+public class HasPayloadLinkResultItem implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Exception information indicates if check for this item was successful or not.Empty string for no error.
-     */
-    private String error;
-    /**
-     * Indicate whether a payload has any link or not.
-     */
-    private Boolean hasLink;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Key of the Payload, In the format of Guid.
-     */
-    private String payloadId;
-    /**
-     * The reason where the link comes from.
-     */
-    private java.util.List<DeviceAndAppManagementAssignmentSource> sources;
-    /**
-     * Instantiates a new hasPayloadLinkResultItem and sets the default values.
+     * Instantiates a new HasPayloadLinkResultItem and sets the default values.
      */
     public HasPayloadLinkResultItem() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a hasPayloadLinkResultItem
+     * @return a HasPayloadLinkResultItem
      */
     @jakarta.annotation.Nonnull
     public static HasPayloadLinkResultItem createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,20 +38,25 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
         return new HasPayloadLinkResultItem();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the error property value. Exception information indicates if check for this item was successful or not.Empty string for no error.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getError() {
-        return this.error;
+        return this.backingStore.get("error");
     }
     /**
      * The deserialization information for the current model
@@ -84,35 +74,35 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the hasLink property value. Indicate whether a payload has any link or not.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getHasLink() {
-        return this.hasLink;
+        return this.backingStore.get("hasLink");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the payloadId property value. Key of the Payload, In the format of Guid.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayloadId() {
-        return this.payloadId;
+        return this.backingStore.get("payloadId");
     }
     /**
      * Gets the sources property value. The reason where the link comes from.
-     * @return a deviceAndAppManagementAssignmentSource
+     * @return a java.util.List<DeviceAndAppManagementAssignmentSource>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceAndAppManagementAssignmentSource> getSources() {
-        return this.sources;
+        return this.backingStore.get("sources");
     }
     /**
      * Serializes information the current object
@@ -128,45 +118,45 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the error property value. Exception information indicates if check for this item was successful or not.Empty string for no error.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final String value) {
-        this.error = value;
+        this.backingStore.set("error", value);
     }
     /**
      * Sets the hasLink property value. Indicate whether a payload has any link or not.
      * @param value Value to set for the hasLink property.
      */
     public void setHasLink(@jakarta.annotation.Nullable final Boolean value) {
-        this.hasLink = value;
+        this.backingStore.set("hasLink", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the payloadId property value. Key of the Payload, In the format of Guid.
      * @param value Value to set for the payloadId property.
      */
     public void setPayloadId(@jakarta.annotation.Nullable final String value) {
-        this.payloadId = value;
+        this.backingStore.set("payloadId", value);
     }
     /**
      * Sets the sources property value. The reason where the link comes from.
      * @param value Value to set for the sources property.
      */
     public void setSources(@jakarta.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentSource> value) {
-        this.sources = value;
+        this.backingStore.set("sources", value);
     }
 }

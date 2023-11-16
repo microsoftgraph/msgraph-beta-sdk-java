@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleManagementAlertConfiguration extends Entity implements Parsable {
     /**
-     * The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
-     */
-    private UnifiedRoleManagementAlertDefinition alertDefinition;
-    /**
-     * The identifier of an alert definition. Supports $filter (eq, ne).
-     */
-    private String alertDefinitionId;
-    /**
-     * true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
-     */
-    private Boolean isEnabled;
-    /**
-     * The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
-     */
-    private String scopeId;
-    /**
-     * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
-     */
-    private String scopeType;
-    /**
-     * Instantiates a new unifiedRoleManagementAlertConfiguration and sets the default values.
+     * Instantiates a new UnifiedRoleManagementAlertConfiguration and sets the default values.
      */
     public UnifiedRoleManagementAlertConfiguration() {
         super();
@@ -37,7 +17,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleManagementAlertConfiguration
+     * @return a UnifiedRoleManagementAlertConfiguration
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleManagementAlertConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -59,19 +39,19 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the alertDefinition property value. The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
-     * @return a unifiedRoleManagementAlertDefinition
+     * @return a UnifiedRoleManagementAlertDefinition
      */
     @jakarta.annotation.Nullable
     public UnifiedRoleManagementAlertDefinition getAlertDefinition() {
-        return this.alertDefinition;
+        return this.backingStore.get("alertDefinition");
     }
     /**
      * Gets the alertDefinitionId property value. The identifier of an alert definition. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getAlertDefinitionId() {
-        return this.alertDefinitionId;
+        return this.backingStore.get("alertDefinitionId");
     }
     /**
      * The deserialization information for the current model
@@ -89,27 +69,27 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
     }
     /**
      * Gets the isEnabled property value. true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the scopeId property value. The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeId() {
-        return this.scopeId;
+        return this.backingStore.get("scopeId");
     }
     /**
-     * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
-     * @return a string
+     * Gets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getScopeType() {
-        return this.scopeType;
+        return this.backingStore.get("scopeType");
     }
     /**
      * Serializes information the current object
@@ -129,34 +109,34 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
      * @param value Value to set for the alertDefinition property.
      */
     public void setAlertDefinition(@jakarta.annotation.Nullable final UnifiedRoleManagementAlertDefinition value) {
-        this.alertDefinition = value;
+        this.backingStore.set("alertDefinition", value);
     }
     /**
      * Sets the alertDefinitionId property value. The identifier of an alert definition. Supports $filter (eq, ne).
      * @param value Value to set for the alertDefinitionId property.
      */
     public void setAlertDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.alertDefinitionId = value;
+        this.backingStore.set("alertDefinitionId", value);
     }
     /**
      * Sets the isEnabled property value. true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the scopeId property value. The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
      * @param value Value to set for the scopeId property.
      */
     public void setScopeId(@jakarta.annotation.Nullable final String value) {
-        this.scopeId = value;
+        this.backingStore.set("scopeId", value);
     }
     /**
-     * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
+     * Sets the scopeType property value. The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Microsoft Entra roles.
      * @param value Value to set for the scopeType property.
      */
     public void setScopeType(@jakarta.annotation.Nullable final String value) {
-        this.scopeType = value;
+        this.backingStore.set("scopeType", value);
     }
 }

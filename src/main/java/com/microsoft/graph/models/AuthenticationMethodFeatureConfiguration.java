@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, Parsable {
+public class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * A single entity that's excluded from using this feature.
-     */
-    private FeatureTarget excludeTarget;
-    /**
-     * A single entity that's allowed to use this feature.
-     */
-    private FeatureTarget includeTarget;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
-     */
-    private AdvancedConfigState state;
-    /**
-     * Instantiates a new authenticationMethodFeatureConfiguration and sets the default values.
+     * Instantiates a new AuthenticationMethodFeatureConfiguration and sets the default values.
      */
     public AuthenticationMethodFeatureConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authenticationMethodFeatureConfiguration
+     * @return a AuthenticationMethodFeatureConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AuthenticationMethodFeatureConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,25 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         return new AuthenticationMethodFeatureConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the excludeTarget property value. A single entity that's excluded from using this feature.
-     * @return a featureTarget
+     * @return a FeatureTarget
      */
     @jakarta.annotation.Nullable
     public FeatureTarget getExcludeTarget() {
-        return this.excludeTarget;
+        return this.backingStore.get("excludeTarget");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +70,27 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
     }
     /**
      * Gets the includeTarget property value. A single entity that's allowed to use this feature.
-     * @return a featureTarget
+     * @return a FeatureTarget
      */
     @jakarta.annotation.Nullable
     public FeatureTarget getIncludeTarget() {
-        return this.includeTarget;
+        return this.backingStore.get("includeTarget");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
-     * @return a advancedConfigState
+     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * @return a AdvancedConfigState
      */
     @jakarta.annotation.Nullable
     public AdvancedConfigState getState() {
-        return this.state;
+        return this.backingStore.get("state");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the excludeTarget property value. A single entity that's excluded from using this feature.
      * @param value Value to set for the excludeTarget property.
      */
     public void setExcludeTarget(@jakarta.annotation.Nullable final FeatureTarget value) {
-        this.excludeTarget = value;
+        this.backingStore.set("excludeTarget", value);
     }
     /**
      * Sets the includeTarget property value. A single entity that's allowed to use this feature.
      * @param value Value to set for the includeTarget property.
      */
     public void setIncludeTarget(@jakarta.annotation.Nullable final FeatureTarget value) {
-        this.includeTarget = value;
+        this.backingStore.set("includeTarget", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
+     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {
-        this.state = value;
+        this.backingStore.set("state", value);
     }
 }

@@ -4,33 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataHolder, Parsable {
+public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The memberId property
-     */
-    private String memberId;
-    /**
-     * The membershipRule property
-     */
-    private String membershipRule;
-    /**
-     * Instantiates a new evaluateDynamicMembershipPostRequestBody and sets the default values.
+     * Instantiates a new EvaluateDynamicMembershipPostRequestBody and sets the default values.
      */
     public EvaluateDynamicMembershipPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a evaluateDynamicMembershipPostRequestBody
+     * @return a EvaluateDynamicMembershipPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static EvaluateDynamicMembershipPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -38,12 +35,17 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
         return new EvaluateDynamicMembershipPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -58,19 +60,19 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
     }
     /**
      * Gets the memberId property value. The memberId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMemberId() {
-        return this.memberId;
+        return this.backingStore.get("memberId");
     }
     /**
      * Gets the membershipRule property value. The membershipRule property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMembershipRule() {
-        return this.membershipRule;
+        return this.backingStore.get("membershipRule");
     }
     /**
      * Serializes information the current object
@@ -83,24 +85,24 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the memberId property value. The memberId property
      * @param value Value to set for the memberId property.
      */
     public void setMemberId(@jakarta.annotation.Nullable final String value) {
-        this.memberId = value;
+        this.backingStore.set("memberId", value);
     }
     /**
      * Sets the membershipRule property value. The membershipRule property
      * @param value Value to set for the membershipRule property.
      */
     public void setMembershipRule(@jakarta.annotation.Nullable final String value) {
-        this.membershipRule = value;
+        this.backingStore.set("membershipRule", value);
     }
 }

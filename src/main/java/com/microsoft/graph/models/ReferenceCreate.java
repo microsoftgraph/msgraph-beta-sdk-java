@@ -4,23 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ReferenceCreate implements AdditionalDataHolder, Parsable {
+public class ReferenceCreate implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
-    /**
-     * The OdataId property
-     */
-    private String odataId;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
      * Instantiates a new ReferenceCreate and sets the default values.
      */
     public ReferenceCreate() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
@@ -34,12 +35,17 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
         return new ReferenceCreate();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +59,11 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.id property value. The OdataId property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataId() {
-        return this.odataId;
+        return this.backingStore.get("odataId");
     }
     /**
      * Serializes information the current object
@@ -69,17 +75,17 @@ public class ReferenceCreate implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.id property value. The OdataId property
      * @param value Value to set for the @odata.id property.
      */
     public void setOdataId(@jakarta.annotation.Nullable final String value) {
-        this.odataId = value;
+        this.backingStore.set("odataId", value);
     }
 }

@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Acl implements AdditionalDataHolder, Parsable {
+public class Acl implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The accessType property
+     * Stores model information.
      */
-    private AccessType accessType;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The source of identity. Possible values are azureActiveDirectory or external.
-     */
-    private IdentitySourceType identitySource;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The type property
-     */
-    private AclType type;
-    /**
-     * The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
-     */
-    private String value;
-    /**
-     * Instantiates a new acl and sets the default values.
+     * Instantiates a new Acl and sets the default values.
      */
     public Acl() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a acl
+     * @return a Acl
      */
     @jakarta.annotation.Nonnull
     public static Acl createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,19 +36,24 @@ public class Acl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accessType property value. The accessType property
-     * @return a accessType
+     * @return a AccessType
      */
     @jakarta.annotation.Nullable
     public AccessType getAccessType() {
-        return this.accessType;
+        return this.backingStore.get("accessType");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +71,35 @@ public class Acl implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identitySource property value. The source of identity. Possible values are azureActiveDirectory or external.
-     * @return a identitySourceType
+     * @return a IdentitySourceType
      */
     @jakarta.annotation.Nullable
     public IdentitySourceType getIdentitySource() {
-        return this.identitySource;
+        return this.backingStore.get("identitySource");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the type property value. The type property
-     * @return a aclType
+     * @return a AclType
      */
     @jakarta.annotation.Nullable
     public AclType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
-     * Gets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
-     * @return a string
+     * Gets the value property value. The unique identifer of the identity. For Microsoft Entra identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. For external groups, value is set to the ID of the externalGroup.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -129,41 +119,41 @@ public class Acl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessType property.
      */
     public void setAccessType(@jakarta.annotation.Nullable final AccessType value) {
-        this.accessType = value;
+        this.backingStore.set("accessType", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the identitySource property value. The source of identity. Possible values are azureActiveDirectory or external.
      * @param value Value to set for the identitySource property.
      */
     public void setIdentitySource(@jakarta.annotation.Nullable final IdentitySourceType value) {
-        this.identitySource = value;
+        this.backingStore.set("identitySource", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AclType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
     /**
-     * Sets the value property value. The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup.
+     * Sets the value property value. The unique identifer of the identity. For Microsoft Entra identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. For external groups, value is set to the ID of the externalGroup.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DriveItemUploadableProperties implements AdditionalDataHolder, Parsable {
+public class DriveItemUploadableProperties implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
-     */
-    private String description;
-    /**
-     * Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
-     */
-    private Long fileSize;
-    /**
-     * File system information on client. Read-write.
-     */
-    private FileSystemInfo fileSystemInfo;
-    /**
-     * The name of the item (filename and extension). Read-write.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new driveItemUploadableProperties and sets the default values.
+     * Instantiates a new DriveItemUploadableProperties and sets the default values.
      */
     public DriveItemUploadableProperties() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a driveItemUploadableProperties
+     * @return a DriveItemUploadableProperties
      */
     @jakarta.annotation.Nonnull
     public static DriveItemUploadableProperties createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -50,20 +35,25 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
         return new DriveItemUploadableProperties();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the description property value. Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +71,35 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getFileSize() {
-        return this.fileSize;
+        return this.backingStore.get("fileSize");
     }
     /**
      * Gets the fileSystemInfo property value. File system information on client. Read-write.
-     * @return a fileSystemInfo
+     * @return a FileSystemInfo
      */
     @jakarta.annotation.Nullable
     public FileSystemInfo getFileSystemInfo() {
-        return this.fileSystemInfo;
+        return this.backingStore.get("fileSystemInfo");
     }
     /**
      * Gets the name property value. The name of the item (filename and extension). Read-write.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -125,45 +115,45 @@ public class DriveItemUploadableProperties implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the description property value. Provides a user-visible description of the item. Read-write. Only on OneDrive Personal.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the fileSize property value. Provides an expected file size to perform a quota check prior to upload. Only on OneDrive Personal.
      * @param value Value to set for the fileSize property.
      */
     public void setFileSize(@jakarta.annotation.Nullable final Long value) {
-        this.fileSize = value;
+        this.backingStore.set("fileSize", value);
     }
     /**
      * Sets the fileSystemInfo property value. File system information on client. Read-write.
      * @param value Value to set for the fileSystemInfo property.
      */
     public void setFileSystemInfo(@jakarta.annotation.Nullable final FileSystemInfo value) {
-        this.fileSystemInfo = value;
+        this.backingStore.set("fileSystemInfo", value);
     }
     /**
      * Sets the name property value. The name of the item (filename and extension). Read-write.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

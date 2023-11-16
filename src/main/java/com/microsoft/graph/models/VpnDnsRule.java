@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,45 +14,23 @@ import java.util.Objects;
  * VPN DNS Rule definition.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class VpnDnsRule implements AdditionalDataHolder, Parsable {
+public class VpnDnsRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Automatically connect to the VPN when the device connects to this domain: Default False.
-     */
-    private Boolean autoTrigger;
-    /**
-     * Name.
-     */
-    private String name;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Keep this rule active even when the VPN is not connected: Default False
-     */
-    private Boolean persistent;
-    /**
-     * Proxy Server Uri.
-     */
-    private String proxyServerUri;
-    /**
-     * Servers.
-     */
-    private java.util.List<String> servers;
-    /**
-     * Instantiates a new vpnDnsRule and sets the default values.
+     * Instantiates a new VpnDnsRule and sets the default values.
      */
     public VpnDnsRule() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a vpnDnsRule
+     * @return a VpnDnsRule
      */
     @jakarta.annotation.Nonnull
     public static VpnDnsRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,20 +38,25 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
         return new VpnDnsRule();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the autoTrigger property value. Automatically connect to the VPN when the device connects to this domain: Default False.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAutoTrigger() {
-        return this.autoTrigger;
+        return this.backingStore.get("autoTrigger");
     }
     /**
      * The deserialization information for the current model
@@ -89,43 +75,43 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the name property value. Name.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the persistent property value. Keep this rule active even when the VPN is not connected: Default False
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPersistent() {
-        return this.persistent;
+        return this.backingStore.get("persistent");
     }
     /**
      * Gets the proxyServerUri property value. Proxy Server Uri.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProxyServerUri() {
-        return this.proxyServerUri;
+        return this.backingStore.get("proxyServerUri");
     }
     /**
      * Gets the servers property value. Servers.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getServers() {
-        return this.servers;
+        return this.backingStore.get("servers");
     }
     /**
      * Serializes information the current object
@@ -142,52 +128,52 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the autoTrigger property value. Automatically connect to the VPN when the device connects to this domain: Default False.
      * @param value Value to set for the autoTrigger property.
      */
     public void setAutoTrigger(@jakarta.annotation.Nullable final Boolean value) {
-        this.autoTrigger = value;
+        this.backingStore.set("autoTrigger", value);
     }
     /**
      * Sets the name property value. Name.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the persistent property value. Keep this rule active even when the VPN is not connected: Default False
      * @param value Value to set for the persistent property.
      */
     public void setPersistent(@jakarta.annotation.Nullable final Boolean value) {
-        this.persistent = value;
+        this.backingStore.set("persistent", value);
     }
     /**
      * Sets the proxyServerUri property value. Proxy Server Uri.
      * @param value Value to set for the proxyServerUri property.
      */
     public void setProxyServerUri(@jakarta.annotation.Nullable final String value) {
-        this.proxyServerUri = value;
+        this.backingStore.set("proxyServerUri", value);
     }
     /**
      * Sets the servers property value. Servers.
      * @param value Value to set for the servers property.
      */
     public void setServers(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.servers = value;
+        this.backingStore.set("servers", value);
     }
 }

@@ -5,29 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsable {
+public class AddPasswordPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The passwordCredential property
-     */
-    private PasswordCredential passwordCredential;
-    /**
-     * Instantiates a new addPasswordPostRequestBody and sets the default values.
+     * Instantiates a new AddPasswordPostRequestBody and sets the default values.
      */
     public AddPasswordPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addPasswordPostRequestBody
+     * @return a AddPasswordPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static AddPasswordPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -35,12 +36,17 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
         return new AddPasswordPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -54,11 +60,11 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
     }
     /**
      * Gets the passwordCredential property value. The passwordCredential property
-     * @return a passwordCredential
+     * @return a PasswordCredential
      */
     @jakarta.annotation.Nullable
     public PasswordCredential getPasswordCredential() {
-        return this.passwordCredential;
+        return this.backingStore.get("passwordCredential");
     }
     /**
      * Serializes information the current object
@@ -70,17 +76,17 @@ public class AddPasswordPostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the passwordCredential property value. The passwordCredential property
      * @param value Value to set for the passwordCredential property.
      */
     public void setPasswordCredential(@jakarta.annotation.Nullable final PasswordCredential value) {
-        this.passwordCredential = value;
+        this.backingStore.set("passwordCredential", value);
     }
 }

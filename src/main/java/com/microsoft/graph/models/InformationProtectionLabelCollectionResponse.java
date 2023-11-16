@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class InformationProtectionLabelCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<InformationProtectionLabel> value;
-    /**
-     * Instantiates a new informationProtectionLabelCollectionResponse and sets the default values.
+     * Instantiates a new InformationProtectionLabelCollectionResponse and sets the default values.
      */
     public InformationProtectionLabelCollectionResponse() {
         super();
@@ -21,7 +17,7 @@ public class InformationProtectionLabelCollectionResponse extends BaseCollection
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a informationProtectionLabelCollectionResponse
+     * @return a InformationProtectionLabelCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static InformationProtectionLabelCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class InformationProtectionLabelCollectionResponse extends BaseCollection
     }
     /**
      * Gets the value property value. The value property
-     * @return a informationProtectionLabel
+     * @return a java.util.List<InformationProtectionLabel>
      */
     @jakarta.annotation.Nullable
     public java.util.List<InformationProtectionLabel> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class InformationProtectionLabelCollectionResponse extends BaseCollection
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<InformationProtectionLabel> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

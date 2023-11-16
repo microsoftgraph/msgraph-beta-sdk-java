@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceUser extends Entity implements Parsable {
     /**
-     * The learningCourseActivities property
-     */
-    private java.util.List<LearningCourseActivity> learningCourseActivities;
-    /**
-     * Instantiates a new employeeExperienceUser and sets the default values.
+     * Instantiates a new EmployeeExperienceUser and sets the default values.
      */
     public EmployeeExperienceUser() {
         super();
@@ -21,7 +17,7 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a employeeExperienceUser
+     * @return a EmployeeExperienceUser
      */
     @jakarta.annotation.Nonnull
     public static EmployeeExperienceUser createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -40,11 +36,11 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
     }
     /**
      * Gets the learningCourseActivities property value. The learningCourseActivities property
-     * @return a learningCourseActivity
+     * @return a java.util.List<LearningCourseActivity>
      */
     @jakarta.annotation.Nullable
     public java.util.List<LearningCourseActivity> getLearningCourseActivities() {
-        return this.learningCourseActivities;
+        return this.backingStore.get("learningCourseActivities");
     }
     /**
      * Serializes information the current object
@@ -60,6 +56,6 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
      * @param value Value to set for the learningCourseActivities property.
      */
     public void setLearningCourseActivities(@jakarta.annotation.Nullable final java.util.List<LearningCourseActivity> value) {
-        this.learningCourseActivities = value;
+        this.backingStore.set("learningCourseActivities", value);
     }
 }

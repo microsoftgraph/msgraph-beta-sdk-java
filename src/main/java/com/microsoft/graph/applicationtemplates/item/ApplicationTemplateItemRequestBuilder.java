@@ -45,30 +45,30 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/applicationTemplates/{applicationTemplate%2Did}{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object.
-     * @return a CompletableFuture of applicationTemplate
+     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
+     * @return a ApplicationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApplicationTemplate> get() {
+    @jakarta.annotation.Nullable
+    public ApplicationTemplate get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object.
+     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of applicationTemplate
+     * @return a ApplicationTemplate
      * @see <a href="https://learn.microsoft.com/graph/api/applicationtemplate-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ApplicationTemplate> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ApplicationTemplate get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ApplicationTemplate::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ApplicationTemplate::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object.
+     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -76,24 +76,15 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object.
+     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -107,7 +98,7 @@ public class ApplicationTemplateItemRequestBuilder extends BaseRequestBuilder {
         return new ApplicationTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of an applicationTemplate object.
+     * Retrieve the properties of an applicationTemplate object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,41 +15,23 @@ import java.util.Objects;
  * iOS available update version details
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable {
+public class IosAvailableUpdateVersion implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The expiration date of the update.
-     */
-    private OffsetDateTime expirationDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The posting date of the update.
-     */
-    private OffsetDateTime postingDateTime;
-    /**
-     * The version of the update.
-     */
-    private String productVersion;
-    /**
-     * List of supported devices for the update.
-     */
-    private java.util.List<String> supportedDevices;
-    /**
-     * Instantiates a new iosAvailableUpdateVersion and sets the default values.
+     * Instantiates a new IosAvailableUpdateVersion and sets the default values.
      */
     public IosAvailableUpdateVersion() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a iosAvailableUpdateVersion
+     * @return a IosAvailableUpdateVersion
      */
     @jakarta.annotation.Nonnull
     public static IosAvailableUpdateVersion createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,12 +39,17 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
         return new IosAvailableUpdateVersion();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the expirationDateTime property value. The expiration date of the update.
@@ -67,7 +57,7 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this.expirationDateTime;
+        return this.backingStore.get("expirationDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -85,11 +75,11 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the postingDateTime property value. The posting date of the update.
@@ -97,23 +87,23 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getPostingDateTime() {
-        return this.postingDateTime;
+        return this.backingStore.get("postingDateTime");
     }
     /**
      * Gets the productVersion property value. The version of the update.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getProductVersion() {
-        return this.productVersion;
+        return this.backingStore.get("productVersion");
     }
     /**
      * Gets the supportedDevices property value. List of supported devices for the update.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getSupportedDevices() {
-        return this.supportedDevices;
+        return this.backingStore.get("supportedDevices");
     }
     /**
      * Serializes information the current object
@@ -129,45 +119,45 @@ public class IosAvailableUpdateVersion implements AdditionalDataHolder, Parsable
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the expirationDateTime property value. The expiration date of the update.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expirationDateTime = value;
+        this.backingStore.set("expirationDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the postingDateTime property value. The posting date of the update.
      * @param value Value to set for the postingDateTime property.
      */
     public void setPostingDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.postingDateTime = value;
+        this.backingStore.set("postingDateTime", value);
     }
     /**
      * Sets the productVersion property value. The version of the update.
      * @param value Value to set for the productVersion property.
      */
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
-        this.productVersion = value;
+        this.backingStore.set("productVersion", value);
     }
     /**
      * Sets the supportedDevices property value. List of supported devices for the update.
      * @param value Value to set for the supportedDevices property.
      */
     public void setSupportedDevices(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.supportedDevices = value;
+        this.backingStore.set("supportedDevices", value);
     }
 }

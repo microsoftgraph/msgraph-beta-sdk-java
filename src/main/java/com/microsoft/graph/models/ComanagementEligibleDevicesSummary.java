@@ -4,53 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder, Parsable {
+public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Count of devices already Co-Managed
-     */
-    private Integer comanagedCount;
-    /**
-     * Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
-     */
-    private Integer eligibleButNotAzureAdJoinedCount;
-    /**
-     * Count of devices fully eligible for Co-Management
-     */
-    private Integer eligibleCount;
-    /**
-     * Count of devices ineligible for Co-Management
-     */
-    private Integer ineligibleCount;
-    /**
-     * Count of devices that will be eligible for Co-Management after an OS update
-     */
-    private Integer needsOsUpdateCount;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
-     */
-    private Integer scheduledForEnrollmentCount;
-    /**
-     * Instantiates a new comanagementEligibleDevicesSummary and sets the default values.
+     * Instantiates a new ComanagementEligibleDevicesSummary and sets the default values.
      */
     public ComanagementEligibleDevicesSummary() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a comanagementEligibleDevicesSummary
+     * @return a ComanagementEligibleDevicesSummary
      */
     @jakarta.annotation.Nonnull
     public static ComanagementEligibleDevicesSummary createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -58,36 +35,41 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         return new ComanagementEligibleDevicesSummary();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the comanagedCount property value. Count of devices already Co-Managed
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getComanagedCount() {
-        return this.comanagedCount;
+        return this.backingStore.get("comanagedCount");
     }
     /**
      * Gets the eligibleButNotAzureAdJoinedCount property value. Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEligibleButNotAzureAdJoinedCount() {
-        return this.eligibleButNotAzureAdJoinedCount;
+        return this.backingStore.get("eligibleButNotAzureAdJoinedCount");
     }
     /**
      * Gets the eligibleCount property value. Count of devices fully eligible for Co-Management
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getEligibleCount() {
-        return this.eligibleCount;
+        return this.backingStore.get("eligibleCount");
     }
     /**
      * The deserialization information for the current model
@@ -107,35 +89,35 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     }
     /**
      * Gets the ineligibleCount property value. Count of devices ineligible for Co-Management
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getIneligibleCount() {
-        return this.ineligibleCount;
+        return this.backingStore.get("ineligibleCount");
     }
     /**
      * Gets the needsOsUpdateCount property value. Count of devices that will be eligible for Co-Management after an OS update
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getNeedsOsUpdateCount() {
-        return this.needsOsUpdateCount;
+        return this.backingStore.get("needsOsUpdateCount");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getScheduledForEnrollmentCount() {
-        return this.scheduledForEnrollmentCount;
+        return this.backingStore.get("scheduledForEnrollmentCount");
     }
     /**
      * Serializes information the current object
@@ -153,59 +135,59 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the comanagedCount property value. Count of devices already Co-Managed
      * @param value Value to set for the comanagedCount property.
      */
     public void setComanagedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.comanagedCount = value;
+        this.backingStore.set("comanagedCount", value);
     }
     /**
      * Sets the eligibleButNotAzureAdJoinedCount property value. Count of devices eligible for Co-Management but not yet joined to Azure Active Directory
      * @param value Value to set for the eligibleButNotAzureAdJoinedCount property.
      */
     public void setEligibleButNotAzureAdJoinedCount(@jakarta.annotation.Nullable final Integer value) {
-        this.eligibleButNotAzureAdJoinedCount = value;
+        this.backingStore.set("eligibleButNotAzureAdJoinedCount", value);
     }
     /**
      * Sets the eligibleCount property value. Count of devices fully eligible for Co-Management
      * @param value Value to set for the eligibleCount property.
      */
     public void setEligibleCount(@jakarta.annotation.Nullable final Integer value) {
-        this.eligibleCount = value;
+        this.backingStore.set("eligibleCount", value);
     }
     /**
      * Sets the ineligibleCount property value. Count of devices ineligible for Co-Management
      * @param value Value to set for the ineligibleCount property.
      */
     public void setIneligibleCount(@jakarta.annotation.Nullable final Integer value) {
-        this.ineligibleCount = value;
+        this.backingStore.set("ineligibleCount", value);
     }
     /**
      * Sets the needsOsUpdateCount property value. Count of devices that will be eligible for Co-Management after an OS update
      * @param value Value to set for the needsOsUpdateCount property.
      */
     public void setNeedsOsUpdateCount(@jakarta.annotation.Nullable final Integer value) {
-        this.needsOsUpdateCount = value;
+        this.backingStore.set("needsOsUpdateCount", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
      * @param value Value to set for the scheduledForEnrollmentCount property.
      */
     public void setScheduledForEnrollmentCount(@jakarta.annotation.Nullable final Integer value) {
-        this.scheduledForEnrollmentCount = value;
+        this.backingStore.set("scheduledForEnrollmentCount", value);
     }
 }

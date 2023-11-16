@@ -4,57 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class FormsSettings implements AdditionalDataHolder, Parsable {
+public class FormsSettings implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Controls whether users can add images from Bing to forms.
-     */
-    private Boolean isBingImageSearchEnabled;
-    /**
-     * Controls whether users can send a link to a form to an external user.
-     */
-    private Boolean isExternalSendFormEnabled;
-    /**
-     * Controls whether users can collaborate on a form layout and structure with an external user.
-     */
-    private Boolean isExternalShareCollaborationEnabled;
-    /**
-     * Controls whether users can share form results with external users.
-     */
-    private Boolean isExternalShareResultEnabled;
-    /**
-     * Controls whether users can share form templates with external users.
-     */
-    private Boolean isExternalShareTemplateEnabled;
-    /**
-     * Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
-     */
-    private Boolean isInOrgFormsPhishingScanEnabled;
-    /**
-     * Controls whether the names of users who fill out forms are recorded.
-     */
-    private Boolean isRecordIdentityByDefaultEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new formsSettings and sets the default values.
+     * Instantiates a new FormsSettings and sets the default values.
      */
     public FormsSettings() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a formsSettings
+     * @return a FormsSettings
      */
     @jakarta.annotation.Nonnull
     public static FormsSettings createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -62,12 +35,17 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
         return new FormsSettings();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -88,67 +66,67 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the isBingImageSearchEnabled property value. Controls whether users can add images from Bing to forms.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBingImageSearchEnabled() {
-        return this.isBingImageSearchEnabled;
+        return this.backingStore.get("isBingImageSearchEnabled");
     }
     /**
      * Gets the isExternalSendFormEnabled property value. Controls whether users can send a link to a form to an external user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalSendFormEnabled() {
-        return this.isExternalSendFormEnabled;
+        return this.backingStore.get("isExternalSendFormEnabled");
     }
     /**
      * Gets the isExternalShareCollaborationEnabled property value. Controls whether users can collaborate on a form layout and structure with an external user.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareCollaborationEnabled() {
-        return this.isExternalShareCollaborationEnabled;
+        return this.backingStore.get("isExternalShareCollaborationEnabled");
     }
     /**
      * Gets the isExternalShareResultEnabled property value. Controls whether users can share form results with external users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareResultEnabled() {
-        return this.isExternalShareResultEnabled;
+        return this.backingStore.get("isExternalShareResultEnabled");
     }
     /**
      * Gets the isExternalShareTemplateEnabled property value. Controls whether users can share form templates with external users.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsExternalShareTemplateEnabled() {
-        return this.isExternalShareTemplateEnabled;
+        return this.backingStore.get("isExternalShareTemplateEnabled");
     }
     /**
      * Gets the isInOrgFormsPhishingScanEnabled property value. Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsInOrgFormsPhishingScanEnabled() {
-        return this.isInOrgFormsPhishingScanEnabled;
+        return this.backingStore.get("isInOrgFormsPhishingScanEnabled");
     }
     /**
      * Gets the isRecordIdentityByDefaultEnabled property value. Controls whether the names of users who fill out forms are recorded.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsRecordIdentityByDefaultEnabled() {
-        return this.isRecordIdentityByDefaultEnabled;
+        return this.backingStore.get("isRecordIdentityByDefaultEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -167,66 +145,66 @@ public class FormsSettings implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the isBingImageSearchEnabled property value. Controls whether users can add images from Bing to forms.
      * @param value Value to set for the isBingImageSearchEnabled property.
      */
     public void setIsBingImageSearchEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBingImageSearchEnabled = value;
+        this.backingStore.set("isBingImageSearchEnabled", value);
     }
     /**
      * Sets the isExternalSendFormEnabled property value. Controls whether users can send a link to a form to an external user.
      * @param value Value to set for the isExternalSendFormEnabled property.
      */
     public void setIsExternalSendFormEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalSendFormEnabled = value;
+        this.backingStore.set("isExternalSendFormEnabled", value);
     }
     /**
      * Sets the isExternalShareCollaborationEnabled property value. Controls whether users can collaborate on a form layout and structure with an external user.
      * @param value Value to set for the isExternalShareCollaborationEnabled property.
      */
     public void setIsExternalShareCollaborationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalShareCollaborationEnabled = value;
+        this.backingStore.set("isExternalShareCollaborationEnabled", value);
     }
     /**
      * Sets the isExternalShareResultEnabled property value. Controls whether users can share form results with external users.
      * @param value Value to set for the isExternalShareResultEnabled property.
      */
     public void setIsExternalShareResultEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalShareResultEnabled = value;
+        this.backingStore.set("isExternalShareResultEnabled", value);
     }
     /**
      * Sets the isExternalShareTemplateEnabled property value. Controls whether users can share form templates with external users.
      * @param value Value to set for the isExternalShareTemplateEnabled property.
      */
     public void setIsExternalShareTemplateEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isExternalShareTemplateEnabled = value;
+        this.backingStore.set("isExternalShareTemplateEnabled", value);
     }
     /**
      * Sets the isInOrgFormsPhishingScanEnabled property value. Controls whether phishing protection is run on forms created by users, blocking the creation of forms if common phishing questions are detected.
      * @param value Value to set for the isInOrgFormsPhishingScanEnabled property.
      */
     public void setIsInOrgFormsPhishingScanEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isInOrgFormsPhishingScanEnabled = value;
+        this.backingStore.set("isInOrgFormsPhishingScanEnabled", value);
     }
     /**
      * Sets the isRecordIdentityByDefaultEnabled property value. Controls whether the names of users who fill out forms are recorded.
      * @param value Value to set for the isRecordIdentityByDefaultEnabled property.
      */
     public void setIsRecordIdentityByDefaultEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isRecordIdentityByDefaultEnabled = value;
+        this.backingStore.set("isRecordIdentityByDefaultEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

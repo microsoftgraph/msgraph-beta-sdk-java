@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
@@ -11,97 +14,23 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Item implements AdditionalDataHolder, Parsable {
+public class Item implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The baseUnitOfMeasureId property
-     */
-    private UUID baseUnitOfMeasureId;
-    /**
-     * The blocked property
-     */
-    private Boolean blocked;
-    /**
-     * The displayName property
-     */
-    private String displayName;
-    /**
-     * The gtin property
-     */
-    private String gtin;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The inventory property
-     */
-    private BigDecimal inventory;
-    /**
-     * The itemCategory property
-     */
-    private ItemCategory itemCategory;
-    /**
-     * The itemCategoryCode property
-     */
-    private String itemCategoryCode;
-    /**
-     * The itemCategoryId property
-     */
-    private UUID itemCategoryId;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The number property
-     */
-    private String number;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The picture property
-     */
-    private java.util.List<Picture> picture;
-    /**
-     * The priceIncludesTax property
-     */
-    private Boolean priceIncludesTax;
-    /**
-     * The taxGroupCode property
-     */
-    private String taxGroupCode;
-    /**
-     * The taxGroupId property
-     */
-    private UUID taxGroupId;
-    /**
-     * The type property
-     */
-    private String type;
-    /**
-     * The unitCost property
-     */
-    private BigDecimal unitCost;
-    /**
-     * The unitPrice property
-     */
-    private BigDecimal unitPrice;
-    /**
-     * Instantiates a new item and sets the default values.
+     * Instantiates a new Item and sets the default values.
      */
     public Item() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a item
+     * @return a Item
      */
     @jakarta.annotation.Nonnull
     public static Item createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -109,12 +38,17 @@ public class Item implements AdditionalDataHolder, Parsable {
         return new Item();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the baseUnitOfMeasureId property value. The baseUnitOfMeasureId property
@@ -122,23 +56,23 @@ public class Item implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getBaseUnitOfMeasureId() {
-        return this.baseUnitOfMeasureId;
+        return this.backingStore.get("baseUnitOfMeasureId");
     }
     /**
      * Gets the blocked property value. The blocked property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlocked() {
-        return this.blocked;
+        return this.backingStore.get("blocked");
     }
     /**
      * Gets the displayName property value. The displayName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -170,11 +104,11 @@ public class Item implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the gtin property value. The gtin property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getGtin() {
-        return this.gtin;
+        return this.backingStore.get("gtin");
     }
     /**
      * Gets the id property value. The id property
@@ -182,31 +116,31 @@ public class Item implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the inventory property value. The inventory property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getInventory() {
-        return this.inventory;
+        return this.backingStore.get("inventory");
     }
     /**
      * Gets the itemCategory property value. The itemCategory property
-     * @return a itemCategory
+     * @return a ItemCategory
      */
     @jakarta.annotation.Nullable
     public ItemCategory getItemCategory() {
-        return this.itemCategory;
+        return this.backingStore.get("itemCategory");
     }
     /**
      * Gets the itemCategoryCode property value. The itemCategoryCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getItemCategoryCode() {
-        return this.itemCategoryCode;
+        return this.backingStore.get("itemCategoryCode");
     }
     /**
      * Gets the itemCategoryId property value. The itemCategoryId property
@@ -214,7 +148,7 @@ public class Item implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getItemCategoryId() {
-        return this.itemCategoryId;
+        return this.backingStore.get("itemCategoryId");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -222,47 +156,47 @@ public class Item implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
-        return this.number;
+        return this.backingStore.get("number");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the picture property value. The picture property
-     * @return a picture
+     * @return a java.util.List<Picture>
      */
     @jakarta.annotation.Nullable
     public java.util.List<Picture> getPicture() {
-        return this.picture;
+        return this.backingStore.get("picture");
     }
     /**
      * Gets the priceIncludesTax property value. The priceIncludesTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPriceIncludesTax() {
-        return this.priceIncludesTax;
+        return this.backingStore.get("priceIncludesTax");
     }
     /**
      * Gets the taxGroupCode property value. The taxGroupCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTaxGroupCode() {
-        return this.taxGroupCode;
+        return this.backingStore.get("taxGroupCode");
     }
     /**
      * Gets the taxGroupId property value. The taxGroupId property
@@ -270,31 +204,31 @@ public class Item implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getTaxGroupId() {
-        return this.taxGroupId;
+        return this.backingStore.get("taxGroupId");
     }
     /**
      * Gets the type property value. The type property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Gets the unitCost property value. The unitCost property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitCost() {
-        return this.unitCost;
+        return this.backingStore.get("unitCost");
     }
     /**
      * Gets the unitPrice property value. The unitPrice property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getUnitPrice() {
-        return this.unitPrice;
+        return this.backingStore.get("unitPrice");
     }
     /**
      * Serializes information the current object
@@ -324,143 +258,143 @@ public class Item implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the baseUnitOfMeasureId property value. The baseUnitOfMeasureId property
      * @param value Value to set for the baseUnitOfMeasureId property.
      */
     public void setBaseUnitOfMeasureId(@jakarta.annotation.Nullable final UUID value) {
-        this.baseUnitOfMeasureId = value;
+        this.backingStore.set("baseUnitOfMeasureId", value);
     }
     /**
      * Sets the blocked property value. The blocked property
      * @param value Value to set for the blocked property.
      */
     public void setBlocked(@jakarta.annotation.Nullable final Boolean value) {
-        this.blocked = value;
+        this.backingStore.set("blocked", value);
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the gtin property value. The gtin property
      * @param value Value to set for the gtin property.
      */
     public void setGtin(@jakarta.annotation.Nullable final String value) {
-        this.gtin = value;
+        this.backingStore.set("gtin", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the inventory property value. The inventory property
      * @param value Value to set for the inventory property.
      */
     public void setInventory(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.inventory = value;
+        this.backingStore.set("inventory", value);
     }
     /**
      * Sets the itemCategory property value. The itemCategory property
      * @param value Value to set for the itemCategory property.
      */
     public void setItemCategory(@jakarta.annotation.Nullable final ItemCategory value) {
-        this.itemCategory = value;
+        this.backingStore.set("itemCategory", value);
     }
     /**
      * Sets the itemCategoryCode property value. The itemCategoryCode property
      * @param value Value to set for the itemCategoryCode property.
      */
     public void setItemCategoryCode(@jakarta.annotation.Nullable final String value) {
-        this.itemCategoryCode = value;
+        this.backingStore.set("itemCategoryCode", value);
     }
     /**
      * Sets the itemCategoryId property value. The itemCategoryId property
      * @param value Value to set for the itemCategoryId property.
      */
     public void setItemCategoryId(@jakarta.annotation.Nullable final UUID value) {
-        this.itemCategoryId = value;
+        this.backingStore.set("itemCategoryId", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
-        this.number = value;
+        this.backingStore.set("number", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
      */
     public void setPicture(@jakarta.annotation.Nullable final java.util.List<Picture> value) {
-        this.picture = value;
+        this.backingStore.set("picture", value);
     }
     /**
      * Sets the priceIncludesTax property value. The priceIncludesTax property
      * @param value Value to set for the priceIncludesTax property.
      */
     public void setPriceIncludesTax(@jakarta.annotation.Nullable final Boolean value) {
-        this.priceIncludesTax = value;
+        this.backingStore.set("priceIncludesTax", value);
     }
     /**
      * Sets the taxGroupCode property value. The taxGroupCode property
      * @param value Value to set for the taxGroupCode property.
      */
     public void setTaxGroupCode(@jakarta.annotation.Nullable final String value) {
-        this.taxGroupCode = value;
+        this.backingStore.set("taxGroupCode", value);
     }
     /**
      * Sets the taxGroupId property value. The taxGroupId property
      * @param value Value to set for the taxGroupId property.
      */
     public void setTaxGroupId(@jakarta.annotation.Nullable final UUID value) {
-        this.taxGroupId = value;
+        this.backingStore.set("taxGroupId", value);
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
     /**
      * Sets the unitCost property value. The unitCost property
      * @param value Value to set for the unitCost property.
      */
     public void setUnitCost(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.unitCost = value;
+        this.backingStore.set("unitCost", value);
     }
     /**
      * Sets the unitPrice property value. The unitPrice property
      * @param value Value to set for the unitPrice property.
      */
     public void setUnitPrice(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.unitPrice = value;
+        this.backingStore.set("unitPrice", value);
     }
 }

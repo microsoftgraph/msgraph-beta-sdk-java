@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * Bandwidth business hours and percentages type
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeliveryOptimizationBandwidthBusinessHoursLimit implements AdditionalDataHolder, Parsable {
+public class DeliveryOptimizationBandwidthBusinessHoursLimit implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23
-     */
-    private Integer bandwidthBeginBusinessHours;
-    /**
-     * Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23
-     */
-    private Integer bandwidthEndBusinessHours;
-    /**
-     * Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100
-     */
-    private Integer bandwidthPercentageDuringBusinessHours;
-    /**
-     * Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100
-     */
-    private Integer bandwidthPercentageOutsideBusinessHours;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new deliveryOptimizationBandwidthBusinessHoursLimit and sets the default values.
+     * Instantiates a new DeliveryOptimizationBandwidthBusinessHoursLimit and sets the default values.
      */
     public DeliveryOptimizationBandwidthBusinessHoursLimit() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deliveryOptimizationBandwidthBusinessHoursLimit
+     * @return a DeliveryOptimizationBandwidthBusinessHoursLimit
      */
     @jakarta.annotation.Nonnull
     public static DeliveryOptimizationBandwidthBusinessHoursLimit createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,44 +38,49 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
         return new DeliveryOptimizationBandwidthBusinessHoursLimit();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the bandwidthBeginBusinessHours property value. Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBandwidthBeginBusinessHours() {
-        return this.bandwidthBeginBusinessHours;
+        return this.backingStore.get("bandwidthBeginBusinessHours");
     }
     /**
      * Gets the bandwidthEndBusinessHours property value. Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBandwidthEndBusinessHours() {
-        return this.bandwidthEndBusinessHours;
+        return this.backingStore.get("bandwidthEndBusinessHours");
     }
     /**
      * Gets the bandwidthPercentageDuringBusinessHours property value. Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBandwidthPercentageDuringBusinessHours() {
-        return this.bandwidthPercentageDuringBusinessHours;
+        return this.backingStore.get("bandwidthPercentageDuringBusinessHours");
     }
     /**
      * Gets the bandwidthPercentageOutsideBusinessHours property value. Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getBandwidthPercentageOutsideBusinessHours() {
-        return this.bandwidthPercentageOutsideBusinessHours;
+        return this.backingStore.get("bandwidthPercentageOutsideBusinessHours");
     }
     /**
      * The deserialization information for the current model
@@ -108,11 +98,11 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -128,45 +118,45 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the bandwidthBeginBusinessHours property value. Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23
      * @param value Value to set for the bandwidthBeginBusinessHours property.
      */
     public void setBandwidthBeginBusinessHours(@jakarta.annotation.Nullable final Integer value) {
-        this.bandwidthBeginBusinessHours = value;
+        this.backingStore.set("bandwidthBeginBusinessHours", value);
     }
     /**
      * Sets the bandwidthEndBusinessHours property value. Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23
      * @param value Value to set for the bandwidthEndBusinessHours property.
      */
     public void setBandwidthEndBusinessHours(@jakarta.annotation.Nullable final Integer value) {
-        this.bandwidthEndBusinessHours = value;
+        this.backingStore.set("bandwidthEndBusinessHours", value);
     }
     /**
      * Sets the bandwidthPercentageDuringBusinessHours property value. Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100
      * @param value Value to set for the bandwidthPercentageDuringBusinessHours property.
      */
     public void setBandwidthPercentageDuringBusinessHours(@jakarta.annotation.Nullable final Integer value) {
-        this.bandwidthPercentageDuringBusinessHours = value;
+        this.backingStore.set("bandwidthPercentageDuringBusinessHours", value);
     }
     /**
      * Sets the bandwidthPercentageOutsideBusinessHours property value. Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100
      * @param value Value to set for the bandwidthPercentageOutsideBusinessHours property.
      */
     public void setBandwidthPercentageOutsideBusinessHours(@jakarta.annotation.Nullable final Integer value) {
-        this.bandwidthPercentageOutsideBusinessHours = value;
+        this.backingStore.set("bandwidthPercentageOutsideBusinessHours", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

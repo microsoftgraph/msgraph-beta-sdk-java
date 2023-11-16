@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,33 +14,23 @@ import java.util.Objects;
  * Device Access Rules in Exchange.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder, Parsable {
+public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Access Level in Exchange.
+     * Stores model information.
      */
-    private DeviceManagementExchangeAccessLevel accessLevel;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * Device Class which will be impacted by this rule.
-     */
-    private DeviceManagementExchangeDeviceClass deviceClass;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new deviceManagementExchangeAccessRule and sets the default values.
+     * Instantiates a new DeviceManagementExchangeAccessRule and sets the default values.
      */
     public DeviceManagementExchangeAccessRule() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementExchangeAccessRule
+     * @return a DeviceManagementExchangeAccessRule
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementExchangeAccessRule createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,27 +39,32 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
     }
     /**
      * Gets the accessLevel property value. Access Level in Exchange.
-     * @return a deviceManagementExchangeAccessLevel
+     * @return a DeviceManagementExchangeAccessLevel
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeAccessLevel getAccessLevel() {
-        return this.accessLevel;
+        return this.backingStore.get("accessLevel");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the deviceClass property value. Device Class which will be impacted by this rule.
-     * @return a deviceManagementExchangeDeviceClass
+     * @return a DeviceManagementExchangeDeviceClass
      */
     @jakarta.annotation.Nullable
     public DeviceManagementExchangeDeviceClass getDeviceClass() {
-        return this.deviceClass;
+        return this.backingStore.get("deviceClass");
     }
     /**
      * The deserialization information for the current model
@@ -82,11 +80,11 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -104,27 +102,27 @@ public class DeviceManagementExchangeAccessRule implements AdditionalDataHolder,
      * @param value Value to set for the accessLevel property.
      */
     public void setAccessLevel(@jakarta.annotation.Nullable final DeviceManagementExchangeAccessLevel value) {
-        this.accessLevel = value;
+        this.backingStore.set("accessLevel", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the deviceClass property value. Device Class which will be impacted by this rule.
      * @param value Value to set for the deviceClass property.
      */
     public void setDeviceClass(@jakarta.annotation.Nullable final DeviceManagementExchangeDeviceClass value) {
-        this.deviceClass = value;
+        this.backingStore.set("deviceClass", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

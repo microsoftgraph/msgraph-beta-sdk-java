@@ -12,15 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ResetPasscodeActionResult extends DeviceActionResult implements Parsable {
     /**
-     * RotateBitLockerKeys action error code. Valid values 0 to 2147483647
-     */
-    private Integer errorCode;
-    /**
-     * Newly generated passcode for the device
-     */
-    private String passcode;
-    /**
-     * Instantiates a new resetPasscodeActionResult and sets the default values.
+     * Instantiates a new ResetPasscodeActionResult and sets the default values.
      */
     public ResetPasscodeActionResult() {
         super();
@@ -28,7 +20,7 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a resetPasscodeActionResult
+     * @return a ResetPasscodeActionResult
      */
     @jakarta.annotation.Nonnull
     public static ResetPasscodeActionResult createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -37,11 +29,11 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     }
     /**
      * Gets the errorCode property value. RotateBitLockerKeys action error code. Valid values 0 to 2147483647
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -56,11 +48,11 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
     }
     /**
      * Gets the passcode property value. Newly generated passcode for the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPasscode() {
-        return this.passcode;
+        return this.backingStore.get("passcode");
     }
     /**
      * Serializes information the current object
@@ -77,13 +69,13 @@ public class ResetPasscodeActionResult extends DeviceActionResult implements Par
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the passcode property value. Newly generated passcode for the device
      * @param value Value to set for the passcode property.
      */
     public void setPasscode(@jakarta.annotation.Nullable final String value) {
-        this.passcode = value;
+        this.backingStore.set("passcode", value);
     }
 }

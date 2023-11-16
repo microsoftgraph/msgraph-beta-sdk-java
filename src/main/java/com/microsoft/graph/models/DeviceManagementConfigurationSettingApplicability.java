@@ -4,46 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceManagementConfigurationSettingApplicability implements AdditionalDataHolder, Parsable {
+public class DeviceManagementConfigurationSettingApplicability implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * description of the setting
-     */
-    private String description;
-    /**
-     * Describes applicability for the mode the device is in
-     */
-    private DeviceManagementConfigurationDeviceMode deviceMode;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Supported platform types.
-     */
-    private EnumSet<DeviceManagementConfigurationPlatforms> platform;
-    /**
-     * Describes which technology this setting can be deployed with
-     */
-    private EnumSet<DeviceManagementConfigurationTechnologies> technologies;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingApplicability and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingApplicability and sets the default values.
      */
     public DeviceManagementConfigurationSettingApplicability() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingApplicability
+     * @return a DeviceManagementConfigurationSettingApplicability
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingApplicability createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -60,28 +45,33 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         return new DeviceManagementConfigurationSettingApplicability();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the description property value. description of the setting
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the deviceMode property value. Describes applicability for the mode the device is in
-     * @return a deviceManagementConfigurationDeviceMode
+     * @return a DeviceManagementConfigurationDeviceMode
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationDeviceMode getDeviceMode() {
-        return this.deviceMode;
+        return this.backingStore.get("deviceMode");
     }
     /**
      * The deserialization information for the current model
@@ -99,27 +89,27 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the platform property value. Supported platform types.
-     * @return a deviceManagementConfigurationPlatforms
+     * @return a EnumSet<DeviceManagementConfigurationPlatforms>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationPlatforms> getPlatform() {
-        return this.platform;
+        return this.backingStore.get("platform");
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
-     * @return a deviceManagementConfigurationTechnologies
+     * @return a EnumSet<DeviceManagementConfigurationTechnologies>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationTechnologies> getTechnologies() {
-        return this.technologies;
+        return this.backingStore.get("technologies");
     }
     /**
      * Serializes information the current object
@@ -135,45 +125,45 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the description property value. description of the setting
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the deviceMode property value. Describes applicability for the mode the device is in
      * @param value Value to set for the deviceMode property.
      */
     public void setDeviceMode(@jakarta.annotation.Nullable final DeviceManagementConfigurationDeviceMode value) {
-        this.deviceMode = value;
+        this.backingStore.set("deviceMode", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationPlatforms> value) {
-        this.platform = value;
+        this.backingStore.set("platform", value);
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      */
     public void setTechnologies(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationTechnologies> value) {
-        this.technologies = value;
+        this.backingStore.set("technologies", value);
     }
 }

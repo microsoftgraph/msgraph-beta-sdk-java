@@ -9,27 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Connector extends Entity implements Parsable {
     /**
-     * The external IP address as detected by the the connector server. Read-only.
-     */
-    private String externalIp;
-    /**
-     * The machine name the connector is installed and running on.
-     */
-    private String machineName;
-    /**
-     * The connectorGroup that the connector is a member of. Read-only.
-     */
-    private java.util.List<ConnectorGroup> memberOf;
-    /**
-     * The status property
-     */
-    private ConnectorStatus status;
-    /**
-     * The version property
-     */
-    private String version;
-    /**
-     * Instantiates a new connector and sets the default values.
+     * Instantiates a new Connector and sets the default values.
      */
     public Connector() {
         super();
@@ -37,7 +17,7 @@ public class Connector extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connector
+     * @return a Connector
      */
     @jakarta.annotation.Nonnull
     public static Connector createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,11 +26,11 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the externalIp property value. The external IP address as detected by the the connector server. Read-only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getExternalIp() {
-        return this.externalIp;
+        return this.backingStore.get("externalIp");
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +48,35 @@ public class Connector extends Entity implements Parsable {
     }
     /**
      * Gets the machineName property value. The machine name the connector is installed and running on.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getMachineName() {
-        return this.machineName;
+        return this.backingStore.get("machineName");
     }
     /**
      * Gets the memberOf property value. The connectorGroup that the connector is a member of. Read-only.
-     * @return a connectorGroup
+     * @return a java.util.List<ConnectorGroup>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ConnectorGroup> getMemberOf() {
-        return this.memberOf;
+        return this.backingStore.get("memberOf");
     }
     /**
      * Gets the status property value. The status property
-     * @return a connectorStatus
+     * @return a ConnectorStatus
      */
     @jakarta.annotation.Nullable
     public ConnectorStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the version property value. The version property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -116,34 +96,34 @@ public class Connector extends Entity implements Parsable {
      * @param value Value to set for the externalIp property.
      */
     public void setExternalIp(@jakarta.annotation.Nullable final String value) {
-        this.externalIp = value;
+        this.backingStore.set("externalIp", value);
     }
     /**
      * Sets the machineName property value. The machine name the connector is installed and running on.
      * @param value Value to set for the machineName property.
      */
     public void setMachineName(@jakarta.annotation.Nullable final String value) {
-        this.machineName = value;
+        this.backingStore.set("machineName", value);
     }
     /**
      * Sets the memberOf property value. The connectorGroup that the connector is a member of. Read-only.
      * @param value Value to set for the memberOf property.
      */
     public void setMemberOf(@jakarta.annotation.Nullable final java.util.List<ConnectorGroup> value) {
-        this.memberOf = value;
+        this.backingStore.set("memberOf", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectorStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the version property value. The version property
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

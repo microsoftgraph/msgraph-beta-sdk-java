@@ -5,33 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ChoosePostRequestBody implements AdditionalDataHolder, Parsable {
+public class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The indexNum property
-     */
-    private Json indexNum;
-    /**
-     * The values property
-     */
-    private Json values;
-    /**
-     * Instantiates a new choosePostRequestBody and sets the default values.
+     * Instantiates a new ChoosePostRequestBody and sets the default values.
      */
     public ChoosePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a choosePostRequestBody
+     * @return a ChoosePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static ChoosePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -39,12 +36,17 @@ public class ChoosePostRequestBody implements AdditionalDataHolder, Parsable {
         return new ChoosePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,7 +65,7 @@ public class ChoosePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getIndexNum() {
-        return this.indexNum;
+        return this.backingStore.get("indexNum");
     }
     /**
      * Gets the values property value. The values property
@@ -71,7 +73,7 @@ public class ChoosePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValues() {
-        return this.values;
+        return this.backingStore.get("values");
     }
     /**
      * Serializes information the current object
@@ -84,24 +86,24 @@ public class ChoosePostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the indexNum property value. The indexNum property
      * @param value Value to set for the indexNum property.
      */
     public void setIndexNum(@jakarta.annotation.Nullable final Json value) {
-        this.indexNum = value;
+        this.backingStore.set("indexNum", value);
     }
     /**
      * Sets the values property value. The values property
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final Json value) {
-        this.values = value;
+        this.backingStore.set("values", value);
     }
 }

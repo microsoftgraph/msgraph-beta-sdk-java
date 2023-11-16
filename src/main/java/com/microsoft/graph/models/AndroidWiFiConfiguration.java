@@ -12,27 +12,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidWiFiConfiguration extends DeviceConfiguration implements Parsable {
     /**
-     * Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     */
-    private Boolean connectAutomatically;
-    /**
-     * When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     */
-    private Boolean connectWhenNetworkNameIsHidden;
-    /**
-     * Network Name
-     */
-    private String networkName;
-    /**
-     * This is the name of the Wi-Fi network that is broadcast to all devices.
-     */
-    private String ssid;
-    /**
-     * Wi-Fi Security Types for Android.
-     */
-    private AndroidWiFiSecurityType wiFiSecurityType;
-    /**
-     * Instantiates a new androidWiFiConfiguration and sets the default values.
+     * Instantiates a new AndroidWiFiConfiguration and sets the default values.
      */
     public AndroidWiFiConfiguration() {
         super();
@@ -41,7 +21,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a androidWiFiConfiguration
+     * @return a AndroidWiFiConfiguration
      */
     @jakarta.annotation.Nonnull
     public static AndroidWiFiConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -57,19 +37,19 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectAutomatically() {
-        return this.connectAutomatically;
+        return this.backingStore.get("connectAutomatically");
     }
     /**
      * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getConnectWhenNetworkNameIsHidden() {
-        return this.connectWhenNetworkNameIsHidden;
+        return this.backingStore.get("connectWhenNetworkNameIsHidden");
     }
     /**
      * The deserialization information for the current model
@@ -87,27 +67,27 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
     }
     /**
      * Gets the networkName property value. Network Name
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNetworkName() {
-        return this.networkName;
+        return this.backingStore.get("networkName");
     }
     /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getSsid() {
-        return this.ssid;
+        return this.backingStore.get("ssid");
     }
     /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
-     * @return a androidWiFiSecurityType
+     * @return a AndroidWiFiSecurityType
      */
     @jakarta.annotation.Nullable
     public AndroidWiFiSecurityType getWiFiSecurityType() {
-        return this.wiFiSecurityType;
+        return this.backingStore.get("wiFiSecurityType");
     }
     /**
      * Serializes information the current object
@@ -127,34 +107,34 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectAutomatically property.
      */
     public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectAutomatically = value;
+        this.backingStore.set("connectAutomatically", value);
     }
     /**
      * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
-        this.connectWhenNetworkNameIsHidden = value;
+        this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
      * Sets the networkName property value. Network Name
      * @param value Value to set for the networkName property.
      */
     public void setNetworkName(@jakarta.annotation.Nullable final String value) {
-        this.networkName = value;
+        this.backingStore.set("networkName", value);
     }
     /**
      * Sets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
      * @param value Value to set for the ssid property.
      */
     public void setSsid(@jakarta.annotation.Nullable final String value) {
-        this.ssid = value;
+        this.backingStore.set("ssid", value);
     }
     /**
      * Sets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
      * @param value Value to set for the wiFiSecurityType property.
      */
     public void setWiFiSecurityType(@jakarta.annotation.Nullable final AndroidWiFiSecurityType value) {
-        this.wiFiSecurityType = value;
+        this.backingStore.set("wiFiSecurityType", value);
     }
 }

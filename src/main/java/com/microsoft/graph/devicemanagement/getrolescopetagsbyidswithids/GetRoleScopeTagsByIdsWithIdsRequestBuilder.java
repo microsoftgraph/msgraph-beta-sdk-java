@@ -39,24 +39,24 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder extends BaseRequestBuild
     }
     /**
      * Invoke function getRoleScopeTagsByIds
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     * @return a GetRoleScopeTagsByIdsWithIdsGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get() {
+    @jakarta.annotation.Nullable
+    public GetRoleScopeTagsByIdsWithIdsGetResponse get() {
         return get(null);
     }
     /**
      * Invoke function getRoleScopeTagsByIds
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     * @return a GetRoleScopeTagsByIdsWithIdsGetResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GetRoleScopeTagsByIdsWithIdsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GetRoleScopeTagsByIdsWithIdsGetResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Invoke function getRoleScopeTagsByIds
@@ -73,24 +73,15 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder extends BaseRequestBuild
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a getRoleScopeTagsByIdsWithIdsRequestBuilder
+     * @return a GetRoleScopeTagsByIdsWithIdsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GetRoleScopeTagsByIdsWithIdsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

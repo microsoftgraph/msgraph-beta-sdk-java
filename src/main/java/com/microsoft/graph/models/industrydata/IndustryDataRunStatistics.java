@@ -4,45 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IndustryDataRunStatistics implements AdditionalDataHolder, Parsable {
+public class IndustryDataRunStatistics implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The collection of statistics for each activity included in this run.
+     * Stores model information.
      */
-    private java.util.List<IndustryDataActivityStatistics> activityStatistics;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The aggregate statistics for all inbound flows.
-     */
-    private AggregatedInboundStatistics inboundTotals;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The ID of the underlying run for the statistics.
-     */
-    private String runId;
-    /**
-     * The status property
-     */
-    private IndustryDataRunStatus status;
-    /**
-     * Instantiates a new industryDataRunStatistics and sets the default values.
+     * Instantiates a new IndustryDataRunStatistics and sets the default values.
      */
     public IndustryDataRunStatistics() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a industryDataRunStatistics
+     * @return a IndustryDataRunStatistics
      */
     @jakarta.annotation.Nonnull
     public static IndustryDataRunStatistics createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -51,19 +36,24 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the activityStatistics property value. The collection of statistics for each activity included in this run.
-     * @return a industryDataActivityStatistics
+     * @return a java.util.List<IndustryDataActivityStatistics>
      */
     @jakarta.annotation.Nullable
     public java.util.List<IndustryDataActivityStatistics> getActivityStatistics() {
-        return this.activityStatistics;
+        return this.backingStore.get("activityStatistics");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -81,35 +71,35 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, Parsable
     }
     /**
      * Gets the inboundTotals property value. The aggregate statistics for all inbound flows.
-     * @return a aggregatedInboundStatistics
+     * @return a AggregatedInboundStatistics
      */
     @jakarta.annotation.Nullable
     public AggregatedInboundStatistics getInboundTotals() {
-        return this.inboundTotals;
+        return this.backingStore.get("inboundTotals");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the runId property value. The ID of the underlying run for the statistics.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRunId() {
-        return this.runId;
+        return this.backingStore.get("runId");
     }
     /**
      * Gets the status property value. The status property
-     * @return a industryDataRunStatus
+     * @return a IndustryDataRunStatus
      */
     @jakarta.annotation.Nullable
     public IndustryDataRunStatus getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -126,41 +116,41 @@ public class IndustryDataRunStatistics implements AdditionalDataHolder, Parsable
      * @param value Value to set for the activityStatistics property.
      */
     public void setActivityStatistics(@jakarta.annotation.Nullable final java.util.List<IndustryDataActivityStatistics> value) {
-        this.activityStatistics = value;
+        this.backingStore.set("activityStatistics", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the inboundTotals property value. The aggregate statistics for all inbound flows.
      * @param value Value to set for the inboundTotals property.
      */
     public void setInboundTotals(@jakarta.annotation.Nullable final AggregatedInboundStatistics value) {
-        this.inboundTotals = value;
+        this.backingStore.set("inboundTotals", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the runId property value. The ID of the underlying run for the statistics.
      * @param value Value to set for the runId property.
      */
     public void setRunId(@jakarta.annotation.Nullable final String value) {
-        this.runId = value;
+        this.backingStore.set("runId", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final IndustryDataRunStatus value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
 }

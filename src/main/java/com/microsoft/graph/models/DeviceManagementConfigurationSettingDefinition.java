@@ -10,79 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementConfigurationSettingDefinition extends Entity implements Parsable {
     /**
-     * The accessTypes property
-     */
-    private EnumSet<DeviceManagementConfigurationSettingAccessTypes> accessTypes;
-    /**
-     * Details which device setting is applicable on. Supports: $filters.
-     */
-    private DeviceManagementConfigurationSettingApplicability applicability;
-    /**
-     * Base CSP Path
-     */
-    private String baseUri;
-    /**
-     * Specify category in which the setting is under. Support $filters.
-     */
-    private String categoryId;
-    /**
-     * Description of the setting.
-     */
-    private String description;
-    /**
-     * Name of the setting. For example: Allow Toast.
-     */
-    private String displayName;
-    /**
-     * Help text of the setting. Give more details of the setting.
-     */
-    private String helpText;
-    /**
-     * List of links more info for the setting can be found at.
-     */
-    private java.util.List<String> infoUrls;
-    /**
-     * Tokens which to search settings on
-     */
-    private java.util.List<String> keywords;
-    /**
-     * Name of the item
-     */
-    private String name;
-    /**
-     * Indicates whether the setting is required or not
-     */
-    private DeviceManagementConfigurationSettingOccurrence occurrence;
-    /**
-     * Offset CSP Path from Base
-     */
-    private String offsetUri;
-    /**
-     * List of referred setting information.
-     */
-    private java.util.List<DeviceManagementConfigurationReferredSettingInformation> referredSettingInformationList;
-    /**
-     * Root setting definition id if the setting is a child setting.
-     */
-    private String rootDefinitionId;
-    /**
-     * Supported setting types
-     */
-    private EnumSet<DeviceManagementConfigurationSettingUsage> settingUsage;
-    /**
-     * Setting control type representation in the UX
-     */
-    private DeviceManagementConfigurationControlType uxBehavior;
-    /**
-     * Item Version
-     */
-    private String version;
-    /**
-     * Supported setting types
-     */
-    private EnumSet<DeviceManagementConfigurationSettingVisibility> visibility;
-    /**
-     * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
+     * Instantiates a new DeviceManagementConfigurationSettingDefinition and sets the default values.
      */
     public DeviceManagementConfigurationSettingDefinition() {
         super();
@@ -90,7 +18,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementConfigurationSettingDefinition
+     * @return a DeviceManagementConfigurationSettingDefinition
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementConfigurationSettingDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -112,51 +40,51 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
     }
     /**
      * Gets the accessTypes property value. The accessTypes property
-     * @return a deviceManagementConfigurationSettingAccessTypes
+     * @return a EnumSet<DeviceManagementConfigurationSettingAccessTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingAccessTypes> getAccessTypes() {
-        return this.accessTypes;
+        return this.backingStore.get("accessTypes");
     }
     /**
-     * Gets the applicability property value. Details which device setting is applicable on. Supports: $filters.
-     * @return a deviceManagementConfigurationSettingApplicability
+     * Gets the applicability property value. Details which device setting is applicable on
+     * @return a DeviceManagementConfigurationSettingApplicability
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingApplicability getApplicability() {
-        return this.applicability;
+        return this.backingStore.get("applicability");
     }
     /**
      * Gets the baseUri property value. Base CSP Path
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getBaseUri() {
-        return this.baseUri;
+        return this.backingStore.get("baseUri");
     }
     /**
-     * Gets the categoryId property value. Specify category in which the setting is under. Support $filters.
-     * @return a string
+     * Gets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCategoryId() {
-        return this.categoryId;
+        return this.backingStore.get("categoryId");
     }
     /**
-     * Gets the description property value. Description of the setting.
-     * @return a string
+     * Gets the description property value. Description of the item
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Name of the setting. For example: Allow Toast.
-     * @return a string
+     * Gets the displayName property value. Display name of the item
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -186,100 +114,100 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return deserializerMap;
     }
     /**
-     * Gets the helpText property value. Help text of the setting. Give more details of the setting.
-     * @return a string
+     * Gets the helpText property value. Help text of the item
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getHelpText() {
-        return this.helpText;
+        return this.backingStore.get("helpText");
     }
     /**
-     * Gets the infoUrls property value. List of links more info for the setting can be found at.
-     * @return a string
+     * Gets the infoUrls property value. List of links more info for the setting can be found at
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getInfoUrls() {
-        return this.infoUrls;
+        return this.backingStore.get("infoUrls");
     }
     /**
      * Gets the keywords property value. Tokens which to search settings on
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKeywords() {
-        return this.keywords;
+        return this.backingStore.get("keywords");
     }
     /**
      * Gets the name property value. Name of the item
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getName() {
-        return this.name;
+        return this.backingStore.get("name");
     }
     /**
      * Gets the occurrence property value. Indicates whether the setting is required or not
-     * @return a deviceManagementConfigurationSettingOccurrence
+     * @return a DeviceManagementConfigurationSettingOccurrence
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationSettingOccurrence getOccurrence() {
-        return this.occurrence;
+        return this.backingStore.get("occurrence");
     }
     /**
      * Gets the offsetUri property value. Offset CSP Path from Base
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOffsetUri() {
-        return this.offsetUri;
+        return this.backingStore.get("offsetUri");
     }
     /**
      * Gets the referredSettingInformationList property value. List of referred setting information.
-     * @return a deviceManagementConfigurationReferredSettingInformation
+     * @return a java.util.List<DeviceManagementConfigurationReferredSettingInformation>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationReferredSettingInformation> getReferredSettingInformationList() {
-        return this.referredSettingInformationList;
+        return this.backingStore.get("referredSettingInformationList");
     }
     /**
-     * Gets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
-     * @return a string
+     * Gets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRootDefinitionId() {
-        return this.rootDefinitionId;
+        return this.backingStore.get("rootDefinitionId");
     }
     /**
      * Gets the settingUsage property value. Supported setting types
-     * @return a deviceManagementConfigurationSettingUsage
+     * @return a EnumSet<DeviceManagementConfigurationSettingUsage>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingUsage> getSettingUsage() {
-        return this.settingUsage;
+        return this.backingStore.get("settingUsage");
     }
     /**
      * Gets the uxBehavior property value. Setting control type representation in the UX
-     * @return a deviceManagementConfigurationControlType
+     * @return a DeviceManagementConfigurationControlType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementConfigurationControlType getUxBehavior() {
-        return this.uxBehavior;
+        return this.backingStore.get("uxBehavior");
     }
     /**
      * Gets the version property value. Item Version
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Gets the visibility property value. Supported setting types
-     * @return a deviceManagementConfigurationSettingVisibility
+     * @return a EnumSet<DeviceManagementConfigurationSettingVisibility>
      */
     @jakarta.annotation.Nullable
     public EnumSet<DeviceManagementConfigurationSettingVisibility> getVisibility() {
-        return this.visibility;
+        return this.backingStore.get("visibility");
     }
     /**
      * Serializes information the current object
@@ -312,125 +240,125 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the accessTypes property.
      */
     public void setAccessTypes(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingAccessTypes> value) {
-        this.accessTypes = value;
+        this.backingStore.set("accessTypes", value);
     }
     /**
-     * Sets the applicability property value. Details which device setting is applicable on. Supports: $filters.
+     * Sets the applicability property value. Details which device setting is applicable on
      * @param value Value to set for the applicability property.
      */
     public void setApplicability(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingApplicability value) {
-        this.applicability = value;
+        this.backingStore.set("applicability", value);
     }
     /**
      * Sets the baseUri property value. Base CSP Path
      * @param value Value to set for the baseUri property.
      */
     public void setBaseUri(@jakarta.annotation.Nullable final String value) {
-        this.baseUri = value;
+        this.backingStore.set("baseUri", value);
     }
     /**
-     * Sets the categoryId property value. Specify category in which the setting is under. Support $filters.
+     * Sets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      * @param value Value to set for the categoryId property.
      */
     public void setCategoryId(@jakarta.annotation.Nullable final String value) {
-        this.categoryId = value;
+        this.backingStore.set("categoryId", value);
     }
     /**
-     * Sets the description property value. Description of the setting.
+     * Sets the description property value. Description of the item
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Name of the setting. For example: Allow Toast.
+     * Sets the displayName property value. Display name of the item
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the helpText property value. Help text of the setting. Give more details of the setting.
+     * Sets the helpText property value. Help text of the item
      * @param value Value to set for the helpText property.
      */
     public void setHelpText(@jakarta.annotation.Nullable final String value) {
-        this.helpText = value;
+        this.backingStore.set("helpText", value);
     }
     /**
-     * Sets the infoUrls property value. List of links more info for the setting can be found at.
+     * Sets the infoUrls property value. List of links more info for the setting can be found at
      * @param value Value to set for the infoUrls property.
      */
     public void setInfoUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.infoUrls = value;
+        this.backingStore.set("infoUrls", value);
     }
     /**
      * Sets the keywords property value. Tokens which to search settings on
      * @param value Value to set for the keywords property.
      */
     public void setKeywords(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.keywords = value;
+        this.backingStore.set("keywords", value);
     }
     /**
      * Sets the name property value. Name of the item
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
-        this.name = value;
+        this.backingStore.set("name", value);
     }
     /**
      * Sets the occurrence property value. Indicates whether the setting is required or not
      * @param value Value to set for the occurrence property.
      */
     public void setOccurrence(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingOccurrence value) {
-        this.occurrence = value;
+        this.backingStore.set("occurrence", value);
     }
     /**
      * Sets the offsetUri property value. Offset CSP Path from Base
      * @param value Value to set for the offsetUri property.
      */
     public void setOffsetUri(@jakarta.annotation.Nullable final String value) {
-        this.offsetUri = value;
+        this.backingStore.set("offsetUri", value);
     }
     /**
      * Sets the referredSettingInformationList property value. List of referred setting information.
      * @param value Value to set for the referredSettingInformationList property.
      */
     public void setReferredSettingInformationList(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationReferredSettingInformation> value) {
-        this.referredSettingInformationList = value;
+        this.backingStore.set("referredSettingInformationList", value);
     }
     /**
-     * Sets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
+     * Sets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
      * @param value Value to set for the rootDefinitionId property.
      */
     public void setRootDefinitionId(@jakarta.annotation.Nullable final String value) {
-        this.rootDefinitionId = value;
+        this.backingStore.set("rootDefinitionId", value);
     }
     /**
      * Sets the settingUsage property value. Supported setting types
      * @param value Value to set for the settingUsage property.
      */
     public void setSettingUsage(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingUsage> value) {
-        this.settingUsage = value;
+        this.backingStore.set("settingUsage", value);
     }
     /**
      * Sets the uxBehavior property value. Setting control type representation in the UX
      * @param value Value to set for the uxBehavior property.
      */
     public void setUxBehavior(@jakarta.annotation.Nullable final DeviceManagementConfigurationControlType value) {
-        this.uxBehavior = value;
+        this.backingStore.set("uxBehavior", value);
     }
     /**
      * Sets the version property value. Item Version
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
     /**
      * Sets the visibility property value. Supported setting types
      * @param value Value to set for the visibility property.
      */
     public void setVisibility(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingVisibility> value) {
-        this.visibility = value;
+        this.backingStore.set("visibility", value);
     }
 }

@@ -13,31 +13,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implements Parsable {
     /**
-     * The complianceStatus property
-     */
-    private DeviceManagementAutopilotPolicyComplianceStatus complianceStatus;
-    /**
-     * The friendly name of the policy.
-     */
-    private String displayName;
-    /**
-     * The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
-     */
-    private Integer errorCode;
-    /**
-     * Timestamp of the reported policy status
-     */
-    private OffsetDateTime lastReportedDateTime;
-    /**
-     * The policyType property
-     */
-    private DeviceManagementAutopilotPolicyType policyType;
-    /**
-     * Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
-     */
-    private Boolean trackedOnEnrollmentStatus;
-    /**
-     * Instantiates a new deviceManagementAutopilotPolicyStatusDetail and sets the default values.
+     * Instantiates a new DeviceManagementAutopilotPolicyStatusDetail and sets the default values.
      */
     public DeviceManagementAutopilotPolicyStatusDetail() {
         super();
@@ -45,7 +21,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceManagementAutopilotPolicyStatusDetail
+     * @return a DeviceManagementAutopilotPolicyStatusDetail
      */
     @jakarta.annotation.Nonnull
     public static DeviceManagementAutopilotPolicyStatusDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,27 +30,27 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
     }
     /**
      * Gets the complianceStatus property value. The complianceStatus property
-     * @return a deviceManagementAutopilotPolicyComplianceStatus
+     * @return a DeviceManagementAutopilotPolicyComplianceStatus
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyComplianceStatus getComplianceStatus() {
-        return this.complianceStatus;
+        return this.backingStore.get("complianceStatus");
     }
     /**
      * Gets the displayName property value. The friendly name of the policy.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * Gets the errorCode property value. The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getErrorCode() {
-        return this.errorCode;
+        return this.backingStore.get("errorCode");
     }
     /**
      * The deserialization information for the current model
@@ -97,23 +73,23 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastReportedDateTime() {
-        return this.lastReportedDateTime;
+        return this.backingStore.get("lastReportedDateTime");
     }
     /**
      * Gets the policyType property value. The policyType property
-     * @return a deviceManagementAutopilotPolicyType
+     * @return a DeviceManagementAutopilotPolicyType
      */
     @jakarta.annotation.Nullable
     public DeviceManagementAutopilotPolicyType getPolicyType() {
-        return this.policyType;
+        return this.backingStore.get("policyType");
     }
     /**
      * Gets the trackedOnEnrollmentStatus property value. Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getTrackedOnEnrollmentStatus() {
-        return this.trackedOnEnrollmentStatus;
+        return this.backingStore.get("trackedOnEnrollmentStatus");
     }
     /**
      * Serializes information the current object
@@ -134,41 +110,41 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the complianceStatus property.
      */
     public void setComplianceStatus(@jakarta.annotation.Nullable final DeviceManagementAutopilotPolicyComplianceStatus value) {
-        this.complianceStatus = value;
+        this.backingStore.set("complianceStatus", value);
     }
     /**
      * Sets the displayName property value. The friendly name of the policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the errorCode property value. The errorode associated with the compliance or enforcement status of the policy. Error code for enforcement status takes precedence if it exists.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
-        this.errorCode = value;
+        this.backingStore.set("errorCode", value);
     }
     /**
      * Sets the lastReportedDateTime property value. Timestamp of the reported policy status
      * @param value Value to set for the lastReportedDateTime property.
      */
     public void setLastReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastReportedDateTime = value;
+        this.backingStore.set("lastReportedDateTime", value);
     }
     /**
      * Sets the policyType property value. The policyType property
      * @param value Value to set for the policyType property.
      */
     public void setPolicyType(@jakarta.annotation.Nullable final DeviceManagementAutopilotPolicyType value) {
-        this.policyType = value;
+        this.backingStore.set("policyType", value);
     }
     /**
      * Sets the trackedOnEnrollmentStatus property value. Indicates if this prolicy was tracked as part of the autopilot bootstrap enrollment sync session
      * @param value Value to set for the trackedOnEnrollmentStatus property.
      */
     public void setTrackedOnEnrollmentStatus(@jakarta.annotation.Nullable final Boolean value) {
-        this.trackedOnEnrollmentStatus = value;
+        this.backingStore.set("trackedOnEnrollmentStatus", value);
     }
 }

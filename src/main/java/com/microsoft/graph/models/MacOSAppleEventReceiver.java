@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,41 +14,23 @@ import java.util.Objects;
  * Represents a process that can receive an Apple Event notification.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
+public class MacOSAppleEventReceiver implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Allow or block this app from receiving Apple events.
-     */
-    private Boolean allowed;
-    /**
-     * Code requirement for the app or binary that receives the Apple Event.
-     */
-    private String codeRequirement;
-    /**
-     * Bundle ID of the app or file path of the process or executable that receives the Apple Event.
-     */
-    private String identifier;
-    /**
-     * Process identifier types for MacOS Privacy Preferences
-     */
-    private MacOSProcessIdentifierType identifierType;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new macOSAppleEventReceiver and sets the default values.
+     * Instantiates a new MacOSAppleEventReceiver and sets the default values.
      */
     public MacOSAppleEventReceiver() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a macOSAppleEventReceiver
+     * @return a MacOSAppleEventReceiver
      */
     @jakarta.annotation.Nonnull
     public static MacOSAppleEventReceiver createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -53,28 +38,33 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         return new MacOSAppleEventReceiver();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the allowed property value. Allow or block this app from receiving Apple events.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowed() {
-        return this.allowed;
+        return this.backingStore.get("allowed");
     }
     /**
      * Gets the codeRequirement property value. Code requirement for the app or binary that receives the Apple Event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCodeRequirement() {
-        return this.codeRequirement;
+        return this.backingStore.get("codeRequirement");
     }
     /**
      * The deserialization information for the current model
@@ -92,27 +82,27 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the identifier property value. Bundle ID of the app or file path of the process or executable that receives the Apple Event.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getIdentifier() {
-        return this.identifier;
+        return this.backingStore.get("identifier");
     }
     /**
      * Gets the identifierType property value. Process identifier types for MacOS Privacy Preferences
-     * @return a macOSProcessIdentifierType
+     * @return a MacOSProcessIdentifierType
      */
     @jakarta.annotation.Nullable
     public MacOSProcessIdentifierType getIdentifierType() {
-        return this.identifierType;
+        return this.backingStore.get("identifierType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -128,45 +118,45 @@ public class MacOSAppleEventReceiver implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the allowed property value. Allow or block this app from receiving Apple events.
      * @param value Value to set for the allowed property.
      */
     public void setAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowed = value;
+        this.backingStore.set("allowed", value);
     }
     /**
      * Sets the codeRequirement property value. Code requirement for the app or binary that receives the Apple Event.
      * @param value Value to set for the codeRequirement property.
      */
     public void setCodeRequirement(@jakarta.annotation.Nullable final String value) {
-        this.codeRequirement = value;
+        this.backingStore.set("codeRequirement", value);
     }
     /**
      * Sets the identifier property value. Bundle ID of the app or file path of the process or executable that receives the Apple Event.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.identifier = value;
+        this.backingStore.set("identifier", value);
     }
     /**
      * Sets the identifierType property value. Process identifier types for MacOS Privacy Preferences
      * @param value Value to set for the identifierType property.
      */
     public void setIdentifierType(@jakarta.annotation.Nullable final MacOSProcessIdentifierType value) {
-        this.identifierType = value;
+        this.backingStore.set("identifierType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

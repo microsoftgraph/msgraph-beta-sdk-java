@@ -60,48 +60,48 @@ public class GroupPolicyConfigurationsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * The group policy configurations created by this account.
-     * @return a CompletableFuture of groupPolicyConfigurationCollectionResponse
+     * @return a GroupPolicyConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyConfigurationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public GroupPolicyConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
      * The group policy configurations created by this account.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyConfigurationCollectionResponse
+     * @return a GroupPolicyConfigurationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyConfigurationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupPolicyConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupPolicyConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupPolicyConfigurationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Create new navigation property to groupPolicyConfigurations for deviceManagement
      * @param body The request body
-     * @return a CompletableFuture of groupPolicyConfiguration
+     * @return a GroupPolicyConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyConfiguration> post(@jakarta.annotation.Nonnull final GroupPolicyConfiguration body) {
+    @jakarta.annotation.Nullable
+    public GroupPolicyConfiguration post(@jakarta.annotation.Nonnull final GroupPolicyConfiguration body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to groupPolicyConfigurations for deviceManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of groupPolicyConfiguration
+     * @return a GroupPolicyConfiguration
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<GroupPolicyConfiguration> post(@jakarta.annotation.Nonnull final GroupPolicyConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public GroupPolicyConfiguration post(@jakarta.annotation.Nonnull final GroupPolicyConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, GroupPolicyConfiguration::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, GroupPolicyConfiguration::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * The group policy configurations created by this account.
@@ -118,18 +118,9 @@ public class GroupPolicyConfigurationsRequestBuilder extends BaseRequestBuilder 
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
@@ -150,24 +141,16 @@ public class GroupPolicyConfigurationsRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GroupPolicyConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.POST;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a groupPolicyConfigurationsRequestBuilder
+     * @return a GroupPolicyConfigurationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public GroupPolicyConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

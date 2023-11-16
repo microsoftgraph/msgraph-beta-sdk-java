@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AddWatermark extends MarkContent implements Parsable {
     /**
-     * The orientation property
-     */
-    private PageOrientation orientation;
-    /**
-     * Instantiates a new addWatermark and sets the default values.
+     * Instantiates a new AddWatermark and sets the default values.
      */
     public AddWatermark() {
         super();
@@ -22,7 +18,7 @@ public class AddWatermark extends MarkContent implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a addWatermark
+     * @return a AddWatermark
      */
     @jakarta.annotation.Nonnull
     public static AddWatermark createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class AddWatermark extends MarkContent implements Parsable {
     }
     /**
      * Gets the orientation property value. The orientation property
-     * @return a pageOrientation
+     * @return a PageOrientation
      */
     @jakarta.annotation.Nullable
     public PageOrientation getOrientation() {
-        return this.orientation;
+        return this.backingStore.get("orientation");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class AddWatermark extends MarkContent implements Parsable {
      * @param value Value to set for the orientation property.
      */
     public void setOrientation(@jakarta.annotation.Nullable final PageOrientation value) {
-        this.orientation = value;
+        this.backingStore.set("orientation", value);
     }
 }

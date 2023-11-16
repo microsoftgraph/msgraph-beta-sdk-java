@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AnswerKeyword implements AdditionalDataHolder, Parsable {
+public class AnswerKeyword implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * A collection of keywords used to trigger the search answer.
-     */
-    private java.util.List<String> keywords;
-    /**
-     * If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
-     */
-    private Boolean matchSimilarKeywords;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Unique keywords that will guarantee the search answer is triggered.
-     */
-    private java.util.List<String> reservedKeywords;
-    /**
-     * Instantiates a new answerKeyword and sets the default values.
+     * Instantiates a new AnswerKeyword and sets the default values.
      */
     public AnswerKeyword() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a answerKeyword
+     * @return a AnswerKeyword
      */
     @jakarta.annotation.Nonnull
     public static AnswerKeyword createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +35,17 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
         return new AnswerKeyword();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,35 +62,35 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the keywords property value. A collection of keywords used to trigger the search answer.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getKeywords() {
-        return this.keywords;
+        return this.backingStore.get("keywords");
     }
     /**
      * Gets the matchSimilarKeywords property value. If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getMatchSimilarKeywords() {
-        return this.matchSimilarKeywords;
+        return this.backingStore.get("matchSimilarKeywords");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the reservedKeywords property value. Unique keywords that will guarantee the search answer is triggered.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getReservedKeywords() {
-        return this.reservedKeywords;
+        return this.backingStore.get("reservedKeywords");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class AnswerKeyword implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the keywords property value. A collection of keywords used to trigger the search answer.
      * @param value Value to set for the keywords property.
      */
     public void setKeywords(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.keywords = value;
+        this.backingStore.set("keywords", value);
     }
     /**
      * Sets the matchSimilarKeywords property value. If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.
      * @param value Value to set for the matchSimilarKeywords property.
      */
     public void setMatchSimilarKeywords(@jakarta.annotation.Nullable final Boolean value) {
-        this.matchSimilarKeywords = value;
+        this.backingStore.set("matchSimilarKeywords", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the reservedKeywords property value. Unique keywords that will guarantee the search answer is triggered.
      * @param value Value to set for the reservedKeywords property.
      */
     public void setReservedKeywords(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.reservedKeywords = value;
+        this.backingStore.set("reservedKeywords", value);
     }
 }

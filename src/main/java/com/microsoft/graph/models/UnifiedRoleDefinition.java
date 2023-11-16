@@ -10,51 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
-     * Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
-     */
-    private EnumSet<AllowedRolePrincipalTypes> allowedPrincipalTypes;
-    /**
-     * The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
-     */
-    private String description;
-    /**
-     * The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
-     */
-    private String displayName;
-    /**
-     * Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
-     */
-    private java.util.List<UnifiedRoleDefinition> inheritsPermissionsFrom;
-    /**
-     * Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
-     */
-    private Boolean isBuiltIn;
-    /**
-     * Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
-     */
-    private Boolean isEnabled;
-    /**
-     * Flag indicating if the role is privileged. Azure AD defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
-     */
-    private Boolean isPrivileged;
-    /**
-     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
-     */
-    private java.util.List<String> resourceScopes;
-    /**
-     * List of permissions included in the role. Read-only when isBuiltIn is true. Required.
-     */
-    private java.util.List<UnifiedRolePermission> rolePermissions;
-    /**
-     * Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
-     */
-    private String templateId;
-    /**
-     * Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
-     */
-    private String version;
-    /**
-     * Instantiates a new unifiedRoleDefinition and sets the default values.
+     * Instantiates a new UnifiedRoleDefinition and sets the default values.
      */
     public UnifiedRoleDefinition() {
         super();
@@ -62,7 +18,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a unifiedRoleDefinition
+     * @return a UnifiedRoleDefinition
      */
     @jakarta.annotation.Nonnull
     public static UnifiedRoleDefinition createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -71,27 +27,27 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the allowedPrincipalTypes property value. Types of principals that can be assigned the role. Read-only. The possible values are: user, servicePrincipal, group, unknownFutureValue. This is a multi-valued enumeration that can contain up to three values as a comma-separated string. For example, user, group. Supports $filter (eq).
-     * @return a allowedRolePrincipalTypes
+     * @return a EnumSet<AllowedRolePrincipalTypes>
      */
     @jakarta.annotation.Nullable
     public EnumSet<AllowedRolePrincipalTypes> getAllowedPrincipalTypes() {
-        return this.allowedPrincipalTypes;
+        return this.backingStore.get("allowedPrincipalTypes");
     }
     /**
      * Gets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDescription() {
-        return this.description;
+        return this.backingStore.get("description");
     }
     /**
      * Gets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -114,68 +70,68 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
-     * @return a unifiedRoleDefinition
+     * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles support this attribute.
+     * @return a java.util.List<UnifiedRoleDefinition>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRoleDefinition> getInheritsPermissionsFrom() {
-        return this.inheritsPermissionsFrom;
+        return this.backingStore.get("inheritsPermissionsFrom");
     }
     /**
      * Gets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this.isBuiltIn;
+        return this.backingStore.get("isBuiltIn");
     }
     /**
      * Gets the isEnabled property value. Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this.isEnabled;
+        return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the isPrivileged property value. Flag indicating if the role is privileged. Azure AD defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
-     * @return a boolean
+     * Gets the isPrivileged property value. Flag indicating if the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPrivileged() {
-        return this.isPrivileged;
+        return this.backingStore.get("isPrivileged");
     }
     /**
      * Gets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getResourceScopes() {
-        return this.resourceScopes;
+        return this.backingStore.get("resourceScopes");
     }
     /**
      * Gets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
-     * @return a unifiedRolePermission
+     * @return a java.util.List<UnifiedRolePermission>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UnifiedRolePermission> getRolePermissions() {
-        return this.rolePermissions;
+        return this.backingStore.get("rolePermissions");
     }
     /**
      * Gets the templateId property value. Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getTemplateId() {
-        return this.templateId;
+        return this.backingStore.get("templateId");
     }
     /**
      * Gets the version property value. Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVersion() {
-        return this.version;
+        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -201,76 +157,76 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the allowedPrincipalTypes property.
      */
     public void setAllowedPrincipalTypes(@jakarta.annotation.Nullable final EnumSet<AllowedRolePrincipalTypes> value) {
-        this.allowedPrincipalTypes = value;
+        this.backingStore.set("allowedPrincipalTypes", value);
     }
     /**
      * Sets the description property value. The description for the unifiedRoleDefinition. Read-only when isBuiltIn is true.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
-        this.description = value;
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. The display name for the unifiedRoleDefinition. Read-only when isBuiltIn is true. Required.  Supports $filter (eq and startsWith).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
+     * Sets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Microsoft Entra built-in roles support this attribute.
      * @param value Value to set for the inheritsPermissionsFrom property.
      */
     public void setInheritsPermissionsFrom(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
-        this.inheritsPermissionsFrom = value;
+        this.backingStore.set("inheritsPermissionsFrom", value);
     }
     /**
      * Sets the isBuiltIn property value. Flag indicating if the unifiedRoleDefinition is part of the default set included with the product or custom. Read-only.  Supports $filter (eq).
      * @param value Value to set for the isBuiltIn property.
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
-        this.isBuiltIn = value;
+        this.backingStore.set("isBuiltIn", value);
     }
     /**
      * Sets the isEnabled property value. Flag indicating if the role is enabled for assignment. If false the role is not available for assignment. Read-only when isBuiltIn is true.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isEnabled = value;
+        this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the isPrivileged property value. Flag indicating if the role is privileged. Azure AD defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
+     * Sets the isPrivileged property value. Flag indicating if the role is privileged. Microsoft Entra ID defines a role as privileged if it contains at least one sensitive resource action in the rolePermissions and allowedResourceActions objects. Applies only for actions in the microsoft.directory resource namespace. Read-only. Supports $filter (eq).
      * @param value Value to set for the isPrivileged property.
      */
     public void setIsPrivileged(@jakarta.annotation.Nullable final Boolean value) {
-        this.isPrivileged = value;
+        this.backingStore.set("isPrivileged", value);
     }
     /**
      * Sets the resourceScopes property value. List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment.
      * @param value Value to set for the resourceScopes property.
      */
     public void setResourceScopes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.resourceScopes = value;
+        this.backingStore.set("resourceScopes", value);
     }
     /**
      * Sets the rolePermissions property value. List of permissions included in the role. Read-only when isBuiltIn is true. Required.
      * @param value Value to set for the rolePermissions property.
      */
     public void setRolePermissions(@jakarta.annotation.Nullable final java.util.List<UnifiedRolePermission> value) {
-        this.rolePermissions = value;
+        this.backingStore.set("rolePermissions", value);
     }
     /**
      * Sets the templateId property value. Custom template identifier that can be set when isBuiltIn is false. This identifier is typically used if one needs an identifier to be the same across different directories. Read-only when isBuiltIn is true.
      * @param value Value to set for the templateId property.
      */
     public void setTemplateId(@jakarta.annotation.Nullable final String value) {
-        this.templateId = value;
+        this.backingStore.set("templateId", value);
     }
     /**
      * Sets the version property value. Indicates the version of the unifiedRoleDefinition object. Read-only when isBuiltIn is true.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.version = value;
+        this.backingStore.set("version", value);
     }
 }

@@ -4,61 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Location implements AdditionalDataHolder, Parsable {
+public class Location implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The street address of the location.
-     */
-    private PhysicalAddress address;
-    /**
-     * The geographic coordinates and elevation of the location.
-     */
-    private OutlookGeoCoordinates coordinates;
-    /**
-     * The name associated with the location.
-     */
-    private String displayName;
-    /**
-     * Optional email address of the location.
-     */
-    private String locationEmailAddress;
-    /**
-     * The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     */
-    private LocationType locationType;
-    /**
-     * Optional URI representing the location.
-     */
-    private String locationUri;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * For internal use only.
-     */
-    private String uniqueId;
-    /**
-     * For internal use only.
-     */
-    private LocationUniqueIdType uniqueIdType;
-    /**
-     * Instantiates a new location and sets the default values.
+     * Instantiates a new Location and sets the default values.
      */
     public Location() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a location
+     * @return a Location
      */
     @jakarta.annotation.Nonnull
     public static Location createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -73,36 +42,41 @@ public class Location implements AdditionalDataHolder, Parsable {
         return new Location();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the address property value. The street address of the location.
-     * @return a physicalAddress
+     * @return a PhysicalAddress
      */
     @jakarta.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this.address;
+        return this.backingStore.get("address");
     }
     /**
      * Gets the coordinates property value. The geographic coordinates and elevation of the location.
-     * @return a outlookGeoCoordinates
+     * @return a OutlookGeoCoordinates
      */
     @jakarta.annotation.Nullable
     public OutlookGeoCoordinates getCoordinates() {
-        return this.coordinates;
+        return this.backingStore.get("coordinates");
     }
     /**
      * Gets the displayName property value. The name associated with the location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDisplayName() {
-        return this.displayName;
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -124,51 +98,51 @@ public class Location implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the locationEmailAddress property value. Optional email address of the location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocationEmailAddress() {
-        return this.locationEmailAddress;
+        return this.backingStore.get("locationEmailAddress");
     }
     /**
      * Gets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     * @return a locationType
+     * @return a LocationType
      */
     @jakarta.annotation.Nullable
     public LocationType getLocationType() {
-        return this.locationType;
+        return this.backingStore.get("locationType");
     }
     /**
      * Gets the locationUri property value. Optional URI representing the location.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getLocationUri() {
-        return this.locationUri;
+        return this.backingStore.get("locationUri");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the uniqueId property value. For internal use only.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUniqueId() {
-        return this.uniqueId;
+        return this.backingStore.get("uniqueId");
     }
     /**
      * Gets the uniqueIdType property value. For internal use only.
-     * @return a locationUniqueIdType
+     * @return a LocationUniqueIdType
      */
     @jakarta.annotation.Nullable
     public LocationUniqueIdType getUniqueIdType() {
-        return this.uniqueIdType;
+        return this.backingStore.get("uniqueIdType");
     }
     /**
      * Serializes information the current object
@@ -188,73 +162,73 @@ public class Location implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the address property value. The street address of the location.
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
-        this.address = value;
+        this.backingStore.set("address", value);
     }
     /**
      * Sets the coordinates property value. The geographic coordinates and elevation of the location.
      * @param value Value to set for the coordinates property.
      */
     public void setCoordinates(@jakarta.annotation.Nullable final OutlookGeoCoordinates value) {
-        this.coordinates = value;
+        this.backingStore.set("coordinates", value);
     }
     /**
      * Sets the displayName property value. The name associated with the location.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.displayName = value;
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the locationEmailAddress property value. Optional email address of the location.
      * @param value Value to set for the locationEmailAddress property.
      */
     public void setLocationEmailAddress(@jakarta.annotation.Nullable final String value) {
-        this.locationEmailAddress = value;
+        this.backingStore.set("locationEmailAddress", value);
     }
     /**
      * Sets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @param value Value to set for the locationType property.
      */
     public void setLocationType(@jakarta.annotation.Nullable final LocationType value) {
-        this.locationType = value;
+        this.backingStore.set("locationType", value);
     }
     /**
      * Sets the locationUri property value. Optional URI representing the location.
      * @param value Value to set for the locationUri property.
      */
     public void setLocationUri(@jakarta.annotation.Nullable final String value) {
-        this.locationUri = value;
+        this.backingStore.set("locationUri", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the uniqueId property value. For internal use only.
      * @param value Value to set for the uniqueId property.
      */
     public void setUniqueId(@jakarta.annotation.Nullable final String value) {
-        this.uniqueId = value;
+        this.backingStore.set("uniqueId", value);
     }
     /**
      * Sets the uniqueIdType property value. For internal use only.
      * @param value Value to set for the uniqueIdType property.
      */
     public void setUniqueIdType(@jakarta.annotation.Nullable final LocationUniqueIdType value) {
-        this.uniqueIdType = value;
+        this.backingStore.set("uniqueIdType", value);
     }
 }

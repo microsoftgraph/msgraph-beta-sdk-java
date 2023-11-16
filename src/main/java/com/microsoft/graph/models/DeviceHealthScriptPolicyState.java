@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,97 +15,23 @@ import java.util.Objects;
  * Contains properties for policy run state of the device health script.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Parsable {
+public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * A list of the assignment filter ids used for health script applicability evaluation
-     */
-    private java.util.List<String> assignmentFilterIds;
-    /**
-     * Indicates the type of execution status of the device management script.
-     */
-    private RunState detectionState;
-    /**
-     * The Intune device Id
-     */
-    private String deviceId;
-    /**
-     * Display name of the device
-     */
-    private String deviceName;
-    /**
-     * The next timestamp of when the device health script is expected to execute
-     */
-    private OffsetDateTime expectedStateUpdateDateTime;
-    /**
-     * Key of the device health script policy state is a concatenation of the MT sideCar policy Id and Intune device Id
-     */
-    private String id;
-    /**
-     * The last timestamp of when the device health script executed
-     */
-    private OffsetDateTime lastStateUpdateDateTime;
-    /**
-     * The last time that Intune Managment Extension synced with Intune
-     */
-    private OffsetDateTime lastSyncDateTime;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Value of the OS Version in string
-     */
-    private String osVersion;
-    /**
-     * The MT sideCar policy Id
-     */
-    private String policyId;
-    /**
-     * Display name of the device health script
-     */
-    private String policyName;
-    /**
-     * Error from the detection script after remediation
-     */
-    private String postRemediationDetectionScriptError;
-    /**
-     * Detection script output after remediation
-     */
-    private String postRemediationDetectionScriptOutput;
-    /**
-     * Error from the detection script before remediation
-     */
-    private String preRemediationDetectionScriptError;
-    /**
-     * Output of the detection script before remediation
-     */
-    private String preRemediationDetectionScriptOutput;
-    /**
-     * Error output of the remediation script
-     */
-    private String remediationScriptError;
-    /**
-     * Indicates the type of execution status of the device management script.
-     */
-    private RemediationState remediationState;
-    /**
-     * Name of the user whom ran the device health script
-     */
-    private String userName;
-    /**
-     * Instantiates a new deviceHealthScriptPolicyState and sets the default values.
+     * Instantiates a new DeviceHealthScriptPolicyState and sets the default values.
      */
     public DeviceHealthScriptPolicyState() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a deviceHealthScriptPolicyState
+     * @return a DeviceHealthScriptPolicyState
      */
     @jakarta.annotation.Nonnull
     public static DeviceHealthScriptPolicyState createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -110,44 +39,49 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
         return new DeviceHealthScriptPolicyState();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getAssignmentFilterIds() {
-        return this.assignmentFilterIds;
+        return this.backingStore.get("assignmentFilterIds");
     }
     /**
      * Gets the detectionState property value. Indicates the type of execution status of the device management script.
-     * @return a runState
+     * @return a RunState
      */
     @jakarta.annotation.Nullable
     public RunState getDetectionState() {
-        return this.detectionState;
+        return this.backingStore.get("detectionState");
     }
     /**
      * Gets the deviceId property value. The Intune device Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceId() {
-        return this.deviceId;
+        return this.backingStore.get("deviceId");
     }
     /**
      * Gets the deviceName property value. Display name of the device
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getDeviceName() {
-        return this.deviceName;
+        return this.backingStore.get("deviceName");
     }
     /**
      * Gets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
@@ -155,7 +89,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getExpectedStateUpdateDateTime() {
-        return this.expectedStateUpdateDateTime;
+        return this.backingStore.get("expectedStateUpdateDateTime");
     }
     /**
      * The deserialization information for the current model
@@ -187,11 +121,11 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
     }
     /**
      * Gets the id property value. Key of the device health script policy state is a concatenation of the MT sideCar policy Id and Intune device Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
@@ -199,7 +133,7 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastStateUpdateDateTime() {
-        return this.lastStateUpdateDateTime;
+        return this.backingStore.get("lastStateUpdateDateTime");
     }
     /**
      * Gets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
@@ -207,95 +141,95 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this.lastSyncDateTime;
+        return this.backingStore.get("lastSyncDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the osVersion property value. Value of the OS Version in string
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOsVersion() {
-        return this.osVersion;
+        return this.backingStore.get("osVersion");
     }
     /**
      * Gets the policyId property value. The MT sideCar policy Id
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyId() {
-        return this.policyId;
+        return this.backingStore.get("policyId");
     }
     /**
      * Gets the policyName property value. Display name of the device health script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPolicyName() {
-        return this.policyName;
+        return this.backingStore.get("policyName");
     }
     /**
      * Gets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptError() {
-        return this.postRemediationDetectionScriptError;
+        return this.backingStore.get("postRemediationDetectionScriptError");
     }
     /**
      * Gets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPostRemediationDetectionScriptOutput() {
-        return this.postRemediationDetectionScriptOutput;
+        return this.backingStore.get("postRemediationDetectionScriptOutput");
     }
     /**
      * Gets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptError() {
-        return this.preRemediationDetectionScriptError;
+        return this.backingStore.get("preRemediationDetectionScriptError");
     }
     /**
      * Gets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPreRemediationDetectionScriptOutput() {
-        return this.preRemediationDetectionScriptOutput;
+        return this.backingStore.get("preRemediationDetectionScriptOutput");
     }
     /**
      * Gets the remediationScriptError property value. Error output of the remediation script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getRemediationScriptError() {
-        return this.remediationScriptError;
+        return this.backingStore.get("remediationScriptError");
     }
     /**
      * Gets the remediationState property value. Indicates the type of execution status of the device management script.
-     * @return a remediationState
+     * @return a RemediationState
      */
     @jakarta.annotation.Nullable
     public RemediationState getRemediationState() {
-        return this.remediationState;
+        return this.backingStore.get("remediationState");
     }
     /**
      * Gets the userName property value. Name of the user whom ran the device health script
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUserName() {
-        return this.userName;
+        return this.backingStore.get("userName");
     }
     /**
      * Serializes information the current object
@@ -325,143 +259,143 @@ public class DeviceHealthScriptPolicyState implements AdditionalDataHolder, Pars
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the assignmentFilterIds property value. A list of the assignment filter ids used for health script applicability evaluation
      * @param value Value to set for the assignmentFilterIds property.
      */
     public void setAssignmentFilterIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.assignmentFilterIds = value;
+        this.backingStore.set("assignmentFilterIds", value);
     }
     /**
      * Sets the detectionState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the detectionState property.
      */
     public void setDetectionState(@jakarta.annotation.Nullable final RunState value) {
-        this.detectionState = value;
+        this.backingStore.set("detectionState", value);
     }
     /**
      * Sets the deviceId property value. The Intune device Id
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
-        this.deviceId = value;
+        this.backingStore.set("deviceId", value);
     }
     /**
      * Sets the deviceName property value. Display name of the device
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {
-        this.deviceName = value;
+        this.backingStore.set("deviceName", value);
     }
     /**
      * Sets the expectedStateUpdateDateTime property value. The next timestamp of when the device health script is expected to execute
      * @param value Value to set for the expectedStateUpdateDateTime property.
      */
     public void setExpectedStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.expectedStateUpdateDateTime = value;
+        this.backingStore.set("expectedStateUpdateDateTime", value);
     }
     /**
      * Sets the id property value. Key of the device health script policy state is a concatenation of the MT sideCar policy Id and Intune device Id
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the lastStateUpdateDateTime property value. The last timestamp of when the device health script executed
      * @param value Value to set for the lastStateUpdateDateTime property.
      */
     public void setLastStateUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastStateUpdateDateTime = value;
+        this.backingStore.set("lastStateUpdateDateTime", value);
     }
     /**
      * Sets the lastSyncDateTime property value. The last time that Intune Managment Extension synced with Intune
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastSyncDateTime = value;
+        this.backingStore.set("lastSyncDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the osVersion property value. Value of the OS Version in string
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final String value) {
-        this.osVersion = value;
+        this.backingStore.set("osVersion", value);
     }
     /**
      * Sets the policyId property value. The MT sideCar policy Id
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
-        this.policyId = value;
+        this.backingStore.set("policyId", value);
     }
     /**
      * Sets the policyName property value. Display name of the device health script
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
-        this.policyName = value;
+        this.backingStore.set("policyName", value);
     }
     /**
      * Sets the postRemediationDetectionScriptError property value. Error from the detection script after remediation
      * @param value Value to set for the postRemediationDetectionScriptError property.
      */
     public void setPostRemediationDetectionScriptError(@jakarta.annotation.Nullable final String value) {
-        this.postRemediationDetectionScriptError = value;
+        this.backingStore.set("postRemediationDetectionScriptError", value);
     }
     /**
      * Sets the postRemediationDetectionScriptOutput property value. Detection script output after remediation
      * @param value Value to set for the postRemediationDetectionScriptOutput property.
      */
     public void setPostRemediationDetectionScriptOutput(@jakarta.annotation.Nullable final String value) {
-        this.postRemediationDetectionScriptOutput = value;
+        this.backingStore.set("postRemediationDetectionScriptOutput", value);
     }
     /**
      * Sets the preRemediationDetectionScriptError property value. Error from the detection script before remediation
      * @param value Value to set for the preRemediationDetectionScriptError property.
      */
     public void setPreRemediationDetectionScriptError(@jakarta.annotation.Nullable final String value) {
-        this.preRemediationDetectionScriptError = value;
+        this.backingStore.set("preRemediationDetectionScriptError", value);
     }
     /**
      * Sets the preRemediationDetectionScriptOutput property value. Output of the detection script before remediation
      * @param value Value to set for the preRemediationDetectionScriptOutput property.
      */
     public void setPreRemediationDetectionScriptOutput(@jakarta.annotation.Nullable final String value) {
-        this.preRemediationDetectionScriptOutput = value;
+        this.backingStore.set("preRemediationDetectionScriptOutput", value);
     }
     /**
      * Sets the remediationScriptError property value. Error output of the remediation script
      * @param value Value to set for the remediationScriptError property.
      */
     public void setRemediationScriptError(@jakarta.annotation.Nullable final String value) {
-        this.remediationScriptError = value;
+        this.backingStore.set("remediationScriptError", value);
     }
     /**
      * Sets the remediationState property value. Indicates the type of execution status of the device management script.
      * @param value Value to set for the remediationState property.
      */
     public void setRemediationState(@jakarta.annotation.Nullable final RemediationState value) {
-        this.remediationState = value;
+        this.backingStore.set("remediationState", value);
     }
     /**
      * Sets the userName property value. Name of the user whom ran the device health script
      * @param value Value to set for the userName property.
      */
     public void setUserName(@jakarta.annotation.Nullable final String value) {
-        this.userName = value;
+        this.backingStore.set("userName", value);
     }
 }

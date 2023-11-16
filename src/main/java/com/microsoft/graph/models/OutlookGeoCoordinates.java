@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
+public class OutlookGeoCoordinates implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
+     * Stores model information.
      */
-    private Double accuracy;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     */
-    private Map<String, Object> additionalData;
-    /**
-     * The altitude of the location.
-     */
-    private Double altitude;
-    /**
-     * The accuracy of the altitude.
-     */
-    private Double altitudeAccuracy;
-    /**
-     * The latitude of the location.
-     */
-    private Double latitude;
-    /**
-     * The longitude of the location.
-     */
-    private Double longitude;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new outlookGeoCoordinates and sets the default values.
+     * Instantiates a new OutlookGeoCoordinates and sets the default values.
      */
     public OutlookGeoCoordinates() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a outlookGeoCoordinates
+     * @return a OutlookGeoCoordinates
      */
     @jakarta.annotation.Nonnull
     public static OutlookGeoCoordinates createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,35 +36,40 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the accuracy property value. The accuracy of the latitude and longitude. As an example, the accuracy can be measured in meters, such as the latitude and longitude are accurate to within 50 meters.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAccuracy() {
-        return this.accuracy;
+        return this.backingStore.get("accuracy");
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the altitude property value. The altitude of the location.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAltitude() {
-        return this.altitude;
+        return this.backingStore.get("altitude");
     }
     /**
      * Gets the altitudeAccuracy property value. The accuracy of the altitude.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getAltitudeAccuracy() {
-        return this.altitudeAccuracy;
+        return this.backingStore.get("altitudeAccuracy");
     }
     /**
      * The deserialization information for the current model
@@ -102,27 +88,27 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the latitude property value. The latitude of the location.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLatitude() {
-        return this.latitude;
+        return this.backingStore.get("latitude");
     }
     /**
      * Gets the longitude property value. The longitude of the location.
-     * @return a double
+     * @return a Double
      */
     @jakarta.annotation.Nullable
     public Double getLongitude() {
-        return this.longitude;
+        return this.backingStore.get("longitude");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -143,48 +129,48 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accuracy property.
      */
     public void setAccuracy(@jakarta.annotation.Nullable final Double value) {
-        this.accuracy = value;
+        this.backingStore.set("accuracy", value);
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the altitude property value. The altitude of the location.
      * @param value Value to set for the altitude property.
      */
     public void setAltitude(@jakarta.annotation.Nullable final Double value) {
-        this.altitude = value;
+        this.backingStore.set("altitude", value);
     }
     /**
      * Sets the altitudeAccuracy property value. The accuracy of the altitude.
      * @param value Value to set for the altitudeAccuracy property.
      */
     public void setAltitudeAccuracy(@jakarta.annotation.Nullable final Double value) {
-        this.altitudeAccuracy = value;
+        this.backingStore.set("altitudeAccuracy", value);
     }
     /**
      * Sets the latitude property value. The latitude of the location.
      * @param value Value to set for the latitude property.
      */
     public void setLatitude(@jakarta.annotation.Nullable final Double value) {
-        this.latitude = value;
+        this.backingStore.set("latitude", value);
     }
     /**
      * Sets the longitude property value. The longitude of the location.
      * @param value Value to set for the longitude property.
      */
     public void setLongitude(@jakarta.annotation.Nullable final Double value) {
-        this.longitude = value;
+        this.backingStore.set("longitude", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

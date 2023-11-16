@@ -5,37 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IfPostRequestBody implements AdditionalDataHolder, Parsable {
+public class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The logicalTest property
-     */
-    private Json logicalTest;
-    /**
-     * The valueIfFalse property
-     */
-    private Json valueIfFalse;
-    /**
-     * The valueIfTrue property
-     */
-    private Json valueIfTrue;
-    /**
-     * Instantiates a new ifPostRequestBody and sets the default values.
+     * Instantiates a new IfPostRequestBody and sets the default values.
      */
     public IfPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ifPostRequestBody
+     * @return a IfPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static IfPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +36,17 @@ public class IfPostRequestBody implements AdditionalDataHolder, Parsable {
         return new IfPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +66,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getLogicalTest() {
-        return this.logicalTest;
+        return this.backingStore.get("logicalTest");
     }
     /**
      * Gets the valueIfFalse property value. The valueIfFalse property
@@ -76,7 +74,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValueIfFalse() {
-        return this.valueIfFalse;
+        return this.backingStore.get("valueIfFalse");
     }
     /**
      * Gets the valueIfTrue property value. The valueIfTrue property
@@ -84,7 +82,7 @@ public class IfPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public Json getValueIfTrue() {
-        return this.valueIfTrue;
+        return this.backingStore.get("valueIfTrue");
     }
     /**
      * Serializes information the current object
@@ -98,31 +96,31 @@ public class IfPostRequestBody implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the logicalTest property value. The logicalTest property
      * @param value Value to set for the logicalTest property.
      */
     public void setLogicalTest(@jakarta.annotation.Nullable final Json value) {
-        this.logicalTest = value;
+        this.backingStore.set("logicalTest", value);
     }
     /**
      * Sets the valueIfFalse property value. The valueIfFalse property
      * @param value Value to set for the valueIfFalse property.
      */
     public void setValueIfFalse(@jakarta.annotation.Nullable final Json value) {
-        this.valueIfFalse = value;
+        this.backingStore.set("valueIfFalse", value);
     }
     /**
      * Sets the valueIfTrue property value. The valueIfTrue property
      * @param value Value to set for the valueIfTrue property.
      */
     public void setValueIfTrue(@jakarta.annotation.Nullable final Json value) {
-        this.valueIfTrue = value;
+        this.backingStore.set("valueIfTrue", value);
     }
 }

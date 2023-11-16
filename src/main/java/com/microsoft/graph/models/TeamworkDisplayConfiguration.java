@@ -4,49 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsable {
+public class TeamworkDisplayConfiguration implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
-     */
-    private java.util.List<TeamworkConfiguredPeripheral> configuredDisplays;
-    /**
-     * Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
-     */
-    private Integer displayCount;
-    /**
-     * Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
-     */
-    private TeamworkDisplayScreenConfiguration inBuiltDisplayScreenConfiguration;
-    /**
-     * True if content duplication is allowed. Applicable only for Teams Rooms devices.
-     */
-    private Boolean isContentDuplicationAllowed;
-    /**
-     * True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
-     */
-    private Boolean isDualDisplayModeEnabled;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new teamworkDisplayConfiguration and sets the default values.
+     * Instantiates a new TeamworkDisplayConfiguration and sets the default values.
      */
     public TeamworkDisplayConfiguration() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a teamworkDisplayConfiguration
+     * @return a TeamworkDisplayConfiguration
      */
     @jakarta.annotation.Nonnull
     public static TeamworkDisplayConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -54,28 +35,33 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
         return new TeamworkDisplayConfiguration();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the configuredDisplays property value. The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
-     * @return a teamworkConfiguredPeripheral
+     * @return a java.util.List<TeamworkConfiguredPeripheral>
      */
     @jakarta.annotation.Nullable
     public java.util.List<TeamworkConfiguredPeripheral> getConfiguredDisplays() {
-        return this.configuredDisplays;
+        return this.backingStore.get("configuredDisplays");
     }
     /**
      * Gets the displayCount property value. Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getDisplayCount() {
-        return this.displayCount;
+        return this.backingStore.get("displayCount");
     }
     /**
      * The deserialization information for the current model
@@ -94,35 +80,35 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the inBuiltDisplayScreenConfiguration property value. Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
-     * @return a teamworkDisplayScreenConfiguration
+     * @return a TeamworkDisplayScreenConfiguration
      */
     @jakarta.annotation.Nullable
     public TeamworkDisplayScreenConfiguration getInBuiltDisplayScreenConfiguration() {
-        return this.inBuiltDisplayScreenConfiguration;
+        return this.backingStore.get("inBuiltDisplayScreenConfiguration");
     }
     /**
      * Gets the isContentDuplicationAllowed property value. True if content duplication is allowed. Applicable only for Teams Rooms devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsContentDuplicationAllowed() {
-        return this.isContentDuplicationAllowed;
+        return this.backingStore.get("isContentDuplicationAllowed");
     }
     /**
      * Gets the isDualDisplayModeEnabled property value. True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getIsDualDisplayModeEnabled() {
-        return this.isDualDisplayModeEnabled;
+        return this.backingStore.get("isDualDisplayModeEnabled");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -139,52 +125,52 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the configuredDisplays property value. The list of configured displays. Applicable only for Microsoft Teams Rooms devices.
      * @param value Value to set for the configuredDisplays property.
      */
     public void setConfiguredDisplays(@jakarta.annotation.Nullable final java.util.List<TeamworkConfiguredPeripheral> value) {
-        this.configuredDisplays = value;
+        this.backingStore.set("configuredDisplays", value);
     }
     /**
      * Sets the displayCount property value. Total number of connected displays, including the inbuilt display. Applicable only for Teams Rooms devices.
      * @param value Value to set for the displayCount property.
      */
     public void setDisplayCount(@jakarta.annotation.Nullable final Integer value) {
-        this.displayCount = value;
+        this.backingStore.set("displayCount", value);
     }
     /**
      * Sets the inBuiltDisplayScreenConfiguration property value. Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
      * @param value Value to set for the inBuiltDisplayScreenConfiguration property.
      */
     public void setInBuiltDisplayScreenConfiguration(@jakarta.annotation.Nullable final TeamworkDisplayScreenConfiguration value) {
-        this.inBuiltDisplayScreenConfiguration = value;
+        this.backingStore.set("inBuiltDisplayScreenConfiguration", value);
     }
     /**
      * Sets the isContentDuplicationAllowed property value. True if content duplication is allowed. Applicable only for Teams Rooms devices.
      * @param value Value to set for the isContentDuplicationAllowed property.
      */
     public void setIsContentDuplicationAllowed(@jakarta.annotation.Nullable final Boolean value) {
-        this.isContentDuplicationAllowed = value;
+        this.backingStore.set("isContentDuplicationAllowed", value);
     }
     /**
      * Sets the isDualDisplayModeEnabled property value. True if dual display mode is enabled. If isDualDisplayModeEnabled is true, then the content will be displayed on both front of room screens instead of just the one screen, when it is shared via the HDMI ingest module on the Microsoft Teams Rooms device. Applicable only for Teams Rooms devices.
      * @param value Value to set for the isDualDisplayModeEnabled property.
      */
     public void setIsDualDisplayModeEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.isDualDisplayModeEnabled = value;
+        this.backingStore.set("isDualDisplayModeEnabled", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

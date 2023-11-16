@@ -5,37 +5,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class StandardizePostRequestBody implements AdditionalDataHolder, Parsable {
+public class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The mean property
-     */
-    private Json mean;
-    /**
-     * The standardDev property
-     */
-    private Json standardDev;
-    /**
-     * The x property
-     */
-    private Json x;
-    /**
-     * Instantiates a new standardizePostRequestBody and sets the default values.
+     * Instantiates a new StandardizePostRequestBody and sets the default values.
      */
     public StandardizePostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a standardizePostRequestBody
+     * @return a StandardizePostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static StandardizePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -43,12 +36,17 @@ public class StandardizePostRequestBody implements AdditionalDataHolder, Parsabl
         return new StandardizePostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -68,7 +66,7 @@ public class StandardizePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getMean() {
-        return this.mean;
+        return this.backingStore.get("mean");
     }
     /**
      * Gets the standardDev property value. The standardDev property
@@ -76,7 +74,7 @@ public class StandardizePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getStandardDev() {
-        return this.standardDev;
+        return this.backingStore.get("standardDev");
     }
     /**
      * Gets the x property value. The x property
@@ -84,7 +82,7 @@ public class StandardizePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @jakarta.annotation.Nullable
     public Json getX() {
-        return this.x;
+        return this.backingStore.get("x");
     }
     /**
      * Serializes information the current object
@@ -98,31 +96,31 @@ public class StandardizePostRequestBody implements AdditionalDataHolder, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the mean property value. The mean property
      * @param value Value to set for the mean property.
      */
     public void setMean(@jakarta.annotation.Nullable final Json value) {
-        this.mean = value;
+        this.backingStore.set("mean", value);
     }
     /**
      * Sets the standardDev property value. The standardDev property
      * @param value Value to set for the standardDev property.
      */
     public void setStandardDev(@jakarta.annotation.Nullable final Json value) {
-        this.standardDev = value;
+        this.backingStore.set("standardDev", value);
     }
     /**
      * Sets the x property value. The x property
      * @param value Value to set for the x property.
      */
     public void setX(@jakarta.annotation.Nullable final Json value) {
-        this.x = value;
+        this.backingStore.set("x", value);
     }
 }

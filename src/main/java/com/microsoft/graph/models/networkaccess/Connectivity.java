@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Connectivity extends Entity implements Parsable {
     /**
-     * Branches represent locations for connectivity.
-     */
-    private java.util.List<BranchSite> branches;
-    /**
-     * Instantiates a new connectivity and sets the default values.
+     * Instantiates a new Connectivity and sets the default values.
      */
     public Connectivity() {
         super();
@@ -22,7 +18,7 @@ public class Connectivity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a connectivity
+     * @return a Connectivity
      */
     @jakarta.annotation.Nonnull
     public static Connectivity createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -31,11 +27,11 @@ public class Connectivity extends Entity implements Parsable {
     }
     /**
      * Gets the branches property value. Branches represent locations for connectivity.
-     * @return a branchSite
+     * @return a java.util.List<BranchSite>
      */
     @jakarta.annotation.Nullable
     public java.util.List<BranchSite> getBranches() {
-        return this.branches;
+        return this.backingStore.get("branches");
     }
     /**
      * The deserialization information for the current model
@@ -61,6 +57,6 @@ public class Connectivity extends Entity implements Parsable {
      * @param value Value to set for the branches property.
      */
     public void setBranches(@jakarta.annotation.Nullable final java.util.List<BranchSite> value) {
-        this.branches = value;
+        this.backingStore.set("branches", value);
     }
 }

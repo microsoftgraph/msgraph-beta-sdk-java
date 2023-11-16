@@ -59,24 +59,24 @@ public class WindowsInformationProtectionDeviceRegistrationsRequestBuilder exten
     }
     /**
      * Zero or more WIP device registrations that belong to the user.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistrationCollectionResponse
+     * @return a WindowsInformationProtectionDeviceRegistrationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistrationCollectionResponse> get() {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionDeviceRegistrationCollectionResponse get() {
         return get(null);
     }
     /**
      * Zero or more WIP device registrations that belong to the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of windowsInformationProtectionDeviceRegistrationCollectionResponse
+     * @return a WindowsInformationProtectionDeviceRegistrationCollectionResponse
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<WindowsInformationProtectionDeviceRegistrationCollectionResponse> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public WindowsInformationProtectionDeviceRegistrationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, WindowsInformationProtectionDeviceRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, WindowsInformationProtectionDeviceRegistrationCollectionResponse::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Zero or more WIP device registrations that belong to the user.
@@ -93,24 +93,15 @@ public class WindowsInformationProtectionDeviceRegistrationsRequestBuilder exten
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a windowsInformationProtectionDeviceRegistrationsRequestBuilder
+     * @return a WindowsInformationProtectionDeviceRegistrationsRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {

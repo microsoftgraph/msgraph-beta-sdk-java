@@ -10,51 +10,7 @@ import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
-     * Indicates whether users can sign up for email based subscriptions.
-     */
-    private Boolean allowedToSignUpEmailBasedSubscriptions;
-    /**
-     * Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
-     */
-    private Boolean allowedToUseSSPR;
-    /**
-     * Indicates whether a user can join the tenant by email validation.
-     */
-    private Boolean allowEmailVerifiedUsersToJoinOrganization;
-    /**
-     * Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
-     */
-    private AllowInvitesFrom allowInvitesFrom;
-    /**
-     * Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
-     */
-    private Boolean allowUserConsentForRiskyApps;
-    /**
-     * To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Azure AD Connect or Microsoft Graph.
-     */
-    private Boolean blockMsolPowerShell;
-    /**
-     * The defaultUserRoleOverrides property
-     */
-    private java.util.List<DefaultUserRoleOverride> defaultUserRoleOverrides;
-    /**
-     * The defaultUserRolePermissions property
-     */
-    private DefaultUserRolePermissions defaultUserRolePermissions;
-    /**
-     * List of features enabled for private preview on the tenant.
-     */
-    private java.util.List<String> enabledPreviewFeatures;
-    /**
-     * Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
-     */
-    private UUID guestUserRoleId;
-    /**
-     * Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
-     */
-    private java.util.List<String> permissionGrantPolicyIdsAssignedToDefaultUserRole;
-    /**
-     * Instantiates a new authorizationPolicy and sets the default values.
+     * Instantiates a new AuthorizationPolicy and sets the default values.
      */
     public AuthorizationPolicy() {
         super();
@@ -63,7 +19,7 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a authorizationPolicy
+     * @return a AuthorizationPolicy
      */
     @jakarta.annotation.Nonnull
     public static AuthorizationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -72,75 +28,75 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
     }
     /**
      * Gets the allowedToSignUpEmailBasedSubscriptions property value. Indicates whether users can sign up for email based subscriptions.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToSignUpEmailBasedSubscriptions() {
-        return this.allowedToSignUpEmailBasedSubscriptions;
+        return this.backingStore.get("allowedToSignUpEmailBasedSubscriptions");
     }
     /**
-     * Gets the allowedToUseSSPR property value. Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
-     * @return a boolean
+     * Gets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowedToUseSSPR() {
-        return this.allowedToUseSSPR;
+        return this.backingStore.get("allowedToUseSSPR");
     }
     /**
      * Gets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowEmailVerifiedUsersToJoinOrganization() {
-        return this.allowEmailVerifiedUsersToJoinOrganization;
+        return this.backingStore.get("allowEmailVerifiedUsersToJoinOrganization");
     }
     /**
-     * Gets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
-     * @return a allowInvitesFrom
+     * Gets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * @return a AllowInvitesFrom
      */
     @jakarta.annotation.Nullable
     public AllowInvitesFrom getAllowInvitesFrom() {
-        return this.allowInvitesFrom;
+        return this.backingStore.get("allowInvitesFrom");
     }
     /**
      * Gets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowUserConsentForRiskyApps() {
-        return this.allowUserConsentForRiskyApps;
+        return this.backingStore.get("allowUserConsentForRiskyApps");
     }
     /**
-     * Gets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Azure AD Connect or Microsoft Graph.
-     * @return a boolean
+     * Gets the blockMsolPowerShell property value. To disable the use of the Microsoft Graph PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the Microsoft Graph PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getBlockMsolPowerShell() {
-        return this.blockMsolPowerShell;
+        return this.backingStore.get("blockMsolPowerShell");
     }
     /**
      * Gets the defaultUserRoleOverrides property value. The defaultUserRoleOverrides property
-     * @return a defaultUserRoleOverride
+     * @return a java.util.List<DefaultUserRoleOverride>
      */
     @jakarta.annotation.Nullable
     public java.util.List<DefaultUserRoleOverride> getDefaultUserRoleOverrides() {
-        return this.defaultUserRoleOverrides;
+        return this.backingStore.get("defaultUserRoleOverrides");
     }
     /**
      * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
-     * @return a defaultUserRolePermissions
+     * @return a DefaultUserRolePermissions
      */
     @jakarta.annotation.Nullable
     public DefaultUserRolePermissions getDefaultUserRolePermissions() {
-        return this.defaultUserRolePermissions;
+        return this.backingStore.get("defaultUserRolePermissions");
     }
     /**
      * Gets the enabledPreviewFeatures property value. List of features enabled for private preview on the tenant.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledPreviewFeatures() {
-        return this.enabledPreviewFeatures;
+        return this.backingStore.get("enabledPreviewFeatures");
     }
     /**
      * The deserialization information for the current model
@@ -163,20 +119,20 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Gets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guests. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      * @return a UUID
      */
     @jakarta.annotation.Nullable
     public UUID getGuestUserRoleId() {
-        return this.guestUserRoleId;
+        return this.backingStore.get("guestUserRoleId");
     }
     /**
      * Gets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getPermissionGrantPolicyIdsAssignedToDefaultUserRole() {
-        return this.permissionGrantPolicyIdsAssignedToDefaultUserRole;
+        return this.backingStore.get("permissionGrantPolicyIdsAssignedToDefaultUserRole");
     }
     /**
      * Serializes information the current object
@@ -202,76 +158,76 @@ public class AuthorizationPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowedToSignUpEmailBasedSubscriptions property.
      */
     public void setAllowedToSignUpEmailBasedSubscriptions(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToSignUpEmailBasedSubscriptions = value;
+        this.backingStore.set("allowedToSignUpEmailBasedSubscriptions", value);
     }
     /**
-     * Sets the allowedToUseSSPR property value. Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
+     * Sets the allowedToUseSSPR property value. Indicates whether users can use the Self-Service Password Reset feature on the tenant.
      * @param value Value to set for the allowedToUseSSPR property.
      */
     public void setAllowedToUseSSPR(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowedToUseSSPR = value;
+        this.backingStore.set("allowedToUseSSPR", value);
     }
     /**
      * Sets the allowEmailVerifiedUsersToJoinOrganization property value. Indicates whether a user can join the tenant by email validation.
      * @param value Value to set for the allowEmailVerifiedUsersToJoinOrganization property.
      */
     public void setAllowEmailVerifiedUsersToJoinOrganization(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowEmailVerifiedUsersToJoinOrganization = value;
+        this.backingStore.set("allowEmailVerifiedUsersToJoinOrganization", value);
     }
     /**
-     * Sets the allowInvitesFrom property value. Indicates who can invite external users to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
+     * Sets the allowInvitesFrom property value. Indicates who can invite guests to the organization. Possible values are: none, adminsAndGuestInviters, adminsGuestInvitersAndAllMembers, everyone. everyone is the default setting for all cloud environments except US Government. See more in the table below.
      * @param value Value to set for the allowInvitesFrom property.
      */
     public void setAllowInvitesFrom(@jakarta.annotation.Nullable final AllowInvitesFrom value) {
-        this.allowInvitesFrom = value;
+        this.backingStore.set("allowInvitesFrom", value);
     }
     /**
      * Sets the allowUserConsentForRiskyApps property value. Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
      * @param value Value to set for the allowUserConsentForRiskyApps property.
      */
     public void setAllowUserConsentForRiskyApps(@jakarta.annotation.Nullable final Boolean value) {
-        this.allowUserConsentForRiskyApps = value;
+        this.backingStore.set("allowUserConsentForRiskyApps", value);
     }
     /**
-     * Sets the blockMsolPowerShell property value. To disable the use of the MSOnline PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the MSOnline PowerShell module. This doesn't affect Azure AD Connect or Microsoft Graph.
+     * Sets the blockMsolPowerShell property value. To disable the use of the Microsoft Graph PowerShell module set this property to true. This will also disable user-based access to the legacy service endpoint used by the Microsoft Graph PowerShell module. This doesn't affect Microsoft Entra Connect or Microsoft Graph.
      * @param value Value to set for the blockMsolPowerShell property.
      */
     public void setBlockMsolPowerShell(@jakarta.annotation.Nullable final Boolean value) {
-        this.blockMsolPowerShell = value;
+        this.backingStore.set("blockMsolPowerShell", value);
     }
     /**
      * Sets the defaultUserRoleOverrides property value. The defaultUserRoleOverrides property
      * @param value Value to set for the defaultUserRoleOverrides property.
      */
     public void setDefaultUserRoleOverrides(@jakarta.annotation.Nullable final java.util.List<DefaultUserRoleOverride> value) {
-        this.defaultUserRoleOverrides = value;
+        this.backingStore.set("defaultUserRoleOverrides", value);
     }
     /**
      * Sets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
      * @param value Value to set for the defaultUserRolePermissions property.
      */
     public void setDefaultUserRolePermissions(@jakarta.annotation.Nullable final DefaultUserRolePermissions value) {
-        this.defaultUserRolePermissions = value;
+        this.backingStore.set("defaultUserRolePermissions", value);
     }
     /**
      * Sets the enabledPreviewFeatures property value. List of features enabled for private preview on the tenant.
      * @param value Value to set for the enabledPreviewFeatures property.
      */
     public void setEnabledPreviewFeatures(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enabledPreviewFeatures = value;
+        this.backingStore.set("enabledPreviewFeatures", value);
     }
     /**
-     * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guest user. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
+     * Sets the guestUserRoleId property value. Represents role templateId for the role that should be granted to guests. Refer to List unifiedRoleDefinitions to find the list of available role templates. Currently following roles are supported:  User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
      * @param value Value to set for the guestUserRoleId property.
      */
     public void setGuestUserRoleId(@jakarta.annotation.Nullable final UUID value) {
-        this.guestUserRoleId = value;
+        this.backingStore.set("guestUserRoleId", value);
     }
     /**
      * Sets the permissionGrantPolicyIdsAssignedToDefaultUserRole property value. Indicates if user consent to apps is allowed, and if it is, which app consent policy (permissionGrantPolicy) governs the permission for users to grant consent. Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
      * @param value Value to set for the permissionGrantPolicyIdsAssignedToDefaultUserRole property.
      */
     public void setPermissionGrantPolicyIdsAssignedToDefaultUserRole(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.permissionGrantPolicyIdsAssignedToDefaultUserRole = value;
+        this.backingStore.set("permissionGrantPolicyIdsAssignedToDefaultUserRole", value);
     }
 }

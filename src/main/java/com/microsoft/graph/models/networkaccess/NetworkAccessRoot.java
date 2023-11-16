@@ -10,35 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NetworkAccessRoot extends Entity implements Parsable {
     /**
-     * Connectivity represents all the connectivity components in Global Secure Access.
-     */
-    private Connectivity connectivity;
-    /**
-     * A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
-     */
-    private java.util.List<ForwardingPolicy> forwardingPolicies;
-    /**
-     * A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
-     */
-    private java.util.List<ForwardingProfile> forwardingProfiles;
-    /**
-     * Represnts network connections that are routed through Global Secure Access.
-     */
-    private Logs logs;
-    /**
-     * Represents the status of the Global Secure Access services for the tenant.
-     */
-    private Reports reports;
-    /**
-     * Global Secure Access settings.
-     */
-    private Settings settings;
-    /**
-     * Represents the status of the Global Secure Access services for the tenant.
-     */
-    private TenantStatus tenantStatus;
-    /**
-     * Instantiates a new networkAccessRoot and sets the default values.
+     * Instantiates a new NetworkAccessRoot and sets the default values.
      */
     public NetworkAccessRoot() {
         super();
@@ -46,7 +18,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a networkAccessRoot
+     * @return a NetworkAccessRoot
      */
     @jakarta.annotation.Nonnull
     public static NetworkAccessRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -55,11 +27,11 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     }
     /**
      * Gets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.
-     * @return a connectivity
+     * @return a Connectivity
      */
     @jakarta.annotation.Nullable
     public Connectivity getConnectivity() {
-        return this.connectivity;
+        return this.backingStore.get("connectivity");
     }
     /**
      * The deserialization information for the current model
@@ -78,52 +50,52 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
-     * @return a forwardingPolicy
+     * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * @return a java.util.List<ForwardingPolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingPolicy> getForwardingPolicies() {
-        return this.forwardingPolicies;
+        return this.backingStore.get("forwardingPolicies");
     }
     /**
      * Gets the forwardingProfiles property value. A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
-     * @return a forwardingProfile
+     * @return a java.util.List<ForwardingProfile>
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingProfile> getForwardingProfiles() {
-        return this.forwardingProfiles;
+        return this.backingStore.get("forwardingProfiles");
     }
     /**
-     * Gets the logs property value. Represnts network connections that are routed through Global Secure Access.
-     * @return a logs
+     * Gets the logs property value. Represents network connections that are routed through Global Secure Access.
+     * @return a Logs
      */
     @jakarta.annotation.Nullable
     public Logs getLogs() {
-        return this.logs;
+        return this.backingStore.get("logs");
     }
     /**
      * Gets the reports property value. Represents the status of the Global Secure Access services for the tenant.
-     * @return a reports
+     * @return a Reports
      */
     @jakarta.annotation.Nullable
     public Reports getReports() {
-        return this.reports;
+        return this.backingStore.get("reports");
     }
     /**
      * Gets the settings property value. Global Secure Access settings.
-     * @return a settings
+     * @return a Settings
      */
     @jakarta.annotation.Nullable
     public Settings getSettings() {
-        return this.settings;
+        return this.backingStore.get("settings");
     }
     /**
      * Gets the tenantStatus property value. Represents the status of the Global Secure Access services for the tenant.
-     * @return a tenantStatus
+     * @return a TenantStatus
      */
     @jakarta.annotation.Nullable
     public TenantStatus getTenantStatus() {
-        return this.tenantStatus;
+        return this.backingStore.get("tenantStatus");
     }
     /**
      * Serializes information the current object
@@ -145,48 +117,48 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      * @param value Value to set for the connectivity property.
      */
     public void setConnectivity(@jakarta.annotation.Nullable final Connectivity value) {
-        this.connectivity = value;
+        this.backingStore.set("connectivity", value);
     }
     /**
-     * Sets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Gloval Secure Access Service. It is then added to a forwarding profile.
+     * Sets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
      * @param value Value to set for the forwardingPolicies property.
      */
     public void setForwardingPolicies(@jakarta.annotation.Nullable final java.util.List<ForwardingPolicy> value) {
-        this.forwardingPolicies = value;
+        this.backingStore.set("forwardingPolicies", value);
     }
     /**
      * Sets the forwardingProfiles property value. A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
      * @param value Value to set for the forwardingProfiles property.
      */
     public void setForwardingProfiles(@jakarta.annotation.Nullable final java.util.List<ForwardingProfile> value) {
-        this.forwardingProfiles = value;
+        this.backingStore.set("forwardingProfiles", value);
     }
     /**
-     * Sets the logs property value. Represnts network connections that are routed through Global Secure Access.
+     * Sets the logs property value. Represents network connections that are routed through Global Secure Access.
      * @param value Value to set for the logs property.
      */
     public void setLogs(@jakarta.annotation.Nullable final Logs value) {
-        this.logs = value;
+        this.backingStore.set("logs", value);
     }
     /**
      * Sets the reports property value. Represents the status of the Global Secure Access services for the tenant.
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final Reports value) {
-        this.reports = value;
+        this.backingStore.set("reports", value);
     }
     /**
      * Sets the settings property value. Global Secure Access settings.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final Settings value) {
-        this.settings = value;
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the tenantStatus property value. Represents the status of the Global Secure Access services for the tenant.
      * @param value Value to set for the tenantStatus property.
      */
     public void setTenantStatus(@jakarta.annotation.Nullable final TenantStatus value) {
-        this.tenantStatus = value;
+        this.backingStore.set("tenantStatus", value);
     }
 }

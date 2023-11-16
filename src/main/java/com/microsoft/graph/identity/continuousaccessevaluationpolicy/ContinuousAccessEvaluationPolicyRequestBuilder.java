@@ -39,70 +39,68 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete() {
-        return delete(null);
+    public void delete() {
+        delete(null);
     }
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<Void> delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, errorMapping);
+        this.requestAdapter.sendPrimitive(requestInfo, Void.class, errorMapping);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
+     * @return a ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> get() {
+    @jakarta.annotation.Nullable
+    public ContinuousAccessEvaluationPolicy get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-get?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ContinuousAccessEvaluationPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body) {
+    @jakarta.annotation.Nullable
+    public ContinuousAccessEvaluationPolicy patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of continuousAccessEvaluationPolicy
+     * @return a ContinuousAccessEvaluationPolicy
      * @see <a href="https://learn.microsoft.com/graph/api/continuousaccessevaluationpolicy-update?view=graph-rest-1.0">Find more info here</a>
      */
-    @jakarta.annotation.Nonnull
-    public java.util.concurrent.CompletableFuture<ContinuousAccessEvaluationPolicy> patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @jakarta.annotation.Nullable
+    public ContinuousAccessEvaluationPolicy patch(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
         errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendAsync(requestInfo, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue, errorMapping);
+        return this.requestAdapter.send(requestInfo, ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue, errorMapping);
     }
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity
@@ -119,20 +117,13 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.DELETE;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        if (requestConfiguration != null) {
-            final DeleteRequestConfiguration requestConfig = new DeleteRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
@@ -140,28 +131,19 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.GET;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @return a RequestInformation
      */
@@ -170,7 +152,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a continuousAccessEvaluationPolicy object.
+     * Update the properties of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
@@ -178,24 +160,16 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ContinuousAccessEvaluationPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation();
-        requestInfo.httpMethod = HttpMethod.PATCH;
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.headers.add("Accept", "application/json");
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.headers.putAll(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a continuousAccessEvaluationPolicyRequestBuilder
+     * @return a ContinuousAccessEvaluationPolicyRequestBuilder
      */
     @jakarta.annotation.Nonnull
     public ContinuousAccessEvaluationPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
@@ -209,7 +183,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a continuousAccessEvaluationPolicy object.
+     * Read the properties and relationships of a continuousAccessEvaluationPolicy object. This API is available in the following national cloud deployments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters {

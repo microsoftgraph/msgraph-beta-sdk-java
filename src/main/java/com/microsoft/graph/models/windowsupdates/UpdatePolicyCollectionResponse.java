@@ -10,11 +10,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UpdatePolicyCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * The value property
-     */
-    private java.util.List<UpdatePolicy> value;
-    /**
-     * Instantiates a new updatePolicyCollectionResponse and sets the default values.
+     * Instantiates a new UpdatePolicyCollectionResponse and sets the default values.
      */
     public UpdatePolicyCollectionResponse() {
         super();
@@ -22,7 +18,7 @@ public class UpdatePolicyCollectionResponse extends BaseCollectionPaginationCoun
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a updatePolicyCollectionResponse
+     * @return a UpdatePolicyCollectionResponse
      */
     @jakarta.annotation.Nonnull
     public static UpdatePolicyCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -41,11 +37,11 @@ public class UpdatePolicyCollectionResponse extends BaseCollectionPaginationCoun
     }
     /**
      * Gets the value property value. The value property
-     * @return a updatePolicy
+     * @return a java.util.List<UpdatePolicy>
      */
     @jakarta.annotation.Nullable
     public java.util.List<UpdatePolicy> getValue() {
-        return this.value;
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -61,6 +57,6 @@ public class UpdatePolicyCollectionResponse extends BaseCollectionPaginationCoun
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final java.util.List<UpdatePolicy> value) {
-        this.value = value;
+        this.backingStore.set("value", value);
     }
 }

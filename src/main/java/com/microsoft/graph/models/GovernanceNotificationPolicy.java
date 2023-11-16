@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsable {
+public class GovernanceNotificationPolicy implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The enabledTemplateTypes property
-     */
-    private java.util.List<String> enabledTemplateTypes;
-    /**
-     * The notificationTemplates property
-     */
-    private java.util.List<GovernanceNotificationTemplate> notificationTemplates;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Instantiates a new governanceNotificationPolicy and sets the default values.
+     * Instantiates a new GovernanceNotificationPolicy and sets the default values.
      */
     public GovernanceNotificationPolicy() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a governanceNotificationPolicy
+     * @return a GovernanceNotificationPolicy
      */
     @jakarta.annotation.Nonnull
     public static GovernanceNotificationPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,20 +35,25 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
         return new GovernanceNotificationPolicy();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the enabledTemplateTypes property value. The enabledTemplateTypes property
-     * @return a string
+     * @return a java.util.List<String>
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getEnabledTemplateTypes() {
-        return this.enabledTemplateTypes;
+        return this.backingStore.get("enabledTemplateTypes");
     }
     /**
      * The deserialization information for the current model
@@ -71,19 +69,19 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
     }
     /**
      * Gets the notificationTemplates property value. The notificationTemplates property
-     * @return a governanceNotificationTemplate
+     * @return a java.util.List<GovernanceNotificationTemplate>
      */
     @jakarta.annotation.Nullable
     public java.util.List<GovernanceNotificationTemplate> getNotificationTemplates() {
-        return this.notificationTemplates;
+        return this.backingStore.get("notificationTemplates");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class GovernanceNotificationPolicy implements AdditionalDataHolder, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the enabledTemplateTypes property value. The enabledTemplateTypes property
      * @param value Value to set for the enabledTemplateTypes property.
      */
     public void setEnabledTemplateTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.enabledTemplateTypes = value;
+        this.backingStore.set("enabledTemplateTypes", value);
     }
     /**
      * Sets the notificationTemplates property value. The notificationTemplates property
      * @param value Value to set for the notificationTemplates property.
      */
     public void setNotificationTemplates(@jakarta.annotation.Nullable final java.util.List<GovernanceNotificationTemplate> value) {
-        this.notificationTemplates = value;
+        this.backingStore.set("notificationTemplates", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
 }

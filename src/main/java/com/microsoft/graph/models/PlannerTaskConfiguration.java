@@ -9,11 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerTaskConfiguration extends Entity implements Parsable {
     /**
-     * Policy configuration for tasks created for the businessScenario when they're being changed outside of the scenario.
-     */
-    private PlannerTaskPolicy editPolicy;
-    /**
-     * Instantiates a new plannerTaskConfiguration and sets the default values.
+     * Instantiates a new PlannerTaskConfiguration and sets the default values.
      */
     public PlannerTaskConfiguration() {
         super();
@@ -21,7 +17,7 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a plannerTaskConfiguration
+     * @return a PlannerTaskConfiguration
      */
     @jakarta.annotation.Nonnull
     public static PlannerTaskConfiguration createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -30,11 +26,11 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
     }
     /**
      * Gets the editPolicy property value. Policy configuration for tasks created for the businessScenario when they're being changed outside of the scenario.
-     * @return a plannerTaskPolicy
+     * @return a PlannerTaskPolicy
      */
     @jakarta.annotation.Nullable
     public PlannerTaskPolicy getEditPolicy() {
-        return this.editPolicy;
+        return this.backingStore.get("editPolicy");
     }
     /**
      * The deserialization information for the current model
@@ -60,6 +56,6 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
      * @param value Value to set for the editPolicy property.
      */
     public void setEditPolicy(@jakarta.annotation.Nullable final PlannerTaskPolicy value) {
-        this.editPolicy = value;
+        this.backingStore.set("editPolicy", value);
     }
 }

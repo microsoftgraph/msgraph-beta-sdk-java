@@ -4,37 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SearchQuery implements AdditionalDataHolder, Parsable {
+public class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The search query containing the search terms. Required.
-     */
-    private String queryString;
-    /**
-     * Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
-     */
-    private String queryTemplate;
-    /**
-     * Instantiates a new searchQuery and sets the default values.
+     * Instantiates a new SearchQuery and sets the default values.
      */
     public SearchQuery() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a searchQuery
+     * @return a SearchQuery
      */
     @jakarta.annotation.Nonnull
     public static SearchQuery createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -42,12 +35,17 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
         return new SearchQuery();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -63,27 +61,27 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the queryString property value. The search query containing the search terms. Required.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQueryString() {
-        return this.queryString;
+        return this.backingStore.get("queryString");
     }
     /**
      * Gets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getQueryTemplate() {
-        return this.queryTemplate;
+        return this.backingStore.get("queryTemplate");
     }
     /**
      * Serializes information the current object
@@ -97,31 +95,31 @@ public class SearchQuery implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the queryString property value. The search query containing the search terms. Required.
      * @param value Value to set for the queryString property.
      */
     public void setQueryString(@jakarta.annotation.Nullable final String value) {
-        this.queryString = value;
+        this.backingStore.set("queryString", value);
     }
     /**
      * Sets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @param value Value to set for the queryTemplate property.
      */
     public void setQueryTemplate(@jakarta.annotation.Nullable final String value) {
-        this.queryTemplate = value;
+        this.backingStore.set("queryTemplate", value);
     }
 }

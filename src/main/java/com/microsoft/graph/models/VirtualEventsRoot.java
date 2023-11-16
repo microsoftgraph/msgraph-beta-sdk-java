@@ -9,15 +9,7 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class VirtualEventsRoot extends Entity implements Parsable {
     /**
-     * The events property
-     */
-    private java.util.List<VirtualEvent> events;
-    /**
-     * The webinars property
-     */
-    private java.util.List<VirtualEventWebinar> webinars;
-    /**
-     * Instantiates a new virtualEventsRoot and sets the default values.
+     * Instantiates a new VirtualEventsRoot and sets the default values.
      */
     public VirtualEventsRoot() {
         super();
@@ -25,7 +17,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a virtualEventsRoot
+     * @return a VirtualEventsRoot
      */
     @jakarta.annotation.Nonnull
     public static VirtualEventsRoot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -34,11 +26,11 @@ public class VirtualEventsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the events property value. The events property
-     * @return a virtualEvent
+     * @return a java.util.List<VirtualEvent>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEvent> getEvents() {
-        return this.events;
+        return this.backingStore.get("events");
     }
     /**
      * The deserialization information for the current model
@@ -53,11 +45,11 @@ public class VirtualEventsRoot extends Entity implements Parsable {
     }
     /**
      * Gets the webinars property value. The webinars property
-     * @return a virtualEventWebinar
+     * @return a java.util.List<VirtualEventWebinar>
      */
     @jakarta.annotation.Nullable
     public java.util.List<VirtualEventWebinar> getWebinars() {
-        return this.webinars;
+        return this.backingStore.get("webinars");
     }
     /**
      * Serializes information the current object
@@ -74,13 +66,13 @@ public class VirtualEventsRoot extends Entity implements Parsable {
      * @param value Value to set for the events property.
      */
     public void setEvents(@jakarta.annotation.Nullable final java.util.List<VirtualEvent> value) {
-        this.events = value;
+        this.backingStore.set("events", value);
     }
     /**
      * Sets the webinars property value. The webinars property
      * @param value Value to set for the webinars property.
      */
     public void setWebinars(@jakarta.annotation.Nullable final java.util.List<VirtualEventWebinar> value) {
-        this.webinars = value;
+        this.backingStore.set("webinars", value);
     }
 }

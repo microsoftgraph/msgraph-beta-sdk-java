@@ -4,41 +4,30 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsable {
+public class UploadSecretPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The exp property
-     */
-    private Long exp;
-    /**
-     * The k property
-     */
-    private String k;
-    /**
-     * The nbf property
-     */
-    private Long nbf;
-    /**
-     * The use property
-     */
-    private String use;
-    /**
-     * Instantiates a new uploadSecretPostRequestBody and sets the default values.
+     * Instantiates a new UploadSecretPostRequestBody and sets the default values.
      */
     public UploadSecretPostRequestBody() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a uploadSecretPostRequestBody
+     * @return a UploadSecretPostRequestBody
      */
     @jakarta.annotation.Nonnull
     public static UploadSecretPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -46,20 +35,25 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
         return new UploadSecretPostRequestBody();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the exp property value. The exp property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getExp() {
-        return this.exp;
+        return this.backingStore.get("exp");
     }
     /**
      * The deserialization information for the current model
@@ -76,27 +70,27 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     }
     /**
      * Gets the k property value. The k property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getK() {
-        return this.k;
+        return this.backingStore.get("k");
     }
     /**
      * Gets the nbf property value. The nbf property
-     * @return a int64
+     * @return a Long
      */
     @jakarta.annotation.Nullable
     public Long getNbf() {
-        return this.nbf;
+        return this.backingStore.get("nbf");
     }
     /**
      * Gets the use property value. The use property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getUse() {
-        return this.use;
+        return this.backingStore.get("use");
     }
     /**
      * Serializes information the current object
@@ -111,38 +105,38 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the exp property value. The exp property
      * @param value Value to set for the exp property.
      */
     public void setExp(@jakarta.annotation.Nullable final Long value) {
-        this.exp = value;
+        this.backingStore.set("exp", value);
     }
     /**
      * Sets the k property value. The k property
      * @param value Value to set for the k property.
      */
     public void setK(@jakarta.annotation.Nullable final String value) {
-        this.k = value;
+        this.backingStore.set("k", value);
     }
     /**
      * Sets the nbf property value. The nbf property
      * @param value Value to set for the nbf property.
      */
     public void setNbf(@jakarta.annotation.Nullable final Long value) {
-        this.nbf = value;
+        this.backingStore.set("nbf", value);
     }
     /**
      * Sets the use property value. The use property
      * @param value Value to set for the use property.
      */
     public void setUse(@jakarta.annotation.Nullable final String value) {
-        this.use = value;
+        this.backingStore.set("use", value);
     }
 }

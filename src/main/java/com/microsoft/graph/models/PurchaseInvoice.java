@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
@@ -12,145 +15,23 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
+public class PurchaseInvoice implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The buyFromAddress property
-     */
-    private PostalAddressType buyFromAddress;
-    /**
-     * The currency property
-     */
-    private Currency currency;
-    /**
-     * The currencyCode property
-     */
-    private String currencyCode;
-    /**
-     * The currencyId property
-     */
-    private UUID currencyId;
-    /**
-     * The discountAmount property
-     */
-    private BigDecimal discountAmount;
-    /**
-     * The discountAppliedBeforeTax property
-     */
-    private Boolean discountAppliedBeforeTax;
-    /**
-     * The dueDate property
-     */
-    private LocalDate dueDate;
-    /**
-     * The id property
-     */
-    private UUID id;
-    /**
-     * The invoiceDate property
-     */
-    private LocalDate invoiceDate;
-    /**
-     * The lastModifiedDateTime property
-     */
-    private OffsetDateTime lastModifiedDateTime;
-    /**
-     * The number property
-     */
-    private String number;
-    /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * The payToAddress property
-     */
-    private PostalAddressType payToAddress;
-    /**
-     * The payToContact property
-     */
-    private String payToContact;
-    /**
-     * The payToName property
-     */
-    private String payToName;
-    /**
-     * The payToVendorId property
-     */
-    private UUID payToVendorId;
-    /**
-     * The payToVendorNumber property
-     */
-    private String payToVendorNumber;
-    /**
-     * The pricesIncludeTax property
-     */
-    private Boolean pricesIncludeTax;
-    /**
-     * The purchaseInvoiceLines property
-     */
-    private java.util.List<PurchaseInvoiceLine> purchaseInvoiceLines;
-    /**
-     * The shipToAddress property
-     */
-    private PostalAddressType shipToAddress;
-    /**
-     * The shipToContact property
-     */
-    private String shipToContact;
-    /**
-     * The shipToName property
-     */
-    private String shipToName;
-    /**
-     * The status property
-     */
-    private String status;
-    /**
-     * The totalAmountExcludingTax property
-     */
-    private BigDecimal totalAmountExcludingTax;
-    /**
-     * The totalAmountIncludingTax property
-     */
-    private BigDecimal totalAmountIncludingTax;
-    /**
-     * The totalTaxAmount property
-     */
-    private BigDecimal totalTaxAmount;
-    /**
-     * The vendor property
-     */
-    private Vendor vendor;
-    /**
-     * The vendorId property
-     */
-    private UUID vendorId;
-    /**
-     * The vendorInvoiceNumber property
-     */
-    private String vendorInvoiceNumber;
-    /**
-     * The vendorName property
-     */
-    private String vendorName;
-    /**
-     * The vendorNumber property
-     */
-    private String vendorNumber;
-    /**
-     * Instantiates a new purchaseInvoice and sets the default values.
+     * Instantiates a new PurchaseInvoice and sets the default values.
      */
     public PurchaseInvoice() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a purchaseInvoice
+     * @return a PurchaseInvoice
      */
     @jakarta.annotation.Nonnull
     public static PurchaseInvoice createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -158,36 +39,41 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
         return new PurchaseInvoice();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * Gets the buyFromAddress property value. The buyFromAddress property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getBuyFromAddress() {
-        return this.buyFromAddress;
+        return this.backingStore.get("buyFromAddress");
     }
     /**
      * Gets the currency property value. The currency property
-     * @return a currency
+     * @return a Currency
      */
     @jakarta.annotation.Nullable
     public Currency getCurrency() {
-        return this.currency;
+        return this.backingStore.get("currency");
     }
     /**
      * Gets the currencyCode property value. The currencyCode property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getCurrencyCode() {
-        return this.currencyCode;
+        return this.backingStore.get("currencyCode");
     }
     /**
      * Gets the currencyId property value. The currencyId property
@@ -195,23 +81,23 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getCurrencyId() {
-        return this.currencyId;
+        return this.backingStore.get("currencyId");
     }
     /**
      * Gets the discountAmount property value. The discountAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getDiscountAmount() {
-        return this.discountAmount;
+        return this.backingStore.get("discountAmount");
     }
     /**
      * Gets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getDiscountAppliedBeforeTax() {
-        return this.discountAppliedBeforeTax;
+        return this.backingStore.get("discountAppliedBeforeTax");
     }
     /**
      * Gets the dueDate property value. The dueDate property
@@ -219,7 +105,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getDueDate() {
-        return this.dueDate;
+        return this.backingStore.get("dueDate");
     }
     /**
      * The deserialization information for the current model
@@ -267,7 +153,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getId() {
-        return this.id;
+        return this.backingStore.get("id");
     }
     /**
      * Gets the invoiceDate property value. The invoiceDate property
@@ -275,7 +161,7 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public LocalDate getInvoiceDate() {
-        return this.invoiceDate;
+        return this.backingStore.get("invoiceDate");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -283,47 +169,47 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this.lastModifiedDateTime;
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the number property value. The number property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getNumber() {
-        return this.number;
+        return this.backingStore.get("number");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the payToAddress property value. The payToAddress property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getPayToAddress() {
-        return this.payToAddress;
+        return this.backingStore.get("payToAddress");
     }
     /**
      * Gets the payToContact property value. The payToContact property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayToContact() {
-        return this.payToContact;
+        return this.backingStore.get("payToContact");
     }
     /**
      * Gets the payToName property value. The payToName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayToName() {
-        return this.payToName;
+        return this.backingStore.get("payToName");
     }
     /**
      * Gets the payToVendorId property value. The payToVendorId property
@@ -331,95 +217,95 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getPayToVendorId() {
-        return this.payToVendorId;
+        return this.backingStore.get("payToVendorId");
     }
     /**
      * Gets the payToVendorNumber property value. The payToVendorNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getPayToVendorNumber() {
-        return this.payToVendorNumber;
+        return this.backingStore.get("payToVendorNumber");
     }
     /**
      * Gets the pricesIncludeTax property value. The pricesIncludeTax property
-     * @return a boolean
+     * @return a Boolean
      */
     @jakarta.annotation.Nullable
     public Boolean getPricesIncludeTax() {
-        return this.pricesIncludeTax;
+        return this.backingStore.get("pricesIncludeTax");
     }
     /**
      * Gets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
-     * @return a purchaseInvoiceLine
+     * @return a java.util.List<PurchaseInvoiceLine>
      */
     @jakarta.annotation.Nullable
     public java.util.List<PurchaseInvoiceLine> getPurchaseInvoiceLines() {
-        return this.purchaseInvoiceLines;
+        return this.backingStore.get("purchaseInvoiceLines");
     }
     /**
      * Gets the shipToAddress property value. The shipToAddress property
-     * @return a postalAddressType
+     * @return a PostalAddressType
      */
     @jakarta.annotation.Nullable
     public PostalAddressType getShipToAddress() {
-        return this.shipToAddress;
+        return this.backingStore.get("shipToAddress");
     }
     /**
      * Gets the shipToContact property value. The shipToContact property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShipToContact() {
-        return this.shipToContact;
+        return this.backingStore.get("shipToContact");
     }
     /**
      * Gets the shipToName property value. The shipToName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getShipToName() {
-        return this.shipToName;
+        return this.backingStore.get("shipToName");
     }
     /**
      * Gets the status property value. The status property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getStatus() {
-        return this.status;
+        return this.backingStore.get("status");
     }
     /**
      * Gets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountExcludingTax() {
-        return this.totalAmountExcludingTax;
+        return this.backingStore.get("totalAmountExcludingTax");
     }
     /**
      * Gets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalAmountIncludingTax() {
-        return this.totalAmountIncludingTax;
+        return this.backingStore.get("totalAmountIncludingTax");
     }
     /**
      * Gets the totalTaxAmount property value. The totalTaxAmount property
-     * @return a decimal
+     * @return a BigDecimal
      */
     @jakarta.annotation.Nullable
     public BigDecimal getTotalTaxAmount() {
-        return this.totalTaxAmount;
+        return this.backingStore.get("totalTaxAmount");
     }
     /**
      * Gets the vendor property value. The vendor property
-     * @return a vendor
+     * @return a Vendor
      */
     @jakarta.annotation.Nullable
     public Vendor getVendor() {
-        return this.vendor;
+        return this.backingStore.get("vendor");
     }
     /**
      * Gets the vendorId property value. The vendorId property
@@ -427,31 +313,31 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
      */
     @jakarta.annotation.Nullable
     public UUID getVendorId() {
-        return this.vendorId;
+        return this.backingStore.get("vendorId");
     }
     /**
      * Gets the vendorInvoiceNumber property value. The vendorInvoiceNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorInvoiceNumber() {
-        return this.vendorInvoiceNumber;
+        return this.backingStore.get("vendorInvoiceNumber");
     }
     /**
      * Gets the vendorName property value. The vendorName property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorName() {
-        return this.vendorName;
+        return this.backingStore.get("vendorName");
     }
     /**
      * Gets the vendorNumber property value. The vendorNumber property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getVendorNumber() {
-        return this.vendorNumber;
+        return this.backingStore.get("vendorNumber");
     }
     /**
      * Serializes information the current object
@@ -493,227 +379,227 @@ public class PurchaseInvoice implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the buyFromAddress property value. The buyFromAddress property
      * @param value Value to set for the buyFromAddress property.
      */
     public void setBuyFromAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
-        this.buyFromAddress = value;
+        this.backingStore.set("buyFromAddress", value);
     }
     /**
      * Sets the currency property value. The currency property
      * @param value Value to set for the currency property.
      */
     public void setCurrency(@jakarta.annotation.Nullable final Currency value) {
-        this.currency = value;
+        this.backingStore.set("currency", value);
     }
     /**
      * Sets the currencyCode property value. The currencyCode property
      * @param value Value to set for the currencyCode property.
      */
     public void setCurrencyCode(@jakarta.annotation.Nullable final String value) {
-        this.currencyCode = value;
+        this.backingStore.set("currencyCode", value);
     }
     /**
      * Sets the currencyId property value. The currencyId property
      * @param value Value to set for the currencyId property.
      */
     public void setCurrencyId(@jakarta.annotation.Nullable final UUID value) {
-        this.currencyId = value;
+        this.backingStore.set("currencyId", value);
     }
     /**
      * Sets the discountAmount property value. The discountAmount property
      * @param value Value to set for the discountAmount property.
      */
     public void setDiscountAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.discountAmount = value;
+        this.backingStore.set("discountAmount", value);
     }
     /**
      * Sets the discountAppliedBeforeTax property value. The discountAppliedBeforeTax property
      * @param value Value to set for the discountAppliedBeforeTax property.
      */
     public void setDiscountAppliedBeforeTax(@jakarta.annotation.Nullable final Boolean value) {
-        this.discountAppliedBeforeTax = value;
+        this.backingStore.set("discountAppliedBeforeTax", value);
     }
     /**
      * Sets the dueDate property value. The dueDate property
      * @param value Value to set for the dueDate property.
      */
     public void setDueDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.dueDate = value;
+        this.backingStore.set("dueDate", value);
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final UUID value) {
-        this.id = value;
+        this.backingStore.set("id", value);
     }
     /**
      * Sets the invoiceDate property value. The invoiceDate property
      * @param value Value to set for the invoiceDate property.
      */
     public void setInvoiceDate(@jakarta.annotation.Nullable final LocalDate value) {
-        this.invoiceDate = value;
+        this.backingStore.set("invoiceDate", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.lastModifiedDateTime = value;
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      */
     public void setNumber(@jakarta.annotation.Nullable final String value) {
-        this.number = value;
+        this.backingStore.set("number", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the payToAddress property value. The payToAddress property
      * @param value Value to set for the payToAddress property.
      */
     public void setPayToAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
-        this.payToAddress = value;
+        this.backingStore.set("payToAddress", value);
     }
     /**
      * Sets the payToContact property value. The payToContact property
      * @param value Value to set for the payToContact property.
      */
     public void setPayToContact(@jakarta.annotation.Nullable final String value) {
-        this.payToContact = value;
+        this.backingStore.set("payToContact", value);
     }
     /**
      * Sets the payToName property value. The payToName property
      * @param value Value to set for the payToName property.
      */
     public void setPayToName(@jakarta.annotation.Nullable final String value) {
-        this.payToName = value;
+        this.backingStore.set("payToName", value);
     }
     /**
      * Sets the payToVendorId property value. The payToVendorId property
      * @param value Value to set for the payToVendorId property.
      */
     public void setPayToVendorId(@jakarta.annotation.Nullable final UUID value) {
-        this.payToVendorId = value;
+        this.backingStore.set("payToVendorId", value);
     }
     /**
      * Sets the payToVendorNumber property value. The payToVendorNumber property
      * @param value Value to set for the payToVendorNumber property.
      */
     public void setPayToVendorNumber(@jakarta.annotation.Nullable final String value) {
-        this.payToVendorNumber = value;
+        this.backingStore.set("payToVendorNumber", value);
     }
     /**
      * Sets the pricesIncludeTax property value. The pricesIncludeTax property
      * @param value Value to set for the pricesIncludeTax property.
      */
     public void setPricesIncludeTax(@jakarta.annotation.Nullable final Boolean value) {
-        this.pricesIncludeTax = value;
+        this.backingStore.set("pricesIncludeTax", value);
     }
     /**
      * Sets the purchaseInvoiceLines property value. The purchaseInvoiceLines property
      * @param value Value to set for the purchaseInvoiceLines property.
      */
     public void setPurchaseInvoiceLines(@jakarta.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
-        this.purchaseInvoiceLines = value;
+        this.backingStore.set("purchaseInvoiceLines", value);
     }
     /**
      * Sets the shipToAddress property value. The shipToAddress property
      * @param value Value to set for the shipToAddress property.
      */
     public void setShipToAddress(@jakarta.annotation.Nullable final PostalAddressType value) {
-        this.shipToAddress = value;
+        this.backingStore.set("shipToAddress", value);
     }
     /**
      * Sets the shipToContact property value. The shipToContact property
      * @param value Value to set for the shipToContact property.
      */
     public void setShipToContact(@jakarta.annotation.Nullable final String value) {
-        this.shipToContact = value;
+        this.backingStore.set("shipToContact", value);
     }
     /**
      * Sets the shipToName property value. The shipToName property
      * @param value Value to set for the shipToName property.
      */
     public void setShipToName(@jakarta.annotation.Nullable final String value) {
-        this.shipToName = value;
+        this.backingStore.set("shipToName", value);
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.status = value;
+        this.backingStore.set("status", value);
     }
     /**
      * Sets the totalAmountExcludingTax property value. The totalAmountExcludingTax property
      * @param value Value to set for the totalAmountExcludingTax property.
      */
     public void setTotalAmountExcludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.totalAmountExcludingTax = value;
+        this.backingStore.set("totalAmountExcludingTax", value);
     }
     /**
      * Sets the totalAmountIncludingTax property value. The totalAmountIncludingTax property
      * @param value Value to set for the totalAmountIncludingTax property.
      */
     public void setTotalAmountIncludingTax(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.totalAmountIncludingTax = value;
+        this.backingStore.set("totalAmountIncludingTax", value);
     }
     /**
      * Sets the totalTaxAmount property value. The totalTaxAmount property
      * @param value Value to set for the totalTaxAmount property.
      */
     public void setTotalTaxAmount(@jakarta.annotation.Nullable final BigDecimal value) {
-        this.totalTaxAmount = value;
+        this.backingStore.set("totalTaxAmount", value);
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      */
     public void setVendor(@jakarta.annotation.Nullable final Vendor value) {
-        this.vendor = value;
+        this.backingStore.set("vendor", value);
     }
     /**
      * Sets the vendorId property value. The vendorId property
      * @param value Value to set for the vendorId property.
      */
     public void setVendorId(@jakarta.annotation.Nullable final UUID value) {
-        this.vendorId = value;
+        this.backingStore.set("vendorId", value);
     }
     /**
      * Sets the vendorInvoiceNumber property value. The vendorInvoiceNumber property
      * @param value Value to set for the vendorInvoiceNumber property.
      */
     public void setVendorInvoiceNumber(@jakarta.annotation.Nullable final String value) {
-        this.vendorInvoiceNumber = value;
+        this.backingStore.set("vendorInvoiceNumber", value);
     }
     /**
      * Sets the vendorName property value. The vendorName property
      * @param value Value to set for the vendorName property.
      */
     public void setVendorName(@jakarta.annotation.Nullable final String value) {
-        this.vendorName = value;
+        this.backingStore.set("vendorName", value);
     }
     /**
      * Sets the vendorNumber property value. The vendorNumber property
      * @param value Value to set for the vendorNumber property.
      */
     public void setVendorNumber(@jakarta.annotation.Nullable final String value) {
-        this.vendorNumber = value;
+        this.backingStore.set("vendorNumber", value);
     }
 }

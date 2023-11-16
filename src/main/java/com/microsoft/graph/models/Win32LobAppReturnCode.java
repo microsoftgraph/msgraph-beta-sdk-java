@@ -4,6 +4,9 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,33 +14,23 @@ import java.util.Objects;
  * Contains return code properties for a Win32 App
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
+public class Win32LobAppReturnCode implements AdditionalDataHolder, BackedModel, Parsable {
     /**
-     * Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Stores model information.
      */
-    private Map<String, Object> additionalData;
+    @jakarta.annotation.Nonnull
+    public BackingStore backingStore;
     /**
-     * The OdataType property
-     */
-    private String odataType;
-    /**
-     * Return code.
-     */
-    private Integer returnCode;
-    /**
-     * Indicates the type of return code.
-     */
-    private Win32LobAppReturnCodeType type;
-    /**
-     * Instantiates a new win32LobAppReturnCode and sets the default values.
+     * Instantiates a new Win32LobAppReturnCode and sets the default values.
      */
     public Win32LobAppReturnCode() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a win32LobAppReturnCode
+     * @return a Win32LobAppReturnCode
      */
     @jakarta.annotation.Nonnull
     public static Win32LobAppReturnCode createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
@@ -45,12 +38,17 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
         return new Win32LobAppReturnCode();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a Map<String, Object>
      */
     @jakarta.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this.additionalData;
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
     }
     /**
      * The deserialization information for the current model
@@ -66,27 +64,27 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the @odata.type property value. The OdataType property
-     * @return a string
+     * @return a String
      */
     @jakarta.annotation.Nullable
     public String getOdataType() {
-        return this.odataType;
+        return this.backingStore.get("odataType");
     }
     /**
      * Gets the returnCode property value. Return code.
-     * @return a integer
+     * @return a Integer
      */
     @jakarta.annotation.Nullable
     public Integer getReturnCode() {
-        return this.returnCode;
+        return this.backingStore.get("returnCode");
     }
     /**
      * Gets the type property value. Indicates the type of return code.
-     * @return a win32LobAppReturnCodeType
+     * @return a Win32LobAppReturnCodeType
      */
     @jakarta.annotation.Nullable
     public Win32LobAppReturnCodeType getType() {
-        return this.type;
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -100,31 +98,31 @@ public class Win32LobAppReturnCode implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the additionalData property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.additionalData = value;
+        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.odataType = value;
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the returnCode property value. Return code.
      * @param value Value to set for the returnCode property.
      */
     public void setReturnCode(@jakarta.annotation.Nullable final Integer value) {
-        this.returnCode = value;
+        this.backingStore.set("returnCode", value);
     }
     /**
      * Sets the type property value. Indicates the type of return code.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final Win32LobAppReturnCodeType value) {
-        this.type = value;
+        this.backingStore.set("type", value);
     }
 }
